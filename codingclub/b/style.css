@@ -24,6 +24,9 @@ h1 {
 }
 
 @media only screen and (max-width: 768px) {
+    body {
+        padding: 16px;
+    }
     h1 {
         font-size: 64px;
     }
@@ -53,7 +56,7 @@ h1 {
 
 .card {
     background-color: black;
-    width: 512px;
+    max-width: 512px;
     padding: 0px;
     border-radius: 16px;
     padding-bottom: 16px;
