@@ -89,6 +89,16 @@ h1 {
     margin-top: 16px;
 }
 
+.card > p {
+    font-weight: 400;
+    font-family: Montserrat, Impact, sans-serif;
+    font-size: 24px;
+    margin-left: 32px;
+    margin-right: 32px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
 .card > img {
     margin: 0px;
     width: 100%;
