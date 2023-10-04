@@ -556,3 +556,39 @@ VStack {
 
 # Go Further
 ## Try out Get Started with Code in Swift Playgrounds!
+
+---
+
+### 🔢 Counter App
+# Full Code
+
+[Download Completed Project](https://github.com/tinkercademy/swift-demo-projects/raw/main/Counter.zip/)
+
+---vertical---
+
+## <img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="84px"> ContentView
+```swift[1:]
+import SwiftUI
+
+struct ContentView: View {
+    
+    @State private var counter = 0
+    
+    var body: some View {
+        VStack {
+            Text("\(counter) Cookies")
+            Button("I ATE ANOTHER ONE!!") {
+                counter = counter + 1
+                print(counter)
+            }
+            
+            if counter > 0 {
+                Button("A COOKIE FELL OUT OF MY MOUTH!!") {
+                    counter = counter - 1
+                    print(counter)
+                }                
+            }
+        }
+    }
+}
+```
