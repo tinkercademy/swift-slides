@@ -4,44 +4,31 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Track B</title>
 
 		<link rel="stylesheet" href="/dist/reset.css">
 		<link rel="stylesheet" href="/dist/reveal.css">
 		<link rel="stylesheet" href="./slide.css">
+		<link rel="stylesheet" href="./style.css">
 
-		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="/xcode-dark.css">
 	</head>
 	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section data-markdown="namecard.md"
-					data-separator-vertical="^\n---vertical---",
-					data-separator-notes="^Note:">
+		<h1>Track B</h1>
+		
+		<div class="card-container">
+			<a href="namecard">
+				<section class="card">
+					<img src="./assets/namecard-hero.svg">
+					<h3>Track B: Project 1</h3>
+					<h2>Name Card</h2>
 				</section>
-			</div>
-			<div style="height: 100%; display:flex;align-items:flex-end;position: fixed;z-index: 8; pointer-events: none;">
-				<small style="margin: 32px;">© 2022-2024 Tinkertanker Pte Ltd. All Rights Reserved.</small>
-			</div>
+			</a>
+			<section class="card">
+				<img src="./assets/counter-hero.svg">
+				<h3>Track B: Project 2</h3>
+				<h2>Counter</h2>
+			</section>
 		</div>
-
-		<script src="/dist/reveal.js"></script>
-		<script src="/plugin/notes/notes.js"></script>
-		<script src="/plugin/markdown/markdown.js"></script>
-		<script src="/plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				width: 1920,
-  				height: 1080,
-				hash: true,
-
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
 	</body>
 </html>

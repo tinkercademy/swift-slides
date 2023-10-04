@@ -25,7 +25,7 @@ Create a name card app in Swift Playgrounds.
 
 ---vertical---
 
-## <img style="margin-bottom: -8px" src="./assets/swift-playgrounds.png"> Swift Playgrounds
+## <img style="margin-bottom: -8px" src="/assets/swift-playgrounds.png"> Swift Playgrounds
 ### _Swift Playgrounds_ helps you learn to code and build apps using Swift, the same powerful language used to create world-class apps for the App Store.
 
 [Swift Playgrounds on the App Store](https://apps.apple.com/app/id908519492).
