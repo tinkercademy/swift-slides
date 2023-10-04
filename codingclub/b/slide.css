@@ -257,6 +257,7 @@ section.has-light-background, section.has-light-background h1, section.has-light
   margin-bottom: 8px;
   margin-top: 8px;
   max-width: 100%;
+  width: 100%;
 }
 
 .reveal .code-wrapper code {
@@ -267,7 +268,7 @@ section.has-light-background, section.has-light-background h1, section.has-light
 }
 
 .reveal table {
-  margin: auto;
+  margin-right: auto;
   border-collapse: collapse;
   border-spacing: 0;
 }
@@ -321,6 +322,11 @@ section.has-light-background, section.has-light-background h1, section.has-light
 
 .reveal img {
   margin: var(--r-block-margin) 0;
+}
+
+.reveal section > div > img {
+  margin-left: 32px;
+  overflow: hidden;
 }
 
 /*********************************************
