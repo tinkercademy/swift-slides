@@ -15,7 +15,7 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section data-markdown="namecard.md"
+				<section id="slide-view" data-markdown="namecard.md"
 					data-separator-vertical="^\n---vertical---",
 					data-separator-notes="^Note:">
 				</section>
@@ -30,6 +30,10 @@
 		<script src="/plugin/markdown/markdown.js"></script>
 		<script src="/plugin/highlight/highlight.js"></script>
 		<script>
+			const deck = new URLSearchParams(window.location.search).get('deck');
+
+			document.getElementById("slide-view").setAttribute("data-markdown", deck + ".md"); 
+
 			Reveal.initialize({
 				width: 1920,
   				height: 1080,
