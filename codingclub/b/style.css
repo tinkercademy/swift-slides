@@ -12,8 +12,8 @@ h1 {
     font-weight: 700;
     font-family: Montserrat, Impact, sans-serif;
     font-size: 64px;
-    background-color: #00FA92;
-    background-image: linear-gradient(45deg, #00FA92 10%, #73FCD6 20%);
+    background-color: var(--r-link-color);
+    background-image: var(--r-gradient);
     background-size: 100%;
     background-clip: text;
     -webkit-background-clip: text;
@@ -30,6 +30,10 @@ h1 {
     justify-content: flex-start;
     align-items: flex-start;
     gap: 32px;
+}
+
+a {
+    color: var(--r-link-color);
 }
 
 .card-container > a {
@@ -50,7 +54,7 @@ h1 {
 }
 
 .card:hover {
-    box-shadow: 0px 0px 64px 2px #00fa9242;
+    box-shadow: 0px 0px 64px 2px var(--r-hover-shadow-color);
     z-index: 2;
     transition: box-shadow 0.3s ease;
 }
