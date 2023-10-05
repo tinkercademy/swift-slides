@@ -1,52 +1,12 @@
-/**
- * Beige theme for reveal.js.
- *
- * Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
- */
-@import url(./fonts/league-gothic/league-gothic.css);
-@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
-section.has-dark-background, section.has-dark-background h1, section.has-dark-background h2, section.has-dark-background h3, section.has-dark-background h4, section.has-dark-background h5, section.has-dark-background h6 {
-  color: #fff;
-}
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,400italic,700italic,700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,700italic);
 
-/*********************************************
- * GLOBAL STYLES
- *********************************************/
-:root {
-  --r-background-color: #f7f3de;
-  --r-main-font: Lato, sans-serif;
-  --r-main-font-size: 40px;
-  --r-main-color: #333;
-  --r-block-margin: 20px;
-  --r-heading-margin: 0 0 20px 0;
-  --r-heading-font: League Gothic, Impact, sans-serif;
-  --r-heading-color: #333;
-  --r-heading-line-height: 1.2;
-  --r-heading-letter-spacing: normal;
-  --r-heading-text-transform: uppercase;
-  --r-heading-text-shadow: none;
-  --r-heading-font-weight: normal;
-  --r-heading1-text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 20px 20px rgba(0, 0, 0, 0.15);
-  --r-heading1-size: 3.77em;
-  --r-heading2-size: 2.11em;
-  --r-heading3-size: 1.55em;
-  --r-heading4-size: 1em;
-  --r-code-font: monospace;
-  --r-link-color: #8b743d;
-  --r-link-color-dark: #564826;
-  --r-link-color-hover: #c0a86e;
-  --r-selection-background-color: rgba(79, 64, 28, 0.99);
-  --r-selection-color: #fff;
+section.has-light-background, section.has-light-background h1, section.has-light-background h2, section.has-light-background h3, section.has-light-background h4, section.has-light-background h5, section.has-light-background h6 {
+  color: #222;
 }
 
 .reveal-viewport {
-  background: #f7f2d3;
-  background: -moz-radial-gradient(center, circle cover, white 0%, #f7f2d3 100%);
-  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, white), color-stop(100%, #f7f2d3));
-  background: -webkit-radial-gradient(center, circle cover, white 0%, #f7f2d3 100%);
-  background: -o-radial-gradient(center, circle cover, white 0%, #f7f2d3 100%);
-  background: -ms-radial-gradient(center, circle cover, white 0%, #f7f2d3 100%);
-  background: radial-gradient(center, circle cover, white 0%, #f7f2d3 100%);
+  background: #111;
   background-color: var(--r-background-color);
 }
 
@@ -75,9 +35,6 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   font-weight: inherit;
 }
 
-/*********************************************
- * HEADERS
- *********************************************/
 .reveal h1,
 .reveal h2,
 .reveal h3,
@@ -96,14 +53,27 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
 }
 
 .reveal h1 {
+  text-align: left;
   font-size: var(--r-heading1-size);
+  background-color: #00FA92;
+  background-image: var(--r-gradient);
+  background-size: 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
 }
 
 .reveal h2 {
+  text-align: left;
   font-size: var(--r-heading2-size);
 }
 
 .reveal h3 {
+  text-align: left;
+  font-weight: 400;
+  font-family: var(--r-heading-font);
   font-size: var(--r-heading3-size);
 }
 
@@ -119,6 +89,7 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
  * OTHER
  *********************************************/
 .reveal p {
+  text-align: left;
   margin: var(--r-block-margin) 0;
   line-height: 1.3;
 }
@@ -155,7 +126,9 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
 .reveal ul {
   display: inline-block;
   text-align: left;
-  margin: 0 0 0 1em;
+  margin: 0 0 0 2em;
+  width: calc(100% - 32px);
+  line-height: 2em;
 }
 
 .reveal ol {
@@ -226,27 +199,39 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
 .reveal code {
   font-family: var(--r-code-font);
   text-transform: none;
-  tab-size: 2;
+  tab-size: 4;
+}
+
+.reveal code:not(.hljs) {
+    color: var(--r-link-color);
 }
 
 .reveal pre code {
   display: block;
   padding: 5px;
   overflow: auto;
-  max-height: 400px;
+  max-height: 800px;
   word-wrap: normal;
 }
 
 .reveal .code-wrapper {
   white-space: normal;
+  margin: 0px;
+  margin-bottom: 8px;
+  margin-top: 8px;
+  max-width: 100%;
+  width: 100%;
 }
 
 .reveal .code-wrapper code {
   white-space: pre;
+  font-size: 2em;
+  padding: 32px !important;
+  border-radius: 16px;
 }
 
 .reveal table {
-  margin: auto;
+  margin-right: auto;
   border-collapse: collapse;
   border-spacing: 0;
 }
@@ -300,6 +285,11 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
 
 .reveal img {
   margin: var(--r-block-margin) 0;
+}
+
+.reveal section > div > img {
+  margin-left: 32px;
+  overflow: hidden;
 }
 
 /*********************************************
