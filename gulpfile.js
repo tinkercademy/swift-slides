@@ -298,12 +298,12 @@ gulp.task('serve', () => {
     gulp.watch([
         'css/theme/source/**/*.{sass,scss}',
         'css/theme/template/*.{sass,scss}',
-    ], gulp.series('css-themes', 'reload'))
+    ], gulp.series('reload'))
 
     gulp.watch([
         'css/*.scss',
         'css/print/*.{sass,scss,css}'
-    ], gulp.series('css-core', 'reload'))
+    ], gulp.series('reload'))
 
     gulp.watch(['test/*.html'], gulp.series('test'))
 
