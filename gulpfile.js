@@ -178,19 +178,6 @@ function compileSass() {
   });
 }
 
-gulp.task('css-themes', () => gulp.src(['./css/theme/source/*.{sass,scss}'])
-        .pipe(compileSass())
-        .pipe(gulp.dest('./dist/theme')))
-
-gulp.task('css-core', () => gulp.src(['css/reveal.scss'])
-    .pipe(compileSass())
-    .pipe(autoprefixer())
-    .pipe(minify({compatibility: 'ie9'}))
-    .pipe(header(banner))
-    .pipe(gulp.dest('./dist')))
-
-gulp.task('css', gulp.parallel('css-themes', 'css-core'))
-
 gulp.task('qunit', () => {
 
     let serverConfig = {
@@ -264,9 +251,9 @@ gulp.task('eslint', () => gulp.src(['./js/**', 'gulpfile.js'])
 
 gulp.task('test', gulp.series( 'eslint', 'qunit' ))
 
-gulp.task('default', gulp.series(gulp.parallel('js', 'css', 'plugins'), 'test'))
+gulp.task('default', gulp.series(gulp.parallel('js', 'plugins'), 'test'))
 
-gulp.task('build', gulp.parallel('js', 'css', 'plugins'))
+gulp.task('build', gulp.parallel('js', 'plugins'))
 
 gulp.task('package', gulp.series(() =>
 
@@ -311,12 +298,12 @@ gulp.task('serve', () => {
     gulp.watch([
         'css/theme/source/**/*.{sass,scss}',
         'css/theme/template/*.{sass,scss}',
-    ], gulp.series('css-themes', 'reload'))
+    ], gulp.series('reload'))
 
     gulp.watch([
         'css/*.scss',
         'css/print/*.{sass,scss,css}'
-    ], gulp.series('css-core', 'reload'))
+    ], gulp.series('reload'))
 
     gulp.watch(['test/*.html'], gulp.series('test'))
 
