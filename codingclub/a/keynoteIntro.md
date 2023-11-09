@@ -26,19 +26,33 @@ Introduction to Keynote and the App Journal
 
 ## Keynote
 Keynote is a powerful presentation app *and* design tool. Students will use it for:
-- App Design Journal
-    - A templated guide for your app design journey
-    - Download your own copy or collaborate on a shared copy with your teammates
-- Prototypes
-    - Create interactive tappable app designs, using Keynote
- <div>
-    <img src="/assets/keynote-logo.png" height="128px">
-</div>   
+<div style="display: flex;">
+    <ul>
+        <li>App Design Journal</li>
+        <ul>
+            <li>A templated guide for your app design journey</li>
+            <li>Download your own copy or collaborate on a shared copy with your teammates</li>
+        </ul>
+        <li>Prototypes</li>
+        <ul>
+            <li>Create interactive tappable app designs, using Keynote</li>
+        </ul>
+        <li>Or after downloading the journal, open Keynote</li>
+    </ul>
+    <div style="display: flex;">
+        <img src="/assets/keynote-logo.png">
+    </div>
+</div> 
 
 ---
 
 # App Design Journal
-### Download at [apple.co/ecc-appjournal_SG](apple.co/ecc-appjournal_SG)
+<div style="justify-content: center;">
+    <p>Download at <a href="apple.co/ecc-appjournal_SG">apple.co/ecc-appjournal_SG</a></p>
+    <div style="display: flex;">
+        <img src="/assets/unit 1 imgs/app-design-journal.jpg">
+    </div>
+</div>
 
 ---vertical---
 
@@ -52,6 +66,9 @@ Keynote is a powerful presentation app *and* design tool. Students will use it f
         <li>Under Keynote Recents, tap on the document named <strong>appjournal</strong></li>
         </ul>
     </ul>
+    <div style="display: flex;">
+        <img src="/assets/unit 1 imgs/getting-the-journal.jpg">
+    </div>
 </div>
 
 ---
@@ -71,6 +88,9 @@ Keynote is a powerful presentation app *and* design tool. Students will use it f
         <li>Tap on the (rightarrow) to the left of the previews to reveal grouped pages, or (downarrow) to close groups</li>
         <li>Tap on <strong>Edit</strong> in the top right to make changes</li>
     </ul>
+    <div style="display: flex;">
+        <img src="/assets/unit 1 imgs/navigating-journal.jpg">
+    </div>
 </div>
 
 ---vertical---
