@@ -2,7 +2,7 @@
 
 These are our new slides, using [reveal.js](https://revealjs.com).
 
-### Getting started
+## Getting started
 
 - Ensure you have [Node.JS](https://nodejs.org) installed
 - Clone repo, `cd` into repo
@@ -12,7 +12,17 @@ These are our new slides, using [reveal.js](https://revealjs.com).
 
 ---
 
-### About reveal.js
+## Style guide
+
+TODO
+
+## Approvals & Publishing
+
+TODO
+
+---
+
+## About reveal.js
 
 reveal.js is an open source HTML presentation framework. It enables anyone with a web browser to create beautiful presentations for free. Check out the live demo at [revealjs.com](https://revealjs.com/).
 
