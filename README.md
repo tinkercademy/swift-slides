@@ -7,7 +7,7 @@ These are our new slides, using [reveal.js](https://revealjs.com).
 - Ensure you have [Node.JS](https://nodejs.org) installed
 - Clone repo, `cd` into repo
 - `npm install`
-- `npm run`
+- `npm run start`
 - Slides will be at [localhost:8000](http://localhost:8000)
 
 ---
