@@ -65,6 +65,19 @@ numberOfCookies = 7
 
 ---vertical---
 
+## Constants
+- Constants are like variables, but you can’t change their value.
+- You declare them with `let` instead of `var`.
+- Used when you know the value won’t change.
+
+```swift
+let myName = "Cookie Monster"
+let dateOfBirth = "1st January 2010"
+```
+
+---vertical---
+
+
 ## Comments
 - The grey/green/faded `//` lines are comments
 - Just for reading! Swift ignores these. 

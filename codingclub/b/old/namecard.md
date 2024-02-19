@@ -9,17 +9,6 @@
 Create a name card app in Swift Playgrounds.
 
 ---
-
-## Unit Overview
-- [Getting started with Playgrounds](#getting-started)
-- [Introduction to SwiftUI](#swiftui)
-    - [Texts](#text) • [Images](#image) • [View Modifiers](#view-modifiers) • [Layouts](#layout-with-stacks)
-- [More Modifiers](#more-modifiers)
-    - [Text Modifiers](#text-modifiers) • [Colours & Padding](#colours--padding) • [Sizing](#sizing) • [Masking](#masking) • [Clip Shapes](#clip-shapes)
-- [Links & SF Symbols](#links--sf-symbols)
-- [Tips & Tricks](#tips--tricks)
-
----
 # Getting Started
 ## 🚀 Swift Playgrounds for iPad
 
