@@ -48,9 +48,9 @@ Keynote is a powerful presentation app *and* design tool. Students will use it f
 
 # App Design Journal
 <div style="justify-content: center;">
-    <p>Download at <a href="apple.co/ecc-appjournal_SG">apple.co/ecc-appjournal_SG</a></p>
+    <p>Download at <a href="https://apple.co/ecc-appjournal_SG">apple.co/ecc-appjournal_SG</a></p>
     <div style="display: flex;">
-        <img src="/codingclub/a/unit 1 imgs/app-design-journal.jpg">
+        <img src="/codingclub/a/assets/app-design-journal.jpg">
     </div>
 </div>
 
@@ -59,7 +59,7 @@ Keynote is a powerful presentation app *and* design tool. Students will use it f
 ## Getting the journal
 <div style="display: flex;">
     <ul>
-        <li>Download from <a href="apple.co/ecc-appjournal_SG">apple.co/ecc-appjournal_SG</a></li>
+        <li>Download from <a href="https://apple.co/ecc-appjournal_SG">apple.co/ecc-appjournal_SG</a></li>
         <li>Open it from Safari’s download button</li>
         <li>Or after downloading the journal, open Keynote</li>
         <ul>
@@ -67,7 +67,7 @@ Keynote is a powerful presentation app *and* design tool. Students will use it f
         </ul>
     </ul>
     <div style="display: flex;">
-        <img src="/codingclub/a/unit 1 imgs/getting-the-journal.jpg">
+        <img src="/codingclub/a/assets/getting-the-journal.jpg">
     </div>
 </div>
 
@@ -89,7 +89,7 @@ Keynote is a powerful presentation app *and* design tool. Students will use it f
         <li>Tap on <strong>Edit</strong> in the top right to make changes</li>
     </ul>
     <div style="display: flex;">
-        <img src="/codingclub/a/unit 1 imgs/navigating-journal.png" style="padding: 50px;">
+        <img src="/codingclub/a/assets/navigating-journal.png" style="padding: 50px;">
     </div>
 </div>
 
@@ -104,7 +104,7 @@ Keynote is a powerful presentation app *and* design tool. Students will use it f
         <li>This is your journal, so make it yours!</li>
     </ul>
     <div style="display: flex;">
-        <img src="/codingclub/a/unit 1 imgs/editing-journal.jpg" style="padding: 50px;">
+        <img src="/codingclub/a/assets/editing-journal.jpg" style="padding: 50px;">
     </div>
 </div>
 
@@ -118,7 +118,7 @@ Keynote is a powerful presentation app *and* design tool. Students will use it f
         <li>To do so, tap on the slide in the navigator and select “Duplicate".</li>
     </ul>
     <div style="display: flex;">
-        <img src="/codingclub/a/unit 1 imgs/duplicate-slides.png">
+        <img src="/codingclub/a/assets/duplicate-slides.png">
     </div>
 </div>
 
@@ -136,7 +136,7 @@ Keynote is a powerful presentation app *and* design tool. Students will use it f
         <li>With Apple Pencil, you can also draw in from the bottom left.</li>
     </ul>
     <div style="display: flex;">
-        <img src="/codingclub/a/unit 1 imgs/take-screenshot.png" style="padding: 10px">
+        <img src="/codingclub/a/assets/take-screenshot.png" style="padding: 10px">
     </div>
 </div>
 
@@ -145,7 +145,7 @@ Keynote is a powerful presentation app *and* design tool. Students will use it f
 ## Hands-on
 Take a screenshot of the cover of your App Journal with your group name written on it!
 <div style="display: flex;">
-    <img src="/codingclub/a/unit 1 imgs/hands-on.jpg" style="max-height: 600px;">
+    <img src="/codingclub/a/assets/hands-on.jpg" style="max-height: 600px;">
 </div>
 
 ---
@@ -168,7 +168,7 @@ Take a screenshot of the cover of your App Journal with your group name written 
         </ul>
     </ul>
     <div style="display: flex;">
-        <img src="/codingclub/a/unit 1 imgs/keynote-collab.png" style="padding: 10px">
+        <img src="/codingclub/a/assets/keynote-collab.png" style="padding: 10px">
     </div>
 </div>
 
@@ -183,7 +183,7 @@ to set up permissions.</li>
         <li>Just be careful not to share the link somewhere else!</li>
     </ul>
     <div style="display: flex;">
-        <img src="/codingclub/a/unit 1 imgs/let-anyo-edit.png" style="padding: 10px">
+        <img src="/codingclub/a/assets/let-anyo-edit.png" style="padding: 10px">
     </div>
 </div>
 
@@ -198,7 +198,7 @@ to set up permissions.</li>
         <li>Make changes to <strong>Activity Settings</strong> (see cursors, highlights) or <strong>Manage Shared Presentation</strong> (who has access)</li>
     </ul>
     <div style="display: flex;">
-        <img src="/codingclub/a/unit 1 imgs/sharing-options.png" style="padding: 10px">
+        <img src="/codingclub/a/assets/sharing-options.png" style="padding: 10px">
     </div>
 </div>
 
@@ -224,5 +224,5 @@ to set up permissions.</li>
 
 ## Unit 1 Deliverable
 <div style="display: flex;">
-    <img src="/codingclub/a/unit 1 imgs/hands-on.jpg" style="padding: 10px; max-height: 800px;">
+    <img src="/codingclub/a/assets/hands-on.jpg" style="padding: 10px; max-height: 800px;">
 </div>
