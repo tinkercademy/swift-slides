@@ -3,13 +3,9 @@
     <img src="https://raw.githubusercontent.com/swiftinsg/branding/main/logos/icons/png/coloured%20-%20dark%20background.png" alt="Swiftinsg Logo" height="128px" style="margin-left: 64px;">
 </div>
 
-## Track B : Unit 1
+## Track B : Unit 0
 
-# Intro to Swift Playgrounds
-
----
-
-# What is Swift
+# iPad and Swift Playgrounds
 
 ---vertical---
 
@@ -24,168 +20,83 @@
 
 ---vertical---
 
-## Getting started
+## Getting Started
+
+### 🚀 Swift Playgrounds for iPad
+
+---vertical---
+
+## <img style="margin-bottom: -8px" src="/assets/swift-playgrounds.png"> Swift Playgrounds
+
+### _Swift Playgrounds_ helps you learn to code and build apps using Swift, the same powerful language used to create world-class apps for the App Store.
+
+[Swift Playgrounds on the App Store](https://apps.apple.com/app/id908519492).
+
+---vertical---
+
+## Swift Playgrounds
+
+<img src="./assets/playgrounds-launch-ss.png" alt="Swift Playgrounds Launch" width="50%">
+
+---vertical---
+
+## Learning with Swift Playgrounds
 
 <div style="display: flex;">
-    <ul style="width:60%">
-        <li>Open the Swift Playgrounds app on your iPad</li>
-        <li>Under “Get a Playground”, tap on “Get Started with Code”</li>
+    <ul>
+        <li>Swift Playgrounds offers interactive tutorials that teach Swift Fundamentals as SwiftUI elements</li>
+        <li>Can be accessed by clicking <code>See All</code> in More Playgrounds</li>
     </ul>
-    <img src="./assets/intro-to-swift.png" alt="TODO: Swift Playgrounds">
+    <img style="width:70%" src="./assets/playgrounds-see_all-ss.png" alt="Swift Playgrounds See All Libaray" >
 </div>
 
 ---vertical---
 
-## Navigating the Playground
+## App mode
 
-<div style="display: flex;">
-    <ul style="width:60%">
-        <li>Tap on the 
-            <div style="display: inline-flex; align-self: center;position:relatiive; ">
-                <img src="./assets/sidebar.svg">
-            </div>
-            icon to open the sidebar to navigate through the different chapters
-        </li>
-        <li>Under “Get a Playground”, tap on “Get Started with Code” </li>
-    </ul>
-    <img src="./assets/intro-to-swift.png" alt="TODO: Swift Playgrounds">
-</div>
+#### Mainly used when you want to create an App with SwiftUI
+
+<img style="width:70%" src="./assets/playgrounds-app-create-ss.png" alt="Swift Playgrounds App Create page " >
 
 ---vertical---
 
-## Navigating the Playground
+## Playgrounds mode
 
-<div style="display: flex;">
-    <ul style="width:60%">
-        <li>Tap on the <code>&#709;</code> icon to open the sidebar to navigate through the different chapters </li>
-        <li>Tap on the ✖ icon to go back to My Playgrounds</li>
-    </ul>
-    <img src="./assets/intro-to-swift.png" alt="TODO: Swift Playgrounds">
-</div>
+#### Mainly used for running Swift code that does not require SwiftUI
 
----vertical---
-
-## What you will be doing
-
-<div style="display: flex;">
-    <ul style="width:60%">
-        <li>You will be controlling a character, Byte, using Swift</li>
-        <li>Navigate around the game world and complete tasks such as toggling switches and collecting gems</li>
-    </ul>
-    <img src="./assets/intro-to-swift.png" alt="TODO: Swift Playgrounds">
-</div>
+<img style="width:70%" src="./assets/playgrounds-book-create-ss.png" alt="Swift Playgrounds Book Create page" >
 
 ---
 
-# Commands
+# Screen Capturing
 
 ---vertical---
 
-TODO: add 2 images
-
----vertical---
-
-TODO: add another 2 images
-
----vertical---
-
-## Controlling Byte
-
-<div style="display: flex;justify-content: center; align-items: center;">
-    <div style="flex: 1;text-align: center;">
-        <h3 style="text-align:center;"><b>moveForward()</b></h3>
-        <img src="./assets/intro-to-swift.png" alt="TODO: Swift Playgrounds">
-    </div>
-    <div style="flex: 1;text-align: center;">
-        <h3 style="text-align:center;"><b>collectGem()</b></h3>
-        <img src="./assets/intro-to-swift.png" alt="TODO: Swift Playgrounds">
-    </div>
-</div>
-
----vertical---
-
-## camelCase
+## Taking a Screenshot
 
 <div style="display: flex;">
     <ul style="width:60%">
-        <li>Commands have no spaces between words</li>
-        <li>If your command has two or more words, the standard practise is to capitalise the first letter of every word EXCEPT the first word</li>
-        <li>E.g move<code><b>F</b></code>orward(), collect<code><b>G</b></code>em()</li>
+        <li>Every lesson, we’ll ask you to export a screenshot, so it’s easier for us to take a look without having to connect to (and mess up) your iCloud version.</li>
+        <li>Press the home and power buttons at the same time to take a screenshot. </li>
+        <li>With Apple Pencil, you can also draw in from the bottom left..</li>
     </ul>
-    <img src="./assets/intro-to-swift.png" alt="TODO: Swift Playgrounds">
+    <img src="./assets/ipad-screenshot.png" alt="Taking screenshots on iPads">
 </div>
 
 ---vertical---
 
-## Introduction to the Interface
-
-<img src="./assets/intro-to-swift.png" alt="TODO: Swift Playgrounds">
-
----vertical---
-
-## Let’s try issuing commands!
+## Recording your Screen
 
 <div style="display: flex;">
     <ul style="width:60%">
-        <li>After tapping Tap to enter code, you can either </li>
-        <ol>
-            <li>Type the code out or, </li>
-            <li>Use the keyboard shortcuts and the bottom of the screen</li>
-        </ol>
-        <li>After you are done with the code, click Run My Code to see Byte in action! </li>
-        <li>You can tap on
-            <div style="display: inline-flex; align-self: center;position:relatiive; ">
-                <img src="./assets/speed.svg">
-            </div>
-            to speed Byte up or step through the code step by step
+        <li>First, ensure that the Screen Recording setting in Control Center is enabled</li>
+            <ul>
+                <li>Go to Settings → Control Center, then tap the Add Button <img style="margin-bottom: -4px" src="./assets/plus_button.svg" alt="Plus Button" height="32px"> next to Screen Recording</li>
+            </ul>
+        <li>Open the Control Center by swiping down from the top-right of the screen</li>
+        </li>
+            Tap the Record Button, wait for the three-second countdown. Then, tap it again to stop the recording
         </li>
     </ul>
-    <img src="./assets/intro-to-swift.png" alt="TODO: Swift Playgrounds">
-</div>
-
----vertical---
-
-## Hands-on
-
-### Try out the other exercises under Commands!
-
-<div style="display: flex;justify-content: center; align-items: center;">
-    <div style="flex: 1;text-align: center;">
-        <img src="./assets/intro-to-swift.png" alt="TODO: Swift Playgrounds">
-    </div>
-    <div style="flex: 1;text-align: center;">
-        <img src="./assets/intro-to-swift.png" alt="TODO: Swift Playgrounds">
-    </div>
-</div>
-
----
-
-# For Loops
-
----vertical---
-
-## `for` Loops Syntax
-
-```swift
-for i in 1 ... 4 {
-    moveForward()
-}
-```
-
----vertical---
-
-## What is i?
-
-<div style="display: flex;">
-<ul style="margin-inline: 10px;">
-<li>"<code>i</code>" is a variable. It represents a value, and it can be named anything (e.g. i or potato).</li>
-<li>The for loop will first set i to 1. It will run whatever code is in the curly brackets. Then, it will run it again but with i = 2, then 3, then 4, then 5.</li>
-</ul>
-
-```swift[]
-for i in 1 ... 5 {
-    print(i)
-} 
-```
-
+     <img style="width:50%" src="./assets/ipad-screenrecording-ss.png" alt="Taking screenshots on iPads">
 </div>
