@@ -48,10 +48,10 @@
 
 <div style="display: flex;justify-content: center; align-items: center;">
     <div style="flex: 1;text-align: center;">    
-        <img src="./assets/shapes-delete-content1-ss.jpg" alt="Highlights the starter code. ">
+        <img src="./assets/shapes-delete-content1-ss.jpg">
     </div>
     <div style="flex: 1;text-align: center;">
-        <img src="./assets/shapes-delete-content2-ss.jpg" alt="Shows a clean project">
+        <img src="./assets/shapes-delete-content2-ss.jpg">
     </div>
 </div>
 
@@ -67,7 +67,7 @@
 
 <div style="display: flex;justify-content: center; align-items: center;">
     <div style="flex: 1;text-align: center;">    
-        <img src="./assets/shapes-step1-ss.jpg" alt="Highlights the starter code. ">
+        <img src="./assets/shapes-step1-ss.jpg" alt="Empty ContentView.swift with ZStack">
     </div>
 </div>
 
@@ -79,7 +79,7 @@
 
 <div style="display: flex;justify-content: center; align-items: center;">
     <div style="flex: 1;text-align: center;">    
-        <img src="./assets/shapes-step2-ss.jpg" alt="Highlights the starter code. ">
+        <img src="./assets/shapes-step2-ss.jpg" alt="View button highlighted">
     </div>
 </div>
 
@@ -91,7 +91,7 @@
 
 <div style="display: flex;justify-content: center; align-items: center;">
     <div style="flex: 1;text-align: center;">    
-        <img src="./assets/shapes-step3-ss.jpg" alt="Highlights the starter code. ">
+        <img src="./assets/shapes-step3-ss.jpg" alt="ContentView.swift with one capsule">
     </div>
 </div>
 
@@ -121,7 +121,7 @@ struct ContentView: View {
 
 <div style="display: flex;justify-content: center; align-items: center;">
     <div style="flex: 1;text-align: center;">    
-        <img src="./assets/shapes-step4-ss.jpg" alt="Highlights the starter code. ">
+        <img src="./assets/shapes-step4-ss.jpg">
     </div>
 </div>
 
@@ -130,6 +130,7 @@ struct ContentView: View {
 # `Frames` and `foregroundStyle`
 
 ---vertical---
+
 ## Shaping the Face
 
 - Search for `frame` and tap to add it to your code.
@@ -137,10 +138,10 @@ struct ContentView: View {
 
 <div style="display: flex;justify-content: center; align-items: center;">
     <div style="flex: 1;text-align: center;">    
-        <img src="./assets/shapes-step5-1-ss.jpg" alt="Highlights the starter code. ">
+        <img src="./assets/shapes-step5-1-ss.jpg" >
     </div>
     <div style="flex: 1;text-align: center;">
-        <img src="./assets/shapes-step5-2-ss.jpg" alt="Shows a clean project">
+        <img src="./assets/shapes-step5-2-ss.jpg" >
     </div>
 </div>
 
@@ -153,10 +154,10 @@ struct ContentView: View {
 
 <div style="display: flex;justify-content: center; align-items: center;">
     <div style="flex: 1;text-align: center;">    
-        <img src="./assets/shapes-step6-1-ss.jpg" alt="Highlights the starter code. ">
+        <img src="./assets/shapes-step6-1-ss.jpg">
     </div>
     <div style="flex: 1;text-align: center;">
-        <img src="./assets/shapes-step6-2-ss.jpg" alt="Shows a clean project">
+        <img src="./assets/shapes-step6-2-ss.jpg">
     </div>
 </div>
 
@@ -169,10 +170,10 @@ struct ContentView: View {
 
 <div style="display: flex;justify-content: center; align-items: center;">
     <div style="flex: 1;text-align: center;">    
-        <img src="./assets/shapes-step7-1-ss.jpg" alt="Highlights the starter code. ">
+        <img src="./assets/shapes-step7-1-ss.jpg">
     </div>
     <div style="flex: 1;text-align: center;">
-        <img src="./assets/shapes-step7-2-ss.jpg" alt="Shows a clean project">
+        <img src="./assets/shapes-step7-2-ss.jpg">
     </div>
 </div>
 
@@ -226,7 +227,7 @@ struct ContentView: View {
 
 <div style="display: flex;justify-content: center; align-items: center;">
     <div style="flex: 1;text-align: center;">    
-        <img src="./assets/shapes-step8-ss.jpg" alt="Highlights the starter code. ">
+        <img src="./assets/shapes-step8-ss.jpg">
     </div>
 </div>
 
@@ -238,10 +239,10 @@ struct ContentView: View {
 
 <div style="display: flex;justify-content: center; align-items: center;">
     <div style="flex: 1;text-align: center;">    
-        <img src="./assets/shapes-step9-1-ss.jpg" alt="Highlights the starter code. ">
+        <img src="./assets/shapes-step9-1-ss.jpg">
     </div>
     <div style="flex: 1;text-align: center;">
-        <img src="./assets/shapes-step9-2-ss.jpg" alt="Shows a clean project">
+        <img src="./assets/shapes-step9-2-ss.jpg">
     </div>
 </div>
 
@@ -254,7 +255,7 @@ struct ContentView: View {
 
 <div style="display: flex;justify-content: center; align-items: center;">
     <div style="flex: 1;text-align: center;">    
-        <img src="./assets/shapes-step10-ss.jpg" alt="Highlights the starter code. ">
+        <img src="./assets/shapes-step10-ss.jpg">
     </div>
 </div>
 
@@ -266,7 +267,7 @@ struct ContentView: View {
 
 <div style="display: flex;justify-content: center; align-items: center;">
     <div style="flex: 1;text-align: center;">    
-        <img src="./assets/shapes-step11-ss.jpg" alt="Highlights the starter code. ">
+        <img src="./assets/shapes-step11-ss.jpg">
     </div>
 </div>
 
@@ -275,8 +276,108 @@ struct ContentView: View {
 ## Adding Hair
 
 - Add a circle for your hair. Use `frame` to make it about the same width as your head or slightly larger.
-- 
+
+<div style="display: flex;justify-content: center; align-items: center;">
+    <div style="flex: 1;text-align: center;">    
+        <img src="./assets/shapes-step12-ss.jpg">
+    </div>
+</div>
+
+---vertical---
+
+## Adding Hair
+
+- Note: The `trim` modifier must come directly below a shape.
+- Experiment with values for where the trim should start and end.
+
+<div style="display: flex;justify-content: center; align-items: center;">
+    <div style="flex: 1;text-align: center;">    
+        <img src="./assets/shapes-step13-1-ss.jpg">
+    </div>
+    <div style="flex: 1;text-align: center;">
+        <img src="./assets/shapes-step13-2-ss.jpg">
+    </div>
+</div>
+
+---vertical---
+
+## Adding Hair
+
+- Adjust the location of the bangs or short hair. Continue adding any remaining elements to complete your hair.
+
+<div style="display: flex;justify-content: center; align-items: center;">
+    <div style="flex: 1;text-align: center;">    
+        <img src="./assets/shapes-step14-ss.jpg">
+    </div>
+</div>
+
+---vertical---
+
+## Tip: Many views in a stack
+
+- If you have more than ten views in a stack, you’ll get an “Extra arguments at position…” warning. To fix this, you can add a `Group` view to the stack.
+
+<div style="display: flex;justify-content: center; align-items: center;">
+    <div style="flex: 1;text-align: center;">    
+        <img src="./assets/shapes-tip-too-many-views-in-a-stack-ss.jpg">
+    </div>
+</div>
 
 ---
 
 # Shadow and Background Color
+
+---vertical---
+
+## Shadow behind the head
+
+- Locate the shape that creates your head in the code. Add a blank line below the shape, then search for `shadow` in the list of modifiers.
+
+<div style="display: flex;justify-content: center; align-items: center;">
+    <div style="flex: 1;text-align: center;">    
+        <img src="./assets/shapes-step15-1-ss.jpg">
+    </div>
+    <div style="flex: 1;text-align: center;">
+        <img src="./assets/shapes-step15-2-ss.jpg">
+    </div>
+</div>
+
+---vertical---
+
+## Shadow: Colour
+
+- Optionally, add a colour to the shadow
+
+```swift
+.shadow(color: .black, radius: 10)
+```
+
+---vertical---
+
+## Background colour
+
+- Add a blank line at the top of your `ZStack`, then open the list of colors. Tap a color to add it to your code.
+
+<div style="display: flex;justify-content: center; align-items: center;">
+    <div style="flex: 1;text-align: center;">    
+        <img src="./assets/shapes-step16-1-ss.jpg">
+    </div>
+</div>
+
+---vertical---
+
+## Background colour but lighter
+
+- Optionally, add an `opacity` modifier to dim the background color.
+
+<div style="display: flex;justify-content: center; align-items: center;">
+    <div style="flex: 1;text-align: center;">    
+        <img src="./assets/shapes-step16-2-ss.jpg">
+    </div>
+</div>
+
+
+---
+
+
+# And that's it!
