@@ -7,7 +7,7 @@
 
 # iPad and Swift Playgrounds
 
----vertical---
+---
 
 ## What is Swift?
 
