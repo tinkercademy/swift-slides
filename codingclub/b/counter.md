@@ -165,7 +165,9 @@ myAmazingString = 123 // Throws an error.
     <img src="./assets/new-project.png">
 </div>
 
+
 ---vertical---
+
 
 ## Interface Set Up
 
@@ -187,16 +189,17 @@ myAmazingString = 123 // Throws an error.
 
 ---vertical---
 
+
 <div style="display: flex;">
     <div style="">
     <pre><code data-line-numbers="4-10" data-ln-start-from="3" class="hljs language-swift">struct ContentView: View {
     var body: some View {
         VStack {
             Text("0 Cookies")
-            Button("I ATE ANOTHER ONE!!") {
+            Button("I ATE ANOTHER ONE !!!") {
                 // Action
             }
-            Button("A COOKIE FELL OUT OF MY MOUTH!!") {
+            Button("A COOKIE FELL OUT OF MY MOUTH !!!") {
                 // Action
             }
         }
@@ -208,7 +211,9 @@ myAmazingString = 123 // Throws an error.
     <img src="./assets/preview-cookies-setup.png" height="100%">
 </div>
 
+
 ---vertical---
+
 
 ## Handling Taps
 - Print out a message when the `Button` is tapped!
@@ -219,10 +224,10 @@ struct ContentView: View {
     var body: some View {
         VStack {
             Text("0 Cookies")
-            Button("I ATE ANOTHER ONE!!") {
+            Button("I ATE ANOTHER ONE !!!") {
                 print("Increment Cookies")
             }
-            Button("A COOKIE FELL OUT OF MY MOUTH!!") {
+            Button("A COOKIE FELL OUT OF MY MOUTH !!!") {
                 print("Decrement Cookies")
             }
         }
@@ -230,12 +235,16 @@ struct ContentView: View {
 }
 ```
 
+
 ---
+
 
 # States
 ## Variables in SwiftUI
 
+
 ---vertical---
+
 
 ## `@State` Variables
 - `@State` is a property wrapper that allows SwiftUI to help you keep track of them.
@@ -247,11 +256,13 @@ struct ContentView: View {
 
 ## What We Need
 1. A variable to keep track of the number of cookies eaten 🍪.
-2. To increment the variable's value when the _"I ATE ANOTHER ONE!!"_ `Button` is pressed
-3. To decrement the variable's value when the _"A COOKIE FELL OUT OF MY MOUTH!!"_ `Button` is pressed
+2. To increment the variable's value when the _"I ATE ANOTHER ONE !!!"_ `Button` is pressed
+3. To decrement the variable's value when the _"A COOKIE FELL OUT OF MY MOUTH !!!"_ `Button` is pressed
 4. Whenever the variable's value changes the `Text` displaying the number of cookies eaten should refresh.
 
+
 ---vertical---
+
 
 ## Create a `@State` Variable
 ```swift[3:3]
@@ -262,10 +273,10 @@ struct ContentView: View {
     var body: some View {
         VStack {
             Text("0 Cookies")
-            Button("I ATE ANOTHER ONE!!") {
+            Button("I ATE ANOTHER ONE !!!") {
                 print("Increment Cookies")
             }
-            Button("A COOKIE FELL OUT OF MY MOUTH!!") {
+            Button("A COOKIE FELL OUT OF MY MOUTH !!!") {
                 print("Decrement Cookies")
             }
         }
@@ -273,7 +284,9 @@ struct ContentView: View {
 }
 ```
 
+
 ---vertical---
+
 
 ## Adjusting Counter's Value
 After adjusting the value of `counter`, print it out and check your console to make sure the value of `counter` changes when the `Button` is tapped.
@@ -286,11 +299,11 @@ struct ContentView: View {
     var body: some View {
         VStack {
             Text("0 Cookies")
-            Button("I ATE ANOTHER ONE!!") {
+            Button("I ATE ANOTHER ONE !!!") {
                 counter = counter + 1
                 print(counter)
             }
-            Button("A COOKIE FELL OUT OF MY MOUTH!!") {
+            Button("A COOKIE FELL OUT OF MY MOUTH !!!") {
                 counter = counter - 1
                 print(counter)
             }
@@ -299,7 +312,9 @@ struct ContentView: View {
 }
 ```
 
+
 ---vertical---
+
 
 ## Displaying Cookie Count
 In order to display the `counter` value in a `Text`, we need to convert it to a `String`. We can convert it's type by using `String(counter)`
@@ -312,11 +327,11 @@ struct ContentView: View {
     var body: some View {
         VStack {
             Text(String(counter))
-            Button("I ATE ANOTHER ONE!!") {
+            Button("I ATE ANOTHER ONE !!!") {
                 counter = counter + 1
                 print(counter)
             }
-            Button("A COOKIE FELL OUT OF MY MOUTH!!") {
+            Button("A COOKIE FELL OUT OF MY MOUTH !!!") {
                 counter = counter - 1
                 print(counter)
             }
@@ -325,29 +340,36 @@ struct ContentView: View {
 }
 ```
 
+
 ---
+
 
 # String Interpolation
 ## Interpolation (noun)
 ### The act of introducing or inserting anything, especially that which is spurious or foreign.
 
+
 ---vertical---
 
+
 ## Inserting Variables
-- String interpolation allows for variables to be inserted into a `String`.
-- For example, you could insert `name` into `greeting` to form a statement.
+- String interpolation allows for variables to be inserted into a `String`. 
+- For example, you could insert `name` into `greeting` to form a statement. 
+
 ```swift
-var name = "Jia Chen"
-var greeting = "Hello \(name)!"
+var name = "Daksh"
+var greeting = "Hello \(name)!" 
 ```
 - You can also insert values of other data types
 ```swift
 var name = "Cookie Monster"
-var coookiesConsumed = 20
+var coookiesConsumed = 40
 var greeting = "\(name), consumed \(cookiesConsumed) cookies!"
 ```
 
+
 ---vertical---
+
 
 ## In SwiftUI
 ```swift[3:7]
@@ -358,11 +380,11 @@ struct ContentView: View {
     var body: some View {
         VStack {
             Text("\(counter) Cookies")
-            Button("I ATE ANOTHER ONE!!") {
+            Button("I ATE ANOTHER ONE !!!") {
                 counter = counter + 1
                 print(counter)
             }
-            Button("A COOKIE FELL OUT OF MY MOUTH!!") {
+            Button("A COOKIE FELL OUT OF MY MOUTH !!!") {
                 counter = counter - 1
                 print(counter)
             }
@@ -388,7 +410,9 @@ if temperature < 10 {
 }
 ```
 
+
 ---vertical---
+
 
 ## More Conditions
 What if you wanted another `View` to appear if the condition is not met? You can use the `else` clause.
@@ -400,7 +424,9 @@ if temperature < 10 {
 }
 ```
 
+
 ---vertical---
+
 
 ## Even More Conditions
 How about accounting for more conditions? We can use else-if.
@@ -416,7 +442,9 @@ if temperature < 10 {
 ```
 When Swift evaluates these statements, it goes from top to bottom, and only runs the first block where the condition evaluates to `true`. It won’t bother with the rest of the statements!
 
+
 ---vertical---
+
 
 ## Specific Comparisons
 - Here’s one more condition, but at a very specific number.
@@ -424,7 +452,7 @@ When Swift evaluates these statements, it goes from top to bottom, and only runs
 if temperature < 10 {
     Text("It's so cold! Wear a winter jacket!!")
 } else if temperature == 100 {
-    Text("Oh hey we can boil water! Also how are you alive")
+    Text("Oh hey we can boil water! Also how are you alive?")
 } else if temperature > 30 {
     Text("It's so hot! Why go out???")
 } else {
@@ -434,7 +462,9 @@ if temperature < 10 {
 - Notice the use of `==` — that’s what Swift (and other languages) use for comparison. `=`, on the other hand, means “assign the right-side value into the left”.
 - If we changed the order of the second and third conditions, and give a temperature of 100, we’ll never get the boil water comment. Any idea why?
 
+
 ---vertical---
+
 
 ## More Numerical Comparators
 
@@ -447,7 +477,9 @@ if temperature < 10 {
 | `==`       | Equal                 |
 | `!=`       | Not equal             |
 
+
 ---vertical---
+
 
 ## More Examples
 ```swift
@@ -462,7 +494,9 @@ if a == 5 { // Do you like the number 5?
 }
 ```
 
+
 ---vertical---
+
 
 ## Booleans
 - Remember booleans, or variables/constants of type Bool? 
@@ -478,11 +512,13 @@ if isRaining {
 }
 ```
 
+
 ---vertical---
+
 
 ## Hiding the Button
 - We want to ensure the `counter` value cannot be less than 0.
-- Therefore, we should only show the _A COOKIE FELL OUT OF MY MOUTH!!_ `Button` if the number of cookies is greater than 0.
+- Therefore, we should only show the _A COOKIE FELL OUT OF MY MOUTH !!!!_ `Button` if the number of cookies is greater than 0.
 
 ```swift[3:13-18]
 struct ContentView: View {
@@ -492,13 +528,13 @@ struct ContentView: View {
     var body: some View {
         VStack {
             Text("\(counter) Cookies")
-            Button("I ATE ANOTHER ONE!!") {
+            Button("I ATE ANOTHER ONE !!!") {
                 counter = counter + 1
                 print(counter)
             }
             
             if counter > 0 {
-                Button("A COOKIE FELL OUT OF MY MOUTH!!") {
+                Button("A COOKIE FELL OUT OF MY MOUTH !!!") {
                     counter = counter - 1
                     print(counter)
                 }                
@@ -508,19 +544,23 @@ struct ContentView: View {
 }
 ```
 
+
 ---
+
 
 # Write What Where?
 ## Where do you write pieces of code?
 
+
 ---vertical---
+
 
 ## View Builder vs. Logical Code
 ```swift
 VStack {
     // View Builder Code
 
-    Button("Hello") {
+    Button("Hello World") {
         // Logical Code
     }
     .mask {
@@ -577,9 +617,12 @@ VStack {
 
 [Download Completed Project](https://github.com/tinkercademy/swift-demo-projects/raw/main/Counter.zip/)
 
+
 ---vertical---
 
+
 ## <img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="84px"> ContentView
+
 ```swift[1:]
 import SwiftUI
 
@@ -590,13 +633,13 @@ struct ContentView: View {
     var body: some View {
         VStack {
             Text("\(counter) Cookies")
-            Button("I ATE ANOTHER ONE!!") {
+            Button("I ATE ANOTHER ONE !!!") {
                 counter = counter + 1
                 print(counter)
             }
             
             if counter > 0 {
-                Button("A COOKIE FELL OUT OF MY MOUTH!!") {
+                Button("A COOKIE FELL OUT OF MY MOUTH !!!") {
                     counter = counter - 1
                     print(counter)
                 }                

@@ -7,11 +7,15 @@
 
 # Compose with Stacks and Shapes
 
+
 ---
+
 
 # Set Up an App Playground
 
+
 ---vertical---
+
 
 ### Create a New App
 
@@ -22,7 +26,9 @@
     <img style="width:70%" src="./assets/shapes-create-app-ss.jpg" alt="Show the Create an App button highlighted in the Swift playgrounds app. " >
 </div>
 
+
 ---vertical---
+
 
 ## Rename the App
 
@@ -39,7 +45,9 @@
     </div>
 </div>
 
+
 ---vertical---
+
 
 ## Remove the Default Text
 
@@ -55,11 +63,15 @@
     </div>
 </div>
 
+
 ---
+
 
 # Self Portrait App
 
+
 ---vertical---
+
 
 ## Adding a ZStack
 
@@ -71,7 +83,9 @@
     </div>
 </div>
 
+
 ---vertical---
+
 
 ## Adding a Face
 
@@ -83,7 +97,9 @@
     </div>
 </div>
 
+
 ---vertical---
+
 
 ## Adding a Face
 
@@ -95,7 +111,9 @@
     </div>
 </div>
 
+
 ---vertical---
+
 
 ## Tip : Rounded Rectangle
 
@@ -113,7 +131,11 @@ struct ContentView: View {
 }
 ```
 
+<p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift</p>
+
+
 ---vertical---
+
 
 ## Shaping the Face
 
@@ -129,7 +151,9 @@ struct ContentView: View {
 
 # `Frames` and `foregroundStyle`
 
+
 ---vertical---
+
 
 ## Shaping the Face
 
@@ -145,7 +169,9 @@ struct ContentView: View {
     </div>
 </div>
 
+
 ---vertical---
+
 
 ## Coloring the Face
 
@@ -161,7 +187,9 @@ struct ContentView: View {
     </div>
 </div>
 
+
 ---vertical---
+
 
 ## Coloring the Face
 
@@ -177,7 +205,9 @@ struct ContentView: View {
     </div>
 </div>
 
+
 ---vertical---
+
 
 ## Tip : Rounded Rectangle
 
@@ -215,11 +245,15 @@ struct ContentView: View {
 ​<!-- dont remove the empty lines in the "second colour segment -->
 </div>
 
+
 ---
+
 
 # Offset and Trim
 
+
 ---vertical---
+
 
 ## Creating the neck
 
@@ -231,7 +265,9 @@ struct ContentView: View {
     </div>
 </div>
 
+
 ---vertical---
+
 
 ## Adjusting the Neck
 
@@ -246,7 +282,9 @@ struct ContentView: View {
     </div>
 </div>
 
+
 ---vertical---
+
 
 ## Adjusting the Neck
 
@@ -259,7 +297,9 @@ struct ContentView: View {
     </div>
 </div>
 
+
 ---vertical---
+
 
 ## Adding a shirt
 
@@ -271,7 +311,9 @@ struct ContentView: View {
     </div>
 </div>
 
+
 ---vertical---
+
 
 ## Adding Hair
 
@@ -283,7 +325,9 @@ struct ContentView: View {
     </div>
 </div>
 
+
 ---vertical---
+
 
 ## Adding Hair
 
@@ -299,7 +343,9 @@ struct ContentView: View {
     </div>
 </div>
 
+
 ---vertical---
+
 
 ## Adding Hair
 
@@ -311,7 +357,9 @@ struct ContentView: View {
     </div>
 </div>
 
+
 ---vertical---
+
 
 ## Tip: Many views in a stack
 
@@ -323,11 +371,15 @@ struct ContentView: View {
     </div>
 </div>
 
+
 ---
+
 
 # Shadow and Background Color
 
+
 ---vertical---
+
 
 ## Shadow behind the head
 
@@ -342,7 +394,9 @@ struct ContentView: View {
     </div>
 </div>
 
+
 ---vertical---
+
 
 ## Shadow: Colour
 
@@ -352,7 +406,9 @@ struct ContentView: View {
 .shadow(color: .black, radius: 10)
 ```
 
+
 ---vertical---
+
 
 ## Background colour
 
@@ -364,7 +420,9 @@ struct ContentView: View {
     </div>
 </div>
 
+
 ---vertical---
+
 
 ## Background colour but lighter
 
@@ -381,3 +439,9 @@ struct ContentView: View {
 
 
 # And that's it!
+
+### 🔢 Self Portrait App
+
+# Full Code
+
+[Download Completed Project](https://github.com/tinkercademy/swift-demo-projects/raw/main/Self%20Portrait.zip/)
