@@ -541,6 +541,8 @@ struct ContentView: View {
   Your browser does not support the video tag.
 </video>
 
+---
+
 # And that's it!
 
 ---
@@ -550,5 +552,3 @@ struct ContentView: View {
 # Full Code
 
 [Download Completed Project](https://github.com/tinkercademy/swift-demo-projects/raw/main/Flag%20Raising.zip/)
-
----
