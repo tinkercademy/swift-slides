@@ -7,7 +7,7 @@
 
 # Compose with Stacks and Shapes
 
-
+>
 ---
 
 
@@ -439,6 +439,8 @@ struct ContentView: View {
 
 
 # And that's it!
+
+---
 
 ### 🔢 Self Portrait App
 
