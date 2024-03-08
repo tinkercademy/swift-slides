@@ -238,4 +238,8 @@ struct Car {
 var myCar = Car(colour: "Red", size: 5, wheels: 4)
 ```
 
----vertical---
+---
+
+# Previews
+
+TODO: 
