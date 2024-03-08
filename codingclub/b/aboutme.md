@@ -11,12 +11,6 @@ Create an about me app in Swift Playgrounds.
 
 ---
 
-# Unit Overview
-
-- TabBar: Navigating from View to View
-- ScrollView: Scrolling long texts
-
----
 
 # Welcome to SwiftUI
 
