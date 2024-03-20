@@ -1,10 +1,10 @@
-
 <div style="text-align: left">
     <img src="/assets/tinkercademy.png" alt="Tinkercademy Logo" height="128px">
     <img src="https://raw.githubusercontent.com/swiftinsg/branding/main/logos/icons/png/coloured%20-%20dark%20background.png" alt="Swiftinsg Logo" height="128px" style="margin-left: 64px;">
 </div>
 
 ## Track B: Unit 4A
+
 # Array, Previews And Structs
 
 ---
@@ -231,7 +231,7 @@ Let's say you want to make a little car. With a struct, you can decide that your
 struct Car {
     var colour : String
     var size : Int
-    var wheels : Int 
+    var wheels : Int
 };
 
 // Now I can make a car!
@@ -242,4 +242,41 @@ var myCar = Car(colour: "Red", size: 5, wheels: 4)
 
 # Previews
 
-TODO: 
+---vertical---
+
+## What are Previews?
+
+- A way to see your UI in real-time as you code
+
+```swift
+struct ContentView: View {
+    var body: some View {
+        Text("Hello, world!")
+    }
+}
+
+#Preview {
+    ContentView()
+}
+```
+
+---vertical---
+
+## Rendering Multiple Previews 
+
+```swift
+struct ToggleButton: View {
+
+    var buttonState: Bool
+
+    var body: some View {
+        ...
+    }
+}
+
+#Preview {
+    ToggleButton(buttonState: true)
+    ToggleButton(buttonState: false)
+}
+```
+

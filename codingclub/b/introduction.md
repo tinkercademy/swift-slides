@@ -98,5 +98,5 @@
             Tap the Record Button, wait for the three-second countdown. Then, tap it again to stop the recording
         </li>
     </ul>
-     <img style="width:50%" src="./assets/ipad-screenrecording-ss.png" alt="Taking screenshots on iPads">
+     <img style="width:50%" src="./assets/ipad-screenrecording-ss.png">
 </div>

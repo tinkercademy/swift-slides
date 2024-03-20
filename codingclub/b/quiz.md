@@ -673,7 +673,7 @@ struct CircularProgressView: View {
 <p> <img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> CircularProgressView.swift </p>
 
 ```swift[16]
-struct CircularProgressView: View {    
+struct CircularProgressView: View {
     var progress: CGFloat
     var body: some View {
         ZStack {
@@ -681,7 +681,7 @@ struct CircularProgressView: View {
                 .stroke(lineWidth: 20)
                 .opacity(0.3)
                 .foregroundColor(.red)
-            
+
             Circle()
                 .trim(from: 0, to: progress)
                 .stroke(style: .init(lineWidth: 20.0,
@@ -702,19 +702,17 @@ struct CircularProgressView: View {
 
 ---vertical---
 
-
 ## Suggested extensions
 
 - Style it!
 - On the score sheet, show a list of questions, iterated through using `ForEach` or `List`
-    - Bonus: Add a tick or a cross depending on whether the user got the question right or wrong
+  - Bonus: Add a tick or a cross depending on whether the user got the question right or wrong
 - Add computed properties returning 1 decimal point-rounded `String`s for:
-    - Question progress
-    - Score percentage
+  - Question progress
+  - Score percentage
 - Allow the user to restart the quiz, and save the high score as an optional that is `nil` when the user doesn’t have one
-- Add a `TextField` that allows the user to answer open-ended questions (hard!) 
+- Add a `TextField` that allows the user to answer open-ended questions (hard!)
 
 ---
 
 # And that’s it!
-
