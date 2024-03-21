@@ -4,6 +4,7 @@
 </div>
 
 ## Track A: Unit 2
+
 # Brainstorming
 
 Brainstorming for your app!
@@ -11,6 +12,7 @@ Brainstorming for your app!
 ---
 
 ## Unit Overview
+
 - [Defining](#define)
 - [Ideating](#ideas)
 - [Focus](#focus)
@@ -19,18 +21,21 @@ Brainstorming for your app!
 ---
 
 # Define
-## | dɪˈfʌɪn |
-verb *[with object]*
-**1** state or describe exactly the nature, scope, or meaning of: the contract will seek to define the client's obligations.
- - give the meaning of (a word or phrase), especially in a dictionary: the dictionary defines it as ‘a type of pasture’.
- - make up or establish the character or essence of: for some, the football club defines their identity. 
-**2** mark out the boundary or limits of: the river defines the park's boundary.
-- make clear the outline of; delineate: she defined her eyes by applying eyeshadow to her eyelids.
 
+## | dɪˈfʌɪn |
+
+verb _[with object]_
+**1** state or describe exactly the nature, scope, or meaning of: the contract will seek to define the client's obligations.
+
+- give the meaning of (a word or phrase), especially in a dictionary: the dictionary defines it as ‘a type of pasture’.
+- make up or establish the character or essence of: for some, the football club defines their identity.
+  **2** mark out the boundary or limits of: the river defines the park's boundary.
+- make clear the outline of; delineate: she defined her eyes by applying eyeshadow to her eyelids.
 
 ---vertical---
 
 ## Definition
+
 - Defining the problem, opportunity or challenge helps you to identify it
 - This helps you to focus on what matters
 - After identifying a problem, opportunity or challenge think about which you relate with the most
@@ -38,6 +43,7 @@ verb *[with object]*
 ---vertical---
 
 ## Understanding
+
 - It is important to understand the problem and who are the stakeholders who might be affected by the problem
 - Dive deeper into the problem to learn about it: this will help you find a good solution later on
 - Think about how you could improve the experience for the stakeholders
@@ -45,6 +51,7 @@ verb *[with object]*
 ---vertical---
 
 ## Hands-On
+
 - In the **App Journal**, fill in page 4, on **Purpose**
 - Brainstorm a list of problems, opportunities, or challenges you care about
 - Pick the most interesting idea and explain it in 1 sentence
@@ -53,7 +60,7 @@ verb *[with object]*
 
 ---vertical---
 
-insert image
+<img height="800" src="./assets/brainstorm-purpose-ss.png">
 
 ---
 
@@ -61,12 +68,12 @@ insert image
 
 ---vertical---
 
-## There are no bad ideas.
-and a lot of words around it
+# There are no bad ideas.
 
 ---vertical---
 
 ## Hands-On
+
 - In the **App Journal**, fill in page 5, on **Ideas**
 - Brainstorm and create a list of apps you’d like to build and how they will address your problem, opportunity, or challenge.
 - Try browsing the App Store for inspiration!
@@ -74,7 +81,7 @@ and a lot of words around it
 
 ---vertical---
 
-insert image
+<img height="800" src="./assets/brainstorm-idea-ss.png">
 
 ---
 
@@ -83,6 +90,7 @@ insert image
 ---vertical---
 
 ## App Goals
+
 - Who is your audience?
 - What do you want your app to achieve for your audience?
 - What would the audience do with your app?
@@ -90,19 +98,8 @@ insert image
 
 ---vertical---
 
-## My app will help immigrants with housing by providing a platform for them to rent homes
-
----vertical---
-
-## My app will help students with school announcements by notifying them when a new one is posted
-
----vertical---
-
-## My app will help with teachers with online classes by allowing them to annotate on their Mac screens
-
----vertical---
-
 ## Hands-On
+
 - In the **App Journal**, fill in page 6, on **Focus**
 - From your brainstorming list, select one idea and write a purpose statement for it.
 - Get specific. Write down any goals you have for your app and describe what someone would do with it.
@@ -110,23 +107,57 @@ insert image
 
 ---vertical---
 
-insert image
+<div>
+<h2>My app will help <span style="color: #ea6555;">immigrants</span></h2>
+<h2>with <span style="color: #ea6555;">housing</span></h2>
+<h2>by <span style="color: #ea6555;">providing a platform for them to rent homes</span></h2>
+</div>
+
+---vertical---
+
+<div>
+<h2>My app will help <span style="color: #ea6555;">students</span></h2>
+<h2>with <span style="color: #ea6555;">school announcements</span></h2>
+<h2>by <span style="color: #ea6555;">notifying them when a new one is posted</span></h2>
+</div>
+
+---vertical---
+
+<div>
+<h2>My app will help <span style="color: #ea6555;">teachers</span></h2>
+<h2>with <span style="color: #ea6555;">online classes</span></h2>
+<h2>by <span style="color: #ea6555;">allowing them to annotate on their Mac screens</span></h2>
+</div>
+
+---vertical---
+
+<img height="800" src="./assets/brainstorm-focus-ss.png">
 
 ---
 
 # Unit 2 Deliverables
 
+<span>
+<img height="800" src="./assets/brainstorm-idea-ss.png">
+<img height="800" src="./assets/brainstorm-purpose-ss.png">
+<img height="800" src="./assets/brainstorm-focus-ss.png">
+
+</span>
+
 ---vertical---
 
 ## Unit 2 Deliverables (Part 1)
-insert image
+
+<img height="800" src="./assets/brainstorm-idea-ss.png">
 
 ---vertical---
 
 ## Unit 2 Deliverables (Part 2)
-insert image
+
+<img height="800" src="./assets/brainstorm-purpose-ss.png">
 
 ---vertical---
 
 ## Unit 2 Deliverables (Part 3)
-insert image
+
+<img height="800" src="./assets/brainstorm-focus-ss.png">
