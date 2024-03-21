@@ -26,13 +26,3 @@
   --r-selection-color: #fff;
   --r-gradient: linear-gradient(45deg, #fc1a4d 10%, #fc2b2d 20%);
 }
-
-.logo {
-  height: 48px;
-}
-
-@media only screen and (max-width: 890px) {
-  .logo {
-    height: 16px;
-  }
-}

@@ -104,6 +104,25 @@ a {
   border-radius: 16px;
 }
 
+.logo {
+  height: 48px !important;
+}
+
+footer small {
+  opacity: 0.8;
+}
+
+.titleh2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #bbb;
+}
+
+.titleh1 {
+  font-size: 48px;
+  line-height: 1.1em;
+}
+
 @media only screen and (max-width: 890px) {
   body {
     padding: 16px;
@@ -126,5 +145,8 @@ a {
 
   .card {
     width: 100% !important;
+  }
+  .logo {
+    height: 20px;
   }
 }
