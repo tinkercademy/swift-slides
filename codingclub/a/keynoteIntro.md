@@ -4,6 +4,7 @@
 </div>
 
 ## Track A: Unit 1
+
 # Intro to Keynote
 
 Introduction to Keynote and the App Journal
@@ -11,6 +12,7 @@ Introduction to Keynote and the App Journal
 ---
 
 ## Unit Overview
+
 - [Keynote](#keynote)
 - [App Design Journal](#app-design-journal)
 - [Navigating the Journal](#navigating)
@@ -25,7 +27,9 @@ Introduction to Keynote and the App Journal
 ---vertical---
 
 ## Keynote
-Keynote is a powerful presentation app *and* design tool. Students will use it for:
+
+Keynote is a powerful presentation app _and_ design tool. Students will use it for:
+
 <div style="display: flex;">
     <ul>
         <li>App Design Journal</li>
@@ -42,11 +46,12 @@ Keynote is a powerful presentation app *and* design tool. Students will use it f
     <div style="display: flex;">
         <img src="/assets/keynote-logo.png">
     </div>
-</div> 
+</div>
 
 ---
 
 # App Design Journal
+
 <div style="justify-content: center;">
     <p>Download at <a href="https://apple.co/ecc-appjournal_SG">apple.co/ecc-appjournal_SG</a></p>
     <div style="display: flex;">
@@ -57,6 +62,7 @@ Keynote is a powerful presentation app *and* design tool. Students will use it f
 ---vertical---
 
 ## Getting the journal
+
 <div style="display: flex;">
     <ul>
         <li>Download from <a href="https://apple.co/ecc-appjournal_SG">apple.co/ecc-appjournal_SG</a></li>
@@ -74,11 +80,13 @@ Keynote is a powerful presentation app *and* design tool. Students will use it f
 ---
 
 # Navigating
+
 ## And editing pages
 
 ---vertical---
 
 ## Navigating the journal
+
 <div style="display: flex;">
     <ul>
         <li>Slide manager on the left shows a preview of all pages</li>
@@ -96,6 +104,7 @@ Keynote is a powerful presentation app *and* design tool. Students will use it f
 ---vertical---
 
 ## Editing your journal
+
 <div style="display: flex;">
     <ul>
         <li>To edit your journal, tap on the EDIT button at the top-right hand corner of the screen</li>
@@ -111,6 +120,7 @@ Keynote is a powerful presentation app *and* design tool. Students will use it f
 ---vertical---
 
 ## Duplicate Slides
+
 <div style="display: flex; justify-content: center">
     <ul>
         <li>Within the App Journal, you may need to duplicate slides</li>
@@ -129,6 +139,7 @@ Keynote is a powerful presentation app *and* design tool. Students will use it f
 ---vertical---
 
 ## Taking a Screenshot
+
 <div style="display: flex;">
     <ul>
         <li>Every lesson, we’ll ask you to export a screenshot, so it’s easier for us to take a look without having to connect to (and mess up) your iCloud version.</li>
@@ -143,7 +154,9 @@ Keynote is a powerful presentation app *and* design tool. Students will use it f
 ---vertical---
 
 ## Hands-on
+
 Take a screenshot of the cover of your App Journal with your group name written on it!
+
 <div style="display: flex;">
     <img src="/codingclub/a/assets/hands-on.jpg" style="max-height: 600px;">
 </div>
@@ -155,6 +168,7 @@ Take a screenshot of the cover of your App Journal with your group name written 
 ---vertical---
 
 ## Keynote Collaboration
+
 <div style="display: flex;">
     <ul>
         <li>To get started, tap on the (export) icon in the top right corner</li>
@@ -175,6 +189,7 @@ Take a screenshot of the cover of your App Journal with your group name written 
 ---vertical---
 
 ## Tip: Let Anyone Edit
+
 <div style="display: flex;">
     <ul>
         <li>Consider using this tip, to avoid having
@@ -190,6 +205,7 @@ to set up permissions.</li>
 ---vertical---
 
 ## Sharing Options
+
 <div style="display: flex;">
     <ul>
         <li>Once a document is shared, you’ll see a new button show up (person-icon)</li>
@@ -205,6 +221,7 @@ to set up permissions.</li>
 ---vertical---
 
 ## Caveats and Warnings
+
 <div style="display: flex;">
     <ul>
         <li>One student should create the “master document” first, before sharing</li>
@@ -223,6 +240,7 @@ to set up permissions.</li>
 ---vertical---
 
 ## Unit 1 Deliverable
+
 <div style="display: flex;">
     <img src="/codingclub/a/assets/hands-on.jpg" style="padding: 10px; max-height: 800px;">
 </div>
