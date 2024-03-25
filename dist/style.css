@@ -106,16 +106,26 @@ a {
 }
 
 .explorers-logo {
-  height: 120px !important;
+  /* height: 120px !important; */
   margin-bottom: 2em;
+  max-width: 100%;
 }
 
 .tinkercademy-logo {
   height: 48px !important;
 }
 
+footer {
+  max-width: 100%;
+  margin-top: 64px;
+}
+
 footer small {
   opacity: 0.8;
+}
+
+.apple-badges {
+  max-width: 100%;
 }
 
 .titleh2 {
@@ -125,8 +135,9 @@ footer small {
 }
 
 .titleh1 {
-  font-size: 48px;
-  line-height: 1.1em;
+  font-size: 36px;
+  line-height: 1em;
+  padding-bottom: 0.5em;
 }
 
 @media only screen and (max-width: 890px) {
