@@ -5,15 +5,13 @@
 
 ## Track A: Unit 3
 
-# Planning
-
-Planning your user interface
+# Planning your user interface
 
 ---
 
 # Actions
 
----veritcal---
+---vertical---
 
 ## Actions
 
@@ -108,4 +106,3 @@ Planning your user interface
 # Unit 3 Deliverables (Part 3)
 
 <img height="800" src="./assets/bug-buzz-example3.png">
-
