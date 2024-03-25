@@ -10,14 +10,6 @@ Inclusive App Design
 
 ---
 
-## Unit Overview
-- [Inclusivity](#2)
-- [Accessibility features](#accessibility)
-- [Inclusion](#4)
-- [Deliverables](#unit-4-deliverables)
-
----
-
 # 15%
 ## of the world’s population live with disabilities
 

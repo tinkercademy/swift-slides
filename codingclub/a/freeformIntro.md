@@ -4,18 +4,10 @@
 </div>
 
 ## Track A: Unit 1A
+
 # Intro to Freeform
 
 Introduction to Freeform and its tools
-
----
-
-## Unit Overview
-- [Freeform](#freeform)
-- [Creating a new board](#creating-a-board)
-- [Navigating the board](#navigating)
-- [Tools in Freeform](#tools-in-freeform)
-- [Collaboration and exporting](#collaboration-and-exporting)
 
 ---
 
@@ -24,6 +16,7 @@ Introduction to Freeform and its tools
 ---vertical---
 
 ## Freeform
+
 - A free Apple app for Mac, iPhone, and iPad, designed for creative brainstorming and collaboration.
 - If you’ve used drawing tools for Keynote or Notes, it’s pretty much the same as those — just designed for collaborative editing, on an infinite canvas (board).
 - Create expandable “boards”, and add text, drawings with various brushes, fills, shapes, sticky notes, and media
@@ -31,6 +24,7 @@ Introduction to Freeform and its tools
 ---vertical---
 
 ## Why Freeform
+
 - With Freeform, you can...
 - Create simple app designs to experiment with different concepts of what you want to do
 - Create infinitely sized “boards”, and add text, drawings with various tools, fills, shapes, sticky notes and links
@@ -42,6 +36,7 @@ Introduction to Freeform and its tools
 ---vertical---
 
 ## Creating a new board
+
 <div style="display: flex;">
     <ul>
         <li>Click on the (edit) symbol near the top middle of the screen.</li>
@@ -55,6 +50,7 @@ Introduction to Freeform and its tools
 ---vertical---
 
 ## Renaming your board
+
 <div style="display: flex;">
     <ul>
         <li>Rename your board to ‘what the board is about’</li>
@@ -72,23 +68,26 @@ Introduction to Freeform and its tools
 ---
 
 # Navigating
+
 ## in Freeform
 
 ---vertical---
 
 ## Zooming your board
-- Freeform has an *infinite canvas*
-    - As you move around, the canvas will continue to expand
+
+- Freeform has an _infinite canvas_
+  - As you move around, the canvas will continue to expand
 - To **zoom in** or **zoom out** of the canvas, place two fingers on your screen, and do a pinching movement
-    - Pinching in zooms in, pinching out zooms out
+  - Pinching in zooms in, pinching out zooms out
 
 ---vertical---
 
 ## Moving around your board
-- Freeform has an *infinite canvas*
-    - As you move around, the canvas will continue to expand
+
+- Freeform has an _infinite canvas_
+  - As you move around, the canvas will continue to expand
 - To move around, **hold down one finger** on your screen and move it around
-    - You can do this simultaneously while zooming in or out
+  - You can do this simultaneously while zooming in or out
 
 ---
 
@@ -97,6 +96,7 @@ Introduction to Freeform and its tools
 ---vertical---
 
 ## Drawing Tools
+
 <div style="display: flex;">
     <ul>
         <li>Tap on (pen icon) in the toolbar to bring up the Tool Picker.</li>
@@ -108,6 +108,7 @@ Introduction to Freeform and its tools
 ---vertical---
 
 ## Tool Picker
+
 <div style="display: flex;">
     <ul>
         <li>Tap a tool to switch to it</li>
@@ -118,11 +119,13 @@ Introduction to Freeform and its tools
 ---vertical---
 
 ## Tool Picker
+
 insert image with all tools
 
 ---vertical---
 
 ## Creating sticky notes
+
 <div style="display: flex;">
     <ul>
         <li>In Freeform, you can create sticky notes.</li>
@@ -133,6 +136,7 @@ insert image with all tools
 ---vertical---
 
 ## Customising sticky notes
+
 <div style="display: flex;">
     <ul>
         <li>The default colour for these sticky notes is yellow, but you can change it</li>
@@ -145,6 +149,7 @@ insert image with all tools
 ---vertical---
 
 ## Using preset shapes
+
 <div style="display: flex;">
     <ul>
         <li>Freeform has a library of ready-made shapes for you to add to your boards</li>
@@ -159,6 +164,7 @@ insert image with all tools
 ---vertical---
 
 ## Insert media
+
 <div style="display: flex;">
     <ul>
         <li>Tap on the (picture icon) button at the top centre of your screen</li>
@@ -178,6 +184,7 @@ insert image with all tools
 ---vertical---
 
 ## Freeform Collaboration
+
 <div style="display: flex;">
     <ul>
         <li>In Freeform, you can collaborate with multiple people on the same document.</li>
@@ -189,6 +196,7 @@ insert image with all tools
 ---vertical---
 
 ## Exporting in Freeform
+
 <div style="display: flex;">
     <ul>
         <li>In Freeform, you can export the canvas so that you can send it as a pdf to anyone.</li>
@@ -204,6 +212,7 @@ insert image with all tools
 ---vertical---
 
 ## Keynote Collaboration
+
 <div style="display: flex;">
     <ul>
         <li>To get started, tap on the (export) icon in the top right corner</li>
@@ -221,6 +230,7 @@ insert image with all tools
 ---vertical---
 
 ## Tip: Let Anyone Edit
+
 <div style="display: flex;">
     <ul>
         <li>Consider using this tip, to avoid having
@@ -233,6 +243,7 @@ to set up permissions.</li>
 ---vertical---
 
 ## Sharing Options
+
 <div style="display: flex;">
     <ul>
         <li>Once a document is shared, you’ll see a new button show up (person-icon)</li>
@@ -245,6 +256,7 @@ to set up permissions.</li>
 ---vertical---
 
 ## Caveats and Warnings
+
 <div style="display: flex;">
     <ul>
         <li>One student should create the “master document” first, before sharing</li>
@@ -263,4 +275,5 @@ to set up permissions.</li>
 ---vertical---
 
 ## Unit 1 Deliverable
-[insert pic of journal page with scribbles]
+
+TODO: [insert pic of journal page with scribbles]
