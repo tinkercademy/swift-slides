@@ -3,7 +3,8 @@
     <img src="https://raw.githubusercontent.com/swiftinsg/branding/main/logos/icons/png/coloured%20-%20dark%20background.png" alt="Swiftinsg Logo" height="128px" style="margin-left: 64px;">
 </div>
 
-## Track A: Unit 6
+## Track A: Unit 7
+
 # Prototyping
 
 Making a high-fidelity prototype on Keynote
@@ -11,6 +12,7 @@ Making a high-fidelity prototype on Keynote
 ---
 
 ## Unit Overview
+
 - [Keynote](#keynote-for-prototyping)
 - [Animations](#animations)
 - [Evaluation](#evaluation)
@@ -19,7 +21,7 @@ Making a high-fidelity prototype on Keynote
 
 ---
 
-# Keynote for prototyping 
+# Keynote for prototyping
 
 ---vertical---
 
@@ -29,14 +31,16 @@ img
 ---vertical---
 
 ## Create a Keynote Presentation
+
 - For this section, please create a brand new Keynote presentation to try out the different techniques shown.
 - In the presentation manager, tap the + button at the top of the screen.
 - Select the “Choose a theme” option and choose the **Basic White** theme for your presentation
-    - You can change the background colour for your app later!
+  - You can change the background colour for your app later!
 
 ---vertical---
 
 ## Setting up your slides
+
 <div style="display: flex;">
     <ul>
         <li>We’ll need to change the size of the slides to mimic an iPad landscape app</li>
@@ -53,6 +57,7 @@ img
 ---vertical---
 
 ## Adding new slides
+
 <div style="display: flex;">
     <ul>
         <li>To add more screens to your prototype, you’ll need to add slides</li>
@@ -64,6 +69,7 @@ img
 ---vertical---
 
 ## Icons and graphics
+
 <div style="display: flex;">
     <ul>
         <li>Keynote has hundreds of free icons and graphics you can use as part of your prototype.</li>
@@ -78,6 +84,7 @@ img
 ---vertical---
 
 ## Styling
+
 <div style="display: flex;">
     <ul>
         <li>Select a piece of text by tapping on it</li>
@@ -93,6 +100,7 @@ img
 ---vertical---
 
 ## Adding images
+
 <div style="display: flex;">
     <ul>
         <li>To add images, tap on (images icon)</li>
@@ -105,6 +113,7 @@ img
 ---vertical---
 
 ## Editing images
+
 <div style="display: flex;">
     <ul>
         <li>To crop an image, double-tap the image and use the controls to frame the parts which you want to be visible</li>
@@ -115,6 +124,7 @@ img
 ---vertical---
 
 ## Arranging Objects
+
 <div style="display: flex;">
     <ul>
         <li>You might want to put some text on top of objects, or objects on top of other objects.</li>
@@ -127,6 +137,7 @@ img
 ---vertical---
 
 ## Hyperlinks
+
 <div style="display: flex;">
     <ul>
         <li>In Keynote, you can tap on an object and go to a specific slide, or even a website</li>
@@ -137,6 +148,7 @@ img
 ---vertical---
 
 ## Creating Hyperlinks
+
 <div style="display: flex;">
     <ul>
         <li>To add a hyperlink, tap on the item and select <strong>Link</strong> from the pop-up menu (you might need to go to the next page with >).</li>
@@ -147,6 +159,7 @@ img
 ---vertical---
 
 ## Linking Similar Screens
+
 <div style="display: flex;">
     <ul>
         <li>If you link between two screens that look very similar, e.g. both share a common title bar, start by <em>duplicating</em> the page.</li>
@@ -157,6 +170,7 @@ img
 ---
 
 # Animations
+
 ### (Optional)
 
 ---vertical---
@@ -166,6 +180,7 @@ insert img
 ---vertical---
 
 ## Magic Move
+
 <div style="display: flex;">
     <ul>
         <li>Magic Move is an automatic transition which allows objects one slide to move to new positions on a next slide</li>
@@ -181,11 +196,13 @@ insert img
 ---vertical---
 
 ## Try a friend’s prototype!
+
 ### Download your friend’s Keynote Prototype and try it out! Record your feedback for them in your **App Journal**
 
 ---vertical---
 
 ## Recording Feedback Received
+
 <div style="display: flex;">
     <ul>
         <li>Take some time to digest others’ feedback.</li>
@@ -209,18 +226,21 @@ insert img
 ---vertical---
 
 ## Stretch your learning
+
 insert imgs
 
 ---vertical---
 
 ### A quick start to code
+
 img
 
 ---
 
 ## Unit 6 Deliverables
+
 - Complete the App Design Journal
-    - The Brainstorm, Plan and Prototype section
+  - The Brainstorm, Plan and Prototype section
 - High-fidelity keynote prototype
 - A 100-word summary of what your app does
-    - You can get this from your Journal!
+  - You can get this from your Journal!
