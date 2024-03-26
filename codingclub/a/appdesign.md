@@ -4,6 +4,7 @@
 </div>
 
 ## Track A: Unit 4
+
 # Designing
 
 Inclusive App Design
@@ -11,32 +12,21 @@ Inclusive App Design
 ---
 
 # 15%
+
 ## of the world’s population live with disabilities
 
 ---vertical---
 
-<div style="display: flex;">
-    <ul>
-        <li>visual</li>
-        <li>physical</li>
-        <li>hearing</li>
-        <li>learning</li>
-    </ul>
-</div>
+<img height="800" src="./assets/vision_physical_hearing_learning.png">
 
 ---vertical---
 
-<div style="display: flex;">
-    <ul>
-        <li>birth</li>
-        <li>acquired</li>
-        <li>age</li>
-    </ul>
-</div>
+<img height="800" src="./assets/birth_acquired_age.png">
 
 ---vertical---
 
 ## What is inclusive design?
+
 - Design with consideration for the wide variety of human experiences and circumstances behind each user
 - This includes differences in disability, but also gender, race, culture, and technological access
 - Inclusive design enables app designers — that’s us — to design experiences for more potential users, no matter their circumstances
@@ -48,53 +38,54 @@ Inclusive App Design
 ---vertical---
 
 ## Accessibility Features
-<div style="display: flex;">
-    <ul>
-        <li>VoiceOver</li>
-        <li>Enlargeable Text</li>
-        <li>Dictation and Voice Control</li>
-    </ul>
-</div>
+
+<img height="800" src="./assets/voiceover-text-voice-control.png">
 
 ---vertical---
 
-how to navigate with voiceover vid
-
-[youtube.com/watch?v=qDm7GiKra28](youtube.com/watch?v=qDm7GiKra28)
+<iframe width="1600" height="800"
+src="https://www.youtube.com/embed/qDm7GiKra28">
+</iframe>
 
 ---vertical---
 
-how to use voice control vid
-
-[youtube.com/watch?v=eg22JaZWAgs](youtube.com/watch?v=eg22JaZWAgs)
+<iframe width="1600" height="800"
+src="https://www.youtube.com/embed/eg22JaZWAgs">
+</iframe>
 
 ---
 
-# Inclusion isn’t *only* about disability
+# Inclusion isn’t _only_ about disability
 
 ---vertical---
 
 ## Clarity
-dots vs unread/flagged
+
+<img height="700" src="./assets/dots-vs-unread-flagged.png">
 
 ---vertical---
 
 ## Inclusive Language
-set up ur family account
+
+<img height="700" src="./assets/set-up-family-account.png">
 
 ---vertical---
 
 ## Self Expression & Individuality
-what's ur name good morning ash
+
+<img height="700" src="./assets/good-morning.png">
 
 ---vertical---
 
-## Hands-on
 <div style="display: flex;">
+    <div style="margin-top:10%;">
+    <h2>Hands-on</h2>
     <ul>
         <li>In the <strong>App Journal</strong>, fill in Page 14 on <strong>Inclusion</strong>.</li>
         <li>You can check out other apps and how they integrate inclusive features in their apps!</li>
     </ul>
+    </div>
+    <img src="./assets/plan-inclusion.png">
 </div>
 
 ---
@@ -103,4 +94,4 @@ what's ur name good morning ash
 
 ---vertical---
 
-insert img
+<img height="700" src="./assets/plan-inclusion.png">
