@@ -97,30 +97,16 @@ Introduction to Freeform and its tools
 
 ## Drawing Tools
 
-<div style="display: flex;">
-    <ul>
-        <li>Tap on (pen icon) in the toolbar to bring up the Tool Picker.</li>
-        <li>Tap on a tool to switch to it.</li>
-        <li>Tap a second time to see if there are additional options, like stroke size (line thickness) or transparency.</li>
-    </ul>
-</div>
+- Tap on a tool to switch to it.
+- Tap a second time to see if there are additional options, like stroke size (line thickness) or transparency.
+
+<img src="./assets/freeform-tools.png">
 
 ---vertical---
 
 ## Tool Picker
 
-<div style="display: flex;">
-    <ul>
-        <li>Tap a tool to switch to it</li>
-        <li>Tap it a second time to see if there are additional options, like stroke size (line thickness) or transparency.</li>
-    </ul>
-</div>
-
----vertical---
-
-## Tool Picker
-
-insert image with all tools
+<img src="./assets/freeform-tools-edited.png">
 
 ---vertical---
 
