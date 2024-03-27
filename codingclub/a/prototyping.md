@@ -11,22 +11,17 @@ Making a high-fidelity prototype on Keynote
 
 ---
 
-## Unit Overview
-
-- [Keynote](#keynote-for-prototyping)
-- [Animations](#animations)
-- [Evaluation](#evaluation)
-- [Stretch your learning](#whats-next)
-- [Deliverables](#unit-6-deliverables)
-
----
-
 # Keynote for prototyping
 
 ---vertical---
 
-img
+<img src="./assets/keynote-user-guide.png">
+
+<div style="display: flex; justify-content: center; margin-top: 16px;">
+
 [https://support.apple.com/en-sg/guide/keynote-ipad/welcome/ipados](https://support.apple.com/en-sg/guide/keynote-ipad/welcome/ipados)
+
+</div>
 
 ---vertical---
 
@@ -52,18 +47,21 @@ img
         <li>Tap on Slide Size and select 3:4</li>
         <li>Note: This setup step is not available while collaborating!</li>
     </ul>
+    <img src="./assets/setting-up-unit6.png">
 </div>
 
 ---vertical---
 
-## Adding new slides
-
 <div style="display: flex;">
-    <ul>
+    <div style="margin-top:10%;">
+    <h2>Adding new slides</h2>
+    <ul style="margin-top:5%;">
         <li>To add more screens to your prototype, you’ll need to add slides</li>
         <li>Tap on the (add slide icon) at the bottom of the slide navigator and select the Blank layout</li>
         <li>To rearrange the slides, tap and hold a slide and drag it to the desired order</li>
     </ul>
+    </div>
+    <img height="700" src="./assets/adding-new-slides.png">
 </div>
 
 ---vertical---
@@ -73,7 +71,7 @@ img
 <div style="display: flex;">
     <ul>
         <li>Keynote has hundreds of free icons and graphics you can use as part of your prototype.</li>
-        <li>Check it out by tapping on (shapes icon)</li>
+        <li>Check it out by tapping on <em>Square and Circle Icon</em></li>
         <ul>
             <li>This is where you can add Text, under <strong>Basic</strong></li>
         </ul>
@@ -86,15 +84,17 @@ img
 ## Styling
 
 <div style="display: flex;">
+    <div>
     <ul>
         <li>Select a piece of text by tapping on it</li>
-        <li>Tap on the (paintbrush icon) icon</li>
+        <li>Tap on the <img style="margin-bottom: -4px" height="40px" src="./assets/paintbrush-icon.png"> icon</li>
         <li>Switch to the <strong>Text</strong> section</li>
         <ul>
             <li>Adjust font and weight</li>
         </ul>
         <li>Try this button with shapes, too</li>
     </ul>
+    </div>
 </div>
 
 ---vertical---
@@ -175,7 +175,9 @@ img
 
 ---vertical---
 
-insert img
+## Animations
+
+<img height="700" src="./assets/animations-home.png">
 
 ---vertical---
 
@@ -187,9 +189,10 @@ insert img
         <li>To add a Magic Move transition, tap on the slide, then tap Transition</li>
         <li>Tap on Add Transition and select Magic Move</li>
     </ul>
+    <img src="./assets/keynote_transitions_magic_moves.png">
 </div>
 
----
+---vertical---
 
 # Evaluation
 
@@ -208,6 +211,7 @@ insert img
         <li>Take some time to digest others’ feedback.</li>
         <li>Answer a few questions, and figure out how you can improve your app and prototype.</li>
     </ul>
+    <img src="./assets/evaluate-observation.png">
 </div>
 
 ---
@@ -216,24 +220,17 @@ insert img
 
 ---vertical---
 
-<div style="display: flex;">
-    <ul>
-        <li>Prototype some more</li>
-        <li>Learn to Code</li>
-    </ul>
-</div>
+<img height="800" src="./assets/prototype-some-more_learn-to-code.png">
 
 ---vertical---
 
 ## Stretch your learning
 
-insert imgs
+<img height="800" src="./assets/everyone-can-code-puzzles.png">
 
 ---vertical---
 
-### A quick start to code
-
-img
+<img height="800" src="./assets/quick-start-to-code.png">
 
 ---
 
