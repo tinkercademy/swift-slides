@@ -232,12 +232,3 @@ Making a high-fidelity prototype on Keynote
 
 <img height="800" src="./assets/quick-start-to-code.png">
 
----
-
-## Unit 6 Deliverables
-
-- Complete the App Design Journal
-  - The Brainstorm, Plan and Prototype section
-- High-fidelity keynote prototype
-- A 100-word summary of what your app does
-  - You can get this from your Journal!

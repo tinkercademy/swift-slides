@@ -253,13 +253,3 @@ to set up permissions.</li>
         </ul>
     </ul>
 </div>
-
----
-
-# Deliverables
-
----vertical---
-
-## Unit 1 Deliverable
-
-TODO: [insert pic of journal page with scribbles]

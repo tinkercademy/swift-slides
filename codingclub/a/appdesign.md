@@ -88,10 +88,3 @@ src="https://www.youtube.com/embed/eg22JaZWAgs">
     <img src="./assets/plan-inclusion.png">
 </div>
 
----
-
-# Unit 4 Deliverables
-
----vertical---
-
-<img height="700" src="./assets/plan-inclusion.png">

@@ -16,7 +16,6 @@ Brainstorming for your app!
 - [Defining](#define)
 - [Ideating](#ideas)
 - [Focus](#focus)
-- [Deliverables](#unit-2-deliverables)
 
 ---
 
@@ -133,31 +132,3 @@ verb _[with object]_
 
 <img height="800" src="./assets/brainstorm-focus-ss.png">
 
----
-
-# Unit 2 Deliverables
-
-<span>
-<img height="800" src="./assets/brainstorm-idea-ss.png">
-<img height="800" src="./assets/brainstorm-purpose-ss.png">
-<img height="800" src="./assets/brainstorm-focus-ss.png">
-
-</span>
-
----vertical---
-
-## Unit 2 Deliverables (Part 1)
-
-<img height="800" src="./assets/brainstorm-idea-ss.png">
-
----vertical---
-
-## Unit 2 Deliverables (Part 2)
-
-<img height="800" src="./assets/brainstorm-purpose-ss.png">
-
----vertical---
-
-## Unit 2 Deliverables (Part 3)
-
-<img height="800" src="./assets/brainstorm-focus-ss.png">

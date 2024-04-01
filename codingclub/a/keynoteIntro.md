@@ -18,7 +18,6 @@ Introduction to Keynote and the App Journal
 - [Navigating the Journal](#navigating)
 - [Screenshotting](#screenshotting)
 - [Collaborating](#collaborating)
-- [Deliverables](#deliverables)
 
 ---
 
@@ -231,16 +230,4 @@ to set up permissions.</li>
             <li>Changing slide size — this is important for the final high-fidelity prototype step</li>
         </ul>
     </ul>
-</div>
-
----
-
-# Deliverables
-
----vertical---
-
-## Unit 1 Deliverable
-
-<div style="display: flex;">
-    <img src="/codingclub/a/assets/hands-on.jpg" style="padding: 10px; max-height: 800px;">
 </div>

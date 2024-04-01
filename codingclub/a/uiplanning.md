@@ -86,23 +86,3 @@
 <img height="800" src="./assets/bug-buzz-example3.png">
 
 ---
-
-# Unit 3 Deliverables
-
----vertical---
-
-# Unit 3 Deliverables (Part 1)
-
-<img height="800" src="./assets/bug-buzz-example.png">
-
----vertical---
-
-# Unit 3 Deliverables (Part 2)
-
-<img height="800" src="./assets/bug-buzz-example2.png">
-
----vertical---
-
-# Unit 3 Deliverables (Part 3)
-
-<img height="800" src="./assets/bug-buzz-example3.png">
