@@ -42,7 +42,7 @@ Download the Swift Playgrounds app on either iPad or Mac to get started.
 
 ## Write Code
 
-TODO: REPLACE WITH VIDEO iframe youtube
+<iframe width="1200" height="800" src="https://www.youtube.com/embed/w0zm686WD8k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ---vertical---
 
