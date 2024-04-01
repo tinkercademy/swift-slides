@@ -1,66 +1,69 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>Track A</title>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="icon" type="image/png" href="/assets/favicon.png">
+	<title>Track A</title>
 
-		<link rel="stylesheet" href="/dist/reset.css">
-		<link rel="stylesheet" href="/dist/reveal.css">
-		<link rel="stylesheet" href="/dist/slidetheme.css">
-		<link rel="stylesheet" href="./slide.css">
+	<link rel="icon" type="image/png" href="/assets/favicon.png">
 
-		<link rel="stylesheet" href="/dist/xcode-dark.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section id="slide-view" data-markdown="namecard.md"
-					data-separator-vertical="^\n---vertical---",
-					data-separator-notes="^Note:">
-				</section>
-				<section>
-					<div style="display: flex;">
-						<div>
-							<h1>Get the Slides</h1>
-							<h2>Scan the QR code to access the slide deck.</h2>
-						</div>
-						<img id="qr-image" style="border-radius: 8%">
+	<link rel="stylesheet" href="/dist/reset.css">
+	<link rel="stylesheet" href="/dist/reveal.css">
+	<link rel="stylesheet" href="/dist/slidetheme.css">
+	<link rel="stylesheet" href="./slide.css">
+
+	<link rel="stylesheet" href="/dist/xcode-dark.css">
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section id="slide-view" data-markdown="namecard.md" data-separator-vertical="^\n---vertical---" ,
+				data-separator-notes="^Note:">
+			</section>
+			<section>
+				<div style="display: flex;">
+					<div>
+						<h1>Get the Slides</h1>
+						<h2>Scan the QR code to access the slide deck.</h2>
 					</div>
-				</section>
-				<section>
-					<div style="display:flex;justify-content:center;align-items:center;flex-direction: column">
-						<img src="/assets/tinkercademy-long.png" alt="Tinkercademy Logo" width="50%">
-						<p>Swift Coding Club • Track A</p>
-					</div>
-				</section>
-			</div>
-			<div style="height: 100%; display:flex;align-items:flex-end;position: fixed;z-index: 8; pointer-events: none;">
-				<small style="margin: 32px;">© 2022-2024 Tinkertanker Pte Ltd. All Rights Reserved.</small>
-			</div>
+					<img id="qr-image" style="border-radius: 8%">
+				</div>
+			</section>
+			<section>
+				<div style="display:flex;justify-content:center;align-items:center;flex-direction: column">
+					<img src="/assets/tinkercademy-long.png" alt="Tinkercademy Logo" width="50%">
+					<p>Swift Coding Club • Track A</p>
+				</div>
+			</section>
 		</div>
+		<div style="height: 100%; display:flex;align-items:flex-end;position: fixed;z-index: 8; pointer-events: none;">
+			<small style="margin: 32px;">© 2022-2024 Tinkertanker Pte Ltd. All Rights Reserved.</small>
+		</div>
+	</div>
 
-		<script src="/dist/reveal.js"></script>
-		<script src="/plugin/notes/notes.js"></script>
-		<script src="/plugin/markdown/markdown.js"></script>
-		<script src="/plugin/highlight/highlight.js"></script>
-		<script>
-			const deck = new URLSearchParams(window.location.search).get('deck');
+	<script src="/dist/reveal.js"></script>
+	<script src="/plugin/notes/notes.js"></script>
+	<script src="/plugin/markdown/markdown.js"></script>
+	<script src="/plugin/highlight/highlight.js"></script>
+	<script>
+		const deck = new URLSearchParams(window.location.search).get('deck');
 
-			document.getElementById("slide-view").setAttribute("data-markdown", deck + ".md"); 
-			
-			document.getElementById("qr-image").src = "https://chart.googleapis.com/chart?chs=512x512&cht=qr&chl=" + window.location.href;
+		document.getElementById("slide-view").setAttribute("data-markdown", deck + ".md");
 
-			Reveal.initialize({
-				width: 1920,
-  				height: 1080,
-				hash: true,
+		//console.log(window.location.href)
+		document.getElementById("qr-image").src = "https://chart.googleapis.com/chart?chs=512x512&cht=qr&chl=" + window.location.href;
 
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+		Reveal.initialize({
+			width: 1920,
+			height: 1080,
+			hash: true,
+
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+		});
+	</script>
+</body>
+
 </html>
