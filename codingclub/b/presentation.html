@@ -65,7 +65,7 @@
 
 		var qrCodes = document.getElementsByClassName("qr-image");
 		Array.from(qrCodes).forEach(function (qrCodeElement) {
-			qrCodeElement.src = "https://chart.googleapis.com/chart?chs=512x512&cht=qr&chl=" + window.location.href;
+			qrCodeElement.src = "https://public-api.qr-code-generator.com/v1/create/free?image_format=SVG&image_width=500&foreground_color=%23000000&frame_color=%23000000&frame_name=no-frame&qr_code_logo=&qr_code_pattern=&qr_code_text=" + window.location.href;
 		});
 
 		Reveal.initialize({
