@@ -11,7 +11,7 @@ Storyboarding the screens and flow of your app
 ---
 
 ## Example Food Buzz Prototype
-insert img
+<img height="750" src="./assets/food-buzz-prototype-final.png">
 
 ---
 
@@ -35,6 +35,7 @@ insert img
 - Next, draw 1 - 3 screens for this action.
 - Repeat with other actions!
 - In Freeform, draw 3 simple prototype screens
+- You can refer to the example Bug Buzz prototype on Slide 19 of the App Journal for inspiration.
 
 ---vertical---
 
@@ -42,10 +43,6 @@ insert img
 - Focus on layout, not the graphics, colour, and fonts
 - The aim is to create quick, *throwaway* designs that you can use for discussion
 - You shouldn’t feel bad throwing them away and starting again!
-
----vertical---
-
-insert img
 
 
 ---
@@ -60,15 +57,7 @@ insert img
     - Are there any buttons and actions missing? Add them in, and figure out what they do.
     - Would it be easier to move things onto their own screens? Feel free to edit your storyboard!
 - In Freeform, duplicate the 3 screens and create a storyboard using them
-
----vertical---
-
-insert img
-
----vertical---
-
-## Unit 5 Deliverables (Part 2)
-insert img
+- In the App Journal, complete slide 18 and 19
 
 ---
 
@@ -84,15 +73,13 @@ insert img
     - Does a new screen pop up?
     - Does the app pull any data from online?
 - In Freeform, duplicate your storyboard and use sticky notes to show the app behaviours
+- In App Journal, fill in slide 20 and 21
 
 ---vertical---
 
-insert img
+## Example App Behaviour
 
----vertical---
-
-## Unit 5 Deliverables (Part 3)
-insert img
+<img height="750" src="./assets/label-app-storyboard.png">
 
 ---
 
@@ -107,21 +94,11 @@ insert img
     - Sketch an icon. It should be simple, recognisable, distinct, and preferably not contain any text.
     - Choose a name!
 - In Freeform, create a few sample app icons
+- In the App Journal, fill in slide 23 and 26.
 
 ---vertical---
 
-insert img
+## App Journal
 
----vertical---
+<img src="./assets/bug-buzz-app-journal-final.png">
 
-insert bug buzz img
-
----vertical---
-
-## Unit 5 Deliverables (Part 4)
-insert img
-
----
-
-## Unit 5 Deliverables
-imgs
