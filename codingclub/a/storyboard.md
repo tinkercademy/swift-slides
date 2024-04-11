@@ -44,7 +44,6 @@ Storyboarding the screens and flow of your app
 - The aim is to create quick, *throwaway* designs that you can use for discussion
 - You shouldn’t feel bad throwing them away and starting again!
 
-
 ---
 
 # Sketch your storyboard
