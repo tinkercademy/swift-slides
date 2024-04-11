@@ -462,9 +462,7 @@ if temperature < 10 {
 - Notice the use of `==` — that’s what Swift (and other languages) use for comparison. `=`, on the other hand, means “assign the right-side value into the left”.
 - If we changed the order of the second and third conditions, and give a temperature of 100, we’ll never get the boil water comment. Any idea why?
 
-
 ---vertical---
-
 
 ## More Numerical Comparators
 
@@ -476,7 +474,6 @@ if temperature < 10 {
 | `>=`       | Greater than or equal |
 | `==`       | Equal                 |
 | `!=`       | Not equal             |
-
 
 ---vertical---
 
@@ -511,7 +508,6 @@ if isRaining {
     Text("Bring an umbrella")
 }
 ```
-
 
 ---vertical---
 

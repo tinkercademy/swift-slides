@@ -3,7 +3,7 @@
     <img src="https://raw.githubusercontent.com/swiftinsg/branding/main/logos/icons/png/coloured%20-%20dark%20background.png" alt="Swiftinsg Logo" height="128px" style="margin-left: 64px;">
 </div>
 
-## Track B: Project 5
+## Track B: Unit 3
 
 # About Me
 
@@ -11,295 +11,57 @@ Create an about me app in Swift Playgrounds.
 
 ---
 
-
-# Welcome to SwiftUI
-
----vertical---
-
-## Getting Started
-
-<div style="display: flex; ">
-    <ul>
-        <li>Open the Swift Playgrounds app on your iPad</li>
-        <li>Under “More Playgrounds”, tap on “Get Started with Apps”</li>
-    </ul>
-    <img width="1800" src="./assets/aboutme-getting-started.png">
-</div>
+# New Things in This Unit
 
 ---vertical---
 
-## Text
+# Composed View
 
-<div style="display: flex; ">
-<div>
-
-- The current view is named IntroView
-- Inside the body, you will see the following line:
-
-```swift
-Text("Hello, friend.")
-```
-
-- Let’s change the words in the string to something you want to say!
-
-```swift
-Text("Hey there!")
-```
-
-- Take a look at the Preview to see the changes
-- Once you are done, click on the new task in the Tutorial tab.
-</div>
-<img height="400" src="./assets/aboutme-introview.jpg">
-</div>
-
----vertical---
-
-## Adding a new Text view
-
-<div style="display: flex; ">
-<div>
-
-- Let’s add more text below the existing one!
-- Add a new line underneath the first Text code and type:
-
-```swift
-Text()
-```
-
-- Within the brackets, type out what you want the text to say. Remember to place the words inside double quotes! (`" "`)
-
-</div>
-<img  src="./assets/aboutme-text.jpeg">
-</div>
-
----vertical---
-
-## Add an Image of our friend
-
-<div style="display: flex; ">
-<div>
-
-- Let’s add an image into our app
-- Add a new line above your first Text code and type:
-
-```swift
-Image("FriendAndGem")
-```
-
-- Oh no, our picture looks gigantic now
-
-</div>
-<img height="400" src="./assets/aboutme-text2.jpeg">
-</div>
-
----vertical---
-
-## Resizing images
-
-<div style="display: flex; ">
-<div>
-
-- Let’s add some **modifiers** to resize our image!
-- Enter a new line below the Image code and type
-
-```swift
-.resizable()
-```
-
-- Now our image looks really squished. Let’s fix that by adding the following line below:
-
-```swift
-.scaledToFit()
-```
-
-</div>
-<img height="400" src="./assets/aboutme-image2.jpeg">
-</div>
-
----vertical---
-
-<div style="display: flex; ">
-<div>
-
-<h2>Modifiers</h2>
-
-- SwiftUI has hundreds of different **modifiers** that we can use to make our individual Views look better
-- To add a modifier, add it to the end of a View, like this: `.modifierName()`
-- Let’s take a look at the modifiers for our image:
-  - `resizable()`: Allows our image to change its size
-  - `scaledToFit()`: Resizes our image proportionally to fit the size of the container it occupies
-
-</div>
-<img width="400" src="./assets/aboutme-modifiers.jpeg">
-</div>
-
----vertical---
-
-## Adding Stacks
-
-<div style="display: flex; ">
-<div>
-
-- Above your Image code, add the following:
-
-```swift
-HStack {
-    Text("This is a picture!")
-    // Image code goes here
-}
-```
-
-- Move your Image code (including the modifiers) and add them inside the HStack
-- Check out what happens in the App Preview!
-
-</div>
-<img height="400" src="./assets/aboutme-hstack.jpeg">
-</div>
-
----vertical---
-
-## Nesting Stacks
-
-<div style="display: flex; ">
-<div>
-
-- Let’s try to create the layout on the left
-- Notice how `Image` is horizontally stacked with the `Text` elements, which are vertically stacked.
-- Let’s use `HStack` and `VStack` to create the layout
-
-</div>
-
-<img height="400" src="./assets/aboutme-nesting-stacks.png">
-
-</div>
-
----vertical---
-
-## Nesting Stacks
-
-<div style="display: flex; ">
-<div>
-
-- Add a `HStack` within the `VStack` given in the code
-- Next, add a `Image` named “Friend” and a `VStack` inside the `HStack` to stack them horizontally
-- Add a `Text` that says “Friend” in the `VStack` with the following modifier:
-
-  - `.font(.largeTitle)`
-
-- Add another `Text` that describes the Friend in the `VStack` with the following modifier:
-  - `.font(.caption)`
-
-</div>
-
-<img height="400" src="./assets/aboutme-nesting-stacks2.jpeg">
-
-</div>
+- A composed view is a view that is made up of multiple other views
+- It is a way to break down your app into smaller, more manageable parts
+- This makes your code easier to read and understand
 
 ---vertical---
 
 ## Composed View
 
-<div style="display: flex; ">
-<div>
+- For example, if you have a view that displays a car, you can create a composed view called `CarView` that displays the car’s make, model, year, and color
 
-- Notice how you have been editing your code in a tab named “FriendDetailView”
-- What you created is known as a **composed view**
-- You can use this composed view in other parts of your app without having to recreate it all over again
-- Let’s use the `FriendDetailView` in the ExperimentView tab by adding following code in the `VStack`:
-  `FriendDetailView()`
-- Bonus: Try adding another `FriendDetailView()` below the first one and check out the App Preview!
+```swift
+// define your car struct
+struct Car {
+  let make: String
+  let model: String
+  let year: Int
+  let color: String
+}
 
-</div>
+// create a composed view
+struct CarView: View {
+  let car: Car
 
-<img height="400" src="./assets/aboutme-composed-view.jpeg">
-
-</div>
-
----vertical---
-
-## Creating a similar view
-
-<div style="display: flex; ">
-<div>
-
-- Let’s create a view similar to `FriendDetailView` using a different image and description this time.
-- Start by creating an image named “Blu” in a `HStack`
-- Add modifiers to resize the image
-- Use `VStack`, `Text` and `.font` modifiers to add the Blu’s name and description beside the picture
-
-</div>
-
-<img height="400" src="./assets/aboutme-similar-view.jpeg">
-
-</div>
+  var body: some View {
+    VStack {
+      Text("\(car.make) \(car.model)")
+      Text("\(car.year)")
+      Text("\(car.color)")
+    }
+  }
+}
+```
 
 ---vertical---
 
-## Playing around with Stacks
+## Using Composed Views
 
-- Let’s create one more view similar to `FriendDetailView`, this time with an `Image` named “Hopper”
-- Try out new layouts by combining `HStack`, `VStack`, `Text` and `Image` views in different way
-- E.g. you can try having the image be stacked vertically on top of two `Text` views that are arranged horizontally
+- You can then use the `CarView` in your app to display the car
 
----vertical---
-
-## Bonus: Styling Our App
-
-<div style="display: flex; ">
-<div>
-
-- Our app looks pretty bland right now - let’s try to style it by changing up some of the colours!
-- Since we will be changing a large chunk of our code, let’s duplicate the playground first so that if anything happens, we can always go back to our original code
-- Tap and hold the playground in the My Playgrounds page
-- Tap on _Duplicate_ in the dropdown menu
-
-</div>
-
-<img width="500px" src="./assets/aboutme-copy.png">
-
-</div>
-
----vertical---
-
-## ZStack
-
-<div style="display: flex; ">
-
-<div>
-
-- Let’s add some background colour to our app.
-- A background colour will, naturally, go behind the Views.
-- In SwiftUI, a background colour is a View, that goes behind other Views
-- To stack views in front/behind each other, we use a ZStack
-- Elements in a ZStack are overlayed starting from the back to the front
-
-</div>
-
-<img height="400" src="./assets/zstack.png">
-
-</div>
-
----vertical---
-
-## Adding background colour
-
-<div style="display: flex; ">
-
-<div>
-
-- Start by cutting (Cmd + X) the `VStack` containing all of your composed views and `FriendDetailView`
-- Add a `ZStack`, then paste the `VStack` inside the `ZStack`
-- Since the background colour goes be behind the views, add a `Color`\* View above the `VStack` by typing the following:
-  `Color.pink`
-- The `Color`\* View has a few built-in options you can use, such as blue, red, yellow, green. Try them out!
-
-<p style="font-size:0.7em;">* American spelling, because made in California and all that</p>
-
-</div>
-
-<img  src="./assets/aboutme-adding-zstack.jpeg">
-
-</div>
+```swift
+HStack {
+  CarView(car: Car(make: "Toyota", model: "Corolla", year: 2020, color: "Red"))
+  CarView(car: Car(make: "Honda", model: "Civic", year: 2019, color: "Blue"))
+}
+```
 
 ---vertical---
 
@@ -309,15 +71,12 @@ HStack {
 
 <div>
 
-- Our black text does not show up very well against the new background colour. Let’s change it!
-- Look for the Text for Blu and add a new line beneath it
-- Add the following modifer: `.foregroundColor(.white)`
-- Just like the `Color` View, there is also a range of colours to choose from. You can take a look at the colours available in the dropdown list that appears when you type . in the brackets
-- Try changing the colours of the other Text views in your app!
+- You can change the colour of text in SwiftUI using the `.foregroundStyle()` modifier
+  - Add the following modifer: `.foregroundStyle(.white)`
 
 </div>
 
-<img src="./assets/aboutme-text-colour.jpeg">
+<img height="400" src="./assets/aboutme-text-colours.png"> 
 
 </div>
 
@@ -547,7 +306,7 @@ HStack {
 
 <div>
 
-- Moving on to the next chapter in the tutorial, you will be direct to the **StoryView**, which displays a story.
+- Next, we'll open the **StoryView**, which displays a story about you.
 - A `ScrollView` allows for scrolling if your text is too long
 - There are a bunch of stuff in `ScrollView`
   - We can add more Text inside the ScrollView and you will see that you will be able to scroll more
@@ -646,7 +405,8 @@ HStack {
 <h2>  Learn to Code 2: Arrays </h2>
 
 - To learn more about arrays, we can open up the _Learn to Code 2_ playgrounds
-- Tap on the sidebar <img style="margin-bottom: -4px" height="32px" src="/assets/icons/sidebar.left.svg"> and scroll down to the section called arrays. You can also try out the exercises in your free time, but we won’t be going through them.
+- Tap on the sidebar <img style="margin-bottom: -4px" height="32px" src="/assets/icons/sidebar.left.svg"> and scroll down to the section called arrays.
+- **You can also try out the exercises in your free time, but we won’t be going through them.**
 
 </div>
 
@@ -824,7 +584,6 @@ YourTab()
 
 ---vertical---
 
-
 ## Adding the First Item
 
 <div style="display: flex; ">
@@ -837,13 +596,11 @@ YourTab()
 - Add the appropriate modifiers to make image resizable and scaled properly
 - Next, add a `Text` view to describe the image. You can add some modifiers to your `Text` view to style it as well
 
-
 </div>
 
 <img src="./assets/aboutme-adding-the-first-item.jpeg">
 
 </div>
-
 
 ---vertical---
 

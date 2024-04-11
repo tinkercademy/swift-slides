@@ -58,7 +58,10 @@ Alignments and Animations
 3. Add a flag pole
    1. Add a HStack.
    2. Add a Rectangle with a fixed width within the HStack. This is your flag pole.
-   3. Add a Text with an emoji in the HStack `🇸🇬 🇸🇬 🇸🇬 🇸🇬 🇸🇬`
+   3. Add a Text with an emoji in the HStack <img style="margin-bottom: -4px" src="./assets/sg-flag.png" height="40px"> 
+    - To add in the emoji you can
+        1. Use the emoji keyboard on your iPad
+        2. Copy the emoji from the internet and paste it into your code
 
 ---vertical---
 
@@ -312,7 +315,7 @@ struct ContentView: View {
 
 ## Positioning
 
-`.offset(x: 100, y: 200`
+`.offset(x: 100, y: 200)`
 
 - Lets you move your object from where it’s supposed to be
 - If you only want to move x or y, you can leave out the other parameter

@@ -469,7 +469,7 @@ struct ContentView: View {
 
 You can also include a number, to define how much padding to give
 
-    _Note that order matters — if you add padding <span style="background: #FF453A; padding: 16px">before a background</span>, your padding will also receive that background._
+_Note that order matters — if you add padding <span style="background: #FF453A; padding: 16px">before a background</span>, your padding will also receive that background._
 
 ---vertical---
 
@@ -659,11 +659,11 @@ struct ContentView: View {
 URL(string: "https://apple.com")!
 ```
 
-    Feel free to change the link from [apple.com](https://apple.com) to something else.
+Feel free to change the link from [apple.com](https://apple.com) to something else.
 
-    - Use `https://` to link to a website: `https://swiftinsg.org`
-    - Use `mailto:` to add an email address: `mailto:hello@swiftinsg.org`
-    - If you're interested, you can read [this awfully technical document](https://www.rfc-editor.org/rfc/rfc7595.html) on URI schemes.
+- Use `https://` to link to a website: `https://swiftinsg.org`
+- Use `mailto:` to add an email address: `mailto:hello@swiftinsg.org`
+- If you're interested, you can read [this awfully technical document](https://www.rfc-editor.org/rfc/rfc7595.html) on URI schemes.
 
 ---vertical---
 

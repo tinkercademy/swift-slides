@@ -10,16 +10,6 @@ Storyboarding the screens and flow of your app
 
 ---
 
-## Unit Overview
-- [Example](#example-food-buzz-prototype)
-- [Planning your prototype](#plan-your-prototype)
-- [Sketching a storyboard](#sketch-your-storyboard)
-- [App behaviour](#app-behaviour)
-- [Style, icon and name](#design)
-- [Unit 5 deliverables](#unit-5-deliverables)
-
----
-
 ## Example Food Buzz Prototype
 insert img
 
@@ -57,10 +47,6 @@ insert img
 
 insert img
 
----vertical---
-
-## Unit 5 Deliverables (Part 1)
-insert img
 
 ---
 
