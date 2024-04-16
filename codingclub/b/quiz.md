@@ -308,14 +308,14 @@ Button {
 
 ## Repeated Code
 
-- Our ContentView is quite long, and there’s quite a bit of repeated code.
+- Our `ContentView` is quite long, and there’s quite a bit of repeated code.
 - Let’s take this chance to try out some SwiftUI refactoring.
 
 ---vertical---
 
 ## Refactoring
 
-- To refactor ContentView, we will be placing the buttons into functions
+- To refactor `ContentView`, we will be placing the buttons into functions
 
 <p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift</p>
 

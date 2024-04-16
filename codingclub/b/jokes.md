@@ -62,7 +62,7 @@
 Here’s a fun feature in Text — if you add `**` around parts of your string, you get bold text; if you surround your text with `_`, you get italics. This is a markup format called Markdown, which you may have seen in WhatsApp, Telegram and other messaging apps. [Read more here.](https://www.markdownguide.org/)
 
 ```swift
-Text("What?? **_Tell me_!!**”)
+Text("What?? **_Tell me_!!**")
 ```
 
 ---

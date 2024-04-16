@@ -309,7 +309,7 @@ HStack {
 - Next, we'll open the **StoryView**, which displays a story about you.
 - A `ScrollView` allows for scrolling if your text is too long
 - There are a bunch of stuff in `ScrollView`
-  - We can add more Text inside the ScrollView and you will see that you will be able to scroll more
+  - We can add more Text inside the `ScrollView` and you will see that you will be able to scroll more
 
 </div>
 
@@ -325,7 +325,7 @@ HStack {
 
 <div>
 
-- We can add another `Text` in the ScrollView, and add a story there!
+- We can add another `Text` in the `ScrollView`, and add a story there!
   - If your story is very long, we need to separate it into different lines! But.. how do we do that? Pressing ‘enter’ does not work!
   - We can use \n!
   - It creates a new line in your text
