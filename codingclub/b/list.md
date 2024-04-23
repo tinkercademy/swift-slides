@@ -1,304 +1,94 @@
-## v1.1
+<div style="text-align: left">
+    <img src="/assets/tinkercademy.png" alt="Tinkercademy Logo" height="128px">
+    <img src="https://raw.githubusercontent.com/swiftinsg/branding/main/logos/icons/png/coloured%20-%20dark%20background.png" alt="Swiftinsg Logo" height="128px" style="margin-left: 64px;">
+</div>
 
-Delete the Text that says "Hello, world!" and replace it with a `Button`.
+## Track B: Unit 5
+List App
 
-```swift[]
+---
+
+# Lesson 1 : NavigationStack / NavigationLink
+
+---vertical---
+
+## List App
+
+- We're making a List app
+- Many examples of List apps out there! Messaging, social media, classifieds.
+- Some Apple related examples is the Mail app, Messages app, and the Settings app.
+
+<!--TODO: ADD Settings App-->
+
+---vertical---
+
+## What is Navigation?
+
+- In About Me, we saw Tab Bars. They're used to show different aspects of an app. 
+	- Navigation Views let us drill deeper into data
+	- Modal sheets interrupt the flow for task completion
+	- The points above can be seen in the Mail App
+
+---vertical---
+
+# Navigation Demo
+
+<!-- Eventually turn this into a video section-->
+
+---vertical---
+
+## Lets get started!
+
+- Make a new SwiftUI project and call it `ListApp`
+- Change the `VStack` in ``ContentView` to a `NavigationStack`
+
+```swift
 struct ContentView: View {
     var body: some View {
-       VStack {
-            Button("Hot Chocolate Drink") {
-                // action goes here
-            }
+        NavigationStack{
+            Text("Hello, world!")
         }
     }
 }
 ```
 
-<p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift</p>
+---vertical---
 
----
+## NavigationLink
 
-## v1-2
+- `NavigationLink` is a button that triggers a navigation to another view
 
-add a `.sheet` modifer to the `Button` to present a `Sheet` when the button is tapped.
-Use a `@State` property to control the presentation of the `Sheet`.
-The sheet should present a `RecipeDetailView` when the button is tapped.
-
-```swift[6,8-10]
-struct ContentView: View {
-    @State private var isDrinkPresented = false
-    var body: some View {
-       VStack {
-            Button("Hot Chocolate Drink") {
-                isDrinkPresented = true
-            }
-            .sheet(isPresented: $isDrinkPresented) {
-                RecipeDetailView()
-            }
-        }
-    }
+```swift
+NavigationLink {
+    Text("This is a hearty concoction great for cold winter nights.")
+} label: {
+    Text("Hot Chocolate Soup")
 }
 ```
-
-<p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift</p>
-
----
-
-## v1-3
-
-create a new source file called `RecipeDetailView.swift` and add type in `View`
-wait for the popup to appear and press `Enter` to use the default code snippet.
-
-It should look like this:
-
-```swift[]
-import SwiftUI
-
-struct MyView: View {
-    var body: some View {
-        Hello, world!
-    }
-}
-
-#Preview {
-    MyView()
-}
-```
-
-<p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> RecipeDetailView.swift</p>
-
----
-
-## v1-4
-
-Change `MyView` to `RecipeDetailView`
-
-```swift[3,10 ]
-import SwiftUI
-
-struct RecipeDetailView: View {
-    var body: some View {
-        Hello, world!
-    }
-}
-
-#Preview {
-    RecipeDetailView()
-}
-```
-
-<p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> RecipeDetailView.swift</p>
 
 ---vertical---
 
-## v1-5
+## NavigationLink
 
-replace `Hello, world!` with a `VStack`
-Inside the VStack, add in intructions of how to make a hot chocolate drink.
+- Add a `NavigationLink` to the `NavigationStack` in `ContentView`
 
-```swift[3-7]
-struct RecipeDetailView: View {
-    var body: some View {
-        VStack {
-            Text("Get a hot chocolate packet")
-            Text("Mix it with milk or hot water")
-            Text("Stir and enjoy!")
-        }
-    }
-}
-```
-
-<p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> RecipeDetailView.swift</p>
-
----vertical---
-
-Well now we will be adding in Ice Cream for those who don't like hot drinks.
-
-## v1-6
-
-create a new source file called `RecipeDetailView2.swift` and add type in `View` then press `Enter` to use the default code snippet. replace `MyView` with `RecipeDetailView2`
-
-```swift[]
-import SwiftUI
-
-struct RecipeDetailView2: View {
-    var body: some View {
-        Hello, world!
-    }
-}
-
-#Preview {
-    RecipeDetailView2()
-}
-```
-
-<p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> RecipeDetailView2.swift</p>
-
----vertical---
-
-## v1-7
-
-replace `Hello, world!` with a `VStack` and add in intructions of how to make an Hot Chocolate Ice Cream Sundae.
-
-```swift[3-7]
-struct RecipeDetailView2: View {
-    var body: some View {
-        VStack {
-            Text("Get a bowl")
-            Text("Add in 2 scoops of ice cream")
-            Text("Add in your favorite toppings")
-        }
-    }
-}
-```
-
-<p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> RecipeDetailView2.swift</p>
-
----vertical---
-
-## v1-8
-
-In `ContentView.swift`, add a new `Button` that says "Hot Chocolate Ice Cream Sundae" and present the `RecipeDetailView2` when tapped.
-
-```swift[3,12-17]
-struct ContentView: View {
-    @State private var isDrinkPresented = false
-    @State private var isIceCreamPresented = false
-    var body: some View {
-       VStack {
-            Button("Hot Chocolate Drink") {
-                isDrinkPresented = true
-            }
-            .sheet(isPresented: $isDrinkPresented) {
-                RecipeDetailView()
-            }
-            Button("Hot Chocolate Ice Cream Sundae") {
-                isIceCreamPresented = true
-            }
-            .sheet(isPresented: $isIceCreamPresented) {
-                RecipeDetailView2()
-            }
-        }
-    }
-}
-```
-
-<p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift</p>
-
----vertical---
-
-Now we want to add an exit button to the `RecipeDetailView` and `IceCreamRecipeView` to dismiss the sheet.
-
----
-
-## v1-9
-
-In `RecipeDetailView.swift`, add a new `Button` that says "Exit" and dismiss the sheet when tapped.
-Then we also create a new `@Environment` property called `dismiss` to dismiss the sheet.
-
-```swift[4,10-15]
-import SwiftUI
-
-struct RecipeDetailView: View {
-    @Environment(\.dismiss) var dismiss
-    var body: some View {
-        VStack {
-            Text("Get a hot chocolate packet")
-            Text("Mix it with milk or hot water")
-            Text("Stir and enjoy!")
-            Button("Exit") {
-                dismiss()
-            }
-        }
-    }
-}
-```
-
----
-
-# Version 2
-
----vertical---
-
-Imagine being able to easily switch between the hot chocolate drink and ice cream sundae recipes using a `NavigationStack`.
-Apple uses this design pattern in many of their apps, such as the Settings app on iOS.
-
-<!-- TODO: add IOS Settings video-->
-
----vertical---
-
-## v2-1
-
-Update `ContentView` to use a `NavigationStack` instead of two buttons.
-
-```swift[3-15]
-import SwiftUI
-
-struct ContentView: View {
+```swift
+struct ContentView: View {  
     var body: some View {
         NavigationStack {
-            VStack {
-                NavigationView {
-                    RecipeDetailView()
-                } label: {
-                    Text("Hot Chocolate Drink")
-                }
+
+            NavigationLink {
+                Text("This is a hearty concoction great for cold winter nights.")
+            } label: {
+                Text("Hot Chocolate Soup")
             }
-        }
-    }
-}
-```
-
-<p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift</p>
-
-## v2-2
-
-We would like show a title so that the user knows what they are looking at.
-Note: It should be a modifier to the VStack.
-
-```swift[3-15]
-struct ContentView: View {
-    var body: some View {
-        NavigationStack {
-            VStack {
-                NavigationView {
-                    RecipeDetailView()
-                } label: {
-                    Text("Hot Chocolate Drink")
-                }
+            
+            NavigationLink {
+                Text("How can this be hot and cold at the same time??? It's incredible.")
+            } label: {
+                Text("Hot Chocolate Ice Cream")
             }
-            .navigationTitle("Hot Chocolate Recipes")
-        }
-    }
-}
-```
-
-<p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift</p>
-
----vertical---
-
-## v2-3
-
-Now we want to add a second recipe to the `NavigationStack` called "Hot Chocolate Ice Cream Sundae".
-
-```swift[3-15]
-struct ContentView: View {
-    var body: some View {
-        NavigationStack {
-            VStack {
-                NavigationView {
-                    RecipeDetailView()
-                } label: {
-                    Text("Hot Chocolate Drink")
-                }
-                NavigationView {
-                    RecipeDetailView2()
-                } label: {
-                    Text("Hot Chocolate Ice Cream Sundae")
-                }
-            }
-
-            .navigationTitle("Hot Chocolate Recipes")
+        
         }
     }
 }
@@ -306,201 +96,414 @@ struct ContentView: View {
 
 ---vertical---
 
-For absolutly no reason at all, if we want to hide the title and the back button, we can use the `.toolbar(.hidden)` and `.navigationBarBackButtonHidden`.
+## Adding a Spacer()
 
----vertical---
-
-## Hiding the toobar
-
-<p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift</p>
-
-```swift[17]
-struct ContentView: View {
-    var body: some View {
-        NavigationStack {
-            VStack {
-                NavigationView {
-                    RecipeDetailView()
-                } label: {
-                    Text("Hot Chocolate Drink")
-                }
-                NavigationView {
-                    RecipeDetailView2()
-                } label: {
-                    Text("Hot Chocolate Ice Cream Sundae")
-                }
-            }
-            .navigationTitle("Hot Chocolate Recipes")
-            .toolbar(.hidden)
-        }
-    }
-}
-```
-
----vertical---
-
-## Hiding the back button
-
-<p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> RecipeDetailView.swift</p>
-
-```swift[12]
-struct RecipeDetailView: View {
-    @Environment(\.dismiss) var dismiss
-    var body: some View {
-        VStack {
-            Text("Get a hot chocolate packet")
-            Text("Mix it with milk or hot water")
-            Text("Stir and enjoy!")
-            Button("Exit") {
-                dismiss()
-            }
-        }
-        .navigationBarBackButtonHidden(true)
-    }
-}
-```
-
----vertical---
-
-now we want our app to look like the Settings App because we are apple fanboys.
-
----vertical---
-
-## v2-4
-
-Change `Vstack` in `ContentView.swift` to a `List` and be happy.
-We can also add the toolbar back by removing the `.toolbar(.hidden)` modifier.
+- We see that the `NavigationLink` is at the top of the screen
+- We can add a `Spacer()` to push it to the bottom
 
 ```swift[4]
+struct ContentView: View {  
+    var body: some View {
+        NavigationStack {
+            Spacer()
+            NavigationLink {
+                Text("This is a hearty concoction great for cold winter nights.")
+            } label: {
+                Text("Hot Chocolate Soup")
+            }
+            NavigationLink {
+                Text("How can this be hot and cold at the same time??? It's incredible.")
+            } label: {
+                Text("Hot Chocolate Ice Cream")
+            }
+        }
+    }
+}
+```
+
+---
+
+# Lesson 2 : Sheet
+
+---vertical---
+
+## Credits Screen
+
+- We're going to add a credits screen to our app.
+- This screen will show the authors of the app.
+- We will tap on a button and it brings up information about the other page.
+
+---vertical---
+
+## Creating a credits button
+
+- Add a `Button` to the `NavigationStack` in `ContentView`
+
+```swift
+struct ContentView: View {  
+    var body: some View {
+        NavigationStack {
+            Spacer()
+            NavigationLink {
+                Text("This is a hearty concoction great for cold winter nights.")
+            } label: {
+                Text("Hot Chocolate Soup")
+            }
+            NavigationLink {
+                Text("How can this be hot and cold at the same time??? It's incredible.")
+            } label: {
+                Text("Hot Chocolate Ice Cream")
+            }
+            Button("Show credits") {
+                showSheet = true 
+            }
+        }
+    }
+}
+```
+
+---vertical---
+
+## Adding styling to the button
+
+- Lets add a `Spacer()` and add `.buttonStyle(.borderedProminent)` to the `Button` to make it look better.
+
+```swift
+struct ContentView: View {  
+    var body: some View {
+        NavigationStack {
+            Spacer()
+            NavigationLink {
+                Text("This is a hearty concoction great for cold winter nights.")
+            } label: {
+                Text("Hot Chocolate Soup")
+            }
+            NavigationLink {
+                Text("How can this be hot and cold at the same time??? It's incredible.")
+            } label: {
+                Text("Hot Chocolate Ice Cream")
+            }
+            Spacer()
+            Button("Show credits") {
+                showSheet = true 
+            }.buttonStyle(.borderedProminent)
+        }
+    }
+}
+```
+
+---vertical---
+
+## Making the button work using a @State variable
+
+- Add a @State variable to `ContentView` to control the visibility of the sheet
+
+```swift
 struct ContentView: View {
+    @State private var showSheet = false
+    var body: some View {
+        NavigationStack {
+            Spacer()
+            NavigationLink {
+                Text("This is a hearty concoction great for cold winter nights.")
+            } label: {
+                Text("Hot Chocolate Soup")
+            }
+            NavigationLink {
+                Text("How can this be hot and cold at the same time??? It's incredible.")
+            } label: {
+                Text("Hot Chocolate Ice Cream")
+            }
+            Spacer()
+            Button("Show credits") {
+                showSheet = true 
+            }.buttonStyle(.borderedProminent)
+        }
+    }
+}
+```
+
+---vertical---
+
+## Adding a Sheet
+
+- Add a `sheet` modifier to the `Button` in `ContentView`
+
+```swift
+struct ContentView: View {
+    @State private var showSheet = false
+    var body: some View {
+        NavigationStack {
+            Spacer()
+            NavigationLink {
+                Text("This is a hearty concoction great for cold winter nights.")
+            } label: {
+                Text("Hot Chocolate Soup")
+            }
+            NavigationLink {
+                Text("How can this be hot and cold at the same time??? It's incredible.")
+            } label: {
+                Text("Hot Chocolate Ice Cream")
+            }
+            Spacer()
+            Button("Show credits") {
+                showSheet = true 
+            }
+            .buttonStyle(.borderedProminent)
+            .sheet(isPresented: $showSheet) {
+                CreditsView()
+            }
+        }
+    }
+}
+```
+
+---vertical---
+
+## Creating the CreditsView
+
+- Create a new SwiftUI file called `CreditsView.swift` and add the type `View`.
+- Wait for the popup to appear and press `Enter` to use the default code snippet.
+- Change the `MyView` struct to `CreditsView`.
+
+<p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> CreditsView.swift</p>
+
+```swift
+import SwiftUI
+
+struct CreditsView: View {
+    var body: some View {
+        Hello, world!
+    }
+}
+
+#Preview {
+    CreditsView()
+}
+```
+
+---vertical---
+
+## Adding content to the CreditsView
+
+- Add a `VStack` to the `CreditsView` and add a `Text` view with your name in it.
+
+```swift
+struct CreditsView: View {
+    var body: some View {
+        VStack {
+            Text("Made by YJ Soon")
+        }
+    }
+}
+```
+
+---vertical---
+
+## Making the CreditsView look better
+
+- Lets make the font size bigger 
+
+```swift
+struct CreditsView: View {
+    var body: some View {
+        VStack {
+            Text("Made by YJ Soon")
+                .font(.largeTitle)
+        }
+    }
+}
+```
+
+---vertical---
+
+## Making the CreditsView look even better
+
+- We should also add in a Image on top of the text
+- You can use the `Image` view and use the `systemName` parameter to use a system image.
+- The list of the system images can be found in your toolbar in Swift Playgrounds. 
+
+```swift 
+struct CreditsView: View {
+    var body: some View {
+        VStack {
+            Image(systemName: "pencil.circle.fill")
+            Text("Made by YJ Soon")
+                .font(.largeTitle)
+        }
+    }
+}
+```
+
+---vertical---
+
+## Making the CreditsView look even even better
+
+- Make the image bigger by adding `.font(.system(size: 80))` to the `Image` view
+
+```swift
+struct CreditsView: View {
+    var body: some View {
+        VStack {
+            Image(systemName: "pencil.circle.fill")
+                .font(.system(size: 80))
+            Text("Made by YJ Soon")
+                .font(.largeTitle)
+        }
+    }
+}
+```
+
+---vertical---
+
+## Making the CreditsView look even even even better
+
+- Lets add in a exit button to the `CreditsView` that says "Dismiss" and dismiss the sheet when tapped.
+- Use an `@Environment` variable to dismiss the sheet
+
+```swift[2, 10-12]
+struct CreditsView: View {
+    @Environment(\.dismiss) var dismiss
+    var body: some View {
+        VStack {
+            Image(systemName: "pencil.circle.fill")
+                .font(.system(size: 80))
+            Text("Made by YJ Soon")
+                .font(.largeTitle)
+
+            Button("Dismiss") {
+                dismiss()
+            }
+        }
+    }
+}
+```
+
+---vertical---
+
+## Making the CreditsView look even even even even better
+
+- Our button looks very small and squished. Lets add in some padding to make it look better.
+- Lets also add in `.buttonStyle(.borderedProminent)` to make it look even better.
+
+
+```swift
+struct CreditsView: View {
+    @Environment(\.dismiss) var dismiss
+    var body: some View {
+        VStack {
+            Image(systemName: "pencil.circle.fill")
+                .font(.system(size: 80))
+            Text("Made by YJ Soon")
+                .font(.largeTitle)
+
+            Button("Dismiss") {
+                dismiss()
+            }
+            .buttonStyle(.borderedProminent)
+            .padding()
+        }
+    }
+}
+```
+
+---vertical---
+
+## Making the CreditsView look the best
+
+- Lets add in a background color to the `CreditsView` to make it look even better
+- Add in a `ZStack` and add a `Color` view with the color you want as the background
+
+```swift
+struct CreditsView: View {
+    @Environment(\.dismiss) var dismiss
+    var body: some View {
+        ZStack {
+            Color.yellow
+                
+            VStack {
+                Image(systemName: "pencil.circle.fill")
+                    .font(.system(size: 80))
+                Text("Made by YJ Soon")
+                    .font(.largeTitle)
+
+                Button("Dismiss") {
+                    dismiss()
+                }
+                .buttonStyle(.borderedProminent)
+                .padding()
+            }
+        }
+    }
+}
+```
+
+---
+
+# Lesson 3 : List
+
+---vertical---
+
+- We are going to display a list of items in our app.
+- Lets use the `List` view to display a list of items.
+
+<p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift</p>
+
+```swift
+struct ContentView: View {    
+    @State private var showSheet = false
     var body: some View {
         NavigationStack {
             List {
-                NavigationView {
-                    RecipeDetailView()
+                NavigationLink {
+                    Text("This is a hearty concoction great for cold winter nights.")
                 } label: {
-                    Text("Hot Chocolate Drink")
+                    Text("Hot Chocolate Soup")
                 }
-                NavigationView {
-                    RecipeDetailView2()
+                NavigationLink {
+                    Text("How can this be hot and cold at the same time??? It's incredible.")
                 } label: {
-                    Text("Hot Chocolate Ice Cream Sundae")
-                }
-            }
-            .navigationTitle("Hot Chocolate Recipes")
-        }
-    }
-}
-```
-
----vertical---
-
-## Adding back the back button
-
-to enhance the user experience, lets add back the back button in the `RecipeDetailView` by removing the `.navigationBarBackButtonHidden` modifier.
-
-```swift[]
-struct RecipeDetailView: View {
-    @Environment(\.dismiss) var dismiss
-    var body: some View {
-        VStack {
-            Text("Get a hot chocolate packet")
-            Text("Mix it with milk or hot water")
-            Text("Stir and enjoy!")
-            Button("Exit") {
-                dismiss()
-            }
-        }
-    }
-}
-```
-
----
-
-# Version 3
-
----vertical---
-
-Now imagine we wanted to add multiple new recipes to our app. We would have to create a new `RecipeDetailView` for each recipe. This is SUPER inefficient. To address this, we can generalize the `RecipeDetailView` to accept a `Title` and `Description` as parameters.
-
----vertical---
-
-## v3-1
-
-Accept a `Title` and `Description` as parameters in the `RecipeDetailView`.
-
-<p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> RecipeDetailView.swift</p>
-
-```swift[2-4]
-struct RecipeDetailView: View {
-    @Environment(\.dismiss) var dismiss
-    var title: String
-    var description: String
-    var body: some View {
-        VStack {
-            Text("Get a hot chocolate packet")
-            Text("Mix it with milk or hot water")
-            Text("Stir and enjoy!")
-            Button("Exit") {
-                dismiss()
-            }
-        }
-    }
-}
-```
-
----vertical---
-
-## v3-2
-
-Replace the hardcoded text with the `Title` and `Description` parameters.
-
-```swift[6-12]
-struct RecipeDetailView: View {
-    @Environment(\.dismiss) var dismiss
-    var title: String 
-    var description: String 
-    var body: some View {
-        List {
-            Text(description)
-            Button("Exit") {
-                dismiss()
-            }
-        }
-        .navigationTitle(title)
-    }
-}
-```
-
----vertical---
-
-## v3-3
-
-Lastly, we add put the Exit in a `Section` 
-
-```swift[8-12]
-struct RecipeDetailView: View {
-    @Environment(\.dismiss) var dismiss
-    var title: String 
-    var description: String 
-    var body: some View {
-        List {
-            Text(description)
-            Section {
-                Button("Exit") {
-                    dismiss()
+                    Text("Hot Chocolate Ice Cream")
                 }
             }
         }
-        .navigationTitle(title)
     }
 }
 ```
 
 ---vertical---
 
-# Update 4
+## Adding a title to the List
+
+- Lets add a title to the `List` to let people know what they are looking at.
+- Lets also make it larger so people can see it easier.
+
+```swift
+struct ContentView: View {    
+    @State private var showSheet = false
+    var body: some View {
+        NavigationStack {
+            List {
+                NavigationLink {
+                    Text("This is a hearty concoction great for cold winter nights.")
+                } label: {
+                    Text("Hot Chocolate Soup")
+                }
+                NavigationLink {
+                    Text("How can this be hot and cold at the same time??? It's incredible.")
+                } label: {
+                    Text("Hot Chocolate Ice Cream")
+                }
+            }
+            .navigationTitle("Recipes")
+            .navigationBarTitleDisplayMode(.large)
+        }
+    }
+}
+```
 
 ---vertical---
+
+## Adding more items to the List
 
 TODO
