@@ -72,7 +72,7 @@ NavigationLink {
 
 - Add a `NavigationLink` to the `NavigationStack` in `ContentView`
 
-```swift[5:16]
+```swift[5-16]
 struct ContentView: View {  
     var body: some View {
         NavigationStack {
@@ -339,7 +339,7 @@ struct CreditsView: View {
 
 ---vertical---
 
-## Making the CreditsView look even even better
+### Making the CreditsView look even even better
 
 - Make the image bigger by adding `.font(.system(size: 80))` to the `Image` view
 
@@ -358,7 +358,7 @@ struct CreditsView: View {
 
 ---vertical---
 
-## Making the CreditsView look even even even better
+### Making the CreditsView look even even even better
 
 - Lets add in a exit button to the `CreditsView` that says "Dismiss" and dismiss the sheet when tapped.
 - Use an `@Environment` variable to dismiss the sheet
@@ -383,7 +383,7 @@ struct CreditsView: View {
 
 ---vertical---
 
-## Making the CreditsView look even even even even better
+### Making the CreditsView look even even even even better
 
 - Our button looks very small and squished. Lets add in some padding to make it look better.
 - Lets also add in `.buttonStyle(.borderedProminent)` to make it look even better.
@@ -411,12 +411,12 @@ struct CreditsView: View {
 
 ---vertical---
 
-## Making the CreditsView look the best
+### Making the CreditsView look the best
 
 - Lets add in a background color to the `CreditsView` to make it look even better
 - Add in a `ZStack` and add a `Color` view with the color you want as the background
 
-```swift[4,5,19]
+```swift[4,5]
 struct CreditsView: View {
     @Environment(\.dismiss) var dismiss
     var body: some View {
@@ -446,12 +446,14 @@ struct CreditsView: View {
 
 ---vertical---
 
+## List
+
 - We are going to display a list of items in our app.
 - Lets use the `List` view to display a list of items.
 
 <p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift</p>
 
-```swift[6,17]
+```swift[5]
 struct ContentView: View {    
     @State private var showSheet = false
     var body: some View {
