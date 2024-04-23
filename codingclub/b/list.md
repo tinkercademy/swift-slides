@@ -40,7 +40,7 @@ List App
 ## Lets get started!
 
 - Make a new SwiftUI project and call it `ListApp`
-- Change the `VStack` in ``ContentView` to a `NavigationStack`
+- Change the `VStack` in `ContentView` to a `NavigationStack`
 
 ```swift
 struct ContentView: View {
@@ -72,7 +72,7 @@ NavigationLink {
 
 - Add a `NavigationLink` to the `NavigationStack` in `ContentView`
 
-```swift
+```swift[5:16]
 struct ContentView: View {  
     var body: some View {
         NavigationStack {
@@ -139,7 +139,7 @@ struct ContentView: View {
 
 - Add a `Button` to the `NavigationStack` in `ContentView`
 
-```swift
+```swift[15-17]
 struct ContentView: View {  
     var body: some View {
         NavigationStack {
@@ -168,7 +168,7 @@ struct ContentView: View {
 
 - Lets add a `Spacer()` and add `.buttonStyle(.borderedProminent)` to the `Button` to make it look better.
 
-```swift
+```swift[15,19]
 struct ContentView: View {  
     var body: some View {
         NavigationStack {
@@ -186,7 +186,8 @@ struct ContentView: View {
             Spacer()
             Button("Show credits") {
                 showSheet = true 
-            }.buttonStyle(.borderedProminent)
+            }
+            .buttonStyle(.borderedProminent)
         }
     }
 }
@@ -194,11 +195,11 @@ struct ContentView: View {
 
 ---vertical---
 
-## Making the button work using a @State variable
+## Using a @State variable
 
 - Add a @State variable to `ContentView` to control the visibility of the sheet
 
-```swift
+```swift[2]
 struct ContentView: View {
     @State private var showSheet = false
     var body: some View {
@@ -217,7 +218,8 @@ struct ContentView: View {
             Spacer()
             Button("Show credits") {
                 showSheet = true 
-            }.buttonStyle(.borderedProminent)
+            }
+            .buttonStyle(.borderedProminent)
         }
     }
 }
@@ -229,7 +231,7 @@ struct ContentView: View {
 
 - Add a `sheet` modifier to the `Button` in `ContentView`
 
-```swift
+```swift[21-23]
 struct ContentView: View {
     @State private var showSheet = false
     var body: some View {
@@ -266,8 +268,6 @@ struct ContentView: View {
 - Wait for the popup to appear and press `Enter` to use the default code snippet.
 - Change the `MyView` struct to `CreditsView`.
 
-<p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> CreditsView.swift</p>
-
 ```swift
 import SwiftUI
 
@@ -276,11 +276,13 @@ struct CreditsView: View {
         Hello, world!
     }
 }
-
 #Preview {
     CreditsView()
 }
 ```
+
+<p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> CreditsView.swift</p>
+
 
 ---vertical---
 
@@ -288,7 +290,7 @@ struct CreditsView: View {
 
 - Add a `VStack` to the `CreditsView` and add a `Text` view with your name in it.
 
-```swift
+```swift[3-5]
 struct CreditsView: View {
     var body: some View {
         VStack {
@@ -304,7 +306,7 @@ struct CreditsView: View {
 
 - Lets make the font size bigger 
 
-```swift
+```swift[5]
 struct CreditsView: View {
     var body: some View {
         VStack {
@@ -323,7 +325,7 @@ struct CreditsView: View {
 - You can use the `Image` view and use the `systemName` parameter to use a system image.
 - The list of the system images can be found in your toolbar in Swift Playgrounds. 
 
-```swift 
+```swift[4]
 struct CreditsView: View {
     var body: some View {
         VStack {
@@ -341,7 +343,7 @@ struct CreditsView: View {
 
 - Make the image bigger by adding `.font(.system(size: 80))` to the `Image` view
 
-```swift
+```swift[5]
 struct CreditsView: View {
     var body: some View {
         VStack {
@@ -387,7 +389,7 @@ struct CreditsView: View {
 - Lets also add in `.buttonStyle(.borderedProminent)` to make it look even better.
 
 
-```swift
+```swift[13-14]
 struct CreditsView: View {
     @Environment(\.dismiss) var dismiss
     var body: some View {
@@ -414,7 +416,7 @@ struct CreditsView: View {
 - Lets add in a background color to the `CreditsView` to make it look even better
 - Add in a `ZStack` and add a `Color` view with the color you want as the background
 
-```swift
+```swift[4,5,19]
 struct CreditsView: View {
     @Environment(\.dismiss) var dismiss
     var body: some View {
@@ -449,7 +451,7 @@ struct CreditsView: View {
 
 <p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift</p>
 
-```swift
+```swift[6,17]
 struct ContentView: View {    
     @State private var showSheet = false
     var body: some View {
@@ -478,7 +480,7 @@ struct ContentView: View {
 - Lets add a title to the `List` to let people know what they are looking at.
 - Lets also make it larger so people can see it easier.
 
-```swift
+```swift[17,18]
 struct ContentView: View {    
     @State private var showSheet = false
     var body: some View {
