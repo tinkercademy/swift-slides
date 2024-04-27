@@ -39,7 +39,7 @@ List App
 
 ## Lets get started!
 
-- Make a new SwiftUI project and call it `ListApp`
+- Make a new SwiftUI project and call it `List App`
 - Change the `VStack` in `ContentView` to a `NavigationStack`
 
 ```swift
@@ -446,14 +446,25 @@ struct CreditsView: View {
 
 ---vertical---
 
-## List
+<div style="display: flex;">
+<div style="flex: 1; display:flex; justify-content: center; align-items: center; padding-right:20px ">
 
-- We are going to display a list of items in our app.
+<div style="margin-top:-25%">
+
+
+<h2> List </h2>
+
 - Lets use the `List` view to display a list of items.
+- Wrap all the `NavigationLink` in a `List` view.
+
+</div>
+
+</div>
+<div style="width:60%; ">
 
 <p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift</p>
 
-```swift[5]
+```swift[5-16]
 struct ContentView: View {    
     @State private var showSheet = false
     var body: some View {
@@ -473,7 +484,9 @@ struct ContentView: View {
         }
     }
 }
-```
+```    
+</div>
+</div>
 
 ---vertical---
 
@@ -509,5 +522,335 @@ struct ContentView: View {
 ---vertical---
 
 ## Adding more items to the List
+
+- If we run the app now, we can see that the list is scrollable.
+- Lets add the Credits button to the top corner of the screen. To add a button to the top corner, we can use the `toolbar` modifier.
+- We can render the using `sheet` as we did before.
+
+```swift[10-19]
+struct ContentView: View {
+    ...
+    var body: some View {
+        NavigationStack {
+            List {
+                ...
+            }
+            .navigationTitle("Recipes")
+            .navigationBarTitleDisplayMode(.large)
+            .toolbar {
+                Button {
+                    showSheet = true
+                } label: {
+                    Text("Credits")
+                }
+                .sheet(isPresented: $showSheet) {
+                    CreditsView()
+                }
+            }
+        }
+    }
+}
+```
+
+---vertical---
+
+## Using SF Symbols
+
+- We can use Symbols to make the Credits button look better.
+- We can use the `Image` view and use the `systemName` parameter to use a system image.
+- The list of the system images can be found in your toolbar in Swift Playgrounds. 
+
+```swift[14]
+struct ContentView: View {
+    ...
+    var body: some View {
+        NavigationStack {
+            List {
+                ...
+            }
+            .navigationTitle("Recipes")
+            .navigationBarTitleDisplayMode(.large)
+            .toolbar {
+                Button {
+                    showSheet = true
+                } label: {
+                    Image(systemName: "person.circle.fill")
+                }
+                .sheet(isPresented: $showSheet) {
+                    CreditsView()
+                }
+            }
+        }
+    }
+}
+```
+
+---
+
+# Lesson 4 : Using a generic detail view
+
+---vertical---
+
+## Generic Detail View
+
+- We should make a generic detail view that can be used for all the items in the list.
+- This will allow us to reuse the same view for all the items in the list and make everything look nicer.
+
+---vertical---
+
+## Creating a DetailView
+
+- Create a new SwiftUI file called `DetailView.swift` and add the type `View`.
+- Wait for the popup to appear and press `Enter` to use the default code snippet.
+- Change the `MyView` struct to `DetailView`.
+
+```swift
+import SwiftUI
+
+struct DetailView: View {
+    var body: some View {
+        Hello, world!
+    }
+}
+#Preview {
+    DetailView()
+}
+```
+<p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> DetailView.swift</p>
+
+---vertical---
+
+## Adding content to the DetailView
+
+- We want our `DetailView` to show the name of the item and a description of the item.
+- We can use a `List` to display the name and description of the item.
+
+```swift[3-5]
+struct DetailView: View {
+    var body: some View {
+        List {
+            Text("Hot Chocolate Soup")
+            Text("This is a hearty concoction great for cold winter nights.")
+        }
+    }
+}
+```
+
+---vertical---
+
+## Making our DetailView dynamic
+
+- We want our `DetailView` to be able to show different items.
+
+```swift[2, 3]
+struct DetailView: View {
+    let title: String
+    let description: String
+    var body: some View {
+        List {
+            Text(title)
+            Text(description)
+        }
+    }
+}
+```
+
+---vertical---
+
+## Making our DetailView better
+
+- Lets add in a title to the `DetailView` to let people know what they are looking at.
+- Lets also add in sections so that the name and description are separated.
+
+```swift[6-13]
+struct DetailView: View {
+    let title: String
+    let description: String
+    var body: some View {
+        List {
+            Section("Title") {
+                Text(title)
+            }
+            Section("Details"){
+                Text(description)
+            }
+        }
+        .navigationTitle("Recipe Detail")
+    }
+}
+```
+
+---vertical---
+
+## Lets test our DetailView
+
+- Modify the `Preview` code to use the new `DetailView` code.
+
+```swift[5-7]
+struct DetailView: View {
+    ...
+}
+
+#Preview {
+    DetailView(title: "Sample Hot Chocolate", description: "Sampling hot chocolate sounds like a great idea!")
+}
+```
+
+---vertical---
+
+## Using the DetailView from ContentView
+
+- Lets use the `DetailView` in the `ContentView` to show the details of the items in the list.
+
+```swift[5-16]
+struct ContentView: View {
+    ...
+    var body: some View {
+        NavigationStack {
+            List {
+                NavigationLink {
+                    DetailView(title: "Hot Chocolate Soup", description: "This is a hearty concoction great for cold winter nights.")
+                } label: {
+                    Text("Hot Chocolate Soup")
+                }
+                NavigationLink {
+                    DetailView(title: "Hot Chocolate Ice Cream", description: "How can this be hot and cold at the same time??? It's incredible.")
+                } label: {
+                    Text("Hot Chocolate Ice Cream")
+                }
+            }
+            ...
+        }
+    }
+}
+```
+
+---
+
+# Lesson 5 : Structs and Arrays
+
+---vertical---
+
+## UUID and Identifiable in SwiftUI
+
+In SwiftUI, `UUID` (Universally Unique Identifier) is a type used to uniquely identify objects. It generates unique identifiers that are **highly unlikely** to be duplicated.
+
+The `Identifiable` protocol in SwiftUI is used to associate a unique identifier with each instance of a struct. This allows SwiftUI to efficiently manage and update views based on changes to the underlying data.
+
+Using `UUID` and `Identifiable`, SwiftUI can easily track and update views in response to changes in data, ensuring a smooth and efficient user interface.
+
+You can think of this as your IC number in Singapore. It is unique to you and you can use it to identify yourself.
+
+---vertical---
+
+## Bool in Swift
+
+In Swift, `Bool` is a fundamental data type representing Boolean values, which can be either `true` or `false`.
+
+For example, we can use a `Bool` to represent whether a recipe is a favourite or not. We can set the initial value of `isFavourite` to `false` and toggle it to `true` when the user marks the recipe as a favourite.
+
+```swift
+var isFavourite: Bool = false
+
+if isFavourite {
+    print("This recipe is a favourite!")
+} else {
+    print("This recipe is not a favourite.")
+}
+```
+
+---vertical---
+
+## Structs
+
+- We can use structs to store data about the items in the list.
+- We can create a new file called `Recipe.swift` and add a struct called `Recipe` to store the name, description and other details of the recipe.
+
+<p> <img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> Recipe.swift </p>
+
+```swift
+import SwiftUI
+
+struct Recipe: Identifiable {
+    var id = UUID()
+    var title: String 
+    var description: String
+    var isFavourite: Bool = false // We set its default value to false
+}
+```
+
+---vertical---
+
+## Using the Recipe struct
+
+- We can use the `Recipe` struct to store the details of the items in the list.
+
+We can use it like this
+
+```swift
+var recipes = [
+    Recipe(title: "Recipe 1", description: "Description 1"),
+    Recipe(title: "Recipe 2", description: "Description 2")
+]
+
+// this will work only inside a view
+List(recipes) { recipe in 
+    Text(recipe.title)             
+}
+```
+
+---vertical---
+
+## Creating a list of Recipes
+
+- Lets use the `Recipe` struct to store the details of the items in the list.
+
+```swift[3-6]
+struct ContentView: View {
+    @State private var showSheet = false
+    var recipes = [
+        Recipe(title: "Hot Chocolate Soup", description: "This is a hearty concoction great for cold winter nights."),
+        Recipe(title: "Hot Chocolate Ice Cream", description: "How can this be hot and cold at the same time??? It's incredible.")
+    ]
+    var body: some View {
+        ...
+    }
+}
+```
+
+---vertical---
+
+## Using the Recipe struct in the ContentView
+
+- Lets use the `Recipe` struct to store the details of the items in the list.
+
+```swift[9-15]
+struct ContentView: View {
+    @State private var showSheet = false
+    var recipes = [
+        Recipe(title: "Hot Chocolate Soup", description: "This is a hearty concoction great for cold winter nights."),
+        Recipe(title: "Hot Chocolate Ice Cream", description: "How can this be hot and cold at the same time??? It's incredible.")
+    ]
+    var body: some View {
+        NavigationStack {
+            List(recipes) { recipe in 
+                NavigationLink {
+                    DetailView(title: recipe.title, description: recipe.description)
+                } label: {
+                    Text(recipe.title)
+                }                
+            }
+            .navigationTitle("Recipes")
+            ...
+        }
+    }
+}
+```
+
+---
+
+# Lesson 6 : Making editable recipes
+
+---vertical---
 
 TODO
