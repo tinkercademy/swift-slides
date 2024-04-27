@@ -1122,6 +1122,6 @@ struct ContentView: View {
 
 ---
 
-# Congratulations 🥳
+# Congratulations 
 
 You have made a simple quiz app with multiple questions and a score system!
