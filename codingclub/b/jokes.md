@@ -540,7 +540,7 @@ var body: some View {
 </div>
 <div style="flex: 1;text-align: center;">
 
-<img src="./assets/jokes-sheet-1-ss.jpeg">
+<img width="700" src="./assets/jokes-sheet-1-ss.jpeg">
 
 </div>
 </div>

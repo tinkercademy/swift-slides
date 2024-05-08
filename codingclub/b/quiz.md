@@ -35,7 +35,7 @@ What we’ll make: Well, a quiz app. There will be a few options, where you have
 
 </div>
 
----vertical---
+---
 
 # UI Prep
 
@@ -147,7 +147,7 @@ struct ContentView: View {
                                     option1: "Swoft Coding Club",
                                     option2: "Swift Coding Club",
                                     option3: "Xcode Club",
-                                    option4: “Swift Accelerator",
+                                    option4: "Swift Accelerator",
                                     correctOption: .two),
         Question(questionTitle: "What language are we using?",
                                     option1: "Xcode",
@@ -210,9 +210,9 @@ struct ContentView: View {
 // more code goes here
 ```
 
----vertical---
+---
 
-## Presenting an alert
+# Presenting an alert
 
 - Every time an option is clicked, let’s present an alert to tell the user if their answer is correct or wrong
 
@@ -277,7 +277,8 @@ Button {
 
 <p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift</p>
 
----vertical---
+
+---
 
 # Custom Buttons
 
@@ -339,7 +340,7 @@ func optionButton(optionNumber: OptionChoice, iconName: String) -> some View {
 }
 ```
 
----vertical---
+---
 
 # Progress Bars
 
@@ -389,7 +390,7 @@ func optionButton(optionNumber: OptionChoice, iconName: String) -> some View {
 
 <img height="850" src="./assets/quiz-progressbar.png">
 
----vertical---
+---
 
 # Score Sheet
 
@@ -445,9 +446,9 @@ struct ScoreView: View {
         VStack {
             Text("You got")
                 .bold()
-                .font(.title)
+                .font(.largeTitle)
             Text("\(score)/\(totalQuestions)")
-                .font(.title2)
+                .font(.title)
         }
     }
 }
@@ -457,9 +458,9 @@ struct ScoreView: View {
 
 ---vertical---
 
-## Presenting the sheet
+## Preparing for the sheet
 
-```swift
+```swift[5,6,9,11,25-28]
 struct ContentView: View {
 
     . . .
@@ -479,7 +480,7 @@ struct ContentView: View {
         isAlertPresented = true
     }
 
-    . . .
+    ...
 
         }
         .alert(isCorrect ? "Correct" : "Wrong", isPresented: $isAlertPresented) {
@@ -501,9 +502,10 @@ struct ContentView: View {
 
 ---vertical---
 
-## Presenting the sheet
+## Showing the sheet
 
-```swift
+
+```swift[16-24]
 struct ContentView: View {
 
     . . .
@@ -519,9 +521,15 @@ struct ContentView: View {
         } message: {
             Text(isCorrect ? "Congrats! You are quite smart..." : "How can you be getting this wrong?!")
         }
-        .sheet(isPresented: $isSheetPresented, onDismiss: { numOfCorrectQuestions = 0 }, content: {
-            ScoreView(score: numOfCorrectQuestions, totalQuestions: questions.count)
-        })
+        .sheet(
+            isPresented: $isSheetPresented,
+            onDismiss: { 
+                // Reset the score
+            },
+            content: {
+                // ScoreView Goes here
+            }
+        )
     }
 }
 
@@ -530,6 +538,74 @@ struct ContentView: View {
 <p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift</p>
 
 ---vertical---
+
+## Showing the new sheet
+
+```swift[22]
+struct ContentView: View {
+
+    . . .
+        .alert(isCorrect ? "Correct" : "Wrong", isPresented: $isAlertPresented) {
+            Button("Ok") {
+                if questionNumber == questions.count {
+                    isSheetPresented = true
+                    questionNumber = 1
+                }
+
+                questionNumber += 1
+            }
+        } message: {
+            Text(isCorrect ? "Congrats! You are quite smart..." : "How can you be getting this wrong?!")
+        }
+        .sheet(
+            isPresented: $isSheetPresented,
+            onDismiss: {
+                // Reset the score
+            },
+            content: {
+                ScoreView(score: numOfCorrectQuestions, totalQuestions: questions.count)
+            }
+        )
+    }
+}
+
+```
+
+---vertical---
+
+## Resetting the score
+
+```swift[18]
+struct ContentView: View {
+
+    . . .
+        .alert(isCorrect ? "Correct" : "Wrong", isPresented: $isAlertPresented) {
+            Button("Ok") {
+                if questionNumber == questions.count {
+                    isSheetPresented = true
+                    questionNumber = 1
+                }
+
+                questionNumber += 1
+            }
+        } message: {
+            Text(isCorrect ? "Congrats! You are quite smart..." : "How can you be getting this wrong?!")
+        }
+        .sheet(
+            isPresented: $isSheetPresented,
+            onDismiss: { numOfCorrectQuestions = 0 },
+            content: {
+                ScoreView(score: numOfCorrectQuestions, totalQuestions: questions.count)
+            }
+        )
+    }
+}
+
+```
+
+<p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift</p>
+
+---
 
 # Circular Progress Views
 
