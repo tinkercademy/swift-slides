@@ -389,7 +389,7 @@ func optionButton(optionNumber: OptionChoice, iconName: String) -> some View {
 
 ## Implementing Progress Bar
 
-<img height="850" src="./assets/quiz-progressbar.png">
+<img height="700" src="./assets/quiz-progressbar.png">
 
 ---
 
