@@ -101,6 +101,7 @@ struct ContentView: View {
 
 - To create the variable of `correctOption`, we can use **Enums** in place of the number of the correct option
 - This ensures that the option will always exist, and we can’t put the wrong number in our code (e.g. making a typo, and comparing against 5)
+- Create a new file called `Question.swift`
 
 ```swift
 enum OptionChoice {
