@@ -4,6 +4,7 @@
 </div>
 
 ## Track B: Unit 5
+
 List App
 
 ---
@@ -24,10 +25,10 @@ List App
 
 ## What is Navigation?
 
-- In About Me, we saw Tab Bars. They're used to show different aspects of an app. 
-	- Navigation Views let us drill deeper into data
-	- Modal sheets interrupt the flow for task completion
-	- The points above can be seen in the Mail App
+- In About Me, we saw Tab Bars. They're used to show different aspects of an app.
+  - Navigation Views let us drill deeper into data
+  - Modal sheets interrupt the flow for task completion
+  - The points above can be seen in the Mail App
 
 ---vertical---
 
@@ -73,7 +74,7 @@ NavigationLink {
 - Add a `NavigationLink` to the `NavigationStack` in `ContentView`
 
 ```swift[5-16]
-struct ContentView: View {  
+struct ContentView: View {
     var body: some View {
         NavigationStack {
 
@@ -82,13 +83,13 @@ struct ContentView: View {
             } label: {
                 Text("Hot Chocolate Soup")
             }
-            
+
             NavigationLink {
                 Text("How can this be hot and cold at the same time??? It's incredible.")
             } label: {
                 Text("Hot Chocolate Ice Cream")
             }
-        
+
         }
     }
 }
@@ -102,7 +103,7 @@ struct ContentView: View {
 - We can add a `Spacer()` to push it to the bottom
 
 ```swift[4]
-struct ContentView: View {  
+struct ContentView: View {
     var body: some View {
         NavigationStack {
             Spacer()
@@ -140,7 +141,7 @@ struct ContentView: View {
 - Add a `Button` to the `NavigationStack` in `ContentView`
 
 ```swift[15-17]
-struct ContentView: View {  
+struct ContentView: View {
     var body: some View {
         NavigationStack {
             Spacer()
@@ -155,7 +156,7 @@ struct ContentView: View {
                 Text("Hot Chocolate Ice Cream")
             }
             Button("Show credits") {
-                showSheet = true 
+                showSheet = true
             }
         }
     }
@@ -169,7 +170,7 @@ struct ContentView: View {
 - Lets add a `Spacer()` and add `.buttonStyle(.borderedProminent)` to the `Button` to make it look better.
 
 ```swift[15,19]
-struct ContentView: View {  
+struct ContentView: View {
     var body: some View {
         NavigationStack {
             Spacer()
@@ -185,7 +186,7 @@ struct ContentView: View {
             }
             Spacer()
             Button("Show credits") {
-                showSheet = true 
+                showSheet = true
             }
             .buttonStyle(.borderedProminent)
         }
@@ -217,7 +218,7 @@ struct ContentView: View {
             }
             Spacer()
             Button("Show credits") {
-                showSheet = true 
+                showSheet = true
             }
             .buttonStyle(.borderedProminent)
         }
@@ -249,7 +250,7 @@ struct ContentView: View {
             }
             Spacer()
             Button("Show credits") {
-                showSheet = true 
+                showSheet = true
             }
             .buttonStyle(.borderedProminent)
             .sheet(isPresented: $showSheet) {
@@ -283,7 +284,6 @@ struct CreditsView: View {
 
 <p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> CreditsView.swift</p>
 
-
 ---vertical---
 
 ## Adding content to the CreditsView
@@ -304,7 +304,7 @@ struct CreditsView: View {
 
 ## Making the CreditsView look better
 
-- Lets make the font size bigger 
+- Lets make the font size bigger
 
 ```swift[5]
 struct CreditsView: View {
@@ -323,7 +323,7 @@ struct CreditsView: View {
 
 - We should also add in a Image on top of the text
 - You can use the `Image` view and use the `systemName` parameter to use a system image.
-- The list of the system images can be found in your toolbar in Swift Playgrounds. 
+- The list of the system images can be found in your toolbar in Swift Playgrounds.
 
 ```swift[4]
 struct CreditsView: View {
@@ -388,7 +388,6 @@ struct CreditsView: View {
 - Our button looks very small and squished. Lets add in some padding to make it look better.
 - Lets also add in `.buttonStyle(.borderedProminent)` to make it look even better.
 
-
 ```swift[13-14]
 struct CreditsView: View {
     @Environment(\.dismiss) var dismiss
@@ -422,7 +421,7 @@ struct CreditsView: View {
     var body: some View {
         ZStack {
             Color.yellow
-                
+
             VStack {
                 Image(systemName: "pencil.circle.fill")
                     .font(.system(size: 80))
@@ -451,7 +450,6 @@ struct CreditsView: View {
 
 <div style="margin-top:-25%">
 
-
 <h2> List </h2>
 
 - Lets use the `List` view to display a list of items.
@@ -465,7 +463,7 @@ struct CreditsView: View {
 <p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift</p>
 
 ```swift[5-16]
-struct ContentView: View {    
+struct ContentView: View {
     @State private var showSheet = false
     var body: some View {
         NavigationStack {
@@ -484,7 +482,8 @@ struct ContentView: View {
         }
     }
 }
-```    
+```
+
 </div>
 </div>
 
@@ -496,7 +495,7 @@ struct ContentView: View {
 - Lets also make it larger so people can see it easier.
 
 ```swift[17,18]
-struct ContentView: View {    
+struct ContentView: View {
     @State private var showSheet = false
     var body: some View {
         NavigationStack {
@@ -558,7 +557,7 @@ struct ContentView: View {
 
 - We can use Symbols to make the Credits button look better.
 - We can use the `Image` view and use the `systemName` parameter to use a system image.
-- The list of the system images can be found in your toolbar in Swift Playgrounds. 
+- The list of the system images can be found in your toolbar in Swift Playgrounds.
 
 ```swift[14]
 struct ContentView: View {
@@ -616,6 +615,7 @@ struct DetailView: View {
     DetailView()
 }
 ```
+
 <p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> DetailView.swift</p>
 
 ---vertical---
@@ -773,7 +773,7 @@ import SwiftUI
 
 struct Recipe: Identifiable {
     var id = UUID()
-    var title: String 
+    var title: String
     var description: String
     var isFavourite: Bool = false // We set its default value to false
 }
@@ -794,8 +794,8 @@ var recipes = [
 ]
 
 // this will work only inside a view
-List(recipes) { recipe in 
-    Text(recipe.title)             
+List(recipes) { recipe in
+    Text(recipe.title)
 }
 ```
 
@@ -833,12 +833,12 @@ struct ContentView: View {
     ]
     var body: some View {
         NavigationStack {
-            List(recipes) { recipe in 
+            List(recipes) { recipe in
                 NavigationLink {
                     DetailView(title: recipe.title, description: recipe.description)
                 } label: {
                     Text(recipe.title)
-                }                
+                }
             }
             .navigationTitle("Recipes")
             ...
@@ -853,4 +853,207 @@ struct ContentView: View {
 
 ---vertical---
 
-TODO
+# TextFields in SwiftUI
+
+---vertical---
+
+## TextFields in SwiftUI
+
+- TextFields in SwiftUI are used to allow users to input text.
+- We can use TextFields to allow users to edit the details of the recipes.
+- The code below shows how to create a TextField and bind it to a `@State` variable.
+
+```swift
+TextField("Enter your name", text: $name)
+```
+
+---vertical---
+
+## Adding TextFields to the DetailView
+
+- Lets add TextFields to the `DetailView` to allow users to edit the details of the recipes.
+- We change `let` to `var` to make the `title` and `description` editable in the future.
+
+```swift[2, 7]
+struct DetailView: View {
+    @State var title: String
+    var description: String
+    var body: some View {
+        List {
+            Section("Title") {
+                TextField("Enter title", text: $title)
+            }
+            Section("Details"){
+                Text(description)
+            }
+        }
+        .navigationTitle("Recipe Detail")
+    }
+}
+```
+
+---vertical---
+
+# Demo time
+
+---vertical---
+
+## It did not work! Why?
+
+- We need bindings to make the TextField work.
+- We need to pass the `title` as a binding to the `DetailView` to make it editable.
+
+---vertical---
+
+## Adding a binding to the DetailView
+
+- Lets add a binding to the `DetailView` to make the `title` editable.
+
+```swift[2, 7]
+struct DetailView: View {
+    @Binding var title: String
+    var description: String
+    var body: some View {
+        List {
+            Section("Title") {
+                TextField("Enter title", text: $title)
+            }
+            Section("Details"){
+                Text(description)
+            }
+        }
+        .navigationTitle("Recipe Detail")
+    }
+}
+```
+
+---vertical---
+
+## Using the DetailView with a binding
+
+- Lets use the `DetailView` with a binding to make the `title` editable.
+
+```swift[3, 9-15]
+struct ContentView: View {
+    @State private var showSheet = false
+    @Binding private var recipes = [
+        Recipe(title: "Hot Chocolate Soup", description: "This is a hearty concoction great for cold winter nights."),
+        Recipe(title: "Hot Chocolate Ice Cream", description: "How can this be hot and cold at the same time??? It's incredible.")
+    ]
+    var body: some View {
+        NavigationStack {
+            List($recipes) { $recipe in
+                NavigationLink {
+                    DetailView(title: $recipe.title, description: recipe.description)
+                } label: {
+                    Text(recipe.title)
+                }
+            }
+            .navigationTitle("Recipes")
+            ...
+        }
+    }
+}
+```
+
+---vertical---
+
+## Sending recipes to the DetailView
+
+- Now we can change our `DetailView` to accept a `Recipe` instead of a `title` and `description`.
+- This will allow us to edit the details of the recipe easily.
+- Lets modify our code so that we now send to DetailView the $recipe
+
+```swift[3, 9-15]
+// ContentView.swift
+struct ContentView: View {
+    @State private var showSheet = false
+    @Binding private var recipes = [
+        Recipe(title: "Hot Chocolate Soup", description: "This is a hearty concoction great for cold winter nights."),
+        Recipe(title: "Hot Chocolate Ice Cream", description: "How can this be hot and cold at the same time??? It's incredible.")
+    ]
+    var body: some View {
+        NavigationStack {
+            List($recipes) { $recipe in
+                NavigationLink {
+                    DetailView(recipe: $recipe)
+                } label: {
+                    Text(recipe.title)
+                }
+            }
+            .navigationTitle("Recipes")
+            ...
+        }
+    }
+}
+```
+
+---vertical---
+
+## Sending recipes to the DetailView
+
+- Now we can change our `DetailView` to accept a `Recipe` instead of a `title` and `description`.
+
+```swift[2, 7]
+// DetailView.swift
+struct DetailView: View {
+    @Binding var recipe: Recipe
+    var body: some View {
+        List {
+            Section("Title") {
+                TextField("Enter title", text: $recipe.title)
+            }
+            Section("Details"){
+                Text(recipe.description)
+            }
+        }
+        .navigationTitle("Recipe Detail")
+    }
+}
+```
+
+---vertical---
+
+## Lets change our Preview
+
+- Now that we have updated our DetailView, we need to update our Preview code to reflect the changes.
+
+```swift[5-7]
+struct DetailView: View {
+    ...
+}
+
+#Preview {
+    DetailView(recipe: .constant(Recipe(title: "Sample Hot Chocolate", description: "Sampling hot chocolate sounds like a great idea!")))
+}
+```
+
+---vertical---
+
+## Expanding our app
+
+- We can now add a toggle to the `DetailView` to allow users to mark the recipe as a favourite.
+
+```swift[2, 7]
+struct DetailView: View {
+    @Binding var recipe: Recipe
+    var body: some View {
+        List {
+            Section("Title") {
+                TextField("Enter title", text: $recipe.title)
+            }
+            Section("Details"){
+                Text(recipe.description)
+            }
+            Section("Favourite") {
+                Toggle("Favourite", isOn: $recipe.isFavourite)
+            }
+        }
+        .navigationTitle("Recipe Detail")
+    }
+}
+```
+
+---
+
+# And that's a wrap!
