@@ -43,15 +43,23 @@ Inclusive App Design
 
 ---vertical---
 
-<iframe width="1600" height="800"
+## The process of inclusive design
+
+- [Video](https://developer.apple.com/videos/play/wwdc2021/10304/?cid=pm-enus-atlc-na-edu-eccode-launch22)
+
+<!-- <iframe width="1600" height="800"
 src="https://www.youtube.com/embed/qDm7GiKra28">
-</iframe>
+</iframe> -->
 
 ---vertical---
 
-<iframe width="1600" height="800"
+# The practice of inclusive design
+
+- [Video](https://developer.apple.com/videos/play/wwdc2021/10275/?cid=pm-enus-atlc-na-edu-eccode-launch22)
+
+<!-- <iframe width="1600" height="800"
 src="https://www.youtube.com/embed/eg22JaZWAgs">
-</iframe>
+</iframe> -->
 
 ---
 
@@ -87,4 +95,3 @@ src="https://www.youtube.com/embed/eg22JaZWAgs">
     </div>
     <img src="./assets/plan-inclusion.png">
 </div>
-
