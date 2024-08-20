@@ -930,13 +930,13 @@ struct DetailView: View {
 ---vertical---
 
 ## Using the DetailView with a binding
+- Let's use `List` with binding to make recipe editable.
+- We also need to call `DetailView` with a binding recipe so that `title` is editable.
 
-- Lets use the `DetailView` with a binding to make the `title` editable.
-
-```swift[3, 9-15]
+```swift[9-15]
 struct ContentView: View {
     @State private var showSheet = false
-    @Binding private var recipes = [
+    @State private var recipes = [
         Recipe(title: "Hot Chocolate Soup", description: "This is a hearty concoction great for cold winter nights."),
         Recipe(title: "Hot Chocolate Ice Cream", description: "How can this be hot and cold at the same time??? It's incredible.")
     ]
@@ -968,7 +968,7 @@ struct ContentView: View {
 // ContentView.swift
 struct ContentView: View {
     @State private var showSheet = false
-    @Binding private var recipes = [
+    @State private var recipes = [
         Recipe(title: "Hot Chocolate Soup", description: "This is a hearty concoction great for cold winter nights."),
         Recipe(title: "Hot Chocolate Ice Cream", description: "How can this be hot and cold at the same time??? It's incredible.")
     ]
