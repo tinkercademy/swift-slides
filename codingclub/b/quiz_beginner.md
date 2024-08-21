@@ -4,6 +4,7 @@
 </div>
 
 ## Track B: Unit 4
+
 Quiz App (Beginner)
 
 ---
@@ -12,7 +13,7 @@ Quiz App (Beginner)
 
 ---
 
-## Lets get started!
+## Let’s get started!
 
 - Make a new SwiftUI project and call it `Quiz App`
 - Remove the Image in the ContentView
@@ -31,10 +32,10 @@ struct ContentView: View {
 
 ---vertical---
 
-## Lets mock up the quiz app UI
+## Let’s mock up the quiz app UI
 
 - Change `Hello, World!` to any question you like.
-- Lets also center the text by adding `.multilineTextAlignment(.center)` to the `Text` view.
+- Let’s also center the text by adding `.multilineTextAlignment(.center)` to the `Text` view.
 
 ```swift
 
@@ -50,7 +51,7 @@ struct ContentView: View {
 
 ---vertical---
 
-## Lets add some buttons
+## Let’s add some buttons
 
 - Create a 2 button layout using `HStack` and `Button` views.
 
@@ -60,7 +61,7 @@ struct ContentView: View {
         VStack{
             Text("What is Taylor Swift's 2020s concert series called?")\
                 .multilineTextAlignment(.center)
-            
+
             HStack{
                 Button("The Eras Tour"){
 
@@ -90,7 +91,7 @@ struct ContentView: View {
         VStack{
             Text("What is Taylor Swift's 2020s concert series called?")
                 .multilineTextAlignment(.center)
-            
+
             HStack{
                 Button("The Eras Tour"){
 
@@ -135,7 +136,7 @@ struct ContentView: View {
         VStack{
             Text("What is Taylor Swift's 2020s concert series called?")
                 .multilineTextAlignment(.center)
-            
+
             HStack{
                 Button("The Eras Tour"){
 
@@ -180,7 +181,7 @@ struct ContentView: View {
         VStack{
             Text("What is Taylor Swift's 2020s concert series called?")
                 .multilineTextAlignment(.center)
-            
+
             HStack{
                 Button("The Eras Tour"){
                     correctOrWrong = "You are correct!"
@@ -214,7 +215,8 @@ struct ContentView: View {
 ---vertical---
 
 ## Comments
-- Let's add some comments to our code to make it easier to understand.
+
+- Let’s add some comments to our code to make it easier to understand.
 
 ```swift
 struct ContentView: View {
@@ -225,7 +227,7 @@ struct ContentView: View {
             // Question
             Text("What is Taylor Swift's 2020s concert series called?")
                 .multilineTextAlignment(.center)
-            
+
             // Options
             HStack{
                 Button("The Eras Tour"){
@@ -316,7 +318,7 @@ struct ContentView: View {
             // Question
             Text("What is Taylor Swift's 2020s concert series called?")
                 .multilineTextAlignment(.center)
-            
+
             // Options
             HStack{
                 option(title: "The Eras Tour", isCorrect: true)
@@ -326,7 +328,7 @@ struct ContentView: View {
                 option(title: "The Aromas Tour", isCorrect: false)
                 option(title: "The Areas Tour", isCorrect: false)
             }
-            
+
             // Feedback on whether the answer is correct
             Text(correctOrWrong)
         }
@@ -340,7 +342,7 @@ struct ContentView: View {
 
 ---vertical---
 
-## Lets create questionNumber variable
+## Let’s create questionNumber variable
 
 - Create a `questionNumber` variable to keep track of the current question.
 - In programming, we start counting from 0.
@@ -381,7 +383,7 @@ struct ContentView: View {
                 // Question 1
                 Text("What is Taylor Swift's 2020s concert series called?")
                     .multilineTextAlignment(.center)
-                
+
                 // Options
                 HStack{
                     option(title: "The Eras Tour", isCorrect: true)
@@ -392,7 +394,7 @@ struct ContentView: View {
                     option(title: "The Areas Tour", isCorrect: false)
                 }
             }
-            
+
             // Feedback on whether the answer is correct
             Text(correctOrWrong)
         }
@@ -453,14 +455,14 @@ struct ContentView: View {
             if questionNumber == 0{
                 ...
             }
-            
+
             // Feedback on whether the answer is correct
             Text(correctOrWrong)
 
             // Next Question Button
             if showNextButton{
                 Button("Next Question"){
-                   
+
                 }
                 .buttonStyle(.bordered)
                 .tint(.blue)
@@ -495,7 +497,7 @@ struct ContentView: View {
             if questionNumber == 0{
                 ...
             }
-            
+
             // Feedback on whether the answer is correct
             Text(correctOrWrong)
 
@@ -537,7 +539,7 @@ struct ContentView: View {
                 // Question 2
                 Text("Who wrote Gulliver's Travels?")
                     .multilineTextAlignment(.center)
-                
+
                 // Options
                 HStack{
                     option(title: "Tim Swift", isCorrect: false)
@@ -548,7 +550,7 @@ struct ContentView: View {
                     option(title: "Taylor Swift", isCorrect: false)
                 }
             }
-            
+
             // Feedback on whether the answer is correct
             Text(correctOrWrong)
 
@@ -589,7 +591,7 @@ struct ContentView: View {
             else if questionNumber == 1{
                 ...
             }
-            
+
             // Feedback on whether the answer is correct
             Text(correctOrWrong)
 
@@ -635,7 +637,7 @@ struct ContentView: View {
             else{
                 Text("The quiz is over.")
             }
-            
+
             // Feedback on whether the answer is correct
             Text(correctOrWrong)
 
@@ -656,7 +658,7 @@ struct ContentView: View {
 
 ---vertical---
 
-## Now lets imagine we have 10 questions
+## Now let’s imagine we have 10 questions
 
 - If we have 10 questions, we will have to write a lot of code to show all the questions.
 - Thus we should create a function to show the question and options.
@@ -665,13 +667,13 @@ struct ContentView: View {
 ```swift
 struct ContentView: View {
     ...
-    
+
     func question(question: String, option1: String, option2: String, option3: String, option4: String, correctOption: Int) -> some View{
         VStack{
             // Question
             Text("What is Taylor Swift's 2020s concert series called?")
                 .multilineTextAlignment(.center)
-            
+
             // Options
             HStack{
                 option(title: "The Eras Tour", isCorrect: true)
@@ -703,7 +705,7 @@ func question(question: String, option1: String, option2: String, option3: Strin
         // Question
         Text(question)
             .multilineTextAlignment(.center)
-        
+
         // Options
         HStack{
             option(title: option1, isCorrect: correctOption == 1)
@@ -743,7 +745,7 @@ struct ContentView: View {
             else{
                 Text("The quiz is over.")
             }
-            
+
             // Feedback on whether the answer is correct
             Text(correctOrWrong)
 
@@ -765,7 +767,6 @@ struct ContentView: View {
 ---
 
 # 4.5 Using switch-case and withAnimation
-
 
 ---vertical---
 
@@ -789,7 +790,7 @@ struct ContentView: View {
             default:
                 Text("The quiz is over.")
             }
-            
+
             // Feedback on whether the answer is correct
             Text(correctOrWrong)
 
@@ -822,10 +823,10 @@ struct ContentView: View {
             switch questionNumber{
             case 0:
                 question(
-                    question: "What is Taylor Swift's 2020s concert series called?", 
-                    option1: "The Eras Tour", 
-                    option2: "The (Syntax) Erros Tour", 
-                    option3: "The Aromas Tour", 
+                    question: "What is Taylor Swift's 2020s concert series called?",
+                    option1: "The Eras Tour",
+                    option2: "The (Syntax) Erros Tour",
+                    option3: "The Aromas Tour",
                     option4: "The Areas Tour",
                     correctOption: 1
                 )
@@ -850,7 +851,7 @@ struct ContentView: View {
             default:
                 Text("The quiz is over.")
             }
-            
+
            ...
         }
     }
@@ -866,7 +867,7 @@ struct ContentView: View {
 
 ```swift
 struct ContentView: View {
-    
+
     func option(title: String, isCorrect:Bool) -> some View{
         Button(title){
             withAnimation{
@@ -904,7 +905,7 @@ struct ContentView: View {
             switch questionNumber{
             ...
             }
-            
+
             // Feedback on whether the answer is correct
             Text(correctOrWrong)
 
@@ -1031,7 +1032,7 @@ struct ContentView: View {
 ## Giving feedback
 
 - Show thumbs up if they got more than 1 question correct.
-- Lets make it big and colour it with an gradient.
+- Let’s make it big and colour it with an gradient.
 
 ```swift
 struct ContentView: View {
@@ -1122,6 +1123,6 @@ struct ContentView: View {
 
 ---
 
-# Congratulations 
+# Congratulations
 
 You have made a simple quiz app with multiple questions and a score system!

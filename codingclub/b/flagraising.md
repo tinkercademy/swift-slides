@@ -51,17 +51,17 @@ Alignments and Animations
 
 ---vertical---
 
-## Lets break it down
+## Let’s break it down
 
 1. Duplicate the Counter
 2. Rename the items from cookie-related terms to flag raising related terms
 3. Add a flag pole
    1. Add a HStack.
    2. Add a Rectangle with a fixed width within the HStack. This is your flag pole.
-   3. Add a Text with an emoji in the HStack <img style="margin-bottom: -4px" src="./assets/sg-flag.png" height="40px"> 
-    - To add in the emoji you can
-        1. Use the emoji keyboard on your iPad
-        2. Copy the emoji from the internet and paste it into your code
+   3. Add a Text with an emoji in the HStack <img style="margin-bottom: -4px" src="./assets/sg-flag.png" height="40px">
+   - To add in the emoji you can
+     1. Use the emoji keyboard on your iPad
+     2. Copy the emoji from the internet and paste it into your code
 
 ---vertical---
 
@@ -500,7 +500,6 @@ struct ContentView: View {
 ## Example Other Clickers
 
 ### This concept extends beyond just increasing a counter and raising a flag… you can change a whole bunch of properties using state variables! Here are some examples.
-
 
 ---vertical---
 

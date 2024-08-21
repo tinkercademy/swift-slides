@@ -38,7 +38,7 @@ List App
 
 ---vertical---
 
-## Lets get started!
+## Let’s get started!
 
 - Make a new SwiftUI project and call it `List App`
 - Change the `VStack` in `ContentView` to a `NavigationStack`
@@ -167,7 +167,7 @@ struct ContentView: View {
 
 ## Adding styling to the button
 
-- Lets add a `Spacer()` and add `.buttonStyle(.borderedProminent)` to the `Button` to make it look better.
+- Let’s add a `Spacer()` and add `.buttonStyle(.borderedProminent)` to the `Button` to make it look better.
 
 ```swift[15,19]
 struct ContentView: View {
@@ -304,7 +304,7 @@ struct CreditsView: View {
 
 ## Making the CreditsView look better
 
-- Lets make the font size bigger
+- Let’s make the font size bigger
 
 ```swift[5]
 struct CreditsView: View {
@@ -360,7 +360,7 @@ struct CreditsView: View {
 
 ### Making the CreditsView look even even even better
 
-- Lets add in a exit button to the `CreditsView` that says "Dismiss" and dismiss the sheet when tapped.
+- Let’s add in a exit button to the `CreditsView` that says "Dismiss" and dismiss the sheet when tapped.
 - Use an `@Environment` variable to dismiss the sheet
 
 ```swift[2, 10-12]
@@ -386,7 +386,7 @@ struct CreditsView: View {
 ### Making the CreditsView look even even even even better
 
 - Our button looks very small and squished. Lets add in some padding to make it look better.
-- Lets also add in `.buttonStyle(.borderedProminent)` to make it look even better.
+- Let’s also add in `.buttonStyle(.borderedProminent)` to make it look even better.
 
 ```swift[13-14]
 struct CreditsView: View {
@@ -412,7 +412,7 @@ struct CreditsView: View {
 
 ### Making the CreditsView look the best
 
-- Lets add in a background color to the `CreditsView` to make it look even better
+- Let’s add in a background color to the `CreditsView` to make it look even better
 - Add in a `ZStack` and add a `Color` view with the color you want as the background
 
 ```swift[4,5]
@@ -452,7 +452,7 @@ struct CreditsView: View {
 
 <h2> List </h2>
 
-- Lets use the `List` view to display a list of items.
+- Let’s use the `List` view to display a list of items.
 - Wrap all the `NavigationLink` in a `List` view.
 
 </div>
@@ -491,8 +491,8 @@ struct ContentView: View {
 
 ## Adding a title to the List
 
-- Lets add a title to the `List` to let people know what they are looking at.
-- Lets also make it larger so people can see it easier.
+- Let’s add a title to the `List` to let people know what they are looking at.
+- Let’s also make it larger so people can see it easier.
 
 ```swift[17,18]
 struct ContentView: View {
@@ -523,7 +523,7 @@ struct ContentView: View {
 ## Adding more items to the List
 
 - If we run the app now, we can see that the list is scrollable.
-- Lets add the Credits button to the top corner of the screen. To add a button to the top corner, we can use the `toolbar` modifier.
+- Let’s add the Credits button to the top corner of the screen. To add a button to the top corner, we can use the `toolbar` modifier.
 - We can render the using `sheet` as we did before.
 
 ```swift[10-19]
@@ -659,8 +659,8 @@ struct DetailView: View {
 
 ## Making our DetailView better
 
-- Lets add in a title to the `DetailView` to let people know what they are looking at.
-- Lets also add in sections so that the name and description are separated.
+- Let’s add in a title to the `DetailView` to let people know what they are looking at.
+- Let’s also add in sections so that the name and description are separated.
 
 ```swift[6-13]
 struct DetailView: View {
@@ -682,7 +682,7 @@ struct DetailView: View {
 
 ---vertical---
 
-## Lets test our DetailView
+## Let’s test our DetailView
 
 - Modify the `Preview` code to use the new `DetailView` code.
 
@@ -700,7 +700,7 @@ struct DetailView: View {
 
 ## Using the DetailView from ContentView
 
-- Lets use the `DetailView` in the `ContentView` to show the details of the items in the list.
+- Let’s use the `DetailView` in the `ContentView` to show the details of the items in the list.
 
 ```swift[5-16]
 struct ContentView: View {
@@ -803,7 +803,7 @@ List(recipes) { recipe in
 
 ## Creating a list of Recipes
 
-- Lets use the `Recipe` struct to store the details of the items in the list.
+- Let’s use the `Recipe` struct to store the details of the items in the list.
 
 ```swift[3-6]
 struct ContentView: View {
@@ -822,7 +822,7 @@ struct ContentView: View {
 
 ## Using the Recipe struct in the ContentView
 
-- Lets use the `Recipe` struct to store the details of the items in the list.
+- Let’s use the `Recipe` struct to store the details of the items in the list.
 
 ```swift[9-15]
 struct ContentView: View {
@@ -871,7 +871,7 @@ TextField("Enter your name", text: $name)
 
 ## Adding TextFields to the DetailView
 
-- Lets add TextFields to the `DetailView` to allow users to edit the details of the recipes.
+- Let’s add TextFields to the `DetailView` to allow users to edit the details of the recipes.
 - We change `let` to `var` to make the `title` and `description` editable in the future.
 
 ```swift[2, 7]
@@ -907,7 +907,7 @@ struct DetailView: View {
 
 ## Adding a binding to the DetailView
 
-- Lets add a binding to the `DetailView` to make the `title` editable.
+- Let’s add a binding to the `DetailView` to make the `title` editable.
 
 ```swift[2, 7]
 struct DetailView: View {
@@ -930,7 +930,8 @@ struct DetailView: View {
 ---vertical---
 
 ## Using the DetailView with a binding
-- Let's use `List` with binding to make recipe editable.
+
+- Let’s use `List` with binding to make recipe editable.
 - We also need to call `DetailView` with a binding recipe so that `title` is editable.
 
 ```swift[9-15]
@@ -962,7 +963,7 @@ struct ContentView: View {
 
 - Now we can change our `DetailView` to accept a `Recipe` instead of a `title` and `description`.
 - This will allow us to edit the details of the recipe easily.
-- Lets modify our code so that we now send to DetailView the $recipe
+- Let’s modify our code so that we now send to DetailView the $recipe
 
 ```swift[3, 9-15]
 // ContentView.swift
@@ -1014,7 +1015,7 @@ struct DetailView: View {
 
 ---vertical---
 
-## Lets change our Preview
+## Let’s change our Preview
 
 - Now that we have updated our DetailView, we need to update our Preview code to reflect the changes.
 

@@ -224,7 +224,7 @@ Imagine you have a box of Legos. Each Lego piece is like a little part of a bigg
 
 ## How they work
 
-Let's say you want to make a little car. With a struct, you can decide that your car will have different parts: a color, a size, and a number of wheels. So, your struct would be like a blueprint for your car:
+Let’s say you want to make a little car. With a struct, you can decide that your car will have different parts: a color, a size, and a number of wheels. So, your struct would be like a blueprint for your car:
 
 ```swift
 // Hey, I'm going to make something called a 'Car'.
@@ -262,7 +262,7 @@ struct ContentView: View {
 
 ---vertical---
 
-## Rendering Multiple Previews 
+## Rendering Multiple Previews
 
 ```swift
 struct ToggleButton: View {
@@ -279,4 +279,3 @@ struct ToggleButton: View {
     ToggleButton(buttonState: false)
 }
 ```
-
