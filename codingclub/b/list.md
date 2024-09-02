@@ -894,7 +894,7 @@ struct DetailView: View {
 
 ---vertical---
 
-# Demo time
+# Lesson 7 : Binding
 
 ---vertical---
 
@@ -976,7 +976,7 @@ struct ContentView: View {
         NavigationStack {
             List($recipes) { $recipe in
                 NavigationLink {
-                    DetailView(recipe: $recipe)
+                    DetailView(recipe: $recipe, description: recipe.description)
                 } label: {
                     Text(recipe.title)
                 }
@@ -1054,6 +1054,300 @@ struct DetailView: View {
 }
 ```
 
+---vertical---
+
+## Show the favourite status in the list
+
+- Lets show the favourite status of the recipe in the list.
+
+```swift[9-15]
+NavigationLink {
+    DetailView(recipe: $recipe, description: recipe.description)
+} label: {
+    HStack {
+        Text(recipe.title)
+        if recipe.isFavourite {
+            Image(systemName: "heart.fill")
+        }
+    }
+}
+```
+
+<p> <img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift </p>
+
 ---
 
-# And that's a wrap!
+# Adding new recipes
+
+---vertical---
+
+## Adding new recipes
+
+- First create a new state variable to store the new recipe
+
+```swift[2]
+@State private var showAdd = false
+```
+<p> <img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift </p>
+
+---vertical---
+
+## Adding new recipes
+
+- Add a new button to the toolbar to show the AddRecipeView
+
+```swift[12-19]
+.toolbar {
+    Button {
+        showSheet = true
+    } label: {
+        Image(systemName: "person.circle.fill")
+    }
+    .sheet(isPresented: $showSheet) {
+        CreditsView()
+    }
+
+    Button {
+        showAdd = true
+    } label: {
+        Image(systemName: "plus.app.fill")
+    }
+    .sheet(isPresented: $showAdd) {
+        // Add recipe view
+    }
+}
+```
+<p> <img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift </p>
+
+---vertical---
+
+## Adding new recipes
+
+- To add a new `TextField`, we need to create a new state variable to store the new recipe
+
+```swift[2]
+@State private var newRecipeTitle = ""
+```
+<p> <img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift </p>
+
+
+---vertical---
+
+## Adding new recipes
+
+- Add a new `TextField` to the toolbar to allow users to enter the title of the new recipe
+
+```swift[2-17]
+.sheet(isPresented: $showAdd) {
+    List {
+        Section("Title") {
+            TextField("Enter title for your new recipe", text: $newRecipeTitle)
+        }
+
+        Section{
+            Button("Save"){
+
+            }
+            Button("Cancel"){
+             
+            }
+
+            .foregroundColor(.red)
+        }
+    }
+}
+```
+<p> <img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift </p>
+
+---vertical---
+
+## Adding new recipes
+
+- Add in the code to save the new recipe
+
+```swift[8-15]
+.sheet(isPresented: $showAdd) {
+    List {
+        Section("Title") {
+            TextField("Enter title for your new recipe", text: $newRecipeTitle)
+        }
+
+        Section{
+            Button("Save"){
+                let newRecipe = Recipe(title: newRecipeTitle, description: "")
+                recipes.append(newRecipe)
+                showAdd = false
+            }
+            Button("Cancel"){
+                showAdd = false
+            }
+
+            .foregroundColor(.red)
+        }
+    }
+}
+```
+<p> <img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift </p>
+
+---
+
+# Modifying recipes
+
+---vertical---
+
+## Deleting recipes
+
+- To add in the ability to delete recipes, we need to add `editActions` to the List.
+
+```swift[9-15]
+List($recipes, editActions: [.all]){
+    ...
+}
+```
+<p> <img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift </p>
+
+---vertical---
+
+## Reordering recipes
+
+- To add in the ability to reorder recipes, we need to add `EditButton` to the toolbar.
+
+```swift[3]
+.toolbar {
+    EditButton()
+    ...
+}
+```
+<p> <img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift </p>
+
+---
+
+# Making the app look better
+
+---vertical---
+
+## Cleaning up
+
+- We can clean up our code by moving the `Recipe` struct to the file called `Recipe.swift`.
+
+```swift
+struct Recipe: Identifiable {
+    var id = UUID()
+    var title: String
+    var description: String
+    var isFavourite: Bool = false // We set its default value to false
+
+    static var sampleData = [
+        Recipe(title: "Hot Chocolate Soup", description: "This is a hearty concoction great for cold winter nights."),
+        Recipe(title: "Hot Chocolate Ice Cream", description: "How can this be hot and cold at the same time??? It's incredible.")
+    ]
+}
+```
+<p> <img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> Recipe.swift </p>
+
+---vertical---
+
+## Cleaning up
+
+- We can remove the sample data from the `ContentView` and use the sample data from the `Recipe` struct.
+
+```swift
+@Binding private var recipes = Recipe.sampleData
+
+// To start from a blank screen we can use this
+//@Binding private var recipes = [Recipe]()
+```
+<p> <img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift </p>
+
+
+---vertical---
+
+## Making a custom AddView
+
+- We can create a new file called `AddView.swift` and copy the code from the `ContentView` to create a custom `AddView`.
+```swift
+import SwiftUI
+
+struct AddView: View {
+    @State private var newRecipeTitle = ""
+
+    var body: some View {
+        List {
+            Section("Title") {
+                TextField("Enter title for your new recipe", text: $newRecipeTitle)
+            }
+
+            Section{
+                Button("Save"){
+                    let newRecipe = Recipe(title: newRecipeTitle, description: newRecipeDescription)
+                    recipes.append(newRecipe)
+                    showAdd = false
+                }
+                Button("Cancel"){
+                    showAdd = false
+                }
+
+                .foregroundColor(.red)
+            }
+        }
+    }
+}
+```
+<p> <img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> AddView.swift </p>
+
+---vertical---
+
+## Making a custom DetailView
+
+- Making this sheet dismissable is a good idea. We can add a `@Environment` variable to dismiss the sheet.
+
+```swift[1]
+@Environment(\.dismiss) var dismiss
+@State private var newRecipeTitle = ""
+...
+```
+<p> <img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> AddView.swift </p>
+
+
+---vertical---
+
+## Linking the recipes
+
+- We need to link the recipes in the `AddView`.
+- Add this to the top
+
+```swift
+@Binding var recipes = [Recipe]
+```
+
+---vertical---
+
+## Fixing the preview error
+
+- We need to update the preview code to reflect the changes.
+
+```swift[5-7]
+#Preview {
+    AddView(recipes: .constant([]:))
+}
+```
+<p> <img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> AddView.swift </p>
+
+---vertical---
+
+## Updating the ContentView
+
+- We need to update the `ContentView` to use the new `AddView`.
+
+```swift[2]
+.sheet(isPresented: $showAdd) {
+    AddView(recipes: $recipes)
+}
+```
+<p> <img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift </p>
+
+
+---
+
+# Congratulations! You've completed Unit 5!
+
