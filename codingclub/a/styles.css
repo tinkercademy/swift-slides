@@ -1,52 +1,9 @@
 @media print {
     .reveal .slides {
-        font-size: 12px;
+      font-size: 12px;
     }
     .reveal .controls,
     .reveal .progress {
-        display: none !important;
+      display: none !important;
     }
-
-    /* Ensure all text is black and background is white */
-    body, .reveal .slides section {
-        background-color: white !important;
-        color: black !important;
-    }
-
-    /* Style headings */
-    h1, h2, h3, h4, h5, h6 {
-        color: black !important;
-    }
-
-    /* Ensure all text is black */
-    * {
-        color: black !important;
-        background-color: white !important;
-    }
-
-    /* Remove any inline styles that might affect print */
-    [style] {
-        color: black !important;
-        background-color: white !important;
-    }
-
-    /* Override gradient text color */
-    .gradient-text {
-        color: black !important;
-        background: none !important;
-        -webkit-background-clip: text !important;
-        background-clip: text !important; /* Standard property for compatibility */
-    }
-
-    /* Ensure images retain their original dimensions */
-    img {
-        max-width: 100%;
-        height: auto !important;
-    }
-
-    /* Maintain layout consistency */
-    .reveal .slides section {
-        display: block;
-        page-break-inside: avoid;
-    }
-}
+  }
