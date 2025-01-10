@@ -23,7 +23,7 @@
     /* Override gradient text color */
     .gradient-text {
         color: black !important;
-        background: none !important;
+        background: white !important;
         -webkit-background-clip: text !important;
         background-clip: text !important; /* Standard property for compatibility */
     }
