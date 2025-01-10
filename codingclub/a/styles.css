@@ -1,6 +1,8 @@
 @media print {
     .reveal .slides {
       font-size: 12px;
+      background-color: white;
+      color: black;
     }
     .reveal .controls,
     .reveal .progress {
