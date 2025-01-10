@@ -7,7 +7,7 @@
 
 ## Track A: Unit 4
 
-# Designingg
+# Designing
 
 Inclusive App Design
 

@@ -10,7 +10,7 @@
     }
 
     /* Ensure all text is black and background is white */
-    body, .reveal .slides section {
+    body, .reveal .slides section, .reveal .slides {
         background-color: white !important;
         color: black !important;
     }
