@@ -24,8 +24,6 @@
     .gradient-text {
         color: black !important;
         background: white !important;
-        -webkit-background-clip: text !important;
-        background-clip: text !important; /* Standard property for compatibility */
     }
 
 }
