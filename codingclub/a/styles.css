@@ -6,7 +6,7 @@
     }
     .reveal .controls,
     .reveal .progress {
-        display: none !important;
+        display: white !important;
     }
 
     /* Ensure all text is black and background is white */
