@@ -28,9 +28,4 @@
         background-clip: text !important; /* Standard property for compatibility */
     }
 
-    /* Ensure images retain their original dimensions */
-    img {
-        max-width: 100%;
-        height: auto !important;
-    }
 }
