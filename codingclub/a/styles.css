@@ -18,17 +18,16 @@
     /* Style headings */
     h1, h2, h3, h4, h5, h6 {
         color: black !important;
+        em {
+            display: inline !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+            text-decoration: italic !important;
+            font-style: italic !important;
+            background-color: white !important;
+        }
     }
 
-    h1 em {
-        display: inline !important;
-        visibility: visible !important;
-        opacity: 1 !important;
-        text-decoration: italic !important;
-        font-style: italic !important;
-        background-color: white !important;
-    }
-    
     /* Ensure all elements have a white background */
     * {
         background-color: white !important;
