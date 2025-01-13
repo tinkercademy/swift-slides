@@ -21,7 +21,6 @@
     }
 
     h1 em {
-        color: none !important;
         display: inline !important;
         visibility: visible !important;
         opacity: 1 !important;
