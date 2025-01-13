@@ -18,13 +18,11 @@
     /* Style headings */
     h1, h2, h3, h4, h5, h6 {
         color: black !important;
-        em {
-            display: inline !important;
-            visibility: visible !important;
-            opacity: 1 !important;
-            background-color: white !important;
-            color: black !important;
-        }
+        display: inline !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        background-color: white !important;
+        color: black !important;
     }
 
     /* Ensure all elements have a white background */
