@@ -140,60 +140,53 @@ footer small {
   padding-bottom: 0.5em;
 }
 
-/* To format slides into a printable pdf version */
+@page {
+  size: A4;
+  margin: 0;
+}
+
 @media print {
-  /* Hide video elements */
-  video,
-  iframe,
-  .video-container {
-    display: none !important;
-  }
-  
-  /* Style links to show their URL */
-  a[href]:after {
-    content: " (" attr(href) ")";
-    font-style: italic;
-  }
-  
-  /* Don't show URL for internal anchors */
-  a[href^="#"]:after {
-    content: "";
-  }
-  
-  /* Optional: Don't show URL for images */
-  a[href^="javascript:"]:after,
-  a[href^="#"]:after,
-  a:has(img):after {
-    content: "";
+  /* Force backgrounds */
+  html {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
   }
 
-  .reveal .slides {
-    font-size: 12px;
-    background-color: white !important;
+  /* Base elements */
+  body, 
+  .reveal, 
+  .reveal .slides, 
+  .reveal .slides section {
+    background: white !important;
     color: black !important;
+    box-shadow: none !important;
   }
 
+  /* All text elements */
+  .reveal h1, 
+  .reveal h2, 
+  .reveal h3, 
+  .reveal h4, 
+  .reveal h5, 
+  .reveal h6, 
+  .reveal p, 
+  .reveal li, 
+  .reveal td, 
+  .reveal th {
+    color: black !important;
+    text-shadow: none !important;
+  }
+
+  /* Hide presentation elements */
   .reveal .controls,
-  .reveal .progress {
+  .reveal .progress,
+  .reveal .slide-number {
     display: none !important;
   }
 
-  /* Ensure all text is black and background is white */
-  body, .reveal .slides section, .reveal .slides {
-    background-color: white !important;
-    color: black !important;
-  }
-
-  /* Style headings */
-  h1, h2, h3, h4, h5, h6 {
-    background-color: white !important;
-    color: black !important;
-  }
-
-  /* Ensure all elements have a white background */
+  /* Force white background */
   * {
-    background-color: white !important;
-    color: black !important;
+    background-color: transparent !important;
   }
 }
 
