@@ -21,14 +21,13 @@
     }
 
     h1 em {
-        color: black !important;
+        color: none !important;
         display: inline !important;
         visibility: visible !important;
         opacity: 1 !important;
         text-decoration: italic !important;
         font-style: italic !important;
         background-color: white !important;
-        position: static !important;
     }
     
     /* Ensure all elements have a white background */
