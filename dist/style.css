@@ -140,56 +140,6 @@ footer small {
   padding-bottom: 0.5em;
 }
 
-@page {
-  size: A4;
-  margin: 0;
-}
-
-@media print {
-  /* Force backgrounds */
-/*
-  html {
-    -webkit-print-color-adjust: exact;
-    print-color-adjust: exact;
-  }
-*/
-
-  /* Base elements */
-  body, 
-  .reveal, 
-  .reveal .slides, 
-  .reveal .slides section {
-    background: none !important;
-    color: black !important;
-  }
-
-  /* All text elements */
-  .reveal h1, 
-  .reveal h2, 
-  .reveal h3, 
-  .reveal h4, 
-  .reveal h5, 
-  .reveal h6, 
-  .reveal p, 
-  .reveal li, 
-  .reveal td, 
-  .reveal th {
-    color: black !important;
-  }
-
-  /* Hide presentation elements */
-  .reveal .controls,
-  .reveal .progress,
-  .reveal .slide-number {
-    display: none !important;
-  }
-
-  /* Force white background */
-  * {
-    background-color: white !important;
-  }
-}
-
 @media only screen and (max-width: 890px) {
   body {
     padding: 16px;
