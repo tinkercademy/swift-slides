@@ -20,14 +20,15 @@
         color: black !important;
     }
 
-    .reveal .slides em,
-    .reveal .slides section em,
-    em {
+    h1 em {
         color: black !important;
         display: inline !important;
         visibility: visible !important;
-        opacity: 1.0 !important;
+        opacity: 1 !important;
+        text-decoration: italic !important;
+        font-style: italic !important;
         background-color: white !important;
+        position: static !important;
     }
     
     /* Ensure all elements have a white background */
