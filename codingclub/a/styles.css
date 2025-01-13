@@ -6,7 +6,7 @@
     }
     .reveal .controls,
     .reveal .progress {
-        display: white !important;
+        display: none !important;
     }
 
     /* Ensure all text is black and background is white */
@@ -25,5 +25,17 @@
         color: black !important;
         background: white !important;
     }
+    
+    /* Ensure all elements have a white background */
+    * {
+        background-color: white !important;
+        color: black !important;
+    }
 
 }
+
+
+/* 
+Currently, slides' background is still black, printing will waste a lot of ink
+Background around texts are white, texts (except gradient texts) are black
+*/
