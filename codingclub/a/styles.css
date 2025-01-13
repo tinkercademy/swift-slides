@@ -20,13 +20,13 @@
         color: black !important;
     }
 
-    reveal .slides em,
+    .reveal .slides em,
     .reveal .slides section em,
     em {
         color: black !important;
         display: inline !important;
         visibility: visible !important;
-        opacity: 1 !important;
+        opacity: 1.0 !important;
         background-color: white !important;
     }
     
