@@ -140,34 +140,6 @@ footer small {
   padding-bottom: 0.5em;
 }
 
-@media only screen and (max-width: 890px) {
-  body {
-    padding: 16px;
-  }
-  h1 {
-    font-size: 32px;
-  }
-
-  h2 {
-    font-size: 24px !important;
-  }
-
-  h3 {
-    font-size: 16px !important;
-  }
-
-  p {
-    font-size: 12px !important;
-  }
-
-  .card {
-    width: 100% !important;
-  }
-  .logo {
-    height: 20px;
-  }
-}
-
 /* To format slides into a printable pdf version */
 @media print {
   .reveal .slides {
@@ -199,4 +171,34 @@ footer small {
   }
 
 }
+
+@media only screen and (max-width: 890px) {
+  body {
+    padding: 16px;
+  }
+  h1 {
+    font-size: 32px;
+  }
+
+  h2 {
+    font-size: 24px !important;
+  }
+
+  h3 {
+    font-size: 16px !important;
+  }
+
+  p {
+    font-size: 12px !important;
+  }
+
+  .card {
+    width: 100% !important;
+  }
+  .logo {
+    height: 20px;
+  }
+}
+
+
 
