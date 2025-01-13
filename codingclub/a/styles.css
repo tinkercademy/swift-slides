@@ -20,14 +20,9 @@
         color: black !important;
     }
 
-    /*
-     Override gradient text color NOT WORKING 
-     
-    .gradient-text {
-        color: black !important;
-        background: white !important;
+    .italic {
+        color:black !important;
     }
-*/
     
     /* Ensure all elements have a white background */
     * {
