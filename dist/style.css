@@ -168,6 +168,7 @@ footer small {
   }
 }
 
+/* To format slides into a printable pdf version */
 @media print {
   .reveal .slides {
       font-size: 12px;
@@ -187,6 +188,7 @@ footer small {
 
   /* Style headings */
   h1, h2, h3, h4, h5, h6 {
+      background-color: white !important;
       color: black !important;
   }
 
