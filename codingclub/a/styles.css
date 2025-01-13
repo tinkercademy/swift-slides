@@ -20,11 +20,14 @@
         color: black !important;
     }
 
-    /* Override gradient text color NOT WORKING */
+    /*
+     Override gradient text color NOT WORKING 
+     
     .gradient-text {
         color: black !important;
         background: white !important;
     }
+*/
     
     /* Ensure all elements have a white background */
     * {
@@ -34,8 +37,3 @@
 
 }
 
-
-/* 
-Currently, slides' background is still black, printing will waste a lot of ink
-Background around texts are white, texts (except gradient texts) are black
-*/
