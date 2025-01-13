@@ -12,7 +12,7 @@
     /* Ensure all text is black and background is white */
     body, .reveal .slides section, .reveal .slides {
         background-color: white !important;
-        color: black !important;
+/*        color: black !important;*/
     }
 
     /* Style headings */
@@ -20,7 +20,7 @@
         color: black !important;
     }
 
-    /* Override gradient text color */
+    /* Override gradient text color NOT WORKING */
     .gradient-text {
         color: black !important;
         background: white !important;
