@@ -2,7 +2,7 @@
     .reveal .slides {
         font-size: 12px;
         background-color: white;
-/*        color: black;*/
+        color: black;
     }
     .reveal .controls,
     .reveal .progress {
@@ -12,7 +12,7 @@
     /* Ensure all text is black and background is white */
     body, .reveal .slides section, .reveal .slides {
         background-color: white !important;
-/*        color: black !important;*/
+        color: black !important;
     }
 
     /* Style headings */
