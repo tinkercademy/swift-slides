@@ -147,19 +147,20 @@ footer small {
 
 @media print {
   /* Force backgrounds */
+/*
   html {
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }
+*/
 
   /* Base elements */
   body, 
   .reveal, 
   .reveal .slides, 
   .reveal .slides section {
-    background: white !important;
+    background: none !important;
     color: black !important;
-    box-shadow: none !important;
   }
 
   /* All text elements */
@@ -174,7 +175,6 @@ footer small {
   .reveal td, 
   .reveal th {
     color: black !important;
-    text-shadow: none !important;
   }
 
   /* Hide presentation elements */
@@ -186,7 +186,7 @@ footer small {
 
   /* Force white background */
   * {
-    background-color: transparent !important;
+    background-color: white !important;
   }
 }
 
