@@ -396,19 +396,19 @@ section.has-light-background, section.has-light-background h1, section.has-light
   }
 
   /* Ensure all text is black and background is white */
-  body {
+  body section:nth-last-of-type(2) {
     background-color: white !important;
     color: black !important;
   }
 
   /* Style headings */
-  h1, h2, h3, h4, h5, h6 {
+  h1, h2, h3, h4, h5, h6 section:nth-last-of-type(2) {
     background-color: white !important;
     color: black !important;
   }
 
   /* Ensure all elements have a white background */
-  * {
+  * section:nth-last-of-type(2) {
     background-color: white !important;
     color: black !important;
   }
