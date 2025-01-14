@@ -375,18 +375,13 @@ section.has-light-background, section.has-light-background h1, section.has-light
   }
 
   /* Hide the original image */
-  img[src="/workspaces/swift-slides/assets/tinkercademy-long.png"] {
-    visibility: hidden; /* Hides the image while keeping its space */
-  }
-
-  /* Hide the original image */
-  img[src="assets/tinkercademy-long.png"] {
+  img[src="/assets/tinkercademy-long.png"] {
     opacity: 0; /* Makes the image invisible */
     position: relative; /* Allows positioning of the pseudo-element */ 
   }
 
   /* Replace with the new image using a pseudo-element */
-  img[src="assets/tinkercademy-long.png"]::after {
+  img[src="/assets/tinkercademy-long.png"]::after {
     content: '';
     display: block;
     width: 100%; /* Match the original image width */
