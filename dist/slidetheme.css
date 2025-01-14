@@ -347,10 +347,6 @@ section.has-light-background, section.has-light-background h1, section.has-light
 /*********************************************
  * PRINT BACKGROUND
  *********************************************/
-/* To format slides into a printable pdf version */
-/*********************************************
- * PRINT BACKGROUND
- *********************************************/
  @media print {
   /* Hide video elements */
   video,
@@ -399,7 +395,7 @@ section.has-light-background, section.has-light-background h1, section.has-light
   }
 
   /* Ensure all text is black and background is white */
-  body {
+  body section:not(:nth-last-child(2)) {
     background-color: white !important;
     color: black !important;
   }
@@ -411,7 +407,7 @@ section.has-light-background, section.has-light-background h1, section.has-light
   }
 
   /* Ensure all elements have a white background */
-  * section:not(:nth-last-child(2)){
+  * {
     background-color: white !important;
     color: black !important;
   }
