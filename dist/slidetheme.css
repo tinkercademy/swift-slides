@@ -376,23 +376,31 @@ section.has-light-background, section.has-light-background h1, section.has-light
 
   /* Hide the original image */
   img[src="/workspaces/swift-slides/assets/tinkercademy-long.png"] {
-    display: none; /* Hide the original image */
+    visibility: hidden; /* Hides the image while keeping its space */
   }
-  
-  /* Replace with the new image using a pseudo-element */
+
+  /* Replace with a pseudo-element */
   img[src="/workspaces/swift-slides/assets/tinkercademy-long.png"]::after {
     content: '';
     display: block;
-    width: 1000px; /* Adjust width to match the original image */
-    height: auto; /* Maintain aspect ratio */
+    width: 100%; /* Match the original image width */
+    height: 100%; /* Match the original image height */
     background-image: url("/workspaces/swift-slides/assets/tinkercademy-long-black.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    position: absolute; /* Positioning the replacement image */
+    top: 0;
+    left: 0;
+  }
+
+  /* Ensure the parent element has relative positioning */
+  img[src="/workspaces/swift-slides/assets/tinkercademy-long.png"] {
+    position: relative;
   }
 
   .reveal .slides {
-    font-size: 60px;
+    font-size: 36px;
     background-color: white !important;
     color: black !important;
   }
