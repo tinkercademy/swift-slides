@@ -379,13 +379,15 @@ section.has-light-background, section.has-light-background h1, section.has-light
     visibility: hidden; /* Hide the original image but keep its space */
   }
 
-  /* Add a solid background color for debugging */
+  /* Hide the original image */
   img[src="/assets/tinkercademy-long.png"] {
-    background-color: red; /* Temporary solid color */
-    width: 200px; /* Set the original image's dimensions */
-    height: auto; /* Adjust height if necessary */
-    display: inline-block; /* Ensure proper rendering */
+    visibility: hidden; /* Hide the image but keep its space */
+    display: inline-block; /* Ensure it behaves like a container */
+    background-color: red; /* Solid color for testing */
+    width: 200px; /* Replace with the image's actual width */
+    height: 100px; /* Or set a fixed height */
   }
+  
 
   .reveal .slides {
     font-size: 36px;
