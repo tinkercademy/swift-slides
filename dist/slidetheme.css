@@ -375,7 +375,6 @@ section.has-light-background, section.has-light-background h1, section.has-light
   }
 
   img[src="/assets/tinkercademy-long.png"] {
-    visibility: hidden; /* Hide the original image */
     display: block; /* Ensure block behavior for dimensions */
     width: 100%; /* Set the width of the replacement */
     height: 100%; /* Set the height of the replacement */
