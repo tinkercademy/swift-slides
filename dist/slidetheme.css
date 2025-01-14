@@ -397,11 +397,11 @@ section.has-light-background, section.has-light-background h1, section.has-light
     color: black !important;
   }
 
-  /* Ensure all elements have a white background */
+  /* Ensure all elements have a white background 
   * {
     background-color: white !important;
     color: black !important;
-  }
+  } */
 
   /* Make the second-to-last slide have a black background */
   .reveal .slides section:nth-last-child(2) {
