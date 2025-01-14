@@ -382,8 +382,8 @@ section.has-light-background, section.has-light-background h1, section.has-light
   /* Hide the original image */
   img[src="/assets/tinkercademy-long.png"] {
     visibility: hidden; /* Hide the original image */
-    width: 300px; /* Set a specific width */
-    height: 150px; /* Set a specific height */
+    width: 500px; /* Set a specific width */
+    height: 300px; /* Set a specific height */
     background-color: red; /* Debug with a solid color */
     border: 2px solid black; /* Add a visible border */
   }
