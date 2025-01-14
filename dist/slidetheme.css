@@ -374,8 +374,8 @@ section.has-light-background, section.has-light-background h1, section.has-light
     content: "";
   }
 
-  img[src="assets/tinkercademy-long.png"] {
-    content: url("assets/tinkercademy-long-black.png");
+  img[src="/workspaces/swift-slides/assets/tinkercademy-long.png"] {
+    content: url("/workspaces/swift-slides/assets/tinkercademy-long-black.png");
   }
 
   .reveal .slides {
