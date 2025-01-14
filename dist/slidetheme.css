@@ -374,6 +374,10 @@ section.has-light-background, section.has-light-background h1, section.has-light
     content: "";
   }
 
+  img[src="assets/tinkercademy-long.png"] {
+    content: url("tinkercademy-long-black.png");
+  }
+
   .reveal .slides {
     font-size: 12px;
     background-color: white !important;
