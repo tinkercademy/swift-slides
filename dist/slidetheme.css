@@ -398,8 +398,8 @@ section.has-light-background, section.has-light-background h1, section.has-light
   }
 
   /* Make the second-to-last slide have a black background */
-  .reveal .slides section:nth-last-child(2) {
-    background-color: black !important;
+  .reveal .slides section:nth-last-child(2) * {
+    background-color: transparent !important;
     color: white !important;
   }
     
