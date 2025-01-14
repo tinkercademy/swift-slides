@@ -385,6 +385,8 @@ section.has-light-background, section.has-light-background h1, section.has-light
     display: block; /* Ensure it behaves like a block container */
     width: 3680px; /* Set a specific width */
     height: 576px; /* Set a specific height */
+    margin: 0;
+    padding: 0;
     background-color: red; /* Add solid color for testing */
   }
 
