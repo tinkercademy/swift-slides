@@ -374,15 +374,29 @@ section.has-light-background, section.has-light-background h1, section.has-light
     content: "";
   }
 
+  /* Hide the original image */
   img[src="/assets/tinkercademy-long.png"] {
-/*    visibility: hidden; /* Hide the original image */ 
-    display: block; /* Ensure block behavior for dimensions */
-    width: 100%; /* Set the width of the replacement */
-    height: 100%; /* Set the height of the replacement */
+    visibility: hidden; /* Hide the original image */
+    display: block; /* Ensure the element behaves like a block */
+    position: relative; /* Required for positioning the ::after pseudo-element */
+    width: 300px; /* Replace with the original image's width */
+    height: 150px; /* Replace with the original image's height */
+  }
+
+  /* Add the replacement image using ::after */
+  img[src="/assets/tinkercademy-long.png"]::after {
+    content: ''; /* Empty content to enable the pseudo-element */
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Match the parent element's dimensions */
+    height: 100%;
     background-image: url("/assets/tinkercademy-long-black.png"); /* Replacement image */
-    background-size: contain; /* Ensure the image scales correctly */
+    background-size: contain; /* Scale the image to fit */
     background-repeat: no-repeat; /* Prevent tiling */
     background-position: center; /* Center the replacement image */
+    z-index: 1; /* Ensure it appears above the original element */
   }
 
   .reveal .slides {
