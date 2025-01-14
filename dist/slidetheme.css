@@ -377,55 +377,42 @@ section.has-light-background, section.has-light-background h1, section.has-light
     content: "";
   }
 
-  /* Basic print layout */
-  .reveal .slides {
-    font-size: 36px;
+  /* General styles for all slides except the second-to-last */
+  .reveal .slides section:not(:nth-last-of-type(2)) {
     background-color: white !important;
     color: black !important;
   }
 
-  /* Hide navigation elements */
+  /* Specific styles for the second-to-last slide */
+  .reveal .slides section:nth-last-of-type(2) {
+    background-color: black !important;
+    color: white !important;
+  }
+
+  .reveal .slides {
+    font-size: 36px;
+  }
+
   .reveal .controls,
   .reveal .progress {
     display: none !important;
   }
 
-  /* Set default colors */
-  body, 
-  .reveal .slides section:not(:nth-last-child(2)), 
-  .reveal .slides {
+  /* Ensure all text is black and background is white */
+  body {
     background-color: white !important;
     color: black !important;
   }
 
   /* Style headings */
-  h1:not(.reveal .slides section:nth-last-child(2) h1), 
-  h2:not(.reveal .slides section:nth-last-child(2) h2), 
-  h3:not(.reveal .slides section:nth-last-child(2) h3), 
-  h4:not(.reveal .slides section:nth-last-child(2) h4), 
-  h5:not(.reveal .slides section:nth-last-child(2) h5), 
-  h6:not(.reveal .slides section:nth-last-child(2) h6) {
+  h1, h2, h3, h4, h5, h6 {
     background-color: white !important;
     color: black !important;
   }
 
-  /* Second-to-last slide special handling */
-  .reveal .slides section:nth-last-child(2) {
-    -webkit-print-color-adjust: exact !important;
-    print-color-adjust: exact !important;
-    background-color: black !important;
-    color: white !important;
-  }
-
-  /* Second-to-last slide content */
-  .reveal .slides section:nth-last-child(2) * {
-    background-color: transparent !important;
-    color: white !important;
-  }
-
-  /* Force print colors */
+  /* Ensure all elements have a white background */
   * {
-    -webkit-print-color-adjust: exact;
-    print-color-adjust: exact;
+    background-color: white !important;
+    color: black !important;
   }
-}
+} 
