@@ -379,8 +379,8 @@ section.has-light-background, section.has-light-background h1, section.has-light
 
   /* General styles for all slides except the second-to-last */
   .reveal .slides section:not(:nth-last-of-type(2)) {
-    background-color: white;
-    color: black;
+    background-color: white !important;
+    color: black !important;
   }
 
   /* Specific styles for the second-to-last slide */
@@ -395,24 +395,24 @@ section.has-light-background, section.has-light-background h1, section.has-light
 
   .reveal .controls,
   .reveal .progress {
-    display: none;
+    display: none !important;
   }
 
   /* Ensure all text is black and background is white */
   body {
-    background-color: white;
-    color: black;
+    background-color: white !important;
+    color: black !important;
   }
 
   /* Style headings */
   h1, h2, h3, h4, h5, h6 {
-    background-color: white;
-    color: black;
+    background-color: white !important;
+    color: black !important;
   }
 
   /* Ensure all elements have a white background */
-  * {
-    background-color: white;
-    color: black;
+  * section:not(:nth-last-child(2)){
+    background-color: white !important;
+    color: black !important;
   }
-} 
+}
