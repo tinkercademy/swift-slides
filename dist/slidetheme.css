@@ -374,26 +374,25 @@ section.has-light-background, section.has-light-background h1, section.has-light
     content: "";
   }
 
- /* Replace with the new image using a pseudo-element */
-img[src="/workspaces/swift-slides/assets/tinkercademy-long.png"]::after {
-  content: '';
-  display: block;
-  width: 1000px; /* Adjust width to match the original image */
-  height: auto; /* Maintain aspect ratio */
-  background-image: url("/workspaces/swift-slides/assets/tinkercademy-long-black.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-@media print {
-  img[src="/workspaces/swift-slides/assets/tinkercademy-long.png"]::after {
-    background-image: url("/workspaces/swift-slides/assets/tinkercademy-long-print.png");
+  /* Hide the original image */
+  img[src="/workspaces/swift-slides/assets/tinkercademy-long.png"] {
+    display: none; /* Hide the original image */
   }
-}
+  
+  /* Replace with the new image using a pseudo-element */
+  img[src="/workspaces/swift-slides/assets/tinkercademy-long.png"]::after {
+    content: '';
+    display: block;
+    width: 1000px; /* Adjust width to match the original image */
+    height: auto; /* Maintain aspect ratio */
+    background-image: url("/workspaces/swift-slides/assets/tinkercademy-long-black.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 
   .reveal .slides {
-    font-size: 12px;
+    font-size: 60px;
     background-color: white !important;
     color: black !important;
   }
