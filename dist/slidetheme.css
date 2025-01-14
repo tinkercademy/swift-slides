@@ -374,8 +374,24 @@ section.has-light-background, section.has-light-background h1, section.has-light
     content: "";
   }
 
-  img[src="/workspaces/swift-slides/assets/tinkercademy-long.png"] {
-    content: url("/workspaces/swift-slides/assets/tinkercademy-long-black.png");
+  /* Changing white Tinkercademy logo into the black Tinkercademy logo */
+  @media print {
+    /* Hide the original image */
+    img[src="/workspaces/swift-slides/assets/tinkercademy-long.png"] {
+      display: none; /* Hide the original image */
+    }
+  
+    /* Replace with the new image using a pseudo-element */
+    img[src="/workspaces/swift-slides/assets/tinkercademy-long.png"]::after {
+      content: '';
+      display: block;
+      width: 1000px; /* Adjust width to match the original image */
+      height: auto; /* Maintain aspect ratio */
+      background-image: url("/workspaces/swift-slides/assets/tinkercademy-long-black.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
   }
 
   .reveal .slides {
