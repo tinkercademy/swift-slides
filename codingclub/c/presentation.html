@@ -19,7 +19,7 @@
 		<div class="reveal">
 			<div class="slides">
 				<section id="slide-view" data-markdown="namecard.md"
-					data-separator-vertical="^\n---vertical---",
+					data-separator-vertical="^\n---vertical---"
 					data-separator-notes="^Note:">
 				</section>
 				<section>
@@ -48,18 +48,28 @@
 		<script src="/plugin/markdown/markdown.js"></script>
 		<script src="/plugin/highlight/highlight.js"></script>
 		<script>
+			// Set the markdown file dynamically
 			const deck = new URLSearchParams(window.location.search).get('deck');
-
 			document.getElementById("slide-view").setAttribute("data-markdown", deck + ".md"); 
 			
+			// Generate the QR code dynamically
 			document.getElementById("qr-image").src = "https://public-api.qr-code-generator.com/v1/create/free?image_format=SVG&image_width=500&foreground_color=%23000000&frame_color=%23000000&frame_name=no-frame&qr_code_logo=&qr_code_pattern=&qr_code_text=" + window.location.href;
 
+			// Initialize Reveal.js
 			Reveal.initialize({
 				width: 1920,
   				height: 1080,
 				hash: true,
+				plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+			});
 
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			// Add a special class to the second-to-last slide dynamically
+			Reveal.on('ready', function() {
+				const slides = document.querySelectorAll('.reveal .slides section');
+				if (slides.length > 1) {
+					const secondLastSlide = slides[slides.length - 2];
+					secondLastSlide.setAttribute('data-state', 'second-last-page');
+				}
 			});
 		</script>
 	</body>
