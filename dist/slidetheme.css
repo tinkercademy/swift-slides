@@ -374,15 +374,6 @@ section.has-light-background, section.has-light-background h1, section.has-light
     content: "";
   }
 
-  img[src="/assets/tinkercademy-long.png"] {
-    display: block; /* Ensure block behavior for dimensions */
-    width: 100%; /* Set the width of the replacement */
-    height: 100%; /* Set the height of the replacement */
-    background-image: url("/assets/tinkercademy-long-black.png"); /* Replacement image */
-    background-size: contain; /* Ensure the image scales correctly */
-    background-repeat: no-repeat; /* Prevent tiling */
-    background-position: center; /* Center the replacement image */
-  }
 
   .reveal .slides {
     font-size: 36px;
