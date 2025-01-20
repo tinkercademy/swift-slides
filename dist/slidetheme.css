@@ -345,27 +345,28 @@ section.has-light-background, section.has-light-background h1, section.has-light
 }
 
 /*********************************************
- * PRINT BACKGROUND WITH SPECIAL CLASS
+ * PRINT BACKGROUND
  *********************************************/
- @media print {
+/* To format slides into a printable pdf version */
+@media print {
   /* Hide video elements */
   video,
   iframe,
   .video-container {
     display: none !important;
   }
-
+  
   /* Style links to show their URL */
   a[href]:after {
     content: " (" attr(href) ")";
     font-style: italic;
   }
-
+  
   /* Don't show URL for internal anchors */
   a[href^="#"]:after {
     content: "";
   }
-
+  
   /* Optional: Don't show URL for images */
   a[href^="javascript:"]:after,
   a[href^="#"]:after,
@@ -373,48 +374,40 @@ section.has-light-background, section.has-light-background h1, section.has-light
     content: "";
   }
 
-  /* General styles for all slides */
-  .reveal .slides section {
+  img[src="/assets/tinkercademy-long.png"] {
+    display: block; /* Ensure block behavior for dimensions */
+    width: 100%; /* Set the width of the replacement */
+    height: 100%; /* Set the height of the replacement */
+    background-image: url("/assets/tinkercademy-long-black.png"); /* Replacement image */
+    background-size: contain; /* Ensure the image scales correctly */
+    background-repeat: no-repeat; /* Prevent tiling */
+    background-position: center; /* Center the replacement image */
+  }
+
+  .reveal .slides {
+    font-size: 36px;
     background-color: white !important;
     color: black !important;
   }
 
-  /* Specific styles for the second-to-last slide using data-state */
-  .reveal .slides section[data-state="second-last-page"] {
-    background-color: black !important;
-    color: white !important;
-  }
-
-  /* Specific styles for the second-to-last slide using a special class */
-  .reveal .slides section.second-last-slide {
-    background-color: black !important;
-    color: white !important;
-  }
-
-  /* General styles for the slides container */
-  .reveal .slides {
-    font-size: 36px;
-  }
-
-  /* Hide controls and progress bar */
   .reveal .controls,
   .reveal .progress {
     display: none !important;
   }
 
-  /* Styling for body */
-  body {
+  /* Ensure all text is black and background is white */
+  body, .reveal .slides section, .reveal .slides {
     background-color: white !important;
     color: black !important;
   }
 
-  /* Headings styling */
+  /* Style headings */
   h1, h2, h3, h4, h5, h6 {
     background-color: white !important;
     color: black !important;
   }
 
-  /* Styling for all elements */
+  /* Ensure all elements have a white background */
   * {
     background-color: white !important;
     color: black !important;
