@@ -1,17 +1,20 @@
-
 <div style="text-align: left">
-    <img src="/assets/tinkercademy.png" alt="Tinkercademy Logo" height="128px">
-    <img src="https://raw.githubusercontent.com/swiftinsg/branding/main/logos/icons/png/coloured%20-%20dark%20background.png" alt="Swiftinsg Logo" height="128px" style="margin-left: 64px;">
+    <img src="./assets/tinkercademy_logo.png" alt="Tinkercademy Logo" height="128px">
+    <img src="./assets/swiftinsg_logo.png" alt="Swiftinsg Logo" height="128px" style="margin-left: 64px;">
 </div>
 
-## Unit 5: About Me App
+## Track A: Unit 5
+
+# About Me App
 
 ---
 
 # Getting Started
 
-- Open the **Swift Playgrounds** app on your iPad.  
-- Under “More Playgrounds,” tap on **“See All”** and tap on the **GET** button next to the About Me playground.  
+- Open **Swift Playgrounds** on your iPad.  
+- Under “More Playgrounds,” tap **See All** and download the About Me playground.  
+
+<img height="800" src="./assets/placeholder_getting_started_about_me.png">
 
 ---
 
@@ -21,13 +24,59 @@
 
 ## Tabs in the App
 
-- Explore the four built-in tab views in the app.  
+- Explore and customize the built-in tabs in the app.  
+
+<img height="800" src="./assets/placeholder_tabs_in_app.png">
 
 ---
 
 # Hands-On
 
-Try editing tabs, adding images, and customizing your app!
+### Experiment with tabs, images, and app customization!
+
+<img height="800" src="./assets/placeholder_hands_on_about_me.png">
+
+---
+
+# Editing Tabs
+
+---vertical---
+
+## Changing Tab Labels
+
+- Modify the `.tabItem` modifier to change the label text.  
+- Example: Change `"Home"` to `"Your Name"`.
+
+<img height="800" src="./assets/placeholder_editing_tab_labels.png">
+
+---vertical---
+
+## Adding Images to Tabs
+
+- Import your own image into the playground.  
+- Use it in the app by replacing the placeholder image.
+
+<img height="800" src="./assets/placeholder_adding_images_to_tabs.png">
+
+---
+
+# Customization
+
+---vertical---
+
+## Changing Accent Colors
+
+- Open settings and modify the accent color for the app.
+
+<img height="800" src="./assets/placeholder_changing_accent_colors.png">
+
+---vertical---
+
+## Styling the Text
+
+- Use modifiers like `.font(.largeTitle)` and `.padding()` to customize text styles.
+
+<img height="800" src="./assets/placeholder_styling_text.png">
 
 ---
 
