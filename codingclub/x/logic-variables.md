@@ -136,14 +136,18 @@
 
 ---vertical---
 
-## Variables Summary
+# Variables Summary
 
 - A variable is something that represents a value. The value can change, so the variable has a name for you to refer to it by.
+
+---vertical---
 
 ## Declaring Variables:
 ```swift
 var variableName = 0
 ```
+
+---vertical---
 
 ## Changing Variables:
 ```swift
