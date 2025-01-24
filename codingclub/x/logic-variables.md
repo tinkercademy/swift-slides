@@ -28,10 +28,6 @@
 
 ---vertical---
 
-## Logical Operators: `&&`
-
----vertical---
-
 <div style="display: flex; justify-content: center; align-items: center;">
   <div style="position: relative; width: 1400px; height: 1000px;">
     <img src="./assets/x-2-4-0.PNG" alt="Screenshot displaying 3 logic conditionals" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
