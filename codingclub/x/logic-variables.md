@@ -180,3 +180,67 @@ Try out the exercises under **Variables**!
 </div>
 
 ---
+
+# Types
+
+---vertical---
+
+<div style="display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; padding: 20px;">
+  <div style="position: relative; width: 1050px; height: 650px;">
+    <img src="./assets/x-2-16-0.PNG" alt="Screenshot showing blueprint" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
+    <img src="./assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
+  </div>
+  <div style="position: relative; width: 1050px; height: 650px;">
+    <img src="./assets/x-2-16-1.PNG" alt="Screenshot showing blueprint and houses" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
+    <img src="./assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
+  </div>
+</div>
+
+---vertical---
+
+<div style="display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; padding: 20px;">
+  <div style="position: relative; width: 1050px; height: 650px;">
+    <img src="./assets/x-2-17-0.PNG" alt="Screenshot showing features and behaviours" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
+    <img src="./assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
+  </div>
+  <div style="position: relative; width: 1050px; height: 650px;">
+    <img src="./assets/x-2-17-1.PNG" alt="Screenshot showing properties and methods" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
+    <img src="./assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
+  </div>
+</div>
+
+---vertical---
+
+<div style="display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; padding: 20px;">
+  <div style="position: relative; width: 1050px; height: 650px;">
+    <img src="./assets/x-2-18-0.PNG" alt="Screenshot showing 3 houses with names" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
+    <img src="./assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
+  </div>
+  <div style="position: relative; width: 1050px; height: 650px;">
+    <img src="./assets/x-2-18-1.PNG" alt="Screenshot showing anotated house selection code" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
+    <img src="./assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
+  </div>
+</div>
+
+---vertical---
+
+<div style="display: flex; justify-content: center; align-items: center;">
+  <div style="position: relative; width: 1400px; height: 1000px;">
+    <img src="./assets/x-2-19-0.PNG" alt="Screenshot showing blue portal" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
+    <img src="./assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
+  </div>
+</div>
+
+---vertical---
+
+<div style="display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; padding: 20px;">
+  <div style="position: relative; width: 1050px; height: 650px;">
+    <img src="./assets/x-2-20-0.PNG" alt="Screenshot showing Setting the Right Portal in Swift Playgrounds" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
+    <img src="./assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
+  </div>
+  <div style="position: relative; width: 1050px; height: 650px;">
+    <img src="./assets/x-2-20-1.PNG" alt="Screenshot showing Deactivating a Portal in Swift Playgrounds" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
+    <img src="./assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
+  </div>
+</div>
+
