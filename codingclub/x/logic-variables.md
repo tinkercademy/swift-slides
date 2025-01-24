@@ -82,7 +82,6 @@
 ---vertical---
 
 # Hands-On
-
 ### Try out the exercise under Logical Operators!
 <div style="display: flex; justify-content: center; align-items: center;">
   <div style="position: relative; width: 1050px; height: 700px;">
@@ -170,8 +169,8 @@ let myConstant = 0
 
 ---vertical---
 
-### **Hands-On**
-Try out the exercises under **Variables**!
+# Hands-On
+### Try out the exercises under Variables!
 <div style="display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; padding: 20px;">
   <div style="position: relative; width: 1050px; height: 650px;">
     <img src="./assets/x-2-14-0.PNG" alt="Screenshot showing the Incrementing The Value activity in Swift Playgrounds" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
@@ -237,6 +236,8 @@ Try out the exercises under **Variables**!
 
 ---vertical---
 
+# Hands-On
+### Try out the exercises under Types!
 <div style="display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; padding: 20px;">
   <div style="position: relative; width: 1050px; height: 650px;">
     <img src="./assets/x-2-20-0.PNG" alt="Screenshot showing Setting the Right Portal in Swift Playgrounds" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
