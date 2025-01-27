@@ -1,246 +1,302 @@
-
 <div style="text-align: left">
     <img src="/assets/tinkercademy.png" alt="Tinkercademy Logo" height="128px">
     <img src="https://raw.githubusercontent.com/swiftinsg/branding/main/logos/icons/png/coloured%20-%20dark%20background.png" alt="Swiftinsg Logo" height="128px" style="margin-left: 64px;">
 </div>
 
-## Track A: Unit 6A
+## Track X: Unit 1
 
-# Design a Simple App
-
-<a href="https://apple.co/designasimpleapp-project3">Download the Keynote file required for this unit (79.9 MB)</a>
+# Commands, For Loops, Conditional Code
 
 ---
 
-# Brainstorm and Plan
+# Phase Overview
 
-Prepare and sketch designs for a simple app.
-
----vertical---
-
-<div style="display: flex;">
-    <div style="margin-top:5%;">
-    <h2>Step 1</h2>
-    <ul style="margin-top:5%;">
-        <li>Using the project presentation Keynote, generate ten ideas in 10 minutes for an app that makes your day — or someone else’s — better.</li>
-        <li><a href="https://apple.co/designasimpleapp-project3">Download the project presentation in Keynote (79.9 MB)</a></li>
-    </ul>
-    </div>
-    <img style="width:70%" src="./assets/7a-s1-step1.png">
-</div>
-
----vertical---
-
-<div style="display: flex;">
-    <div style="margin-top:5%;">
-    <h2>Step 2</h2>
-    <ul style="margin-top:5%;">
-        <li>Ask three to five people to look at your app ideas and identify the idea they like best.</li>
-    </ul>
-    </div>
-    <img src="./assets/7a-s1-step2.png">
-</div>
-
----vertical---
-
-<div style="display: flex;">
-    <div style="margin-top:5%;">
-    <h2>Step 3</h2>
-    <ul style="margin-top:5%;">
-        <li>Rapid prototyping helps you think creatively about what your app could look like or how it could work.</li>
-        <li>Use the blank templates provided in the Brainstorm and Plan section of the project presentation Keynote to sketch five rapid prototypes in 15 minutes.</li>
-    </ul>
-    </div>
-    <img style="width:70%;" src="./assets/7a-s1-step3.png">
-</div>
-
----vertical---
-
-<div style="display: flex;">
-    <div style="margin-top:0%;">
-    <h2>Step 4</h2>
-    <ul>
-    <li>Show your designs to at least three people and ask for feedback.</li>
-    </ul>
-    </div>
-    <img src="./assets/7a-s1-step4.png">
-</div>
-
----vertical---
-
-<div style="display: flex;">
-    <div style="margin-top:5%;">
-    <h2>Step 5</h2>
-    <ul style="margin-top:5%;">
-        <li>Using the feedback you collected, decide on a design to move forward with.</li>
-    </ul>
-    </div>
-    <img src="./assets/7a-s1-step5.png">
-</div>
+- Commands
+- For Loops
+- Conditional Code
 
 ---
 
-# Keynote Prototype
+# Lesson Plan
 
-In Keynote, create a prototype of your app.
+### What you’ll learn:
+- Commands
+- For Loops
+- Conditional Code
+
+### What you’ll do:
+- Get Started with Code on Swift Playgrounds
+
+### What you’ll need:
+- Swift Playgrounds App on your iPad
+
+---
+
+# What is Swift?
 
 ---vertical---
 
-<div style="display: flex;">
-    <div style="margin-top:5%;">
-    <h2>Create your Keynote prototype.</h2>
-    <ul style="margin-top:5%;">
-        <li>Use the blank slide provided in the Keynote Prototype section of the project presentation Keynote to make your prototype. Duplicate the slide if needed.</li>
-    </ul>
-    </div>
-    <img src="./assets/7a-s2-step0.jpg">
+- Swift is an open-source programming language created by Apple.
+- Used by developers to build apps for iOS, iPadOS, macOS, watchOS, tvOS, and more.
+
+---
+
+# Introduction to Swift Playgrounds
+
+---vertical---
+
+### Getting Started
+
+1. Open the **Swift Playgrounds** app on your iPad.
+2. Under “Get a Playground,” tap on **Get Started with Code**.
+
+---vertical---
+
+### Navigating the Playground
+
+- Tap on the **sidebar icon** to navigate through different chapters.
+- Tap on the **X icon** to return to **My Playgrounds**.
+
+---vertical---
+
+### What you will be doing:
+
+- Control a character, Byte, using Swift.
+- Navigate around the game world and complete tasks such as toggling switches and collecting gems.
+
+---
+
+# Commands
+
+---vertical---
+
+<div style="display: flex; justify-content: center; align-items: center;">
+  <div style="position: relative; width: 1400px; height: 1000px;">
+    <img src="./assets/commands-0.PNG" alt="Screenshot showing commands overview" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
+    <img src="./assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
+  </div>
 </div>
 
 ---vertical---
 
-<div style="display: flex;">
-    <div style="margin-top:5%;">
-    <h2>Explore Keynote tools.</h2>
-    <ul style="margin-top:5%;">
-        <li>Learn about the following features of Keynote that you might want to use in your app. Each section uses the Affirmations app as an example.</li>
-    </ul>
-    </div>
-    <img src="./assets/7a-s2-step0-2.jpg">
+<div style="display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; padding: 20px;">
+  <div style="position: relative; width: 1050px; height: 650px;">
+    <img src="./assets/commands-1.PNG" alt="Screenshot showing command syntax" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
+    <img src="./assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
+  </div>
+  <div style="position: relative; width: 1050px; height: 650px;">
+    <img src="./assets/commands-2.PNG" alt="Screenshot showing Byte in action" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
+    <img src="./assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
+  </div>
 </div>
 
 ---vertical---
 
-<div style="display: flex;">
-    <div style="margin-top:5%;">
-    <h2>Add elements.</h2>
-    <ul style="margin-top:5%;">
-        <li>Add text, lines, and shapes.</li>
-    </ul>
-    </div>
-    <img src="./assets/7a-s2-step0-3.jpg">
+### Controlling Byte
+<div style="display: flex; justify-content: center; align-items: center;">
+  <div style="position: relative; width: 1400px; height: 1000px;">
+    <img src="./assets/commands-0.PNG" alt="Screenshot showing commands overview" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
+    <img src="./assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
+  </div>
 </div>
 
 ---vertical---
 
-<div style="display: flex;">
-    <div style="margin-top:5%;">
-    <h2>Step 1</h2>
-    <ul style="margin-top:5%;">
-        <li>To add text, lines, or shapes, tap Shapes <img style="margin-bottom:-4px;" src="./assets/il_shape.png">  and choose an element.</li>
-    </ul>
-    </div>
-    <img src="./assets/7a-s2-step1.jpg">
+# camelCase
+- Commands have no spaces between words
+- If your command has two or more words, the standard practise is to capitalise the first letter of every word EXCEPT the first word
+- e.g. moveForward(), collectGem()
+
+---vertical---
+
+# Introduction to the interface
+<div style="display: flex; justify-content: center; align-items: center;">
+  <div style="position: relative; width: 1050px; height: 700px;">
+    <img src="./assets/x-1-18-0.PNG" alt="Screenshot of Swift Playgrounds UI" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
+    <img src="./assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
+  </div>
 </div>
 
 ---vertical---
 
-<div style="display: flex;">
-    <div style="margin-top:5%;">
-    <h2>Step 2</h2>
-    <ul style="margin-top:5%;">
-        <li>Tap Media <img style="margin-bottom:-4px;" src="./assets/il_media.png">  to add images, audio, drawings, or video. </li>
-    </ul>
-    </div>
-    <img src="./assets/7a-s2-step2.jpg">
-</div>
+## Let's try issuing commands!
+After tapping Tap to enter code, you can either 
+- Type the code out or, 
+- Use the keyboard shortcuts and the bottom of the screen
+
+After you are done with the code, click Run My Code to see Byte in action! 
+
+You can tap on **Speedometer** to speed Byte up or step through the code step by step  
 
 ---vertical---
 
-<div style="display: flex;">
-    <div style="margin-top:5%;">
-    <h2>Step 3</h2>
-    <ul style="margin-top:5%;">
-        <li>To resize a shape or image, drag the blue corners to the desired location.</li>
-    </ul>
-    </div>
-    <img src="./assets/7a-s2-step3.jpg">
-</div>
-
----vertical---
-
-<div style="display: flex;">
-    <div style="margin-top:5%;">
-    <h2>Step 4</h2>
-    <ul style="margin-top:5%;">
-        <li>Double-tap on a shape to add text.</li>
-    </ul>
-    </div>
-    <img src="./assets/7a-s2-step4.jpg">
-</div>
-
----vertical---
-
-<div style="display: flex;">
-    <div style="margin-top:5%;">
-    <h2>Step 5</h2>
-    <ul style="margin-top:5%;">
-        <li>Add all the elements for your app and size them correctly.</li>
-        <li>Consider titles, images, and buttons.</li>
-    </ul>
-    </div>
-    <img src="./assets/7a-s2-step5.png">
+# Hands-On
+### Try out the exercises under Commands!
+<div style="display: flex; justify-content: center; align-items: center;">
+  <div style="position: relative; width: 1050px; height: 700px;">
+    <img src="./assets/x-2-8-0.jpeg" alt="Screenshot displaying 3 logic conditionals" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
+    <img src="./assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
+  </div>
 </div>
 
 ---
 
-# Evaluate
-
-Have others test your app and observe how they interact with it. Take note of when they show signs of joy or misunderstanding.
+# For Loops
 
 ---vertical---
 
-<div style="display: flex;">
-    <div style="margin-top:5%;">
-    <h2>Step 1</h2>
-    <ul style="margin-top:5%;">
-        <li>To add text, lines, or shapes, tap Shapes <img style="margin-bottom:-4px;" src="./assets/il_shape.png">  and choose an element.</li>
-    </ul>
-    </div>
-    <img src="./assets/7a-s3-step1.jpg">
+<div style="display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; padding: 20px;">
+  <div style="position: relative; width: 1050px; height: 650px;">
+    <img src="./assets/x-2-10-0.PNG" alt="Screenshot showing a contact list" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
+    <img src="./assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
+  </div>
+  <div style="position: relative; width: 1050px; height: 650px;">
+    <img src="./assets/x-2-10-1.PNG" alt="Screenshot showing a Mia" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
+    <img src="./assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
+  </div>
 </div>
 
 ---vertical---
 
-<div style="display: flex;">
-    <div style="margin-top:5%;">
-    <h2>Step 2</h2>
-    <ul style="margin-top:5%;">
-        <li>Ask your users to fill out the feedback form in the Evaluate section of the project presentation Keynote.</li>
-    </ul>
-    </div>
-    <img src="./assets/7a-s3-step2.jpg">
+<div style="display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; padding: 20px;">
+  <div style="position: relative; width: 1050px; height: 650px;">
+    <img src="./assets/x-2-10-0.PNG" alt="Screenshot showing a contact list" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
+    <img src="./assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
+  </div>
+  <div style="position: relative; width: 1050px; height: 650px;">
+    <img src="./assets/x-2-10-1.PNG" alt="Screenshot showing a Mia" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
+    <img src="./assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
+  </div>
+</div>
+
+---vertical---
+
+### Syntax
+
+```swift
+for i in 1 ... 5 {
+    // code to be repeated
+}
+```
+
+---vertical---
+
+### What is `i`?
+
+- `i` is a variable. It represents a value and can be named anything (e.g., `i` or `potato`).
+- The for loop sets `i` to 1 initially and repeats the code inside the curly brackets for each value of `i` until the loop ends.
+
+---vertical---
+
+# Hands-On
+### Try out the exercises under For Loops!
+<div style="display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; padding: 20px;">
+  <div style="position: relative; width: 1050px; height: 650px;">
+    <img src="./assets/for-loops-0.PNG" alt="Screenshot showing for loop example" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
+    <img src="./assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
+  </div>
+  <div style="position: relative; width: 1050px; height: 650px;">
+    <img src="./assets/for-loops-1.PNG" alt="Screenshot showing Byte executing a for loop" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
+    <img src="./assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
+  </div>
 </div>
 
 ---
 
-# Promote Your App
-
-Create an app product page to give potential users information before they download your app. Investigate what information to include, then make an app product page of your own.
+# Conditionals
 
 ---vertical---
 
-<div style="display: flex;">
-    <div style="margin-top:5%;">
-    <h2>Step 1</h2>
-    <ul style="margin-top:5%;">
-        <li>View the Swift Playgrounds product page in the App Store. Then answer the questions in the Promote Your App section of the project presentation Keynote.</li>
-        <li><a href="https://apps.apple.com/us/app/swift-playgrounds/id1496833156?mt=12"target="_blank">Go to the Swift Playgrounds product&nbsp;page</a></li>
-    </ul>
-    </div>
-    <img src="./assets/7a-s4-step1.jpg">
+<div style="display: flex; justify-content: center; align-items: center;">
+  <div style="position: relative; width: 1400px; height: 1000px;">
+    <img src="./assets/x-2-4-0.PNG" alt="Screenshot displaying 3 logic conditionals" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
+    <img src="./assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
+  </div>
 </div>
 
 ---vertical---
 
-<div style="display: flex;">
-    <div style="margin-top:5%;">
-    <h2>Step 2</h2>
-    <ul style="margin-top:5%;">
-        <li>Make your product page.</li>
-        <li>Complete the product page template provided in the project presentation Keynote.</li>
-    </ul>
-    </div>
-    <img src="./assets/7a-s4-step2.jpg">
+<div style="display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; padding: 20px;">
+  <div style="position: relative; width: 1050px; height: 650px;">
+    <img src="./assets/x-2-5-0.PNG" alt="Screenshot displaying && example" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
+    <img src="./assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
+  </div>
+  <div style="position: relative; width: 1050px; height: 650px;">
+    <img src="./assets/x-2-5-1.PNG" alt="Screenshot displaying AND example" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
+    <img src="./assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
+  </div>
 </div>
+
+---vertical---
+
+<div style="display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; padding: 20px;">
+  <div style="position: relative; width: 1050px; height: 650px;">
+    <img src="./assets/x-2-5-0.PNG" alt="Screenshot displaying && example" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
+    <img src="./assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
+  </div>
+  <div style="position: relative; width: 1050px; height: 650px;">
+    <img src="./assets/x-2-5-1.PNG" alt="Screenshot displaying AND example" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
+    <img src="./assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
+  </div>
+</div>
+
+---vertical---
+
+### if-else Syntax
+
+```swift
+if condition {
+    // code if condition is true
+} else {
+    // code if condition is NOT true
+}
+```
 
 ---
+
+# Comparators
+
+---vertical---
+
+### Comparators
+
+In the Playgrounds tutorial, the if statement uses the value of isOnClosedSwitch or isOnGem to make decisions.
+
+These are boolean (Bool) variables, which can be either true or false.
+- isOnClosedSwitch represents whether a switch is closed
+- isOnGem represents whether Byte is on a gem
+
+We can also directly use statements using comparators (<=, <, >, >=, ==, !=) instead of boolean variables.
+- For example, a == b will be true if a is equal to b, and false if a is not equal to b.
+
+---vertical---
+
+<div style="display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; padding: 20px;">
+  <div style="position: relative; width: 1050px; height: 650px;">
+    <img src="./assets/conditionals-0.PNG" alt="Screenshot showing if-else example" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
+    <img src="./assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
+  </div>
+  <div style="position: relative; width: 1050px; height: 650px;">
+    <img src="./assets/conditionals-1.PNG" alt="Screenshot showing Byte executing conditionals" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
+    <img src="./assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
+  </div>
+</div>
+
+---vertical---
+
+# Hands-On
+### Try out the exercises under Conditionals!
+<div style="display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; padding: 20px;">
+  <div style="position: relative; width: 1050px; height: 650px;">
+    <img src="./assets/x-2-5-0.PNG" alt="Screenshot displaying && example" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
+    <img src="./assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
+  </div>
+  <div style="position: relative; width: 1050px; height: 650px;">
+    <img src="./assets/x-2-5-1.PNG" alt="Screenshot displaying AND example" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
+    <img src="./assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
+  </div>
+  <div style="position: relative; width: 1050px; height: 650px;">
+    <img src="./assets/x-2-5-2.PNG" alt="Screenshot displaying AND example" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
+    <img src="./assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
+  </div>
+</div>

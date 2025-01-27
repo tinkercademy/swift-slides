@@ -3,7 +3,7 @@
     <img src="https://raw.githubusercontent.com/swiftinsg/branding/main/logos/icons/png/coloured%20-%20dark%20background.png" alt="Swiftinsg Logo" height="128px" style="margin-left: 64px;">
 </div>
 
-## Track A: Unit 2
+## Track X: Unit 2
 
 # Logical Operators, Variables, Types
 
@@ -34,7 +34,6 @@
     <img src="./assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
   </div>
 </div>
-
 
 ---vertical---
 
