@@ -66,7 +66,7 @@
     </ol>
   </div>
   <div style="flex: 1; position: relative; width: 700px; height: 500px;">
-    <img src="./assets/x-1-10-0.PNG" alt="Swift Playgrounds UI" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
+    <img src="./assets/x-1-10-0.png" alt="Swift Playgrounds UI" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
     <img src="./assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
   </div>
 </div>
@@ -200,11 +200,11 @@
 ### Try out the exercises under Commands!
 <div style="display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; padding: 20px;">
   <div style="position: relative; width: 1050px; height: 650px;">
-    <img src="./assets/x-1-20-0.PNG" alt="Screenshot showing Finding and Fixing Bugs in Swift Playgrounds" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
+    <img src="./assets/x-1-20-0.png" alt="Screenshot showing Finding and Fixing Bugs in Swift Playgrounds" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
     <img src="./assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
   </div>
   <div style="position: relative; width: 1050px; height: 650px;">
-    <img src="./assets/x-1-20-1.PNG" alt="Screenshot showing Toggling a Switch in Swift Playgrounds" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
+    <img src="./assets/x-1-20-1.png" alt="Screenshot showing Toggling a Switch in Swift Playgrounds" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
     <img src="./assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
   </div>
 </div>
