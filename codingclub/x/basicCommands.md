@@ -45,7 +45,7 @@
     </ul>
   </div>
   <div style="flex: 1;">
-    <img src="./assets/x-1-8-0.PNG" alt="XCode UI" style="width: 100%; max-width: 300px;">
+    <img src="./assets/x-1-8-0.png" alt="XCode UI" style="width: 100%; max-width: 300px;">
   </div>
 </div>
 
@@ -145,7 +145,6 @@
 
 # camelCase
 <div style="display: flex; align-items: center; gap: 20px; padding: 20px;">
-  <!-- Text Section -->
   <div style="flex: 1;">
     <ul>
       <li>Commands have no spaces between words.</li>
@@ -153,7 +152,6 @@
       <li>e.g., <code>moveForward()</code>, <code>collectGem()</code></li>
     </ul>
   </div>
-  <!-- Image Section -->
   <div style="flex: 1; position: relative; width: 700px; height: 500px;">
     <img src="./assets/x-1-17-0.png" alt="Screenshot showing camelCase" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
     <img src="./assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
@@ -174,7 +172,6 @@
 
 ## Let's try issuing commands!
 <div style="display: flex; align-items: center; gap: 20px; padding: 20px;">
-  <!-- Text Section -->
   <div style="flex: 1;">
     <ul>
       <li>After tapping <strong>Tap to enter code</strong>, you can either:
@@ -187,7 +184,6 @@
       <li>You can tap on the <strong>Speedometer</strong> to speed Byte up or step through the code step by step.</li>
     </ul>
   </div>
-  <!-- Image Section -->
   <div style="flex: 1; position: relative; width: 700px; height: 500px;">
     <img src="./assets/x-1-19-0.png" alt="Screenshot showing Issuing Commands in Swift Playgrounds" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
     <img src="./assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
@@ -217,11 +213,11 @@
 
 <div style="display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; padding: 20px;">
   <div style="position: relative; width: 1050px; height: 650px;">
-    <img src="./assets/x-2-22-0.png" alt="Screenshot showing seeds in a garden" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
+    <img src="./assets/x-1-22-0.png" alt="Screenshot showing seeds in a garden" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
     <img src="./assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
   </div>
   <div style="position: relative; width: 1050px; height: 650px;">
-    <img src="./assets/x-2-22-1.png" alt="Screenshot showing seeds with different text" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
+    <img src="./assets/x-1-22-1.png" alt="Screenshot showing seeds with different text" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
     <img src="./assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
   </div>
 </div>
@@ -230,11 +226,11 @@
 
 <div style="display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; padding: 20px;">
   <div style="position: relative; width: 1050px; height: 650px;">
-    <img src="./assets/x-2-23-0.png" alt="Screenshot showing a for loop being used for seeding" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
+    <img src="./assets/x-1-23-0.png" alt="Screenshot showing a for loop being used for seeding" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
     <img src="./assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
   </div>
   <div style="position: relative; width: 1050px; height: 650px;">
-    <img src="./assets/x-2-23-1.png" alt="Screenshot showing for loop's syntax for seeding" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
+    <img src="./assets/x-1-23-1.png" alt="Screenshot showing for loop's syntax for seeding" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
     <img src="./assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
   </div>
 </div>
