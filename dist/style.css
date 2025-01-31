@@ -37,7 +37,7 @@ a {
   gap: 32px;
 }
 
-.card-container > a {
+.card-container>a {
   color: white;
   text-decoration: none;
 }
@@ -65,19 +65,41 @@ a {
   transition: box-shadow 0.3s ease;
   z-index: 2;
   cursor: pointer !important;
+
+  transition: border 0.3s ease;
 }
 
-.card.red > img { /* TEMPORARY IMAGE COLOR CHANGE FOR TRACK X (since there is no red image placeholder for track X yet) */
+.card.red>img {
+  /* TEMPORARY IMAGE COLOR CHANGE FOR TRACK X (since there is no red image placeholder for track X yet) */
   filter: hue-rotate(40deg);
 }
 
-.card:hover { box-shadow: 0px 0px 64px 2px var(--r-hover-shadow-color); }
-.card.blue:hover { box-shadow: 0px 0px 64px 2px var(--color-blue-hovershadow); }
-.card.green:hover { box-shadow: 0px 0px 64px 2px var(--color-green-hovershadow); }
-.card.pink:hover { box-shadow: 0px 0px 64px 2px var(--color-pink-hovershadow); }
-.card.red:hover { box-shadow: 0px 0px 64px 2px var(--color-red-hovershadow); }
+.card:hover {
+  box-shadow: 0px 0px 64px 2px var(--r-hover-shadow-color);
+  border-color: var(--r-link-color-hover);
+}
 
-.card > h2 {
+.card.blue:hover {
+  box-shadow: 0px 0px 64px 2px var(--color-blue-hovershadow);
+  border-color: var(--color-blue-hoverlink);
+}
+
+.card.green:hover {
+  box-shadow: 0px 0px 64px 2px var(--color-green-hovershadow);
+  border-color: var(--color-green-hoverlink);
+}
+
+.card.pink:hover {
+  box-shadow: 0px 0px 64px 2px var(--color-pink-hovershadow);
+  border-color: var(--color-pink-hoverlink);
+}
+
+.card.red:hover {
+  box-shadow: 0px 0px 64px 2px var(--color-red-hovershadow);
+  border-color: var(--color-red-hoverlink);
+}
+
+.card>h2 {
   font-weight: 700;
   /* font-family: Montserrat, Impact, sans-serif; */
   font-size: 32px;
@@ -85,7 +107,7 @@ a {
   margin-right: 32px;
 }
 
-.card > h3 {
+.card>h3 {
   font-weight: 400;
   /* font-family: Montserrat, Impact, sans-serif; */
   font-size: 24px;
@@ -94,7 +116,7 @@ a {
   margin-top: 16px;
 }
 
-.card > p {
+.card>p {
   font-weight: 400;
   /* font-family: Montserrat, Impact, sans-serif; */
   font-size: 16px;
@@ -104,7 +126,7 @@ a {
   margin-bottom: 16px;
 }
 
-.card > img {
+.card>img {
   margin: 0px;
   width: 100%;
   border-radius: 16px 16px 0 0;
@@ -149,6 +171,7 @@ footer small {
   body {
     padding: 16px;
   }
+
   h1 {
     font-size: 32px;
   }
@@ -168,10 +191,8 @@ footer small {
   .card {
     width: 100% !important;
   }
+
   .logo {
     height: 20px;
   }
 }
-
-
-
