@@ -2,12 +2,15 @@
 
 These are our new slides, using [reveal.js](https://revealjs.com).
 
-## Getting started
+## Getting Started
 
-- Ensure you have [Node.JS](https://nodejs.org) installed
-- Clone repo, `cd` into repo
-- `npm install`
-- `npm run start`
+- Ensure you have [Node.JS](https://nodejs.org) installed.
+- Run the server with npm
+```
+cd swift-slides
+npm install
+npm run start
+```
 - Slides will be at [localhost:8000](http://localhost:8000)
 
 ---

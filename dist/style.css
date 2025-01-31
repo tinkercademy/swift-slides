@@ -63,14 +63,19 @@ a {
   border-width: 1px;
   border-style: solid;
   transition: box-shadow 0.3s ease;
+  z-index: 2;
   cursor: pointer !important;
 }
 
-.card:hover {
-  box-shadow: 0px 0px 64px 2px var(--r-hover-shadow-color);
-  z-index: 2;
-  transition: box-shadow 0.3s ease;
+.card.red > img { /* TEMPORARY IMAGE COLOR CHANGE FOR TRACK X (since there is no red image placeholder for track X yet) */
+  filter: hue-rotate(40deg);
 }
+
+.card:hover { box-shadow: 0px 0px 64px 2px var(--r-hover-shadow-color); }
+.card.blue:hover { box-shadow: 0px 0px 64px 2px var(--color-blue-hovershadow); }
+.card.green:hover { box-shadow: 0px 0px 64px 2px var(--color-green-hovershadow); }
+.card.pink:hover { box-shadow: 0px 0px 64px 2px var(--color-pink-hovershadow); }
+.card.red:hover { box-shadow: 0px 0px 64px 2px var(--color-red-hovershadow); }
 
 .card > h2 {
   font-weight: 700;

@@ -18,11 +18,12 @@
   --r-heading3-size: 2em;
   --r-heading4-size: 1em;
   --r-code-font: monospace;
-  --r-link-color: #00d9fa;
-  --r-link-color-dark: #00d9fa;
-  --r-link-color-hover: #10c4e0;
-  --r-hover-shadow-color: #00d9fa42;
-  --r-selection-background-color: #1e707d;
+  
+  --r-link-color: var(--color-blue-link);
+  --r-link-color-dark: var(--color-blue-darklink);
+  --r-link-color-hover: var(--color-blue-hoverlink);
+  --r-hover-shadow-color: var(--color-blue-hovershadow);
+  --r-selection-background-color: var(--color-blue-selectbg);
   --r-selection-color: #fff;
-  --r-gradient: linear-gradient(45deg, #00d9fa 10%, #126eac 20%);
+  --r-gradient: var(--color-blue-gradient);
 }

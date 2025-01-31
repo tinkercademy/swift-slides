@@ -18,11 +18,12 @@
   --r-heading3-size: 1.8em;
   --r-heading4-size: 1em;
   --r-code-font: monospace;
-  --r-link-color: #fb753a;
-  --r-link-color-dark: #e73800;
-  --r-link-color-hover: #cf6b9b;
-  --r-hover-shadow-color: #fc2b2d60;
-  --r-selection-background-color: #b36246;
+  
+  --r-link-color: var(--color-red-link);
+  --r-link-color-dark: var(--color-red-darklink);
+  --r-link-color-hover: var(--color-red-hoverlink);
+  --r-hover-shadow-color: var(--color-red-hovershadow);
+  --r-selection-background-color: var(--color-red-selectbg);
   --r-selection-color: #fff;
-  --r-gradient: linear-gradient(45deg, #fc1a4d 10%, #fc2b2d 20%);
+  --r-gradient: var(--color-red-gradient);
 }
