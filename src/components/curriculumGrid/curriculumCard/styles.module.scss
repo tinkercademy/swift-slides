@@ -1,3 +1,4 @@
+@use 'sass:color';
 @use "src/app/theme" as t;
 
 a.card {
@@ -53,27 +54,27 @@ a.card {
   
   }
   
-  .card.red>img {
+  .card.red img {
     // TEMPORARY IMAGE COLOR CHANGE FOR TRACK X (since there is no red image placeholder for track X yet)
     filter: hue-rotate(40deg);
   }
   
   .card.blue:hover {
     box-shadow: 0px 0px 64px 2px t.$color-blue-hovershadow;
-    border-color: lighten(t.$color-blue-hovershadow, 10%);
+    border-color: color.adjust(t.$color-blue-hovershadow, $lightness: 10%)
   }
   
   .card.green:hover {
     box-shadow: 0px 0px 64px 2px t.$color-green-hovershadow;
-    border-color: lighten(t.$color-green-hovershadow, 10%);
+    border-color: color.adjust(t.$color-green-hovershadow, $lightness: 10%)
   }
   
   .card.pink:hover {
     box-shadow: 0px 0px 64px 2px t.$color-pink-hovershadow;
-    border-color: lighten(t.$color-pink-hovershadow, 10%);
+    border-color: color.adjust(t.$color-pink-hovershadow, $lightness: 10%)
   }
   
   .card.red:hover {
     box-shadow: 0px 0px 64px 2px t.$color-red-hovershadow;
-    border-color: lighten(t.$color-red-hovershadow, 10%);
+    border-color: color.adjust(t.$color-red-hovershadow, $lightness: 10%)
   }
