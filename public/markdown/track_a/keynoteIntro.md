@@ -54,7 +54,7 @@ Keynote is a powerful presentation app _and_ design tool. Students will use it f
 <div style="justify-content: center;">
     <p>Download at <a href="https://apple.co/ecc-appjournal_SG">apple.co/ecc-appjournal_SG</a></p>
     <div style="display: flex;">
-        <img src="/codingclub/a/assets/app-design-journal.jpg">
+        <img src="/markdown/track_a/assets/app-design-journal.jpg">
     </div>
 </div>
 
@@ -72,7 +72,7 @@ Keynote is a powerful presentation app _and_ design tool. Students will use it f
         </ul>
     </ul>
     <div style="display: flex;">
-        <img src="/codingclub/a/assets/getting-the-journal.jpg">
+        <img src="/markdown/track_a/assets/getting-the-journal.jpg">
     </div>
 </div>
 
@@ -96,7 +96,7 @@ Keynote is a powerful presentation app _and_ design tool. Students will use it f
         <li>Tap on <strong>Edit</strong> in the top right to make changes</li>
     </ul>
     <div style="display: flex;">
-        <img src="/codingclub/a/assets/navigating-journal.png" style="padding: 50px;">
+        <img src="/markdown/track_a/assets/navigating-journal.png" style="padding: 50px;">
     </div>
 </div>
 
@@ -112,7 +112,7 @@ Keynote is a powerful presentation app _and_ design tool. Students will use it f
         <li>This is your journal, so make it yours!</li>
     </ul>
     <div style="display: flex;">
-        <img src="/codingclub/a/assets/editing-journal.jpg" style="padding: 50px;">
+        <img src="/markdown/track_a/assets/editing-journal.jpg" style="padding: 50px;">
     </div>
 </div>
 
@@ -127,7 +127,7 @@ Keynote is a powerful presentation app _and_ design tool. Students will use it f
         <li>To do so, tap on the slide in the navigator and select “Duplicate".</li>
     </ul>
     <div style="display: flex;">
-        <img src="/codingclub/a/assets/duplicate-slides.png">
+        <img src="/markdown/track_a/assets/duplicate-slides.png">
     </div>
 </div>
 
@@ -146,7 +146,7 @@ Keynote is a powerful presentation app _and_ design tool. Students will use it f
         <li>With Apple Pencil, you can also draw in from the bottom left.</li>
     </ul>
     <div style="display: flex;">
-        <img src="/codingclub/a/assets/take-screenshot.png" style="padding: 10px">
+        <img src="/markdown/track_a/assets/take-screenshot.png" style="padding: 10px">
     </div>
 </div>
 
@@ -157,7 +157,7 @@ Keynote is a powerful presentation app _and_ design tool. Students will use it f
 Take a screenshot of the cover of your App Journal with your group name written on it!
 
 <div style="display: flex;">
-    <img src="/codingclub/a/assets/hands-on.jpg" style="max-height: 600px;">
+    <img src="/markdown/track_a/assets/hands-on.jpg" style="max-height: 600px;">
 </div>
 
 ---
@@ -181,7 +181,7 @@ Take a screenshot of the cover of your App Journal with your group name written 
         </ul>
     </ul>
     <div style="display: flex;">
-        <img src="/codingclub/a/assets/keynote-collab.png" style="padding: 10px">
+        <img src="/markdown/track_a/assets/keynote-collab.png" style="padding: 10px">
     </div>
 </div>
 
@@ -197,7 +197,7 @@ to set up permissions.</li>
         <li>Just be careful not to share the link somewhere else!</li>
     </ul>
     <div style="display: flex;">
-        <img src="/codingclub/a/assets/let-anyo-edit.png" style="padding: 10px">
+        <img src="/markdown/track_a/assets/let-anyo-edit.png" style="padding: 10px">
     </div>
 </div>
 
@@ -213,7 +213,7 @@ to set up permissions.</li>
         <li>Make changes to <strong>Activity Settings</strong> (see cursors, highlights) or <strong>Manage Shared Presentation</strong> (who has access)</li>
     </ul>
     <div style="display: flex;">
-        <img src="/codingclub/a/assets/sharing-options.png" style="padding: 10px">
+        <img src="/markdown/track_a/assets/sharing-options.png" style="padding: 10px">
     </div>
 </div>
 

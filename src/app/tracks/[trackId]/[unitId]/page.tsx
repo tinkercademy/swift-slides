@@ -2,7 +2,7 @@
 // https://github.com/vercel/next.js/discussions/43631
 
 import dynamic from "next/dynamic";
-import { UnitCurriculumEntry } from "../../track";
+import { TrackCurriculumEntry, UnitCurriculumEntry } from "../../track";
 import { tracks } from "@/data/curriculum";
 import { useEffect, useState } from "react";
 
@@ -10,6 +10,7 @@ import "reveal.js/dist/reveal.css";
 import "reveal.js/dist/theme/black.css";
 import "./slidetheme.scss";
 import "./xcode-dark.scss";
+import { usePathname } from "next/navigation";
 
 const RevealjsWrapper = dynamic(() =>
     import('@/components/revealjs/revealjsWrapper').then(module => module.RevealjsWrapper),
@@ -17,13 +18,16 @@ const RevealjsWrapper = dynamic(() =>
 );
 
 export default function SlidesPage({ params }: { params: Promise<{ trackId: string, unitId: string }> }) {
+    const [track, setTrack] = useState<TrackCurriculumEntry>()
     const [unit, setUnit] = useState<UnitCurriculumEntry>();
+    const pathname = usePathname()
 
     useEffect(() => {
         (async () => {
             const { trackId, unitId } = await params
             const track = tracks.find(e => e.id === trackId)
             const unit = track?.units.find(e => e.id === unitId)
+            setTrack(track)
             setUnit(unit)
         })() // TODO: update to use Suspense
     }, []);
@@ -31,8 +35,7 @@ export default function SlidesPage({ params }: { params: Promise<{ trackId: stri
     return (
         <RevealjsWrapper>
             <div className="slides">
-                <section id="slide-view" data-markdown={`${unit?.markdownId}.md`} data-separator-vertical="^\n---vertical---" data-separator-notes="^Note:">
-                </section>
+                <section id="slide-view" data-markdown={`/markdown/${track?.id}/${unit?.markdownId}.md`} data-separator-vertical="^\n---vertical---" data-separator-notes="^Note:" />
                 <section>
                     <div style={{ display: "flex" }}>
                         <div>
