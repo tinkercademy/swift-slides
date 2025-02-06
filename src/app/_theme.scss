@@ -1,0 +1,44 @@
+
+//// Colors
+/// Palettes
+$color-white: #eee;
+$color-black: #111;
+
+$color-red-link: #fb753a;
+$color-red-darklink: #e73800;
+$color-red-hoverlink: #cf6b9b;
+$color-red-hovershadow: #fc2b2d60;
+$color-red-selectbg: #b36246;
+$color-red-gradient: linear-gradient(45deg, #fc1a4d 10%, #fc2b2d 20%);
+
+$color-blue-link: #00d9fa;
+$color-blue-darklink: #00d9fa;
+$color-blue-hoverlink: #10c4e0;
+$color-blue-hovershadow: #00d9fa42;
+$color-blue-selectbg: #1e707d;
+$color-blue-gradient: linear-gradient(45deg, #00d9fa 10%, #126eac 20%);
+
+$color-green-link: #00fa92;
+$color-green-darklink: #00fa92;
+$color-green-hoverlink: #71cea7;
+$color-green-hovershadow: #00fa9242;
+$color-green-selectbg: #5db590;
+$color-green-gradient: linear-gradient(45deg, #00fa92 10%, #73fcd6 20%);
+
+$color-pink-link: #f75fc8;
+$color-pink-darklink: #f75fc8;
+$color-pink-hoverlink: #f75fc8;
+$color-pink-hovershadow: #f75fc842;
+$color-pink-selectbg: #c9a0f8;
+$color-pink-gradient: linear-gradient(45deg, #f75fc8 10%, #d783ff 20%);
+
+$color-white-gradient: linear-gradient(45deg, #dadada 0%, #6b6b6b 100%);
+
+//// Fonts
+// Fonts are defined by Next.js via its Font Optimisation in app/layout.tsx
+// See https://nextjs.org/docs/app/building-your-application/optimizing/fonts
+
+//// Theme
+$theme-background: #{$color-black};
+$theme-foreground: #{$color-white};
+$theme-font: var(--font-inter), Arial, Helvetica, sans-serif;
