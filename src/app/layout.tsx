@@ -26,15 +26,15 @@ export default function RootLayout({
       <body>
         <main>
           <div className={styles.explorersLogo}>
-            <Image src="/logos/logo_yellow_540h.png" fill={true} alt="The Swift Explorers Logo" />
+            <Image src="/assets/logo_yellow_540h.png" fill={true} alt="The Swift Explorers Logo" />
           </div>
           {children}
         </main>
         <footer className={styles.footer}>
-          <img className={styles.tinkerLogo} src="/footer/tinkercademy-long.png" />
+          <img className={styles.tinkerLogo} src="/assets/tinkercademy-long.png" />
           <br />
           <div className={styles.appleBadges}>
-            <Image src="/footer/apple-badges.svg" fill={true} alt="Apple badges for Certified Trainer (App Development with Swift), Consultants Network and Professional Learning Specialist." />
+            <Image src="/assets/apple-badges.svg" fill={true} alt="Apple badges for Certified Trainer (App Development with Swift), Consultants Network and Professional Learning Specialist." />
           </div>
           <br />
           <p>

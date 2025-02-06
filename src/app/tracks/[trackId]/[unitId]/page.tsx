@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 
 import "reveal.js/dist/reveal.css";
 import "reveal.js/dist/theme/black.css";
-import "./slidetheme.scss";
+import "./slide.scss";
 import "./xcode-dark.scss";
 import { usePathname } from "next/navigation";
 
