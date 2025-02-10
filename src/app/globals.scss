@@ -1,15 +1,13 @@
-@use "src/app/theme" as t;
-
 :root {
   // --r- prefix used for Reveal.js
   // see list of exposed CSS variables here: https://github.com/hakimel/reveal.js/blob/master/css/theme/template/exposer.scss
-  --r-background-color: #{t.$theme-background};
-  --r-main-font: #{t.$theme-font};
+  --r-background-color: var(--theme-background);
+  --r-main-font: var(--theme-font);
   --r-main-font-size: 24px;
-  --r-main-color: #{t.$theme-foreground};
+  --r-main-color: var(--theme-foreground);
   --r-block-margin: 20px;
   --r-heading-margin: 0 0 20px 0;
-  --r-heading-font: #{t.$theme-font};
+  --r-heading-font: var(--theme-font);
   --r-heading-color: #eee;
   --r-heading-line-height: 1;
   --r-heading-letter-spacing: -0.03em;
@@ -23,13 +21,13 @@
   --r-heading4-size: 1em;
   --r-code-font: monospace;
   
-  --r-link-color: #{t.$color-blue-link};
-  --r-link-color-dark: #{t.$color-blue-darklink};
-  --r-link-color-hover: #{t.$color-blue-hoverlink};
-  --r-hover-shadow-color: #{t.$color-blue-hovershadow};
-  --r-selection-background-color: #{t.$color-blue-selectbg};
+  --r-link-color: var(--colors-blue-link);
+  --r-link-color-dark: var(--colors-blue-darklink);
+  --r-link-color-hover: var(--colors-blue-hoverlink);
+  --r-hover-shadow-color: var(--colors-blue-hovershadow);
+  --r-selection-background-color: var(--colors-blue-selectbg);
   --r-selection-color: #fff;
-  --r-gradient: #{t.$color-white-gradient};
+  --r-gradient: var(--colors-white-gradient);
 }
 
 html,
@@ -39,11 +37,11 @@ body {
 }
 
 body {
-  color: #{t.$theme-foreground};
-  background: #{t.$theme-background};
+  color: var(--theme-foreground);
+  background: var(--theme-background);
   padding: 64px;
 
-  font-family: #{t.$theme-font};
+  font-family: var(--theme-font);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

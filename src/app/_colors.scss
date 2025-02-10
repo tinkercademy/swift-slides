@@ -1,0 +1,48 @@
+//// `_colors.scss` is imported via SASS `@use "src/app/colors" as c` into any stylesheet which requires SASS variables
+/// Avoid using SCSS variables where possible (only required if using SASS functions),
+/// otherwise use CSS variables (defined to copy the SASS variants exactly in `_theme.scss`).
+
+//// Palette Variables
+/// Defines all possible colors used. 
+/// Only access directly if color is fixed throughout themes (eg accents), otherwise use Theme Variables in `_theme.scss`.
+$colors : ("white": #eee,
+    "black": #111,
+
+    "red-link": #fb753a,
+    "red-darklink": #e73800,
+    "red-hoverlink": #cf6b9b,
+    "red-hovershadow": #fc2b2d60,
+    "red-selectbg": #b36246,
+    "red-gradient": linear-gradient(45deg, #fc1a4d 10%, #fc2b2d 20%),
+
+    "blue-link": #00d9fa,
+    "blue-darklink": #00d9fa,
+    "blue-hoverlink": #10c4e0,
+    "blue-hovershadow": #00d9fa42,
+    "blue-selectbg": #1e707d,
+    "blue-gradient": linear-gradient(45deg, #00d9fa 10%, #126eac 20%),
+
+    "green-link": #00fa92,
+    "green-darklink": #00fa92,
+    "green-hoverlink": #71cea7,
+    "green-hovershadow": #00fa9242,
+    "green-selectbg": #5db590,
+    "green-gradient": linear-gradient(45deg, #00fa92 10%, #73fcd6 20%),
+
+    "pink-link": #f75fc8,
+    "pink-darklink": #f75fc8,
+    "pink-hoverlink": #f75fc8,
+    "pink-hovershadow": #f75fc842,
+    "pink-selectbg": #c9a0f8,
+    "pink-gradient": linear-gradient(45deg, #f75fc8 10%, #d783ff 20%),
+
+    "white-gradient": linear-gradient(45deg, #dadada 0%, #6b6b6b 100%));
+
+//// Helper function to get color from $colors via shortening map-get
+@function color($name) {
+    @if not map-get($colors, $name+'') {
+        @error "Color `#{$name}` not found in map $colors";
+    }
+
+    @return map-get($colors, $name+'');
+}

@@ -5,6 +5,7 @@ import Image from "next/image";
 import styles from "./layout.module.scss";
 import "./reset.scss";
 import "./globals.scss";
+import "./_theme.scss";
 
 const interFont = Inter({
   variable: "--font-inter", // use this CSS variable as var(--font-inter)

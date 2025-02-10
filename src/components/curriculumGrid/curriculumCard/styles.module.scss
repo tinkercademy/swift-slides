@@ -1,80 +1,80 @@
 @use 'sass:color';
-@use "src/app/theme" as t;
+@use "src/app/colors" as c;
 
 a.card {
-    // Since .card is an anchor link, need to remove typical links styles
-    color: inherit;
-    text-decoration: none;
-  
-    display: flex;
-    flex-direction: column;
-  
-    background-color: #222;
-    border-radius: 16px;
-  
-    border: #383838;
-    border-width: 1px;
-    border-style: solid;
-    transition: all 0.3s ease;
-    z-index: 2;
-    cursor: pointer;
-    overflow: hidden;
-  
-    // &:hover {
-    //   box-shadow: 0px 0px 64px 2px var(--r-hover-shadow-color);
-    //   border-color: var(--r-link-color-hover);
-    // }
-  
-    div.entryImg {
-      width: 100%;
-      height: 220px;
-      position: relative;
-  
-      img {
-        object-fit: cover;
-      }
+  // Since .card is an anchor link, need to remove typical links styles
+  color: inherit;
+  text-decoration: none;
+
+  display: flex;
+  flex-direction: column;
+
+  background-color: #222;
+  border-radius: 16px;
+
+  border: #383838;
+  border-width: 1px;
+  border-style: solid;
+  transition: all 0.3s ease;
+  z-index: 2;
+  cursor: pointer;
+  overflow: hidden;
+
+  // &:hover {
+  //   box-shadow: 0px 0px 64px 2px var(--r-hover-shadow-color);
+  //   border-color: var(--r-link-color-hover);
+  // }
+
+  div.entryImg {
+    width: 100%;
+    height: 220px;
+    position: relative;
+
+    img {
+      object-fit: cover;
     }
-  
-    div.contentWrapper {
-      padding: 20px 30px;
-  
-      h3 {
-        opacity: 0.6;
-        margin: 0;
-      }
-  
-      h2 {
-        margin: 0;
-      }
-  
-      p {
-        opacity: 0.8;
-      }
+  }
+
+  div.contentWrapper {
+    padding: 20px 30px;
+
+    h3 {
+      opacity: 0.6;
+      margin: 0;
     }
-  
+
+    h2 {
+      margin: 0;
+    }
+
+    p {
+      opacity: 0.8;
+    }
   }
-  
-  .card.red img {
-    // TEMPORARY IMAGE COLOR CHANGE FOR TRACK X (since there is no red image placeholder for track X yet)
-    filter: hue-rotate(40deg);
-  }
-  
-  .card.blue:hover {
-    box-shadow: 0px 0px 64px 2px t.$color-blue-hovershadow;
-    border-color: color.adjust(t.$color-blue-hovershadow, $lightness: 10%)
-  }
-  
-  .card.green:hover {
-    box-shadow: 0px 0px 64px 2px t.$color-green-hovershadow;
-    border-color: color.adjust(t.$color-green-hovershadow, $lightness: 10%)
-  }
-  
-  .card.pink:hover {
-    box-shadow: 0px 0px 64px 2px t.$color-pink-hovershadow;
-    border-color: color.adjust(t.$color-pink-hovershadow, $lightness: 10%)
-  }
-  
-  .card.red:hover {
-    box-shadow: 0px 0px 64px 2px t.$color-red-hovershadow;
-    border-color: color.adjust(t.$color-red-hovershadow, $lightness: 10%)
-  }
+
+}
+
+.card.red img {
+  // TEMPORARY IMAGE COLOR CHANGE FOR TRACK X (since there is no red image placeholder for track X yet)
+  filter: hue-rotate(40deg);
+}
+
+.card.blue:hover {
+  box-shadow: 0px 0px 64px 2px var(--colors-blue-hovershadow);
+  border-color: color.adjust(c.color(blue-hovershadow), $lightness: 10%);
+}
+
+.card.green:hover {
+  box-shadow: 0px 0px 64px 2px var(--colors-green-hovershadow);
+  border-color: color.adjust(c.color(green-hovershadow), $lightness: 10%)
+}
+
+.card.pink:hover {
+  box-shadow: 0px 0px 64px 2px var(--colors-pink-hovershadow);
+  border-color: color.adjust(c.color(pink-hovershadow), $lightness: 10%)
+}
+
+.card.red:hover {
+  box-shadow: 0px 0px 64px 2px var(--colors-red-hovershadow);
+  border-color: color.adjust(c.color(red-hovershadow), $lightness: 10%)
+}

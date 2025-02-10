@@ -19,11 +19,11 @@
   --r-heading4-size: 1em;
   --r-code-font: monospace;
   
-  --r-link-color: var(--color-blue-link);
-  --r-link-color-dark: var(--color-blue-darklink);
-  --r-link-color-hover: var(--color-blue-hoverlink);
-  --r-hover-shadow-color: var(--color-blue-hovershadow);
-  --r-selection-background-color: var(--color-blue-selectbg);
+  --r-link-color: var(--colors-blue-link);
+  --r-link-color-dark: var(--colors-blue-darklink);
+  --r-link-color-hover: var(--colors-blue-hoverlink);
+  --r-hover-shadow-color: var(--colors-blue-hovershadow);
+  --r-selection-background-color: var(--colors-blue-selectbg);
   --r-selection-color: #fff;
-  --r-gradient: var(--color-blue-gradient);
+  --r-gradient: var(--colors-blue-gradient);
 }
