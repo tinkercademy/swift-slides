@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import styles from "./styles.module.scss";
-import { CurriculumEntry, TrackCurriculumEntry } from "@/app/tracks/track";
+import { CurriculumEntry } from "@/app/tracks/track";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 

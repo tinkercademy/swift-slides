@@ -10,7 +10,7 @@ import "reveal.js/dist/reveal.css";
 import "reveal.js/dist/theme/black.css";
 import "./slide.scss";
 import "./xcode-dark.scss";
-import { usePathname } from "next/navigation";
+import { notFound, usePathname } from "next/navigation";
 
 const RevealjsWrapper = dynamic(() =>
     import('@/components/revealjs/revealjsWrapper').then(module => module.RevealjsWrapper),
@@ -20,13 +20,17 @@ const RevealjsWrapper = dynamic(() =>
 export default function SlidesPage({ params }: { params: Promise<{ trackId: string, unitId: string }> }) {
     const [track, setTrack] = useState<TrackCurriculumEntry>()
     const [unit, setUnit] = useState<UnitCurriculumEntry>();
-    const pathname = usePathname()
 
     useEffect(() => {
         (async () => {
             const { trackId, unitId } = await params
             const track = tracks.find(e => e.id === trackId)
             const unit = track?.units.find(e => e.id === unitId)
+
+            if (track === undefined || unit === undefined) {
+                notFound()
+            }
+
             setTrack(track)
             setUnit(unit)
         })() // TODO: update to use Suspense

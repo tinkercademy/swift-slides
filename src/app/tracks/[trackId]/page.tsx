@@ -4,14 +4,16 @@ import { tracks } from "@/data/curriculum";
 import { getColorFromTrack } from "../page";
 
 import styles from "./page.module.scss"
+import { notFound } from "next/navigation";
 
 export default async function UnitsPage({ params }: { params: Promise<{ trackId: string }> }) {
     const trackId = (await params).trackId
     const track = tracks.find(e => e.id === trackId)
 
     if (track === undefined) {
-        return <><p>Error occured</p></>
+        notFound()
     }
+    
     return (
         <div>
             <h2>{track.subtitle}</h2>
