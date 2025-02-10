@@ -1,11 +1,4 @@
-.reveal-viewport {}
-// NOTE: As a workaround for Next.js App router Layouts, we are NOT using .reveal-viewport (aka the body tag),
-// but instead using .revealWrapper to wrap .reveal, and then setting .revealWrapper as an absolute div overlayed
-// on top of the main slide content.
-//
-// TODO: This can be beneficial for future changes when the slide can be made small-screen/full-screen
-
-.revealWrapper {
+.reveal-viewport {
   position: absolute;
   inset: 0;
   z-index: 100;
@@ -66,10 +59,14 @@
   .reveal h1 {
     text-align: left;
     font-size: var(--r-heading1-size);
-    /* background-color: var(--r-link-color); */
+    background-color: var(--r-link-color);
     background-image: var(--r-gradient);
-    color: transparent;
+    background-size: 100%;
     background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
   }
 
   .reveal h2 {
@@ -233,7 +230,7 @@
   .reveal .code-wrapper code {
     white-space: pre;
     font-size: 2em;
-    padding: 32px;
+    padding: 32px !important;
     border-radius: 16px;
   }
 
@@ -361,7 +358,7 @@
     video,
     iframe,
     .video-container {
-      display: none;
+      display: none !important;
     }
 
     /* Style links to show their URL */
@@ -384,21 +381,21 @@
 
     .reveal .slides {
       font-size: 36px;
-      background-color: white;
-      color: black;
+      background-color: white !important;
+      color: black !important;
     }
 
     .reveal .controls,
     .reveal .progress {
-      display: none;
+      display: none !important;
     }
 
     /* Ensure all text is black and background is white */
     body,
     .reveal .slides section,
     .reveal .slides {
-      background-color: white;
-      color: black;
+      background-color: white !important;
+      color: black !important;
     }
 
     /* Style headings */
@@ -408,14 +405,14 @@
     h4,
     h5,
     h6 {
-      background-color: white;
-      color: black;
+      background-color: white !important;
+      color: black !important;
     }
 
     /* Ensure all elements have a white background */
     * {
-      background-color: white;
-      color: black;
+      background-color: white !important;
+      color: black !important;
     }
   }
 }

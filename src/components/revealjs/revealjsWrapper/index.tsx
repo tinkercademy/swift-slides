@@ -22,7 +22,15 @@ export function RevealjsWrapper({ children }: { children: React.ReactNode }) {
             plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
         });
 
-        deckRef.current.initialize().then(async () => { });
+        deckRef.current.initialize().then(async () => {
+            // As a workaround for Next.js App router Layouts, Reveal.js content is placed in an absolute div overlayed above the preexisting Layout.
+            // However, Reveal.js automatically sets <body> as the container for all Reveal.js content with .reveal-viewport
+            // Hence, we forcefully remove .reveal-viewport from <body> after page has loaded and instead add it to the div.
+            //
+            // TODO: This can be beneficial for future changes when the slide can be made small-screen/full-screen
+
+            document.body.classList.remove('reveal-viewport');
+        });
 
         return () => {
             try {
@@ -37,7 +45,7 @@ export function RevealjsWrapper({ children }: { children: React.ReactNode }) {
     }, []);
 
     return (
-        <div className="revealWrapper">
+        <div className="reveal-viewport">
             <div className="reveal" ref={deckDivRef}>
                 {children}
             </div>

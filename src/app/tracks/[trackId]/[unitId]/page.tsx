@@ -8,9 +8,10 @@ import { useEffect, useState } from "react";
 
 import "reveal.js/dist/reveal.css";
 import "reveal.js/dist/theme/black.css";
+import { notFound } from "next/navigation";
+
 import "./slide.scss";
 import "./xcode-dark.scss";
-import { notFound, usePathname } from "next/navigation";
 
 const RevealjsWrapper = dynamic(() =>
     import('@/components/revealjs/revealjsWrapper').then(module => module.RevealjsWrapper),

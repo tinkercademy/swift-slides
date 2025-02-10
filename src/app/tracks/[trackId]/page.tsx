@@ -13,11 +13,13 @@ export default async function UnitsPage({ params }: { params: Promise<{ trackId:
     if (track === undefined) {
         notFound()
     }
-    
+
     return (
         <div>
-            <h2>{track.subtitle}</h2>
-            <h1 className={styles.title}>{track.title}</h1>
+            <div className={styles.title}>
+                <h2>{track.subtitle}</h2>
+                <h1>{track.title}</h1>
+            </div>
             <CurriculumGridContainer>
                 {track.units.map(unit => (
                     <CurriculumCard key={unit.id} color={getColorFromTrack(track?.id)} entry={unit} />
