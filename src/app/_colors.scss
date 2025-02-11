@@ -1,6 +1,7 @@
 //// `_colors.scss` is imported via SASS `@use "src/app/colors" as c` into any stylesheet which requires SASS variables
 /// Avoid using SCSS variables where possible (only required if using SASS functions),
 /// otherwise use CSS variables (defined to copy the SASS variants exactly in `_theme.scss`).
+@use "sass:map";
 
 //// Palette Variables
 /// Defines all possible colors used. 
@@ -38,11 +39,11 @@ $colors : ("white": #eee,
 
     "white-gradient": linear-gradient(45deg, #dadada 0%, #6b6b6b 100%));
 
-//// Helper function to get color from $colors via shortening map-get
+//// Helper function to get color from $colors via shortening map.get
 @function color($name) {
-    @if not map-get($colors, $name+'') {
+    @if not map.get($colors, $name+'') {
         @error "Color `#{$name}` not found in map $colors";
     }
 
-    @return map-get($colors, $name+'');
+    @return map.get($colors, $name+'');
 }
