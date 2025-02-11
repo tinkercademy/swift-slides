@@ -37,7 +37,7 @@ $colors : ("white": #eee,
     "pink-selectbg": #c9a0f8,
     "pink-gradient": linear-gradient(45deg, #f75fc8 10%, #d783ff 20%),
 
-    "white-gradient": linear-gradient(45deg, #dadada 0%, #6b6b6b 100%));
+    "white-gradient": linear-gradient(45deg, #eee 0%, #adadad 100%));
 
 //// Helper function to get color from $colors via shortening map.get
 @function color($name) {
