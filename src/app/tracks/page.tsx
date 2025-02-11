@@ -1,7 +1,9 @@
-import styles from "./page.module.scss";
 import { tracks } from "@/data/curriculum";
 import { CurriculumCard } from "@/components/curriculumGrid/curriculumCard";
 import { CurriculumGridContainer } from "@/components/curriculumGrid/curriculumGridContainer";
+import { Breadcrumb } from "@/components/breadcrumb";
+
+import styles from "./page.module.scss";
 
 export function getColorFromTrack(trackId: string): "blue" | "green" | "pink" | "red" {
   switch (trackId) {
@@ -17,7 +19,7 @@ export default function TracksPage() {
   return (
     <div>
       <div className={styles.headers}>
-        <h1>Curriculum</h1>
+        <h1>Tracks</h1>
       </div>
       <CurriculumGridContainer>
         {tracks.map(track => {

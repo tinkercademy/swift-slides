@@ -3,6 +3,7 @@
 
 import dynamic from "next/dynamic";
 import { TrackCurriculumEntry, UnitCurriculumEntry } from "../../track";
+import { Breadcrumb } from "@/components/breadcrumb";
 import { tracks } from "@/data/curriculum";
 import { useEffect, useState } from "react";
 
@@ -12,6 +13,8 @@ import { notFound } from "next/navigation";
 
 import "./slide.scss";
 import "./xcode-dark.scss";
+
+import styles from "./page.module.scss";
 
 const RevealjsWrapper = dynamic(() =>
     import('@/components/revealjs/revealjsWrapper').then(module => module.RevealjsWrapper),
@@ -38,7 +41,12 @@ export default function SlidesPage({ params }: { params: Promise<{ trackId: stri
     }, []);
 
     return (
-        <RevealjsWrapper>
+        <div>
+            <div className={styles.headers}>
+                <Breadcrumb />
+                <h1>{track?.title}</h1>
+            </div>
+            <RevealjsWrapper>
             <div className="slides">
                 <section id="slide-view" data-markdown={`/markdown/${track?.id}/${unit?.markdownId}.md`} data-separator-vertical="^\n---vertical---" data-separator-notes="^Note:" />
                 <section>
@@ -61,5 +69,6 @@ export default function SlidesPage({ params }: { params: Promise<{ trackId: stri
                 <small style={{ margin: 32 }}>© 2022-2024 Tinkertanker Pte Ltd. All Rights Reserved.</small>
             </div>
         </RevealjsWrapper>
+        </div>
     )
 }
