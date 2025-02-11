@@ -39,7 +39,7 @@ export function RevealjsWrapper({ children }: { children: React.ReactNode }) {
                     deckRef.current = null;
                 }
             } catch (e) {
-                console.warn("Reveal.js destroy call failed.");
+                console.warn("Reveal.js destroy call failed.", e);
             }
         };
     }, []);

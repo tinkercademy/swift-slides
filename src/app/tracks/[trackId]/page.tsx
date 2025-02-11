@@ -16,7 +16,7 @@ export default async function UnitsPage({ params }: { params: Promise<{ trackId:
 
     return (
         <div>
-            <div className={styles.title}>
+            <div className={styles.headers}>
                 <h2>{track.subtitle}</h2>
                 <h1>{track.title}</h1>
             </div>

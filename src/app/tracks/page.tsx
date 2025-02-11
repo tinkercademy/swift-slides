@@ -1,7 +1,6 @@
 import styles from "./page.module.scss";
 import { tracks } from "@/data/curriculum";
 import { CurriculumCard } from "@/components/curriculumGrid/curriculumCard";
-import Image from "next/image";
 import { CurriculumGridContainer } from "@/components/curriculumGrid/curriculumGridContainer";
 
 export function getColorFromTrack(trackId: string): "blue" | "green" | "pink" | "red" {
@@ -17,7 +16,9 @@ export function getColorFromTrack(trackId: string): "blue" | "green" | "pink" | 
 export default function TracksPage() {
   return (
     <div>
-      <h1>Curriculum</h1>
+      <div className={styles.headers}>
+        <h1>Curriculum</h1>
+      </div>
       <CurriculumGridContainer>
         {tracks.map(track => {
           return (
@@ -26,7 +27,7 @@ export default function TracksPage() {
               title={track.title}
               subtitle={track.subtitle}
               description={track.description}
-              imgURL={`/covers/${track.id}.png`}
+              imgURL={`/covers/${track.id}/track.png`}
               pageURL={track.id}
               color={getColorFromTrack(track.id)} />
           )
