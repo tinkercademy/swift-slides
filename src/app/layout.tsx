@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Image from "next/image";
+import Link from "next/link"
 
 import styles from "./layout.module.scss";
 import "./reset.scss";
@@ -27,7 +28,9 @@ export default function RootLayout({
       <body>
         <main>
           <div className={styles.explorersLogo}>
-            <Image src="/assets/logo_yellow_540h.png" fill={true} alt="The Swift Explorers Logo" />
+            <Link href="/tracks">
+              <Image src="/assets/logo_yellow_540h.png" fill={true} alt="The Swift Explorers Logo" />
+            </Link>
           </div>
           {children}
         </main>
