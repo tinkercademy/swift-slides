@@ -2,10 +2,10 @@ import { CurriculumCard } from "@/components/curriculumGrid/curriculumCard";
 import { CurriculumGridContainer } from "@/components/curriculumGrid/curriculumGridContainer";
 import { Breadcrumb } from "@/components/breadcrumb";
 import { tracks } from "@/data/curriculum";
-import { getColorFromTrack } from "../page";
 import { notFound } from "next/navigation";
 
 import styles from "./page.module.scss"
+import { getColorFromTrack } from "../track";
 
 export default async function UnitsPage({ params }: { params: Promise<{ trackId: string }> }) {
     const trackId = (await params).trackId

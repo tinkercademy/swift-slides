@@ -35,7 +35,7 @@ export function RevealjsWrapper({ children }: { children: React.ReactNode }) {
         return () => {
             try {
                 if (deckRef.current) {
-                    deckRef.current.destroy();
+                    deckRef.current.destroy(); // TODO: Fix issue where Reveal deck cannot be destroyed
                     deckRef.current = null;
                 }
             } catch (e) {

@@ -1,19 +1,9 @@
 import { tracks } from "@/data/curriculum";
 import { CurriculumCard } from "@/components/curriculumGrid/curriculumCard";
 import { CurriculumGridContainer } from "@/components/curriculumGrid/curriculumGridContainer";
-import { Breadcrumb } from "@/components/breadcrumb";
 
 import styles from "./page.module.scss";
-
-export function getColorFromTrack(trackId: string): "blue" | "green" | "pink" | "red" {
-  switch (trackId) {
-    case "track_a": return "blue"
-    case "track_b": return "green"
-    case "track_c": return "pink"
-    case "track_x": return "red"
-    default: return "red"
-  }
-}
+import { getColorFromTrack } from "./track";
 
 export default function TracksPage() {
   return (
