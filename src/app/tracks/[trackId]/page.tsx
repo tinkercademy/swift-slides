@@ -21,9 +21,18 @@ export default async function UnitsPage({ params }: { params: Promise<{ trackId:
                 <h1>{track.title}</h1>
             </div>
             <CurriculumGridContainer>
-                {track.units.map(unit => (
-                    <CurriculumCard key={unit.id} color={getColorFromTrack(track?.id)} entry={unit} />
-                ))}
+                {track.units.map(unit => {
+                    return (
+                        <CurriculumCard
+                            key={unit.id}
+                            title={unit.title}
+                            subtitle={unit.subtitle}
+                            description={unit.description}
+                            imgURL={`/covers/${track.id}/${unit.id}.png`}
+                            pageURL={unit.id}
+                            color={getColorFromTrack(track?.id)} />
+                    )
+                })}
             </CurriculumGridContainer>
         </div>
     );

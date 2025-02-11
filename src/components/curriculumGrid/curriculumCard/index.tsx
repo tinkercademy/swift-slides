@@ -2,23 +2,31 @@
 
 import Image from "next/image";
 import styles from "./styles.module.scss";
-import { CurriculumEntry } from "@/app/tracks/track";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-export function CurriculumCard({ color, entry }: { color: string, entry: CurriculumEntry }) {
-    
-    const current_path = usePathname();
+export function CurriculumCard({
+    title, subtitle, description, imgURL, pageURL, color
+}: {
+    title: string,
+    subtitle?: string,
+    description?: string,
+    imgURL?: string,
+    pageURL?: string
+    color: "blue" | "green" | "pink" | "red",
+}) {
+
+    const pathname = usePathname()
 
     return (
-        <Link href={`${current_path}/${entry.id}`} className={`${styles.card} ${styles[color]}`}>
+        <Link href={pageURL?.startsWith("http") || pageURL?.startsWith("/") ? pageURL : `${pathname}/${pageURL}`} className={`${styles.card} ${styles[color]}`}>
             <div className={styles.entryImg}>
-                <Image src={entry.imgURL} fill={true} alt={`Cover image for "${entry.subtitle}"`} />
+                <Image src={imgURL ?? "/covers/placeholder"} fill={true} alt={`Cover image for "${subtitle ?? title}"`} />
             </div>
             <div className={styles.contentWrapper}>
-                <h3>{entry.subtitle}</h3>
-                <h2>{entry.title}</h2>
-                <p>{entry.description}</p>
+                <h3>{subtitle}</h3>
+                <h2>{title}</h2>
+                <p>{description}</p>
             </div>
         </Link>
     )

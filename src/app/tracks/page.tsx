@@ -4,7 +4,7 @@ import { CurriculumCard } from "@/components/curriculumGrid/curriculumCard";
 import Image from "next/image";
 import { CurriculumGridContainer } from "@/components/curriculumGrid/curriculumGridContainer";
 
-export function getColorFromTrack(trackId: string): string {
+export function getColorFromTrack(trackId: string): "blue" | "green" | "pink" | "red" {
   switch (trackId) {
     case "track_a": return "blue"
     case "track_b": return "green"
@@ -19,13 +19,19 @@ export default function TracksPage() {
     <div>
       <h1>Curriculum</h1>
       <CurriculumGridContainer>
-        {tracks.map(track => (
-          <CurriculumCard key={track.id} color={getColorFromTrack(track.id)} entry={track} />
-        ))}
+        {tracks.map(track => {
+          return (
+            <CurriculumCard
+              key={track.id}
+              title={track.title}
+              subtitle={track.subtitle}
+              description={track.description}
+              imgURL={`/covers/${track.id}.png`}
+              pageURL={track.id}
+              color={getColorFromTrack(track.id)} />
+          )
+        })}
       </CurriculumGridContainer>
     </div>
   )
 }
-
-{/* <h2 class="titleh2">subtitle</h2>
-<h1 class="titleh1">title</h1> */}
