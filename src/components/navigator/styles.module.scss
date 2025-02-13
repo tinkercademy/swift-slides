@@ -10,27 +10,8 @@
     }
 }
 
-.tinkerLogo {
-    height: 48px;
-}
-
-.appleBadges {
-    position: relative;
-    height: 64px;
-
-    img {
-        // margin: ;
-        object-fit: contain;
-        object-position: left;
-    }
-}
-
 @media only screen and (max-width: 890px) {
     .explorersLogo {
         width: 90%;
-    }
-
-    .logo {
-        height: 20px;
     }
 }
