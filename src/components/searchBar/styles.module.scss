@@ -1,0 +1,37 @@
+.searchBar {
+    margin-left: auto;
+    // position: relative;
+
+    div {
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 24px;
+    }
+
+    form input {
+        position: absolute;
+
+        padding: 0px 10px;
+        margin: 0px;
+        border: 0px;
+        border-radius: 10px;
+        outline: none;
+
+        left: 64px;
+        right: 130px;
+        top: 160px;
+        z-index: 3;
+        transition: all 250ms;
+    }
+}
+
+
+// .searchInput {
+//     width: 100%;
+//     padding: 10px;
+//     margin: 10px 0;
+//     font-size: 16px;
+//     border: 1px solid #ccc;
+//     border-radius: 4px;
+// }
