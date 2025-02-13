@@ -8,15 +8,16 @@ import { notFound } from "next/navigation";
 import styles from "./page.module.scss"
 import { getColorFromTrack } from "../track";
 
-export default async function UnitsPage({ params, searchParams }: { params: Promise<{ trackId: string }>, searchParams: { search?: string } }) {
+export default async function UnitsPage({ params, searchParams }: { params: Promise<{ trackId: string }>, searchParams: Promise<{ search?: string }> }) {
     const trackId = (await params).trackId
     const track = tracks.find(e => e.id === trackId)
 
+      
     if (track === undefined) {
         notFound()
     }
 
-    const searchTerm = searchParams.search || "";
+    const searchTerm = (await searchParams)?.search || "";
     const filteredUnits = track.units.filter(unit =>
         unit.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
         unit.subtitle.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -49,3 +50,5 @@ export default async function UnitsPage({ params, searchParams }: { params: Prom
         </div>
     );
 }
+
+export const dynamic = 'force-dynamic'
