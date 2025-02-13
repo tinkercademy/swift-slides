@@ -1,12 +1,19 @@
 .searchBar {
     margin-left: auto;
-    // position: relative;
+    display: flex;
+    align-items: center;
 
     div {
         background: none;
         border: none;
         cursor: pointer;
         font-size: 24px;
+        transition: opacity 250ms;
+        opacity: 0.8;
+
+        &:hover {
+            opacity: 1;
+        }
     }
 
     form input {
@@ -20,9 +27,9 @@
 
         left: 64px;
         right: 130px;
-        top: 160px;
+        top: 177px;
         z-index: 3;
-        transition: all 250ms;
+        transition: height 250ms;
     }
 }
 

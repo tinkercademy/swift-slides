@@ -1,9 +1,10 @@
 .explorersLogo {
-    width: 100%;
     height: 100px;
     position: relative;
+    margin-bottom: 50px;
 
     img {
+        height: 100%;
         object-fit: contain;
         object-position: left;
     }
