@@ -26,19 +26,19 @@
         outline: none;
 
         left: 64px;
-        right: 130px;
+        right: 134px; // 64+70=134px
         top: 177px;
         z-index: 3;
         transition: height 250ms;
     }
 }
 
-
-// .searchInput {
-//     width: 100%;
-//     padding: 10px;
-//     margin: 10px 0;
-//     font-size: 16px;
-//     border: 1px solid #ccc;
-//     border-radius: 4px;
-// }
+@media only screen and (max-width: 890px) {
+    .searchBar {
+        form input {
+            left: 16px;
+            right: 86px; // 16+70=86px
+            top: 130px
+        }
+    }
+}
