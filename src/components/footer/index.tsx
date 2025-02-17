@@ -16,7 +16,7 @@ export function Footer() {
       <p>
         Find out more:{" "}
         <Link href="https://swiftexplorers.sg">Swift Explorers Challenge</Link>{" • "}
-        <Link href="https://swiftinsg.org">Swift LinkAccelerator</Link>{" • "}
+        <Link href="https://swiftinsg.org">Swift Accelerator</Link>{" • "}
         <Link href="https://tinkercademy.com">Tinkercademy</Link>
         <br />
         Open-sourced on <Link href="https://github.com/tinkercademy/swift-slides">GitHub</Link>.{" "}
