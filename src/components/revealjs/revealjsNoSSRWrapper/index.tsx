@@ -1,6 +1,6 @@
 'use client';
 
-import { Dispatch, SetStateAction, useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { FaExpand } from "react-icons/fa";
 import Reveal from 'reveal.js';
 import RevealMarkdown from "reveal.js/plugin/markdown/markdown";
@@ -9,7 +9,7 @@ import RevealNotes from "reveal.js/plugin/notes/notes";
 
 import "./slides.scss";
 
-export function RevealjsWrapper({ children }: { children: React.ReactNode }) {
+export function RevealjsNoSSRWrapper({ children }: { children: React.ReactNode }) {
     const deckDivRef = useRef<HTMLDivElement>(null); // reference to deck container div
     const deckRef = useRef<Reveal.Api | null>(null); // reference to deck reveal instance
 

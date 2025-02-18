@@ -1,44 +1,44 @@
-'use client'
-// https://github.com/vercel/next.js/discussions/43631
-
-import dynamic from "next/dynamic";
-import { TrackCurriculumEntry, UnitCurriculumEntry } from "../../track";
 import { Breadcrumb } from "@/components/breadcrumb";
 import { tracks } from "@/data/curriculum";
-import { useEffect, useState } from "react";
 
 import "reveal.js/dist/reveal.css";
 import "reveal.js/dist/theme/black.css";
 import { notFound } from "next/navigation";
+import { RevealjsClientWrapper } from "../../../../components/revealjs/revealjsClientWrapper";
+import { RevealjsNoSSRWrapper } from "@/components/revealjs/revealjsNoSSRWrapper";
 
 import "./slide.scss";
 import "./xcode-dark.scss";
 
 import styles from "./page.module.scss";
 
-const RevealjsWrapper = dynamic(() =>
-    import('@/components/revealjs/revealjsWrapper').then(module => module.RevealjsWrapper),
-    { ssr: false }
-);
+async function resolveParams(params: Promise<{ trackId: string, unitId: string }>) {
+    const { trackId, unitId } = await params
+    const track = tracks.find(e => e.id === trackId)
+    const unit = track?.units.find(e => e.id === unitId)
 
-export default function SlidesPage({ params }: { params: Promise<{ trackId: string, unitId: string }> }) {
-    const [track, setTrack] = useState<TrackCurriculumEntry>()
-    const [unit, setUnit] = useState<UnitCurriculumEntry>();
+    if (track === undefined || unit === undefined) {
+        notFound()
+    }
 
-    useEffect(() => {
-        (async () => {
-            const { trackId, unitId } = await params
-            const track = tracks.find(e => e.id === trackId)
-            const unit = track?.units.find(e => e.id === unitId)
+    return { track, unit }
+}
 
-            if (track === undefined || unit === undefined) {
-                notFound()
-            }
+export default async function SlidesPage({ params }: { params: Promise<{ trackId: string, unitId: string }> }) {
 
-            setTrack(track)
-            setUnit(unit)
-        })() // TODO: update to use Suspense
-    }, []);
+    const { track, unit } = await resolveParams(params)
+
+    // TODO: update to use Suspense
+
+    // TODO:
+    // // Add a special class to the second-to-last slide dynamically
+    // 	Reveal.on('ready', function() {
+    // 		const slides = document.querySelectorAll('.reveal .slides section');
+    // 		if (slides.length > 1) {
+    // 			const secondLastSlide = slides[slides.length - 2];
+    // 			secondLastSlide.setAttribute('data-state', 'second-last-page');
+    // 		}
+    // 	});
 
     return (
         <div>
@@ -46,7 +46,7 @@ export default function SlidesPage({ params }: { params: Promise<{ trackId: stri
                 <Breadcrumb />
                 <h1>{track?.title}</h1>
             </div>
-            <RevealjsWrapper>
+            <RevealjsClientWrapper>
                 <div className="slides">
                     <section id="slide-view" data-markdown={`/markdown/${track?.id}/${unit?.markdownId}.md`} data-separator-vertical="^\n---vertical---" data-separator-notes="^Note:" />
                     <section>
@@ -66,9 +66,9 @@ export default function SlidesPage({ params }: { params: Promise<{ trackId: stri
                     </section>
                 </div>
                 <div style={{ height: "100%", display: "flex", alignItems: "flex-end", position: "fixed", zIndex: 8, pointerEvents: "none" }}>
-                    <small style={{ margin: 32 }}>© 2022-2024 Tinkertanker Pte Ltd. All Rights Reserved.</small>
+                    <small style={{ margin: 32 }}>© 2022-2025 Tinkertanker Pte Ltd. All Rights Reserved.</small>
                 </div>
-            </RevealjsWrapper>
+            </RevealjsClientWrapper>
         </div>
     )
 }
