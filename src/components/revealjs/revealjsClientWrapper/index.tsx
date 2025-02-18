@@ -20,7 +20,6 @@
 // can then exist in Server Components as per usual, thus the need for double wrappers.
 
 import dynamic from "next/dynamic";
-import React from "react";
 
 const RevealjsNoSSRWrapper = dynamic(() =>
     import('@/components/revealjs/revealjsNoSSRWrapper').then(module => module.RevealjsNoSSRWrapper),

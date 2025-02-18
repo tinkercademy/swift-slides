@@ -5,7 +5,6 @@ import "reveal.js/dist/reveal.css";
 import "reveal.js/dist/theme/black.css";
 import { notFound } from "next/navigation";
 import { RevealjsClientWrapper } from "../../../../components/revealjs/revealjsClientWrapper";
-import { RevealjsNoSSRWrapper } from "@/components/revealjs/revealjsNoSSRWrapper";
 
 import "./slide.scss";
 import "./xcode-dark.scss";
@@ -71,4 +70,11 @@ export default async function SlidesPage({ params }: { params: Promise<{ trackId
             </RevealjsClientWrapper>
         </div>
     )
+}
+
+export async function generateStaticParams() {
+    return tracks.map((track) => track.units.map((unit) => ({
+        trackId: track.id,
+        unitId: unit.id
+    }))).flat()
 }

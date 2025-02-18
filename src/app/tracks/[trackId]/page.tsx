@@ -12,7 +12,6 @@ export default async function UnitsPage({ params, searchParams }: { params: Prom
     const trackId = (await params).trackId
     const track = tracks.find(e => e.id === trackId)
 
-      
     if (track === undefined) {
         notFound()
     }
@@ -49,4 +48,10 @@ export default async function UnitsPage({ params, searchParams }: { params: Prom
             </CurriculumGridContainer>
         </div>
     );
+}
+
+export async function generateStaticParams() {
+    return tracks.map((track) => ({
+        trackId: track.id
+    })).flat()
 }
