@@ -50,5 +50,3 @@ export default async function UnitsPage({ params, searchParams }: { params: Prom
         </div>
     );
 }
-
-export const dynamic = 'force-dynamic'
