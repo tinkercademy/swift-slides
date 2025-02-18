@@ -1,12 +1,13 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import { FaExpand } from "react-icons/fa";
+import { FaExpand, FaCompress } from "react-icons/fa6";
 import Reveal from 'reveal.js';
 import RevealMarkdown from "reveal.js/plugin/markdown/markdown";
 import RevealHighlight from "reveal.js/plugin/highlight/highlight";
 import RevealNotes from "reveal.js/plugin/notes/notes";
 
+import styles from "./styles.module.scss";
 import "./slides.scss";
 
 export function RevealjsNoSSRWrapper({ children }: { children: React.ReactNode }) {
@@ -62,8 +63,10 @@ export function RevealjsNoSSRWrapper({ children }: { children: React.ReactNode }
     }, [isFullScreen])
 
     return (
-        <div className="reveal-viewport-wrapper" style={{ position: isFullScreen ? "static" : "relative" }}>
-            <div className="expand" onClick={() => { setIsFullScreen(!isFullScreen) }}><FaExpand /></div>
+        <div className={styles.revealViewportWrapper} style={{ position: isFullScreen ? "static" : "relative" }}>
+            <div className={styles.expand} onClick={() => { setIsFullScreen(!isFullScreen) }}>
+                {isFullScreen ? <FaCompress/> : <FaExpand />}
+            </div>
             <div className="reveal-viewport">
                 <div className="reveal" ref={deckDivRef}>
                     {children}

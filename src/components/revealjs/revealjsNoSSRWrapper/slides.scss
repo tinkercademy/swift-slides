@@ -1,27 +1,9 @@
-.reveal-viewport-wrapper {
-  width: 50%;
-  padding: 21.6% 38.4%;
-  box-sizing: border-box;
-  transition: all 250ms;
-
-  .expand {
-    position: absolute;
-    right: 15px;
-    top: 15px;
-    font-size: 20px;
-    z-index: 5;
-
-    padding: 15px;
-  }
-}
-
 .reveal-viewport {
   position: absolute;
   inset: 0;
 
   z-index: 4;
   background-color: var(--r-background-color);
-  // height: 100px; // for 1920/1080 ratio, we use a 10.8% 19.2% padding
 
   section.has-light-background,
   section.has-light-background h1,

@@ -1,9 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import styles from "./styles.module.scss";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+
+import styles from "./styles.module.scss";
 
 export function CurriculumCard({
     title, subtitle, description, imgURL, pageURL, color
