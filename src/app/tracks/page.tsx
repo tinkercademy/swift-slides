@@ -8,9 +8,6 @@ import { getColorFromTrack } from "./track";
 export default function TracksPage() {
   return (
     <div>
-      <div className={styles.headers}>
-        <h1>Tracks</h1>
-      </div>
       <CurriculumGridContainer>
         {tracks.map(track => {
           return (
