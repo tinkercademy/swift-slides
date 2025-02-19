@@ -51,10 +51,13 @@
 
 @media only screen and (max-width: 890px) {
     :root {
-        --theme-body-padding: 16px;
+        //// Fonts
         --theme-h1-fontsize: 30px;
         --theme-h2-fontsize: 22px;
         --theme-h3-fontsize: 18px;
         --theme-p-fontsize: 16px;
+
+        //// Margins & Paddings
+        --theme-body-padding: 16px 16px 64px 16px;
     }
 }

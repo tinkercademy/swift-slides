@@ -3,3 +3,9 @@
     grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
     gap: 32px;
 }
+
+@media only screen and (max-width: 890px) {
+    .cardsContainer {
+        gap: 16px;
+    }
+}
