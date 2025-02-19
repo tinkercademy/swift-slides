@@ -48,7 +48,7 @@ export default async function UnitsPage({ params, searchParams }: { params: Prom
                 }) : (
                     <div className={styles.noResults}>
                         <FaMagnifyingGlass />
-                        <h2>No Results for "{searchTerm}"</h2>
+                        <h2>No Results for &quot;{searchTerm}&quot;</h2>
                         <p>Check the spelling or try a new search.</p>
                     </div>
                 )}
