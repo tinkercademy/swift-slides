@@ -40,8 +40,7 @@ body {
 body {
   color: var(--theme-foreground);
   background: var(--theme-background);
-  padding: 64px;
-
+  padding: var(--theme-body-padding);
   font-family: var(--theme-font);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -49,51 +48,44 @@ body {
 
 h1 {
   font-weight: 700;
-  /* font-family: Montserrat, Impact, sans-serif; */
-  font-size: 64px;
-  background-color: var(--r-link-color);
-  margin-bottom: 32px;
-  background-image: var(--r-gradient);
+  
+}
+
+h1 {
+  font-size: var(--theme-h1-fontsize);
+  background-color: var(--theme-h1-color);
+  background-image: var(--theme-h1-gradient);
   color: transparent;
   background-clip: text;
+  margin: 0;
 }
 
-footer {
-  max-width: 100%;
-  margin-top: 64px;
+h2 {
+  font-size: var(--theme-h2-fontsize);
+  margin: 0;
 }
 
-footer p {
-  opacity: 0.8;
+h3 {
+  font-size: var(--theme-h3-fontsize);
+  margin: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+p {
+  font-size: var(--theme-p-fontsize);
+  line-height: 1.2;
+  margin: 0;
+}
+
+a {
+  color: var(--theme-a-color);
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
   }
 }
 
 @media only screen and (max-width: 890px) {
-  body {
-    padding: 16px;
-  }
-
-  h1 {
-    font-size: 32px;
-  }
-
-  h2 {
-    font-size: 24px;
-  }
-
-  h3 {
-    font-size: 16px;
-  }
-
-  p {
-    font-size: 12px;
-  }
-
   .card {
     width: 100%;
   }

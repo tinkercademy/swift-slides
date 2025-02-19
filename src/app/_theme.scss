@@ -8,6 +8,7 @@
 @use "src/app/colors" as c;
 
 :root {
+
     // Loop to map each SASS variable to an equivalent CSS variable.
     @each $key, $value in c.$colors {
         --colors-#{$key} : #{$value};
@@ -21,8 +22,39 @@
     --theme-background: var(--colors-black);
     --theme-foreground: var(--colors-white);
 
+    --theme-p-color: var(--theme-foreground);
+    --theme-h1-color: var(--colors-white);
+    --theme-h1-gradient: var(--colors-white-gradient);
+    --theme-a-color: var(--colors-tinkercademy-pink);
+    // --theme-a_dark-color: 
+    // --theme-a_hover-color: 
+
+//     --r-link-color: var(--colors-blue-link);
+//   --r-link-color-dark: var(--colors-blue-darklink);
+//   --r-link-color-hover: var(--colors-blue-hoverlink);
+
     //// Fonts
     /// Fonts are defined by Next.js via its Font Optimisation in app/layout.tsx
     /// See https://nextjs.org/docs/app/building-your-application/optimizing/fonts
-    --theme-font: var(--font-inter), Arial, Helvetica, sans-serif;
+    --theme-font: var(--font-inter),
+    Arial,
+    Helvetica,
+    sans-serif;
+    --theme-h1-fontsize: 40px;
+    --theme-h2-fontsize: 24px;
+    --theme-h3-fontsize: 18px;
+    --theme-p-fontsize: 16px;
+
+    //// Margins & Paddings
+    --theme-body-padding: 64px;
+}
+
+@media only screen and (max-width: 890px) {
+    :root {
+        --theme-body-padding: 16px;
+        --theme-h1-fontsize: 30px;
+        --theme-h2-fontsize: 22px;
+        --theme-h3-fontsize: 18px;
+        --theme-p-fontsize: 16px;
+    }
 }
