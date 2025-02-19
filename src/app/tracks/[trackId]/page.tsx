@@ -7,6 +7,7 @@ import { notFound } from "next/navigation";
 
 import styles from "./page.module.scss"
 import { getColorFromTrack } from "../track";
+import { FaMagnifyingGlass } from "react-icons/fa6";
 
 export default async function UnitsPage({ params, searchParams }: { params: Promise<{ trackId: string }>, searchParams: Promise<{ search?: string }> }) {
     const trackId = (await params).trackId
@@ -33,7 +34,7 @@ export default async function UnitsPage({ params, searchParams }: { params: Prom
                 <SearchBar searchTerm={searchTerm} />
             </div>
             <CurriculumGridContainer>
-                {filteredUnits.map(unit => {
+                {filteredUnits.length > 0 ? filteredUnits.map(unit => {
                     return (
                         <CurriculumCard
                             key={unit.id}
@@ -44,7 +45,13 @@ export default async function UnitsPage({ params, searchParams }: { params: Prom
                             pageURL={unit.id}
                             color={getColorFromTrack(track?.id)} />
                     )
-                })}
+                }) : (
+                    <div className={styles.noResults}>
+                        <FaMagnifyingGlass />
+                        <h2>No Results for "{searchTerm}"</h2>
+                        <p>Check the spelling or try a new search.</p>
+                    </div>
+                )}
             </CurriculumGridContainer>
         </div>
     );

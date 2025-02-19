@@ -1,11 +1,11 @@
 'use client';
-import { FaSearch } from "react-icons/fa";
+import { FaMagnifyingGlass } from "react-icons/fa6";
 
 import styles from "./styles.module.scss";
 import { useRef, useState } from "react";
 
 export function SearchBar({ searchTerm }: { searchTerm: string }) {
-    const [toggle, setToggle] = useState(!!searchTerm)
+    const [toggle, setToggle] = useState(false)
     const inputRef = useRef<HTMLInputElement>(null)
 
     return (
@@ -18,7 +18,7 @@ export function SearchBar({ searchTerm }: { searchTerm: string }) {
                     inputRef.current.value = val
                 }
                 setToggle(!toggle)
-            }}><FaSearch /></div>
+            }}><FaMagnifyingGlass /></div>
             <form method="get" action="">
                 <input
                     ref={inputRef}
@@ -27,7 +27,7 @@ export function SearchBar({ searchTerm }: { searchTerm: string }) {
                     placeholder="Search units..."
                     defaultValue={searchTerm}
                     className={styles.searchInput}
-                    style={{ height: toggle ? 50 : 0 }}
+                    style={{ height: (!!searchTerm || toggle) ? 50 : 0 }}
                 />
             </form>
         </div>
