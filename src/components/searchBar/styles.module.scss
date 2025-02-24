@@ -6,12 +6,17 @@
     div {
         background: none;
         border: none;
-        cursor: pointer;
         font-size: 24px;
-        transition: opacity 250ms;
+
         opacity: 0.8;
+        transition: all 250ms;
+        cursor: pointer;
 
         &:hover {
+            opacity: 0.9;
+        }
+
+        &:active {
             opacity: 1;
         }
     }

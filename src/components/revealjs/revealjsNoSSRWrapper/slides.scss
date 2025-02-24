@@ -1,3 +1,7 @@
+.is-print .reveal-viewport {
+  overflow: visible;
+}
+
 .reveal-viewport {
   position: absolute;
   inset: 0;

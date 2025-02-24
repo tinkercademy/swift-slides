@@ -23,9 +23,10 @@ async function resolveParams(params: Promise<{ trackId: string, unitId: string }
     return { track, unit }
 }
 
-export default async function SlidesPage({ params }: { params: Promise<{ trackId: string, unitId: string }> }) {
+export default async function SlidesPage({ params, searchParams }: { params: Promise<{ trackId: string, unitId: string }>, searchParams: Promise<{ "print-pdf"?: boolean }> }) {
 
     const { track, unit } = await resolveParams(params)
+    const isPrint = (await searchParams)["print-pdf"] !== undefined
 
     // TODO: update to use Suspense
 
@@ -40,12 +41,12 @@ export default async function SlidesPage({ params }: { params: Promise<{ trackId
     // 	});
 
     return (
-        <div>
+        <div className={isPrint ? "is-print" : undefined}>
             <div className={styles.headers}>
                 <Breadcrumb />
                 <h1>{track?.title}</h1>
             </div>
-            <RevealjsClientWrapper>
+            <RevealjsClientWrapper isPrint={isPrint}>
                 <div className="slides">
                     <section id="slide-view" data-markdown={`/markdown/${track?.id}/${unit?.markdownId}.md`} data-separator-vertical="^\n---vertical---" data-separator-notes="^Note:" />
                     <section>
@@ -64,8 +65,8 @@ export default async function SlidesPage({ params }: { params: Promise<{ trackId
                         </div>
                     </section>
                 </div>
-                <div style={{ height: "100%", display: "flex", alignItems: "flex-end", position: "fixed", zIndex: 8, pointerEvents: "none" }}>
-                    <small style={{ margin: 32 }}>© 2022-2025 Tinkertanker Pte Ltd. All Rights Reserved.</small>
+                <div className={styles.copyright}>
+                    <p>© 2022-2025 Tinkertanker Pte Ltd. All Rights Reserved.</p>
                 </div>
             </RevealjsClientWrapper>
         </div>

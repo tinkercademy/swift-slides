@@ -13,3 +13,16 @@
         margin: 0;
     }
 }
+
+.copyright {
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    position: fixed;
+    z-index: 8;
+    pointer-events: none;
+
+    p {
+        padding: 32px;
+    }
+}

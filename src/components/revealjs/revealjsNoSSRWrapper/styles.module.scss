@@ -2,22 +2,4 @@
     width: 50%;
     padding: 21.6% 38.4%; // for 1920/1080 ratio, we use a 1080/1920 = 21.6%/38.4% padding
     box-sizing: border-box;
-
-    .expand {
-        position: absolute;
-        right: 15px;
-        top: 15px;
-        font-size: 20px;
-        z-index: 5;
-
-        padding: 15px;
-
-        opacity: 0.8;
-        transition: opacity 250ms;
-
-        &:hover {
-            text-decoration: underline;
-            opacity: 1;
-        }
-    }
 }

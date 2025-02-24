@@ -26,6 +26,6 @@ const RevealjsNoSSRWrapper = dynamic(() =>
     { ssr: false }
 );
 
-export function RevealjsClientWrapper({ children }: { children: React.ReactNode }) {
-    return <RevealjsNoSSRWrapper>{children}</RevealjsNoSSRWrapper>
+export function RevealjsClientWrapper({ children, isPrint }: { children: React.ReactNode, isPrint: boolean }) {
+    return <RevealjsNoSSRWrapper isPrint={isPrint}>{children}</RevealjsNoSSRWrapper>
 }
