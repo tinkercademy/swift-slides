@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import { FaExpand, FaCompress, FaPrint, FaSlideshare, FaUpRightFromSquare } from "react-icons/fa6";
+import { FaExpand, FaCompress, FaPrint, FaUpRightFromSquare, FaSun, FaMoon } from "react-icons/fa6";
 import Reveal from 'reveal.js';
 import RevealMarkdown from "reveal.js/plugin/markdown/markdown";
 import RevealHighlight from "reveal.js/plugin/highlight/highlight";
@@ -10,6 +10,7 @@ import RevealNotes from "reveal.js/plugin/notes/notes";
 import styles from "./styles.module.scss";
 import "./slides.scss";
 import { ActionsBar } from '../../actionsBar';
+import { useDarkMode } from 'usehooks-ts';
 
 function handleOpenWithQuery(name: string, value: string) {
     let url = new URL(window.location.href)
@@ -20,6 +21,7 @@ function handleOpenWithQuery(name: string, value: string) {
 export function RevealjsNoSSRWrapper({ children, isPrint }: { children: React.ReactNode, isPrint: boolean }) {
     const deckDivRef = useRef<HTMLDivElement>(null); // reference to deck container div
     const deckRef = useRef<Reveal.Api | null>(null); // reference to deck reveal instance
+    const { toggle: toggleDarkMode, isDarkMode } = useDarkMode()
 
     const [isFullScreen, setIsFullScreen] = useState(false);
 
@@ -95,7 +97,12 @@ export function RevealjsNoSSRWrapper({ children, isPrint }: { children: React.Re
                 {
                     name: "popout",
                     onClick: () => { handleOpenWithQuery("fullscreen", "true") },
-                    icon: (<FaUpRightFromSquare />)
+                    icon: <FaUpRightFromSquare />
+                },
+                {
+                    name: "theme",
+                    onClick: () => { toggleDarkMode() },
+                    icon: ( isDarkMode ? <FaSun /> : <FaMoon /> )
                 }
             ]} />}
             <div className="reveal-viewport">

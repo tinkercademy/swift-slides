@@ -8,7 +8,6 @@
 @use "src/app/colors" as c;
 
 :root {
-
     // Loop to map each SASS variable to an equivalent CSS variable.
     @each $key, $value in c.$colors {
         --colors-#{$key} : #{$value};
@@ -48,6 +47,11 @@
     //// Margins & Paddings
     --theme-body-padding: 64px;
 }
+
+// [data-theme="light"] {
+//     --theme-background: var(--colors-white);
+//     --theme-foreground: var(--colors-black);
+// }
 
 @media only screen and (max-width: 890px) {
     :root {
