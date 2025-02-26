@@ -40,7 +40,10 @@
 			</section>
 		</div>
 		<div style="height: 100%; display:flex;align-items:flex-end;position: fixed;z-index: 8; pointer-events: none;">
-			<small style="margin: 32px;">© 2022-2024 Tinkertanker Pte Ltd. All Rights Reserved.</small>
+			<small style="margin: 32px;">©
+				<script>document.write(new Date().getFullYear())</script>
+				Tinkertanker Pte Ltd. All Rights Reserved.
+			</small>
 		</div>
 	</div>
 
@@ -65,7 +68,7 @@
 		});
 
 		// Add a special class to the second-to-last slide dynamically
-		Reveal.on('ready', function() {
+		Reveal.on('ready', function () {
 			const slides = document.querySelectorAll('.reveal .slides section');
 			if (slides.length > 1) {
 				const secondLastSlide = slides[slides.length - 2];
