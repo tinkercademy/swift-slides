@@ -8,14 +8,12 @@
 # Compose with Stacks and Shapes
 
 >
----
 
+---
 
 # Set Up an App Playground
 
-
 ---vertical---
-
 
 ### Create a New App
 
@@ -26,9 +24,7 @@
     <img style="width:70%" src="./assets/shapes-create-app-ss.jpg" alt="Show the Create an App button highlighted in the Swift playgrounds app. " >
 </div>
 
-
 ---vertical---
-
 
 ## Rename the App
 
@@ -45,14 +41,12 @@
     </div>
 </div>
 
-
 ---vertical---
-
 
 ## Remove the Default Text
 
-- Delete the image and text in the `VStack (vertical stack)`
-- Give your project a descriptive name, like “Self Portrait,” and tap Done.
+-   Delete the image and text in the `VStack (vertical stack)`
+-   Give your project a descriptive name, like “Self Portrait,” and tap Done.
 
 <div style="display: flex;justify-content: center; align-items: center;">
     <div style="flex: 1;text-align: center;">    
@@ -63,19 +57,15 @@
     </div>
 </div>
 
-
 ---
-
 
 # Self Portrait App
 
-
 ---vertical---
-
 
 ## Adding a ZStack
 
-- Change the VStack to a `ZStack (depth stack)`
+-   Change the VStack to a `ZStack (depth stack)`
 
 <div style="display: flex;justify-content: center; align-items: center;">
     <div style="flex: 1;text-align: center;">    
@@ -83,13 +73,11 @@
     </div>
 </div>
 
-
 ---vertical---
-
 
 ## Adding a Face
 
-- Open the list of views <img src="./assets/view-icon.png" style="margin-bottom: -4px" height="32px"> and scroll to the bottom to find the capsule, circle, ellipse, rectangle, and rounded rectangle shapes.
+-   Open the list of views <img src="./assets/view-icon.png" style="margin-bottom: -4px" height="32px"> and scroll to the bottom to find the capsule, circle, ellipse, rectangle, and rounded rectangle shapes.
 
 <div style="display: flex;justify-content: center; align-items: center;">
     <div style="flex: 1;text-align: center;">    
@@ -97,13 +85,11 @@
     </div>
 </div>
 
-
 ---vertical---
-
 
 ## Adding a Face
 
-- Add a shape to the ZStack for your head. Use a `RoundedRectangle` for a square face, or a `Capsule` for a rounder face.
+-   Add a shape to the ZStack for your head. Use a `RoundedRectangle` for a square face, or a `Capsule` for a rounder face.
 
 <div style="display: flex;justify-content: center; align-items: center;">
     <div style="flex: 1;text-align: center;">    
@@ -111,13 +97,11 @@
     </div>
 </div>
 
-
 ---vertical---
 
+## Tip: Rounded Rectangle
 
-## Tip : Rounded Rectangle
-
-- `RoundedRectangle` require a `cornerRadius` parameter to be set.
+-   `RoundedRectangle` require a `cornerRadius` parameter to be set.
 
 ```swift[6]
 import SwiftUI
@@ -133,13 +117,11 @@ struct ContentView: View {
 
 <p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift</p>
 
-
 ---vertical---
-
 
 ## Shaping the Face
 
-- Add a blank line below the capsule, then open the list of modifiers.
+-   Add a blank line below the capsule, then open the list of modifiers.
 
 <div style="display: flex;justify-content: center; align-items: center;">
     <div style="flex: 1;text-align: center;">    
@@ -151,14 +133,12 @@ struct ContentView: View {
 
 # `Frames` and `foregroundStyle`
 
-
 ---vertical---
-
 
 ## Shaping the Face
 
-- Search for `frame` and tap to add it to your code.
-- Fill in the approximate values for height and width to create your head.
+-   Search for `frame` and tap to add it to your code.
+-   Fill in the approximate values for height and width to create your head.
 
 <div style="display: flex;justify-content: center; align-items: center;">
     <div style="flex: 1;text-align: center;">    
@@ -169,14 +149,12 @@ struct ContentView: View {
     </div>
 </div>
 
-
 ---vertical---
 
+## Colouring the Face
 
-## Coloring the Face
-
-- Add a blank line below `frame`, then open the list of modifiers.
-- Type `foregroundStyle` into the search bar. Tap to add it to your code.
+-   Add a blank line below `frame`, then open the list of modifiers.
+-   Type `foregroundStyle` into the search bar. Tap to add it to your code.
 
 <div style="display: flex;justify-content: center; align-items: center;">
     <div style="flex: 1;text-align: center;">    
@@ -187,14 +165,12 @@ struct ContentView: View {
     </div>
 </div>
 
-
 ---vertical---
 
+## Colouring the Face
 
-## Coloring the Face
-
-- To change the color, select the code inside the parentheses and open the list of colors.
-- Tap any color to add it to your code.
+-   To change the colour, select the code inside the parentheses and open the list of colours.
+-   Tap any colour to add it to your code.
 
 <div style="display: flex;justify-content: center; align-items: center;">
     <div style="flex: 1;text-align: center;">    
@@ -205,13 +181,11 @@ struct ContentView: View {
     </div>
 </div>
 
-
 ---vertical---
 
+## Tip: Custom colours
 
-## Tip : Rounded Rectangle
-
-- Optionally, create your own color. Choose one of the code snippets, then edit the values to match your skin tone.
+-   Optionally, create your own colour. Choose one of the code snippets, then edit the values to match your skin tone.
 
 <div style="display: flex;justify-content: center; align-items: center;">
 <div style="flex: 1;text-align: center;">
@@ -245,19 +219,15 @@ struct ContentView: View {
 ​<!-- dont remove the empty lines in the "second colour segment -->
 </div>
 
-
 ---
-
 
 # Offset and Trim
 
-
 ---vertical---
-
 
 ## Creating the neck
 
-- Apply what you’ve learned to add a **rectangle** for your neck and adjust the size with a `frame` modifier.
+-   Apply what you’ve learned to add a **rectangle** for your neck and adjust the size with a `frame` modifier.
 
 <div style="display: flex;justify-content: center; align-items: center;">
     <div style="flex: 1;text-align: center;">    
@@ -265,13 +235,11 @@ struct ContentView: View {
     </div>
 </div>
 
-
 ---vertical---
-
 
 ## Adjusting the Neck
 
-- Add a blank line below the rectangle, then search for `offset` in the list of modifiers.
+-   Add a blank line below the rectangle, then search for `offset` in the list of modifiers.
 
 <div style="display: flex;justify-content: center; align-items: center;">
     <div style="flex: 1;text-align: center;">    
@@ -282,14 +250,12 @@ struct ContentView: View {
     </div>
 </div>
 
-
 ---vertical---
-
 
 ## Adjusting the Neck
 
-- Move the neck under the head.
-- Select the rectangle and any modifiers you added. Cut and paste the code to the top of the depth stack. Then change the color to match your head.
+-   Move the neck under the head.
+-   Select the rectangle and any modifiers you added. Cut and paste the code to the top of the depth stack. Then change the colour to match your head.
 
 <div style="display: flex;justify-content: center; align-items: center;">
     <div style="flex: 1;text-align: center;">    
@@ -297,13 +263,11 @@ struct ContentView: View {
     </div>
 </div>
 
-
 ---vertical---
-
 
 ## Adding a shirt
 
-- Apply what you’ve learned to add a shirt, place it correctly on the screen, and give it a color.
+-   Apply what you’ve learned to add a shirt, place it correctly on the screen, and give it a colour.
 
 <div style="display: flex;justify-content: center; align-items: center;">
     <div style="flex: 1;text-align: center;">    
@@ -311,13 +275,11 @@ struct ContentView: View {
     </div>
 </div>
 
-
 ---vertical---
-
 
 ## Adding Hair
 
-- Add a circle for your hair. Use `frame` to make it about the same width as your head or slightly larger.
+-   Add a circle for your hair. Use `frame` to make it about the same width as your head or slightly larger.
 
 <div style="display: flex;justify-content: center; align-items: center;">
     <div style="flex: 1;text-align: center;">    
@@ -325,14 +287,12 @@ struct ContentView: View {
     </div>
 </div>
 
-
 ---vertical---
-
 
 ## Adding Hair
 
-- Note: The `trim` modifier must come directly below a shape.
-- Experiment with values for where the trim should start and end.
+-   Note: The `trim` modifier must come directly below a shape.
+-   Experiment with values for where the trim should start and end.
 
 <div style="display: flex;justify-content: center; align-items: center;">
     <div style="flex: 1;text-align: center;">    
@@ -343,13 +303,11 @@ struct ContentView: View {
     </div>
 </div>
 
-
 ---vertical---
-
 
 ## Adding Hair
 
-- Adjust the location of the bangs or short hair. Continue adding any remaining elements to complete your hair.
+-   Adjust the location of the bangs or short hair. Continue adding any remaining elements to complete your hair.
 
 <div style="display: flex;justify-content: center; align-items: center;">
     <div style="flex: 1;text-align: center;">    
@@ -357,13 +315,11 @@ struct ContentView: View {
     </div>
 </div>
 
-
 ---vertical---
-
 
 ## Tip: Many views in a stack
 
-- If you have more than ten views in a stack, you’ll get an “Extra arguments at position…” warning. To fix this, you can add a `Group` view to the stack.
+-   If you have more than ten views in a stack, you’ll get an “Extra arguments at position…” warning. To fix this, you can add a `Group` view to the stack.
 
 <div style="display: flex;justify-content: center; align-items: center;">
     <div style="flex: 1;text-align: center;">    
@@ -371,19 +327,15 @@ struct ContentView: View {
     </div>
 </div>
 
-
 ---
 
-
-# Shadow and Background Color
-
+# Shadow and Background Colour
 
 ---vertical---
 
-
 ## Shadow behind the head
 
-- Locate the shape that creates your head in the code. Add a blank line below the shape, then search for `shadow` in the list of modifiers.
+-   Locate the shape that creates your head in the code. Add a blank line below the shape, then search for `shadow` in the list of modifiers.
 
 <div style="display: flex;justify-content: center; align-items: center;">
     <div style="flex: 1;text-align: center;">    
@@ -394,25 +346,21 @@ struct ContentView: View {
     </div>
 </div>
 
-
 ---vertical---
-
 
 ## Shadow: Colour
 
-- Optionally, add a colour to the shadow
+-   Optionally, add a colour to the shadow.
 
 ```swift
 .shadow(color: .black, radius: 10)
 ```
 
-
 ---vertical---
-
 
 ## Background colour
 
-- Add a blank line at the top of your `ZStack`, then open the list of colors. Tap a color to add it to your code.
+-   Add a blank line at the top of your `ZStack`, then open the list of colours. Tap a colour to add it to your code.
 
 <div style="display: flex;justify-content: center; align-items: center;">
     <div style="flex: 1;text-align: center;">    
@@ -420,13 +368,11 @@ struct ContentView: View {
     </div>
 </div>
 
-
 ---vertical---
-
 
 ## Background colour but lighter
 
-- Optionally, add an `opacity` modifier to dim the background color.
+-   Optionally, add an `opacity` modifier to dim the background colour.
 
 <div style="display: flex;justify-content: center; align-items: center;">
     <div style="flex: 1;text-align: center;">    
@@ -434,9 +380,7 @@ struct ContentView: View {
     </div>
 </div>
 
-
 ---
-
 
 # And that's it!
 
