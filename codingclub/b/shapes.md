@@ -211,7 +211,6 @@ struct ContentView: View {
     brightness: 0.4
 ))
 ​
-
 ```
 
 </div>
