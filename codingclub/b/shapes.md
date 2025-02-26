@@ -187,17 +187,17 @@ struct ContentView: View {
 
 -   Optionally, create your own colour. Choose one of the code snippets, then edit the values to match your skin tone.
 
-<div style="display: flex;justify-content: center; align-items: center;">
+<div style="display: flex;justify-content: center; align-items: center; gap: 20px;">
 <div style="flex: 1;text-align: center;">
 
 ```swift
 // Add colour with RGBA
 .foregroundStyle(Color(
-        red: 0.6,
-        green: 0.4,
-        blue: 0.3,
-        alpha: 1.0
-    ))
+    red: 0.6,
+    green: 0.4,
+    blue: 0.3,
+    alpha: 1.0
+))
 ```
 
 </div>
@@ -211,7 +211,7 @@ struct ContentView: View {
     brightness: 0.4
 ))
 ​
-​​
+
 ```
 
 </div>
