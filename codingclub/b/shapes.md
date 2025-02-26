@@ -191,21 +191,20 @@ struct ContentView: View {
 <div style="flex: 1;text-align: center;">
 
 ```swift
-// First colour
+// Add colour with RGBA
 .foregroundStyle(Color(
-    CGColor(
         red: 0.6,
         green: 0.4,
         blue: 0.3,
         alpha: 1.0
-    )))
+    ))
 ```
 
 </div>
 <div style="flex: 1;text-align: center;">
 
 ```swift
-// Second colour
+// Add colour with HSV
 .foregroundStyle(Color(
     hue: 0.1,
     saturation: 0.9,
