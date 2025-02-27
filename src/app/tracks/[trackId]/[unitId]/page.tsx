@@ -4,12 +4,14 @@ import { tracks } from "@/data/curriculum";
 import "reveal.js/dist/reveal.css";
 import "reveal.js/dist/theme/black.css";
 import { notFound } from "next/navigation";
-import { RevealjsClientWrapper } from "../../../../components/revealjs/revealjsClientWrapper";
+import { headers } from "next/headers";
+import { RevealjsClientWrapper } from "../../../../components/revealjsWrapper/revealjsClientWrapper";
 
 import "./slide.scss";
 import "./xcode-dark.scss";
 
 import styles from "./page.module.scss";
+import QRCode from "react-qr-code";
 
 async function resolveParams(params: Promise<{ trackId: string, unitId: string }>) {
     const { trackId, unitId } = await params
@@ -27,6 +29,8 @@ export default async function SlidesPage({ params, searchParams }: { params: Pro
 
     const { track, unit } = await resolveParams(params)
     const isPrint = (await searchParams)["print-pdf"] !== undefined
+
+    const currentURL = (await headers()).get('referer')
 
     // TODO: update to use Suspense
 
@@ -55,7 +59,16 @@ export default async function SlidesPage({ params, searchParams }: { params: Pro
                                 <h1>Get the Slides</h1>
                                 <h2>Scan the QR code to access the slide deck.</h2>
                             </div>
-                            <img id="qr-image" style={{ borderRadius: "8%", width: 600 }} />
+                            <div style={{ padding: 16, width: 500, background: "#fff" }}>
+                                {currentURL && (
+                                    <QRCode
+                                        size={256}
+                                        style={{ height: "auto", maxWidth: "100%", width: "100%" }}
+                                        value={currentURL}
+                                        viewBox={`0 0 256 256`}
+                                    />
+                                )}
+                            </div>
                         </div>
                     </section>
                     <section>

@@ -22,7 +22,7 @@
 import dynamic from "next/dynamic";
 
 const RevealjsNoSSRWrapper = dynamic(() =>
-    import('@/components/revealjs/revealjsNoSSRWrapper').then(module => module.RevealjsNoSSRWrapper),
+    import('@/components/revealjsWrapper/revealjsNoSSRWrapper').then(module => module.RevealjsNoSSRWrapper),
     { ssr: false }
 );
 
