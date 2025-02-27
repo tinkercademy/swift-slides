@@ -1,9 +1,15 @@
-import type { NextConfig } from "next";
+import type { NextConfig, Redirect } from "next";
 
 const nextConfig: NextConfig = {
-  sassOptions: {
-    
-  },
+  async redirects() {
+    return [
+      {
+        source: "/",
+        destination: "/tracks",
+        permanent: false
+      }
+    ]
+  }
 }
 
 export default nextConfig;
