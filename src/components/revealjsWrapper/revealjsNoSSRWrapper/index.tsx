@@ -19,8 +19,8 @@ function handleOpenWithQuery(name: string, value: string) {
 }
 
 export function RevealjsNoSSRWrapper({ children, isPrint }: { children: React.ReactNode, isPrint: boolean }) {
-    const deckDivRef = useRef<HTMLDivElement>(null); // reference to deck container div
-    const deckRef = useRef<Reveal.Api | null>(null); // reference to deck reveal instance
+    const deckDivRef = useRef<HTMLDivElement>(null);
+    const deckRef = useRef<Reveal.Api | null>(null);
     const { toggle: toggleDarkMode, isDarkMode } = useDarkMode()
 
     const [isFullScreen, setIsFullScreen] = useState(false);
@@ -37,6 +37,7 @@ export function RevealjsNoSSRWrapper({ children, isPrint }: { children: React.Re
             plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
         });
 
+        // TODO: fix calling .initialize() crashes mobile slides
         deckRef.current.initialize().then(async () => {
             // As a workaround for Next.js App router Layouts, Reveal.js content is placed in an absolute div overlayed above the preexisting Layout.
             // However, Reveal.js automatically sets <body> as the container for all Reveal.js content with .reveal-viewport
@@ -59,7 +60,7 @@ export function RevealjsNoSSRWrapper({ children, isPrint }: { children: React.Re
                 console.warn("Reveal.js destroy call failed.");
             }
         };
-    }, []);
+    }, [deckRef]);
 
     useEffect(() => {
         deckRef.current?.layout()
