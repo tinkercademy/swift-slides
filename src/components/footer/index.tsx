@@ -22,7 +22,7 @@ export function Footer() {
         Open-sourced on <Link href="https://github.com/tinkercademy/swift-slides">GitHub</Link>.{" "}
         <Link href="https://github.com/tinkercademy/swift-slides/issues/new">Report issues</Link>.
         <br />
-        Copyright © 2025 <Link href="https://tinkertanker.com">Tinkertanker Pte Ltd</Link>. All Rights Reserved.
+        Copyright © {new Date().getFullYear()} <Link href="https://tinkertanker.com">Tinkertanker Pte Ltd</Link>. All Rights Reserved.
       </p>
     </footer>
   )

@@ -66,7 +66,7 @@ export default async function SlidesPage({ params, searchParams }: { params: Pro
                     </section>
                 </div>
                 <div className={styles.copyright}>
-                    <p>© 2022-2025 Tinkertanker Pte Ltd. All Rights Reserved.</p>
+                    <small>Copyright © {new Date().getFullYear()} Tinkertanker Pte Ltd. All Rights Reserved.</small>
                 </div>
             </RevealjsClientWrapper>
         </div>
