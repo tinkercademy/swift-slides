@@ -17,17 +17,17 @@ Introduction to Freeform and its tools
 
 ## Freeform
 
-- A free Apple app for Mac, iPhone, and iPad, designed for creative brainstorming and collaboration.
-- If you’ve used drawing tools for Keynote or Notes, it’s pretty much the same as those — just designed for collaborative editing, on an infinite canvas (board).
-- Create expandable “boards”, and add text, drawings with various brushes, fills, shapes, sticky notes, and media
+-   A free Apple app for Mac, iPhone, and iPad, designed for creative brainstorming and collaboration.
+-   If you’ve used drawing tools for Keynote or Notes, it’s pretty much the same as those — just designed for collaborative editing, on an infinite canvas (board).
+-   Create expandable “boards”, and add text, drawings with various brushes, fills, shapes, sticky notes, and media
 
 ---vertical---
 
 ## Why Freeform
 
-- With Freeform, you can...
-- Create simple app designs to experiment with different concepts of what you want to do
-- Create infinitely sized “boards”, and add text, drawings with various tools, fills, shapes, sticky notes and links
+-   With Freeform, you can...
+-   Create simple app designs to experiment with different concepts of what you want to do
+-   Create infinitely sized “boards”, and add text, drawings with various tools, fills, shapes, sticky notes and links
 
 ---
 
@@ -46,6 +46,7 @@ Introduction to Freeform and its tools
         </ul>
     </ul>
 </div>
+<img src="./assets/5-newboard.png" alt="Creating a new board in Freeform">
 
 ---vertical---
 
@@ -64,6 +65,7 @@ Introduction to Freeform and its tools
         </ul>
     </ul>
 </div>
+<img src="./assets/5-renamingboard.png" alt="Renaming a board in Freeform">
 
 ---
 
@@ -75,19 +77,19 @@ Introduction to Freeform and its tools
 
 ## Zooming your board
 
-- Freeform has an _infinite canvas_
-  - As you move around, the canvas will continue to expand
-- To **zoom in** or **zoom out** of the canvas, place two fingers on your screen, and do a pinching movement
-  - Pinching in zooms in, pinching out zooms out
+-   Freeform has an _infinite canvas_
+    -   As you move around, the canvas will continue to expand
+-   To **zoom in** or **zoom out** of the canvas, place two fingers on your screen, and do a pinching movement
+    -   Pinching in zooms in, pinching out zooms out
 
 ---vertical---
 
 ## Moving around your board
 
-- Freeform has an _infinite canvas_
-  - As you move around, the canvas will continue to expand
-- To move around, **hold down one finger** on your screen and move it around
-  - You can do this simultaneously while zooming in or out
+-   Freeform has an _infinite canvas_
+    -   As you move around, the canvas will continue to expand
+-   To move around, **hold down one finger** on your screen and move it around
+    -   You can do this simultaneously while zooming in or out
 
 ---
 
@@ -97,8 +99,8 @@ Introduction to Freeform and its tools
 
 ## Drawing Tools
 
-- Tap on a tool to switch to it.
-- Tap a second time to see if there are additional options, like stroke size (line thickness) or transparency.
+-   Tap on a tool to switch to it.
+-   Tap a second time to see if there are additional options, like stroke size (line thickness) or transparency.
 
 <img src="./assets/freeform-tools.png">
 
