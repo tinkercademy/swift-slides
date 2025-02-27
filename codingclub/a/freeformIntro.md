@@ -125,20 +125,25 @@ Introduction to Freeform and its tools
 
 ## Customising sticky notes
 
-<div style="display: flex;">
+<div style="display: flex; gap: 20px;">
+    <div style="flex: 1;">
     <ul>
         <li>The default colour for these sticky notes is yellow, but you can change it</li>
-        <ul>
-            <li>Fonts can be changed too</li>
-        </ul>
+        <li>Fonts can be changed too!</li>
     </ul>
+    </div>
+    <div style="flex: 1;">
+        <img src="./assets/5-notes.png" style="max-height: 70vh;">
+    </div>
+
 </div>
 
 ---vertical---
 
 ## Using preset shapes
 
-<div style="display: flex;">
+<div style="display: flex; gap: 20px;">
+    <div style="flex: 1;">
     <ul>
         <li>Freeform has a library of ready-made shapes for you to add to your boards</li>
         <li>Tap on the (shapes icon) button in the toolbar</li>
@@ -147,13 +152,19 @@ Introduction to Freeform and its tools
             <li>You can either search for a shape, or search by a category</li>
         </ul>
     </ul>
+    </div>
+    <div style="flex: 1; text-align: center;">
+        <img src="./assets/5-shapes.png" style="max-height: 70vh;">
+    </div>
+
 </div>
 
 ---vertical---
 
 ## Insert media
 
-<div style="display: flex;">
+<div style="display: flex; gap: 20px;">
+    <div style="flex: 1;">
     <ul>
         <li>Tap on the (picture icon) button at the top centre of your screen</li>
         <li>Select an option for where you’d like to get your media from</li>
@@ -163,6 +174,11 @@ Introduction to Freeform and its tools
             <li>It will look something like this 👉</li>
         </ul>
     </ul>
+    </div>
+    <div style="flex: 1; text-align: center;">
+        <img src="./assets/5-links.png" style="max-height: 80vh;">
+    </div>
+
 </div>
 
 ---
@@ -185,12 +201,18 @@ Introduction to Freeform and its tools
 
 ## Exporting in Freeform
 
-<div style="display: flex;">
+<div style="display: flex; gap: 20px">
+    <div style="flex: 1;">
     <ul>
         <li>In Freeform, you can export the canvas so that you can send it as a pdf to anyone.</li>
         <li>To do so, tap on the file name on the top left hand corner</li>
         <li>Press <strong>Export as PDF</strong>, and select the location to save it in</li>
     </ul>
+    </div>
+    <div style="flex: 1;">
+        <img src="./assets/5-export.png" style="max-height: 90vh;">
+    </div>
+
 </div>
 
 ---
@@ -199,20 +221,25 @@ Introduction to Freeform and its tools
 
 ---vertical---
 
-## Keynote Collaboration
+## Freeform Collaboration
 
-<div style="display: flex;">
-    <ul>
-        <li>To get started, tap on the (export) icon in the top right corner</li>
-        <li>Make sure you set the document to <strong>Collaborate</strong>, not <strong>Send Copy</strong> in the drop-down box.</li>
-        <li>Next, share the link by using:</li>
+<div style="display: flex; gap: 20px;">
+    <div style="flex: 1;">
         <ul>
-            <li><strong>AirDrop</strong>: If in the same room</li>
-            <li><strong>Messages</strong>: If on iMessage</li>
-            <li><strong>Mail</strong>: Using email address</li>
-            <li><strong>Invite with link</strong>: Paste elsewhere</li>
+            <li>To get started, tap on the (export) icon in the top right corner</li>
+            <li>Make sure you set the document to <strong>Collaborate</strong>, not <strong>Send Copy</strong> in the drop-down box.</li>
+            <li>Next, share the link by using:</li>
+            <ul>
+                <li><strong>AirDrop</strong>: If in the same room</li>
+                <li><strong>Messages</strong>: If on iMessage</li>
+                <li><strong>Mail</strong>: Using email address</li>
+                <li><strong>Invite with link</strong>: Paste elsewhere</li>
+            </ul>
         </ul>
-    </ul>
+    </div>
+    <div style="flex: 1; text-align: center;">
+        <img src="./assets/5-collaborate.png" style="max-height: 90vh;">
+    </div>
 </div>
 
 ---vertical---
