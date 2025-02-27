@@ -13,7 +13,7 @@ import { ActionsBar } from '../../actionsBar';
 import { useDarkMode } from 'usehooks-ts';
 
 function handleOpenWithQuery(name: string, value: string) {
-    let url = new URL(window.location.href)
+    const url = new URL(window.location.href)
     url.searchParams.append(name, value);
     window.open(url, "_blank")
 }
@@ -79,7 +79,7 @@ export function RevealjsNoSSRWrapper({ children, isPrint }: { children: React.Re
                 window.close()
             }, 2000);
         }
-    }, [])
+    }, [isPrint])
 
     return (
         <div className={styles.revealViewportWrapper} style={{ position: isFullScreen ? "static" : "relative" }}>
