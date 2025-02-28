@@ -84,7 +84,7 @@ export function RevealjsNoSSRWrapper({ children, isPrint }: { children: React.Re
     return (
         <div className={styles.revealViewportWrapper} style={{ position: isFullScreen ? "static" : "relative" }}>
             {!isPrint && (
-                <div className={styles.actions}>
+                <div className={`${styles.actions} ${isFullScreen && styles.fullscreen}`}>
                     <ActionsBar actions={[
                         {
                             name: "fullscreen",
@@ -104,7 +104,7 @@ export function RevealjsNoSSRWrapper({ children, isPrint }: { children: React.Re
                     ]} />
                 </div>
             )}
-            <div className="reveal-viewport">
+            <div className={`reveal-viewport ${isFullScreen && "fullscreen"}`}>
                 <div className="reveal" ref={deckDivRef}>
                     {children}
                 </div>

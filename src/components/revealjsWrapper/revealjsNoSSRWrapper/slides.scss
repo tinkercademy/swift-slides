@@ -3,11 +3,15 @@
 }
 
 .reveal-viewport {
+  background-color: var(--r-background-color);
+
   position: absolute;
   inset: 0;
+  z-index: 2;
 
-  z-index: 4;
-  background-color: var(--r-background-color);
+  &.fullscreen {
+    z-index: 11;
+  }
 
   section.has-light-background,
   section.has-light-background h1,
