@@ -21,7 +21,6 @@ function handleOpenWithQuery(name: string, value: string) {
 export function RevealjsNoSSRWrapper({ children, isPrint }: { children: React.ReactNode, isPrint: boolean }) {
     const deckDivRef = useRef<HTMLDivElement>(null);
     const deckRef = useRef<Reveal.Api | null>(null);
-    const { toggle: toggleDarkMode, isDarkMode } = useDarkMode()
 
     const [isFullScreen, setIsFullScreen] = useState(false);
 
@@ -84,28 +83,27 @@ export function RevealjsNoSSRWrapper({ children, isPrint }: { children: React.Re
 
     return (
         <div className={styles.revealViewportWrapper} style={{ position: isFullScreen ? "static" : "relative" }}>
-            {!isPrint && <ActionsBar actions={[
-                {
-                    name: "fullscreen",
-                    onClick: () => { setIsFullScreen(!isFullScreen) },
-                    icon: isFullScreen ? <FaCompress /> : <FaExpand />
-                },
-                {
-                    name: "print",
-                    onClick: () => { handleOpenWithQuery("print-pdf", "true") },
-                    icon: <FaPrint />
-                },
-                {
-                    name: "popout",
-                    onClick: () => { handleOpenWithQuery("fullscreen", "true") },
-                    icon: <FaUpRightFromSquare />
-                },
-                {
-                    name: "theme",
-                    onClick: () => { toggleDarkMode() },
-                    icon: ( isDarkMode ? <FaSun /> : <FaMoon /> )
-                }
-            ]} />}
+            {!isPrint && (
+                <div className={styles.actions}>
+                    <ActionsBar actions={[
+                        {
+                            name: "fullscreen",
+                            onClick: () => { setIsFullScreen(!isFullScreen) },
+                            icon: isFullScreen ? <FaCompress /> : <FaExpand />
+                        },
+                        {
+                            name: "print",
+                            onClick: () => { handleOpenWithQuery("print-pdf", "true") },
+                            icon: <FaPrint />
+                        },
+                        {
+                            name: "popout",
+                            onClick: () => { handleOpenWithQuery("fullscreen", "true") },
+                            icon: <FaUpRightFromSquare />
+                        }
+                    ]} />
+                </div>
+            )}
             <div className="reveal-viewport">
                 <div className="reveal" ref={deckDivRef}>
                     {children}
