@@ -1,17 +1,44 @@
-.explorersLogo {
-    height: 100px;
-    position: relative;
-    margin-bottom: 50px;
+.navigator {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: all 250ms ease;
+    z-index: 100;
 
-    img {
-        height: 100%;
-        object-fit: contain;
-        object-position: left;
+    display: flex;
+    padding: 30px 64px 10px 64px;
+
+    .explorersLogo {
+        position: relative;
+        margin-right: auto;
+
+        width: calc(835px / 2);
+        height: calc(140px / 2);
+        transition: all 250ms ease;
+
+        img {
+            object-fit: contain;
+        }
+    }
+}
+
+.navigator.scrolled {
+    background-color: var(--theme-background);
+    padding: 15px 64px 10px 64px;
+
+    .explorersLogo {
+        width: calc(835px / 3);
+        height: calc(140px / 3);
     }
 }
 
 @media only screen and (max-width: 890px) {
-    .explorersLogo {
-        width: 90%;
+    .navigator {
+        padding: 16px;
+
+        &.scrolled {
+            padding: 16px 16px 10px 16px;
+        }
     }
 }

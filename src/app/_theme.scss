@@ -45,7 +45,7 @@
     --theme-p-fontsize: 16px;
 
     //// Margins & Paddings
-    --theme-body-padding: 64px;
+    --theme-body-padding: 120px 64px;
 }
 
 // [data-theme="light"] {
@@ -62,6 +62,6 @@
         --theme-p-fontsize: 16px;
 
         //// Margins & Paddings
-        --theme-body-padding: 16px 16px 64px 16px;
+        --theme-body-padding: 80px 16px 64px 16px;
     }
 }
