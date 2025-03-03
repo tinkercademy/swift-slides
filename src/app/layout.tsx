@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { Footer } from "@/components/footer";
-import { Navigator } from "@/components/navigator";
+import { Footer } from "@/components/layout/footer";
+import { Navigator } from "@/components/layout/navigator";
 
 import "./reset.scss";
 import "./globals.scss";
 import "./_theme.scss";
+import { ThemeManager } from "@/components/layout/themeManager";
 
 const interFont = Inter({
   variable: "--font-inter", // use this CSS variable as var(--font-inter)
@@ -25,11 +26,13 @@ export default function RootLayout({
   return (
     <html lang="en" className={interFont.variable}>
       <body>
-        <main>
-          <Navigator />
-          {children}
-        </main>
-        <Footer />
+        <ThemeManager>
+          <main>
+            <Navigator />
+            {children}
+          </main>
+          <Footer />
+        </ThemeManager>
       </body>
     </html>
   );

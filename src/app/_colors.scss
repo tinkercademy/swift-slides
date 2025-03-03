@@ -6,7 +6,8 @@
 //// Palette Variables
 /// Defines all possible colors used. 
 /// Only access directly if color is fixed throughout themes (eg accents), otherwise use Theme Variables in `_theme.scss`.
-$colors : ("white": #eee,
+$colors : (
+    "white": #eee,
     "black": #111,
 
     "red-link": #fb753a,
@@ -38,6 +39,7 @@ $colors : ("white": #eee,
     "pink-gradient": linear-gradient(45deg, #f75fc8 10%, #d783ff 20%),
 
     "white-gradient": linear-gradient(45deg, #eee 0%, #adadad 100%),
+    "black-gradient": linear-gradient(45deg, #090909 0%, #282828 100%),
 
     "tinkercademy-pink": #ff7878,
 );

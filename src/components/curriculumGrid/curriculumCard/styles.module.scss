@@ -3,13 +3,13 @@
 
 a.card {
   // Since .card is an anchor link, need to remove typical links styles
-  color: inherit;
+  color: var(--theme-foreground);
+  background-color: var(--theme-background2);
   text-decoration: none;
 
   display: flex;
   flex-direction: column;
 
-  background-color: #222;
   border-radius: 16px;
 
   border: #383838;

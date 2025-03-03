@@ -2,7 +2,6 @@ import { tracks } from "@/data/curriculum";
 import { CurriculumCard } from "@/components/curriculumGrid/curriculumCard";
 import { CurriculumGridContainer } from "@/components/curriculumGrid/curriculumGridContainer";
 
-import styles from "./page.module.scss";
 import { getColorFromTrack } from "./track";
 
 export default function TracksPage() {

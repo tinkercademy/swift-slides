@@ -37,9 +37,9 @@ body {
   overflow-x: hidden;
 }
 
-body {
+body div.wrapper {
   color: var(--theme-foreground);
-  background: var(--theme-background);
+  background-color: var(--theme-background);
   padding: var(--theme-body-padding);
   font-family: var(--theme-font);
   -webkit-font-smoothing: antialiased;

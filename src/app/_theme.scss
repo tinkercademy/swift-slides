@@ -6,39 +6,19 @@
 /// CSS variables are used for theme variables so they can be accessed during runtime.
 
 @use "src/app/colors" as c;
+@use 'sass:color';
 
 :root {
+
     // Loop to map each SASS variable to an equivalent CSS variable.
     @each $key, $value in c.$colors {
         --colors-#{$key} : #{$value};
     }
 
-    //// Theme Variables
-    /// Defines colors in a specific theme (eg background/foreground colors).
-    /// Color Theme Variables should use colors from Palette Variables.
-
-    //// Colors
-    --theme-background: var(--colors-black);
-    --theme-foreground: var(--colors-white);
-
-    --theme-p-color: var(--theme-foreground);
-    --theme-h1-color: var(--colors-white);
-    --theme-h1-gradient: var(--colors-white-gradient);
-    --theme-a-color: var(--colors-tinkercademy-pink);
-    // --theme-a_dark-color: 
-    // --theme-a_hover-color: 
-
-//     --r-link-color: var(--colors-blue-link);
-//   --r-link-color-dark: var(--colors-blue-darklink);
-//   --r-link-color-hover: var(--colors-blue-hoverlink);
-
     //// Fonts
     /// Fonts are defined by Next.js via its Font Optimisation in app/layout.tsx
     /// See https://nextjs.org/docs/app/building-your-application/optimizing/fonts
-    --theme-font: var(--font-inter),
-    Arial,
-    Helvetica,
-    sans-serif;
+    --theme-font: var(--font-inter), Arial, Helvetica, sans-serif;
     --theme-h1-fontsize: 40px;
     --theme-h2-fontsize: 24px;
     --theme-h3-fontsize: 18px;
@@ -46,12 +26,43 @@
 
     //// Margins & Paddings
     --theme-body-padding: 120px 64px;
-}
 
-// [data-theme="light"] {
-//     --theme-background: var(--colors-white);
-//     --theme-foreground: var(--colors-black);
-// }
+    .dark {
+        //// Theme Variables
+        /// Defines colors in a specific theme (eg background/foreground colors).
+        /// Color Theme Variables should use colors from Palette Variables.
+    
+        //// Colors
+        --theme-background: #{c.color(black)};
+        --theme-background2: #{color.scale(c.color(black), $lightness: 10%)};
+        --theme-background3: #{color.scale(c.color(black), $lightness: 20%)};
+        --theme-foreground: #{c.color(white)};
+    
+        --theme-p-color: #{c.color(white)};
+        --theme-h1-color: #{c.color(white)};
+        --theme-h1-gradient: #{c.color(white-gradient)};
+        --theme-a-color: #{c.color(tinkercademy-pink)};
+        // --theme-a_dark-color: 
+        // --theme-a_hover-color: 
+    
+        //     --r-link-color: var(--colors-blue-link);
+        //   --r-link-color-dark: var(--colors-blue-darklink);
+        //   --r-link-color-hover: var(--colors-blue-hoverlink);
+    }
+    
+    .light {
+        --theme-background: #{c.color(white)};
+        --theme-background2: #{color.scale(c.color(white), $lightness: -10%)};
+        --theme-background3: #{color.scale(c.color(white), $lightness: -20%)};
+        --theme-foreground: #{c.color(black)};
+
+        --theme-p-color: #{c.color(black)};
+        --theme-h1-color: #{c.color(black)};
+        --theme-h1-gradient: #{c.color(black-gradient)};
+        --theme-a-color: #{c.color(tinkercademy-pink)};
+    }
+    
+}
 
 @media only screen and (max-width: 890px) {
     :root {

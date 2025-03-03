@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import styles from "./styles.module.scss";
 import Link from "next/link";
-import { ActionsBar } from "../actionsBar";
+import { ActionsBar } from "../../actionsBar";
 import { FaMoon, FaSun } from "react-icons/fa6";
 import { useDarkMode } from "usehooks-ts";
 
