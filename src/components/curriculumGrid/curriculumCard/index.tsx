@@ -1,10 +1,10 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 import styles from "./styles.module.scss";
+import { ImageWithFallback } from "@/components/imageWithFallback";
 
 export function CurriculumCard({
     title, subtitle, description, imgURL, pageURL, color
@@ -22,7 +22,12 @@ export function CurriculumCard({
     return (
         <Link href={pageURL?.startsWith("http") || pageURL?.startsWith("/") ? pageURL : `${pathname}/${pageURL}`} className={`${styles.card} ${styles[color]}`}>
             <div className={styles.entryImg}>
-                <Image src={imgURL ?? "/covers/placeholder"} fill={true} alt={`Cover image for "${subtitle ?? title}"`} />
+                <ImageWithFallback
+                    src={imgURL || "/covers/placeholder.png"}
+                    fallbackSrc="/covers/placeholder.png"
+                    placeholder="blur" blurDataURL="/covers/loading.png"
+                    fill={true}
+                    alt={`Cover image for "${subtitle ?? title}"`} />
             </div>
             <div className={styles.contentWrapper}>
                 <h3>{subtitle}</h3>
