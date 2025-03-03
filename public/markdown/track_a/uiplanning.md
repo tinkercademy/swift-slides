@@ -35,11 +35,11 @@
 
 ---vertical---
 
-<img height="800" src="./assets/plan-useractions.png">
+<img height="800" src="/markdown/track_a/assets/plan-useractions.png">
 
 ---vertical---
 
-<img height="800" src="./assets/bug-buzz-example.png">
+<img height="800" src="/markdown/track_a/assets/bug-buzz-example.png">
 
 ---
 
@@ -61,11 +61,11 @@
 
 ---vertical---
 
-<img height="800" src="./assets/plan-input-and-app-state.png">
+<img height="800" src="/markdown/track_a/assets/plan-input-and-app-state.png">
 
 ---vertical---
 
-<img height="800" src="./assets/bug-buzz-example2.png">
+<img height="800" src="/markdown/track_a/assets/bug-buzz-example2.png">
 
 ---vertical---
 
@@ -79,10 +79,10 @@
 
 ---vertical---
 
-<img height="800" src="./assets/plan-choose-features.png">
+<img height="800" src="/markdown/track_a/assets/plan-choose-features.png">
 
 ---vertical---
 
-<img height="800" src="./assets/bug-buzz-example3.png">
+<img height="800" src="/markdown/track_a/assets/bug-buzz-example3.png">
 
 ---

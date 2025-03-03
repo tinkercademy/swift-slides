@@ -76,7 +76,7 @@ HStack {
 
 </div>
 
-<img height="400" src="./assets/aboutme-text-colours.png"> 
+<img height="400" src="/markdown/track_b/assets/aboutme-text-colours.png"> 
 
 </div>
 
@@ -95,7 +95,7 @@ HStack {
 
 </div>
 
-<img height="400" src="./assets/aboutme-padding.jpeg">
+<img height="400" src="/markdown/track_b/assets/aboutme-padding.jpeg">
 
 </div>
 
@@ -117,7 +117,7 @@ HStack {
 
 </div>
 
-<img width="800" src="./assets/aboutme-getting-started-app.png">
+<img width="800" src="/markdown/track_b/assets/aboutme-getting-started-app.png">
 
 </div>
 
@@ -142,16 +142,16 @@ HStack {
 
 <div style="display: flex;">
   <div style="flex-basis: 25%;">
-    <img src="./assets/aboutme-starter-app-1.PNG" alt="Image 1">
+    <img src="/markdown/track_b/assets/aboutme-starter-app-1.PNG" alt="Image 1">
   </div>
   <div style="flex-basis: 25%;">
-    <img src="./assets/aboutme-starter-app-2.PNG" alt="Image 2">
+    <img src="/markdown/track_b/assets/aboutme-starter-app-2.PNG" alt="Image 2">
   </div>
   <div style="flex-basis: 25%;">
-    <img src="./assets/aboutme-starter-app-3.PNG" alt="Image 3">
+    <img src="/markdown/track_b/assets/aboutme-starter-app-3.PNG" alt="Image 3">
   </div>
   <div style="flex-basis: 25%;">
-    <img src="./assets/aboutme-starter-app-4.PNG" alt="Image 4">
+    <img src="/markdown/track_b/assets/aboutme-starter-app-4.PNG" alt="Image 4">
   </div>
 </div>
 
@@ -171,7 +171,7 @@ HStack {
 
 </div>
 
-<img src="./assets/aboutme-tab-views-commenting.jpeg">
+<img src="/markdown/track_b/assets/aboutme-tab-views-commenting.jpeg">
 
 </div>
 
@@ -189,7 +189,7 @@ HStack {
 
 </div>
 
-<img src="./assets/aboutme-tab-item-label.jpeg">
+<img src="/markdown/track_b/assets/aboutme-tab-item-label.jpeg">
 
 </div>
 
@@ -207,7 +207,7 @@ HStack {
 
 </div>
 
-<img width="1000px" src="./assets/aboutme-tab-item-icon.jpeg">
+<img width="1000px" src="/markdown/track_b/assets/aboutme-tab-item-icon.jpeg">
 
 <div>
 
@@ -227,7 +227,7 @@ HStack {
 
 </div>
 
-<img width="500px" src="./assets/aboutme-accent-colour.jpeg">
+<img width="500px" src="/markdown/track_b/assets/aboutme-accent-colour.jpeg">
 
 </div>
 
@@ -248,7 +248,7 @@ HStack {
 
 </div>
 
-<img src="./assets/photo-dropbar.png">
+<img src="/markdown/track_b/assets/photo-dropbar.png">
 
 </div>
 
@@ -274,7 +274,7 @@ HStack {
 
 </div>
 
-<img height="400" src="./assets/aboutme-styling-text.jpeg">
+<img height="400" src="/markdown/track_b/assets/aboutme-styling-text.jpeg">
 
 </div>
 
@@ -294,7 +294,7 @@ HStack {
 
 </div>
 
-<img src="./assets/aboutme-styling-image.jpeg">
+<img src="/markdown/track_b/assets/aboutme-styling-image.jpeg">
 
 </div>
 
@@ -313,7 +313,7 @@ HStack {
 
 </div>
 
-<img width="1000" src="./assets/aboutme-scrollview.png">
+<img width="1000" src="/markdown/track_b/assets/aboutme-scrollview.png">
 
 </div>
 
@@ -333,7 +333,7 @@ HStack {
 
 </div>
 
-<img src="./assets/aboutme-creating-story.png">
+<img src="/markdown/track_b/assets/aboutme-creating-story.png">
 
 </div>
 
@@ -352,7 +352,7 @@ HStack {
 
 </div>
 
-<img src="./assets/aboutme-multiline-text.png">
+<img src="/markdown/track_b/assets/aboutme-multiline-text.png">
 
 </div>
 
@@ -373,7 +373,7 @@ HStack {
 
 </div>
 
-<img width="1500" src="./assets/aboutme-favoritesview.png">
+<img width="1500" src="/markdown/track_b/assets/aboutme-favoritesview.png">
 
 </div>
 
@@ -393,7 +393,7 @@ HStack {
 
 </div>
 
-<img src="./assets/aboutme-arrays.png">
+<img src="/markdown/track_b/assets/aboutme-arrays.png">
 
 </div>
 
@@ -412,9 +412,9 @@ HStack {
 
 <div>
 
-<img src="./assets/aboutme-learn-to-code-2.png">
+<img src="/markdown/track_b/assets/aboutme-learn-to-code-2.png">
 
-<img src="./assets/aboutme-learn-to-code-2-2.png">
+<img src="/markdown/track_b/assets/aboutme-learn-to-code-2-2.png">
 
 </div>
 
@@ -433,7 +433,7 @@ HStack {
 
 </div>
 
-<img height="900" src="./assets/aboutme-funfactsview.jpeg">
+<img height="900" src="/markdown/track_b/assets/aboutme-funfactsview.jpeg">
 
 </div>
 
@@ -452,7 +452,7 @@ HStack {
 
 </div>
 
-<img width="1500" src="./assets/aboutme-how-the-button-works.png">
+<img width="1500" src="/markdown/track_b/assets/aboutme-how-the-button-works.png">
 
 </div>
 
@@ -472,7 +472,7 @@ HStack {
 
 </div>
 
-<img width="1500" src="./assets/aboutme-styling-the-button.png">
+<img width="1500" src="/markdown/track_b/assets/aboutme-styling-the-button.png">
 
 </div>
 
@@ -493,9 +493,9 @@ HStack {
 
 <div>
 
-<img src="./assets/aboutme-button1.jpeg">
+<img src="/markdown/track_b/assets/aboutme-button1.jpeg">
 
-<img src="./assets/aboutme-button2.jpeg">
+<img src="/markdown/track_b/assets/aboutme-button2.jpeg">
 
 </div>
 
@@ -515,7 +515,7 @@ HStack {
 
 </div>
 
-<img src="./assets/aboutme-styling-the-button2.png">
+<img src="/markdown/track_b/assets/aboutme-styling-the-button2.png">
 
 </div>
 
@@ -534,7 +534,7 @@ HStack {
 
 </div>
 
-<img width="1500" src="./assets/aboutme-creating-a-new-tab.jpeg">
+<img width="1500" src="/markdown/track_b/assets/aboutme-creating-a-new-tab.jpeg">
 
 </div>
 
@@ -559,7 +559,7 @@ YourTab()
 
 </div>
 
-<img src="./assets/aboutme-creating-a-new-tab2.png">
+<img src="/markdown/track_b/assets/aboutme-creating-a-new-tab2.png">
 
 </div>
 
@@ -578,7 +578,7 @@ YourTab()
 
 </div>
 
-<img width="1000" src="./assets/aboutme-editing-galleryview.jpeg">
+<img width="1000" src="/markdown/track_b/assets/aboutme-editing-galleryview.jpeg">
 
 </div>
 
@@ -598,7 +598,7 @@ YourTab()
 
 </div>
 
-<img src="./assets/aboutme-adding-the-first-item.jpeg">
+<img src="/markdown/track_b/assets/aboutme-adding-the-first-item.jpeg">
 
 </div>
 
@@ -616,7 +616,7 @@ YourTab()
 
 </div>
 
-<img src="./assets/aboutme-using-scrollview.jpeg">
+<img src="/markdown/track_b/assets/aboutme-using-scrollview.jpeg">
 
 </div>
 
@@ -633,7 +633,7 @@ YourTab()
 
 </div>
 
-<img height="800" src="./assets/aboutme-adding-images.jpeg">
+<img height="800" src="/markdown/track_b/assets/aboutme-adding-images.jpeg">
 
 </div>
 

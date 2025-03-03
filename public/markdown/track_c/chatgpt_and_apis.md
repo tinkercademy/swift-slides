@@ -58,7 +58,7 @@ Working with other people’s servers
 
 This is a HTTP GET request, made by your browser to google.com.
 
-<img src="./assets/searching_http_get.png">
+<img src="/markdown/track_c/assets/searching_http_get.png">
 
 This is an API call! In this case, we’re making a public API call, using our browser, and it’s return a result formatted as a webpage
 
@@ -79,7 +79,7 @@ This is an API call! In this case, we’re making a public API call, using our b
             <li>Computers: Who cares about pictures! Gimme data about cats. 😾</li>
         </ul>
     </ul>
-    <img src="./assets/cats.png">
+    <img src="/markdown/track_c/assets/cats.png">
 </div>
 
 ---vertical---
@@ -91,7 +91,7 @@ This is an API call! In this case, we’re making a public API call, using our b
         <ul>
             <li>Computers: Let’s just go to r/cats.json instead</li>
         </ul>
-        <img src="./assets/cats_json.png">
+        <img src="/markdown/track_c/assets/cats_json.png">
         <ul>
             <li>Computers: Purrrfect!</li>
         </ul>
@@ -100,7 +100,7 @@ This is an API call! In this case, we’re making a public API call, using our b
         <ul>
             <li>Humans: Use Firefox to see formatted JSON</li>
         </ul>
-        <img src="./assets/cats_json_firefox.png">
+        <img src="/markdown/track_c/assets/cats_json_firefox.png">
     </div>
 </div>
 
@@ -132,7 +132,7 @@ Introduction to ChatGPT, OpenAI, and the GPT API
 
 ## Try out ChatGPT, if you haven’t already!
 
-<img src="./assets/chagpt_intro.png" style="height:800px">
+<img src="/markdown/track_c/assets/chagpt_intro.png" style="height:800px">
 
 ---vertical---
 
@@ -167,7 +167,7 @@ Introduction to ChatGPT, OpenAI, and the GPT API
 ## Adding a Package
 
 <div style="display:flex">
-    <img src="./assets/package_adding.png" style="height: 500px;">
+    <img src="/markdown/track_c/assets/package_adding.png" style="height: 500px;">
     <div>
     
 - Open the sidebar <img style="margin-bottom: -4px" height="35px" src="/assets/icons/sidebar.left.svg">, tap on the new document button <img style="margin-bottom: -4px" src="/assets/icons/doc.badge.plus.svg" alt="New Document Icon" width="35px">
@@ -189,7 +189,7 @@ We’re not doing full-fledged chat — more like one question, one answer.
 ## Try to create this UI!
 
 <div style="display:flex">
-    <img src="./assets/searching_stack_chatgpt.png" style="height: 500px; ">
+    <img src="/markdown/track_c/assets/searching_stack_chatgpt.png" style="height: 500px; ">
     <div>
     
 - `TextField`, linked to a state variable, `inputText`
@@ -358,7 +358,7 @@ func sendRequest() {
   - In case it returns nil, we have to deal with it
   - To do this, we can use do and catch statements
 
-<img src="./assets/try_await_error.png">
+<img src="/markdown/track_c/assets/try_await_error.png">
 
 ---vertical---
 

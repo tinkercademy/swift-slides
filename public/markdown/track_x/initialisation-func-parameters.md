@@ -26,7 +26,7 @@
 
 # Initialisation
 
-<img height="800" src="./assets/placeholder_initialisation.png">
+<img height="800" src="/markdown/track_x/assets/placeholder_initialisation.png">
 
 ---
 
@@ -34,13 +34,13 @@
 
 ### Try out the exercise under Initialisation!
 
-<img height="800" src="./assets/placeholder_hands_on_initialisation.png">
+<img height="800" src="/markdown/track_x/assets/placeholder_hands_on_initialisation.png">
 
 ---
 
 # Functions
 
-<img height="800" src="./assets/placeholder_functions.png">
+<img height="800" src="/markdown/track_x/assets/placeholder_functions.png">
 
 ---
 
@@ -48,13 +48,13 @@
 
 ### Try out the exercise under Functions!
 
-<img height="800" src="./assets/placeholder_hands_on_functions.png">
+<img height="800" src="/markdown/track_x/assets/placeholder_hands_on_functions.png">
 
 ---
 
 # Parameters
 
-<img height="800" src="./assets/placeholder_parameters.png">
+<img height="800" src="/markdown/track_x/assets/placeholder_parameters.png">
 
 ---
 
@@ -62,7 +62,7 @@
 
 ### Try out the exercises under Parameters!
 
-<img height="800" src="./assets/placeholder_hands_on_parameters.png">
+<img height="800" src="/markdown/track_x/assets/placeholder_hands_on_parameters.png">
 
 ---
 

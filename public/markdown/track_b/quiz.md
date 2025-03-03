@@ -28,8 +28,8 @@ What we’ll make: Well, a quiz app. There will be a few options, where you have
 
 <div style="flex:1; display: flex; flex-direction: column;">
 
-<img width="500" src="./assets/shapes-create-app-ss.jpg">
-<img width="500" src="./assets/quiz-rename-app.png">
+<img width="500" src="/markdown/track_b/assets/shapes-create-app-ss.jpg">
+<img width="500" src="/markdown/track_b/assets/quiz-rename-app.png">
 
 </div>
 
@@ -45,7 +45,7 @@ What we’ll make: Well, a quiz app. There will be a few options, where you have
 
 ## Creating the User Interface
 
-<img height="800" src="./assets/quiz-ui.png">
+<img height="800" src="/markdown/track_b/assets/quiz-ui.png">
 
 ---vertical---
 
@@ -233,7 +233,7 @@ struct ContentView: View {
 
 ## Creating the Alert
 
-<img height="850" src="./assets/quiz-creating-alert.png">
+<img height="850" src="/markdown/track_b/assets/quiz-creating-alert.png">
 
 ---vertical---
 
@@ -292,19 +292,19 @@ Button {
 - We’ll use these symbols because they resemble options in Kahoot!, a popular quiz app.
 - Feel free to choose your own!
 
-<img width="300" src="./assets/jokes-kahoot.png">
+<img width="300" src="/markdown/track_b/assets/jokes-kahoot.png">
 
 ---vertical---
 
 ## Adding the Symbols to your app
 
-<img height="850" src="./assets/quiz-symbols1.png">
+<img height="850" src="/markdown/track_b/assets/quiz-symbols1.png">
 
 ---vertical---
 
 ## Repeat this for the other buttons
 
-<img height="850" src="./assets/quiz-symbol2.png">
+<img height="850" src="/markdown/track_b/assets/quiz-symbol2.png">
 
 ---vertical---
 
@@ -372,7 +372,7 @@ func optionButton(optionNumber: OptionChoice, iconName: String) -> some View {
 
 </div>
 
-<img src="./assets/jokes-init-parameters.png">
+<img src="/markdown/track_b/assets/jokes-init-parameters.png">
 
 </div>
 
@@ -389,7 +389,7 @@ func optionButton(optionNumber: OptionChoice, iconName: String) -> some View {
 
 ## Implementing Progress Bar
 
-<img height="700" src="./assets/quiz-progressbar.png">
+<img height="700" src="/markdown/track_b/assets/quiz-progressbar.png">
 
 ---
 
@@ -403,7 +403,7 @@ func optionButton(optionNumber: OptionChoice, iconName: String) -> some View {
 
 - A pop-up sheet to display the user’s score
 
-<img src="./assets/quiz-sheet-layout.png">
+<img src="/markdown/track_b/assets/quiz-sheet-layout.png">
 
 ---vertical---
 
@@ -644,7 +644,7 @@ struct ContentView: View {
   - One to show the ring
   - One to show the path
 
-<img height="500" src="./assets/circle-progress.png">
+<img height="500" src="/markdown/track_b/assets/circle-progress.png">
 
 ---vertical---
 
@@ -654,19 +654,19 @@ struct ContentView: View {
 
 ## Creating a Circle
 
-<img height="800" src="./assets/CircularProgressView.png">
+<img height="800" src="/markdown/track_b/assets/CircularProgressView.png">
 
 ---vertical---
 
 ## Making a Ring
 
-<img height="800" src="./assets/making_a_ring.png">
+<img height="800" src="/markdown/track_b/assets/making_a_ring.png">
 
 ---vertical---
 
 ## Creating a Circle
 
-<img height="800" src="./assets/CircleProgressIndicator2.png">
+<img height="800" src="/markdown/track_b/assets/CircleProgressIndicator2.png">
 
 ---vertical---
 
@@ -729,19 +729,19 @@ struct CircularProgressView: View {
 
 ## Cutting the Circle
 
-<img height="800" src="./assets/cuttingTheCircle.png">
+<img height="800" src="/markdown/track_b/assets/cuttingTheCircle.png">
 
 ---vertical---
 
 ## Drawing the Line
 
-<img height="800" src="./assets/drawingTheLine.png">
+<img height="800" src="/markdown/track_b/assets/drawingTheLine.png">
 
 ---vertical---
 
 ## Change the line colour
 
-<img height="800" src="./assets/changingLineColour.png">
+<img height="800" src="/markdown/track_b/assets/changingLineColour.png">
 
 ---vertical---
 
@@ -775,7 +775,7 @@ struct CircularProgressView: View {
 
 ## Adding Progress Ring
 
-<img height="800" src="./assets/addingProgressRing.png">
+<img height="800" src="/markdown/track_b/assets/addingProgressRing.png">
 
 ---vertical---
 

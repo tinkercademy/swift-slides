@@ -36,7 +36,7 @@
 
 ## Swift Playgrounds
 
-<img src="./assets/playgrounds-launch-ss.png" alt="Swift Playgrounds Launch" width="50%">
+<img src="/markdown/track_b/assets/playgrounds-launch-ss.png" alt="Swift Playgrounds Launch" width="50%">
 
 ---vertical---
 
@@ -47,7 +47,7 @@
         <li>Swift Playgrounds offers interactive tutorials that teach Swift Fundamentals as SwiftUI elements</li>
         <li>Can be accessed by clicking <code>See All</code> in More Playgrounds</li>
     </ul>
-    <img style="width:70%" src="./assets/playgrounds-see_all-ss.png" alt="Swift Playgrounds See All Libaray" >
+    <img style="width:70%" src="/markdown/track_b/assets/playgrounds-see_all-ss.png" alt="Swift Playgrounds See All Libaray" >
 </div>
 
 ---vertical---
@@ -56,7 +56,7 @@
 
 #### Mainly used when you want to create an App with SwiftUI
 
-<img style="width:70%" src="./assets/playgrounds-app-create-ss.png" alt="Swift Playgrounds App Create page " >
+<img style="width:70%" src="/markdown/track_b/assets/playgrounds-app-create-ss.png" alt="Swift Playgrounds App Create page " >
 
 ---vertical---
 
@@ -64,7 +64,7 @@
 
 #### Mainly used for running Swift code that does not require SwiftUI
 
-<img style="width:70%" src="./assets/playgrounds-book-create-ss.png" alt="Swift Playgrounds Book Create page" >
+<img style="width:70%" src="/markdown/track_b/assets/playgrounds-book-create-ss.png" alt="Swift Playgrounds Book Create page" >
 
 ---
 
@@ -80,7 +80,7 @@
         <li>Press the home and power buttons at the same time to take a screenshot. </li>
         <li>With Apple Pencil, you can also draw in from the bottom left..</li>
     </ul>
-    <img src="./assets/ipad-screenshot.png" alt="Taking screenshots on iPads">
+    <img src="/markdown/track_b/assets/ipad-screenshot.png" alt="Taking screenshots on iPads">
 </div>
 
 ---vertical---
@@ -91,12 +91,12 @@
     <ul style="width:60%">
         <li>First, ensure that the Screen Recording setting in Control Center is enabled</li>
             <ul>
-                <li>Go to Settings → Control Center, then tap the Add Button <img style="margin-bottom: -4px" src="./assets/plus_button.svg" alt="Plus Button" height="32px"> next to Screen Recording</li>
+                <li>Go to Settings → Control Center, then tap the Add Button <img style="margin-bottom: -4px" src="/markdown/track_b/assets/plus_button.svg" alt="Plus Button" height="32px"> next to Screen Recording</li>
             </ul>
         <li>Open the Control Center by swiping down from the top-right of the screen</li>
         </li>
             Tap the Record Button, wait for the three-second countdown. Then, tap it again to stop the recording
         </li>
     </ul>
-     <img style="width:50%" src="./assets/ipad-screenrecording-ss.png">
+     <img style="width:50%" src="/markdown/track_b/assets/ipad-screenrecording-ss.png">
 </div>

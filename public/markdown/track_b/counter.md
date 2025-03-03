@@ -172,13 +172,13 @@ myAmazingString = 123 // Throws an error.
 
 <div style="display: flex;">
     <ol>
-        <li>Press the <img style="margin-bottom: -8px;" src="./assets/new-project-button.png" alt="New Project Button"> icon to create a new App</li>
+        <li>Press the <img style="margin-bottom: -8px;" src="/markdown/track_b/assets/new-project-button.png" alt="New Project Button"> icon to create a new App</li>
         <li>Hold down on the newly created app and tap <strong>Rename</strong></li>
         <li>Name it <strong>“Counter”</strong></li>
         <li>Tap on the app to open it</li>
         <li>Customise the App Settings to your liking.</li>
     </ol>
-    <img src="./assets/new-project.png">
+    <img src="/markdown/track_b/assets/new-project.png">
 </div>
 
 ---vertical---
@@ -197,7 +197,7 @@ myAmazingString = 123 // Throws an error.
     <br>
     The examples will be Cookie Monster themed.</p>
     </div>
-    <img src="./assets/clicker-wireframe-diagram.png">
+    <img src="/markdown/track_b/assets/clicker-wireframe-diagram.png">
 </div>
 
 ---vertical---
@@ -220,7 +220,7 @@ myAmazingString = 123 // Throws an error.
     </code></pre>
     <p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift</p>
     </div>
-    <img src="./assets/preview-cookies-setup.png" height="100%">
+    <img src="/markdown/track_b/assets/preview-cookies-setup.png" height="100%">
 </div>
 
 ---vertical---

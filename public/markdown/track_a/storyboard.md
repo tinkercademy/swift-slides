@@ -11,7 +11,7 @@ Storyboarding the screens and flow of your app
 ---
 
 ## Example Food Buzz Prototype
-<img height="750" src="./assets/food-buzz-prototype-final.png">
+<img height="750" src="/markdown/track_a/assets/food-buzz-prototype-final.png">
 
 ---
 
@@ -78,7 +78,7 @@ Storyboarding the screens and flow of your app
 
 ## Example App Behaviour
 
-<img height="750" src="./assets/label-app-storyboard.png">
+<img height="750" src="/markdown/track_a/assets/label-app-storyboard.png">
 
 ---
 
@@ -99,5 +99,5 @@ Storyboarding the screens and flow of your app
 
 ## App Journal
 
-<img src="./assets/bug-buzz-app-journal-final.png">
+<img src="/markdown/track_a/assets/bug-buzz-app-journal-final.png">
 

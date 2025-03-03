@@ -19,41 +19,41 @@
 
 <div style="display: flex; ">
     <ol>
-        <li>Press the <img style="margin-bottom: -8px;" src="./assets/new-project-button.png" alt="New Project Button"> icon to create a new App</li>
+        <li>Press the <img style="margin-bottom: -8px;" src="/markdown/track_b/assets/new-project-button.png" alt="New Project Button"> icon to create a new App</li>
         <li>Hold down on the newly created app and tap <strong>Rename</strong></li>
         <li>Name it <strong>"Jokes"</strong></li>
         <li>Tap on the app to open it</li>
     </ol>
-    <img src="./assets/new-project.png">
+    <img src="/markdown/track_b/assets/new-project.png">
 </div>
 
 ---vertical---
 
 ## This is how it should look like
 
-<img height="800" src="./assets/jokes-new-app-ss.PNG">
+<img height="800" src="/markdown/track_b/assets/jokes-new-app-ss.PNG">
 
 ---vertical---
 
 ## Jokes layout
 
-<img height="800" src="./assets/jokes-layout.png">
+<img height="800" src="/markdown/track_b/assets/jokes-layout.png">
 
 ---vertical---
 
-<img height="800" src="./assets/jokes-layout2.png">
+<img height="800" src="/markdown/track_b/assets/jokes-layout2.png">
 
 ---vertical---
 
 ## Nothing too new here.
 
-<img height="800" src="./assets/jokes-starter.png">
+<img height="800" src="/markdown/track_b/assets/jokes-starter.png">
 
 ---vertical---
 
 ## What's going on here
 
-<img height="800" src="./assets/jokes-starter-explained.png">
+<img height="800" src="/markdown/track_b/assets/jokes-starter-explained.png">
 
 ---vertical---
 
@@ -86,7 +86,7 @@ Text("What?? **_Tell me_!!**")
   - Singular (not Jokes)
 
 </ul>
-<img src="./assets/jokes-new-file.png">
+<img src="/markdown/track_b/assets/jokes-new-file.png">
 </div>
 
 ---vertical---
@@ -135,7 +135,7 @@ struct ContentView: View {
 
 ## Show First Joke
 
-<img height="800" src="./assets/jokes-using-structs.png">
+<img height="800" src="/markdown/track_b/assets/jokes-using-structs.png">
 
 ---
 
@@ -182,13 +182,13 @@ struct ContentView: View {
 
 ## Hide the punchline!
 
-<img height="800" src="./assets/jokes-hide-punchline.png">
+<img height="800" src="/markdown/track_b/assets/jokes-hide-punchline.png">
 
 ---vertical---
 
 ## Show Punchline when What? tapped
 
-<img height="800" src="./assets/jokes-show-punchline.png">
+<img height="800" src="/markdown/track_b/assets/jokes-show-punchline.png">
 
 ---
 
@@ -244,7 +244,7 @@ struct ContentView: View {
 
 ## Implementing currentJoke
 
-<img height="800" src="./assets/jokes-currentJoke.png">
+<img height="800" src="/markdown/track_b/assets/jokes-currentJoke.png">
 
 ---vertical---
 
@@ -279,17 +279,17 @@ struct ContentView: View {
 
 ---vertical---
 
-<img height="900" src="./assets/jokes-zstack.png">
+<img height="900" src="/markdown/track_b/assets/jokes-zstack.png">
 
 ---
 
-<img height="1000" src="./assets/crashed.png">
+<img height="1000" src="/markdown/track_b/assets/crashed.png">
 
 ---vertical---
 
 ## What does this mean?
 
-<img src="./assets/jokes-indexoutofrange.png">
+<img src="/markdown/track_b/assets/jokes-indexoutofrange.png">
 
 - This just means we ran out of jokes
 - Swift doesn't know what to do now because there are no more jokes to show the user.
@@ -309,7 +309,7 @@ struct ContentView: View {
 
 ---vertical---
 
-<img height="900" src="./assets/jokes-resetindex1.png">
+<img height="900" src="/markdown/track_b/assets/jokes-resetindex1.png">
 
 ---
 
@@ -354,7 +354,7 @@ struct ContentView: View {
   - More importantly, it lets us show you how to use alerts.
 
 </ul>
-<img src="./assets/jokes-alert-ss.jpeg">
+<img src="/markdown/track_b/assets/jokes-alert-ss.jpeg">
 </div>
 
 ---vertical---
@@ -446,7 +446,7 @@ var body: some View {
 </ul>
 </div>
 <div style="flex: 1;text-align: center;">
-<iframe width="1400" height="600" src="./assets/jokes-alert-demo.mp4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="1400" height="600" src="/markdown/track_b/assets/jokes-alert-demo.mp4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 </div>
 
@@ -473,7 +473,7 @@ var body: some View {
 - **`.destructive`**: If an alert button results in a destructive action, like deleting content, specify the destructive button style to help people recognize it.
 - **`.cancel`**: A Cancel button provides a clear, safe way to avoid a destructive action. Cancel buttons are default buttons so that people must intentionally choose a button other than the default to continue with the destructive action.
 
-<img height="250" src="./assets/jokes-alert-deletefiles.png">
+<img height="250" src="/markdown/track_b/assets/jokes-alert-deletefiles.png">
 
 ---vertical---
 
@@ -498,7 +498,7 @@ var body: some View {
 - Only add an alert message if it is needed
 - Add a short succinct message to provide the user with additional context and information.
 
-<img height="250" src="./assets/jokes-alert-description.png">
+<img height="250" src="/markdown/track_b/assets/jokes-alert-description.png">
 
 ---vertical---
 
@@ -540,7 +540,7 @@ var body: some View {
 </div>
 <div style="flex: 1;text-align: center;">
 
-<img width="700" src="./assets/jokes-sheet-1-ss.jpeg">
+<img width="700" src="/markdown/track_b/assets/jokes-sheet-1-ss.jpeg">
 
 </div>
 </div>
@@ -590,12 +590,12 @@ var body: some View {
 </div>
 <div style="text-align: center;height:450px">
 
-<img height="200" src="./assets/photo-dropbar.png">
+<img height="200" src="/markdown/track_b/assets/photo-dropbar.png">
 
 </div>
 <div style="flex: 1;text-align: center;">
 
-<img height="800" src="./assets/jokes-add-images.png">
+<img height="800" src="/markdown/track_b/assets/jokes-add-images.png">
 
 </div>
 </div>
@@ -619,7 +619,7 @@ var body: some View {
 
 ---vertical---
 
-<img height="900" src="./assets/jokes-new-view-ss.png">
+<img height="900" src="/markdown/track_b/assets/jokes-new-view-ss.png">
 
 ---vertical---
 
@@ -627,17 +627,17 @@ var body: some View {
 
 - Replace all instances of the _`MyView`_ with your _`FeedbackResponseView`_.
 
-<img height="700" src="./assets/jokes-new-view-renamed-ss.png">
+<img height="700" src="/markdown/track_b/assets/jokes-new-view-renamed-ss.png">
 
 ---vertical---
 
-<img height="900" src="./assets/jokes-model-view-explained.png">
+<img height="900" src="/markdown/track_b/assets/jokes-model-view-explained.png">
 
 ---vertical---
 
 ## Positive Feedback
 
-<img src="./assets/jokes-feedbackview1.png">
+<img src="/markdown/track_b/assets/jokes-feedbackview1.png">
 
 ---vertical---
 
@@ -654,7 +654,7 @@ var body: some View {
 
 - Ternary operators are single-line if-else statements ~~that make you feel cool using them.~~
 
-<img src="./assets/Ternary-Operators.png">
+<img src="/markdown/track_b/assets/Ternary-Operators.png">
 
 ---vertical---
 
@@ -662,13 +662,13 @@ var body: some View {
 
 The `isPositive` variable will be passed in _(or injected)_ when the View is created
 
-<img src="./assets/jokes-2-previews.png">
+<img src="/markdown/track_b/assets/jokes-2-previews.png">
 
 ---vertical---
 
 ## Updating Content using isPositive
 
-<img src="./assets/jokes-isPositive.png">
+<img src="/markdown/track_b/assets/jokes-isPositive.png">
 
 ---vertical---
 
@@ -682,7 +682,7 @@ The `isPositive` variable will be passed in _(or injected)_ when the View is cre
 
 ---vertical---
 
-<img src="./assets/jokes-feedback-presentation-contentview.png">
+<img src="/markdown/track_b/assets/jokes-feedback-presentation-contentview.png">
 
 ---vertical---
 
@@ -746,7 +746,7 @@ var body: some View {
 </ul>
 </div>
 <div style="flex: 1;text-align: center;">
-<iframe width="1400 " height="600" src="./assets/jokes-demo-alerts-working.mp4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="1400 " height="600" src="/markdown/track_b/assets/jokes-demo-alerts-working.mp4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 </div>
 
@@ -782,7 +782,7 @@ var body: some View {
 </ul>
 </div>
 <div style="flex: 1;text-align: center;">
-<iframe width="1400" height="600" src="./assets/jokes-animation-demo.mp4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="1400" height="600" src="/markdown/track_b/assets/jokes-animation-demo.mp4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 </div>
 
@@ -1178,7 +1178,7 @@ Text(jokes[currentJoke].punchline)
 ## Run your code!!
 
 <video width="1000" controls>
-  <source  src="./assets/jokes-animation-demo.mp4" type="video/mp4">
+  <source  src="/markdown/track_b/assets/jokes-animation-demo.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 

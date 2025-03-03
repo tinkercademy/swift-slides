@@ -31,24 +31,24 @@ Create a name card app in Swift Playgrounds.
 
 <div style="display: flex; ">
     <ol>
-        <li>Press the <img style="margin-bottom: -8px;" src="./assets/new-project-button.png" alt="New Project Button"> icon to create a new App</li>
+        <li>Press the <img style="margin-bottom: -8px;" src="/markdown/track_b/assets/new-project-button.png" alt="New Project Button"> icon to create a new App</li>
         <li>Hold down on the newly created app and tap <strong>Rename</strong></li>
         <li>Name it <strong>“Name Card”</strong></li>
         <li>Tap on the app to open it</li>
     </ol>
-    <img src="./assets/new-project.png">
+    <img src="/markdown/track_b/assets/new-project.png">
 </div>
 
 ---vertical---
 
 <div style="display:flex;justify-content:center;align-items:center;">
-    <img src="./assets/playgrounds-empty-project.png" alt="A screenshot of an empty Playgrounds project with ContentView open">
+    <img src="/markdown/track_b/assets/playgrounds-empty-project.png" alt="A screenshot of an empty Playgrounds project with ContentView open">
 </div>
 
 ---vertical---
 
 <div style="display:flex;justify-content:center;align-items:center;">
-    <img src="./assets/annotated-playgrounds-interface.png" alt="An annotated Playgrounds screenshot pointing out the various features such as the side bar, toolbar, tab bar, editor, and console.">
+    <img src="/markdown/track_b/assets/annotated-playgrounds-interface.png" alt="An annotated Playgrounds screenshot pointing out the various features such as the side bar, toolbar, tab bar, editor, and console.">
 </div>
 
 ---vertical---
@@ -56,7 +56,7 @@ Create a name card app in Swift Playgrounds.
 ## What’s in the toolbar
 
 <div style="display:flex;justify-content:center;align-items:center;">
-    <img src="./assets/annotated-playgrounds-toolbar.png" alt="An annotated Playgrounds screenshot pointing out the various buttons in the toolbar.">
+    <img src="/markdown/track_b/assets/annotated-playgrounds-toolbar.png" alt="An annotated Playgrounds screenshot pointing out the various buttons in the toolbar.">
 </div>
 
 ---vertical---
@@ -70,7 +70,7 @@ Create a name card app in Swift Playgrounds.
         <li>Make sure our app’s name is “Name card”</li>
         <li>Select your favourite colour as your <em>Accent Color</em>.</li>
     </ol>
-    <img src="./assets/playgrounds-app-settings.png" width="70%">
+    <img src="/markdown/track_b/assets/playgrounds-app-settings.png" width="70%">
     
 </div>
 
@@ -91,7 +91,7 @@ Create a name card app in Swift Playgrounds.
         </li>
         <li>You’re now an app icon!</li>
     </ol>
-    <img src="./assets/playgrounds-app-settings-custom-icon.png" width="50%">
+    <img src="/markdown/track_b/assets/playgrounds-app-settings-custom-icon.png" width="50%">
 </div>
 
 ---
@@ -174,7 +174,7 @@ struct ContentView: View {
         <li>Hold down on its name and select <strong>Rename</strong></li>
         <li>Name it <strong>MyImage</strong>.</li>
     </ol>
-    <img src="./assets/playgrounds-image-asset.png" width="70%">
+    <img src="/markdown/track_b/assets/playgrounds-image-asset.png" width="70%">
 </div>
 
 ---vertical---
@@ -182,7 +182,7 @@ struct ContentView: View {
 ## Adding Your Image
 
 <div style="display: flex; ">
-    <img src="./assets/playgrounds-image-preview.png">
+    <img src="/markdown/track_b/assets/playgrounds-image-preview.png">
     <ol>
         <li>Replace the <img style="margin-bottom: -4px" src="/assets/icons/globe.svg" alt="Globe Icon" width="32px"> <code>Image</code> provided with your own image!</li>
         <li>
@@ -246,7 +246,7 @@ struct ContentView: View {
         <li>We’ve seen it already! There was one provided free for us when we created our app.</li>
         <li>If you are arranging items vertically, you’ll need a <code>VStack</code>.</li>
     </ul>
-    <img src="./assets/vstack-diagram.png">
+    <img src="/markdown/track_b/assets/vstack-diagram.png">
 </div>
 
 ---vertical---
@@ -281,7 +281,7 @@ struct ContentView: View {
             </ul>
         </li>
     </ul>
-    <img src="./assets/hstack-diagram.png">
+    <img src="/markdown/track_b/assets/hstack-diagram.png">
 </div>
 
 ---vertical---
@@ -315,7 +315,7 @@ struct ContentView: View {
             <li>You can tap on ether the <code>{</code> or <code>}</code> to get the entire area highlighted.</li>
         </ul>
     </div>
-    <img src="./assets/playgrounds-curly-brace-highlight.png">
+    <img src="/markdown/track_b/assets/playgrounds-curly-brace-highlight.png">
 </div>
 
 ---vertical---
@@ -632,7 +632,7 @@ struct ContentView: View {
         <li>We’ll create some tappable icons in a <code>HStack</code> for users of our app to find out more about us.</li>
         <li>Within the <code>VStack</code>, create an empty <code>HStack</code>. It will be populated with our <code>Link</code>s later.</li>
     </ul>
-    <img src="./assets/link-diagram.png">
+    <img src="/markdown/track_b/assets/link-diagram.png">
 </div>
 
 ---vertical---
@@ -645,7 +645,7 @@ struct ContentView: View {
         <li>In the toolbar, select <img style="margin-bottom: -4px" src="/assets/icons/dot.square.svg" alt="Views Library Icon" height="32px"> to open the <em>Views Library</em></li>
         <li>Search and select <strong>”<img style="margin-bottom: -4px" src="/assets/icons/link.svg" alt="Views Library Icon" height="32px"> Link”</strong></li>
     </ol>
-    <img src="./assets/playgrounds-views-library-link.png" width="70%">
+    <img src="/markdown/track_b/assets/playgrounds-views-library-link.png" width="70%">
 </div>
 
 ---vertical---
@@ -678,7 +678,7 @@ Feel free to change the link from [apple.com](https://apple.com) to something el
         <li>After you're done, add more links!</li>
         <li>Use modifiers you learnt earlier to customise them!</li>
     </ol>
-    <img src="./assets/playgrounds-symbols-library.png" width="50%">
+    <img src="/markdown/track_b/assets/playgrounds-symbols-library.png" width="50%">
 </div>
 
 ---vertical---

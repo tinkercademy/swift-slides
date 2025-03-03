@@ -45,7 +45,7 @@
     </ul>
   </div>
   <div style="flex: 1;">
-    <img src="./assets/x-1-8-0.png" alt="XCode UI" style="width: 100%; max-width: 300px;">
+    <img src="/markdown/track_x/assets/x-1-8-0.png" alt="XCode UI" style="width: 100%; max-width: 300px;">
   </div>
 </div>
 
@@ -66,8 +66,8 @@
     </ol>
   </div>
   <div style="flex: 1; position: relative; width: 700px; height: 500px;">
-    <img src="./assets/x-1-10-0.png" alt="Swift Playgrounds UI" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
-    <img src="./assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
+    <img src="/markdown/track_x/assets/x-1-10-0.png" alt="Swift Playgrounds UI" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
+    <img src="/markdown/track_x/assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
   </div>
 </div>
 
@@ -85,8 +85,8 @@
   </div>
   <!-- Image Section -->
   <div style="flex: 1; position: relative; width: 700px; height: 500px;">
-    <img src="./assets/x-1-11-0.png" alt="Swift Playgrounds UI Sidebar" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
-    <img src="./assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
+    <img src="/markdown/track_x/assets/x-1-11-0.png" alt="Swift Playgrounds UI Sidebar" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
+    <img src="/markdown/track_x/assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
   </div>
 </div>
 
@@ -105,12 +105,12 @@
 
 <div style="display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; padding: 20px;">
   <div style="position: relative; width: 1050px; height: 650px;">
-    <img src="./assets/x-1-14-0.png" alt="Screenshot showing cake" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
-    <img src="./assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
+    <img src="/markdown/track_x/assets/x-1-14-0.png" alt="Screenshot showing cake" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
+    <img src="/markdown/track_x/assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
   </div>
   <div style="position: relative; width: 1050px; height: 650px;">
-    <img src="./assets/x-1-14-1.png" alt="Screenshot showing drone blueprints" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
-    <img src="./assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
+    <img src="/markdown/track_x/assets/x-1-14-1.png" alt="Screenshot showing drone blueprints" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
+    <img src="/markdown/track_x/assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
   </div>
 </div>
 
@@ -118,12 +118,12 @@
 
 <div style="display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; padding: 20px;">
   <div style="position: relative; width: 1050px; height: 650px;">
-    <img src="./assets/x-1-15-0.png" alt="Screenshot showing drone" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
-    <img src="./assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
+    <img src="/markdown/track_x/assets/x-1-15-0.png" alt="Screenshot showing drone" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
+    <img src="/markdown/track_x/assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
   </div>
   <div style="position: relative; width: 1050px; height: 650px;">
-    <img src="./assets/x-1-15-1.png" alt="Screenshot showing coding inspirational words" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
-    <img src="./assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
+    <img src="/markdown/track_x/assets/x-1-15-1.png" alt="Screenshot showing coding inspirational words" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
+    <img src="/markdown/track_x/assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
   </div>
 </div>
 
@@ -132,12 +132,12 @@
 ### Controlling Byte
 <div style="display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; padding: 20px;">
   <div style="position: relative; width: 1050px; height: 650px;">
-    <img src="./assets/x-1-16-0.png" alt="Screenshot showing moveForward()" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
-    <img src="./assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
+    <img src="/markdown/track_x/assets/x-1-16-0.png" alt="Screenshot showing moveForward()" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
+    <img src="/markdown/track_x/assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
   </div>
   <div style="position: relative; width: 1050px; height: 650px;">
-    <img src="./assets/x-1-16-1.png" alt="Screenshot showing collectGem()" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
-    <img src="./assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
+    <img src="/markdown/track_x/assets/x-1-16-1.png" alt="Screenshot showing collectGem()" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
+    <img src="/markdown/track_x/assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
   </div>
 </div>
 
@@ -153,8 +153,8 @@
     </ul>
   </div>
   <div style="flex: 1; position: relative; width: 700px; height: 500px;">
-    <img src="./assets/x-1-17-0.png" alt="Screenshot showing camelCase" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
-    <img src="./assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
+    <img src="/markdown/track_x/assets/x-1-17-0.png" alt="Screenshot showing camelCase" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
+    <img src="/markdown/track_x/assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
   </div>
 </div>
 
@@ -163,8 +163,8 @@
 # Introduction to the interface
 <div style="display: flex; justify-content: center; align-items: center;">
   <div style="position: relative; width: 1050px; height: 700px;">
-    <img src="./assets/x-1-18-0.png" alt="Screenshot of Swift Playgrounds UI" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
-    <img src="./assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
+    <img src="/markdown/track_x/assets/x-1-18-0.png" alt="Screenshot of Swift Playgrounds UI" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
+    <img src="/markdown/track_x/assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
   </div>
 </div>
 
@@ -185,8 +185,8 @@
     </ul>
   </div>
   <div style="flex: 1; position: relative; width: 700px; height: 500px;">
-    <img src="./assets/x-1-19-0.png" alt="Screenshot showing Issuing Commands in Swift Playgrounds" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
-    <img src="./assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
+    <img src="/markdown/track_x/assets/x-1-19-0.png" alt="Screenshot showing Issuing Commands in Swift Playgrounds" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
+    <img src="/markdown/track_x/assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
   </div>
 </div>
 
@@ -196,12 +196,12 @@
 ### Try out the exercises under Commands!
 <div style="display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; padding: 20px;">
   <div style="position: relative; width: 1050px; height: 650px;">
-    <img src="./assets/x-1-20-0.png" alt="Screenshot showing Finding and Fixing Bugs in Swift Playgrounds" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
-    <img src="./assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
+    <img src="/markdown/track_x/assets/x-1-20-0.png" alt="Screenshot showing Finding and Fixing Bugs in Swift Playgrounds" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
+    <img src="/markdown/track_x/assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
   </div>
   <div style="position: relative; width: 1050px; height: 650px;">
-    <img src="./assets/x-1-20-1.png" alt="Screenshot showing Toggling a Switch in Swift Playgrounds" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
-    <img src="./assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
+    <img src="/markdown/track_x/assets/x-1-20-1.png" alt="Screenshot showing Toggling a Switch in Swift Playgrounds" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
+    <img src="/markdown/track_x/assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
   </div>
 </div>
 
@@ -213,12 +213,12 @@
 
 <div style="display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; padding: 20px;">
   <div style="position: relative; width: 1050px; height: 650px;">
-    <img src="./assets/x-1-22-0.png" alt="Screenshot showing seeds in a garden" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
-    <img src="./assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
+    <img src="/markdown/track_x/assets/x-1-22-0.png" alt="Screenshot showing seeds in a garden" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
+    <img src="/markdown/track_x/assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
   </div>
   <div style="position: relative; width: 1050px; height: 650px;">
-    <img src="./assets/x-1-22-1.png" alt="Screenshot showing seeds with different text" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
-    <img src="./assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
+    <img src="/markdown/track_x/assets/x-1-22-1.png" alt="Screenshot showing seeds with different text" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
+    <img src="/markdown/track_x/assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
   </div>
 </div>
 
@@ -226,12 +226,12 @@
 
 <div style="display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; padding: 20px;">
   <div style="position: relative; width: 1050px; height: 650px;">
-    <img src="./assets/x-1-23-0.png" alt="Screenshot showing a for loop being used for seeding" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
-    <img src="./assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
+    <img src="/markdown/track_x/assets/x-1-23-0.png" alt="Screenshot showing a for loop being used for seeding" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
+    <img src="/markdown/track_x/assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
   </div>
   <div style="position: relative; width: 1050px; height: 650px;">
-    <img src="./assets/x-1-23-1.png" alt="Screenshot showing for loop's syntax for seeding" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
-    <img src="./assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
+    <img src="/markdown/track_x/assets/x-1-23-1.png" alt="Screenshot showing for loop's syntax for seeding" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
+    <img src="/markdown/track_x/assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
   </div>
 </div>
 
@@ -258,12 +258,12 @@ for i in 1 ... 5 {
 ### Try out the exercises under For Loops!
 <div style="display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; padding: 20px;">
   <div style="position: relative; width: 1050px; height: 650px;">
-    <img src="./assets/x-1-26-0.png" alt="Screenshot showing Looping All The Sides in Swift Playgrounds" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
-    <img src="./assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
+    <img src="/markdown/track_x/assets/x-1-26-0.png" alt="Screenshot showing Looping All The Sides in Swift Playgrounds" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
+    <img src="/markdown/track_x/assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
   </div>
   <div style="position: relative; width: 1050px; height: 650px;">
-    <img src="./assets/x-1-26-1.png" alt="Screenshot showing Using Loops in Swift Playgrounds" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
-    <img src="./assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
+    <img src="/markdown/track_x/assets/x-1-26-1.png" alt="Screenshot showing Using Loops in Swift Playgrounds" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
+    <img src="/markdown/track_x/assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
   </div>
 </div>
 
@@ -275,8 +275,8 @@ for i in 1 ... 5 {
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div style="position: relative; width: 1400px; height: 1000px;">
-    <img src="./assets/x-1-28-0.png" alt="Screenshot displaying traffic jam on GPS" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
-    <img src="./assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
+    <img src="/markdown/track_x/assets/x-1-28-0.png" alt="Screenshot displaying traffic jam on GPS" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
+    <img src="/markdown/track_x/assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
   </div>
 </div>
 
@@ -284,12 +284,12 @@ for i in 1 ... 5 {
 
 <div style="display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; padding: 20px;">
   <div style="position: relative; width: 1050px; height: 650px;">
-    <img src="./assets/x-1-29-0.png" alt="Screenshot showing if-statement at traffic light" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
-    <img src="./assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
+    <img src="/markdown/track_x/assets/x-1-29-0.png" alt="Screenshot showing if-statement at traffic light" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
+    <img src="/markdown/track_x/assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
   </div>
   <div style="position: relative; width: 1050px; height: 650px;">
-    <img src="./assets/x-1-29-1.png" alt="Screenshot showing traffic light if-loop logic" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
-    <img src="./assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
+    <img src="/markdown/track_x/assets/x-1-29-1.png" alt="Screenshot showing traffic light if-loop logic" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
+    <img src="/markdown/track_x/assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
   </div>
 </div>
 
@@ -297,12 +297,12 @@ for i in 1 ... 5 {
 
 <div style="display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; padding: 20px;">
   <div style="position: relative; width: 1050px; height: 650px;">
-    <img src="./assets/x-1-30-0.png" alt="Screenshot showing explanation of if-loop logic" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
-    <img src="./assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
+    <img src="/markdown/track_x/assets/x-1-30-0.png" alt="Screenshot showing explanation of if-loop logic" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
+    <img src="/markdown/track_x/assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
   </div>
   <div style="position: relative; width: 1050px; height: 650px;">
-    <img src="./assets/x-1-30-1.png" alt="Screenshot showing false if-loop" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
-    <img src="./assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
+    <img src="/markdown/track_x/assets/x-1-30-1.png" alt="Screenshot showing false if-loop" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
+    <img src="/markdown/track_x/assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
   </div>
 </div>
 
@@ -339,12 +339,12 @@ We can also directly use statements using comparators (<=, <, >, >=, ==, !=) ins
 
 <div style="display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; padding: 20px;">
   <div style="position: relative; width: 1050px; height: 650px;">
-    <img src="./assets/x-1-33-0.png" alt="Screenshot showing operators" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
-    <img src="./assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
+    <img src="/markdown/track_x/assets/x-1-33-0.png" alt="Screenshot showing operators" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
+    <img src="/markdown/track_x/assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
   </div>
   <div style="position: relative; width: 1050px; height: 650px;">
-    <img src="./assets/x-1-33-1.png" alt="Screenshot showing operators and if-loop example" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
-    <img src="./assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
+    <img src="/markdown/track_x/assets/x-1-33-1.png" alt="Screenshot showing operators and if-loop example" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
+    <img src="/markdown/track_x/assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
   </div>
 </div>
 
@@ -354,15 +354,15 @@ We can also directly use statements using comparators (<=, <, >, >=, ==, !=) ins
 ### Try out the exercises under Conditionals!
 <div style="display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; padding: 20px;">
   <div style="position: relative; width: 1050px; height: 650px;">
-    <img src="./assets/x-1-34-0.png" alt="Screenshot showing Conditional Climb in Swift Playgrounds" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
-    <img src="./assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
+    <img src="/markdown/track_x/assets/x-1-34-0.png" alt="Screenshot showing Conditional Climb in Swift Playgrounds" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
+    <img src="/markdown/track_x/assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
   </div>
   <div style="position: relative; width: 1050px; height: 650px;">
-    <img src="./assets/x-1-34-1.png" alt="Screenshot showing Using else if in Swift Playgrounds" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
-    <img src="./assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
+    <img src="/markdown/track_x/assets/x-1-34-1.png" alt="Screenshot showing Using else if in Swift Playgrounds" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
+    <img src="/markdown/track_x/assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
   </div>
   <div style="position: relative; width: 1050px; height: 650px;">
-    <img src="./assets/x-1-34-2.png" alt="Screenshot displaying Checking for Switches in Swift Playgrounds" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
-    <img src="./assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
+    <img src="/markdown/track_x/assets/x-1-34-2.png" alt="Screenshot displaying Checking for Switches in Swift Playgrounds" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
+    <img src="/markdown/track_x/assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
   </div>
 </div>

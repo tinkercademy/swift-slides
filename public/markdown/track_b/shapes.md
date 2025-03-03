@@ -21,7 +21,7 @@
     <ul>
         <li>Tap App to start a new app playground.</li>
     </ul>
-    <img style="width:70%" src="./assets/shapes-create-app-ss.jpg" alt="Show the Create an App button highlighted in the Swift playgrounds app. " >
+    <img style="width:70%" src="/markdown/track_b/assets/shapes-create-app-ss.jpg" alt="Show the Create an App button highlighted in the Swift playgrounds app. " >
 </div>
 
 ---vertical---
@@ -34,10 +34,10 @@
 <ol>
 <div style="display: flex;justify-content: center; align-items: center;">
     <div style="flex: 1;text-align: center;">    
-        <img src="./assets/shapes-rename-app1-ss.jpg" alt="Shows a playgrounds home page with the press and hold menu">
+        <img src="/markdown/track_b/assets/shapes-rename-app1-ss.jpg" alt="Shows a playgrounds home page with the press and hold menu">
     </div>
     <div style="flex: 1;text-align: center;">
-        <img src="./assets/shapes-rename-app2-ss.jpg" alt="Shows a playgrounds home page with the rename pop up">
+        <img src="/markdown/track_b/assets/shapes-rename-app2-ss.jpg" alt="Shows a playgrounds home page with the rename pop up">
     </div>
 </div>
 
@@ -50,10 +50,10 @@
 
 <div style="display: flex;justify-content: center; align-items: center;">
     <div style="flex: 1;text-align: center;">    
-        <img src="./assets/shapes-delete-content1-ss.jpg">
+        <img src="/markdown/track_b/assets/shapes-delete-content1-ss.jpg">
     </div>
     <div style="flex: 1;text-align: center;">
-        <img src="./assets/shapes-delete-content2-ss.jpg">
+        <img src="/markdown/track_b/assets/shapes-delete-content2-ss.jpg">
     </div>
 </div>
 
@@ -69,7 +69,7 @@
 
 <div style="display: flex;justify-content: center; align-items: center;">
     <div style="flex: 1;text-align: center;">    
-        <img src="./assets/shapes-step1-ss.jpg" alt="Empty ContentView.swift with ZStack">
+        <img src="/markdown/track_b/assets/shapes-step1-ss.jpg" alt="Empty ContentView.swift with ZStack">
     </div>
 </div>
 
@@ -77,11 +77,11 @@
 
 ## Adding a Face
 
--   Open the list of views <img src="./assets/view-icon.png" style="margin-bottom: -4px" height="32px"> and scroll to the bottom to find the capsule, circle, ellipse, rectangle, and rounded rectangle shapes.
+-   Open the list of views <img src="/markdown/track_b/assets/view-icon.png" style="margin-bottom: -4px" height="32px"> and scroll to the bottom to find the capsule, circle, ellipse, rectangle, and rounded rectangle shapes.
 
 <div style="display: flex;justify-content: center; align-items: center;">
     <div style="flex: 1;text-align: center;">    
-        <img src="./assets/shapes-step2-ss.jpg" alt="View button highlighted">
+        <img src="/markdown/track_b/assets/shapes-step2-ss.jpg" alt="View button highlighted">
     </div>
 </div>
 
@@ -93,7 +93,7 @@
 
 <div style="display: flex;justify-content: center; align-items: center;">
     <div style="flex: 1;text-align: center;">    
-        <img src="./assets/shapes-step3-ss.jpg" alt="ContentView.swift with one capsule">
+        <img src="/markdown/track_b/assets/shapes-step3-ss.jpg" alt="ContentView.swift with one capsule">
     </div>
 </div>
 
@@ -125,7 +125,7 @@ struct ContentView: View {
 
 <div style="display: flex;justify-content: center; align-items: center;">
     <div style="flex: 1;text-align: center;">    
-        <img src="./assets/shapes-step4-ss.jpg">
+        <img src="/markdown/track_b/assets/shapes-step4-ss.jpg">
     </div>
 </div>
 
@@ -142,10 +142,10 @@ struct ContentView: View {
 
 <div style="display: flex;justify-content: center; align-items: center;">
     <div style="flex: 1;text-align: center;">    
-        <img src="./assets/shapes-step5-1-ss.jpg" >
+        <img src="/markdown/track_b/assets/shapes-step5-1-ss.jpg" >
     </div>
     <div style="flex: 1;text-align: center;">
-        <img src="./assets/shapes-step5-2-ss.jpg" >
+        <img src="/markdown/track_b/assets/shapes-step5-2-ss.jpg" >
     </div>
 </div>
 
@@ -158,10 +158,10 @@ struct ContentView: View {
 
 <div style="display: flex;justify-content: center; align-items: center;">
     <div style="flex: 1;text-align: center;">    
-        <img src="./assets/shapes-step6-1-ss.jpg">
+        <img src="/markdown/track_b/assets/shapes-step6-1-ss.jpg">
     </div>
     <div style="flex: 1;text-align: center;">
-        <img src="./assets/shapes-step6-2-ss.jpg">
+        <img src="/markdown/track_b/assets/shapes-step6-2-ss.jpg">
     </div>
 </div>
 
@@ -174,10 +174,10 @@ struct ContentView: View {
 
 <div style="display: flex;justify-content: center; align-items: center;">
     <div style="flex: 1;text-align: center;">    
-        <img src="./assets/shapes-step7-1-ss.jpg">
+        <img src="/markdown/track_b/assets/shapes-step7-1-ss.jpg">
     </div>
     <div style="flex: 1;text-align: center;">
-        <img src="./assets/shapes-step7-2-ss.jpg">
+        <img src="/markdown/track_b/assets/shapes-step7-2-ss.jpg">
     </div>
 </div>
 
@@ -229,7 +229,7 @@ struct ContentView: View {
 
 <div style="display: flex;justify-content: center; align-items: center;">
     <div style="flex: 1;text-align: center;">    
-        <img src="./assets/shapes-step8-ss.jpg">
+        <img src="/markdown/track_b/assets/shapes-step8-ss.jpg">
     </div>
 </div>
 
@@ -241,10 +241,10 @@ struct ContentView: View {
 
 <div style="display: flex;justify-content: center; align-items: center;">
     <div style="flex: 1;text-align: center;">    
-        <img src="./assets/shapes-step9-1-ss.jpg">
+        <img src="/markdown/track_b/assets/shapes-step9-1-ss.jpg">
     </div>
     <div style="flex: 1;text-align: center;">
-        <img src="./assets/shapes-step9-2-ss.jpg">
+        <img src="/markdown/track_b/assets/shapes-step9-2-ss.jpg">
     </div>
 </div>
 
@@ -257,7 +257,7 @@ struct ContentView: View {
 
 <div style="display: flex;justify-content: center; align-items: center;">
     <div style="flex: 1;text-align: center;">    
-        <img src="./assets/shapes-step10-ss.jpg">
+        <img src="/markdown/track_b/assets/shapes-step10-ss.jpg">
     </div>
 </div>
 
@@ -269,7 +269,7 @@ struct ContentView: View {
 
 <div style="display: flex;justify-content: center; align-items: center;">
     <div style="flex: 1;text-align: center;">    
-        <img src="./assets/shapes-step11-ss.jpg">
+        <img src="/markdown/track_b/assets/shapes-step11-ss.jpg">
     </div>
 </div>
 
@@ -281,7 +281,7 @@ struct ContentView: View {
 
 <div style="display: flex;justify-content: center; align-items: center;">
     <div style="flex: 1;text-align: center;">    
-        <img src="./assets/shapes-step12-ss.jpg">
+        <img src="/markdown/track_b/assets/shapes-step12-ss.jpg">
     </div>
 </div>
 
@@ -294,10 +294,10 @@ struct ContentView: View {
 
 <div style="display: flex;justify-content: center; align-items: center;">
     <div style="flex: 1;text-align: center;">    
-        <img src="./assets/shapes-step13-1-ss.jpg">
+        <img src="/markdown/track_b/assets/shapes-step13-1-ss.jpg">
     </div>
     <div style="flex: 1;text-align: center;">
-        <img src="./assets/shapes-step13-2-ss.jpg">
+        <img src="/markdown/track_b/assets/shapes-step13-2-ss.jpg">
     </div>
 </div>
 
@@ -309,7 +309,7 @@ struct ContentView: View {
 
 <div style="display: flex;justify-content: center; align-items: center;">
     <div style="flex: 1;text-align: center;">    
-        <img src="./assets/shapes-step14-ss.jpg">
+        <img src="/markdown/track_b/assets/shapes-step14-ss.jpg">
     </div>
 </div>
 
@@ -321,7 +321,7 @@ struct ContentView: View {
 
 <div style="display: flex;justify-content: center; align-items: center;">
     <div style="flex: 1;text-align: center;">    
-        <img src="./assets/shapes-tip-too-many-views-in-a-stack-ss.jpg">
+        <img src="/markdown/track_b/assets/shapes-tip-too-many-views-in-a-stack-ss.jpg">
     </div>
 </div>
 
@@ -337,10 +337,10 @@ struct ContentView: View {
 
 <div style="display: flex;justify-content: center; align-items: center;">
     <div style="flex: 1;text-align: center;">    
-        <img src="./assets/shapes-step15-1-ss.jpg">
+        <img src="/markdown/track_b/assets/shapes-step15-1-ss.jpg">
     </div>
     <div style="flex: 1;text-align: center;">
-        <img src="./assets/shapes-step15-2-ss.jpg">
+        <img src="/markdown/track_b/assets/shapes-step15-2-ss.jpg">
     </div>
 </div>
 
@@ -362,7 +362,7 @@ struct ContentView: View {
 
 <div style="display: flex;justify-content: center; align-items: center;">
     <div style="flex: 1;text-align: center;">    
-        <img src="./assets/shapes-step16-1-ss.jpg">
+        <img src="/markdown/track_b/assets/shapes-step16-1-ss.jpg">
     </div>
 </div>
 
@@ -374,7 +374,7 @@ struct ContentView: View {
 
 <div style="display: flex;justify-content: center; align-items: center;">
     <div style="flex: 1;text-align: center;">    
-        <img src="./assets/shapes-step16-2-ss.jpg">
+        <img src="/markdown/track_b/assets/shapes-step16-2-ss.jpg">
     </div>
 </div>
 

@@ -21,7 +21,7 @@ Designing apps for iPads
 
 ---
 
-# Tab Bars <img src="./assets/tab-bar.png">
+# Tab Bars <img src="/markdown/track_a/assets/tab-bar.png">
 
 ---vertical---
 
@@ -86,19 +86,19 @@ Designing apps for iPads
 
 ## Side Bar and Canvas
 
-<img height="850" src="./assets/sidebar-and-canvas.png">
+<img height="850" src="/markdown/track_a/assets/sidebar-and-canvas.png">
 
 ---vertical---
 
 ## Example: Photos App
 
-<img height="850" src="./assets/sidebar-and-canvas-example1.png">
+<img height="850" src="/markdown/track_a/assets/sidebar-and-canvas-example1.png">
 
 ---vertical---
 
 ## Example: Calendar App
 
-<img height="850" src="./assets/sidebar-and-canvas-example2.png">
+<img height="850" src="/markdown/track_a/assets/sidebar-and-canvas-example2.png">
 
 ---
 
@@ -132,7 +132,7 @@ Designing apps for iPads
         <li>The Modal is used to allow users to enter information about this new list, and can only be dismissed when the user is done, or cancels the operation</li>
     </ul>
     </div>
-    <img src="./assets/reminders-app.png">
+    <img src="/markdown/track_a/assets/reminders-app.png">
 </div>
 
 ---
@@ -153,7 +153,7 @@ Designing apps for iPads
 
 ## NavigationSplitView vs NavigationStack
 
-<img height="800" src="./assets/navigationsplitview-vs-navigationstack.png">
+<img height="800" src="/markdown/track_a/assets/navigationsplitview-vs-navigationstack.png">
 
 ---vertical---
 
@@ -189,7 +189,7 @@ Designing apps for iPads
 - The User taps to go into more detail about App Store Notification settings (App Store → Notifications → Show Previews)
 - The Disclosure Indicator shows the name of the last view, letting the user know where they are in the app and giving them an option to go back</li>
 
-<img src="./assets/disclosure-indicators-example.png">
+<img src="/markdown/track_a/assets/disclosure-indicators-example.png">
 
 ---vertical---
 
@@ -233,5 +233,5 @@ Designing apps for iPads
         <li>The popover cannot be dismissed unless the Cancel button is pressed, or the user is done entering information</li>
     </ul>
     </div>
-    <img height="800" width="555" src="./assets/popover-example.png">
+    <img height="800" width="555" src="/markdown/track_a/assets/popover-example.png">
 </div>

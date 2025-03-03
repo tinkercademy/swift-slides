@@ -17,11 +17,11 @@ Inclusive App Design
 
 ---vertical---
 
-<img height="800" src="./assets/vision_physical_hearing_learning.png">
+<img height="800" src="/markdown/track_a/assets/vision_physical_hearing_learning.png">
 
 ---vertical---
 
-<img height="800" src="./assets/birth_acquired_age.png">
+<img height="800" src="/markdown/track_a/assets/birth_acquired_age.png">
 
 ---vertical---
 
@@ -39,7 +39,7 @@ Inclusive App Design
 
 ## Accessibility Features
 
-<img height="800" src="./assets/voiceover-text-voice-control.png">
+<img height="800" src="/markdown/track_a/assets/voiceover-text-voice-control.png">
 
 ---vertical---
 
@@ -69,19 +69,19 @@ src="https://www.youtube.com/embed/eg22JaZWAgs">
 
 ## Clarity
 
-<img height="700" src="./assets/dots-vs-unread-flagged.png">
+<img height="700" src="/markdown/track_a/assets/dots-vs-unread-flagged.png">
 
 ---vertical---
 
 ## Inclusive Language
 
-<img height="700" src="./assets/set-up-family-account.png">
+<img height="700" src="/markdown/track_a/assets/set-up-family-account.png">
 
 ---vertical---
 
 ## Self Expression & Individuality
 
-<img height="700" src="./assets/good-morning.png">
+<img height="700" src="/markdown/track_a/assets/good-morning.png">
 
 ---vertical---
 
@@ -93,5 +93,5 @@ src="https://www.youtube.com/embed/eg22JaZWAgs">
         <li>You can check out other apps and how they integrate inclusive features in their apps!</li>
     </ul>
     </div>
-    <img src="./assets/plan-inclusion.png">
+    <img src="/markdown/track_a/assets/plan-inclusion.png">
 </div>

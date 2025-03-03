@@ -24,7 +24,7 @@
 
 # SwiftUI Basics
 
-<img height="800" src="./assets/placeholder_swiftui_basics.png">
+<img height="800" src="/markdown/track_x/assets/placeholder_swiftui_basics.png">
 
 ---
 
@@ -33,7 +33,7 @@
 - Open **Swift Playgrounds** on your iPad.  
 - Navigate to “More Playgrounds” and tap on “Get Started with Apps.”  
 
-<img height="800" src="./assets/placeholder_getting_started.png">
+<img height="800" src="/markdown/track_x/assets/placeholder_getting_started.png">
 
 ---
 

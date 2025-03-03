@@ -15,7 +15,7 @@ Making a high-fidelity prototype on Keynote
 
 ---vertical---
 
-<img src="./assets/keynote-user-guide.png">
+<img src="/markdown/track_a/assets/keynote-user-guide.png">
 
 <div style="display: flex; justify-content: center; margin-top: 16px;">
 
@@ -47,7 +47,7 @@ Making a high-fidelity prototype on Keynote
         <li>Tap on Slide Size and select 3:4</li>
         <li>Note: This setup step is not available while collaborating!</li>
     </ul>
-    <img src="./assets/setting-up-unit6.png">
+    <img src="/markdown/track_a/assets/setting-up-unit6.png">
 </div>
 
 ---vertical---
@@ -61,7 +61,7 @@ Making a high-fidelity prototype on Keynote
         <li>To rearrange the slides, tap and hold a slide and drag it to the desired order</li>
     </ul>
     </div>
-    <img height="700" src="./assets/adding-new-slides.png">
+    <img height="700" src="/markdown/track_a/assets/adding-new-slides.png">
 </div>
 
 ---vertical---
@@ -87,7 +87,7 @@ Making a high-fidelity prototype on Keynote
     <div>
     <ul>
         <li>Select a piece of text by tapping on it</li>
-        <li>Tap on the <img style="margin-bottom: -4px" height="40px" src="./assets/paintbrush-icon.png"> icon</li>
+        <li>Tap on the <img style="margin-bottom: -4px" height="40px" src="/markdown/track_a/assets/paintbrush-icon.png"> icon</li>
         <li>Switch to the <strong>Text</strong> section</li>
         <ul>
             <li>Adjust font and weight</li>
@@ -177,7 +177,7 @@ Making a high-fidelity prototype on Keynote
 
 ## Animations
 
-<img height="700" src="./assets/animations-home.png">
+<img height="700" src="/markdown/track_a/assets/animations-home.png">
 
 ---vertical---
 
@@ -189,7 +189,7 @@ Making a high-fidelity prototype on Keynote
         <li>To add a Magic Move transition, tap on the slide, then tap Transition</li>
         <li>Tap on Add Transition and select Magic Move</li>
     </ul>
-    <img src="./assets/keynote_transitions_magic_moves.png">
+    <img src="/markdown/track_a/assets/keynote_transitions_magic_moves.png">
 </div>
 
 ---vertical---
@@ -211,7 +211,7 @@ Making a high-fidelity prototype on Keynote
         <li>Take some time to digest others’ feedback.</li>
         <li>Answer a few questions, and figure out how you can improve your app and prototype.</li>
     </ul>
-    <img src="./assets/evaluate-observation.png">
+    <img src="/markdown/track_a/assets/evaluate-observation.png">
 </div>
 
 ---
@@ -220,15 +220,15 @@ Making a high-fidelity prototype on Keynote
 
 ---vertical---
 
-<img height="800" src="./assets/prototype-some-more_learn-to-code.png">
+<img height="800" src="/markdown/track_a/assets/prototype-some-more_learn-to-code.png">
 
 ---vertical---
 
 ## Stretch your learning
 
-<img height="800" src="./assets/everyone-can-code-puzzles.png">
+<img height="800" src="/markdown/track_a/assets/everyone-can-code-puzzles.png">
 
 ---vertical---
 
-<img height="800" src="./assets/quick-start-to-code.png">
+<img height="800" src="/markdown/track_a/assets/quick-start-to-code.png">
 

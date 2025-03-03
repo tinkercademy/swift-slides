@@ -59,7 +59,7 @@ verb _[with object]_
 
 ---vertical---
 
-<img height="800" src="./assets/brainstorm-purpose-ss.png">
+<img height="800" src="/markdown/track_a/assets/brainstorm-purpose-ss.png">
 
 ---
 
@@ -80,7 +80,7 @@ verb _[with object]_
 
 ---vertical---
 
-<img height="800" src="./assets/brainstorm-idea-ss.png">
+<img height="800" src="/markdown/track_a/assets/brainstorm-idea-ss.png">
 
 ---
 
@@ -130,5 +130,5 @@ verb _[with object]_
 
 ---vertical---
 
-<img height="800" src="./assets/brainstorm-focus-ss.png">
+<img height="800" src="/markdown/track_a/assets/brainstorm-focus-ss.png">
 

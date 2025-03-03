@@ -25,7 +25,7 @@ Prepare and sketch designs for a simple app.
         <li><a href="https://apple.co/designasimpleapp-project3">Download the project presentation in Keynote (79.9 MB)</a></li>
     </ul>
     </div>
-    <img style="width:70%" src="./assets/7a-s1-step1.png">
+    <img style="width:70%" src="/markdown/track_a/assets/7a-s1-step1.png">
 </div>
 
 ---vertical---
@@ -37,7 +37,7 @@ Prepare and sketch designs for a simple app.
         <li>Ask three to five people to look at your app ideas and identify the idea they like best.</li>
     </ul>
     </div>
-    <img src="./assets/7a-s1-step2.png">
+    <img src="/markdown/track_a/assets/7a-s1-step2.png">
 </div>
 
 ---vertical---
@@ -50,7 +50,7 @@ Prepare and sketch designs for a simple app.
         <li>Use the blank templates provided in the Brainstorm and Plan section of the project presentation Keynote to sketch five rapid prototypes in 15 minutes.</li>
     </ul>
     </div>
-    <img style="width:70%;" src="./assets/7a-s1-step3.png">
+    <img style="width:70%;" src="/markdown/track_a/assets/7a-s1-step3.png">
 </div>
 
 ---vertical---
@@ -62,7 +62,7 @@ Prepare and sketch designs for a simple app.
     <li>Show your designs to at least three people and ask for feedback.</li>
     </ul>
     </div>
-    <img src="./assets/7a-s1-step4.png">
+    <img src="/markdown/track_a/assets/7a-s1-step4.png">
 
 </div>
 
@@ -75,7 +75,7 @@ Prepare and sketch designs for a simple app.
         <li>Using the feedback you collected, decide on a design to move forward with.</li>
     </ul>
     </div>
-    <img src="./assets/7a-s1-step5.png">
+    <img src="/markdown/track_a/assets/7a-s1-step5.png">
 </div>
 
 ---
@@ -93,7 +93,7 @@ In Keynote, create a prototype of your app.
         <li>Use the blank slide provided in the Keynote Prototype section of the project presentation Keynote to make your prototype. Duplicate the slide if needed.</li>
     </ul>
     </div>
-    <img src="./assets/7a-s2-step0.jpg">
+    <img src="/markdown/track_a/assets/7a-s2-step0.jpg">
 </div>
 
 ---vertical---
@@ -105,7 +105,7 @@ In Keynote, create a prototype of your app.
         <li>Learn about the following features of Keynote that you might want to use in your app. Each section uses the Affirmations app as an example.</li>
     </ul>
     </div>
-    <img src="./assets/7a-s2-step0-2.jpg">
+    <img src="/markdown/track_a/assets/7a-s2-step0-2.jpg">
 </div>
 
 ---vertical---
@@ -117,7 +117,7 @@ In Keynote, create a prototype of your app.
         <li>Add text, lines, and shapes.</li>
     </ul>
     </div>
-    <img src="./assets/7a-s2-step0-3.jpg">
+    <img src="/markdown/track_a/assets/7a-s2-step0-3.jpg">
 </div>
 
 ---vertical---
@@ -126,10 +126,10 @@ In Keynote, create a prototype of your app.
     <div style="margin-top:5%;">
     <h2>Step 1</h2>
     <ul style="margin-top:5%;">
-        <li>To add text, lines, or shapes, tap Shapes <img style="margin-bottom:-4px;" src="./assets/il_shape.png">  and choose an element.</li>
+        <li>To add text, lines, or shapes, tap Shapes <img style="margin-bottom:-4px;" src="/markdown/track_a/assets/il_shape.png">  and choose an element.</li>
     </ul>
     </div>
-    <img src="./assets/7a-s2-step1.jpg">
+    <img src="/markdown/track_a/assets/7a-s2-step1.jpg">
 </div>
 
 ---vertical---
@@ -138,10 +138,10 @@ In Keynote, create a prototype of your app.
     <div style="margin-top:5%;">
     <h2>Step 2</h2>
     <ul style="margin-top:5%;">
-        <li>Tap Media <img style="margin-bottom:-4px;" src="./assets/il_media.png">  to add images, audio, drawings, or video. </li>
+        <li>Tap Media <img style="margin-bottom:-4px;" src="/markdown/track_a/assets/il_media.png">  to add images, audio, drawings, or video. </li>
     </ul>
     </div>
-    <img src="./assets/7a-s2-step2.jpg">
+    <img src="/markdown/track_a/assets/7a-s2-step2.jpg">
 </div>
 
 ---vertical---
@@ -153,7 +153,7 @@ In Keynote, create a prototype of your app.
         <li>To resize a shape or image, drag the blue corners to the desired location.</li>
     </ul>
     </div>
-    <img src="./assets/7a-s2-step3.jpg">
+    <img src="/markdown/track_a/assets/7a-s2-step3.jpg">
 </div>
 
 ---vertical---
@@ -165,7 +165,7 @@ In Keynote, create a prototype of your app.
         <li>Double-tap on a shape to add text.</li>
     </ul>
     </div>
-    <img src="./assets/7a-s2-step4.jpg">
+    <img src="/markdown/track_a/assets/7a-s2-step4.jpg">
 </div>
 
 ---vertical---
@@ -178,7 +178,7 @@ In Keynote, create a prototype of your app.
         <li>Consider titles, images, and buttons.</li>
     </ul>
     </div>
-    <img src="./assets/7a-s2-step5.png">
+    <img src="/markdown/track_a/assets/7a-s2-step5.png">
 </div>
 
 ---
@@ -193,10 +193,10 @@ Have others test your app and observe how they interact with it. Take note of wh
     <div style="margin-top:5%;">
     <h2>Step 1</h2>
     <ul style="margin-top:5%;">
-        <li>To add text, lines, or shapes, tap Shapes <img style="margin-bottom:-4px;" src="./assets/il_shape.png">  and choose an element.</li>
+        <li>To add text, lines, or shapes, tap Shapes <img style="margin-bottom:-4px;" src="/markdown/track_a/assets/il_shape.png">  and choose an element.</li>
     </ul>
     </div>
-    <img src="./assets/7a-s3-step1.jpg">
+    <img src="/markdown/track_a/assets/7a-s3-step1.jpg">
 </div>
 
 ---vertical---
@@ -208,7 +208,7 @@ Have others test your app and observe how they interact with it. Take note of wh
         <li>Ask your users to fill out the feedback form in the Evaluate section of the project presentation Keynote.</li>
     </ul>
     </div>
-    <img src="./assets/7a-s3-step2.jpg">
+    <img src="/markdown/track_a/assets/7a-s3-step2.jpg">
 </div>
 
 ---
@@ -227,7 +227,7 @@ Create an app product page to give potential users information before they downl
         <li><a href="https://apps.apple.com/us/app/swift-playgrounds/id1496833156?mt=12"target="_blank">Go to the Swift Playgrounds product&nbsp;page</a>
     </ul>
     </div>
-    <img src="./assets/7a-s4-step1.jpg">
+    <img src="/markdown/track_a/assets/7a-s4-step1.jpg">
 </div>
 
 ---vertical---
@@ -240,7 +240,7 @@ Create an app product page to give potential users information before they downl
         <li>Complete the product page template provided in the project presentation Keynote.</li>
     </ul>
     </div>
-    <img src="./assets/7a-s4-step2.jpg">
+    <img src="/markdown/track_a/assets/7a-s4-step2.jpg">
 </div>
 
 ---

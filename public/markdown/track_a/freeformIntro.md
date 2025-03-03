@@ -100,13 +100,13 @@ Introduction to Freeform and its tools
 - Tap on a tool to switch to it.
 - Tap a second time to see if there are additional options, like stroke size (line thickness) or transparency.
 
-<img src="./assets/freeform-tools.png">
+<img src="/markdown/track_a/assets/freeform-tools.png">
 
 ---vertical---
 
 ## Tool Picker
 
-<img src="./assets/freeform-tools-edited.png">
+<img src="/markdown/track_a/assets/freeform-tools-edited.png">
 
 ---vertical---
 

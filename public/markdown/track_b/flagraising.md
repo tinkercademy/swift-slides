@@ -28,7 +28,7 @@ Alignments and Animations
         <p>What we’ll make: A flag raising app. You tap on a button and the flag moves up. And up. And up. And up. And up. And up. And up. And up. And up. And up. And up. And up. And up. And up. And up.</p>
     </div>
     <div style="flex: 1;text-align: center;">
-       <iframe width="500" height="900" src="./assets/flag-demo.mp4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+       <iframe width="500" height="900" src="/markdown/track_b/assets/flag-demo.mp4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
 </div>
 
@@ -41,7 +41,7 @@ Alignments and Animations
 
 <div style="display: flex;justify-content: center; align-items: center;">
     <div style="flex: 1;text-align: center;">    
-        <img src="./assets/flag-on-the-news.png">
+        <img src="/markdown/track_b/assets/flag-on-the-news.png">
     </div>
 </div>
 
@@ -58,7 +58,7 @@ Alignments and Animations
 3. Add a flag pole
    1. Add a HStack.
    2. Add a Rectangle with a fixed width within the HStack. This is your flag pole.
-   3. Add a Text with an emoji in the HStack <img style="margin-bottom: -4px" src="./assets/sg-flag.png" height="40px">
+   3. Add a Text with an emoji in the HStack <img style="margin-bottom: -4px" src="/markdown/track_b/assets/sg-flag.png" height="40px">
    - To add in the emoji you can
      1. Use the emoji keyboard on your iPad
      2. Copy the emoji from the internet and paste it into your code
@@ -141,10 +141,10 @@ struct ContentView: View {
 
 <div style="display: flex;justify-content: center; align-items: center;">
     <div style="flex: 1;text-align: center;">    
-        <img width="400" src="./assets/flag-bare-content.png">
+        <img width="400" src="/markdown/track_b/assets/flag-bare-content.png">
     </div>
     <div style="flex: 1;text-align: center;">
-        <img width="400" src="./assets/flag-bare.png">
+        <img width="400" src="/markdown/track_b/assets/flag-bare.png">
     </div>
 </div>
 
@@ -332,7 +332,7 @@ struct ContentView: View {
 
 ## Code
 
-<img src="./assets/flag-counter-offset.png">
+<img src="/markdown/track_b/assets/flag-counter-offset.png">
 
 ---vertical---
 
@@ -348,7 +348,7 @@ struct ContentView: View {
 </div>
 <div style="flex:1;">
 <video controls>
-  <source src="./assets/flag-without-animations.mp4" type="video/mp4">
+  <source src="/markdown/track_b/assets/flag-without-animations.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 </div>
@@ -429,7 +429,7 @@ Button {
 </div>
 <div style="flex:1;">
 <video controls>
-  <source src="./assets/flag-final-demo.mp4" type="video/mp4">
+  <source src="/markdown/track_b/assets/flag-final-demo.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 </div>
@@ -504,42 +504,42 @@ struct ContentView: View {
 ---vertical---
 
 <video width="500" controls>
-  <source  src="./assets/flag-example0.mov" type="video/mp4">
+  <source  src="/markdown/track_b/assets/flag-example0.mov" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
 ---vertical---
 
 <video width="500" controls>
-  <source  src="./assets/flag-example1.mp4" type="video/mp4">
+  <source  src="/markdown/track_b/assets/flag-example1.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
 ---vertical---
 
 <video width="500" controls>
-  <source  src="./assets/flag-example2.mov" type="video/mp4">
+  <source  src="/markdown/track_b/assets/flag-example2.mov" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
 ---vertical---
 
 <video width="500" controls>
-  <source  src="./assets/flag-example3.mp4" type="video/mp4">
+  <source  src="/markdown/track_b/assets/flag-example3.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
 ---vertical---
 
 <video width="500" controls>
-  <source  src="./assets/flag-example4.mov" type="video/mp4">
+  <source  src="/markdown/track_b/assets/flag-example4.mov" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
 ---vertical---
 
 <video width="500" controls>
-  <source  src="./assets/flag-example5.mov" type="video/mp4">
+  <source  src="/markdown/track_b/assets/flag-example5.mov" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -549,7 +549,7 @@ struct ContentView: View {
 
 ---
 
-### <img style="margin-bottom: -4px" src="./assets/sg-flag.png" height="60px"> Flag Raising App
+### <img style="margin-bottom: -4px" src="/markdown/track_b/assets/sg-flag.png" height="60px"> Flag Raising App
 
 # Full Code
 

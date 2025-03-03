@@ -114,7 +114,7 @@ student1 = "I give up"
 - Much easier than working with dozens of variables!
 - Start counting from 0
 
-![Array Diagram](./assets/array-diagram.png)
+![Array Diagram](/markdown/track_b/assets/array-diagram.png)
 
 ---vertical---
 
@@ -146,7 +146,7 @@ print(students)
 var students = ["Alice", "Bob", "Charles", "Deborah"]
 ```
 
-![](./assets/visualising-arrays-0.png)
+![](/markdown/track_b/assets/visualising-arrays-0.png)
 
 ---vertical---
 
@@ -156,7 +156,7 @@ var students = ["Alice", "Bob", "Charles", "Deborah"]
 students.append("Eunice")
 ```
 
-![](./assets/visualising-arrays-1.png)
+![](/markdown/track_b/assets/visualising-arrays-1.png)
 
 ---vertical---
 
@@ -166,7 +166,7 @@ students.append("Eunice")
 students.remove(at: 0)
 ```
 
-![](./assets/visualising-arrays-2.png)
+![](/markdown/track_b/assets/visualising-arrays-2.png)
 
 ---vertical---
 
@@ -176,7 +176,7 @@ students.remove(at: 0)
 students[0] = "Blob"
 ```
 
-![](./assets/visualising-arrays-4.png)
+![](/markdown/track_b/assets/visualising-arrays-4.png)
 
 ---vertical---
 
@@ -186,7 +186,7 @@ students[0] = "Blob"
 print(students.count)
 ```
 
-![](./assets/visualising-arrays-5.png)
+![](/markdown/track_b/assets/visualising-arrays-5.png)
 
 ---vertical---
 
@@ -196,7 +196,7 @@ print(students.count)
 students.insert("Daisy", at: 2)
 ```
 
-![](./assets/visualising-arrays-6.png)
+![](/markdown/track_b/assets/visualising-arrays-6.png)
 
 ---vertical---
 

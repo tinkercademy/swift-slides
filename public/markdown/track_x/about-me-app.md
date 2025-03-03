@@ -14,7 +14,7 @@
 - Open **Swift Playgrounds** on your iPad.  
 - Under “More Playgrounds,” tap **See All** and download the About Me playground.  
 
-<img height="800" src="./assets/placeholder_getting_started_about_me.png">
+<img height="800" src="/markdown/track_x/assets/placeholder_getting_started_about_me.png">
 
 ---
 
@@ -26,7 +26,7 @@
 
 - Explore and customize the built-in tabs in the app.  
 
-<img height="800" src="./assets/placeholder_tabs_in_app.png">
+<img height="800" src="/markdown/track_x/assets/placeholder_tabs_in_app.png">
 
 ---
 
@@ -34,7 +34,7 @@
 
 ### Experiment with tabs, images, and app customization!
 
-<img height="800" src="./assets/placeholder_hands_on_about_me.png">
+<img height="800" src="/markdown/track_x/assets/placeholder_hands_on_about_me.png">
 
 ---
 
@@ -47,7 +47,7 @@
 - Modify the `.tabItem` modifier to change the label text.  
 - Example: Change `"Home"` to `"Your Name"`.
 
-<img height="800" src="./assets/placeholder_editing_tab_labels.png">
+<img height="800" src="/markdown/track_x/assets/placeholder_editing_tab_labels.png">
 
 ---vertical---
 
@@ -56,7 +56,7 @@
 - Import your own image into the playground.  
 - Use it in the app by replacing the placeholder image.
 
-<img height="800" src="./assets/placeholder_adding_images_to_tabs.png">
+<img height="800" src="/markdown/track_x/assets/placeholder_adding_images_to_tabs.png">
 
 ---
 
@@ -68,7 +68,7 @@
 
 - Open settings and modify the accent color for the app.
 
-<img height="800" src="./assets/placeholder_changing_accent_colors.png">
+<img height="800" src="/markdown/track_x/assets/placeholder_changing_accent_colors.png">
 
 ---vertical---
 
@@ -76,7 +76,7 @@
 
 - Use modifiers like `.font(.largeTitle)` and `.padding()` to customize text styles.
 
-<img height="800" src="./assets/placeholder_styling_text.png">
+<img height="800" src="/markdown/track_x/assets/placeholder_styling_text.png">
 
 ---
 
