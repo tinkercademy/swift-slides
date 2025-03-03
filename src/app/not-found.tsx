@@ -1,10 +1,12 @@
 import Link from 'next/link'
- 
-export default function NotFound() {
+import styles from "./not-found.module.scss";
+
+export default function NotFoundPage() {
   return (
-    <div>
-      <h2>Not Found</h2>
-      <p>Could not find requested resource.</p>
+    <div className={styles.notFound}>
+      <div className={styles.bear}></div>
+      <h1>404</h1>
+      <h2>Could not find requested resource.</h2>
       <Link href="/tracks">Return Home</Link>
     </div>
   )
