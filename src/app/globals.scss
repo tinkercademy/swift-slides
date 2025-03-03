@@ -1,36 +1,3 @@
-:root {
-  // --r- prefix used for Reveal.js
-  // see list of exposed CSS variables here: https://github.com/hakimel/reveal.js/blob/master/css/theme/template/exposer.scss
-  // Legacy: From indextheme.css
-  --r-background-color: var(--theme-background);
-  --r-main-font: var(--theme-font);
-  --r-main-font-size: 24px;
-  --r-main-color: var(--theme-foreground);
-  --r-block-margin: 20px;
-  --r-heading-margin: 0 0 20px 0;
-  --r-heading-font: var(--theme-font);
-  --r-heading-color: #eee;
-  --r-heading-line-height: 1;
-  --r-heading-letter-spacing: -0.03em;
-  --r-heading-text-transform: none;
-  --r-heading-text-shadow: none;
-  --r-heading-font-weight: bold;
-  --r-heading1-text-shadow: none;
-  --r-heading1-size: 3.6em;
-  --r-heading2-size: 2.4em;
-  --r-heading3-size: 1.8em;
-  --r-heading4-size: 1em;
-  --r-code-font: monospace;
-  
-  --r-link-color: var(--colors-blue-link);
-  --r-link-color-dark: var(--colors-blue-darklink);
-  --r-link-color-hover: var(--colors-blue-hoverlink);
-  --r-hover-shadow-color: var(--colors-blue-hovershadow);
-  --r-selection-background-color: var(--colors-blue-selectbg);
-  --r-selection-color: #fff;
-  --r-gradient: var(--colors-white-gradient);
-}
-
 html,
 body {
   max-width: 100vw;
@@ -41,7 +8,7 @@ body div.wrapper {
   color: var(--theme-foreground);
   background-color: var(--theme-background);
   padding: var(--theme-body-padding);
-  font-family: var(--theme-font);
+  font-family: var(--theme-main-font);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

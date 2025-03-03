@@ -18,7 +18,9 @@
     //// Fonts
     /// Fonts are defined by Next.js via its Font Optimisation in app/layout.tsx
     /// See https://nextjs.org/docs/app/building-your-application/optimizing/fonts
-    --theme-font: var(--font-inter), Arial, Helvetica, sans-serif;
+    --theme-main-font: var(--font-inter), Arial, Helvetica, sans-serif;
+    --theme-heading-font: var(--font-inter), Arial, Helvetica, sans-serif;
+    --theme-code-font: monospace;
     --theme-h1-fontsize: 40px;
     --theme-h2-fontsize: 24px;
     --theme-h3-fontsize: 18px;
@@ -34,8 +36,8 @@
     
         //// Colors
         --theme-background: #{c.color(black)};
-        --theme-background2: #{color.scale(c.color(black), $lightness: 10%)};
-        --theme-background3: #{color.scale(c.color(black), $lightness: 20%)};
+        --theme-background2: #{color.scale(c.color(black), $lightness: 3%)};
+        --theme-background3: #{color.scale(c.color(black), $lightness: 10%)};
         --theme-foreground: #{c.color(white)};
         --theme-border: #{color.scale(c.color(black), $lightness: 15%)};
     

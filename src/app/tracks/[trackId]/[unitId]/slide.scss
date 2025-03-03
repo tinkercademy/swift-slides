@@ -1,12 +1,16 @@
-.reveal {
-  --r-background-color: #111;
-  --r-main-font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+// --r- prefix used for Reveal.js
+// see list of exposed CSS variables here: https://github.com/hakimel/reveal.js/blob/master/css/theme/template/exposer.scss
+// Legacy values from slidetheme.css
+
+.reveal-viewport {
+  --r-background-color: var(--theme-background2);
+  --r-main-font: var(--theme-main-font);
   --r-main-font-size: 32px;
-  --r-main-color: #eee;
+  --r-main-color: var(--theme-foreground);
   --r-block-margin: 20px;
   --r-heading-margin: 0 0 20px 0;
-  --r-heading-font: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --r-heading-color: #eee;
+  --r-heading-font: var(--theme-heading-font);
+  --r-heading-color: var(--theme-h1-color);
   --r-heading-line-height: 1.2;
   --r-heading-letter-spacing: -0.03em;
   --r-heading-text-transform: none;
@@ -17,7 +21,7 @@
   --r-heading2-size: 3em;
   --r-heading3-size: 2em;
   --r-heading4-size: 1em;
-  --r-code-font: monospace;
+  --r-code-font: var(--theme-code-font);
   
   --r-link-color: var(--colors-blue-link);
   --r-link-color-dark: var(--colors-blue-darklink);
