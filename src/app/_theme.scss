@@ -37,6 +37,7 @@
         --theme-background2: #{color.scale(c.color(black), $lightness: 10%)};
         --theme-background3: #{color.scale(c.color(black), $lightness: 20%)};
         --theme-foreground: #{c.color(white)};
+        --theme-border: #{color.scale(c.color(black), $lightness: 15%)};
     
         --theme-p-color: #{c.color(white)};
         --theme-h1-color: #{c.color(white)};
@@ -52,9 +53,10 @@
     
     .light {
         --theme-background: #{c.color(white)};
-        --theme-background2: #{color.scale(c.color(white), $lightness: -10%)};
+        --theme-background2: #{color.scale(c.color(white), $lightness: -5%)};
         --theme-background3: #{color.scale(c.color(white), $lightness: -20%)};
         --theme-foreground: #{c.color(black)};
+        --theme-border: #{color.scale(c.color(white), $lightness: -20%)};
 
         --theme-p-color: #{c.color(black)};
         --theme-h1-color: #{c.color(black)};

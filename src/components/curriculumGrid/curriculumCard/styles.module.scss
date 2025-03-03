@@ -12,7 +12,7 @@ a.card {
 
   border-radius: 16px;
 
-  border: #383838;
+  border: var(--theme-border);
   border-width: 1px;
   border-style: solid;
   transition: all 0.3s ease;
