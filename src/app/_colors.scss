@@ -7,6 +7,7 @@
 /// Defines all possible colors used. 
 /// Only access directly if color is fixed throughout themes (eg accents), otherwise use Theme Variables in `_theme.scss`.
 $colors : (
+    "purewhite": #fff,
     "white": #eee,
     "black": #111,
 

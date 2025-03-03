@@ -46,6 +46,9 @@ export default async function SlidesPage({ params, searchParams }: { params: Pro
 
     return (
         <div className={isPrint ? "is-print" : undefined}>
+            <div className={styles.printCover} style={!isPrint ? { display: "none" } : {}}>
+                <div className={styles.loader} />
+            </div>
             <div className={styles.headers}>
                 <Breadcrumb />
                 <h1>{track?.title}</h1>

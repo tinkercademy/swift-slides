@@ -20,3 +20,9 @@
         object-position: left;
     }
 }
+
+@media print {
+    .footer {
+        display: none;
+    }
+}
