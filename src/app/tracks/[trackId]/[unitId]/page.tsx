@@ -13,6 +13,7 @@ import "./xcode-dark.scss";
 import styles from "./page.module.scss";
 import QRCode from "react-qr-code";
 import { ResponsiveImage } from "@/components/responsiveImage";
+import { ReadonlyHeaders } from "next/dist/server/web/spec-extension/adapters/headers";
 
 async function resolveParams(params: Promise<{ trackId: string, unitId: string }>) {
     const { trackId, unitId } = await params
@@ -26,12 +27,20 @@ async function resolveParams(params: Promise<{ trackId: string, unitId: string }
     return { track, unit }
 }
 
+async function resolveCurrentURL() {
+    const heads = await headers()
+    console.log(heads.entries())
+    if (heads.get("x-forwarded-host") && heads.get("x-forwarded-proto") && heads.get("x-original-uri")) {
+        return `${heads.get("x-forwarded-proto")}://${heads.get("x-forwarded-host")}${heads.get("x-original-uri")}`
+    }
+}
+
 export default async function SlidesPage({ params, searchParams }: { params: Promise<{ trackId: string, unitId: string }>, searchParams: Promise<{ "print-pdf"?: boolean }> }) {
 
     const { track, unit } = await resolveParams(params)
     const isPrint = (await searchParams)["print-pdf"] !== undefined
 
-    const currentURL = (await headers()).get('referer')
+    const currentURL = await resolveCurrentURL()
 
     // TODO: update to use Suspense
 
