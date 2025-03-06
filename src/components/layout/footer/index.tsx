@@ -9,8 +9,8 @@ export function Footer() {
       <Link href="https://tinkercademy.com/" target="_blank">
         <ResponsiveImage
           className={styles.tinkerLogo}
-          src="/assets/tinkercademy_long_light.png"
-          darkSrc="/assets/tinkercademy_long_dark.png"
+          src="/assets/logos/tinkercademy_long_light.png"
+          darkSrc="/assets/logos/tinkercademy_long_dark.png"
           width={3680 / 7}
           height={576 / 7}
           alt="Tinkercademy Logo" />
