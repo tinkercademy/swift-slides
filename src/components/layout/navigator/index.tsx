@@ -28,7 +28,11 @@ export function Navigator() {
     <nav className={`${styles.navigator} ${isScrolled && styles.scrolled}`}>
       <div className={styles.explorersLogo}>
         <Link href="/tracks">
-          <ImagePlus src="/assets/swift_explorers_yellow.png" darkSrc="/assets/swift_explorers_purple.png" fill={true} alt="The Swift Explorers Logo" />
+          <ImagePlus
+            src="/assets/swift_explorers_yellow.png"
+            darkSrc="/assets/swift_explorers_purple.png"
+            fill={true}
+            alt="The Swift Explorers Logo" />
         </Link>
       </div>
       <ActionsBar actions={[
