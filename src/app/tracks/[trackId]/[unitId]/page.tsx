@@ -29,7 +29,6 @@ async function resolveParams(params: Promise<{ trackId: string, unitId: string }
 
 async function resolveCurrentURL() {
     const heads = await headers()
-    console.log(heads.entries())
     if (heads.get("x-forwarded-host") && heads.get("x-forwarded-proto") && heads.get("x-original-uri")) {
         return `${heads.get("x-forwarded-proto")}://${heads.get("x-forwarded-host")}${heads.get("x-original-uri")}`
     }

@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Image, { ImageProps } from 'next/image';
 import { useDarkMode } from 'usehooks-ts';
 
@@ -8,17 +8,17 @@ export function ResponsiveImage({ src, alt, key, fallbackSrc, darkSrc, ...rest }
     const [imgSrc, setImgSrc] = useState(src);
     const { isDarkMode } = useDarkMode();
 
+    // TODO: image does not show correct image until theme is toggled
     return (
         <Image
             {...rest}
             src={isDarkMode ? (darkSrc ?? imgSrc) : imgSrc}
             alt={alt}
-            key={key}
             onError={() => {
                 if (!!fallbackSrc) {
                     setImgSrc(fallbackSrc);
                 }
             }}
         />
-    );
+    )
 };
