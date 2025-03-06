@@ -1,13 +1,13 @@
 import Image from "next/image";
 import styles from "./styles.module.scss";
 import Link from "next/link";
-import { ImagePlus } from "@/components/imagePlus";
+import { ResponsiveImage } from "@/components/imagePlus";
 
 export function Footer() {
   return (
     <footer className={styles.footer}>
       <Link href="https://tinkercademy.com/" target="_blank">
-        <ImagePlus
+        <ResponsiveImage
           className={styles.tinkerLogo}
           src="/assets/tinkercademy_long_light.png"
           darkSrc="/assets/tinkercademy_long_dark.png"

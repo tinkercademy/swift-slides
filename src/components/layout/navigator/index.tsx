@@ -7,7 +7,7 @@ import Link from "next/link";
 import { ActionsBar } from "../../actionsBar";
 import { FaMoon, FaSun } from "react-icons/fa6";
 import { useDarkMode } from "usehooks-ts";
-import { ImagePlus } from "@/components/imagePlus";
+import { ResponsiveImage } from "@/components/imagePlus";
 
 export function Navigator() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -28,7 +28,7 @@ export function Navigator() {
     <nav className={`${styles.navigator} ${isScrolled && styles.scrolled}`}>
       <div className={styles.explorersLogo}>
         <Link href="/tracks">
-          <ImagePlus
+          <ResponsiveImage
             src="/assets/swift_explorers_yellow.png"
             darkSrc="/assets/swift_explorers_purple.png"
             fill={true}

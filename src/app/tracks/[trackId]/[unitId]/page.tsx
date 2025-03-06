@@ -12,7 +12,7 @@ import "./xcode-dark.scss";
 
 import styles from "./page.module.scss";
 import QRCode from "react-qr-code";
-import { ImagePlus } from "@/components/imagePlus";
+import { ResponsiveImage } from "@/components/imagePlus";
 
 async function resolveParams(params: Promise<{ trackId: string, unitId: string }>) {
     const { trackId, unitId } = await params
@@ -77,7 +77,7 @@ export default async function SlidesPage({ params, searchParams }: { params: Pro
                     </section>
                     <section>
                         <div style={{ display: "flex", justifyContent: "center", alignItems: "center", flexDirection: "column" }}>
-                            <ImagePlus
+                            <ResponsiveImage
                                 className={styles.tinkerLogo}
                                 src="/assets/tinkercademy_long_light.png"
                                 darkSrc="/assets/tinkercademy_long_dark.png"
