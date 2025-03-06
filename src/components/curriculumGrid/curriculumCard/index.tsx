@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 import styles from "./styles.module.scss";
-import { ImageWithFallback } from "@/components/imageWithFallback";
+import { ImagePlus } from "@/components/imagePlus";
 
 export function CurriculumCard({
     title, subtitle, description, imgURL, pageURL, color
@@ -22,7 +22,7 @@ export function CurriculumCard({
     return (
         <Link href={pageURL?.startsWith("http") || pageURL?.startsWith("/") ? pageURL : `${pathname}/${pageURL}`} className={`${styles.card} ${styles[color]}`}>
             <div className={styles.entryImg}>
-                <ImageWithFallback
+                <ImagePlus
                     src={imgURL || "/covers/placeholder.png"}
                     fallbackSrc="/covers/placeholder.png"
                     placeholder="blur" blurDataURL="/covers/loading.png"
