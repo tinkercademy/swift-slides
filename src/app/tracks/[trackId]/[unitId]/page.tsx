@@ -84,7 +84,7 @@ export default async function SlidesPage({ params, searchParams }: { params: Pro
                                 width={3680 / 7}
                                 height={576 / 7}
                                 alt="Tinkercademy Logo" />
-                            <p>Swift Coding Club • Track A</p>
+                            <p>Swift Coding Club • Track {track.id.slice(-1).toUpperCase()}</p>
                         </div>
                     </section>
                 </div>
