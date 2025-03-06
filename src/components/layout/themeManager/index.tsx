@@ -7,7 +7,7 @@ export function ThemeManager({ children }: { children: ReactNode }) {
     const { isDarkMode } = useDarkMode({ initializeWithValue: false })
 
     return (
-        <div className={`wrapper ${isDarkMode ? "dark" : "light"}`}>
+        <div className={isDarkMode ? "dark" : "light"}>
             {children}
         </div>
     )
