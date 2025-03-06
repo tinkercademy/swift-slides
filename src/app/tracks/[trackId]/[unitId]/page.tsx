@@ -12,7 +12,7 @@ import "./xcode-dark.scss";
 
 import styles from "./page.module.scss";
 import QRCode from "react-qr-code";
-import { ResponsiveImage } from "@/components/imagePlus";
+import { ResponsiveImage } from "@/components/responsiveImage";
 
 async function resolveParams(params: Promise<{ trackId: string, unitId: string }>) {
     const { trackId, unitId } = await params

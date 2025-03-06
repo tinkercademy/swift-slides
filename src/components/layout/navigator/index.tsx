@@ -7,7 +7,7 @@ import Link from "next/link";
 import { ActionsBar } from "../../actionsBar";
 import { FaMoon, FaSun } from "react-icons/fa6";
 import { useDarkMode } from "usehooks-ts";
-import { ResponsiveImage } from "@/components/imagePlus";
+import { ResponsiveImage } from "@/components/responsiveImage";
 
 export function Navigator() {
   const [isScrolled, setIsScrolled] = useState(false);

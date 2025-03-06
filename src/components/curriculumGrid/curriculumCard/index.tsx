@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 import styles from "./styles.module.scss";
-import { ResponsiveImage } from "@/components/imagePlus";
+import { ResponsiveImage } from "@/components/responsiveImage";
 
 export function CurriculumCard({
     title, subtitle, description, imgURL, pageURL, color

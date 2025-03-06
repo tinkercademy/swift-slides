@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "./styles.module.scss";
 import Link from "next/link";
-import { ResponsiveImage } from "@/components/imagePlus";
+import { ResponsiveImage } from "@/components/responsiveImage";
 
 export function Footer() {
   return (
