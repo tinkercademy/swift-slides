@@ -7,7 +7,7 @@ import styles from "./styles.module.scss";
 export function Breadcrumb() {
     // TODO: use parallel routes to refactor breadcrumbs: https://github.com/vercel/next.js/issues/43704#issuecomment-2090798307
     const pathname = usePathname();
-    const pathSegments = pathname.split('/').filter(Boolean);
+    const pathSegments = pathname?.split('/').filter(Boolean) ?? [];
 
     return (
         <h2 className={styles.breadcrumb}>
