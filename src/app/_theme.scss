@@ -1,0 +1,89 @@
+//// `_theme.scss` should NOT be imported into any stylesheet (will cause errors in CSS modules), 
+/// instead it is imported at the root `layout.tsx` as a global CSS stylesheet.
+/// 
+/// `_theme.scss` imports `_colors.scss` and maps each SASS variable to an equivalent CSS variable, 
+/// also further defining other theme variables. Use CSS variables where possible.
+/// CSS variables are used for theme variables so they can be accessed during runtime.
+
+@use "src/app/colors" as c;
+@use 'sass:color';
+
+:root {
+
+    // Loop to map each SASS variable to an equivalent CSS variable.
+    @each $key, $value in c.$colors {
+        --colors-#{$key} : #{$value};
+    }
+
+    //// Fonts
+    /// Fonts are defined by Next.js via its Font Optimisation in app/layout.tsx
+    /// See https://nextjs.org/docs/app/building-your-application/optimizing/fonts
+    --theme-main-font: var(--font-inter),
+    Arial,
+    Helvetica,
+    sans-serif;
+    --theme-heading-font: var(--font-inter),
+    Arial,
+    Helvetica,
+    sans-serif;
+    --theme-code-font: monospace;
+    --theme-h1-fontsize: 40px;
+    --theme-h2-fontsize: 24px;
+    --theme-h3-fontsize: 18px;
+    --theme-p-fontsize: 16px;
+
+    //// Margins & Paddings
+    --theme-body-padding: 120px 64px;
+
+
+    :has(.dark) {
+        //// Theme Variables
+        /// Defines colors in a specific theme (eg background/foreground colors).
+        /// Color Theme Variables should use colors from Palette Variables.
+
+        //// Colors
+        --theme-background: #{c.color(black)};
+        --theme-background2: #{color.scale(c.color(black), $lightness: 3%)};
+        --theme-background3: #{color.scale(c.color(black), $lightness: 10%)};
+        --theme-foreground: #{c.color(white)};
+        --theme-border: #{color.scale(c.color(black), $lightness: 15%)};
+
+        --theme-p-color: #{c.color(white)};
+        --theme-h1-color: #{c.color(white)};
+        --theme-h1-gradient: #{c.color(white-gradient)};
+        --theme-a-color: #{c.color(tinkercademy-pink)};
+        // --theme-a_dark-color: 
+        // --theme-a_hover-color: 
+
+        //     --r-link-color: var(--colors-blue-link);
+        //   --r-link-color-dark: var(--colors-blue-darklink);
+        //   --r-link-color-hover: var(--colors-blue-hoverlink);
+    }
+
+    :has(.light) {
+        --theme-background: #{c.color(white)};
+        --theme-background2: #{color.scale(c.color(white), $lightness: -5%)};
+        --theme-background3: #{color.scale(c.color(white), $lightness: -20%)};
+        --theme-foreground: #{c.color(black)};
+        --theme-border: #{color.scale(c.color(white), $lightness: -20%)};
+
+        --theme-p-color: #{c.color(black)};
+        --theme-h1-color: #{c.color(black)};
+        --theme-h1-gradient: #{c.color(black-gradient)};
+        --theme-a-color: #{c.color(tinkercademy-pink)};
+    }
+
+}
+
+@media only screen and (max-width: 890px) {
+    :root {
+        //// Fonts
+        --theme-h1-fontsize: 30px;
+        --theme-h2-fontsize: 22px;
+        --theme-h3-fontsize: 18px;
+        --theme-p-fontsize: 16px;
+
+        //// Margins & Paddings
+        --theme-body-padding: 110px 16px 64px 16px;
+    }
+}

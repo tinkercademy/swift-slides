@@ -1,0 +1,16 @@
+.actions {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    z-index: 5;
+
+    &.fullscreen {
+        z-index: 12;
+    }
+}
+
+.revealViewportWrapper {
+    width: 50%;
+    padding: 21.6% 38.4%; // for 1920/1080 ratio, we use a 1080/1920 = 21.6%/38.4% padding
+    box-sizing: border-box;
+}

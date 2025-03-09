@@ -1,0 +1,63 @@
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  color: var(--theme-foreground);
+  background-color: var(--theme-background);
+  padding: var(--theme-body-padding);
+  font-family: var(--theme-main-font);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  font-weight: 700;
+  
+}
+
+h1 {
+  font-size: var(--theme-h1-fontsize);
+  background-color: var(--theme-h1-color);
+  background-image: var(--theme-h1-gradient);
+  color: transparent;
+  background-clip: text;
+  margin: 0;
+}
+
+h2 {
+  font-size: var(--theme-h2-fontsize);
+  margin: 0;
+}
+
+h3 {
+  font-size: var(--theme-h3-fontsize);
+  margin: 0;
+}
+
+p {
+  font-size: var(--theme-p-fontsize);
+  line-height: 1.2;
+  margin: 0;
+}
+
+a {
+  color: var(--theme-a-color);
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+@media only screen and (max-width: 890px) {
+  .card {
+    width: 100%;
+  }
+
+  .logo {
+    height: 20px;
+  }
+}

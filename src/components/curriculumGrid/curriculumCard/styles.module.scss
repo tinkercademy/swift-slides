@@ -1,0 +1,75 @@
+@use 'sass:color';
+@use "src/app/colors" as c;
+
+a.card {
+  // Since .card is an anchor link, need to remove typical links styles
+  color: var(--theme-foreground);
+  background-color: var(--theme-background2);
+  text-decoration: none;
+
+  display: flex;
+  flex-direction: column;
+
+  border-radius: 16px;
+
+  border: var(--theme-border);
+  border-width: 1px;
+  border-style: solid;
+  transition: all 0.3s ease;
+  z-index: 2;
+  cursor: pointer;
+  overflow: hidden;
+
+  &:hover {
+    z-index: 3;
+    &.blue, & { // default is blue
+      box-shadow: 0px 0px 64px 2px var(--colors-blue-hovershadow);
+      border-color: color.adjust(c.color(blue-hovershadow), $lightness: 10%);
+    }
+    
+    &.green {
+      box-shadow: 0px 0px 64px 2px var(--colors-green-hovershadow);
+      border-color: color.adjust(c.color(green-hovershadow), $lightness: 10%)
+    }
+    
+    &.pink {
+      box-shadow: 0px 0px 64px 2px var(--colors-pink-hovershadow);
+      border-color: color.adjust(c.color(pink-hovershadow), $lightness: 10%)
+    }
+    
+    &.red {
+      box-shadow: 0px 0px 64px 2px var(--colors-red-hovershadow);
+      border-color: color.adjust(c.color(red-hovershadow), $lightness: 10%)
+    }
+  }
+
+  div.entryImg {
+    width: 100%;
+    height: 220px;
+    position: relative;
+
+    img {
+      object-fit: cover;
+    }
+  }
+
+  .contentWrapper {
+    padding: 20px 30px;
+
+    h3 {
+      opacity: 0.6;
+      margin: 0;
+      margin-top: 5px;
+    }
+
+    h2 {
+      margin: 0;
+    }
+
+    p {
+      opacity: 0.8;
+      margin: 15px 0;
+    }
+  }
+
+}
