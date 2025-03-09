@@ -17,17 +17,17 @@ Introduction to Freeform and its tools
 
 ## Freeform
 
-- A free Apple app for Mac, iPhone, and iPad, designed for creative brainstorming and collaboration.
-- If you’ve used drawing tools for Keynote or Notes, it’s pretty much the same as those — just designed for collaborative editing, on an infinite canvas (board).
-- Create expandable “boards”, and add text, drawings with various brushes, fills, shapes, sticky notes, and media
+-   A free Apple app for Mac, iPhone, and iPad, designed for creative brainstorming and collaboration.
+-   If you’ve used drawing tools for Keynote or Notes, it’s pretty much the same as those — just designed for collaborative editing, on an infinite canvas (board).
+-   Create expandable “boards”, and add text, drawings with various brushes, fills, shapes, sticky notes, and media
 
 ---vertical---
 
 ## Why Freeform
 
-- With Freeform, you can...
-- Create simple app designs to experiment with different concepts of what you want to do
-- Create infinitely sized “boards”, and add text, drawings with various tools, fills, shapes, sticky notes and links
+-   With Freeform, you can...
+-   Create simple app designs to experiment with different concepts of what you want to do
+-   Create infinitely sized “boards”, and add text, drawings with various tools, fills, shapes, sticky notes and links
 
 ---
 
@@ -46,6 +46,7 @@ Introduction to Freeform and its tools
         </ul>
     </ul>
 </div>
+<img src="./assets/5-newboard.png" alt="Creating a new board in Freeform">
 
 ---vertical---
 
@@ -64,6 +65,7 @@ Introduction to Freeform and its tools
         </ul>
     </ul>
 </div>
+<img src="./assets/5-renamingboard.png" alt="Renaming a board in Freeform">
 
 ---
 
@@ -75,19 +77,19 @@ Introduction to Freeform and its tools
 
 ## Zooming your board
 
-- Freeform has an _infinite canvas_
-  - As you move around, the canvas will continue to expand
-- To **zoom in** or **zoom out** of the canvas, place two fingers on your screen, and do a pinching movement
-  - Pinching in zooms in, pinching out zooms out
+-   Freeform has an _infinite canvas_
+    -   As you move around, the canvas will continue to expand
+-   To **zoom in** or **zoom out** of the canvas, place two fingers on your screen, and do a pinching movement
+    -   Pinching in zooms in, pinching out zooms out
 
 ---vertical---
 
 ## Moving around your board
 
-- Freeform has an _infinite canvas_
-  - As you move around, the canvas will continue to expand
-- To move around, **hold down one finger** on your screen and move it around
-  - You can do this simultaneously while zooming in or out
+-   Freeform has an _infinite canvas_
+    -   As you move around, the canvas will continue to expand
+-   To move around, **hold down one finger** on your screen and move it around
+    -   You can do this simultaneously while zooming in or out
 
 ---
 
@@ -97,8 +99,8 @@ Introduction to Freeform and its tools
 
 ## Drawing Tools
 
-- Tap on a tool to switch to it.
-- Tap a second time to see if there are additional options, like stroke size (line thickness) or transparency.
+-   Tap on a tool to switch to it.
+-   Tap a second time to see if there are additional options, like stroke size (line thickness) or transparency.
 
 <img src="/markdown/track_a/assets/freeform-tools.png">
 
@@ -123,20 +125,25 @@ Introduction to Freeform and its tools
 
 ## Customising sticky notes
 
-<div style="display: flex;">
+<div style="display: flex; gap: 20px;">
+    <div style="flex: 1;">
     <ul>
         <li>The default colour for these sticky notes is yellow, but you can change it</li>
-        <ul>
-            <li>Fonts can be changed too</li>
-        </ul>
+        <li>Fonts can be changed too!</li>
     </ul>
+    </div>
+    <div style="flex: 1;">
+        <img src="./assets/5-notes.png" style="max-height: 70vh;">
+    </div>
+
 </div>
 
 ---vertical---
 
 ## Using preset shapes
 
-<div style="display: flex;">
+<div style="display: flex; gap: 20px;">
+    <div style="flex: 1;">
     <ul>
         <li>Freeform has a library of ready-made shapes for you to add to your boards</li>
         <li>Tap on the (shapes icon) button in the toolbar</li>
@@ -145,13 +152,19 @@ Introduction to Freeform and its tools
             <li>You can either search for a shape, or search by a category</li>
         </ul>
     </ul>
+    </div>
+    <div style="flex: 1; text-align: center;">
+        <img src="./assets/5-shapes.png" style="max-height: 70vh;">
+    </div>
+
 </div>
 
 ---vertical---
 
 ## Insert media
 
-<div style="display: flex;">
+<div style="display: flex; gap: 20px;">
+    <div style="flex: 1;">
     <ul>
         <li>Tap on the (picture icon) button at the top centre of your screen</li>
         <li>Select an option for where you’d like to get your media from</li>
@@ -161,6 +174,11 @@ Introduction to Freeform and its tools
             <li>It will look something like this 👉</li>
         </ul>
     </ul>
+    </div>
+    <div style="flex: 1; text-align: center;">
+        <img src="./assets/5-links.png" style="max-height: 80vh;">
+    </div>
+
 </div>
 
 ---
@@ -183,12 +201,18 @@ Introduction to Freeform and its tools
 
 ## Exporting in Freeform
 
-<div style="display: flex;">
+<div style="display: flex; gap: 20px">
+    <div style="flex: 1;">
     <ul>
         <li>In Freeform, you can export the canvas so that you can send it as a pdf to anyone.</li>
         <li>To do so, tap on the file name on the top left hand corner</li>
         <li>Press <strong>Export as PDF</strong>, and select the location to save it in</li>
     </ul>
+    </div>
+    <div style="flex: 1;">
+        <img src="./assets/5-export.png" style="max-height: 90vh;">
+    </div>
+
 </div>
 
 ---
@@ -197,20 +221,25 @@ Introduction to Freeform and its tools
 
 ---vertical---
 
-## Keynote Collaboration
+## Freeform Collaboration
 
-<div style="display: flex;">
-    <ul>
-        <li>To get started, tap on the (export) icon in the top right corner</li>
-        <li>Make sure you set the document to <strong>Collaborate</strong>, not <strong>Send Copy</strong> in the drop-down box.</li>
-        <li>Next, share the link by using:</li>
+<div style="display: flex; gap: 20px;">
+    <div style="flex: 1;">
         <ul>
-            <li><strong>AirDrop</strong>: If in the same room</li>
-            <li><strong>Messages</strong>: If on iMessage</li>
-            <li><strong>Mail</strong>: Using email address</li>
-            <li><strong>Invite with link</strong>: Paste elsewhere</li>
+            <li>To get started, tap on the (export) icon in the top right corner</li>
+            <li>Make sure you set the document to <strong>Collaborate</strong>, not <strong>Send Copy</strong> in the drop-down box.</li>
+            <li>Next, share the link by using:</li>
+            <ul>
+                <li><strong>AirDrop</strong>: If in the same room</li>
+                <li><strong>Messages</strong>: If on iMessage</li>
+                <li><strong>Mail</strong>: Using email address</li>
+                <li><strong>Invite with link</strong>: Paste elsewhere</li>
+            </ul>
         </ul>
-    </ul>
+    </div>
+    <div style="flex: 1; text-align: center;">
+        <img src="./assets/5-collaborate.png" style="max-height: 90vh;">
+    </div>
 </div>
 
 ---vertical---
