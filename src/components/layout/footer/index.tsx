@@ -6,18 +6,22 @@ import { ResponsiveImage } from "@/components/responsiveImage";
 export function Footer() {
   return (
     <footer className={styles.footer}>
-      <Link href="https://tinkercademy.com/" target="_blank">
+      <div className={styles.logos}>
+        <Link href="https://tinkercademy.com/" target="_blank">
+          <ResponsiveImage
+            className={styles.tinkerLogo}
+            src="/assets/logos/tinkercademy_long_light.png"
+            darkSrc="/assets/logos/tinkercademy_long_dark.png"
+            width={3680 / 14}
+            height={576 / 14}
+            alt="Tinkercademy Logo" />
+        </Link>
         <ResponsiveImage
-          className={styles.tinkerLogo}
-          src="/assets/logos/tinkercademy_long_light.png"
-          darkSrc="/assets/logos/tinkercademy_long_dark.png"
-          width={3680 / 7}
-          height={576 / 7}
-          alt="Tinkercademy Logo" />
-      </Link>
-      <br />
-      <div className={styles.appleBadges}>
-        <Image src="/assets/apple-badges.svg" fill={true} alt="Apple badges for Certified Trainer (App Development with Swift), Consultants Network and Professional Learning Specialist." />
+          src="/assets/logos/apple_badges_light.svg"
+          darkSrc="/assets/logos/apple_badges_dark.svg"
+          width={868 / 1.5}
+          height={64 / 1.5}
+          alt="Apple badges for Certified Trainer (App Development with Swift), Consultants Network and Professional Learning Specialist." />
       </div>
       <br />
       <p>

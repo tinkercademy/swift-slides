@@ -6,15 +6,11 @@
     }
 }
 
-.appleBadges {
-    position: relative;
-    height: 64px;
-
-    img {
-        // margin: ;
-        object-fit: contain;
-        object-position: left;
-    }
+.logos {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 20px;
 }
 
 @media print {
