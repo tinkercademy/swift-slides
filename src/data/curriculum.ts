@@ -178,6 +178,7 @@ export const tracks: TrackCurriculumEntry[] = [
 		title: "App Development with Swift - Intermediate",
 		subtitle: "Track C",
 		description: "Go further with SwiftUI! Explore technologies like Augmented Reality amd Machine Learning in Swift.",
+		disabled: true,
 		units: [
 			{
 				id: "unit_01",
@@ -227,28 +228,32 @@ export const tracks: TrackCurriculumEntry[] = [
 				title: "Logic and Variable Types",
 				subtitle: "Unit 02",
 				description: "Progressing more!",
-				markdownId: "logic-variables"
+				markdownId: "logic-variables",
+				disabled: true,
 			},
 			{
 				id: "unit_03",
 				title: "Initialisation, Function, Parameters",
 				subtitle: "Unit 03",
 				description: "Moving furher!",
-				markdownId: "initialisation-func-parameters"
+				markdownId: "initialisation-func-parameters",
+				disabled: true,
 			},
 			{
 				id: "unit_04",
 				title: "Getting Started With Code",
 				subtitle: "Unit 04",
 				description: "Progressing furher!",
-				markdownId: "initialisation-func-parameters"
+				markdownId: "initialisation-func-parameters",
+				disabled: true,
 			},
 			{
 				id: "unit_05",
 				title: "About me App",
 				subtitle: "Unit 05",
 				description: "Woah you are DONE",
-				markdownId: "about-me-app"
+				markdownId: "about-me-app",
+				disabled: true,
 			},
 		]
 	},

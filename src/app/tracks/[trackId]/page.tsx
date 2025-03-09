@@ -43,7 +43,8 @@ export default async function UnitsPage({ params, searchParams }: { params: Prom
                             description={unit.description}
                             imgURL={`/covers/${track.id}/${unit.id}.png`}
                             pageURL={unit.id}
-                            color={getColorFromTrack(track?.id)} />
+                            color={getColorFromTrack(track?.id)}
+                            disabled={unit.disabled} />
                     )
                 }) : (
                     <div className={styles.noResults}>

@@ -17,7 +17,8 @@ export default function TracksPage() {
               description={track.description}
               imgURL={`/covers/${track.id}/track.png`}
               pageURL={track.id}
-              color={getColorFromTrack(track.id)} />
+              color={getColorFromTrack(track.id)}
+              disabled={track.disabled} />
           )
         })}
       </CurriculumGridContainer>

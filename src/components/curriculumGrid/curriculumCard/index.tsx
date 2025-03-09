@@ -7,7 +7,7 @@ import styles from "./styles.module.scss";
 import { ResponsiveImage } from "@/components/responsiveImage";
 
 export function CurriculumCard({
-    title, subtitle, description, imgURL, pageURL, color
+    title, subtitle, description, imgURL, pageURL, color, disabled
 }: {
     title: string,
     subtitle?: string,
@@ -15,12 +15,13 @@ export function CurriculumCard({
     imgURL?: string,
     pageURL?: string
     color: "blue" | "green" | "pink" | "red",
+    disabled?: boolean
 }) {
 
     const pathname = usePathname()
 
     return (
-        <Link href={pageURL?.startsWith("http") || pageURL?.startsWith("/") ? pageURL : `${pathname}/${pageURL}`} className={`${styles.card} ${styles[color]}`}>
+        <Link href={pageURL?.startsWith("http") || pageURL?.startsWith("/") ? pageURL : `${pathname}/${pageURL}`} className={`${styles.card} ${styles[color]} ${(disabled ?? false) ? styles.disabled : ""}`}>
             <div className={styles.entryImg}>
                 <ResponsiveImage
                     src={imgURL || "/covers/placeholder.png"}

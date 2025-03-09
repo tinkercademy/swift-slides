@@ -3,6 +3,7 @@ export interface CurriculumEntry {
     title: string;
     subtitle: string;
     description: string;
+    disabled?: boolean;
 }
 
 export interface TrackCurriculumEntry extends CurriculumEntry {

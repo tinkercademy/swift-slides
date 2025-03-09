@@ -20,6 +20,11 @@ a.card {
   cursor: pointer;
   overflow: hidden;
 
+  &.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+
   &:hover {
     z-index: 3;
     &.blue, & { // default is blue
