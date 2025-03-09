@@ -1,19 +1,18 @@
 import { Breadcrumb } from "@/components/breadcrumb";
 import { tracks } from "@/data/curriculum";
 
-import "reveal.js/dist/reveal.css";
-import "reveal.js/dist/theme/black.css";
 import { notFound } from "next/navigation";
 import { headers } from "next/headers";
 import { RevealjsClientWrapper } from "../../../../components/revealjsWrapper/revealjsClientWrapper";
+import QRCode from "react-qr-code";
+import { ResponsiveImage } from "@/components/responsiveImage";
 
+import "reveal.js/dist/reveal.css";
+import "reveal.js/dist/theme/black.css";
 import "./slide.scss";
 import "./xcode-dark.scss";
 
 import styles from "./page.module.scss";
-import QRCode from "react-qr-code";
-import { ResponsiveImage } from "@/components/responsiveImage";
-import { ReadonlyHeaders } from "next/dist/server/web/spec-extension/adapters/headers";
 
 async function resolveParams(params: Promise<{ trackId: string, unitId: string }>) {
     const { trackId, unitId } = await params
