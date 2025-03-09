@@ -46,7 +46,7 @@ Introduction to Freeform and its tools
         </ul>
     </ul>
 </div>
-<img src="./assets/5-newboard.png" alt="Creating a new board in Freeform">
+<img src="/markdown/track_a/assets/5-newboard.png" alt="Creating a new board in Freeform">
 
 ---vertical---
 
@@ -65,7 +65,7 @@ Introduction to Freeform and its tools
         </ul>
     </ul>
 </div>
-<img src="./assets/5-renamingboard.png" alt="Renaming a board in Freeform">
+<img src="/markdown/track_a/assets/5-renamingboard.png" alt="Renaming a board in Freeform">
 
 ---
 
@@ -133,7 +133,7 @@ Introduction to Freeform and its tools
     </ul>
     </div>
     <div style="flex: 1;">
-        <img src="./assets/5-notes.png" style="max-height: 70vh;">
+        <img src="/markdown/track_a/assets/5-notes.png" style="max-height: 70vh;">
     </div>
 
 </div>
@@ -154,7 +154,7 @@ Introduction to Freeform and its tools
     </ul>
     </div>
     <div style="flex: 1; text-align: center;">
-        <img src="./assets/5-shapes.png" style="max-height: 70vh;">
+        <img src="/markdown/track_a/assets/5-shapes.png" style="max-height: 70vh;">
     </div>
 
 </div>
@@ -176,7 +176,7 @@ Introduction to Freeform and its tools
     </ul>
     </div>
     <div style="flex: 1; text-align: center;">
-        <img src="./assets/5-links.png" style="max-height: 80vh;">
+        <img src="/markdown/track_a/assets/5-links.png" style="max-height: 80vh;">
     </div>
 
 </div>
@@ -210,7 +210,7 @@ Introduction to Freeform and its tools
     </ul>
     </div>
     <div style="flex: 1;">
-        <img src="./assets/5-export.png" style="max-height: 90vh;">
+        <img src="/markdown/track_a/assets/5-export.png" style="max-height: 90vh;">
     </div>
 
 </div>
@@ -238,7 +238,7 @@ Introduction to Freeform and its tools
         </ul>
     </div>
     <div style="flex: 1; text-align: center;">
-        <img src="./assets/5-collaborate.png" style="max-height: 90vh;">
+        <img src="/markdown/track_a/assets/5-collaborate.png" style="max-height: 90vh;">
     </div>
 </div>
 
