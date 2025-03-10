@@ -26,7 +26,7 @@ export function CurriculumCard({
                 <ResponsiveImage
                     src={imgURL || "/covers/placeholder.png"}
                     fallbackSrc="/covers/placeholder.png"
-                    placeholder="blur" blurDataURL="/covers/loading.png"
+                    placeholder="blur" blurDataURL="/covers/placeholder.png"
                     fill={true}
                     alt={`Cover image for "${subtitle ?? title}"`} />
             </div>
