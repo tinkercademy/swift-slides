@@ -3,20 +3,29 @@ import { CurriculumGridContainer } from "@/components/curriculumGrid/curriculumG
 import { Breadcrumb } from "@/components/breadcrumb";
 import { SearchBar } from "@/components/searchBar";
 import { tracks } from "@/data/curriculum";
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 
 import styles from "./page.module.scss"
 import { getColorFromTrack } from "../track";
 import { FaMagnifyingGlass } from "react-icons/fa6";
 
-export default async function UnitsPage({ params, searchParams }: { params: Promise<{ trackId: string }>, searchParams: Promise<{ search?: string }> }) {
+export default async function UnitsPage({ params, searchParams }: { params: Promise<{ trackId: string }>, searchParams: Promise<{ deck?: string, search?: string }> }) {
+
+    // Lookup the relevant track and list relevant units
     const trackId = (await params).trackId
     const track = tracks.find(e => e.id === trackId)
-
     if (track === undefined) {
         notFound()
     }
 
+    // Temporary redirect for legacy presentation links (see next.config.ts)
+    const markdownId = (await searchParams)?.deck
+    const unitId = track.units.find(e => e.markdownId === markdownId)?.id
+    if (unitId !== undefined) {
+        redirect(`/tracks/${trackId}/${unitId}`, )
+    }
+
+    // Check if search term is present and matches any units
     const searchTerm = (await searchParams)?.search || "";
     const filteredUnits = track.units.filter(unit =>
         unit.title.toLowerCase().includes(searchTerm.toLowerCase()) ||

@@ -4,7 +4,8 @@ import { CurriculumGridContainer } from "@/components/curriculumGrid/curriculumG
 
 import { getColorFromTrack } from "./track";
 
-export default function TracksPage() {
+export default async function TracksPage() {
+
   return (
     <div>
       <CurriculumGridContainer>
