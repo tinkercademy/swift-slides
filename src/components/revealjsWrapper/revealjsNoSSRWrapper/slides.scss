@@ -15,7 +15,14 @@
   }
 
   section.has-light-background {
-    &, & h1, & h2, & h3, & h4, & h5, & h6 {
+
+    &,
+    & h1,
+    & h2,
+    & h3,
+    & h4,
+    & h5,
+    & h6 {
       color: #222;
     }
   }
@@ -41,7 +48,7 @@
     p {
       font-size: var(--r-main-font-size)
     }
-    
+
     h1,
     h2,
     h3,
@@ -236,36 +243,36 @@
       border-radius: 16px;
     }
 
-    table {
+    table:not(.hljs-ln) {
       margin-right: auto;
       border-collapse: collapse;
       border-spacing: 0;
-    }
 
-    table th {
-      font-weight: bold;
-    }
+      th {
+        font-weight: bold;
+      }
 
-    table th,
-    table td {
-      text-align: left;
-      padding: 0.2em 0.5em 0.2em 0.5em;
-      border-bottom: 1px solid;
-    }
+      th,
+      td {
+        text-align: left;
+        padding: 0.2em 0.5em 0.2em 0.5em;
+        border-bottom: 1px solid;
+      }
 
-    table th[align=center],
-    table td[align=center] {
-      text-align: center;
-    }
+      th[align=center],
+      td[align=center] {
+        text-align: center;
+      }
 
-    table th[align=right],
-    table td[align=right] {
-      text-align: right;
-    }
+      th[align=right],
+      td[align=right] {
+        text-align: right;
+      }
 
-    table tbody tr:last-child th,
-    table tbody tr:last-child td {
-      border-bottom: none;
+      tbody tr:last-child th,
+      tbody tr:last-child td {
+        border-bottom: none;
+      }
     }
 
     sup {
@@ -356,6 +363,7 @@
    *********************************************/
   /* To format slides into a printable pdf version */
   @media print {
+
     /* Hide video elements */
     video,
     iframe,
