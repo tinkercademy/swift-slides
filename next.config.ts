@@ -7,7 +7,17 @@ const nextConfig: NextConfig = {
         source: "/",
         destination: "/tracks",
         permanent: false
-      }
+      },
+      {
+        source: "/codingclub",
+        destination: "/tracks",
+        permanent: false
+      },
+      {
+        source: "/codingclub/:slug([abcx])",
+        destination: "/tracks/track_:slug",
+        permanent: false
+      },
     ]
   }
 }
