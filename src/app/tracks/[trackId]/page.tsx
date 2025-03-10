@@ -14,14 +14,14 @@ export default async function UnitsPage({ params, searchParams }: { params: Prom
     // Lookup the relevant track and list relevant units
     const trackId = (await params).trackId
     const track = tracks.find(e => e.id === trackId)
-    if (track === undefined) {
+    if (!track) {
         notFound()
     }
 
     // Temporary redirect for legacy presentation links (see next.config.ts)
     const markdownId = (await searchParams)?.deck
     const unitId = track.units.find(e => e.markdownId === markdownId)?.id
-    if (unitId !== undefined) {
+    if (!!unitId) {
         redirect(`/tracks/${trackId}/${unitId}`, )
     }
 

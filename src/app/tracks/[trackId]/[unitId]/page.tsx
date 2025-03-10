@@ -19,7 +19,7 @@ async function resolveParams(params: Promise<{ trackId: string, unitId: string }
     const track = tracks.find(e => e.id === trackId)
     const unit = track?.units.find(e => e.id === unitId)
 
-    if (track === undefined || unit === undefined) {
+    if (!track || !unit) {
         notFound()
     }
 
