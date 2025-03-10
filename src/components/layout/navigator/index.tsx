@@ -37,11 +37,11 @@ export function Navigator() {
         </Link>
       </div>
       <ActionsBar actions={[
-        {
-          name: "theme",
-          onClick: () => { toggleDarkMode() },
-          icon: (isDarkMode ? <FaSun /> : <FaMoon />)
-        }
+        // {
+        //   name: "theme",
+        //   onClick: () => { toggleDarkMode() },
+        //   icon: (isDarkMode ? <FaSun /> : <FaMoon />)
+        // }
       ]} />
     </nav>
   );
