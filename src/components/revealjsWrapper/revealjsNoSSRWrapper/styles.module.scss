@@ -1,16 +1,38 @@
-.actions {
-    position: absolute;
-    right: 15px;
-    top: 15px;
-    z-index: 5;
-
-    &.fullscreen {
-        z-index: 12;
-    }
+body:has(.embedPlayer.fullscreen) {
+    max-height: 100vh;
+    padding: 0;
+    overflow: hidden;
 }
 
-.revealViewportWrapper {
+.embedPlayer {
     width: 50%;
     padding: 25.92% 46.08%; // for 1920/1080 ratio, we use a 1080/1920 = 21.6%/38.4% padding
     box-sizing: border-box;
+
+    .deckContainer {
+        background-color: var(--r-background-color);
+
+        position: absolute;
+        inset: 0;
+        z-index: 2;
+    }
+
+    &.fullscreen .deckContainer {
+        z-index: 11;
+    }
+
+    &.print .deckContainer {
+        background-color: var(--colors-purewhite);
+    }
+
+    .actions {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        z-index: 5;
+    }
+
+    &.fullscreen .actions {
+        z-index: 12;
+    }
 }

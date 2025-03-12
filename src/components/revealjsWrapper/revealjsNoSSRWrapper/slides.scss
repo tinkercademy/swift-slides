@@ -1,17 +1,18 @@
-.is-print .reveal-viewport {
-  overflow: visible;
-  background-color: var(--colors-purewhite);
-}
+.reveal.reveal-viewport {
+  // not very sure why but it seems like when in embed mode, Reveal.js requires .reveal to work but applies .reveal-viewport only
+  font-family: var(--r-main-font);
+  font-size: var(--r-main-font-size);
+  font-weight: normal;
+  color: var(--r-main-color);
 
-.reveal-viewport {
-  background-color: var(--r-background-color);
+  ::selection {
+    color: var(--r-selection-color);
+    background: var(--r-selection-background-color);
+    text-shadow: none;
+  }
 
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-
-  &.fullscreen {
-    z-index: 11;
+  .hljs.has-highlights tr:not(.highlight-line) {
+    opacity: 0.2;
   }
 
   section.has-light-background {
@@ -26,340 +27,324 @@
     }
   }
 
-  .reveal {
-    font-family: var(--r-main-font);
-    font-size: var(--r-main-font-size);
-    font-weight: normal;
-    color: var(--r-main-color);
+  .slides section,
+  .slides section>section {
+    line-height: 1.3;
+    font-weight: inherit;
+  }
 
-    ::selection {
-      color: var(--r-selection-color);
-      background: var(--r-selection-background-color);
-      text-shadow: none;
-    }
+  p {
+    font-size: var(--r-main-font-size)
+  }
 
-    .hljs.has-highlights tr:not(.highlight-line) {
-      opacity: 0.2;
-    }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: var(--r-heading-margin);
+    color: var(--r-heading-color);
+    font-family: var(--r-heading-font);
+    font-weight: var(--r-heading-font-weight);
+    line-height: var(--r-heading-line-height);
+    letter-spacing: var(--r-heading-letter-spacing);
+    text-transform: var(--r-heading-text-transform);
+    text-shadow: var(--r-heading-text-shadow);
+    word-wrap: break-word;
+  }
 
-    .slides section,
-    .slides section>section {
-      line-height: 1.3;
-      font-weight: inherit;
-    }
+  h1 {
+    text-align: left;
+    font-size: var(--r-heading1-size);
+    background-color: var(--r-link-color);
+    background-image: var(--r-gradient);
+    background-size: 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
 
-    p {
-      font-size: var(--r-main-font-size)
-    }
+    text-shadow: var(--r-heading1-text-shadow);
+  }
 
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      margin: var(--r-heading-margin);
-      color: var(--r-heading-color);
-      font-family: var(--r-heading-font);
-      font-weight: var(--r-heading-font-weight);
-      line-height: var(--r-heading-line-height);
-      letter-spacing: var(--r-heading-letter-spacing);
-      text-transform: var(--r-heading-text-transform);
-      text-shadow: var(--r-heading-text-shadow);
-      word-wrap: break-word;
-    }
+  h2 {
+    text-align: left;
+    font-size: var(--r-heading2-size);
+  }
 
-    h1 {
-      text-align: left;
-      font-size: var(--r-heading1-size);
-      background-color: var(--r-link-color);
-      background-image: var(--r-gradient);
-      background-size: 100%;
-      background-clip: text;
-      -webkit-background-clip: text;
-      -moz-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      -moz-text-fill-color: transparent;
+  h3 {
+    text-align: left;
+    font-weight: 400;
+    font-family: var(--r-heading-font);
+    font-size: var(--r-heading3-size);
+  }
 
-      text-shadow: var(--r-heading1-text-shadow);
-    }
+  h4 {
+    font-size: var(--r-heading4-size);
+  }
 
-    h2 {
-      text-align: left;
-      font-size: var(--r-heading2-size);
-    }
-
-    h3 {
-      text-align: left;
-      font-weight: 400;
-      font-family: var(--r-heading-font);
-      font-size: var(--r-heading3-size);
-    }
-
-    h4 {
-      font-size: var(--r-heading4-size);
-    }
-
-    /*********************************************
+  /*********************************************
    * OTHER
    *********************************************/
 
-    p {
-      text-align: left;
-      margin: var(--r-block-margin) 0;
-      line-height: 1.3;
-    }
+  p {
+    text-align: left;
+    margin: var(--r-block-margin) 0;
+    line-height: 1.3;
+  }
 
-    /* Remove trailing margins after titles */
-    h1:last-child,
-    h2:last-child,
-    h3:last-child,
-    h4:last-child,
-    h5:last-child,
-    h6:last-child {
-      margin-bottom: 0;
-    }
+  /* Remove trailing margins after titles */
+  h1:last-child,
+  h2:last-child,
+  h3:last-child,
+  h4:last-child,
+  h5:last-child,
+  h6:last-child {
+    margin-bottom: 0;
+  }
 
-    /* Ensure certain elements are never larger than the slide itself */
-    img,
-    video,
-    iframe {
-      max-width: 95%;
-      max-height: 95%;
-    }
+  /* Ensure certain elements are never larger than the slide itself */
+  img,
+  video,
+  iframe {
+    max-width: 95%;
+    max-height: 95%;
+  }
 
-    strong,
-    b {
+  strong,
+  b {
+    font-weight: bold;
+  }
+
+  em {
+    font-style: italic;
+  }
+
+  ol,
+  dl,
+  ul {
+    display: inline-block;
+    text-align: left;
+    margin: 0 0 0 2em;
+    width: calc(100% - 32px);
+    line-height: 2em;
+  }
+
+  ol {
+    list-style-type: decimal;
+  }
+
+  ul {
+    list-style-type: disc;
+  }
+
+  ul ul {
+    list-style-type: square;
+  }
+
+  ul ul ul {
+    list-style-type: circle;
+  }
+
+  ul ul,
+  ul ol,
+  ol ol,
+  ol ul {
+    display: block;
+    margin-left: 40px;
+  }
+
+  dt {
+    font-weight: bold;
+  }
+
+  dd {
+    margin-left: 40px;
+  }
+
+  blockquote {
+    display: block;
+    position: relative;
+    width: 70%;
+    margin: var(--r-block-margin) auto;
+    padding: 5px;
+    font-style: italic;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+  }
+
+  blockquote p:first-child,
+  blockquote p:last-child {
+    display: inline-block;
+  }
+
+  q {
+    font-style: italic;
+  }
+
+  pre {
+    display: block;
+    position: relative;
+    width: 90%;
+    margin: var(--r-block-margin) auto;
+    text-align: left;
+    font-size: 0.55em;
+    font-family: var(--r-code-font);
+    line-height: 1.2em;
+    word-wrap: break-word;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+  }
+
+  code {
+    font-family: var(--r-code-font);
+    text-transform: none;
+    tab-size: 4;
+  }
+
+  code:not(.hljs) {
+    color: var(--r-link-color);
+  }
+
+  pre code {
+    display: block;
+    padding: 5px;
+    overflow: auto;
+    max-height: 800px;
+    word-wrap: normal;
+  }
+
+  .code-wrapper {
+    white-space: normal;
+    margin: 0px;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .code-wrapper code {
+    white-space: pre;
+    font-size: 2em;
+    padding: 32px !important;
+    border-radius: 16px;
+  }
+
+  table:not(.hljs-ln) {
+    margin-right: auto;
+    border-collapse: collapse;
+    border-spacing: 0;
+
+    th {
       font-weight: bold;
     }
 
-    em {
-      font-style: italic;
-    }
-
-    ol,
-    dl,
-    ul {
-      display: inline-block;
+    th,
+    td {
       text-align: left;
-      margin: 0 0 0 2em;
-      width: calc(100% - 32px);
-      line-height: 2em;
+      padding: 0.2em 0.5em 0.2em 0.5em;
+      border-bottom: 1px solid;
     }
 
-    ol {
-      list-style-type: decimal;
+    th[align=center],
+    td[align=center] {
+      text-align: center;
     }
 
-    ul {
-      list-style-type: disc;
+    th[align=right],
+    td[align=right] {
+      text-align: right;
     }
 
-    ul ul {
-      list-style-type: square;
-    }
-
-    ul ul ul {
-      list-style-type: circle;
-    }
-
-    ul ul,
-    ul ol,
-    ol ol,
-    ol ul {
-      display: block;
-      margin-left: 40px;
-    }
-
-    dt {
-      font-weight: bold;
-    }
-
-    dd {
-      margin-left: 40px;
-    }
-
-    blockquote {
-      display: block;
-      position: relative;
-      width: 70%;
-      margin: var(--r-block-margin) auto;
-      padding: 5px;
-      font-style: italic;
-      background: rgba(255, 255, 255, 0.05);
-      box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
-    }
-
-    blockquote p:first-child,
-    blockquote p:last-child {
-      display: inline-block;
-    }
-
-    q {
-      font-style: italic;
-    }
-
-    pre {
-      display: block;
-      position: relative;
-      width: 90%;
-      margin: var(--r-block-margin) auto;
-      text-align: left;
-      font-size: 0.55em;
-      font-family: var(--r-code-font);
-      line-height: 1.2em;
-      word-wrap: break-word;
-      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
-    }
-
-    code {
-      font-family: var(--r-code-font);
-      text-transform: none;
-      tab-size: 4;
-    }
-
-    code:not(.hljs) {
-      color: var(--r-link-color);
-    }
-
-    pre code {
-      display: block;
-      padding: 5px;
-      overflow: auto;
-      max-height: 800px;
-      word-wrap: normal;
-    }
-
-    .code-wrapper {
-      white-space: normal;
-      margin: 0px;
-      margin-bottom: 8px;
-      margin-top: 8px;
-      max-width: 100%;
-      width: 100%;
-    }
-
-    .code-wrapper code {
-      white-space: pre;
-      font-size: 2em;
-      padding: 32px !important;
-      border-radius: 16px;
-    }
-
-    table:not(.hljs-ln) {
-      margin-right: auto;
-      border-collapse: collapse;
-      border-spacing: 0;
-
-      th {
-        font-weight: bold;
-      }
-
-      th,
-      td {
-        text-align: left;
-        padding: 0.2em 0.5em 0.2em 0.5em;
-        border-bottom: 1px solid;
-      }
-
-      th[align=center],
-      td[align=center] {
-        text-align: center;
-      }
-
-      th[align=right],
-      td[align=right] {
-        text-align: right;
-      }
-
-      tbody tr:last-child th,
-      tbody tr:last-child td {
-        border-bottom: none;
-      }
-    }
-
-    sup {
-      vertical-align: super;
-      font-size: smaller;
-    }
-
-    sub {
-      vertical-align: sub;
-      font-size: smaller;
-    }
-
-    small {
-      display: inline-block;
-      font-size: 0.6em;
-      line-height: 1.2em;
-      vertical-align: top;
-    }
-
-    small * {
-      vertical-align: top;
-    }
-
-    img {
-      margin: var(--r-block-margin) 0;
-    }
-
-    section>div>img {
-      margin-left: 32px;
-      overflow: hidden;
-    }
-
-    /*********************************************
-   * LINKS
-   *********************************************/
-    a {
-      color: var(--r-link-color);
-      text-decoration: none;
-      transition: color 0.15s ease;
-    }
-
-    a:hover {
-      color: var(--r-link-color-hover);
-      text-shadow: none;
-      border: none;
-    }
-
-    .roll span:after {
-      color: #fff;
-      background: var(--r-link-color-dark);
-    }
-
-    /*********************************************
-   * Frame helper
-   *********************************************/
-    .r-frame {
-      border: 4px solid var(--r-main-color);
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-    }
-
-    a .r-frame {
-      transition: all 0.15s linear;
-    }
-
-    a:hover .r-frame {
-      border-color: var(--r-link-color);
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.55);
-    }
-
-    /*********************************************
-   * NAVIGATION CONTROLS
-   *********************************************/
-    .controls {
-      color: var(--r-link-color);
-    }
-
-    /*********************************************
-   * PROGRESS BAR
-   *********************************************/
-    .progress {
-      background: rgba(0, 0, 0, 0.2);
-      color: var(--r-link-color);
+    tbody tr:last-child th,
+    tbody tr:last-child td {
+      border-bottom: none;
     }
   }
+
+  sup {
+    vertical-align: super;
+    font-size: smaller;
+  }
+
+  sub {
+    vertical-align: sub;
+    font-size: smaller;
+  }
+
+  small {
+    display: inline-block;
+    font-size: 0.6em;
+    line-height: 1.2em;
+    vertical-align: top;
+  }
+
+  small * {
+    vertical-align: top;
+  }
+
+  img {
+    margin: var(--r-block-margin) 0;
+  }
+
+  section>div>img {
+    margin-left: 32px;
+    overflow: hidden;
+  }
+
+  /*********************************************
+   * LINKS
+   *********************************************/
+  a {
+    color: var(--r-link-color);
+    text-decoration: none;
+    transition: color 0.15s ease;
+  }
+
+  a:hover {
+    color: var(--r-link-color-hover);
+    text-shadow: none;
+    border: none;
+  }
+
+  .roll span:after {
+    color: #fff;
+    background: var(--r-link-color-dark);
+  }
+
+  /*********************************************
+   * Frame helper
+   *********************************************/
+  .r-frame {
+    border: 4px solid var(--r-main-color);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  }
+
+  a .r-frame {
+    transition: all 0.15s linear;
+  }
+
+  a:hover .r-frame {
+    border-color: var(--r-link-color);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.55);
+  }
+
+  /*********************************************
+   * NAVIGATION CONTROLS
+   *********************************************/
+  .controls {
+    color: var(--r-link-color);
+  }
+
+  /*********************************************
+   * PROGRESS BAR
+   *********************************************/
+  .progress {
+    background: rgba(0, 0, 0, 0.2);
+    color: var(--r-link-color);
+  }
+
 
   /*********************************************
    * PRINT BACKGROUND
@@ -392,21 +377,21 @@
       content: "";
     }
 
-    .reveal .slides {
+    .reveal-viewport .slides {
       font-size: 36px;
       // background-color: white !important;
       // color: black !important;
     }
 
-    .reveal .controls,
-    .reveal .progress {
+    .reveal-viewport .controls,
+    .reveal-viewport .progress {
       display: none !important;
     }
 
     /* Ensure all text is black and background is white */
     // body,
-    // .reveal .slides section,
-    // .reveal .slides {
+    // .reveal-viewport .slides section,
+    // .reveal-viewport .slides {
     //   background-color: white !important;
     //   color: black !important;
     // }

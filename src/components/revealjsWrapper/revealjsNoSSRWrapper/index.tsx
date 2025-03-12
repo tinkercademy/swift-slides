@@ -32,42 +32,32 @@ export function RevealjsNoSSRWrapper({ children, isPrint }: { children: React.Re
             width: 1920,
             height: 1080,
             hash: true,
+            embedded: true,
             plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
         });
 
-        // TODO: fix calling .initialize() crashes mobile slides
-        deckRef.current.initialize().then(async () => {
-            // As a workaround for Next.js App router Layouts, Reveal.js content is placed in an absolute div overlayed above the preexisting Layout.
-            // However, Reveal.js automatically sets <body> as the container for all Reveal.js content with .reveal-viewport
-            // Hence, we forcefully remove .reveal-viewport from <body> after page has loaded and instead add it to the div.
-            // Similarly, .reveal-full-page for <html> tag.
-            //
-            // TODO: This can be beneficial for future changes when the slide can be made small-screen/full-screen
-
-            document.body.classList.remove('reveal-viewport');
-            document.documentElement.classList.remove('reveal-full-page');
-        });
+        deckRef.current.initialize()
 
         return () => {
             try {
                 if (deckRef.current) {
-                    deckRef.current.destroy(); // TODO: Fix issue where Reveal deck cannot be destroyed
+                    deckRef.current.destroy();
                     deckRef.current = null;
                 }
-            } catch {
+            } catch (e) {
                 console.warn("Reveal.js destroy call failed.");
             }
         };
     }, [deckRef]);
 
     useEffect(() => {
-        deckRef.current?.layout()
-        if (isFullScreen) {
-            document.documentElement.classList.add('reveal-full-page');
-            document.body.scrollTop = document.documentElement.scrollTop = 0;
-        } else {
-            document.documentElement.classList.remove('reveal-full-page');
-        }
+        if (deckRef.current?.isReady()) {
+            deckRef.current.layout()
+
+            if (isFullScreen) {
+                document.body.scrollTop = document.documentElement.scrollTop = 0;
+            }
+        };
     }, [isFullScreen])
 
     useEffect(() => {
@@ -76,14 +66,16 @@ export function RevealjsNoSSRWrapper({ children, isPrint }: { children: React.Re
             setTimeout(() => {
                 window.print()
                 window.close()
-            }, 2000);
+            }, 2000); // Allow time for page to load before printing
         }
     }, [isPrint])
 
     return (
-        <div className={styles.revealViewportWrapper} style={{ position: isFullScreen ? "static" : "relative" }}>
+        <div
+            className={`${styles.embedPlayer} ${isFullScreen ? styles.fullscreen : ""} ${isPrint ? styles.print : ""}`}
+            style={{ position: isFullScreen ? "static" : "relative" }}>
             {!isPrint && (
-                <div className={`${styles.actions} ${isFullScreen && styles.fullscreen}`}>
+                <div className={styles.actions}>
                     <ActionsBar actions={[
                         {
                             name: "fullscreen",
@@ -103,8 +95,8 @@ export function RevealjsNoSSRWrapper({ children, isPrint }: { children: React.Re
                     ]} />
                 </div>
             )}
-            <div className={`reveal-viewport ${isFullScreen && "fullscreen"}`}>
-                <div className="reveal" ref={deckDivRef}>
+            <div className={styles.deckContainer}>
+                <div className="reveal" ref={deckDivRef}> {/* className="reveal reveal-viewport slide embedded center has-vertical-slides has-horizontal-slides ready" */}
                     {children}
                 </div>
             </div>

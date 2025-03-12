@@ -43,7 +43,7 @@ export default async function SlidesPage({ params, searchParams }: { params: Pro
     // 	});
 
     return (
-        <div className={isPrint ? "is-print" : undefined}>
+        <div>
             <div className={styles.printCover} style={!isPrint ? { display: "none" } : {}}>
                 <div className={styles.loader} />
             </div>
@@ -54,7 +54,7 @@ export default async function SlidesPage({ params, searchParams }: { params: Pro
             <RevealjsClientWrapper isPrint={isPrint}>
                 <div className="slides">
                     <section id="slide-view" data-markdown={`/markdown/${track?.id}/${unit?.markdownId}.md`} data-separator-vertical="^\n---vertical---" data-separator-notes="^Note:" />
-                    <section>
+                    <section >
                         <div style={{ display: "flex" }}>
                             <div>
                                 <h1>Get the Slides</h1>
