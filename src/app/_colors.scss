@@ -11,12 +11,13 @@ $colors : (
     "white": #eee,
     "black": #111,
 
-    "red-link": #fb753a,
+    // swift orange
+    "red-link": #f05138,
     "red-darklink": #e73800,
     "red-hoverlink": #cf6b9b,
     "red-hovershadow": #fc2b2d60,
     "red-selectbg": #b36246,
-    "red-gradient": linear-gradient(45deg, #fc1a4d 10%, #fc2b2d 20%),
+    "red-gradient": linear-gradient(45deg, #f05138 10%, #b5230c 20%),
 
     "blue-link": #00d9fa,
     "blue-darklink": #00d9fa,
@@ -39,8 +40,8 @@ $colors : (
     "pink-selectbg": #c9a0f8,
     "pink-gradient": linear-gradient(45deg, #f75fc8 10%, #d783ff 20%),
 
-    "white-gradient": linear-gradient(45deg, #eee 0%, #adadad 100%),
-    "black-gradient": linear-gradient(45deg, #090909 0%, #282828 100%),
+    "white-gradient": linear-gradient(45deg, #eee 10%, #adadad 20%),
+    "black-gradient": linear-gradient(45deg, #090909 10%, #282828 20%),
 
     "tinkercademy-pink": #ff7878,
 );
