@@ -22,12 +22,13 @@
   --r-heading3-size: 2em;
   --r-heading4-size: 1em;
   --r-code-font: var(--theme-code-font);
-  
-  --r-link-color: var(--colors-blue-link);
-  --r-link-color-dark: var(--colors-blue-darklink);
-  --r-link-color-hover: var(--colors-blue-hoverlink);
-  --r-hover-shadow-color: var(--colors-blue-hovershadow);
-  --r-selection-background-color: var(--colors-blue-selectbg);
   --r-selection-color: #fff;
-  --r-gradient: var(--colors-blue-gradient);
+
+  // Default theme colors defined with inline themes for the different tracks in [unitId]/page.tsx (below is just for reference)
+  // --r-link-color: var(--colors-red-link);
+  // --r-link-color-dark: var(--colors-red-darklink);
+  // --r-link-color-hover: var(--colors-red-hoverlink);
+  // --r-hover-shadow-color: var(--colors-red-hovershadow);
+  // --r-selection-background-color: var(--colors-red-selectbg);
+  // --r-gradient: var(--colors-red-gradient);
 }

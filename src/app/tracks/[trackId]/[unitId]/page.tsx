@@ -12,22 +12,27 @@ import "./xcode-dark.scss";
 
 import styles from "./page.module.scss";
 import { SlidesQRCode } from "@/components/slidesQrCode";
-
-async function resolveParams(params: Promise<{ trackId: string, unitId: string }>) {
-    const { trackId, unitId } = await params
-    const track = tracks.find(e => e.id === trackId)
-    const unit = track?.units.find(e => e.id === unitId)
-
-    if (!track || !unit) {
-        notFound()
-    }
-
-    return { track, unit }
-}
+import { getColorFromTrack } from "../../track";
+import { CSSProperties } from "react";
 
 export default async function SlidesPage({ params, searchParams }: { params: Promise<{ trackId: string, unitId: string }>, searchParams: Promise<{ "print-pdf"?: boolean }> }) {
 
-    const { track, unit } = await resolveParams(params)
+    // Lookup the relevant track/unit
+    const { trackId, unitId } = await params
+    const track = tracks.find(e => e.id === trackId)
+    const unit = track?.units.find(e => e.id === unitId)
+    if (!track || !unit) { notFound() }
+
+    const color = getColorFromTrack(!!trackId ? trackId : undefined)
+    const themeStyles = {
+        "--r-link-color": `var(--colors-${color}-link)`,
+        "--r-link-color-dark": `var(--colors-${color}-darklink)`,
+        "--r-link-color-hover": `var(--colors-${color}-hoverlink)`,
+        "--r-hover-shadow-color": `var(--colors-${color}-hovershadow)`,
+        "--r-selection-background-color": `var(--colors-${color}-selectbg)`,
+        "--r-gradient": `var(--colors-${color}-gradient)`,
+    } as CSSProperties;
+
     const isPrint = (await searchParams)["print-pdf"] !== undefined
 
     // TODO: update to use Suspense
@@ -43,7 +48,7 @@ export default async function SlidesPage({ params, searchParams }: { params: Pro
     // 	});
 
     return (
-        <div>
+        <div style={themeStyles}>
             <div className={styles.printCover} style={!isPrint ? { display: "none" } : {}}>
                 <div className={styles.loader} />
             </div>

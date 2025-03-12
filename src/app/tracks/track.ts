@@ -18,7 +18,7 @@ export function isTrackCurriculumEntry(entry: CurriculumEntry): entry is TrackCu
     return (entry as TrackCurriculumEntry).units !== undefined
 }
 
-export function getColorFromTrack(trackId: string): "blue" | "green" | "pink" | "red" {
+export function getColorFromTrack(trackId: string | undefined): "blue" | "green" | "pink" | "red" {
     switch (trackId) {
       case "track_a": return "blue"
       case "track_b": return "green"

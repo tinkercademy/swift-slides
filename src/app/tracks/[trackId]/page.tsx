@@ -11,12 +11,10 @@ import { FaMagnifyingGlass } from "react-icons/fa6";
 
 export default async function UnitsPage({ params, searchParams }: { params: Promise<{ trackId: string }>, searchParams: Promise<{ deck?: string, search?: string }> }) {
 
-    // Lookup the relevant track and list relevant units
-    const trackId = (await params).trackId
+    // Lookup the relevant track
+    const { trackId } = await params
     const track = tracks.find(e => e.id === trackId)
-    if (!track) {
-        notFound()
-    }
+    if (!track) { notFound() }
 
     // Temporary redirect for legacy presentation links (see next.config.ts)
     const markdownId = (await searchParams)?.deck
