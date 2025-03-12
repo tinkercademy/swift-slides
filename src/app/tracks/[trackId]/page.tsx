@@ -1,5 +1,5 @@
 import { CurriculumCard } from "@/components/curriculumGrid/curriculumCard";
-import { CurriculumGridContainer } from "@/components/curriculumGrid/curriculumGridContainer";
+import { CurriculumGrid } from "@/components/curriculumGrid/curriculumGrid";
 import { Breadcrumb } from "@/components/breadcrumb";
 import { SearchBar } from "@/components/searchBar";
 import { tracks } from "@/data/curriculum";
@@ -42,7 +42,7 @@ export default async function UnitsPage({ params, searchParams }: { params: Prom
                 </div>
                 <SearchBar searchTerm={searchTerm} />
             </div>
-            <CurriculumGridContainer>
+            <CurriculumGrid>
                 {filteredUnits.length > 0 ? filteredUnits.map(unit => {
                     return (
                         <CurriculumCard
@@ -62,7 +62,7 @@ export default async function UnitsPage({ params, searchParams }: { params: Prom
                         <p>Check the spelling or try a new search.</p>
                     </div>
                 )}
-            </CurriculumGridContainer>
+            </CurriculumGrid>
         </div>
     );
 }

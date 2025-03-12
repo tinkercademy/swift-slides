@@ -1,6 +1,6 @@
 import { tracks } from "@/data/curriculum";
 import { CurriculumCard } from "@/components/curriculumGrid/curriculumCard";
-import { CurriculumGridContainer } from "@/components/curriculumGrid/curriculumGridContainer";
+import { CurriculumGrid } from "@/components/curriculumGrid/curriculumGrid";
 
 import { getColorFromTrack } from "./track";
 
@@ -8,7 +8,7 @@ export default async function TracksPage() {
 
   return (
     <div>
-      <CurriculumGridContainer>
+      <CurriculumGrid>
         {tracks.map(track => {
           return (
             <CurriculumCard
@@ -22,7 +22,7 @@ export default async function TracksPage() {
               disabled={track.disabled} />
           )
         })}
-      </CurriculumGridContainer>
+      </CurriculumGrid>
     </div>
   )
 }
