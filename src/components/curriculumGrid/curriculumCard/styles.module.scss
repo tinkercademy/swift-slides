@@ -23,6 +23,7 @@ a.card {
   &.disabled {
     pointer-events: none;
     opacity: 0.5;
+    filter: grayscale(1);
   }
 
   &:hover {
