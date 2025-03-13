@@ -242,5 +242,3 @@ Create an app product page to give potential users information before they downl
     </div>
     <img src="/markdown/track_a/assets/7a-s4-step2.jpg">
 </div>
-
----
