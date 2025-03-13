@@ -58,6 +58,7 @@ export default async function SlidesPage({ params, searchParams }: { params: Pro
             </div>
             <RevealjsClientWrapper isPrint={isPrint}>
                 <div className="slides">
+                    <base target="_blank" />
                     <section id="slide-view" data-markdown={`/markdown/${track?.id}/${unit?.markdownId}.md`} data-separator-vertical="^\n---vertical---" data-separator-notes="^Note:" />
                     <section >
                         <div style={{ display: "flex" }}>

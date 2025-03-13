@@ -224,7 +224,7 @@ Create an app product page to give potential users information before they downl
     <h2>Step 1</h2>
     <ul style="margin-top:5%;">
         <li>View the Swift Playgrounds product page in the App Store. Then answer the questions in the Promote Your App section of the project presentation Keynote.</li>
-        <li><a href="https://apps.apple.com/us/app/swift-playgrounds/id1496833156?mt=12"target="_blank">Go to the Swift Playgrounds product&nbsp;page</a>
+        <li><a href="https://apps.apple.com/us/app/swift-playgrounds/id1496833156?mt=12">Go to the Swift Playgrounds product&nbsp;page</a>
     </ul>
     </div>
     <img src="/markdown/track_a/assets/7a-s4-step1.jpg">
