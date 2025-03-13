@@ -7,8 +7,6 @@
 
 # Compose with Stacks and Shapes
 
->
-
 ---
 
 # Set Up an App Playground
@@ -196,7 +194,7 @@ struct ContentView: View {
     red: 0.6,
     green: 0.4,
     blue: 0.3,
-    alpha: 1.0
+    opacity: 1.0
 ))
 ```
 

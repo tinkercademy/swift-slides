@@ -88,7 +88,7 @@ Storyboarding the screens and flow of your app
 
 ## Design Style, Icon, and Name
 - It’s time to personalise your app!
-    - Choose a colour scheme. Try out [tk.sg/colours](tk.sg/colours) for ideas and to learn about colour theory.
+    - Choose a colour scheme. Try out [tk.sg/colours](https://tk.sg/colours) for ideas and to learn about colour theory.
     - Work out a design style — how will your icons look? Colourful or monochromatic colours? Realistic or symbolic styles?
     - Sketch an icon. It should be simple, recognisable, distinct, and preferably not contain any text.
     - Choose a name!
