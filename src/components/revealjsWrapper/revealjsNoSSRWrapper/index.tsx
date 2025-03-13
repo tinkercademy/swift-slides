@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import { FaExpand, FaCompress, FaPrint, FaUpRightFromSquare } from "react-icons/fa6";
+import { FaExpand, FaCompress, FaPrint, FaUpRightFromSquare, FaPenToSquare } from "react-icons/fa6";
 import Reveal from 'reveal.js';
 import RevealMarkdown from "reveal.js/plugin/markdown/markdown";
 import RevealHighlight from "reveal.js/plugin/highlight/highlight";
@@ -10,6 +10,7 @@ import RevealNotes from "reveal.js/plugin/notes/notes";
 import styles from "./styles.module.scss";
 import "./slides.scss";
 import { ActionsBar } from '../../actionsBar';
+import { TrackCurriculumEntry, UnitCurriculumEntry } from '@/app/tracks/track';
 
 function handleOpenWithQuery(name: string, value: string) {
     const url = new URL(window.location.href)
@@ -17,7 +18,7 @@ function handleOpenWithQuery(name: string, value: string) {
     window.open(url, "_blank")
 }
 
-export function RevealjsNoSSRWrapper({ children, isPrint }: { children: React.ReactNode, isPrint: boolean }) {
+export function RevealjsNoSSRWrapper({ children, isPrint, track, unit }: { children: React.ReactNode, isPrint: boolean, track: TrackCurriculumEntry, unit: UnitCurriculumEntry }) {
     const deckDivRef = useRef<HTMLDivElement>(null);
     const deckRef = useRef<Reveal.Api | null>(null);
 
@@ -88,10 +89,17 @@ export function RevealjsNoSSRWrapper({ children, isPrint }: { children: React.Re
                             onClick: () => { handleOpenWithQuery("print-pdf", "true") },
                             icon: <FaPrint />
                         },
+                        // {
+                        //     name: "popout",
+                        //     onClick: () => { handleOpenWithQuery("fullscreen", "true") },
+                        //     icon: <FaUpRightFromSquare />
+                        // },
                         {
-                            name: "popout",
-                            onClick: () => { handleOpenWithQuery("fullscreen", "true") },
-                            icon: <FaUpRightFromSquare />
+                            name: "edit",
+                            onClick: () => {
+                                window.open(`https://github.com/tinkercademy/swift-slides/tree/main/public/markdown/${track.id}/${unit.markdownId}.md`, "_blank")
+                            },
+                            icon: <FaPenToSquare />
                         }
                     ]} />
                 </div>
