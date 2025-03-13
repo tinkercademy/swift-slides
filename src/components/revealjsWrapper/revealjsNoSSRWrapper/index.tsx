@@ -33,6 +33,7 @@ export function RevealjsNoSSRWrapper({ children, isPrint }: { children: React.Re
             height: 1080,
             hash: true,
             embedded: true,
+            slideNumber: "c",
             plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
         });
 

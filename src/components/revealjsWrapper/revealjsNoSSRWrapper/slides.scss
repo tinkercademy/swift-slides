@@ -16,6 +16,7 @@
   }
 
   section.has-light-background {
+
     &,
     & h1,
     & h2,
@@ -343,6 +344,23 @@
   .progress {
     background: rgba(0, 0, 0, 0.2);
     color: var(--r-link-color);
+  }
+
+  /*********************************************
+   * SLIDE NUMBER
+   *********************************************/
+  .slide-number {
+    font-family: var(--r-main-font);
+    font-size: 16px;
+    background: none;
+    bottom: unset;
+    right: unset;
+    top: 20px;
+    left: 20px;
+
+    a {
+      color: var(--r-main-color);
+    }
   }
 
 
