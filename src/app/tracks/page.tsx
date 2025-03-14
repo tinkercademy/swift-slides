@@ -1,15 +1,16 @@
+import { Metadata } from "next";
+
 import { tracks } from "@/data/curriculum";
+import { getColorFromTrack } from "./track";
+
 import { CurriculumCard } from "@/components/curriculumGrid/curriculumCard";
 import { CurriculumGrid } from "@/components/curriculumGrid/curriculumGrid";
 
-import { getColorFromTrack } from "./track";
-
 export default async function TracksPage() {
-
   return (
     <div>
       <CurriculumGrid>
-        {tracks.map(track => {
+        {tracks.map((track) => {
           return (
             <CurriculumCard
               key={track.id}
@@ -19,10 +20,15 @@ export default async function TracksPage() {
               imgURL={`/covers/${track.id}/track.png`}
               pageURL={track.id}
               color={getColorFromTrack(track.id)}
-              disabled={track.disabled} />
-          )
+              disabled={track.disabled}
+            />
+          );
         })}
       </CurriculumGrid>
     </div>
-  )
+  );
 }
+
+export const metadata: Metadata = {
+  title: "Tracks",
+};

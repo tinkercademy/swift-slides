@@ -1,72 +1,105 @@
+import { Metadata } from "next";
+import { notFound, redirect } from "next/navigation";
+import { FaMagnifyingGlass } from "react-icons/fa6";
+
+import { tracks } from "@/data/curriculum";
+import { getColorFromTrack } from "../track";
+
 import { CurriculumCard } from "@/components/curriculumGrid/curriculumCard";
 import { CurriculumGrid } from "@/components/curriculumGrid/curriculumGrid";
 import { Breadcrumb } from "@/components/breadcrumb";
 import { SearchBar } from "@/components/searchBar";
-import { tracks } from "@/data/curriculum";
-import { notFound, redirect } from "next/navigation";
 
-import styles from "./page.module.scss"
-import { getColorFromTrack } from "../track";
-import { FaMagnifyingGlass } from "react-icons/fa6";
+import styles from "./page.module.scss";
 
-export default async function UnitsPage({ params, searchParams }: { params: Promise<{ trackId: string }>, searchParams: Promise<{ deck?: string, search?: string }> }) {
+async function resolveParams(params: Promise<{ trackId: string }>) {
+  const { trackId } = await params;
+  const track = tracks.find((e) => e.id === trackId);
+  if (!track) {
+    notFound();
+  }
+  return { track };
+}
 
-    // Lookup the relevant track
-    const { trackId } = await params
-    const track = tracks.find(e => e.id === trackId)
-    if (!track) { notFound() }
+export default async function UnitsPage({
+  params,
+  searchParams,
+}: {
+  params: Promise<{ trackId: string }>;
+  searchParams: Promise<{ deck?: string; search?: string }>;
+}) {
+  // Lookup the relevant track
+  const { track } = await resolveParams(params);
 
-    // Temporary redirect for legacy presentation links (see next.config.ts)
-    const markdownId = (await searchParams)?.deck
-    const unitId = track.units.find(e => e.markdownId === markdownId)?.id
-    if (!!unitId) {
-        redirect(`/tracks/${trackId}/${unitId}`, )
-    }
+  // Temporary redirect for legacy presentation links (see next.config.ts)
+  const markdownId = (await searchParams)?.deck;
+  const unitId = track.units.find((e) => e.markdownId === markdownId)?.id;
+  if (!!unitId) {
+    redirect(`/tracks/${track.id}/${unitId}`);
+  }
 
-    // Check if search term is present and matches any units
-    const searchTerm = (await searchParams)?.search || "";
-    const filteredUnits = track.units.filter(unit =>
-        unit.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        unit.subtitle.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        unit.description.toLowerCase().includes(searchTerm.toLowerCase())
-    );
+  // Check if search term is present and matches any units
+  const searchTerm = (await searchParams)?.search || "";
+  const filteredUnits = track.units.filter(
+    (unit) =>
+      unit.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      unit.subtitle.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      unit.description.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
-    return (
-        <div>
-            <div className={styles.flexbox}>
-                <div className={styles.headers}>
-                    <Breadcrumb />
-                    <h1>{track.title}</h1>
-                </div>
-                <SearchBar searchTerm={searchTerm} />
-            </div>
-            <CurriculumGrid>
-                {filteredUnits.length > 0 ? filteredUnits.map(unit => {
-                    return (
-                        <CurriculumCard
-                            key={unit.id}
-                            title={unit.title}
-                            subtitle={unit.subtitle}
-                            description={unit.description}
-                            imgURL={`/covers/${track.id}/${unit.id}.png`}
-                            pageURL={unit.id}
-                            color={getColorFromTrack(track?.id)}
-                            disabled={unit.disabled} />
-                    )
-                }) : (
-                    <div className={styles.noResults}>
-                        <FaMagnifyingGlass />
-                        <h2>No Results for &quot;{searchTerm}&quot;</h2>
-                        <p>Check the spelling or try a new search.</p>
-                    </div>
-                )}
-            </CurriculumGrid>
+  return (
+    <div>
+      <div className={styles.flexbox}>
+        <div className={styles.headers}>
+          <Breadcrumb />
+          <h1>{track.title}</h1>
         </div>
-    );
+        <SearchBar searchTerm={searchTerm} />
+      </div>
+      <CurriculumGrid>
+        {filteredUnits.length > 0 ? (
+          filteredUnits.map((unit) => {
+            return (
+              <CurriculumCard
+                key={unit.id}
+                title={unit.title}
+                subtitle={unit.subtitle}
+                description={unit.description}
+                imgURL={`/covers/${track.id}/${unit.id}.png`}
+                pageURL={unit.id}
+                color={getColorFromTrack(track?.id)}
+                disabled={unit.disabled}
+              />
+            );
+          })
+        ) : (
+          <div className={styles.noResults}>
+            <FaMagnifyingGlass />
+            <h2>No Results for &quot;{searchTerm}&quot;</h2>
+            <p>Check the spelling or try a new search.</p>
+          </div>
+        )}
+      </CurriculumGrid>
+    </div>
+  );
 }
 
 export async function generateStaticParams() {
-    return tracks.map((track) => ({
-        trackId: track.id
-    })).flat()
+  return tracks
+    .map((track) => ({
+      trackId: track.id,
+    }))
+    .flat();
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ trackId: string }>;
+}): Promise<Metadata> {
+  const { track } = await resolveParams(params);
+
+  return {
+    title: track.title,
+  };
 }
