@@ -7,7 +7,7 @@ import { ResponsiveImage } from "@/components/responsiveImage";
 
 import "reveal.js/dist/reveal.css";
 import "reveal.js/dist/theme/black.css";
-import "./slide.scss";
+import "./reveal-theme.scss";
 import "./xcode-dark.scss";
 
 import styles from "./page.module.scss";
@@ -36,16 +36,6 @@ export default async function SlidesPage({ params, searchParams }: { params: Pro
     const isPrint = (await searchParams)["print-pdf"] !== undefined
 
     // TODO: update to use Suspense
-
-    // TODO:
-    // // Add a special class to the second-to-last slide dynamically
-    // 	Reveal.on('ready', function() {
-    // 		const slides = document.querySelectorAll('.reveal .slides section');
-    // 		if (slides.length > 1) {
-    // 			const secondLastSlide = slides[slides.length - 2];
-    // 			secondLastSlide.setAttribute('data-state', 'second-last-page');
-    // 		}
-    // 	});
 
     return (
         <div style={themeStyles}>
