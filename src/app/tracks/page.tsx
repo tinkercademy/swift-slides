@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 
-import { tracks } from "@/data/curriculum";
+import { tracks } from "../../../public/curriculum";
 import { getColorFromTrack } from "./track";
 
 import { CurriculumCard } from "@/components/curriculumGrid/curriculumCard";

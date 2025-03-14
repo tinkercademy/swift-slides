@@ -2,8 +2,8 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { CSSProperties } from "react";
 
-import { tracks } from "@/data/curriculum";
-import { getColorFromTrack } from "../../track";
+import { tracks } from "../../../../../public/curriculum";
+import { getColorFromTrack, TrackEntry, UnitEntry } from "../../track";
 
 import { Breadcrumb } from "@/components/breadcrumb";
 import { SlidesQRCode } from "@/components/slidesQrCode";
@@ -18,10 +18,10 @@ import styles from "./page.module.scss";
 
 async function resolveParams(
   params: Promise<{ trackId: string; unitId: string }>
-) {
+): Promise<{ track: TrackEntry; unit: UnitEntry }> {
   const { trackId, unitId } = await params;
   const track = tracks.find((e) => e.id === trackId);
-  const unit = track?.units.find((e) => e.id === unitId);
+  const unit = track?.units.find((e: UnitEntry) => e.id === unitId);
   if (!track || !unit) {
     notFound();
   }
@@ -118,7 +118,7 @@ export default async function SlidesPage({
 export async function generateStaticParams() {
   return tracks
     .map((track) =>
-      track.units.map((unit) => ({
+      track.units.map((unit: UnitEntry) => ({
         trackId: track.id,
         unitId: unit.id,
       }))
