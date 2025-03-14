@@ -1,4 +1,4 @@
-export interface CurriculumEntry {
+export interface Entry {
     id: string; // track_XX or unit_XX
     title: string;
     subtitle: string;
@@ -6,16 +6,16 @@ export interface CurriculumEntry {
     disabled?: boolean;
 }
 
-export interface TrackCurriculumEntry extends CurriculumEntry {
-    units: UnitCurriculumEntry[];
+export interface TrackEntry extends Entry {
+    units: UnitEntry[];
 }
 
-export interface UnitCurriculumEntry extends CurriculumEntry {
+export interface UnitEntry extends Entry {
     markdownId: string;
 }
 
-export function isTrackCurriculumEntry(entry: CurriculumEntry): entry is TrackCurriculumEntry {
-    return (entry as TrackCurriculumEntry).units !== undefined
+export function isTrackCurriculumEntry(entry: Entry): entry is TrackEntry {
+    return (entry as TrackEntry).units !== undefined
 }
 
 export function getColorFromTrack(trackId: string | undefined): "blue" | "green" | "pink" | "red" {

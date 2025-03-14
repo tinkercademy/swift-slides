@@ -1,7 +1,7 @@
-import { TrackCurriculumEntry } from "../app/tracks/track";
+import { TrackEntry } from "../app/tracks/track";
 
 // Helper regex to export legacy HTML to JS objects: https://regex101.com/r/ubkvhV/4
-export const tracks: TrackCurriculumEntry[] = [
+export const tracks: TrackEntry[] = [
 	{
 		id: "track_a",
 		title: "App Design and Prototyping with Keynote and Swift",

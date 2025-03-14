@@ -1,5 +1,5 @@
 'use client';
-import { TrackCurriculumEntry, UnitCurriculumEntry } from "@/app/tracks/track";
+import { TrackEntry, UnitEntry } from "@/app/tracks/track";
 // https://github.com/vercel/next.js/discussions/43631
 // The structure of the Revealjs Wrappers is as follows:
 // 
@@ -27,6 +27,6 @@ const RevealjsNoSSRWrapper = dynamic(() =>
     { ssr: false }
 );
 
-export function RevealjsClientWrapper({ children, isPrint, track, unit }: { children: React.ReactNode, isPrint: boolean, track: TrackCurriculumEntry, unit: UnitCurriculumEntry }) {
+export function RevealjsClientWrapper({ children, isPrint, track, unit }: { children: React.ReactNode, isPrint: boolean, track: TrackEntry, unit: UnitEntry }) {
     return <RevealjsNoSSRWrapper isPrint={isPrint} track={track} unit={unit}>{children}</RevealjsNoSSRWrapper>
 }

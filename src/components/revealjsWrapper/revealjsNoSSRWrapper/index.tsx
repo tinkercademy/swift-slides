@@ -10,7 +10,7 @@ import RevealNotes from "reveal.js/plugin/notes/notes";
 import styles from "./styles.module.scss";
 import "./slides.scss";
 import { ActionsBar } from '../../actionsBar';
-import { TrackCurriculumEntry, UnitCurriculumEntry } from '@/app/tracks/track';
+import { TrackEntry, UnitEntry } from '@/app/tracks/track';
 
 function handleOpenWithQuery(name: string, value: string) {
     const url = new URL(window.location.href)
@@ -18,7 +18,7 @@ function handleOpenWithQuery(name: string, value: string) {
     window.open(url, "_blank")
 }
 
-export function RevealjsNoSSRWrapper({ children, isPrint, track, unit }: { children: React.ReactNode, isPrint: boolean, track: TrackCurriculumEntry, unit: UnitCurriculumEntry }) {
+export function RevealjsNoSSRWrapper({ children, isPrint, track, unit }: { children: React.ReactNode, isPrint: boolean, track: TrackEntry, unit: UnitEntry }) {
     const deckDivRef = useRef<HTMLDivElement>(null);
     const deckRef = useRef<Reveal.Api | null>(null);
 
