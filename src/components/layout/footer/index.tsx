@@ -26,14 +26,14 @@ export function Footer() {
       <br />
       <p>
         Find out more:{" "}
-        <Link href="https://swiftexplorers.sg">Swift Explorers Challenge</Link>{" • "}
-        <Link href="https://swiftinsg.org">Swift Accelerator</Link>{" • "}
-        <Link href="https://tinkercademy.com">Tinkercademy</Link>
+        <Link href="https://swiftexplorers.sg" target="_blank">Swift Explorers Challenge</Link>{" • "}
+        <Link href="https://swiftinsg.org" target="_blank">Swift Accelerator Programme</Link>{" • "}
+        <Link href="https://tinkercademy.com" target="_blank">Tinkercademy</Link>
         <br />
-        Open-sourced on <Link href="https://github.com/tinkercademy/swift-slides">GitHub</Link>.{" "}
-        <Link href="https://github.com/tinkercademy/swift-slides/issues/new">Report issues</Link>.
+        Open-sourced on <Link href="https://github.com/tinkercademy/swift-slides" target="_blank">GitHub</Link>.{" "}
+        <Link href="https://github.com/tinkercademy/swift-slides/issues/new" target="_blank">Report issues</Link>.
         <br />
-        Copyright © {new Date().getFullYear()} <Link href="https://tinkertanker.com">Tinkertanker Pte Ltd</Link>. All Rights Reserved.
+        Copyright © {new Date().getFullYear()} <Link href="https://tinkertanker.com" target="_blank">Tinkertanker Pte Ltd</Link>. All Rights Reserved.
       </p>
     </footer>
   )
