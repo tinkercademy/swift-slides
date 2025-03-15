@@ -185,7 +185,7 @@ Making a high-fidelity prototype on Keynote
 
 <div style="display: flex;">
     <ul>
-        <li>Magic Move is an automatic transition which allows objects one slide to move to new positions on a next slide</li>
+        <li>Magic Move is an automatic transition which allows objects on one slide to move to new positions on the next slide</li>
         <li>To add a Magic Move transition, tap on the slide, then tap Transition</li>
         <li>Tap on Add Transition and select Magic Move</li>
     </ul>
