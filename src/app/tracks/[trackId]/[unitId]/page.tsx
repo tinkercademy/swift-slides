@@ -65,6 +65,29 @@ export default async function SlidesPage({
       <RevealjsClientWrapper isPrint={isPrint} track={track} unit={unit}>
         <div className="slides">
           <base target="_blank" />
+          <section>
+            <div>
+              <div style={{ textAlign: "left" }}>
+                <img
+                  src="/assets/logos/tinkercademy.png"
+                  alt="Tinkercademy Logo"
+                  height="128px"
+                />
+                <img
+                  src="https://raw.githubusercontent.com/swiftinsg/branding/main/logos/icons/png/coloured%20-%20dark%20background.png"
+                  alt="Swiftinsg Logo"
+                  height="128px"
+                  style={{ marginLeft: 64 }}
+                />
+              </div>
+              <h4 style={{ fontSize: 45, textAlign: "left" }}>
+                {track.idDisplay}: {unit.idDisplay}
+              </h4>
+              <h2>{track.title}</h2>
+              <h1>{unit.title}</h1>
+              <p>{unit.subtitle}</p>
+            </div>
+          </section>
           <section
             id="slide-view"
             data-markdown={`/markdown/${track?.id}/${unit?.markdownId}.md`}
@@ -110,6 +133,9 @@ export default async function SlidesPage({
           </small>
         </div>
       </RevealjsClientWrapper>
+      <div className={styles.details}>
+        <p>{unit.description}</p>
+      </div>
     </div>
   );
 }
