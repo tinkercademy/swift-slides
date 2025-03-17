@@ -25,6 +25,16 @@
     }
 }
 
+.details {
+    margin: 30px 0 60px 0;
+
+    p {
+        max-width: 50em;
+        text-align: justify;
+        line-height: 1.5;
+    }
+}
+
 .printCover {
     position: absolute;
     inset: 0;

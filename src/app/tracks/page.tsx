@@ -15,8 +15,8 @@ export default async function TracksPage() {
             <CurriculumCard
               key={track.id}
               title={track.title}
-              subtitle={track.subtitle}
-              description={track.description}
+              subtitle={track.idDisplay}
+              description={track.subtitle}
               imgURL={`/covers/${track.id}/track.png`}
               pageURL={track.id}
               color={getColorFromTrack(track.id)}

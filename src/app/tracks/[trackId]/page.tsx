@@ -45,8 +45,8 @@ export default async function UnitsPage({
   const filteredUnits = track.units.filter(
     (unit: UnitEntry) =>
       unit.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      unit.subtitle.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      unit.description.toLowerCase().includes(searchTerm.toLowerCase())
+      unit.idDisplay.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      unit.subtitle.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   return (
@@ -65,8 +65,8 @@ export default async function UnitsPage({
               <CurriculumCard
                 key={unit.id}
                 title={unit.title}
-                subtitle={unit.subtitle}
-                description={unit.description}
+                subtitle={unit.idDisplay}
+                description={unit.subtitle}
                 imgURL={`/covers/${track.id}/${unit.id}.png`}
                 pageURL={unit.id}
                 color={getColorFromTrack(track?.id)}
