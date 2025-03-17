@@ -1,6 +1,7 @@
 export interface Entry {
     id: string; // track_XX or unit_XX
     title: string;
+    idDisplay: string;
     subtitle: string;
     description: string;
     disabled?: boolean;
