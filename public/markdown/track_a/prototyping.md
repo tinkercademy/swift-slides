@@ -1,19 +1,6 @@
-<div style="text-align: left">
-    <img src="/assets/logos/tinkercademy.png" alt="Tinkercademy Logo" height="128px">
-    <img src="https://raw.githubusercontent.com/swiftinsg/branding/main/logos/icons/png/coloured%20-%20dark%20background.png" alt="Swiftinsg Logo" height="128px" style="margin-left: 64px;">
-</div>
-
-## Track A: Unit 6
-
-# Prototyping
-
-Making a high-fidelity prototype on Keynote
-
----
-
 # Keynote for prototyping
 
----vertical---
+---
 
 <img src="/markdown/track_a/assets/keynote-user-guide.png">
 
@@ -23,7 +10,7 @@ Making a high-fidelity prototype on Keynote
 
 </div>
 
----vertical---
+---
 
 ## Create a Keynote Presentation
 
@@ -32,13 +19,13 @@ Making a high-fidelity prototype on Keynote
 - Select the “Choose a theme” option and choose the **Basic White** theme for your presentation
   - You can change the background colour for your app later!
 
----vertical---
+---
 
 ## Setting up your slides
 
 <div style="display: flex;">
     <ul>
-        <li>We’ll need to change the size of the slides to mimic an iPad landscape app</li>
+        <li>We'll need to change the size of the slides to mimic an iPad landscape app</li>
         <li>Tap on the document name at the top-left corner</li>
         <ul>
             <li>Presentation Options</li>
@@ -50,13 +37,13 @@ Making a high-fidelity prototype on Keynote
     <img src="/markdown/track_a/assets/setting-up-unit6.png">
 </div>
 
----vertical---
+---
 
 <div style="display: flex;">
     <div style="margin-top:10%;">
     <h2>Adding new slides</h2>
     <ul style="margin-top:5%;">
-        <li>To add more screens to your prototype, you’ll need to add slides</li>
+        <li>To add more screens to your prototype, you'll need to add slides</li>
         <li>Tap on the (add slide icon) at the bottom of the slide navigator and select the Blank layout</li>
         <li>To rearrange the slides, tap and hold a slide and drag it to the desired order</li>
     </ul>
@@ -64,7 +51,7 @@ Making a high-fidelity prototype on Keynote
     <img height="700" src="/markdown/track_a/assets/adding-new-slides.png">
 </div>
 
----vertical---
+---
 
 ## Icons and graphics
 
@@ -79,7 +66,7 @@ Making a high-fidelity prototype on Keynote
     </ul>
 </div>
 
----vertical---
+---
 
 ## Styling
 
@@ -97,7 +84,7 @@ Making a high-fidelity prototype on Keynote
     </div>
 </div>
 
----vertical---
+---
 
 ## Adding images
 
@@ -106,11 +93,11 @@ Making a high-fidelity prototype on Keynote
         <li>To add images, tap on (images icon)</li>
         <li>Tap on <strong>Photo or Video</strong></li>
         <li>Select the image you would like to add</li>
-        <li>Resize it with the corner drag handles once it’s in</li>
+        <li>Resize it with the corner drag handles once it's in</li>
     </ul>
 </div>
 
----vertical---
+---
 
 ## Editing images
 
@@ -121,7 +108,7 @@ Making a high-fidelity prototype on Keynote
     </ul>
 </div>
 
----vertical---
+---
 
 ## Arranging Objects
 
@@ -134,7 +121,7 @@ Making a high-fidelity prototype on Keynote
     </ul>
 </div>
 
----vertical---
+---
 
 ## Hyperlinks
 
@@ -145,7 +132,7 @@ Making a high-fidelity prototype on Keynote
     </ul>
 </div>
 
----vertical---
+---
 
 ## Creating Hyperlinks
 
@@ -156,7 +143,7 @@ Making a high-fidelity prototype on Keynote
     </ul>
 </div>
 
----vertical---
+---
 
 ## Linking Similar Screens
 
@@ -173,13 +160,13 @@ Making a high-fidelity prototype on Keynote
 
 ### (Optional)
 
----vertical---
+---
 
 ## Animations
 
 <img height="700" src="/markdown/track_a/assets/animations-home.png">
 
----vertical---
+---
 
 ## Magic Move
 
@@ -192,23 +179,23 @@ Making a high-fidelity prototype on Keynote
     <img src="/markdown/track_a/assets/keynote_transitions_magic_moves.png">
 </div>
 
----vertical---
+---
 
 # Evaluation
 
----vertical---
+---
 
-## Try a friend’s prototype!
+## Try a friend's prototype!
 
-### Download your friend’s Keynote Prototype and try it out! Record your feedback for them in your **App Journal**
+### Download your friend's Keynote Prototype and try it out! Record your feedback for them in your **App Journal**
 
----vertical---
+---
 
 ## Recording Feedback Received
 
 <div style="display: flex;">
     <ul>
-        <li>Take some time to digest others’ feedback.</li>
+        <li>Take some time to digest others' feedback.</li>
         <li>Answer a few questions, and figure out how you can improve your app and prototype.</li>
     </ul>
     <img src="/markdown/track_a/assets/evaluate-observation.png">
@@ -218,17 +205,17 @@ Making a high-fidelity prototype on Keynote
 
 # What's next?
 
----vertical---
+---
 
 <img height="800" src="/markdown/track_a/assets/prototype-some-more_learn-to-code.png">
 
----vertical---
+---
 
 ## Stretch your learning
 
 <img height="800" src="/markdown/track_a/assets/everyone-can-code-puzzles.png">
 
----vertical---
+---
 
 <img height="800" src="/markdown/track_a/assets/quick-start-to-code.png">
 

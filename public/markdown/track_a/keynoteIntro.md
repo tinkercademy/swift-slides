@@ -1,16 +1,3 @@
-<div style="text-align: left">
-    <img src="/assets/logos/tinkercademy.png" alt="Tinkercademy Logo" height="128px">
-    <img src="https://raw.githubusercontent.com/swiftinsg/branding/main/logos/icons/png/coloured%20-%20dark%20background.png" alt="Swiftinsg Logo" height="128px" style="margin-left: 64px;">
-</div>
-
-## Track A: Unit 1
-
-# Intro to Keynote
-
-Introduction to Keynote and the App Journal
-
----
-
 ## Unit Overview
 
 - [Keynote](#keynote)
@@ -23,7 +10,7 @@ Introduction to Keynote and the App Journal
 
 # Keynote
 
----vertical---
+---
 
 ## Keynote
 
@@ -58,14 +45,14 @@ Keynote is a powerful presentation app _and_ design tool. Students will use it f
     </div>
 </div>
 
----vertical---
+---
 
 ## Getting the journal
 
 <div style="display: flex;">
     <ul>
         <li>Download from <a href="https://apple.co/ecc-appjournal_SG">apple.co/ecc-appjournal_SG</a></li>
-        <li>Open it from Safari’s download button</li>
+        <li>Open it from Safari's download button</li>
         <li>Or after downloading the journal, open Keynote</li>
         <ul>
         <li>Under Keynote Recents, tap on the document named <strong>appjournal</strong></li>
@@ -82,7 +69,7 @@ Keynote is a powerful presentation app _and_ design tool. Students will use it f
 
 ## And editing pages
 
----vertical---
+---
 
 ## Navigating the journal
 
@@ -100,7 +87,7 @@ Keynote is a powerful presentation app _and_ design tool. Students will use it f
     </div>
 </div>
 
----vertical---
+---
 
 ## Editing your journal
 
@@ -116,7 +103,7 @@ Keynote is a powerful presentation app _and_ design tool. Students will use it f
     </div>
 </div>
 
----vertical---
+---
 
 ## Duplicate Slides
 
@@ -135,13 +122,13 @@ Keynote is a powerful presentation app _and_ design tool. Students will use it f
 
 # Screenshotting
 
----vertical---
+---
 
 ## Taking a Screenshot
 
 <div style="display: flex;">
     <ul>
-        <li>Every lesson, we’ll ask you to export a screenshot, so it’s easier for us to take a look without having to connect to (and mess up) your iCloud version.</li>
+        <li>Every lesson, we'll ask you to export a screenshot, so it's easier for us to take a look without having to connect to (and mess up) your iCloud version.</li>
         <li>Press the home and power buttons at the same time to take a screenshot.</li>
         <li>With Apple Pencil, you can also draw in from the bottom left.</li>
     </ul>
@@ -150,7 +137,7 @@ Keynote is a powerful presentation app _and_ design tool. Students will use it f
     </div>
 </div>
 
----vertical---
+---
 
 ## Hands-on
 
@@ -164,7 +151,7 @@ Take a screenshot of the cover of your App Journal with your group name written 
 
 # Collaborating
 
----vertical---
+---
 
 ## Keynote Collaboration
 
@@ -185,7 +172,7 @@ Take a screenshot of the cover of your App Journal with your group name written 
     </div>
 </div>
 
----vertical---
+---
 
 ## Tip: Let Anyone Edit
 
@@ -201,13 +188,13 @@ to set up permissions.</li>
     </div>
 </div>
 
----vertical---
+---
 
 ## Sharing Options
 
 <div style="display: flex;">
     <ul>
-        <li>Once a document is shared, you’ll see a new button show up (person-icon)</li>
+        <li>Once a document is shared, you'll see a new button show up (person-icon)</li>
         <li>Tap on it to send the link or set up a collaborative FaceTime call</li>
         <li>See all changes from teammates in <strong>Latest Activity</strong></li>
         <li>Make changes to <strong>Activity Settings</strong> (see cursors, highlights) or <strong>Manage Shared Presentation</strong> (who has access)</li>
@@ -217,7 +204,7 @@ to set up permissions.</li>
     </div>
 </div>
 
----vertical---
+---
 
 ## Caveats and Warnings
 

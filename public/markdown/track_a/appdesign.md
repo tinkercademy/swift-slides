@@ -1,47 +1,34 @@
-<div style="text-align: left">
-    <img src="/assets/logos/tinkercademy.png" alt="Tinkercademy Logo" height="128px">
-    <img src="https://raw.githubusercontent.com/swiftinsg/branding/main/logos/icons/png/coloured%20-%20dark%20background.png" alt="Swiftinsg Logo" height="128px" style="margin-left: 64px;">
-</div>
+# 15%
 
-## Track A: Unit 4
-
-# Designing
-
-Inclusive App Design
+## of the world's population live with disabilities
 
 ---
 
-# 15%
-
-## of the world’s population live with disabilities
-
----vertical---
-
 <img height="800" src="/markdown/track_a/assets/vision_physical_hearing_learning.png">
 
----vertical---
+---
 
 <img height="800" src="/markdown/track_a/assets/birth_acquired_age.png">
 
----vertical---
+---
 
 ## What is inclusive design?
 
 - Design with consideration for the wide variety of human experiences and circumstances behind each user
 - This includes differences in disability, but also gender, race, culture, and technological access
-- Inclusive design enables app designers — that’s us — to design experiences for more potential users, no matter their circumstances
+- Inclusive design enables app designers — that's us — to design experiences for more potential users, no matter their circumstances
 
 ---
 
 # Accessibility
 
----vertical---
+---
 
 ## Accessibility Features
 
 <img height="800" src="/markdown/track_a/assets/voiceover-text-voice-control.png">
 
----vertical---
+---
 
 ## The process of inclusive design
 
@@ -51,7 +38,7 @@ Inclusive App Design
 src="https://www.youtube.com/embed/qDm7GiKra28">
 </iframe> -->
 
----vertical---
+---
 
 # The practice of inclusive design
 
@@ -63,27 +50,27 @@ src="https://www.youtube.com/embed/eg22JaZWAgs">
 
 ---
 
-# Inclusion isn’t _only_ about disability
+# Inclusion isn't _only_ about disability
 
----vertical---
+---
 
 ## Clarity
 
 <img height="700" src="/markdown/track_a/assets/dots-vs-unread-flagged.png">
 
----vertical---
+---
 
 ## Inclusive Language
 
 <img height="700" src="/markdown/track_a/assets/set-up-family-account.png">
 
----vertical---
+---
 
 ## Self Expression & Individuality
 
 <img height="700" src="/markdown/track_a/assets/good-morning.png">
 
----vertical---
+---
 
 <div style="display: flex;">
     <div style="margin-top:10%;">

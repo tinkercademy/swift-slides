@@ -1,19 +1,6 @@
-<div style="text-align: left">
-    <img src="/assets/logos/tinkercademy.png" alt="Tinkercademy Logo" height="128px">
-    <img src="https://raw.githubusercontent.com/swiftinsg/branding/main/logos/icons/png/coloured%20-%20dark%20background.png" alt="Swiftinsg Logo" height="128px" style="margin-left: 64px;">
-</div>
-
-## Track B: Unit 3
-
-# About Me
-
-Create an about me app in Swift Playgrounds.
-
----
-
 # New Things in This Unit
 
----vertical---
+---
 
 # Composed View
 
@@ -21,11 +8,11 @@ Create an about me app in Swift Playgrounds.
 - It is a way to break down your app into smaller, more manageable parts
 - This makes your code easier to read and understand
 
----vertical---
+---
 
 ## Composed View
 
-- For example, if you have a view that displays a car, you can create a composed view called `CarView` that displays the car’s make, model, year, and color
+- For example, if you have a view that displays a car, you can create a composed view called `CarView` that displays the car's make, model, year, and color
 
 ```swift
 // define your car struct
@@ -50,7 +37,7 @@ struct CarView: View {
 }
 ```
 
----vertical---
+---
 
 ## Using Composed Views
 
@@ -63,7 +50,7 @@ HStack {
 }
 ```
 
----vertical---
+---
 
 ## Text Colour
 
@@ -80,7 +67,7 @@ HStack {
 
 </div>
 
----vertical---
+---
 
 ## Padding
 
@@ -89,7 +76,7 @@ HStack {
 <div>
 
 - You might have noticed that all the pictures in the app go right up to the edge of our screen
-- Let’s add a modifier to the overall `VStack` containing all the views (except the background)
+- Let's add a modifier to the overall `VStack` containing all the views (except the background)
 - At the end of the overall `VStack`, add the following modifer: `.padding()`
 - This adds a bit of space between the `VStack` and everything else outside (like social distancing!)
 
@@ -103,7 +90,7 @@ HStack {
 
 # About Me App
 
----vertical---
+---
 
 <div style="display: flex; ">
 
@@ -121,20 +108,20 @@ HStack {
 
 </div>
 
----vertical---
+---
 
 ## Tab Bar
 
 ### Navigating from View to View
 
----vertical---
+---
 
 ## Navigating About Me
 
 - Just like Getting Started with Apps, there will be a tutorial to guide you through building a tab-based app using SwiftUI
 - Tap on Learn More, then Start Walkthrough, to start the tutorial
 
----vertical---
+---
 
 ## Navigating About Me
 
@@ -155,7 +142,7 @@ HStack {
   </div>
 </div>
 
----vertical---
+---
 
 ## Tab Views and Commenting
 
@@ -164,7 +151,7 @@ HStack {
 <div>
 
 - In the ContentView, you would notice that there are 4 `TabViews`, each corresponding to each of the tabs in the app
-- The `HomeView` is highlighted - let’s try deleting it and see what happens
+- The `HomeView` is highlighted - let's try deleting it and see what happens
 - You can also try commenting the block of code out by adding two backslashes (**//**) in front of each line of code. This is called commenting
 - When you comment out a code, Swift will ignore it
 - Remember to uncomment the `HomeView` after!
@@ -175,7 +162,7 @@ HStack {
 
 </div>
 
----vertical---
+---
 
 ## Editing the Tab Item Label
 
@@ -184,7 +171,7 @@ HStack {
 <div>
 
 - For each `TabView`, there is a `.`tabItem` modifier, which styles the tab item in the tab bar at the bottom of the app
-- Let’s change the text in the label from `"Home"` to something else
+- Let's change the text in the label from `"Home"` to something else
 - Maybe your name!
 
 </div>
@@ -193,7 +180,7 @@ HStack {
 
 </div>
 
----vertical---
+---
 
 <div style="display: flex; ">
 
@@ -202,7 +189,7 @@ HStack {
 
 - Currently, the icon used is _“person”_. Other tab views have also used icons such as _“book”_, _“star”_ and _“hand.thumbsup”_
 - These icons are known as **SF Symbols** which are made by Apple
-- Let’s try changing the tab icon of our first tab
+- Let's try changing the tab icon of our first tab
 - To change the icon, replace “person” with the name of the icon you would like to use from the icon library.
 
 </div>
@@ -213,7 +200,7 @@ HStack {
 
 </div>
 
----vertical---
+---
 
 ## Changing the Accent Colour
 
@@ -231,7 +218,7 @@ HStack {
 
 </div>
 
----vertical---
+---
 
 ## Changing the Image
 
@@ -239,12 +226,12 @@ HStack {
 
 <div>
 
-- Let’s change the placeholder image to an image of yourself
+- Let's change the placeholder image to an image of yourself
   - Take a picture of yourself using the Camera app.
 - To add a photo to Playgrounds, tap on <img style="margin-bottom: -4px" height="32px" src="/assets/icons/sidebar.left.svg">, then tap on <img style="margin-bottom: -4px" height="40px" src="/assets/icons/doc.badge.plus.svg" >
 - Select Photo and choose your picture
 - Long press on your image and tap on Rename to rename the image file
-- In `HomeView`, change “Placeholder” to your image’s name
+- In `HomeView`, change “Placeholder” to your image's name
 
 </div>
 
@@ -252,11 +239,11 @@ HStack {
 
 </div>
 
----vertical---
+---
 
 # Styling HomeView
 
----vertical---
+---
 
 ## Styling the Text in the HomeView
 
@@ -264,13 +251,13 @@ HStack {
 
 <div>
 
-- Let’s use more viewModifiers to style the text in the `HomeView`
+- Let's use more viewModifiers to style the text in the `HomeView`
 - Under the "All About" text are different modifiers for styling:
   - `.font(.largeTitle)` changes the size of the text
   - `.fontWeight(.bold)` changes the boldness of the text
   - `.padding()` adds space between the text and everything else
 - Try experimenting by changing the values in the brackets of the modifiers!
-  - When you type ‘.’ in the brackets, all the different values will be shown
+  - When you type ‘.' in the brackets, all the different values will be shown
 
 </div>
 
@@ -278,7 +265,7 @@ HStack {
 
 </div>
 
----vertical---
+---
 
 ## Styling the Image in the HomeView
 
@@ -298,7 +285,7 @@ HStack {
 
 </div>
 
----vertical---
+---
 
 ## ScrollView
 
@@ -317,7 +304,7 @@ HStack {
 
 </div>
 
----vertical---
+---
 
 ## Creating our story
 
@@ -326,7 +313,7 @@ HStack {
 <div>
 
 - We can add another `Text` in the `ScrollView`, and add a story there!
-  - If your story is very long, we need to separate it into different lines! But.. how do we do that? Pressing ‘enter’ does not work!
+  - If your story is very long, we need to separate it into different lines! But.. how do we do that? Pressing ‘enter' does not work!
   - We can use \n!
   - It creates a new line in your text
 - What if you want to type out a long string of text without having to keep typing \n?
@@ -337,7 +324,7 @@ HStack {
 
 </div>
 
----vertical---
+---
 
 ## Multiline Text
 
@@ -356,7 +343,7 @@ HStack {
 
 </div>
 
----vertical---
+---
 
 ## FavoritesView
 
@@ -368,7 +355,7 @@ HStack {
 - The categories are vertically stacked using a `VStack`, while the individual items in each category are horizontally arranged using a `HStack`
 - Inside each `HStack` is a bunch of Texts with different information
 - At the bottom, you can see there is a `DisclosureGroup`
-  - It creates a ‘drop-down’ menu, where you have to click on it before more views show up
+  - It creates a ‘drop-down' menu, where you have to click on it before more views show up
   - `Color` is used to customise the different colours shown
 
 </div>
@@ -377,7 +364,7 @@ HStack {
 
 </div>
 
----vertical---
+---
 
 ## Arrays
 
@@ -397,7 +384,7 @@ HStack {
 
 </div>
 
----vertical---
+---
 
 <div style="display: flex; ">
 
@@ -406,7 +393,7 @@ HStack {
 
 - To learn more about arrays, we can open up the _Learn to Code 2_ playgrounds
 - Tap on the sidebar <img style="margin-bottom: -4px" height="32px" src="/assets/icons/sidebar.left.svg"> and scroll down to the section called arrays.
-- **You can also try out the exercises in your free time, but we won’t be going through them.**
+- **You can also try out the exercises in your free time, but we won't be going through them.**
 
 </div>
 
@@ -420,7 +407,7 @@ HStack {
 
 </div>
 
----vertical---
+---
 
 <div style="display: flex; ">
 
@@ -428,7 +415,7 @@ HStack {
 <h2>FunFactsView</h2>
 
 - The last part of the About Me tutorial brings us to the **FunFactsView**
-- This view is special - there’s a button!
+- This view is special - there's a button!
 - Try tapping on the button to see what happens!
 
 </div>
@@ -437,7 +424,7 @@ HStack {
 
 </div>
 
----vertical---
+---
 
 ## How the Button Works
 
@@ -445,7 +432,7 @@ HStack {
 
 <div>
 
-- There’s a variable called funFact which is currently empty until someone taps the button
+- There's a variable called funFact which is currently empty until someone taps the button
 - When the button is tapped, it runs the code inside the curly braces next to `Button(“Show Random Fact”)`
 - Then, it will take a random fact from the `allFunFacts` array, and update the `funFact` variable
 - It also uses a ternary operator, which is just a one-lined if-statement
@@ -456,7 +443,7 @@ HStack {
 
 </div>
 
----vertical---
+---
 
 ## Styling the Button
 
@@ -464,7 +451,7 @@ HStack {
 
 <div>
 
-- Let’s edit the look of the button by adding modifiers to it
+- Let's edit the look of the button by adding modifiers to it
   - Add the modifiers after the closing curly bracket of the Button code
 - Try giving our button a background by adding the following modifier: `.background(Color.black)`
 - You can try out other colours too for the background!
@@ -476,7 +463,7 @@ HStack {
 
 </div>
 
----vertical---
+---
 
 ## Styling the Button
 
@@ -501,7 +488,7 @@ HStack {
 
 </div>
 
----vertical---
+---
 
 ## Styling the Button
 
@@ -509,7 +496,7 @@ HStack {
 
 <div>
 
-- Lastly, let’s add some rounded corners to our button
+- Lastly, let's add some rounded corners to our button
 - We can use the modifier `.cornerRadius(15)`
   Change the number in the brackets to determine how round you want the button corners to be
 
@@ -519,7 +506,7 @@ HStack {
 
 </div>
 
----vertical---
+---
 
 ## Creating a New Tab
 
@@ -527,9 +514,9 @@ HStack {
 
 <div>
 
-- Let’s add a new tab which showcases an image gallery
+- Let's add a new tab which showcases an image gallery
 - Going back to **ContentView**, we can see that there are four views, each corresponding to a tab in the app
-- A new tab has already been made for us! It’s called **YourTab**
+- A new tab has already been made for us! It's called **YourTab**
   - We will be using this Tab to create a Gallery!
 
 </div>
@@ -538,7 +525,7 @@ HStack {
 
 </div>
 
----vertical---
+---
 
 ## Creating a New Tab
 
@@ -546,7 +533,7 @@ HStack {
 
 <div>
 
-- Now, we’ll need to add a new tab inside our **ContentView**
+- Now, we'll need to add a new tab inside our **ContentView**
 - Type in the following below the Fun Facts tab:
 
 ```swift
@@ -563,7 +550,7 @@ YourTab()
 
 </div>
 
----vertical---
+---
 
 ## Editing GalleryView
 
@@ -572,7 +559,7 @@ YourTab()
 <div>
 
 - Head back to **YourTab** to start editing the view itself
-- First, let’s add a title text called `"Gallery"`
+- First, let's add a title text called `"Gallery"`
   - Then, apply some modifiers to it
 - What we will be adding next is going to be similar to what we have done in _Getting - Started with Apps_ in the previous unit - we will be adding multiple images with captions next to them.
 
@@ -582,7 +569,7 @@ YourTab()
 
 </div>
 
----vertical---
+---
 
 ## Adding the First Item
 
@@ -590,7 +577,7 @@ YourTab()
 
 <div>
 
-- Let’s create the first item in our gallery
+- Let's create the first item in our gallery
 - Create a `HStack` below the title text
 - Then, import an image into the playground and add the image inside the `HStack`.
 - Add the appropriate modifiers to make image resizable and scaled properly
@@ -602,7 +589,7 @@ YourTab()
 
 </div>
 
----vertical---
+---
 
 ## Using ScrollView
 
@@ -620,7 +607,7 @@ YourTab()
 
 </div>
 
----vertical---
+---
 
 <div style="display: flex; ">
 
@@ -639,4 +626,4 @@ YourTab()
 
 ---
 
-# And that’s it!
+# And that's it!

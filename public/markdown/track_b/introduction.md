@@ -1,14 +1,3 @@
-<div style="text-align: left">
-    <img src="/assets/logos/tinkercademy.png" alt="Tinkercademy Logo" height="128px">
-    <img src="https://raw.githubusercontent.com/swiftinsg/branding/main/logos/icons/png/coloured%20-%20dark%20background.png" alt="Swiftinsg Logo" height="128px" style="margin-left: 64px;">
-</div>
-
-## Track B : Unit 0
-
-# iPad and Swift Playgrounds
-
----
-
 ## What is Swift?
 
 - Swift is an open-source programming language created by Apple
@@ -18,13 +7,13 @@
 
 # Introduction to Swift Playgrounds
 
----vertical---
+---
 
 ## Getting Started
 
 ### 🚀 Swift Playgrounds for iPad
 
----vertical---
+---
 
 ## <img style="margin-bottom: -8px" src="/assets/swift-playgrounds.png"> Swift Playgrounds
 
@@ -32,13 +21,13 @@
 
 [Swift Playgrounds on the App Store](https://apps.apple.com/app/id908519492).
 
----vertical---
+---
 
 ## Swift Playgrounds
 
 <img src="/markdown/track_b/assets/playgrounds-launch-ss.png" alt="Swift Playgrounds Launch" width="50%">
 
----vertical---
+---
 
 ## Learning with Swift Playgrounds
 
@@ -50,7 +39,7 @@
     <img style="width:70%" src="/markdown/track_b/assets/playgrounds-see_all-ss.png" alt="Swift Playgrounds See All Libaray" >
 </div>
 
----vertical---
+---
 
 ## App mode
 
@@ -58,7 +47,7 @@
 
 <img style="width:70%" src="/markdown/track_b/assets/playgrounds-app-create-ss.png" alt="Swift Playgrounds App Create page " >
 
----vertical---
+---
 
 ## Playgrounds mode
 
@@ -70,20 +59,20 @@
 
 # Screen Capturing
 
----vertical---
+---
 
 ## Taking a Screenshot
 
 <div style="display: flex;">
     <ul style="width:60%">
-        <li>Every lesson, we’ll ask you to export a screenshot, so it’s easier for us to take a look without having to connect to (and mess up) your iCloud version.</li>
+        <li>Every lesson, we'll ask you to export a screenshot, so it's easier for us to take a look without having to connect to (and mess up) your iCloud version.</li>
         <li>Press the home and power buttons at the same time to take a screenshot. </li>
         <li>With Apple Pencil, you can also draw in from the bottom left..</li>
     </ul>
     <img src="/markdown/track_b/assets/ipad-screenshot.png" alt="Taking screenshots on iPads">
 </div>
 
----vertical---
+---
 
 ## Recording your Screen
 

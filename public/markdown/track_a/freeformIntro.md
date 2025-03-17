@@ -1,27 +1,14 @@
-<div style="text-align: left">
-    <img src="/assets/logos/tinkercademy.png" alt="Tinkercademy Logo" height="128px">
-    <img src="https://raw.githubusercontent.com/swiftinsg/branding/main/logos/icons/png/coloured%20-%20dark%20background.png" alt="Swiftinsg Logo" height="128px" style="margin-left: 64px;">
-</div>
-
-## Track A: Unit 5
-
-# Intro to Freeform
-
-Introduction to Freeform and its tools
-
----
-
 # Freeform
 
----vertical---
+---
 
 ## Freeform
 
 -   A free Apple app for Mac, iPhone, and iPad, designed for creative brainstorming and collaboration.
--   If you’ve used drawing tools for Keynote or Notes, it’s pretty much the same as those — just designed for collaborative editing, on an infinite canvas (board).
+-   If you've used drawing tools for Keynote or Notes, it's pretty much the same as those — just designed for collaborative editing, on an infinite canvas (board).
 -   Create expandable “boards”, and add text, drawings with various brushes, fills, shapes, sticky notes, and media
 
----vertical---
+---
 
 ## Why Freeform
 
@@ -33,7 +20,7 @@ Introduction to Freeform and its tools
 
 # Creating a board
 
----vertical---
+---
 
 ## Creating a new board
 
@@ -48,19 +35,19 @@ Introduction to Freeform and its tools
 </div>
 <img src="/markdown/track_a/assets/5-newboard.png" alt="Creating a new board in Freeform">
 
----vertical---
+---
 
 ## Renaming your board
 
 <div style="display: flex;">
     <ul>
-        <li>Rename your board to ‘what the board is about’</li>
+        <li>Rename your board to ‘what the board is about'</li>
         <ul>
-            <li>For example, ‘Swift Explorers’</li>
+            <li>For example, ‘Swift Explorers'</li>
         </ul>
         <li>To do this,</li>
         <ul>
-            <li>On the top right of the screen, Tap on ‘Untitled’</li>
+            <li>On the top right of the screen, Tap on ‘Untitled'</li>
             <li>Type in the new name of the board</li>
         </ul>
     </ul>
@@ -73,7 +60,7 @@ Introduction to Freeform and its tools
 
 ## in Freeform
 
----vertical---
+---
 
 ## Zooming your board
 
@@ -82,7 +69,7 @@ Introduction to Freeform and its tools
 -   To **zoom in** or **zoom out** of the canvas, place two fingers on your screen, and do a pinching movement
     -   Pinching in zooms in, pinching out zooms out
 
----vertical---
+---
 
 ## Moving around your board
 
@@ -95,7 +82,7 @@ Introduction to Freeform and its tools
 
 # Tools in Freeform
 
----vertical---
+---
 
 ## Drawing Tools
 
@@ -104,13 +91,13 @@ Introduction to Freeform and its tools
 
 <img src="/markdown/track_a/assets/freeform-tools.png">
 
----vertical---
+---
 
 ## Tool Picker
 
 <img src="/markdown/track_a/assets/freeform-tools-edited.png">
 
----vertical---
+---
 
 ## Creating sticky notes
 
@@ -121,7 +108,7 @@ Introduction to Freeform and its tools
     </ul>
 </div>
 
----vertical---
+---
 
 ## Customising sticky notes
 
@@ -138,7 +125,7 @@ Introduction to Freeform and its tools
 
 </div>
 
----vertical---
+---
 
 ## Using preset shapes
 
@@ -159,7 +146,7 @@ Introduction to Freeform and its tools
 
 </div>
 
----vertical---
+---
 
 ## Insert media
 
@@ -167,8 +154,8 @@ Introduction to Freeform and its tools
     <div style="flex: 1;">
     <ul>
         <li>Tap on the (picture icon) button at the top centre of your screen</li>
-        <li>Select an option for where you’d like to get your media from</li>
-        <li>If ‘Link’ is tapped, an object with the link will be created</li>
+        <li>Select an option for where you'd like to get your media from</li>
+        <li>If ‘Link' is tapped, an object with the link will be created</li>
         <ul>
             <li>This allows you to quickly access webpages from your board</li>
             <li>It will look something like this 👉</li>
@@ -185,7 +172,7 @@ Introduction to Freeform and its tools
 
 # Collaboration and exporting
 
----vertical---
+---
 
 ## Freeform Collaboration
 
@@ -197,7 +184,7 @@ Introduction to Freeform and its tools
     </ul>
 </div>
 
----vertical---
+---
 
 ## Exporting in Freeform
 
@@ -219,7 +206,7 @@ Introduction to Freeform and its tools
 
 # Collaborating
 
----vertical---
+---
 
 ## Freeform Collaboration
 
@@ -242,7 +229,7 @@ Introduction to Freeform and its tools
     </div>
 </div>
 
----vertical---
+---
 
 ## Tip: Let Anyone Edit
 
@@ -255,20 +242,20 @@ to set up permissions.</li>
     </ul>
 </div>
 
----vertical---
+---
 
 ## Sharing Options
 
 <div style="display: flex;">
     <ul>
-        <li>Once a document is shared, you’ll see a new button show up (person-icon)</li>
+        <li>Once a document is shared, you'll see a new button show up (person-icon)</li>
         <li>Tap on it to send the link or set up a collaborative FaceTime call</li>
         <li>See all changes from teammates in <strong>Latest Activity</strong></li>
         <li>Make changes to <strong>Activity Settings</strong> (see cursors, highlights) or <strong>Manage Shared Presentation</strong> (who has access)</li>
     </ul>
 </div>
 
----vertical---
+---
 
 ## Caveats and Warnings
 

@@ -1,16 +1,6 @@
-<div style="text-align: left">
-    <img src="/assets/logos/tinkercademy.png" alt="Tinkercademy Logo" height="128px">
-    <img src="https://raw.githubusercontent.com/swiftinsg/branding/main/logos/icons/png/coloured%20-%20dark%20background.png" alt="Swiftinsg Logo" height="128px" style="margin-left: 64px;">
-</div>
-
-## Track B: Unit 5
-List App
-
----
-
 # Version 1
 
----vertical---
+---
 
 ## Setting up the project
 
@@ -30,7 +20,7 @@ struct ContentView: View {
 
 <p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift</p>
 
----vertical---
+---
 
 ## Adding a RecipeDetailView
 
@@ -56,7 +46,7 @@ struct ContentView: View {
 
 <p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift</p>
 
----vertical---
+---
 
 ## Creating a RecipeDetailView
 
@@ -81,7 +71,7 @@ struct MyView: View {
 
 <p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> RecipeDetailView.swift</p>
 
----vertical---
+---
 
 ## Setting up the RecipeDetailView
 
@@ -103,7 +93,7 @@ struct RecipeDetailView: View {
 
 <p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> RecipeDetailView.swift</p>
 
----vertical---
+---
 
 ## Adding Instructions to RecipeDetailView
 
@@ -124,13 +114,13 @@ struct RecipeDetailView: View {
 
 <p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> RecipeDetailView.swift</p>
 
----vertical---
+---
 
 ## Next up
 
 ### Well now we will be adding in Ice Cream for those who don't like hot drinks.
 
----vertical---
+---
 
 ## Creating a RecipeDetailView2
 
@@ -154,7 +144,7 @@ struct RecipeDetailView2: View {
 
 <p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> RecipeDetailView2.swift</p>
 
----vertical---
+---
 
 ## Setting up the RecipeDetailView2
 
@@ -174,7 +164,7 @@ struct RecipeDetailView2: View {
 
 <p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> RecipeDetailView2.swift</p>
 
----vertical---
+---
 
 ## Adding a second Button
 
@@ -205,13 +195,13 @@ struct ContentView: View {
 
 <p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift</p>
 
----vertical---
+---
 
 ## Next up
 
 ### Now we want to add an exit button to the `RecipeDetailView` and `IceCreamRecipeView` to dismiss the sheet.
 
----vertical---
+---
 
 ## Adding an Exit Button
 
@@ -240,7 +230,7 @@ struct RecipeDetailView: View {
 
 # Version 2
 
----vertical---
+---
 
 ## NavigationStack
 
@@ -249,7 +239,7 @@ Apple uses this design pattern in many of their apps, such as the Settings app o
 
 - TODO: add IOS Settings video
 
----vertical---
+---
 
 ## Using NavigationStack in our app
 
@@ -275,7 +265,7 @@ struct ContentView: View {
 
 <p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift</p>
 
----vertical---
+---
 
 ## Modifing our NavigationView
 
@@ -301,7 +291,7 @@ struct ContentView: View {
 
 <p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift</p>
 
----vertical---
+---
 
 ## Adding a second recipe
 
@@ -330,12 +320,12 @@ struct ContentView: View {
 }
 ```
 
----vertical---
+---
 
 ## Next up
 ### For absolutly no reason at all, if we want to hide the title and the back button, we can use the `.toolbar(.hidden)` and `.navigationBarBackButtonHidden`.
 
----vertical---
+---
 
 ## Hiding the toobar
 
@@ -364,7 +354,7 @@ struct ContentView: View {
 }
 ```
 
----vertical---
+---
 
 ## Hiding the back button
 
@@ -387,12 +377,12 @@ struct RecipeDetailView: View {
 }
 ```
 
----vertical---
+---
 
 ## Next up
 ### Now we want our app to look like Apple's Settings App because we love Apple.
 
----vertical---
+---
 
 ## Making our app look like Apple's Settings App
 
@@ -421,7 +411,7 @@ struct ContentView: View {
 }
 ```
 
----vertical---
+---
 
 ## Adding back the back button
 
@@ -447,13 +437,13 @@ struct RecipeDetailView: View {
 
 # Version 3
 
----vertical---
+---
 
 ## Generalizing the RecipeDetailView
 
 Now imagine we wanted to add multiple new recipes to our app. We would have to create a new `RecipeDetailView` for each recipe. This is SUPER inefficient. To address this, we can generalize the `RecipeDetailView` to accept a `Title` and `Description` as parameters.
 
----vertical---
+---
 
 ## Adding parameters to RecipeDetailView
 
@@ -479,7 +469,7 @@ struct RecipeDetailView: View {
 }
 ```
 
----vertical---
+---
 
 ## Using the parameters in RecipeDetailView
 
@@ -502,7 +492,7 @@ struct RecipeDetailView: View {
 }
 ```
 
----vertical---
+---
 
 ## Adding the Exit Button
 
@@ -531,6 +521,6 @@ struct RecipeDetailView: View {
 
 # Update 4
 
----vertical---
+---
 
 TODO

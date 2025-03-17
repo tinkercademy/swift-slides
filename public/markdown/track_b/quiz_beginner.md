@@ -1,19 +1,8 @@
-<div style="text-align: left">
-    <img src="/assets/logos/tinkercademy.png" alt="Tinkercademy Logo" height="128px">
-    <img src="https://raw.githubusercontent.com/swiftinsg/branding/main/logos/icons/png/coloured%20-%20dark%20background.png" alt="Swiftinsg Logo" height="128px" style="margin-left: 64px;">
-</div>
-
-## Track B: Unit 4
-
-Quiz App (Beginner)
-
----
-
 # 4.1 Simple Quiz App
 
 ---
 
-## Let’s get started!
+## Let's get started!
 
 - Make a new SwiftUI project and call it `Quiz App`
 - Remove the Image in the ContentView
@@ -30,12 +19,12 @@ struct ContentView: View {
 }
 ```
 
----vertical---
+---
 
-## Let’s mock up the quiz app UI
+## Let's mock up the quiz app UI
 
 - Change `Hello, World!` to any question you like.
-- Let’s also center the text by adding `.multilineTextAlignment(.center)` to the `Text` view.
+- Let's also center the text by adding `.multilineTextAlignment(.center)` to the `Text` view.
 
 ```swift
 
@@ -49,9 +38,9 @@ struct ContentView: View {
 }
 ```
 
----vertical---
+---
 
-## Let’s add some buttons
+## Let's add some buttons
 
 - Create a 2 button layout using `HStack` and `Button` views.
 
@@ -79,7 +68,7 @@ struct ContentView: View {
 }
 ```
 
----vertical---
+---
 
 ## Add 2 more buttons below
 
@@ -121,7 +110,7 @@ struct ContentView: View {
 }
 ```
 
----vertical---
+---
 
 ## Correct Or Wrong?
 
@@ -167,7 +156,7 @@ struct ContentView: View {
 }
 ```
 
----vertical---
+---
 
 ## Check the answer
 
@@ -212,11 +201,11 @@ struct ContentView: View {
 }
 ```
 
----vertical---
+---
 
 ## Comments
 
-- Let’s add some comments to our code to make it easier to understand.
+- Let's add some comments to our code to make it easier to understand.
 
 ```swift
 struct ContentView: View {
@@ -264,7 +253,7 @@ struct ContentView: View {
 
 # 4.2 Simple Quiz App but with better code
 
----vertical---
+---
 
 ## Similar Buttons
 
@@ -291,7 +280,7 @@ struct ContentView: View {
 }
 ```
 
----vertical---
+---
 
 ## Using the function
 
@@ -340,9 +329,9 @@ struct ContentView: View {
 
 # 4.3 Simple Quiz App with multiple questions
 
----vertical---
+---
 
-## Let’s create questionNumber variable
+## Let's create questionNumber variable
 
 - Create a `questionNumber` variable to keep track of the current question.
 - In programming, we start counting from 0.
@@ -362,7 +351,7 @@ struct ContentView: View {
 }
 ```
 
----vertical---
+---
 
 ## Show different questions
 
@@ -402,7 +391,7 @@ struct ContentView: View {
 }
 ```
 
----vertical---
+---
 
 ## Next Question Button
 
@@ -433,7 +422,7 @@ struct ContentView: View {
 }
 ```
 
----vertical---
+---
 
 ## Next Question Button
 
@@ -476,7 +465,7 @@ struct ContentView: View {
 
 # 4.4 Go to the next question and reset the answer
 
----vertical---
+---
 
 ## Going to the next question
 
@@ -514,7 +503,7 @@ struct ContentView: View {
 }
 ```
 
----vertical---
+---
 
 ## Going to the next question
 
@@ -567,7 +556,7 @@ struct ContentView: View {
 }
 ```
 
----vertical---
+---
 
 ## Hide the Next Question Button
 
@@ -610,7 +599,7 @@ struct ContentView: View {
 }
 ```
 
----vertical---
+---
 
 ## End the quiz if there are no more questions
 
@@ -656,9 +645,9 @@ struct ContentView: View {
 }
 ```
 
----vertical---
+---
 
-## Now let’s imagine we have 10 questions
+## Now let's imagine we have 10 questions
 
 - If we have 10 questions, we will have to write a lot of code to show all the questions.
 - Thus we should create a function to show the question and options.
@@ -692,7 +681,7 @@ struct ContentView: View {
 }
 ```
 
----vertical---
+---
 
 ## Making the question and options dynamic
 
@@ -719,7 +708,7 @@ func question(question: String, option1: String, option2: String, option3: Strin
 }
 ```
 
----vertical---
+---
 
 ## Using the function
 
@@ -768,7 +757,7 @@ struct ContentView: View {
 
 # 4.5 Using switch-case and withAnimation
 
----vertical---
+---
 
 ## Using switch-case
 
@@ -809,7 +798,7 @@ struct ContentView: View {
 }
 ```
 
----vertical---
+---
 
 ## Using switch-case
 
@@ -858,7 +847,7 @@ struct ContentView: View {
 }
 ```
 
----vertical---
+---
 
 ## Using withAnimation
 
@@ -891,7 +880,7 @@ struct ContentView: View {
 }
 ```
 
----vertical---
+---
 
 ## Using withAnimation
 
@@ -930,7 +919,7 @@ struct ContentView: View {
 
 # 4.6 Adding in a score
 
----vertical---
+---
 
 ## Creating a `@State` variable for the score
 
@@ -947,7 +936,7 @@ struct ContentView: View {
 }
 ```
 
----vertical---
+---
 
 ## Updating the score
 
@@ -979,7 +968,7 @@ struct ContentView: View {
 }
 ```
 
----vertical---
+---
 
 ## Showing the score
 
@@ -1001,7 +990,7 @@ struct ContentView: View {
 }
 ```
 
----vertical---
+---
 
 ## Conditionally showing the score
 
@@ -1027,12 +1016,12 @@ struct ContentView: View {
 }
 ```
 
----vertical---
+---
 
 ## Giving feedback
 
 - Show thumbs up if they got more than 1 question correct.
-- Let’s make it big and colour it with an gradient.
+- Let's make it big and colour it with an gradient.
 
 ```swift
 struct ContentView: View {
@@ -1058,7 +1047,7 @@ struct ContentView: View {
 }
 ```
 
----vertical---
+---
 
 ## Giving feedback
 
@@ -1091,7 +1080,7 @@ struct ContentView: View {
 }
 ```
 
----vertical---
+---
 
 ## Disabling the buttons
 

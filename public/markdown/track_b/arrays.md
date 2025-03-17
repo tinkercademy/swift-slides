@@ -1,19 +1,8 @@
-<div style="text-align: left">
-    <img src="/assets/logos/tinkercademy.png" alt="Tinkercademy Logo" height="128px">
-    <img src="https://raw.githubusercontent.com/swiftinsg/branding/main/logos/icons/png/coloured%20-%20dark%20background.png" alt="Swiftinsg Logo" height="128px" style="margin-left: 64px;">
-</div>
-
-## Track B: Unit 4A
-
-# Array, Previews And Structs
-
----
-
 # Logical Operators
 
 These allow you to combine multiple `if` conditions together.
 
----vertical---
+---
 
 ## Introduction
 
@@ -29,7 +18,7 @@ These allow you to combine multiple `if` conditions together.
 | `\|\|` | OR          |
 | `!`    | NOT         |
 
----vertical---
+---
 
 ## Logical AND (`&&`) Operator
 
@@ -44,7 +33,7 @@ if a == 5 && b == 10 {
 }
 ```
 
----vertical---
+---
 
 ## Logical OR (`||`) Operator
 
@@ -59,7 +48,7 @@ if a == 5 || b == 20 {
 }
 ```
 
----vertical---
+---
 
 ## Logical NOT (`!`) Operator
 
@@ -77,11 +66,11 @@ if !(a == 10) {
 
 # Arrays
 
-Imagine an announcement in school, asking for your class to go somewhere. The announcer won’t call you out by name, one by one… they’ll ask for your class name, e.g. Secondary 2C.
+Imagine an announcement in school, asking for your class to go somewhere. The announcer won't call you out by name, one by one… they'll ask for your class name, e.g. Secondary 2C.
 
-That’s a _single variable that has all of your names in an ordered list_ — an array!
+That's a _single variable that has all of your names in an ordered list_ — an array!
 
----vertical---
+---
 
 ## Without Arrays
 
@@ -106,7 +95,7 @@ print(student5)
 student1 = "I give up"
 ```
 
----vertical---
+---
 
 ## Arrays
 
@@ -116,7 +105,7 @@ student1 = "I give up"
 
 ![Array Diagram](/markdown/track_b/assets/array-diagram.png)
 
----vertical---
+---
 
 ## With Arrays
 
@@ -138,7 +127,7 @@ students[0] = "Blob"
 print(students)
 ```
 
----vertical---
+---
 
 ## Visualising Arrays
 
@@ -148,7 +137,7 @@ var students = ["Alice", "Bob", "Charles", "Deborah"]
 
 ![](/markdown/track_b/assets/visualising-arrays-0.png)
 
----vertical---
+---
 
 ## Visualising Arrays
 
@@ -158,7 +147,7 @@ students.append("Eunice")
 
 ![](/markdown/track_b/assets/visualising-arrays-1.png)
 
----vertical---
+---
 
 ## Visualising Arrays
 
@@ -168,7 +157,7 @@ students.remove(at: 0)
 
 ![](/markdown/track_b/assets/visualising-arrays-2.png)
 
----vertical---
+---
 
 ## Visualising Arrays
 
@@ -178,7 +167,7 @@ students[0] = "Blob"
 
 ![](/markdown/track_b/assets/visualising-arrays-4.png)
 
----vertical---
+---
 
 ## Visualising Arrays
 
@@ -188,7 +177,7 @@ print(students.count)
 
 ![](/markdown/track_b/assets/visualising-arrays-5.png)
 
----vertical---
+---
 
 ## Visualising Arrays
 
@@ -198,7 +187,7 @@ students.insert("Daisy", at: 2)
 
 ![](/markdown/track_b/assets/visualising-arrays-6.png)
 
----vertical---
+---
 
 ## Arrays
 
@@ -220,11 +209,11 @@ Methods/variables:
 
 Imagine you have a box of Legos. Each Lego piece is like a little part of a bigger thing you want to build, like a spaceship or a castle. Now, think of a "struct" like a special kind of Lego set where you can put `different types` of Legos together to make something cool.
 
----vertical---
+---
 
 ## How they work
 
-Let’s say you want to make a little car. With a struct, you can decide that your car will have different parts: a color, a size, and a number of wheels. So, your struct would be like a blueprint for your car:
+Let's say you want to make a little car. With a struct, you can decide that your car will have different parts: a color, a size, and a number of wheels. So, your struct would be like a blueprint for your car:
 
 ```swift
 // Hey, I'm going to make something called a 'Car'.
@@ -242,7 +231,7 @@ var myCar = Car(colour: "Red", size: 5, wheels: 4)
 
 # Previews
 
----vertical---
+---
 
 ## What are Previews?
 
@@ -260,7 +249,7 @@ struct ContentView: View {
 }
 ```
 
----vertical---
+---
 
 ## Rendering Multiple Previews
 

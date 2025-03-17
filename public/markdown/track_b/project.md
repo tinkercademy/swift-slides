@@ -1,15 +1,3 @@
-<div style="text-align: left">
-    <img src="/assets/logos/tinkercademy.png" alt="Tinkercademy Logo" height="128px">
-    <img src="https://raw.githubusercontent.com/swiftinsg/branding/main/logos/icons/png/coloured%20-%20dark%20background.png" alt="Swiftinsg Logo" height="128px" style="margin-left: 64px;">
-</div>
-
-## Track B: Unit 6
-# Project
-
-Your turn.
-
----
-
 # Download the Keynote
 ## [apple.co/designasimpleapp-project3](https://apple.co/designasimpleapp-project3)
 This will be where we document our journey building the app.
@@ -22,7 +10,7 @@ This will be where we document our journey building the app.
 
 # Project Brief
 
----vertical---
+---
 
 ## Single-Feature iPad App
 - As a group, create a Single-Feature app that solves a problem, opportunity, or solution.
@@ -30,7 +18,7 @@ This will be where we document our journey building the app.
 - There are many apps on the App Store that do exactly that, they do one thing, and one thing really well.
     - It's quality over quantity.
 
----vertical---
+---
 
 ## <img src="/assets/oak.png" style="border-radius: 22%; margin-bottom: -16px" height="96px"> Overengineered Arrow Keys
 - This is literally a clicker app with 3 controls—next button, previous button, and a slider to exit.
@@ -41,7 +29,7 @@ This will be where we document our journey building the app.
 
 <a href="https://oak.jiachen.app"><img src="/assets/download-on-app-store-white.svg" height="96px"></a>
 
----vertical---
+---
 
 ## Think Simple
 - Don't overthink.
@@ -53,17 +41,17 @@ This will be where we document our journey building the app.
 # Brainstorm & Plan
 ## Where do we start?
 
----vertical---
+---
 
 ## Generate Ideas
 Using the project Keynote, generate ten ideas in 10 minutes for an app that makes your day — or someone else's — better.
 
----vertical---
+---
 
 ## Hear from Others
 Ask three to five people to look at your app ideas and identify the idea they like best.
 
----vertical---
+---
 
 ## Rapid Prototyping
 Rapid prototyping helps you think creatively about what your app could look like or how it could work.
@@ -72,12 +60,12 @@ Use the blank templates provided in the Brainstorm and Plan section of the proje
 
 These prototypes are designed to be quick and rough. The goal is to get your idea across.
 
----vertical---
+---
 
 ## Prototype Feedback
 Show your designs to at least three people and ask for feedback.
 
----vertical---
+---
 
 ## Combining Prototypes
 Using the feedback you collected, decide on a design to move forward with.
@@ -89,7 +77,7 @@ This design can be one of the prototypes, or a combination of multiple.
 # Keynote Prototyping
 ## It's more than a presentation software
 
----vertical---
+---
 
 ## Prototyping
 - Bring your selected idea to life with a Keynote Prototype.
@@ -104,14 +92,14 @@ slide if needed.
 # Evaluate
 ## What do others think?
 
----vertical---
+---
 
 ## Show it Off!
 Show your Keynote prototype to at least three people!
 
 Ask users to fill out the feedback form in the Evaluate section of the Keynote.
 
----vertical---
+---
 
 ## Consider Their Feedback
 Make changes to your prototype based on what you heard.
@@ -121,7 +109,7 @@ Make changes to your prototype based on what you heard.
 # Development
 ## Coding Time
 
----vertical---
+---
 
 ## Get Started!
 - Create your project

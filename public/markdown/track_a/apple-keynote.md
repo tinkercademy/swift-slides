@@ -1,11 +1,4 @@
-<div style="text-align: left">
-    <img src="/assets/logos/tinkercademy.png" alt="Tinkercademy Logo" height="128px">
-    <img src="https://raw.githubusercontent.com/swiftinsg/branding/main/logos/icons/png/coloured%20-%20dark%20background.png" alt="Swiftinsg Logo" height="128px" style="margin-left: 64px;">
-</div>
-
-## Track A: Unit 6A
-
-# Design a Simple App
+## Download the required files
 
 <a href="https://apple.co/designasimpleapp-project3">Download the Keynote file required for this unit (79.9 MB)</a>
 
@@ -15,20 +8,20 @@
 
 Prepare and sketch designs for a simple app.
 
----vertical---
+---
 
 <div style="display: flex;">
     <div style="margin-top:5%;">
     <h2>Step 1</h2>
     <ul style="margin-top:5%;">
-        <li>Using the project presentation Keynote, generate ten ideas in 10 minutes for an app that makes your day — or someone else’s — better.</li>
+        <li>Using the project presentation Keynote, generate ten ideas in 10 minutes for an app that makes your day — or someone else's — better.</li>
         <li><a href="https://apple.co/designasimpleapp-project3">Download the project presentation in Keynote (79.9 MB)</a></li>
     </ul>
     </div>
     <img style="width:70%" src="/markdown/track_a/assets/7a-s1-step1.png">
 </div>
 
----vertical---
+---
 
 <div style="display: flex;">
     <div style="margin-top:5%;">
@@ -40,7 +33,7 @@ Prepare and sketch designs for a simple app.
     <img src="/markdown/track_a/assets/7a-s1-step2.png">
 </div>
 
----vertical---
+---
 
 <div style="display: flex;">
     <div style="margin-top:5%;">
@@ -53,7 +46,7 @@ Prepare and sketch designs for a simple app.
     <img style="width:70%;" src="/markdown/track_a/assets/7a-s1-step3.png">
 </div>
 
----vertical---
+---
 
 <div style="display: flex;">
     <div style="margin-top:0%;">
@@ -66,7 +59,7 @@ Prepare and sketch designs for a simple app.
 
 </div>
 
----vertical---
+---
 
 <div style="display: flex;">
     <div style="margin-top:5%;">
@@ -84,7 +77,7 @@ Prepare and sketch designs for a simple app.
 
 In Keynote, create a prototype of your app.
 
----vertical---
+---
 
 <div style="display: flex;">
     <div style="margin-top:5%;">
@@ -96,7 +89,7 @@ In Keynote, create a prototype of your app.
     <img src="/markdown/track_a/assets/7a-s2-step0.jpg">
 </div>
 
----vertical---
+---
 
 <div style="display: flex;">
     <div style="margin-top:5%;">
@@ -108,7 +101,7 @@ In Keynote, create a prototype of your app.
     <img src="/markdown/track_a/assets/7a-s2-step0-2.jpg">
 </div>
 
----vertical---
+---
 
 <div style="display: flex;">
     <div style="margin-top:5%;">
@@ -120,7 +113,7 @@ In Keynote, create a prototype of your app.
     <img src="/markdown/track_a/assets/7a-s2-step0-3.jpg">
 </div>
 
----vertical---
+---
 
 <div style="display: flex;">
     <div style="margin-top:5%;">
@@ -132,7 +125,7 @@ In Keynote, create a prototype of your app.
     <img src="/markdown/track_a/assets/7a-s2-step1.jpg">
 </div>
 
----vertical---
+---
 
 <div style="display: flex;">
     <div style="margin-top:5%;">
@@ -144,7 +137,7 @@ In Keynote, create a prototype of your app.
     <img src="/markdown/track_a/assets/7a-s2-step2.jpg">
 </div>
 
----vertical---
+---
 
 <div style="display: flex;">
     <div style="margin-top:5%;">
@@ -156,7 +149,7 @@ In Keynote, create a prototype of your app.
     <img src="/markdown/track_a/assets/7a-s2-step3.jpg">
 </div>
 
----vertical---
+---
 
 <div style="display: flex;">
     <div style="margin-top:5%;">
@@ -168,7 +161,7 @@ In Keynote, create a prototype of your app.
     <img src="/markdown/track_a/assets/7a-s2-step4.jpg">
 </div>
 
----vertical---
+---
 
 <div style="display: flex;">
     <div style="margin-top:5%;">
@@ -187,7 +180,7 @@ In Keynote, create a prototype of your app.
 
 Have others test your app and observe how they interact with it. Take note of when they show signs of joy or misunderstanding.
 
----vertical---
+---
 
 <div style="display: flex;">
     <div style="margin-top:5%;">
@@ -199,7 +192,7 @@ Have others test your app and observe how they interact with it. Take note of wh
     <img src="/markdown/track_a/assets/7a-s3-step1.jpg">
 </div>
 
----vertical---
+---
 
 <div style="display: flex;">
     <div style="margin-top:5%;">
@@ -217,7 +210,7 @@ Have others test your app and observe how they interact with it. Take note of wh
 
 Create an app product page to give potential users information before they download your app. Investigate what information to include, then make an app product page of your own.
 
----vertical---
+---
 
 <div style="display: flex;">
     <div style="margin-top:5%;">
@@ -230,7 +223,7 @@ Create an app product page to give potential users information before they downl
     <img src="/markdown/track_a/assets/7a-s4-step1.jpg">
 </div>
 
----vertical---
+---
 
 <div style="display: flex;">
     <div style="margin-top:5%;">

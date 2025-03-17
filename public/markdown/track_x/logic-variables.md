@@ -1,32 +1,21 @@
-<div style="text-align: left">
-    <img src="/assets/logos/tinkercademy.png" alt="Tinkercademy Logo" height="128px">
-    <img src="https://raw.githubusercontent.com/swiftinsg/branding/main/logos/icons/png/coloured%20-%20dark%20background.png" alt="Swiftinsg Logo" height="128px" style="margin-left: 64px;">
-</div>
-
-## Track X: Unit 2
-
-# Logical Operators, Variables, Types
-
----
-
 # Lesson Plan
 
-### What you’ll learn
+### What you'll learn
 - Logical Operators  
 - Variables  
 - Types  
 
-### What you’ll do
+### What you'll do
 - Get Started with Code on Swift Playgrounds  
 
-### What you’ll need
+### What you'll need
 - Swift Playgrounds App on your iPad  
 
 ---
 
 # Logical Operators
 
----vertical---
+---
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div style="position: relative; width: 1400px; height: 1000px;">
@@ -35,7 +24,7 @@
   </div>
 </div>
 
----vertical---
+---
 
 <div style="display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; padding: 20px;">
   <div style="position: relative; width: 1050px; height: 650px;">
@@ -48,7 +37,7 @@
   </div>
 </div>
 
----vertical---
+---
 
 <div style="display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; padding: 20px;">
   <div style="position: relative; width: 1050px; height: 650px;">
@@ -61,7 +50,7 @@
   </div>
 </div>
 
----vertical---
+---
 
 <div style="display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; padding: 20px;">
   <div style="position: relative; width: 1050px; height: 650px;">
@@ -74,7 +63,7 @@
   </div>
 </div>
 
----vertical---
+---
 
 # Hands-On
 ### Try out the exercise under Logical Operators!
@@ -89,7 +78,7 @@
 
 # Variables
 
----vertical---
+---
 
 <div style="display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; padding: 20px;">
   <div style="position: relative; width: 1050px; height: 650px;">
@@ -102,7 +91,7 @@
   </div>
 </div>
 
----vertical---
+---
 
 <div style="display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; padding: 20px;">
   <div style="position: relative; width: 1050px; height: 650px;">
@@ -115,7 +104,7 @@
   </div>
 </div>
 
----vertical---
+---
 
 <div style="display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; padding: 20px;">
   <div style="position: relative; width: 1050px; height: 650px;">
@@ -128,20 +117,20 @@
   </div>
 </div>
 
----vertical---
+---
 
 # Variables Summary
 
 - A variable is something that represents a value. The value can change, so the variable has a name for you to refer to it by.
 
----vertical---
+---
 
 ## Declaring Variables:
 ```swift
 var variableName = 0
 ```
 
----vertical---
+---
 
 ## Changing Variables:
 ```swift
@@ -149,7 +138,7 @@ myVariableName = 2
 myVariableName = myVariableName + 1
 ```
 
----vertical---
+---
 
 ## Using Variables in Code:
 ```swift
@@ -162,7 +151,7 @@ var newVariable = variableName + 11000
 let myConstant = 0
 ```
 
----vertical---
+---
 
 # Hands-On
 ### Try out the exercises under Variables!
@@ -181,7 +170,7 @@ let myConstant = 0
 
 # Types
 
----vertical---
+---
 
 <div style="display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; padding: 20px;">
   <div style="position: relative; width: 1050px; height: 650px;">
@@ -194,7 +183,7 @@ let myConstant = 0
   </div>
 </div>
 
----vertical---
+---
 
 <div style="display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; padding: 20px;">
   <div style="position: relative; width: 1050px; height: 650px;">
@@ -207,7 +196,7 @@ let myConstant = 0
   </div>
 </div>
 
----vertical---
+---
 
 <div style="display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; padding: 20px;">
   <div style="position: relative; width: 1050px; height: 650px;">
@@ -220,7 +209,7 @@ let myConstant = 0
   </div>
 </div>
 
----vertical---
+---
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div style="position: relative; width: 1400px; height: 1000px;">
@@ -229,7 +218,7 @@ let myConstant = 0
   </div>
 </div>
 
----vertical---
+---
 
 # Hands-On
 ### Try out the exercises under Types!

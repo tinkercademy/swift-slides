@@ -1,16 +1,3 @@
-<div style="text-align: left">
-    <img src="/assets/logos/tinkercademy.png" alt="Tinkercademy Logo" height="128px">
-    <img src="https://raw.githubusercontent.com/swiftinsg/branding/main/logos/icons/png/coloured%20-%20dark%20background.png" alt="Swiftinsg Logo" height="128px" style="margin-left: 64px;">
-</div>
-
-## Track B: Unit 1
-
-# Name Card
-
-Create a name card app in Swift Playgrounds.
-
----
-
 ## Unit Overview
 
 - [Getting started with Playgrounds](#getting-started)
@@ -25,7 +12,7 @@ Create a name card app in Swift Playgrounds.
 
 # Getting Started
 
----vertical---
+---
 
 ## Create a Playground App
 
@@ -39,27 +26,27 @@ Create a name card app in Swift Playgrounds.
     <img src="/markdown/track_b/assets/new-project.png">
 </div>
 
----vertical---
+---
 
 <div style="display:flex;justify-content:center;align-items:center;">
     <img src="/markdown/track_b/assets/playgrounds-empty-project.png" alt="A screenshot of an empty Playgrounds project with ContentView open">
 </div>
 
----vertical---
+---
 
 <div style="display:flex;justify-content:center;align-items:center;">
     <img src="/markdown/track_b/assets/annotated-playgrounds-interface.png" alt="An annotated Playgrounds screenshot pointing out the various features such as the side bar, toolbar, tab bar, editor, and console.">
 </div>
 
----vertical---
+---
 
-## What’s in the toolbar
+## What's in the toolbar
 
 <div style="display:flex;justify-content:center;align-items:center;">
     <img src="/markdown/track_b/assets/annotated-playgrounds-toolbar.png" alt="An annotated Playgrounds screenshot pointing out the various buttons in the toolbar.">
 </div>
 
----vertical---
+---
 
 ## Configuring Your Project
 
@@ -67,20 +54,20 @@ Create a name card app in Swift Playgrounds.
     <ol>
         <li>Open the Sidebar</li>
         <li>Select App Settings</li>
-        <li>Make sure our app’s name is “Name card”</li>
+        <li>Make sure our app's name is “Name card”</li>
         <li>Select your favourite colour as your <em>Accent Color</em>.</li>
     </ol>
     <img src="/markdown/track_b/assets/playgrounds-app-settings.png" width="70%">
     
 </div>
 
----vertical---
+---
 
 ## Setting an App Icon
 
 <div style="display: flex; ">
     <ol>
-        <li>Open iPad’s Camera app</li>
+        <li>Open iPad's Camera app</li>
         <li>Take a selfie!</li>
         <li>Back in Playgrounds,
             <ol>
@@ -89,7 +76,7 @@ Create a name card app in Swift Playgrounds.
                 <li>Add the image you just took</li>
             </ol>
         </li>
-        <li>You’re now an app icon!</li>
+        <li>You're now an app icon!</li>
     </ol>
     <img src="/markdown/track_b/assets/playgrounds-app-settings-custom-icon.png" width="50%">
 </div>
@@ -104,7 +91,7 @@ Create a name card app in Swift Playgrounds.
 
 [Apple Developer Documentation](https://developer.apple.com/documentation/swiftui)
 
----vertical---
+---
 
 ## Text
 
@@ -120,14 +107,14 @@ Text("Hello, world")
 Text("YJ Soon")
 ```
 
-- Run, and it’ll be reflected in the app.
-- You can add more text underneath the existing one! Perhaps add what you do. For me, that’s
+- Run, and it'll be reflected in the app.
+- You can add more text underneath the existing one! Perhaps add what you do. For me, that's
 
 ```swift
 Text("Swift instructor")
 ```
 
----vertical---
+---
 
 ```swift[9-10]
 import SwiftUI
@@ -147,20 +134,20 @@ struct ContentView: View {
 
 <img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift
 
----vertical---
+---
 
 ## Image
 
 - A name card needs an image.
-- We’ll take a photo of ourselves, and put it into our app!
-- To do this, we’ll use a `View` called `Image`. You would have already seen an example right above the `Text`.
-  - In Playgrounds, we can take a photo, and show it on-screen using the `Image` view below. Add the photo’s name in the quotes.
+- We'll take a photo of ourselves, and put it into our app!
+- To do this, we'll use a `View` called `Image`. You would have already seen an example right above the `Text`.
+  - In Playgrounds, we can take a photo, and show it on-screen using the `Image` view below. Add the photo's name in the quotes.
   ```swift
    Image("MyImageName")
   ```
   - This is just like the `Text`s we saw!
 
----vertical---
+---
 
 ## Importing Images
 
@@ -170,14 +157,14 @@ struct ContentView: View {
         <li>Tap on the Add File button <img style="margin-bottom: -4px" src="/assets/icons/doc.badge.plus.svg" alt="New Document Icon" width="32px"></li>
         <li>Select Photo</li>
         <li>Select a photo from your Photos!</li>
-        <li>You’ll see your image in the <strong>Assets</strong> section</li>
+        <li>You'll see your image in the <strong>Assets</strong> section</li>
         <li>Hold down on its name and select <strong>Rename</strong></li>
         <li>Name it <strong>MyImage</strong>.</li>
     </ol>
     <img src="/markdown/track_b/assets/playgrounds-image-asset.png" width="70%">
 </div>
 
----vertical---
+---
 
 ## Adding Your Image
 
@@ -199,16 +186,16 @@ struct ContentView: View {
     </ol>
 </div>
 
----vertical---
+---
 
 ## View Modifiers
 
 - SwiftUI has hundreds of different modifiers that we can use to make our individual Views look better, we can add View Modifiers (or just modifiers).
 - These are additional pieces of formatting and functionality “tacked on” to each View.
 - To add a modifier, add it to the end of a View, like this: `.modifierName()`
-- We’ll introduce a variety of modifiers, and add them to various elements, to help enhance our app.
+- We'll introduce a variety of modifiers, and add them to various elements, to help enhance our app.
 
----vertical---
+---
 
 ```swift[3:4-6]
 struct ContentView: View {
@@ -226,7 +213,7 @@ struct ContentView: View {
 
 <img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift
 
----vertical---
+---
 
 ## Layout with Stacks
 
@@ -237,19 +224,19 @@ struct ContentView: View {
   - `HStack`, for horizontal stacking
   - `ZStack`, for back-to-front stacking, also known as _Depth Stack_.
 
----vertical---
+---
 
 ## `VStack`
 
 <div style="display: flex; ">
     <ul>
-        <li>We’ve seen it already! There was one provided free for us when we created our app.</li>
-        <li>If you are arranging items vertically, you’ll need a <code>VStack</code>.</li>
+        <li>We've seen it already! There was one provided free for us when we created our app.</li>
+        <li>If you are arranging items vertically, you'll need a <code>VStack</code>.</li>
     </ul>
     <img src="/markdown/track_b/assets/vstack-diagram.png">
 </div>
 
----vertical---
+---
 
 ```swift[3:3,9]
 struct ContentView: View {
@@ -267,7 +254,7 @@ struct ContentView: View {
 
 <img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift
 
----vertical---
+---
 
 ## `HStack`
 
@@ -284,7 +271,7 @@ struct ContentView: View {
     <img src="/markdown/track_b/assets/hstack-diagram.png">
 </div>
 
----vertical---
+---
 
 ```swift[3:3,7,10,11]
 struct ContentView: View {
@@ -304,13 +291,13 @@ struct ContentView: View {
 
 <img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift
 
----vertical---
+---
 
 <div style="display: flex; ">
     <div>
-        <h2>What’s in what?</h2>
+        <h2>What's in what?</h2>
         <ul>
-            <li>We’ve started nesting <code>HStack</code>s in <code>VStack</code>s and this can quickly get confusing trying to figure out what belongs in which stack view.
+            <li>We've started nesting <code>HStack</code>s in <code>VStack</code>s and this can quickly get confusing trying to figure out what belongs in which stack view.
             </li>
             <li>You can tap on ether the <code>{</code> or <code>}</code> to get the entire area highlighted.</li>
         </ul>
@@ -318,17 +305,17 @@ struct ContentView: View {
     <img src="/markdown/track_b/assets/playgrounds-curly-brace-highlight.png">
 </div>
 
----vertical---
+---
 
 ## HStack Parameters
 
 - What if we want our image and our text to be nicely aligned at the top?
 - We can introduce parameters to our `HStack` — the way we did for `Image`, but before the curly braces.
 - The parameter in question is called `alignment:`, and it can be `.top`, `.center`, `.bottom`.
-  - The dots are because of something called enumerations (enums), which we’ll talk about in the future.
-- There’s another parameter, called `spacing:`, which takes a number. Try it out if you have a chance!
+  - The dots are because of something called enumerations (enums), which we'll talk about in the future.
+- There's another parameter, called `spacing:`, which takes a number. Try it out if you have a chance!
 
----vertical---
+---
 
 ```swift[3:3]
 struct ContentView: View {
@@ -348,18 +335,18 @@ struct ContentView: View {
 
 <img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift
 
----vertical---
+---
 
 ## `ZStack` — Depth Stack
 
-- Let’s add some background colour to our app.
+- Let's add some background colour to our app.
 - A background colour will, naturally, go behind the `View`s.
 - In SwiftUI, a background colour is a View, that goes behind other Views, using a `ZStack`.
 - The `Color`<subscript>\*</subscript> View has a few built-in options you can use, such as <code style="color: #0A84FF">.blue</code>, <code style="color: #FF453A">.red</code>, <code style="color: #FFD60A">.yellow</code>, <code style="color: #30D158">.green</code>. Try them out!
 
 <small style="text-align: left; width:100%; margin-top: 64px"><subscript>\*</subscript> 🇺🇸 American spelling, because <em>Designed by Apple in California</em> and all that.</small>
 
----vertical---
+---
 
 ```swift[3:3-4,14]
 struct ContentView: View {
@@ -388,15 +375,15 @@ struct ContentView: View {
 
 ## or moredifiers…
 
----vertical---
+---
 
 ## View Modifiers
 
 - To make our individual Views look better, we can add View Modifiers (or just modifiers).
 - These are additional pieces of formatting and functionality “tacked on” to each View.
-- We’ll introduce a variety of modifiers, and add them to various elements, to help enhance our app.
+- We'll introduce a variety of modifiers, and add them to various elements, to help enhance our app.
 
----vertical---
+---
 
 ## Text Modifiers
 
@@ -418,7 +405,7 @@ struct ContentView: View {
 .font(.system(size: 100))
 ```
 
----vertical---
+---
 
 ```swift[3:11-13,15]
 struct ContentView: View {
@@ -445,7 +432,7 @@ struct ContentView: View {
 
 <img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift
 
----vertical---
+---
 
 ## Colours & Padding
 
@@ -471,7 +458,7 @@ You can also include a number, to define how much padding to give
 
 _Note that order matters — if you add padding <span style="background: #FF453A; padding: 16px">before a background</span>, your padding will also receive that background._
 
----vertical---
+---
 
 ```swift[3:14-16]
 struct ContentView: View {
@@ -501,7 +488,7 @@ struct ContentView: View {
 
 <img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift
 
----vertical---
+---
 
 ## Sizing
 
@@ -513,7 +500,7 @@ struct ContentView: View {
 - This will be great for our images to ensure it has a decent size.
 - **Important:** While this modifier can be used to easily layout your views, you should use `VStack`s and `HStack`s instead as it - allows your views to easily scale, especially since our apps should work on screens no matter the size.
 
----vertical---
+---
 
 ```swift[3:9]
 struct ContentView: View {
@@ -544,7 +531,7 @@ struct ContentView: View {
 
 <img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift
 
----vertical---
+---
 
 ## Masking
 
@@ -569,7 +556,7 @@ struct ContentView: View {
   }
   ```
 
----vertical---
+---
 
 ## Clip Shapes
 
@@ -585,7 +572,7 @@ struct ContentView: View {
 .clipShape(RoundedRectangle(cornerRadius: 16))
 ```
 
----vertical---
+---
 
 ```swift[3:10]
 struct ContentView: View {
@@ -623,19 +610,19 @@ struct ContentView: View {
 
 ## 🔗 Open URLs in your app!
 
----vertical---
+---
 
 ## Set Up
 
 <div style="display: flex;">
     <ul>
-        <li>We’ll create some tappable icons in a <code>HStack</code> for users of our app to find out more about us.</li>
+        <li>We'll create some tappable icons in a <code>HStack</code> for users of our app to find out more about us.</li>
         <li>Within the <code>VStack</code>, create an empty <code>HStack</code>. It will be populated with our <code>Link</code>s later.</li>
     </ul>
     <img src="/markdown/track_b/assets/link-diagram.png">
 </div>
 
----vertical---
+---
 
 ## <img src="/assets/icons/link.svg" height="84px" style="margin-bottom: -8px"> Adding a Link
 
@@ -648,7 +635,7 @@ struct ContentView: View {
     <img src="/markdown/track_b/assets/playgrounds-views-library-link.png" width="70%">
 </div>
 
----vertical---
+---
 
 ## Setting the `Link` Destination
 
@@ -665,7 +652,7 @@ Feel free to change the link from [apple.com](https://apple.com) to something el
 - Use `mailto:` to add an email address: `mailto:hello@swiftinsg.org`
 - If you're interested, you can read [this awfully technical document](https://www.rfc-editor.org/rfc/rfc7595.html) on URI schemes.
 
----vertical---
+---
 
 ## <img src="/assets/icons/star.circle.svg" height="84px" style="margin-bottom: -8px"> Adding SF Symbols
 
@@ -674,14 +661,14 @@ Feel free to change the link from [apple.com](https://apple.com) to something el
         <li>Tap on the <code style="background: #007AFF; padding: 4px; border-radius: 4px; color: white;">Text("Link")</code> placeholder</li>
         <li>In the toolbar, select <img style="margin-bottom: -4px" src="/assets/icons/star.circle.svg" alt="Symbols Library Icon" height="32px"> to open the <em>Symbols Library</em></li>
         <li>Browse through hundreds of beautifully designed icons that you can use within your apps</li>
-        <li>When you’ve found one you like, select it and it will automatically add itself into your code.</li>
+        <li>When you've found one you like, select it and it will automatically add itself into your code.</li>
         <li>After you're done, add more links!</li>
         <li>Use modifiers you learnt earlier to customise them!</li>
     </ol>
     <img src="/markdown/track_b/assets/playgrounds-symbols-library.png" width="50%">
 </div>
 
----vertical---
+---
 
 ```swift[3:21-28]
 struct ContentView: View {
@@ -732,7 +719,7 @@ struct ContentView: View {
 
 [Download Completed Project](https://github.com/tinkercademy/swift-demo-projects/raw/main/Name%20Card.zip/)
 
----vertical---
+---
 
 ## <img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="84px"> ContentView
 
@@ -783,7 +770,7 @@ struct ContentView: View {
 
 ## Be a better developer, or at least look the part.
 
----vertical---
+---
 
 ## Dark mode vs. Light mode
 
@@ -792,7 +779,7 @@ struct ContentView: View {
   - Hold down on the brightness slider and then tap Dark Mode.
   - To find out more, refer to [this article](https://support.apple.com/en-us/HT210332) by Apple.
 
----vertical---
+---
 
 ## A Note on `View`s Taking Up Space
 
@@ -805,7 +792,7 @@ struct ContentView: View {
     - Filling Views include `Color`, `Image.resizable()`, and all shapes (`Circle`, `RoundedRectangle`, etc.)
     - You can size them down using the `.frame` modifier with a fixed `width` and/or `height`.
 
----vertical---
+---
 
 ## SF Symbols variations
 
@@ -819,7 +806,7 @@ Image(systemName: "sunrise.fill")
     .renderingMode(.original)
 ```
 
----vertical---
+---
 
 ## Curly Braces
 
@@ -829,7 +816,7 @@ Image(systemName: "sunrise.fill")
   - Double-click on each curly brace to highlight the entire block
 - You can also drag a handle on the last curly brace `}` to “extend” it downwards, e.g. when creating a `VStack` above a `View` you want to include
 
----vertical---
+---
 
 ## Indentation
 

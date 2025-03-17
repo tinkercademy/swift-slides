@@ -1,14 +1,3 @@
-<div style="text-align: left">
-    <img src="/assets/logos/tinkercademy.png" alt="Tinkercademy Logo" height="128px">
-    <img src="https://raw.githubusercontent.com/swiftinsg/branding/main/logos/icons/png/coloured%20-%20dark%20background.png" alt="Swiftinsg Logo" height="128px" style="margin-left: 64px;">
-</div>
-
-## Track C: Unit 1
-
-# ChatGPT and APIs
-
----
-
 # Challenge
 
 Create an app that will interface with ChatGPT!
@@ -29,19 +18,19 @@ Thanks to a team from Raffles Institution for this mildly questionable demo app.
 
 # APIs and Networking
 
-Working with other people’s servers
+Working with other people's servers
 
----vertical---
+---
 
-## What’s an API?
+## What's an API?
 
 - APIs are interfaces that let your code talk to other code
-- You’ve seen them before!
+- You've seen them before!
   - SwiftUI is an API by Apple
-  - When you do a Google search, https://www.google.com/search?hl=en&q=swift is making an API call to Google’s servers
+  - When you do a Google search, https://www.google.com/search?hl=en&q=swift is making an API call to Google's servers
   - In that video you just saw, Tom used the YouTube API to update his numbers
 
----vertical---
+---
 
 ## Why APIs?
 
@@ -49,10 +38,10 @@ Working with other people’s servers
 - First, why would you want to do that? Some examples:
   - Twitter used to open up their API for developers to make clients
   - Google Maps, FourSquare, and more let developers pay for API access to access their map data
-- How would you do it? You don’t let people into your codebase — you give access through an API
+- How would you do it? You don't let people into your codebase — you give access through an API
   - This way, no services can directly “reach in” to your data
 
----vertical---
+---
 
 ## Searching
 
@@ -60,9 +49,9 @@ This is a HTTP GET request, made by your browser to google.com.
 
 <img src="/markdown/track_c/assets/searching_http_get.png">
 
-This is an API call! In this case, we’re making a public API call, using our browser, and it’s return a result formatted as a webpage
+This is an API call! In this case, we're making a public API call, using our browser, and it's return a result formatted as a webpage
 
----vertical---
+---
 
 ## Computer-Readable Results
 
@@ -82,14 +71,14 @@ This is an API call! In this case, we’re making a public API call, using our b
     <img src="/markdown/track_c/assets/cats.png">
 </div>
 
----vertical---
+---
 
 ## Computer-readable data: JSON
 
 <div style="display: flex;">
     <div style="width:60%">
         <ul>
-            <li>Computers: Let’s just go to r/cats.json instead</li>
+            <li>Computers: Let's just go to r/cats.json instead</li>
         </ul>
         <img src="/markdown/track_c/assets/cats_json.png">
         <ul>
@@ -104,16 +93,16 @@ This is an API call! In this case, we’re making a public API call, using our b
     </div>
 </div>
 
----vertical---
+---
 
 ## Some APIs require keys
 
 - Imagine if you set up an API.
-- What if someone comes along and tries to request all kinds of data you aren’t ready to give up, e.g. your entire database?
+- What if someone comes along and tries to request all kinds of data you aren't ready to give up, e.g. your entire database?
 - In such cases, the API provider may restrict access using an API key, to drive out bad actors.
 - Users may need to register for **API keys** to access the data, which may require payment.
 
----vertical---
+---
 
 ## Concurrency & Networking
 
@@ -128,41 +117,41 @@ This is an API call! In this case, we’re making a public API call, using our b
 
 Introduction to ChatGPT, OpenAI, and the GPT API
 
----vertical---
+---
 
-## Try out ChatGPT, if you haven’t already!
+## Try out ChatGPT, if you haven't already!
 
 <img src="/markdown/track_c/assets/chagpt_intro.png" style="height:800px">
 
----vertical---
+---
 
 ## ChatGPT and OpenAI
 
 - ChatGPT is the front-end to GPT-3.5 / GPT-4, a **large language model** (LLM) developed by OpenAI
-- Think of a LLM as a sentence generator, trained on billions of webpages of data, that’s great at interpreting user input (called **prompts**) and answering questions.
+- Think of a LLM as a sentence generator, trained on billions of webpages of data, that's great at interpreting user input (called **prompts**) and answering questions.
 - ChatGPT has limitations — it sometimes gives wrong answers (called **hallucination**), and comes with a “knowledge cutoff” at September 2021 (for version 3.5/4).
 - OpenAI offers various other services in the form of APIs, including DALL•E, an image generator
 
----vertical---
+---
 
 ## API Key Required
 
 - OpenAI does not offer free public API access to its APIs. You need to sign up for an account, and add a payment method, to get a developer key.
-  - Each API call is charged, though it’s not expensive — GPT-3.5, for instance, cost us less than 5 cents (USD) for two weeks of testing for this unit.
+  - Each API call is charged, though it's not expensive — GPT-3.5, for instance, cost us less than 5 cents (USD) for two weeks of testing for this unit.
   - At time of writing, you might be able to sign up and get some free credits to test, without a payment method.
 - For this class, your instructor will aim to provide you an API key to use. Please do not share or abuse this key!
   - Your instructor will probably also _revoke_ the key after class.
   - The key looks like `sk-somethingabc123somethingelse0xyz`.
 
----vertical---
+---
 
-## How we’ll use ChatGPT
+## How we'll use ChatGPT
 
-- We’ll use a Swift Package to interface with the ChatGPT library. This helps abstract some of the work to be done (e.g. creating models, working with JSON decoders).
-- There are various — we’ll use this: [OpenAISwift](https://github.com/adamrushy/OpenAISwift)
-- Open up the website, and it’ll give you information about how to use it.
+- We'll use a Swift Package to interface with the ChatGPT library. This helps abstract some of the work to be done (e.g. creating models, working with JSON decoders).
+- There are various — we'll use this: [OpenAISwift](https://github.com/adamrushy/OpenAISwift)
+- Open up the website, and it'll give you information about how to use it.
 
----vertical---
+---
 
 ## Adding a Package
 
@@ -182,9 +171,9 @@ Introduction to ChatGPT, OpenAI, and the GPT API
 
 # Creating our Chat UI
 
-We’re not doing full-fledged chat — more like one question, one answer.
+We're not doing full-fledged chat — more like one question, one answer.
 
----vertical---
+---
 
 ## Try to create this UI!
 
@@ -200,7 +189,7 @@ We’re not doing full-fledged chat — more like one question, one answer.
 
 </div>
 
----vertical---
+---
 
 <p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift</p>
 
@@ -232,13 +221,13 @@ struct ContentView: View {
 }
 ```
 
----vertical---
+---
 
 # Using the OpenAI API
 
 Time to send our prompts!
 
----vertical---
+---
 
 ## Import and set up the library
 
@@ -258,7 +247,7 @@ struct ContentView: View {
 
 <p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift</p>
 
----vertical---
+---
 
 ## Setting up the AI
 
@@ -275,7 +264,7 @@ func sendRequest() {
 
 <p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift</p>
 
----vertical---
+---
 
 ## Creating a Message
 
@@ -291,7 +280,7 @@ func sendRequest() {
 
 <p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift</p>
 
----vertical---
+---
 
 ## Making an API Request
 
@@ -301,7 +290,7 @@ func sendRequest() {
 - In Swift, we can use a `Task` to allow code to run on background threads
 - Since we need to wait for a response from the Asynchronous Task, we have to mark them with the `await` keyword
 
----vertical---
+---
 
 ## Creating a Task
 
@@ -322,7 +311,7 @@ func sendRequest() {
 
 <p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift</p>
 
----vertical---
+---
 
 ## Making the API Request
 
@@ -338,7 +327,7 @@ func sendRequest() {
     ]
 
     Task {
-        // The Temperature parameter controls how creative ChatGPT is with it’s response. Play around with this value!
+        // The Temperature parameter controls how creative ChatGPT is with it's response. Play around with this value!
         let result = await openAI.sendChat(with: chat, temperature: 0.8)
     }
 
@@ -347,11 +336,11 @@ func sendRequest() {
 
 <p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift</p>
 
----vertical---
+---
 
 ## Not marked with try?!
 
-- WAAAIT! There’s an error!
+- WAAAIT! There's an error!
 - When we send an API Request, there is a chance that it could fail.
   - For example, the user does not have internet access.
   - In that case, the request will return nil
@@ -360,7 +349,7 @@ func sendRequest() {
 
 <img src="/markdown/track_c/assets/try_await_error.png">
 
----vertical---
+---
 
 ## Do-Catch and Try
 
@@ -376,9 +365,9 @@ do {
 ```
 
 - When there is a particular statement that may fail, we mark it with the `try` keyword
-  - This tells Swift that… ‘Hey! Try executing this line of code. If it fails, its fine! Run the code in the catch section’
+  - This tells Swift that… ‘Hey! Try executing this line of code. If it fails, its fine! Run the code in the catch section'
 
----vertical---
+---
 
 ## Handling Errors
 
@@ -404,12 +393,12 @@ func sendRequest() {
 
 <p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift</p>
 
----vertical---
+---
 
 ## Updating the UI
 
 - Remember that code in the `Task` statement is Asynchronous? We cannot update the User Interface from a _Background Thread!_
-- To run it on the _Main Thread_, we can use `MainActor.run`, and since it’s asynchronous as well, we have to mark it with `await`
+- To run it on the _Main Thread_, we can use `MainActor.run`, and since it's asynchronous as well, we have to mark it with `await`
 
 ```swift
 Task {
@@ -427,11 +416,11 @@ Task {
 
 <p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift</p>
 
----vertical---
+---
 
 ## Updating the User Interface
 
-- Now, let’s set the outputText @State variable with the response from ChatGPT
+- Now, let's set the outputText @State variable with the response from ChatGPT
 
 ```swift
 Task {
@@ -439,7 +428,7 @@ Task {
         let result = try await openAI.sendChat(with: chat, temperature: 0.8)
 
         await MainActor.run {
-            //Remember Nil Coalescing? If outputText is nil, we set the value to ‘No result’
+            //Remember Nil Coalescing? If outputText is nil, we set the value to ‘No result'
             outputText = result.choices?.first?.message.content ?? "No result"
         }
     } catch {
@@ -454,7 +443,7 @@ Task {
 
 ## Done!
 
-- What you’ve learned:
+- What you've learned:
   - What an API is
   - How to use an API
   - Working with the ChatGPT API using a Swift package
@@ -462,4 +451,4 @@ Task {
 - Some things to note
   - There are various other ways to access the ChatGPT API
   - There are various other OpenAI / generative APIs too
-  - Don’t share your OpenAI key! It gives anyone access to the paid OpenAI service.
+  - Don't share your OpenAI key! It gives anyone access to the paid OpenAI service.

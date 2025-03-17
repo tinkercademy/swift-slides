@@ -1,19 +1,8 @@
-<div style="text-align: left">
-    <img src="/assets/logos/tinkercademy.png" alt="Tinkercademy Logo" height="128px">
-    <img src="https://raw.githubusercontent.com/swiftinsg/branding/main/logos/icons/png/coloured%20-%20dark%20background.png" alt="Swiftinsg Logo" height="128px" style="margin-left: 64px;">
-</div>
-
-## Track B: Quit 4B
-
 # Exploration Project: Quiz App
 
-What we’ll make: Well, a quiz app. There will be a few options, where you have to choose the correct answer. A circular score view will be displayed to you when the quiz is over.
+What we'll make: Well, a quiz app. There will be a few options, where you have to choose the correct answer. A circular score view will be displayed to you when the quiz is over.
 
 ---
-
-# Quiz App
-
----vertical---
 
 <div style="display: flex; ">
 
@@ -21,8 +10,8 @@ What we’ll make: Well, a quiz app. There will be a few options, where you have
 
 <h2> Project Preparation </h2>
 
-- Create a new ‘App’ in Swift Playgrounds
-- Rename it to ‘Quiz App’
+- Create a new ‘App' in Swift Playgrounds
+- Rename it to ‘Quiz App'
 
 </div>
 
@@ -41,13 +30,13 @@ What we’ll make: Well, a quiz app. There will be a few options, where you have
 
 ## A walk-through on creating the quiz app
 
----vertical---
+---
 
 ## Creating the User Interface
 
 <img height="800" src="/markdown/track_b/assets/quiz-ui.png">
 
----vertical---
+---
 
 ## Creating the User Interface
 
@@ -95,12 +84,12 @@ struct ContentView: View {
 }
 ```
 
----vertical---
+---
 
 ## Creating Questions
 
 - To create the variable of `correctOption`, we can use **Enums** in place of the number of the correct option
-- This ensures that the option will always exist, and we can’t put the wrong number in our code (e.g. making a typo, and comparing against 5)
+- This ensures that the option will always exist, and we can't put the wrong number in our code (e.g. making a typo, and comparing against 5)
 - Create a new file called `Question.swift`
 
 ```swift
@@ -112,7 +101,7 @@ enum OptionChoice {
 
 <p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> Question.swift</p>
 
----vertical---
+---
 
 ## Creating Questions
 
@@ -134,7 +123,7 @@ struct Question {
 
 <p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> Question.swift</p>
 
----vertical---
+---
 
 ## Creating Questions
 
@@ -162,14 +151,14 @@ struct ContentView: View {
 
 <p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift</p>
 
----vertical---
+---
 
 ## Changing question numbers
 
 - Currently, we cannot change questions
 - In order to do this, we can create a @State variable to keep track of the question number, then get the question corresponding to that number
 
----vertical---
+---
 
 <p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift</p>
 
@@ -215,9 +204,9 @@ struct ContentView: View {
 
 # Presenting an alert
 
-- Every time an option is clicked, let’s present an alert to tell the user if their answer is correct or wrong
+- Every time an option is clicked, let's present an alert to tell the user if their answer is correct or wrong
 
----vertical---
+---
 
 ## Presenting an alert
 
@@ -227,15 +216,15 @@ struct ContentView: View {
   - A new `@State` variable should be created to record the boolean value of isPresented
   - When `isPresented` is true, the alert will be presented to the user
 - Should be a modifier of the main VStack/HStack/ZStack
-- We will also create another `@State` variable to check if the user’s answer is correct
+- We will also create another `@State` variable to check if the user's answer is correct
 
----vertical---
+---
 
 ## Creating the Alert
 
 <img height="850" src="/markdown/track_b/assets/quiz-creating-alert.png">
 
----vertical---
+---
 
 ## Handling button presses
 
@@ -257,7 +246,7 @@ func didTapOption(optionNumber: OptionChoice) {
 
 <p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift</p>
 
----vertical---
+---
 
 ## Handling button presses
 
@@ -285,35 +274,35 @@ Button {
 
 ### Making the button look good with icons — and refactoring them.
 
----vertical---
+---
 
 ## Symbols
 
-- We’ll use these symbols because they resemble options in Kahoot!, a popular quiz app.
+- We'll use these symbols because they resemble options in Kahoot!, a popular quiz app.
 - Feel free to choose your own!
 
 <img width="300" src="/markdown/track_b/assets/jokes-kahoot.png">
 
----vertical---
+---
 
 ## Adding the Symbols to your app
 
 <img height="850" src="/markdown/track_b/assets/quiz-symbols1.png">
 
----vertical---
+---
 
 ## Repeat this for the other buttons
 
 <img height="850" src="/markdown/track_b/assets/quiz-symbol2.png">
 
----vertical---
+---
 
 ## Repeated Code
 
-- Our `ContentView` is quite long, and there’s quite a bit of repeated code.
-- Let’s take this chance to try out some SwiftUI refactoring.
+- Our `ContentView` is quite long, and there's quite a bit of repeated code.
+- Let's take this chance to try out some SwiftUI refactoring.
 
----vertical---
+---
 
 ## Refactoring
 
@@ -347,7 +336,7 @@ func optionButton(optionNumber: OptionChoice, iconName: String) -> some View {
 
 ## How far along are you in the quiz?
 
----vertical---
+---
 
 ## What is it?
 
@@ -355,7 +344,7 @@ func optionButton(optionNumber: OptionChoice, iconName: String) -> some View {
 - It should update automatically as the user completes quiz questions.
 - This can be achieved using a SwiftUI `ProgressView`
 
----vertical---
+---
 
 ##
 
@@ -376,7 +365,7 @@ func optionButton(optionNumber: OptionChoice, iconName: String) -> some View {
 
 </div>
 
----vertical---
+---
 
 ## How it works
 
@@ -385,7 +374,7 @@ func optionButton(optionNumber: OptionChoice, iconName: String) -> some View {
   - and the _total number of questions_ as the total value.
 - These values can be derived using `questionNumber` and by counting the number of elements in the array `questions`.
 
----vertical---
+---
 
 ## Implementing Progress Bar
 
@@ -397,23 +386,23 @@ func optionButton(optionNumber: OptionChoice, iconName: String) -> some View {
 
 ### Hope you didn't fail your own quiz
 
----vertical---
+---
 
 ## What is it?
 
-- A pop-up sheet to display the user’s score
+- A pop-up sheet to display the user's score
 
 <img src="/markdown/track_b/assets/quiz-sheet-layout.png">
 
----vertical---
+---
 
 ## Creating a new file
 
 - First, we need to create a new swift file in Swift Playgrounds
-- To create a new Swift File, click on the <img style="margin-bottom: -4px" height="40px" src="/assets/icons/doc.badge.plus.svg" > button, select ‘Swift File’
-- Then, rename it to ‘ScoreView’
+- To create a new Swift File, click on the <img style="margin-bottom: -4px" height="40px" src="/assets/icons/doc.badge.plus.svg" > button, select ‘Swift File'
+- Then, rename it to ‘ScoreView'
 
----vertical---
+---
 
 ## Styling the Sheet
 
@@ -433,7 +422,7 @@ struct ScoreView: View {
 
 <p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ScoreView.swift</p>
 
----vertical---
+---
 
 ## Allowing the values to change
 
@@ -457,7 +446,7 @@ struct ScoreView: View {
 
 <p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ScoreView.swift</p>
 
----vertical---
+---
 
 ## Preparing for the sheet
 
@@ -501,7 +490,7 @@ struct ContentView: View {
 
 <p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift</p>
 
----vertical---
+---
 
 ## Showing the sheet
 
@@ -538,7 +527,7 @@ struct ContentView: View {
 
 <p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift</p>
 
----vertical---
+---
 
 ## Showing the new sheet
 
@@ -572,7 +561,7 @@ struct ContentView: View {
 
 ```
 
----vertical---
+---
 
 ## Resetting the score
 
@@ -610,9 +599,9 @@ struct ContentView: View {
 
 # Circular Progress Views
 
-## Show the user’s score in a fancy circle.
+## Show the user's score in a fancy circle.
 
----vertical---
+---
 
 ## What to build?
 
@@ -621,22 +610,22 @@ struct ContentView: View {
 <div>
 
 - A circular progress view to show the results.
-- Unlike with the `ProgressView`, there isn’t one available…
-- So we’ll have to make our own.
+- Unlike with the `ProgressView`, there isn't one available…
+- So we'll have to make our own.
 
 </div>
 
 <img src="">
 
----vertical---
+---
 
 ## Create New View
 
 - First, we need to create a new swift file in Swift Playgrounds
-- To create a new Swift File, click on the <img style="margin-bottom: -4px" height="40px" src="/assets/icons/doc.badge.plus.svg" > button, select ‘Swift File’
-- Then, rename it to ‘CircularProgressView’
+- To create a new Swift File, click on the <img style="margin-bottom: -4px" height="40px" src="/assets/icons/doc.badge.plus.svg" > button, select ‘Swift File'
+- Then, rename it to ‘CircularProgressView'
 
----vertical---
+---
 
 ## Breaking down a Progress Ring
 
@@ -646,37 +635,37 @@ struct ContentView: View {
 
 <img height="500" src="/markdown/track_b/assets/circle-progress.png">
 
----vertical---
+---
 
 # Creating the Background Ring
 
----vertical---
+---
 
 ## Creating a Circle
 
 <img height="800" src="/markdown/track_b/assets/CircularProgressView.png">
 
----vertical---
+---
 
 ## Making a Ring
 
 <img height="800" src="/markdown/track_b/assets/making_a_ring.png">
 
----vertical---
+---
 
 ## Creating a Circle
 
 <img height="800" src="/markdown/track_b/assets/CircleProgressIndicator2.png">
 
----vertical---
+---
 
 # Create Progress Ring
 
----vertical---
+---
 
 ## Dependency Injection
 
-Add a variable, `progress`, to keep track of the current progress. This is a `CGFloat` because that’s the type of parameter we need to control the progress ring — a `Double` would work, too.
+Add a variable, `progress`, to keep track of the current progress. This is a `CGFloat` because that's the type of parameter we need to control the progress ring — a `Double` would work, too.
 
 <p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> CircularProgressView.swift</p>
 
@@ -701,7 +690,7 @@ struct CircularProgressView: View {
 
 ```
 
----vertical---
+---
 
 ## Creating the Circle
 
@@ -725,25 +714,25 @@ struct CircularProgressView: View {
 }
 ```
 
----vertical---
+---
 
 ## Cutting the Circle
 
 <img height="800" src="/markdown/track_b/assets/cuttingTheCircle.png">
 
----vertical---
+---
 
 ## Drawing the Line
 
 <img height="800" src="/markdown/track_b/assets/drawingTheLine.png">
 
----vertical---
+---
 
 ## Change the line colour
 
 <img height="800" src="/markdown/track_b/assets/changingLineColour.png">
 
----vertical---
+---
 
 ## Rotate it by 270º to start from top
 
@@ -771,13 +760,13 @@ struct CircularProgressView: View {
 }
 ```
 
----vertical---
+---
 
 ## Adding Progress Ring
 
 <img height="800" src="/markdown/track_b/assets/addingProgressRing.png">
 
----vertical---
+---
 
 ## Suggested extensions
 
@@ -787,9 +776,9 @@ struct CircularProgressView: View {
 - Add computed properties returning 1 decimal point-rounded `String`s for:
   - Question progress
   - Score percentage
-- Allow the user to restart the quiz, and save the high score as an optional that is `nil` when the user doesn’t have one
+- Allow the user to restart the quiz, and save the high score as an optional that is `nil` when the user doesn't have one
 - Add a `TextField` that allows the user to answer open-ended questions (hard!)
 
 ---
 
-# And that’s it!
+# And that's it!

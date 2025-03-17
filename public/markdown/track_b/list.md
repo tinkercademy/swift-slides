@@ -1,17 +1,6 @@
-<div style="text-align: left">
-    <img src="/assets/logos/tinkercademy.png" alt="Tinkercademy Logo" height="128px">
-    <img src="https://raw.githubusercontent.com/swiftinsg/branding/main/logos/icons/png/coloured%20-%20dark%20background.png" alt="Swiftinsg Logo" height="128px" style="margin-left: 64px;">
-</div>
-
-## Track B: Unit 5
-
-List App
-
----
-
 # Lesson 1 : NavigationStack / NavigationLink
 
----vertical---
+---
 
 ## List App
 
@@ -21,7 +10,7 @@ List App
 
 <!--TODO: ADD Settings App-->
 
----vertical---
+---
 
 ## What is Navigation?
 
@@ -30,15 +19,15 @@ List App
   - Modal sheets interrupt the flow for task completion
   - The points above can be seen in the Mail App
 
----vertical---
+---
 
 # Navigation Demo
 
 <!-- Eventually turn this into a video section-->
 
----vertical---
+---
 
-## Let’s get started!
+## Let's get started!
 
 - Make a new SwiftUI project and call it `List App`
 - Change the `VStack` in `ContentView` to a `NavigationStack`
@@ -53,7 +42,7 @@ struct ContentView: View {
 }
 ```
 
----vertical---
+---
 
 ## NavigationLink
 
@@ -67,7 +56,7 @@ NavigationLink {
 }
 ```
 
----vertical---
+---
 
 ## NavigationLink
 
@@ -95,7 +84,7 @@ struct ContentView: View {
 }
 ```
 
----vertical---
+---
 
 ## Adding a Spacer()
 
@@ -126,7 +115,7 @@ struct ContentView: View {
 
 # Lesson 2 : Sheet
 
----vertical---
+---
 
 ## Credits Screen
 
@@ -134,7 +123,7 @@ struct ContentView: View {
 - This screen will show the authors of the app.
 - We will tap on a button and it brings up information about the other page.
 
----vertical---
+---
 
 ## Creating a credits button
 
@@ -163,11 +152,11 @@ struct ContentView: View {
 }
 ```
 
----vertical---
+---
 
 ## Adding styling to the button
 
-- Let’s add a `Spacer()` and add `.buttonStyle(.borderedProminent)` to the `Button` to make it look better.
+- Let's add a `Spacer()` and add `.buttonStyle(.borderedProminent)` to the `Button` to make it look better.
 
 ```swift[15,19]
 struct ContentView: View {
@@ -194,7 +183,7 @@ struct ContentView: View {
 }
 ```
 
----vertical---
+---
 
 ## Using a @State variable
 
@@ -226,7 +215,7 @@ struct ContentView: View {
 }
 ```
 
----vertical---
+---
 
 ## Adding a Sheet
 
@@ -261,7 +250,7 @@ struct ContentView: View {
 }
 ```
 
----vertical---
+---
 
 ## Creating the CreditsView
 
@@ -284,7 +273,7 @@ struct CreditsView: View {
 
 <p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> CreditsView.swift</p>
 
----vertical---
+---
 
 ## Adding content to the CreditsView
 
@@ -300,11 +289,11 @@ struct CreditsView: View {
 }
 ```
 
----vertical---
+---
 
 ## Making the CreditsView look better
 
-- Let’s make the font size bigger
+- Let's make the font size bigger
 
 ```swift[5]
 struct CreditsView: View {
@@ -317,7 +306,7 @@ struct CreditsView: View {
 }
 ```
 
----vertical---
+---
 
 ## Making the CreditsView look even better
 
@@ -337,7 +326,7 @@ struct CreditsView: View {
 }
 ```
 
----vertical---
+---
 
 ### Making the CreditsView look even even better
 
@@ -356,11 +345,11 @@ struct CreditsView: View {
 }
 ```
 
----vertical---
+---
 
 ### Making the CreditsView look even even even better
 
-- Let’s add in a exit button to the `CreditsView` that says "Dismiss" and dismiss the sheet when tapped.
+- Let's add in a exit button to the `CreditsView` that says "Dismiss" and dismiss the sheet when tapped.
 - Use an `@Environment` variable to dismiss the sheet
 
 ```swift[2, 10-12]
@@ -381,12 +370,12 @@ struct CreditsView: View {
 }
 ```
 
----vertical---
+---
 
 ### Making the CreditsView look even even even even better
 
 - Our button looks very small and squished. Lets add in some padding to make it look better.
-- Let’s also add in `.buttonStyle(.borderedProminent)` to make it look even better.
+- Let's also add in `.buttonStyle(.borderedProminent)` to make it look even better.
 
 ```swift[13-14]
 struct CreditsView: View {
@@ -408,11 +397,11 @@ struct CreditsView: View {
 }
 ```
 
----vertical---
+---
 
 ### Making the CreditsView look the best
 
-- Let’s add in a background color to the `CreditsView` to make it look even better
+- Let's add in a background color to the `CreditsView` to make it look even better
 - Add in a `ZStack` and add a `Color` view with the color you want as the background
 
 ```swift[4,5]
@@ -443,7 +432,7 @@ struct CreditsView: View {
 
 # Lesson 3 : List
 
----vertical---
+---
 
 <div style="display: flex;">
 <div style="flex: 1; display:flex; justify-content: center; align-items: center; padding-right:20px ">
@@ -452,7 +441,7 @@ struct CreditsView: View {
 
 <h2> List </h2>
 
-- Let’s use the `List` view to display a list of items.
+- Let's use the `List` view to display a list of items.
 - Wrap all the `NavigationLink` in a `List` view.
 
 </div>
@@ -487,12 +476,12 @@ struct ContentView: View {
 </div>
 </div>
 
----vertical---
+---
 
 ## Adding a title to the List
 
-- Let’s add a title to the `List` to let people know what they are looking at.
-- Let’s also make it larger so people can see it easier.
+- Let's add a title to the `List` to let people know what they are looking at.
+- Let's also make it larger so people can see it easier.
 
 ```swift[17,18]
 struct ContentView: View {
@@ -518,12 +507,12 @@ struct ContentView: View {
 }
 ```
 
----vertical---
+---
 
 ## Adding more items to the List
 
 - If we run the app now, we can see that the list is scrollable.
-- Let’s add the Credits button to the top corner of the screen. To add a button to the top corner, we can use the `toolbar` modifier.
+- Let's add the Credits button to the top corner of the screen. To add a button to the top corner, we can use the `toolbar` modifier.
 - We can render the using `sheet` as we did before.
 
 ```swift[10-19]
@@ -551,7 +540,7 @@ struct ContentView: View {
 }
 ```
 
----vertical---
+---
 
 ## Using SF Symbols
 
@@ -588,14 +577,14 @@ struct ContentView: View {
 
 # Lesson 4 : Using a generic detail view
 
----vertical---
+---
 
 ## Generic Detail View
 
 - We should make a generic detail view that can be used for all the items in the list.
 - This will allow us to reuse the same view for all the items in the list and make everything look nicer.
 
----vertical---
+---
 
 ## Creating a DetailView
 
@@ -618,7 +607,7 @@ struct DetailView: View {
 
 <p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> DetailView.swift</p>
 
----vertical---
+---
 
 ## Adding content to the DetailView
 
@@ -636,7 +625,7 @@ struct DetailView: View {
 }
 ```
 
----vertical---
+---
 
 ## Making our DetailView dynamic
 
@@ -655,12 +644,12 @@ struct DetailView: View {
 }
 ```
 
----vertical---
+---
 
 ## Making our DetailView better
 
-- Let’s add in a title to the `DetailView` to let people know what they are looking at.
-- Let’s also add in sections so that the name and description are separated.
+- Let's add in a title to the `DetailView` to let people know what they are looking at.
+- Let's also add in sections so that the name and description are separated.
 
 ```swift[6-13]
 struct DetailView: View {
@@ -680,9 +669,9 @@ struct DetailView: View {
 }
 ```
 
----vertical---
+---
 
-## Let’s test our DetailView
+## Let's test our DetailView
 
 - Modify the `Preview` code to use the new `DetailView` code.
 
@@ -696,11 +685,11 @@ struct DetailView: View {
 }
 ```
 
----vertical---
+---
 
 ## Using the DetailView from ContentView
 
-- Let’s use the `DetailView` in the `ContentView` to show the details of the items in the list.
+- Let's use the `DetailView` in the `ContentView` to show the details of the items in the list.
 
 ```swift[5-16]
 struct ContentView: View {
@@ -729,7 +718,7 @@ struct ContentView: View {
 
 # Lesson 5 : Structs and Arrays
 
----vertical---
+---
 
 ## UUID and Identifiable in SwiftUI
 
@@ -741,7 +730,7 @@ Using `UUID` and `Identifiable`, SwiftUI can easily track and update views in re
 
 You can think of this as your IC number in Singapore. It is unique to you and you can use it to identify yourself.
 
----vertical---
+---
 
 ## Bool in Swift
 
@@ -759,7 +748,7 @@ if isFavourite {
 }
 ```
 
----vertical---
+---
 
 ## Structs
 
@@ -779,7 +768,7 @@ struct Recipe: Identifiable {
 }
 ```
 
----vertical---
+---
 
 ## Using the Recipe struct
 
@@ -799,11 +788,11 @@ List(recipes) { recipe in
 }
 ```
 
----vertical---
+---
 
 ## Creating a list of Recipes
 
-- Let’s use the `Recipe` struct to store the details of the items in the list.
+- Let's use the `Recipe` struct to store the details of the items in the list.
 
 ```swift[3-6]
 struct ContentView: View {
@@ -818,11 +807,11 @@ struct ContentView: View {
 }
 ```
 
----vertical---
+---
 
 ## Using the Recipe struct in the ContentView
 
-- Let’s use the `Recipe` struct to store the details of the items in the list.
+- Let's use the `Recipe` struct to store the details of the items in the list.
 
 ```swift[9-15]
 struct ContentView: View {
@@ -851,11 +840,11 @@ struct ContentView: View {
 
 # Lesson 6 : Making editable recipes
 
----vertical---
+---
 
 # TextFields in SwiftUI
 
----vertical---
+---
 
 ## TextFields in SwiftUI
 
@@ -867,11 +856,11 @@ struct ContentView: View {
 TextField("Enter your name", text: $name)
 ```
 
----vertical---
+---
 
 ## Adding TextFields to the DetailView
 
-- Let’s add TextFields to the `DetailView` to allow users to edit the details of the recipes.
+- Let's add TextFields to the `DetailView` to allow users to edit the details of the recipes.
 - We change `let` to `var` to make the `title` and `description` editable in the future.
 
 ```swift[2, 7]
@@ -892,22 +881,22 @@ struct DetailView: View {
 }
 ```
 
----vertical---
+---
 
 # Lesson 7 : Binding
 
----vertical---
+---
 
 ## It did not work! Why?
 
 - We need bindings to make the TextField work.
 - We need to pass the `title` as a binding to the `DetailView` to make it editable.
 
----vertical---
+---
 
 ## Adding a binding to the DetailView
 
-- Let’s add a binding to the `DetailView` to make the `title` editable.
+- Let's add a binding to the `DetailView` to make the `title` editable.
 
 ```swift[2, 7]
 struct DetailView: View {
@@ -927,11 +916,11 @@ struct DetailView: View {
 }
 ```
 
----vertical---
+---
 
 ## Using the DetailView with a binding
 
-- Let’s use `List` with binding to make recipe editable.
+- Let's use `List` with binding to make recipe editable.
 - We also need to call `DetailView` with a binding recipe so that `title` is editable.
 
 ```swift[9-15]
@@ -957,13 +946,13 @@ struct ContentView: View {
 }
 ```
 
----vertical---
+---
 
 ## Sending recipes to the DetailView
 
 - Now we can change our `DetailView` to accept a `Recipe` instead of a `title` and `description`.
 - This will allow us to edit the details of the recipe easily.
-- Let’s modify our code so that we now send to DetailView the $recipe
+- Let's modify our code so that we now send to DetailView the $recipe
 
 ```swift[3, 9-15]
 // ContentView.swift
@@ -989,7 +978,7 @@ struct ContentView: View {
 }
 ```
 
----vertical---
+---
 
 ## Sending recipes to the DetailView
 
@@ -1013,9 +1002,9 @@ struct DetailView: View {
 }
 ```
 
----vertical---
+---
 
-## Let’s change our Preview
+## Let's change our Preview
 
 - Now that we have updated our DetailView, we need to update our Preview code to reflect the changes.
 
@@ -1029,7 +1018,7 @@ struct DetailView: View {
 }
 ```
 
----vertical---
+---
 
 ## Expanding our app
 
@@ -1055,7 +1044,7 @@ struct DetailView: View {
 }
 ```
 
----vertical---
+---
 
 ## Show the favourite status in the list
 
@@ -1080,7 +1069,7 @@ NavigationLink {
 
 # Adding new recipes
 
----vertical---
+---
 
 ## Adding new recipes
 
@@ -1091,7 +1080,7 @@ NavigationLink {
 ```
 <p> <img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift </p>
 
----vertical---
+---
 
 ## Adding new recipes
 
@@ -1120,7 +1109,7 @@ NavigationLink {
 ```
 <p> <img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift </p>
 
----vertical---
+---
 
 ## Adding new recipes
 
@@ -1132,7 +1121,7 @@ NavigationLink {
 <p> <img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift </p>
 
 
----vertical---
+---
 
 ## Adding new recipes
 
@@ -1160,7 +1149,7 @@ NavigationLink {
 ```
 <p> <img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift </p>
 
----vertical---
+---
 
 ## Adding new recipes
 
@@ -1194,7 +1183,7 @@ NavigationLink {
 
 # Modifying recipes
 
----vertical---
+---
 
 ## Deleting recipes
 
@@ -1207,7 +1196,7 @@ List($recipes, editActions: [.all]){
 ```
 <p> <img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift </p>
 
----vertical---
+---
 
 ## Reordering recipes
 
@@ -1225,7 +1214,7 @@ List($recipes, editActions: [.all]){
 
 # Making the app look better
 
----vertical---
+---
 
 ## Cleaning up
 
@@ -1246,7 +1235,7 @@ struct Recipe: Identifiable {
 ```
 <p> <img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> Recipe.swift </p>
 
----vertical---
+---
 
 ## Cleaning up
 
@@ -1261,7 +1250,7 @@ struct Recipe: Identifiable {
 <p> <img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift </p>
 
 
----vertical---
+---
 
 ## Making a custom AddView
 
@@ -1296,7 +1285,7 @@ struct AddView: View {
 ```
 <p> <img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> AddView.swift </p>
 
----vertical---
+---
 
 ## Making a custom DetailView
 
@@ -1310,7 +1299,7 @@ struct AddView: View {
 <p> <img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> AddView.swift </p>
 
 
----vertical---
+---
 
 ## Linking the recipes
 
@@ -1321,7 +1310,7 @@ struct AddView: View {
 @Binding var recipes = [Recipe]
 ```
 
----vertical---
+---
 
 ## Fixing the preview error
 
@@ -1334,7 +1323,7 @@ struct AddView: View {
 ```
 <p> <img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> AddView.swift </p>
 
----vertical---
+---
 
 ## Updating the ContentView
 

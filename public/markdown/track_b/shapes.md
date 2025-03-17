@@ -1,17 +1,6 @@
-<div style="text-align: left">
-    <img src="/assets/logos/tinkercademy.png" alt="Tinkercademy Logo" height="128px">
-    <img src="https://raw.githubusercontent.com/swiftinsg/branding/main/logos/icons/png/coloured%20-%20dark%20background.png" alt="Swiftinsg Logo" height="128px" style="margin-left: 64px;">
-</div>
-
-## Track B : Unit 1A
-
-# Compose with Stacks and Shapes
-
----
-
 # Set Up an App Playground
 
----vertical---
+---
 
 ### Create a New App
 
@@ -22,7 +11,7 @@
     <img style="width:70%" src="/markdown/track_b/assets/shapes-create-app-ss.jpg" alt="Show the Create an App button highlighted in the Swift playgrounds app. " >
 </div>
 
----vertical---
+---
 
 ## Rename the App
 
@@ -39,7 +28,7 @@
     </div>
 </div>
 
----vertical---
+---
 
 ## Remove the Default Text
 
@@ -59,7 +48,7 @@
 
 # Self Portrait App
 
----vertical---
+---
 
 ## Adding a ZStack
 
@@ -71,7 +60,7 @@
     </div>
 </div>
 
----vertical---
+---
 
 ## Adding a Face
 
@@ -83,7 +72,7 @@
     </div>
 </div>
 
----vertical---
+---
 
 ## Adding a Face
 
@@ -95,7 +84,7 @@
     </div>
 </div>
 
----vertical---
+---
 
 ## Tip: Rounded Rectangle
 
@@ -115,7 +104,7 @@ struct ContentView: View {
 
 <p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift</p>
 
----vertical---
+---
 
 ## Shaping the Face
 
@@ -131,7 +120,7 @@ struct ContentView: View {
 
 # `Frames` and `foregroundStyle`
 
----vertical---
+---
 
 ## Shaping the Face
 
@@ -147,7 +136,7 @@ struct ContentView: View {
     </div>
 </div>
 
----vertical---
+---
 
 ## Colouring the Face
 
@@ -163,7 +152,7 @@ struct ContentView: View {
     </div>
 </div>
 
----vertical---
+---
 
 ## Colouring the Face
 
@@ -179,7 +168,7 @@ struct ContentView: View {
     </div>
 </div>
 
----vertical---
+---
 
 ## Tip: Custom colours
 
@@ -219,11 +208,11 @@ struct ContentView: View {
 
 # Offset and Trim
 
----vertical---
+---
 
 ## Creating the neck
 
--   Apply what you’ve learned to add a **rectangle** for your neck and adjust the size with a `frame` modifier.
+-   Apply what you've learned to add a **rectangle** for your neck and adjust the size with a `frame` modifier.
 
 <div style="display: flex;justify-content: center; align-items: center;">
     <div style="flex: 1;text-align: center;">    
@@ -231,7 +220,7 @@ struct ContentView: View {
     </div>
 </div>
 
----vertical---
+---
 
 ## Adjusting the Neck
 
@@ -246,7 +235,7 @@ struct ContentView: View {
     </div>
 </div>
 
----vertical---
+---
 
 ## Adjusting the Neck
 
@@ -259,11 +248,11 @@ struct ContentView: View {
     </div>
 </div>
 
----vertical---
+---
 
 ## Adding a shirt
 
--   Apply what you’ve learned to add a shirt, place it correctly on the screen, and give it a colour.
+-   Apply what you've learned to add a shirt, place it correctly on the screen, and give it a colour.
 
 <div style="display: flex;justify-content: center; align-items: center;">
     <div style="flex: 1;text-align: center;">    
@@ -271,7 +260,7 @@ struct ContentView: View {
     </div>
 </div>
 
----vertical---
+---
 
 ## Adding Hair
 
@@ -283,7 +272,7 @@ struct ContentView: View {
     </div>
 </div>
 
----vertical---
+---
 
 ## Adding Hair
 
@@ -299,7 +288,7 @@ struct ContentView: View {
     </div>
 </div>
 
----vertical---
+---
 
 ## Adding Hair
 
@@ -311,11 +300,11 @@ struct ContentView: View {
     </div>
 </div>
 
----vertical---
+---
 
 ## Tip: Many views in a stack
 
--   If you have more than ten views in a stack, you’ll get an “Extra arguments at position…” warning. To fix this, you can add a `Group` view to the stack.
+-   If you have more than ten views in a stack, you'll get an “Extra arguments at position…” warning. To fix this, you can add a `Group` view to the stack.
 
 <div style="display: flex;justify-content: center; align-items: center;">
     <div style="flex: 1;text-align: center;">    
@@ -327,7 +316,7 @@ struct ContentView: View {
 
 # Shadow and Background Colour
 
----vertical---
+---
 
 ## Shadow behind the head
 
@@ -342,7 +331,7 @@ struct ContentView: View {
     </div>
 </div>
 
----vertical---
+---
 
 ## Shadow: Colour
 
@@ -352,7 +341,7 @@ struct ContentView: View {
 .shadow(color: .black, radius: 10)
 ```
 
----vertical---
+---
 
 ## Background colour
 
@@ -364,7 +353,7 @@ struct ContentView: View {
     </div>
 </div>
 
----vertical---
+---
 
 ## Background colour but lighter
 

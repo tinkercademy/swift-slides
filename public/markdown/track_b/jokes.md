@@ -1,19 +1,8 @@
-<div style="text-align: left">
-    <img src="/assets/logos/tinkercademy.png" alt="Tinkercademy Logo" height="128px">
-    <img src="https://raw.githubusercontent.com/swiftinsg/branding/main/logos/icons/png/coloured%20-%20dark%20background.png" alt="Swiftinsg Logo" height="128px" style="margin-left: 64px;">
-</div>
-
-## Track B: Unit 4B
-
-# Jokes
-
----
-
 # Laying out Jokes
 
 ## Set up those `VStack`s, `HStack`s, `Button`s, `Text`s and all that fun stuff.
 
----vertical---
+---
 
 ## Create a Playground App
 
@@ -27,39 +16,39 @@
     <img src="/markdown/track_b/assets/new-project.png">
 </div>
 
----vertical---
+---
 
 ## This is how it should look like
 
 <img height="800" src="/markdown/track_b/assets/jokes-new-app-ss.PNG">
 
----vertical---
+---
 
 ## Jokes layout
 
 <img height="800" src="/markdown/track_b/assets/jokes-layout.png">
 
----vertical---
+---
 
 <img height="800" src="/markdown/track_b/assets/jokes-layout2.png">
 
----vertical---
+---
 
 ## Nothing too new here.
 
 <img height="800" src="/markdown/track_b/assets/jokes-starter.png">
 
----vertical---
+---
 
 ## What's going on here
 
 <img height="800" src="/markdown/track_b/assets/jokes-starter-explained.png">
 
----vertical---
+---
 
 ## **What??** _Tell me!!_
 
-Here’s a fun feature in Text — if you add `**` around parts of your string, you get bold text; if you surround your text with `_`, you get italics. This is a markup format called Markdown, which you may have seen in WhatsApp, Telegram and other messaging apps. [Read more here.](https://www.markdownguide.org/)
+Here's a fun feature in Text — if you add `**` around parts of your string, you get bold text; if you surround your text with `_`, you get italics. This is a markup format called Markdown, which you may have seen in WhatsApp, Telegram and other messaging apps. [Read more here.](https://www.markdownguide.org/)
 
 ```swift
 Text("What?? **_Tell me_!!**")
@@ -71,7 +60,7 @@ Text("What?? **_Tell me_!!**")
 
 ## Store Jokes in structs, store the structs in an array.
 
----vertical---
+---
 
 ## Create a new Swift File
 
@@ -89,7 +78,7 @@ Text("What?? **_Tell me_!!**")
 <img src="/markdown/track_b/assets/jokes-new-file.png">
 </div>
 
----vertical---
+---
 
 ## Creating Jokes
 
@@ -104,7 +93,7 @@ struct Joke {
 
 <p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift</p>
 
----vertical---
+---
 
 ## Adding Jokes
 
@@ -131,7 +120,7 @@ struct ContentView: View {
             ...
 ```
 
----vertical---
+---
 
 ## Show First Joke
 
@@ -143,15 +132,15 @@ struct ContentView: View {
 
 ### We can't show punchline immediately, it ruins the joke.
 
----vertical---
+---
 
 ## What we want
 
-- When the user launches the app, they see the first joke’s setup
+- When the user launches the app, they see the first joke's setup
   - The punchline, and tap to continue `Text`, are hidden
 - When the user taps on What? `Button`, they see the punchline and tap to continue `Text`.
 
----vertical---
+---
 
 ## Declare State Variable
 
@@ -178,13 +167,13 @@ struct ContentView: View {
 ...
 ```
 
----vertical---
+---
 
 ## Hide the punchline!
 
 <img height="800" src="/markdown/track_b/assets/jokes-hide-punchline.png">
 
----vertical---
+---
 
 ## Show Punchline when What? tapped
 
@@ -194,9 +183,9 @@ struct ContentView: View {
 
 ## More Jokes, More `@State` vars
 
-### Advance to the next joke, and the next joke, and the next joke, and the next joke, and the next joke, and the next joke. But not too many, because it’ll crash.
+### Advance to the next joke, and the next joke, and the next joke, and the next joke, and the next joke, and the next joke. But not too many, because it'll crash.
 
----vertical---
+---
 
 ## What we need to do
 
@@ -205,13 +194,13 @@ struct ContentView: View {
     - Show next joke
     - Hide punchline
   - Out of jokes? Loop back.
-- How we’re going to do it
+- How we're going to do it
   - Create a `@State` variable to keep track of the current joke
   - On tap, increment said variable
   - Use modulo `%` to make it loop back!
   - Hide the punchline
 
----vertical---
+---
 
 ## Declare State Variable
 
@@ -240,13 +229,13 @@ struct ContentView: View {
 ...
 ```
 
----vertical---
+---
 
 ## Implementing currentJoke
 
 <img height="800" src="/markdown/track_b/assets/jokes-currentJoke.png">
 
----vertical---
+---
 
 ## Embed in ZStack
 
@@ -255,7 +244,7 @@ struct ContentView: View {
 - That's not ideal
 - We can instead create a `ZStack` with a `Color.clear` and attach a tap gesture recogniser to it.
 
----vertical---
+---
 
 ## Embed VStack in ZStack
 
@@ -263,7 +252,7 @@ struct ContentView: View {
 - See the little handle at the `}`?
 - Drag it to encompass the VStack
 
----vertical---
+---
 
 ## Tap Gesture Recogniser
 
@@ -277,7 +266,7 @@ struct ContentView: View {
 - Listens and runs an action when the View is tapped
 - For this app, we want to use a Tap Gesture Recogniser on the background to advance to the next joke.
 
----vertical---
+---
 
 <img height="900" src="/markdown/track_b/assets/jokes-zstack.png">
 
@@ -285,7 +274,7 @@ struct ContentView: View {
 
 <img height="1000" src="/markdown/track_b/assets/crashed.png">
 
----vertical---
+---
 
 ## What does this mean?
 
@@ -298,16 +287,16 @@ struct ContentView: View {
   - Assume the user has a memory of a goldfish and loop back, hoping they don't notice the jokes have looped.
     - We'll go for this option.
 
----vertical---
+---
 
 ## 2 Approaches
 
 - Reset `currentJoke` every time we hit the number of items in jokes
 - Loop around!
-  - To do this, we’ll get the remainder when the `currentJoke` is divided by the number of items in `jokes`
+  - To do this, we'll get the remainder when the `currentJoke` is divided by the number of items in `jokes`
   - We'll go with this one.
 
----vertical---
+---
 
 <img height="900" src="/markdown/track_b/assets/jokes-resetindex1.png">
 
@@ -317,7 +306,7 @@ struct ContentView: View {
 
 ## Designed for professional jokers.
 
----vertical---
+---
 
 ## Unit overview
 
@@ -335,13 +324,13 @@ struct ContentView: View {
     - Further Animations
 ```
 
----vertical---
+---
 
 ## Alerts
 
 ### A pop-up that your user has to dismiss. Fun!
 
----vertical---
+---
 
 ## What? Why alert?
 
@@ -349,7 +338,7 @@ struct ContentView: View {
 <ul>
 
 - After each joke, ask the user what they thought of it.
-- We don’t really do much with the response.
+- We don't really do much with the response.
   - It gives the user the illusion that we care about their feelings.
   - More importantly, it lets us show you how to use alerts.
 
@@ -357,7 +346,7 @@ struct ContentView: View {
 <img src="/markdown/track_b/assets/jokes-alert-ss.jpeg">
 </div>
 
----vertical---
+---
 
 ## More States
 
@@ -377,7 +366,7 @@ struct ContentView: View {
 
 <p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift</p>
 
----vertical---
+---
 
 ## Adding Alert
 
@@ -395,7 +384,7 @@ var body: some View {
 
 <p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift</p>
 
----vertical---
+---
 
 ## Creating an Alert
 
@@ -412,7 +401,7 @@ var body: some View {
 
 <p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift</p>
 
----vertical---
+---
 
 ## Present Alert
 
@@ -432,7 +421,7 @@ var body: some View {
 
 <p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift</p>
 
----vertical---
+---
 
 <div style="display: flex;justify-content: center; align-items: center;">
 <div style="flex: 1;text-align: center;">    
@@ -450,23 +439,23 @@ var body: some View {
 </div>
 </div>
 
----vertical---
+---
 
 ## How does the alert work?
 
 - Note how we made the alert work!
-  - We set up a `@State` variable, a `Bool`, to determine whether the alert shows up. This variable starts off as `false`, i.e. “don’t show the alert”.
+  - We set up a `@State` variable, a `Bool`, to determine whether the alert shows up. This variable starts off as `false`, i.e. “don't show the alert”.
   - When we want the alert to show up, we change that variable to `true`, i.e. “show the alert”.
-  - We pass this variable to the `.alert` modifier as a binding (the `$` sign), so that when it’s dismissed, the modifier can set it back to `false`.
+  - We pass this variable to the `.alert` modifier as a binding (the `$` sign), so that when it's dismissed, the modifier can set it back to `false`.
 - This is a form of _declarative_ programming. More on this later.
 
----vertical---
+---
 
 ## Alert Extensions
 
 ### More alerty stuff
 
----vertical---
+---
 
 ## Button Roles
 
@@ -475,7 +464,7 @@ var body: some View {
 
 <img height="250" src="/markdown/track_b/assets/jokes-alert-deletefiles.png">
 
----vertical---
+---
 
 ```swift
 .alert("Are you sure you want to delete all files?",
@@ -491,7 +480,7 @@ var body: some View {
 
 <p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift</p>
 
----vertical---
+---
 
 ## Alert Messages
 
@@ -500,7 +489,7 @@ var body: some View {
 
 <img height="250" src="/markdown/track_b/assets/jokes-alert-description.png">
 
----vertical---
+---
 
 ```swift[9-11]
 .alert("Are you sure you want to delete all files?",
@@ -522,9 +511,9 @@ var body: some View {
 
 # Sheets
 
-### Now, let’s show an entire new screen over the current screen! This is a modal sheet, where we want the user to focus on what’s this new screen.
+### Now, let's show an entire new screen over the current screen! This is a modal sheet, where we want the user to focus on what's this new screen.
 
----vertical---
+---
 
 ## What are Sheets?
 
@@ -534,7 +523,7 @@ var body: some View {
 
 - Sheets are screens presented on top of the current screen that makes the current screen inactive
 - Essentially, creating new screens on top of the current screen
-- We’ll put this screen in a separate file, and call it `FeedbackResponseView`
+- We'll put this screen in a separate file, and call it `FeedbackResponseView`
 
 </ul>
 </div>
@@ -545,31 +534,31 @@ var body: some View {
 </div>
 </div>
 
----vertical---
+---
 
 ## Aim of `FeedbackResponseView`
 
-- We’ll need this to show either a happy cat and positive message (good feedback), or angry cat and negative message (bad feedback)
-- Instead of having two separate `View`s, we’ll have a single `View` that shows a different image and text based on feedback
+- We'll need this to show either a happy cat and positive message (good feedback), or angry cat and negative message (bad feedback)
+- Instead of having two separate `View`s, we'll have a single `View` that shows a different image and text based on feedback
 - Think of the `View` as a function, which has to…
   - Take in a `Bool` to indicate if the feedback is positive or negative
   - Update the a `Text` and `Image` with new content
 
----vertical---
+---
 
 ## Importing Images into Swift Playground
 
 ### Adding images to the assets catalogue
 
----vertical---
+---
 
 ## Preparing Assets
 
-- Find some cat images and save them to your iPad’s Photos.
+- Find some cat images and save them to your iPad's Photos.
   - You can search for some of them online
-  - Make sure to use png, jpeg, jpg or gif (however gifs aren’t animated)
+  - Make sure to use png, jpeg, jpg or gif (however gifs aren't animated)
 
----vertical---
+---
 
 ## Importing Images
 
@@ -581,8 +570,8 @@ var body: some View {
 - Tap on the **Add File** button <img style="margin-bottom: -4px" height="40px" src="/assets/icons/doc.badge.plus.svg" >
 - Select Photo --------------------------------------------------->
 - Select a photo from your Photos!
-- You’ll see your image in the **Assets** section
-- Hold down on it’s name and select Rename
+- You'll see your image in the **Assets** section
+- Hold down on it's name and select Rename
 - Name it **“happy”**!
 - Repeat this for the second image and name it **“sad”**.
 
@@ -600,13 +589,13 @@ var body: some View {
 </div>
 </div>
 
----vertical---
+---
 
 ## Back to Sheets
 
-### or, fancy pop-ups. But first, let’s set up the image and text!
+### or, fancy pop-ups. But first, let's set up the image and text!
 
----vertical---
+---
 
 ## Create a new `View`
 
@@ -617,11 +606,11 @@ var body: some View {
 - Copy the code from [tk.sg/swiftNewView](https://tk.sg/swiftNewView)
 - Paste it in!
 
----vertical---
+---
 
 <img height="900" src="/markdown/track_b/assets/jokes-new-view-ss.png">
 
----vertical---
+---
 
 ## Updating your code.
 
@@ -629,26 +618,26 @@ var body: some View {
 
 <img height="700" src="/markdown/track_b/assets/jokes-new-view-renamed-ss.png">
 
----vertical---
+---
 
 <img height="900" src="/markdown/track_b/assets/jokes-model-view-explained.png">
 
----vertical---
+---
 
 ## Positive Feedback
 
 <img src="/markdown/track_b/assets/jokes-feedbackview1.png">
 
----vertical---
+---
 
 ## Receiving input in our `View`
 
 - Instead of creating 2 separate views to show response to positive and negative feedback, we modify the contents of this one view
 - In this case, we pass in a boolean value to indicate whether it is positive feedback or not
-  - This doesn’t need to be a `@State` variable. Can you figure out why?
-- We’ll the use a ~~cool people’s if statement~~ **ternary operator** to decide which image to show
+  - This doesn't need to be a `@State` variable. Can you figure out why?
+- We'll the use a ~~cool people's if statement~~ **ternary operator** to decide which image to show
 
----vertical---
+---
 
 ## Ternary Operators
 
@@ -656,7 +645,7 @@ var body: some View {
 
 <img src="/markdown/track_b/assets/Ternary-Operators.png">
 
----vertical---
+---
 
 ## Receiving Feedback Data
 
@@ -664,27 +653,27 @@ The `isPositive` variable will be passed in _(or injected)_ when the View is cre
 
 <img src="/markdown/track_b/assets/jokes-2-previews.png">
 
----vertical---
+---
 
 ## Updating Content using isPositive
 
 <img src="/markdown/track_b/assets/jokes-isPositive.png">
 
----vertical---
+---
 
 ## Presenting a Sheet
 
 - Sheets are controlled by a `@State` variable that can be set to `true` to present the modal
   - Similar to the alert!
   - Actually, alerts, like sheets, present a new View.
-- In this case, we will be creating a sheet to show a response to the user’s feedback
-- Think of this `@State` variable as a “barrier” for the sheet to show up from the bottom of the screen. When true, we’re letting it pop up!
+- In this case, we will be creating a sheet to show a response to the user's feedback
+- Think of this `@State` variable as a “barrier” for the sheet to show up from the bottom of the screen. When true, we're letting it pop up!
 
----vertical---
+---
 
 <img src="/markdown/track_b/assets/jokes-feedback-presentation-contentview.png">
 
----vertical---
+---
 
 ## Present the sheet!!
 
@@ -702,7 +691,7 @@ var body: some View {
 }
 ```
 
----vertical---
+---
 
 ## Present the sheet!!
 
@@ -732,7 +721,7 @@ var body: some View {
 
 <p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift</p>
 
----vertical---
+---
 
 <div style="display: flex;justify-content: center; align-items: center;">
 <div style="flex: 1;text-align: center;">    
@@ -765,11 +754,11 @@ var body: some View {
 </h3>
 </div>
 
----vertical---
+---
 
 <div style="display: flex;justify-content: center; align-items: center;">
 <div style="flex: 1;text-align: center;">    
-<h2>What we’ll build</h2>
+<h2>What we'll build</h2>
 <ul>
 
 - What happens when the user clicks **What**?
@@ -777,7 +766,7 @@ var body: some View {
   - The punchline Text expands, fades and spins into view
   - The Tap to Continue Text scales and moves up
 - Not very aesthetic, but lots to do and learn!
-  - We’ll implement these one by one.
+  - We'll implement these one by one.
 
 </ul>
 </div>
@@ -786,7 +775,7 @@ var body: some View {
 </div>
 </div>
 
----vertical---
+---
 
 ## Automatic animation with withAnimation
 
@@ -814,7 +803,7 @@ VStack {
 
 <p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift</p>
 
----vertical---
+---
 
 ## Scaling - Create a State var
 
@@ -848,7 +837,7 @@ struct ContentView: View {
 
 ```
 
----vertical---
+---
 
 ## Scaling - Connecting State var
 
@@ -866,7 +855,7 @@ if showPunchline {
 
 <p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift</p>
 
----vertical---
+---
 
 ## Scaling - Adding Animation
 
@@ -895,7 +884,7 @@ if showPunchline {
 }
 ```
 
----vertical---
+---
 
 <h2>
 <span style="transform: rotate(-15deg);display: inline-block;">Rotation</span>
@@ -924,7 +913,7 @@ struct ContentView: View {
             ...
 ```
 
----vertical---
+---
 
 <h2 style="padding-bottom:20px;">
 <span style="transform: rotate(-30deg);display: inline-block;">Rotation</span>
@@ -951,7 +940,7 @@ if showPunchline {
 }
 ```
 
----vertical---
+---
 
 <h2 style="padding-bottom:50px;">
 <span style="transform: rotate(-45deg);display: inline-block;">Rotation</span>
@@ -985,7 +974,7 @@ if showPunchline {
 }
 ```
 
----vertical---
+---
 
 <h2>
 <span style="opacity:0.7;">Opacity</span>
@@ -1016,7 +1005,7 @@ struct ContentView: View {
             ...
 ```
 
----vertical---
+---
 
 <h2>
 <span style="opacity:0.5;">Opacity</span>
@@ -1050,7 +1039,7 @@ if showPunchline {
 
 ```
 
----vertical---
+---
 
 <h2>
 <span style="opacity:0.2;">Opacity</span>
@@ -1086,7 +1075,7 @@ if showPunchline {
 
 ```
 
----vertical---
+---
 
 <h2>
 <span style="position:relative;bottom:20px">Offset</span>
@@ -1120,7 +1109,7 @@ struct ContentView: View {
 ```
 
 
----vertical---
+---
 
 
 
@@ -1141,7 +1130,7 @@ Text("Tap to continue")
 
 <p> <img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift</p>
 
----vertical---
+---
 
 <h2>
 <span style="position:relative;bottom:50px;">Offset</span>
@@ -1173,7 +1162,7 @@ Text(jokes[currentJoke].punchline)
 ```
 
 
----vertical---
+---
 
 ## Run your code!!
 
@@ -1186,7 +1175,7 @@ Text(jokes[currentJoke].punchline)
 
 # Full code for Jokes app
 
----vertical---
+---
 
 <p> <img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift</p>
 
@@ -1296,7 +1285,7 @@ struct ContentView: View {
 ```
 
 
----vertical---
+---
 
 <p> <img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> FeedbackResponseView.swift</p>
 
@@ -1326,7 +1315,7 @@ struct FeedbackResponseView: View {
 
 ```
 
----vertical---
+---
 
 <p> <img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> Joke.swift</p>
 
@@ -1346,7 +1335,7 @@ struct Joke {
     - I'm not sure how, but go ahead!
 - Add animations to the cat?
     - Maybe slowly zoom in on the cat if you say you didn't like the joke to scare the user into liking it
-- Display the current joke number on the screen, so your users know when they’re done with the fun and laughter.
+- Display the current joke number on the screen, so your users know when they're done with the fun and laughter.
 
 ---
 

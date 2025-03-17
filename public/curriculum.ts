@@ -16,7 +16,7 @@ export const tracks: TrackEntry[] = [
         title: "Introduction to Keynote",
         idDisplay: "Unit 01",
         subtitle:
-          "Learn the basics of Keynote to kickstart your app design journey using your very own app design journal.",
+          "Learn the basics of Keynote to kickstart your app design journey.",
         description:
           "In this unit, we'll introduce Keynote's fundamental tools and interface, helping you to understand how to use it for app design effectively. You'll create your first design journal, document initial ideas, and prepare assets, laying a solid foundation for designing interactive and visually appealing apps.",
         markdownId: "keynoteIntro",
@@ -32,16 +32,16 @@ export const tracks: TrackEntry[] = [
       },
       {
         id: "unit_03",
-        title: "Planning your UI",
+        title: "Planning your User Interface",
         idDisplay: "Unit 03",
         subtitle: "Sketch and organize your app's user interface.",
         description:
-          "This unit guides you through planning your app’s user interface using sketches and wireframes. You'll learn the principles of good UI design, how to structure your app's layout logically, and the importance of clarity and ease of use in creating compelling app experiences.",
+          "This unit guides you through planning your app's user interface using sketches and wireframes. You'll learn the principles of good UI design, how to structure your app's layout logically, and the importance of clarity and ease of use in creating compelling app experiences.",
         markdownId: "uiplanning",
       },
       {
         id: "unit_04",
-        title: "Inclusive Design",
+        title: "Inclusive App Design",
         idDisplay: "Unit 04",
         subtitle: "Create apps accessible to everyone.",
         description:
@@ -59,7 +59,7 @@ export const tracks: TrackEntry[] = [
       },
       {
         id: "unit_05",
-        title: "Intro to Freeform",
+        title: "Introduction to Freeform",
         idDisplay: "Unit 05",
         subtitle: "Explore creative tools in Freeform.",
         description:
@@ -125,7 +125,7 @@ export const tracks: TrackEntry[] = [
       },
       {
         id: "unit_02",
-        title: "Logic and Variable Types",
+        title: "Logic, Variables and Types",
         idDisplay: "Unit 02",
         subtitle: "Discover logic, variables, and Swift data types.",
         description:
@@ -146,7 +146,7 @@ export const tracks: TrackEntry[] = [
       },
       {
         id: "unit_04",
-        title: "Getting Started With Code",
+        title: "Getting Started With SwiftUI",
         idDisplay: "Unit 04",
         subtitle: "Introduction to building apps with SwiftUI.",
         description:
@@ -156,7 +156,7 @@ export const tracks: TrackEntry[] = [
       },
       {
         id: "unit_05",
-        title: "About me App",
+        title: "About Me App",
         idDisplay: "Unit 05",
         subtitle: "Customize an interactive personal app.",
         description:
@@ -177,7 +177,7 @@ export const tracks: TrackEntry[] = [
     units: [
       {
         id: "unit_00",
-        title: "iPad and Swift",
+        title: "iPad and Swift Playgrounds",
         idDisplay: "Unit 00",
         subtitle:
           "Get started coding with Swift on your iPad using Swift Playgrounds.",
@@ -187,17 +187,17 @@ export const tracks: TrackEntry[] = [
       },
       {
         id: "unit_01",
-        title: "Name Card",
+        title: "Name Card App",
         idDisplay: "Unit 01",
         subtitle:
           "Build a personal Name Card app using basic SwiftUI views and modifiers.",
         description:
-          "In this unit, we will dive into the essentials of SwiftUI by developing a personalized Name Card app. You’ll explore basic SwiftUI views such as Text, Image, and VStack, along with modifiers that enhance their appearance and functionality. We will structure content effectively, apply styling, and customize interactions. By creating a simple yet polished Name Card app, you'll gain a practical understanding of how SwiftUI components fit together to form interactive and visually appealing user interfaces.",
+          "In this unit, we will dive into the essentials of SwiftUI by developing a personalized Name Card app. You'll explore basic SwiftUI views such as Text, Image, and VStack, along with modifiers that enhance their appearance and functionality. We will structure content effectively, apply styling, and customize interactions. By creating a simple yet polished Name Card app, you'll gain a practical understanding of how SwiftUI components fit together to form interactive and visually appealing user interfaces.",
         markdownId: "namecard",
       },
       {
         id: "unit_01A",
-        title: "Stacks and Shapes",
+        title: "Compose with Stacks and Shapes",
         idDisplay: "Unit 01A",
         subtitle:
           "Compose a self-portrait app using SwiftUI stacks, shapes, and colors.",
@@ -207,12 +207,12 @@ export const tracks: TrackEntry[] = [
       },
       {
         id: "unit_02",
-        title: "Counter",
+        title: "Counter App",
         idDisplay: "Unit 02",
         subtitle:
           "Learn about Swift variables, state, and more by creating a simple counter app.",
         description:
-          "In this foundational unit, you'll create a simple interactive counter app, introducing crucial Swift and SwiftUI concepts including state management, variables, and event handling. You’ll implement user interaction through buttons and use Swift's state variables to dynamically update the UI based on these interactions. This project not only teaches basic Swift programming logic but also demonstrates how state changes drive UI updates, a fundamental concept in interactive app development.",
+          "In this foundational unit, you'll create a simple interactive counter app, introducing crucial Swift and SwiftUI concepts including state management, variables, and event handling. You'll implement user interaction through buttons and use Swift's state variables to dynamically update the UI based on these interactions. This project not only teaches basic Swift programming logic but also demonstrates how state changes drive UI updates, a fundamental concept in interactive app development.",
         markdownId: "counter",
       },
       {
@@ -227,12 +227,12 @@ export const tracks: TrackEntry[] = [
       },
       {
         id: "unit_03",
-        title: "About Me",
+        title: "About Me App",
         idDisplay: "Unit 03",
         subtitle:
           "Build a multi-tab app highlighting personal information and exploring advanced layouts.",
         description:
-          "In this comprehensive unit, you’ll develop a multi-tabbed 'About Me' app designed to showcase personal interests, background, and skills. You'll use advanced SwiftUI techniques, including TabViews, NavigationViews, and complex layout structures to organize and present information clearly. By creating distinct sections within your app, you’ll learn how to effectively manage multiple views and transitions, creating a polished and professional-looking application.",
+          "In this comprehensive unit, you'll develop a multi-tabbed 'About Me' app designed to showcase personal interests, background, and skills. You'll use advanced SwiftUI techniques, including TabViews, NavigationViews, and complex layout structures to organize and present information clearly. By creating distinct sections within your app, you'll learn how to effectively manage multiple views and transitions, creating a polished and professional-looking application.",
         markdownId: "aboutme",
       },
       {
@@ -257,7 +257,7 @@ export const tracks: TrackEntry[] = [
       },
       {
         id: "unit_04B",
-        title: "Jokes",
+        title: "Jokes App",
         idDisplay: "Unit 04B",
         subtitle: "Create a jokes app with alerts, structs, and arrays.",
         description:
@@ -266,7 +266,7 @@ export const tracks: TrackEntry[] = [
       },
       {
         id: "unit_04C",
-        title: "Quiz v2",
+        title: "Quiz App 2.0",
         idDisplay: "Unit 04C",
         subtitle:
           "Expand the basic quiz app with advanced UI elements like progress indicators, sheets and custom buttons.",
@@ -328,7 +328,7 @@ export const tracks: TrackEntry[] = [
       },
       {
         id: "unit_10",
-        title: "Project",
+        title: "ML/AR Project",
         idDisplay: "Project 04",
         subtitle: "Create a Machine Learning or Augmented Reality project.",
         description:

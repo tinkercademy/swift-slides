@@ -1,14 +1,3 @@
-<div style="text-align: left">
-    <img src="/assets/logos/tinkercademy.png" alt="Tinkercademy Logo" height="128px">
-    <img src="https://raw.githubusercontent.com/swiftinsg/branding/main/logos/icons/png/coloured%20-%20dark%20background.png" alt="Swiftinsg Logo" height="128px" style="margin-left: 64px;">
-</div>
-
-## Track X: Unit 5
-
-# About Me App
-
----
-
 # Getting Started
 
 - Open **Swift Playgrounds** on your iPad.  
@@ -20,7 +9,7 @@
 
 # About Me App
 
----vertical---
+---
 
 ## Tabs in the App
 
@@ -40,7 +29,7 @@
 
 # Editing Tabs
 
----vertical---
+---
 
 ## Changing Tab Labels
 
@@ -49,7 +38,7 @@
 
 <img height="800" src="/markdown/track_x/assets/placeholder_editing_tab_labels.png">
 
----vertical---
+---
 
 ## Adding Images to Tabs
 
@@ -62,7 +51,7 @@
 
 # Customization
 
----vertical---
+---
 
 ## Changing Accent Colors
 
@@ -70,7 +59,7 @@
 
 <img height="800" src="/markdown/track_x/assets/placeholder_changing_accent_colors.png">
 
----vertical---
+---
 
 ## Styling the Text
 

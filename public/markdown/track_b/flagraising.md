@@ -1,20 +1,7 @@
-<div style="text-align: left">
-    <img src="/assets/logos/tinkercademy.png" alt="Tinkercademy Logo" height="128px">
-    <img src="https://raw.githubusercontent.com/swiftinsg/branding/main/logos/icons/png/coloured%20-%20dark%20background.png" alt="Swiftinsg Logo" height="128px" style="margin-left: 64px;">
-</div>
-
-## Track B: Unit 2A
-
-# Flag Raising
-
-Alignments and Animations
-
----
-
 ## Unit Overview
 
 - Remember we used a button to increase a number, that we displayed on screen?
-  - Now, we’ll tie that number to something visual — the position of a flag on a screen
+  - Now, we'll tie that number to something visual — the position of a flag on a screen
 - Flag Raising App
   - Laying out
   - Raising the Flag
@@ -25,7 +12,7 @@ Alignments and Animations
 <div style="display: flex;justify-content: center; align-items: center;">
     <div style="flex: 1;text-align: center;">    
     <h2>Demo</h2>
-        <p>What we’ll make: A flag raising app. You tap on a button and the flag moves up. And up. And up. And up. And up. And up. And up. And up. And up. And up. And up. And up. And up. And up. And up.</p>
+        <p>What we'll make: A flag raising app. You tap on a button and the flag moves up. And up. And up. And up. And up. And up. And up. And up. And up. And up. And up. And up. And up. And up. And up.</p>
     </div>
     <div style="flex: 1;text-align: center;">
        <iframe width="500" height="900" src="/markdown/track_b/assets/flag-demo.mp4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -36,7 +23,7 @@ Alignments and Animations
 
 ## What we're building
 
-- We’ll build the famous flag raising app, as seen on Channel 8.
+- We'll build the famous flag raising app, as seen on Channel 8.
 - Raise a flag, be patriotic.
 
 <div style="display: flex;justify-content: center; align-items: center;">
@@ -49,9 +36,9 @@ Alignments and Animations
 
 # Laying out Flag Raising
 
----vertical---
+---
 
-## Let’s break it down
+## Let's break it down
 
 1. Duplicate the Counter
 2. Rename the items from cookie-related terms to flag raising related terms
@@ -63,28 +50,28 @@ Alignments and Animations
      1. Use the emoji keyboard on your iPad
      2. Copy the emoji from the internet and paste it into your code
 
----vertical---
+---
 
 ## Duplicate why?
 
 - The flag raising app, at its core, is just a counter on steroids
-- Why waste time rewriting all that code we’ve already written when we can just work off of what we already have?
+- Why waste time rewriting all that code we've already written when we can just work off of what we already have?
 
----vertical---
+---
 
 ## Duplicate how?
 
 - Hold down on the **Counter** project and tap Duplicate\*\*\*\*
 - Rename the duplicate from **“Counter copy”** to **“Flag Raising”**
 
----vertical---
+---
 
 ## Counter → Flag Raising
 
 - Rename our counter-related words to flag raising related ones.
-- Feel free to use whatever words you like, whether it’s an National Day song or whatever.
+- Feel free to use whatever words you like, whether it's an National Day song or whatever.
 
----vertical---
+---
 
 ```swift[]
 // ContentView.swift
@@ -126,7 +113,7 @@ struct ContentView: View {
 
 ```
 
----vertical---
+---
 
 ## Part 1: Run your code!
 
@@ -135,7 +122,7 @@ struct ContentView: View {
 - This is fairly common in programming where you copy, paste and reuse code.
 - There's no point rewriting everything if the outcome is going to be similar.
 
----vertical---
+---
 
 ## Part 2: Lay out your flag
 
@@ -148,7 +135,7 @@ struct ContentView: View {
     </div>
 </div>
 
----vertical---
+---
 
 ## Customising Stacks
 
@@ -158,7 +145,7 @@ struct ContentView: View {
 - For our flag, we will need to use a `HStack` to place the flag and flag pole next to one another.
   - The HStack should be aligned to the `.bottom` and with `-10` spacing. We can't possibly have the flag separated from the flag pole.
 
----vertical---
+---
 
 ## Code
 
@@ -203,7 +190,7 @@ struct ContentView: View {
 }
 ```
 
----vertical---
+---
 
 ## Customising Stacks
 
@@ -213,7 +200,7 @@ struct ContentView: View {
 - If you want to control the height, add the `height:` parameter
 - For our flag raising app, we will be fixing the width of a `Rectangle`.
 
----vertical---
+---
 
 ## Rectangle
 
@@ -224,7 +211,7 @@ struct ContentView: View {
 - Rectangle works similarly to `Circle`.
 - For our flag raising app, we will use a `Rectangle` for the flag pole and constrain the `width` (using the `frame` modifier) to 30 points.
 
----vertical---
+---
 
 ## Rectangle
 
@@ -265,7 +252,7 @@ struct ContentView: View {
 }
 ```
 
----vertical---
+---
 
 ## Add a flag! `🇸🇬 🇸🇬 🇸🇬 🇸🇬 🇸🇬 🇸🇬 🇸🇬 🇸🇬`
 
@@ -311,30 +298,30 @@ struct ContentView: View {
 }
 ```
 
----vertical---
+---
 
 ## Positioning
 
 `.offset(x: 100, y: 200)`
 
-- Lets you move your object from where it’s supposed to be
+- Lets you move your object from where it's supposed to be
 - If you only want to move x or y, you can leave out the other parameter
 - For the flag raising app, we need to use the offset to move the flag up.
 
----vertical---
+---
 
 ## Co-ordinate system
 
 - On iOS, the origin `(0, 0)` is at the top left corner.
 - As such, in order for the rectangle to move up, we have to reduce the Y offset.
 
----vertical---
+---
 
 ## Code
 
 <img src="/markdown/track_b/assets/flag-counter-offset.png">
 
----vertical---
+---
 
 ## Run your code!
 
@@ -343,7 +330,7 @@ struct ContentView: View {
 
 - The flag raises!!
 - The flag moves!!!
-- It’s alive!!!!!!!!!!!!
+- It's alive!!!!!!!!!!!!
 
 </div>
 <div style="flex:1;">
@@ -358,7 +345,7 @@ struct ContentView: View {
 
 # Using `withAnimation`s?
 
----vertical---
+---
 
 ## What do we want?
 
@@ -367,7 +354,7 @@ struct ContentView: View {
 - Just have smooth animations
 - Now when something changes, it jumps awkwardly.
 
----vertical---
+---
 
 ## Animations
 
@@ -377,7 +364,7 @@ struct ContentView: View {
 - If the variable is mutated within the curly braces of withAnimation, the state change will be animated nicely
 - Yup that's it. It's that simple.
 
----vertical---
+---
 
 ## Code
 
@@ -412,7 +399,7 @@ Button {
 ...
 ```
 
----vertical---
+---
 
 ## Run your code _again_!
 
@@ -495,48 +482,48 @@ struct ContentView: View {
 
 # Extension
 
----vertical---
+---
 
 ## Example Other Clickers
 
 ### This concept extends beyond just increasing a counter and raising a flag… you can change a whole bunch of properties using state variables! Here are some examples.
 
----vertical---
+---
 
 <video width="500" controls>
   <source  src="/markdown/track_b/assets/flag-example0.mov" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
----vertical---
+---
 
 <video width="500" controls>
   <source  src="/markdown/track_b/assets/flag-example1.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
----vertical---
+---
 
 <video width="500" controls>
   <source  src="/markdown/track_b/assets/flag-example2.mov" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
----vertical---
+---
 
 <video width="500" controls>
   <source  src="/markdown/track_b/assets/flag-example3.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
----vertical---
+---
 
 <video width="500" controls>
   <source  src="/markdown/track_b/assets/flag-example4.mov" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
----vertical---
+---
 
 <video width="500" controls>
   <source  src="/markdown/track_b/assets/flag-example5.mov" type="video/mp4">

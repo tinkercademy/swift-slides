@@ -1,14 +1,3 @@
-<div style="text-align: left">
-    <img src="/assets/logos/tinkercademy.png" alt="Tinkercademy Logo" height="128px">
-    <img src="https://raw.githubusercontent.com/swiftinsg/branding/main/logos/icons/png/coloured%20-%20dark%20background.png" alt="Swiftinsg Logo" height="128px" style="margin-left: 64px;">
-</div>
-
-## Track X: Unit 1
-
-# Commands, For Loops, Conditional Code
-
----
-
 # Phase Overview
 
 - Commands
@@ -19,22 +8,22 @@
 
 # Lesson Plan
 
-### What you’ll learn:
+### What you'll learn:
 - Commands
 - For Loops
 - Conditional Code
 
-### What you’ll do:
+### What you'll do:
 - Get Started with Code on Swift Playgrounds
 
-### What you’ll need:
+### What you'll need:
 - Swift Playgrounds App on your iPad
 
 ---
 
 # What is Swift?
 
----vertical---
+---
 
 ## Swift
 <div style="display: flex; align-items: center; gap: 20px; padding: 20px;">
@@ -54,7 +43,7 @@
 
 # Introduction to Swift Playgrounds
 
----vertical---
+---
 
 ### Getting Started
 
@@ -71,7 +60,7 @@
   </div>
 </div>
 
----vertical---
+---
 
 ### Navigating the Playground
 
@@ -90,7 +79,7 @@
   </div>
 </div>
 
----vertical---
+---
 
 ### What you will be doing:
 
@@ -101,7 +90,7 @@
 
 # Commands
 
----vertical---
+---
 
 <div style="display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; padding: 20px;">
   <div style="position: relative; width: 1050px; height: 650px;">
@@ -114,7 +103,7 @@
   </div>
 </div>
 
----vertical---
+---
 
 <div style="display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; padding: 20px;">
   <div style="position: relative; width: 1050px; height: 650px;">
@@ -127,7 +116,7 @@
   </div>
 </div>
 
----vertical---
+---
 
 ### Controlling Byte
 <div style="display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; padding: 20px;">
@@ -141,7 +130,7 @@
   </div>
 </div>
 
----vertical---
+---
 
 # camelCase
 <div style="display: flex; align-items: center; gap: 20px; padding: 20px;">
@@ -158,7 +147,7 @@
   </div>
 </div>
 
----vertical---
+---
 
 # Introduction to the interface
 <div style="display: flex; justify-content: center; align-items: center;">
@@ -168,7 +157,7 @@
   </div>
 </div>
 
----vertical---
+---
 
 ## Let's try issuing commands!
 <div style="display: flex; align-items: center; gap: 20px; padding: 20px;">
@@ -190,7 +179,7 @@
   </div>
 </div>
 
----vertical---
+---
 
 # Hands-On
 ### Try out the exercises under Commands!
@@ -209,7 +198,7 @@
 
 # For Loops
 
----vertical---
+---
 
 <div style="display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; padding: 20px;">
   <div style="position: relative; width: 1050px; height: 650px;">
@@ -222,7 +211,7 @@
   </div>
 </div>
 
----vertical---
+---
 
 <div style="display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; padding: 20px;">
   <div style="position: relative; width: 1050px; height: 650px;">
@@ -235,7 +224,7 @@
   </div>
 </div>
 
----vertical---
+---
 
 ### for-loop Syntax
 
@@ -245,14 +234,14 @@ for i in 1 ... 5 {
 }
 ```
 
----vertical---
+---
 
 ### What is `i`?
 
 - `i` is a variable. It represents a value and can be named anything (e.g., `i` or `potato`).
 - The for loop sets `i` to 1 initially and repeats the code inside the curly brackets for each value of `i` until the loop ends.
 
----vertical---
+---
 
 # Hands-On
 ### Try out the exercises under For Loops!
@@ -271,7 +260,7 @@ for i in 1 ... 5 {
 
 # Conditionals
 
----vertical---
+---
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div style="position: relative; width: 1400px; height: 1000px;">
@@ -280,7 +269,7 @@ for i in 1 ... 5 {
   </div>
 </div>
 
----vertical---
+---
 
 <div style="display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; padding: 20px;">
   <div style="position: relative; width: 1050px; height: 650px;">
@@ -293,7 +282,7 @@ for i in 1 ... 5 {
   </div>
 </div>
 
----vertical---
+---
 
 <div style="display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; padding: 20px;">
   <div style="position: relative; width: 1050px; height: 650px;">
@@ -306,7 +295,7 @@ for i in 1 ... 5 {
   </div>
 </div>
 
----vertical---
+---
 
 ### if-else Syntax
 
@@ -322,7 +311,7 @@ if condition {
 
 # Comparators
 
----vertical---
+---
 
 ### Comparators
 
@@ -335,7 +324,7 @@ These are boolean (Bool) variables, which can be either true or false.
 We can also directly use statements using comparators (<=, <, >, >=, ==, !=) instead of boolean variables.
 - For example, a == b will be true if a is equal to b, and false if a is not equal to b.
 
----vertical---
+---
 
 <div style="display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; padding: 20px;">
   <div style="position: relative; width: 1050px; height: 650px;">
@@ -348,7 +337,7 @@ We can also directly use statements using comparators (<=, <, >, >=, ==, !=) ins
   </div>
 </div>
 
----vertical---
+---
 
 # Hands-On
 ### Try out the exercises under Conditionals!

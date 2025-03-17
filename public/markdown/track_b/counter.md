@@ -1,16 +1,3 @@
-<div style="text-align: left">
-    <img src="/assets/logos/tinkercademy.png" alt="Tinkercademy Logo" height="128px">
-    <img src="https://raw.githubusercontent.com/swiftinsg/branding/main/logos/icons/png/coloured%20-%20dark%20background.png" alt="Swiftinsg Logo" height="128px" style="margin-left: 64px;">
-</div>
-
-## Track B: Unit 2
-
-# Counter
-
-Create a Counter app in SwiftUI.
-
----
-
 ## Unit Overview
 
 - [Variables & Types](#variables--types)
@@ -27,7 +14,7 @@ Create a Counter app in SwiftUI.
 
 ## 🗃️ Very Picky Boxes of Information
 
----vertical---
+---
 
 ## Declaring Variables
 
@@ -35,7 +22,7 @@ Create a Counter app in SwiftUI.
   - Think of it like a box of information.
 - Naming Variables
   - Names have to start with letters like `myVariable` (or emoji… try `🍕`)
-    - Please don’t use emoji variable names… please
+    - Please don't use emoji variable names… please
   - We name variables in `camelCase` — no spaces, lowercase to start, and capital letter for new words
     - `kindOfLikeThis`
 
@@ -45,7 +32,7 @@ var myName = "Cookie Monster"
 var amIHungry = true
 ```
 
----vertical---
+---
 
 ## Updating Variables Values
 
@@ -68,20 +55,20 @@ amIHungry = true
 numberOfCookies = 7
 ```
 
----vertical---
+---
 
 ## Constants
 
-- Constants are like variables, but you can’t change their value.
+- Constants are like variables, but you can't change their value.
 - You declare them with `let` instead of `var`.
-- Used when you know the value won’t change.
+- Used when you know the value won't change.
 
 ```swift
 let myName = "Cookie Monster"
 let dateOfBirth = "1st January 2010"
 ```
 
----vertical---
+---
 
 ## Comments
 
@@ -102,7 +89,7 @@ let dateOfBirth = "1st January 2010"
 */
 ```
 
----vertical---
+---
 
 ## Common Variable Types
 
@@ -113,9 +100,9 @@ let dateOfBirth = "1st January 2010"
 | Double-precision floating point | `Double`   | Decimals             | `3.14`, `-1.23`, `0.0`, `1.0`           |
 | Boolean                         | `Bool`     | True or False values | `true`, `false`                         |
 
-…and more, but we won’t get into these yet.
+…and more, but we won't get into these yet.
 
----vertical---
+---
 
 ## Type Declaration
 
@@ -137,7 +124,7 @@ var thisIsAnInt = 1
 var thisIsADouble: Double = 1
 ```
 
----vertical---
+---
 
 ## Type Safety
 
@@ -166,7 +153,7 @@ myAmazingString = 123 // Throws an error.
 
 ## Tap Tap
 
----vertical---
+---
 
 ## Create a Playground App
 
@@ -181,7 +168,7 @@ myAmazingString = 123 // Throws an error.
     <img src="/markdown/track_b/assets/new-project.png">
 </div>
 
----vertical---
+---
 
 ## Interface Set Up
 
@@ -200,7 +187,7 @@ myAmazingString = 123 // Throws an error.
     <img src="/markdown/track_b/assets/clicker-wireframe-diagram.png">
 </div>
 
----vertical---
+---
 
 <div style="display: flex;">
     <div style="">
@@ -223,7 +210,7 @@ myAmazingString = 123 // Throws an error.
     <img src="/markdown/track_b/assets/preview-cookies-setup.png" height="100%">
 </div>
 
----vertical---
+---
 
 ## Handling Taps
 
@@ -252,7 +239,7 @@ struct ContentView: View {
 
 ## Variables in SwiftUI
 
----vertical---
+---
 
 ## `@State` Variables
 
@@ -261,7 +248,7 @@ struct ContentView: View {
   - If you change something, it will yell at everyone and say "HEY I WAS UPDATED" any any `View`s that involve it refresh themselves.
 - In order to update your user interface based on a variable's value, it has to be a `@State` variable.
 
----vertical---
+---
 
 ## What We Need
 
@@ -270,7 +257,7 @@ struct ContentView: View {
 3. To decrement the variable's value when the _"A COOKIE FELL OUT OF MY MOUTH !!!"_ `Button` is pressed
 4. Whenever the variable's value changes the `Text` displaying the number of cookies eaten should refresh.
 
----vertical---
+---
 
 ## Create a `@State` Variable
 
@@ -293,7 +280,7 @@ struct ContentView: View {
 }
 ```
 
----vertical---
+---
 
 ## Adjusting Counter's Value
 
@@ -320,7 +307,7 @@ struct ContentView: View {
 }
 ```
 
----vertical---
+---
 
 ## Displaying Cookie Count
 
@@ -355,7 +342,7 @@ struct ContentView: View {
 
 ### The act of introducing or inserting anything, especially that which is spurious or foreign.
 
----vertical---
+---
 
 ## Inserting Variables
 
@@ -375,7 +362,7 @@ var coookiesConsumed = 40
 var greeting = "\(name), consumed \(cookiesConsumed) cookies!"
 ```
 
----vertical---
+---
 
 ## In SwiftUI
 
@@ -406,11 +393,11 @@ struct ContentView: View {
 
 ## Making decisions within code
 
----vertical---
+---
 
 ## Hiding Views, Conditionally
 
-Let’s say you are trying to write an app to advice users on the weather.
+Let's say you are trying to write an app to advice users on the weather.
 
 You can use an if-statement like this to display a message. In this case, if `temperature` is less than 10, the `Text` will be hidden. Otherwise, `Text` will be shown.
 
@@ -420,7 +407,7 @@ if temperature < 10 {
 }
 ```
 
----vertical---
+---
 
 ## More Conditions
 
@@ -434,7 +421,7 @@ if temperature < 10 {
 }
 ```
 
----vertical---
+---
 
 ## Even More Conditions
 
@@ -450,13 +437,13 @@ if temperature < 10 {
 }
 ```
 
-When Swift evaluates these statements, it goes from top to bottom, and only runs the first block where the condition evaluates to `true`. It won’t bother with the rest of the statements!
+When Swift evaluates these statements, it goes from top to bottom, and only runs the first block where the condition evaluates to `true`. It won't bother with the rest of the statements!
 
----vertical---
+---
 
 ## Specific Comparisons
 
-- Here’s one more condition, but at a very specific number.
+- Here's one more condition, but at a very specific number.
 
 ```swift
 if temperature < 10 {
@@ -470,10 +457,10 @@ if temperature < 10 {
 }
 ```
 
-- Notice the use of `==` — that’s what Swift (and other languages) use for comparison. `=`, on the other hand, means “assign the right-side value into the left”.
-- If we changed the order of the second and third conditions, and give a temperature of 100, we’ll never get the boil water comment. Any idea why?
+- Notice the use of `==` — that's what Swift (and other languages) use for comparison. `=`, on the other hand, means “assign the right-side value into the left”.
+- If we changed the order of the second and third conditions, and give a temperature of 100, we'll never get the boil water comment. Any idea why?
 
----vertical---
+---
 
 ## More Numerical Comparators
 
@@ -486,7 +473,7 @@ if temperature < 10 {
 | `==`       | Equal                 |
 | `!=`       | Not equal             |
 
----vertical---
+---
 
 ## More Examples
 
@@ -494,7 +481,7 @@ if temperature < 10 {
 var a = 5
 
 if a == 5 { // Do you like the number 5?
-   Text("I’m SOOO happy")
+   Text("I'm SOOO happy")
 } else if a == 3 { // Do you hate the number 3?
    Text("I HATE THAT")
 } else { // Are you ambivalent about everything else?
@@ -502,13 +489,13 @@ if a == 5 { // Do you like the number 5?
 }
 ```
 
----vertical---
+---
 
 ## Booleans
 
 - Remember booleans, or variables/constants of type Bool?
   - These variables can only be true or false.
-- That’s what the expressions after the word if are evaluating to, e.g. `temperature > 30` evaluates to `true`.
+- That's what the expressions after the word if are evaluating to, e.g. `temperature > 30` evaluates to `true`.
 - You can create booleans directly, too, and evaluate them.
 
 ```swift
@@ -519,7 +506,7 @@ if isRaining {
 }
 ```
 
----vertical---
+---
 
 ## Hiding the Button
 
@@ -556,7 +543,7 @@ struct ContentView: View {
 
 ## Where do you write pieces of code?
 
----vertical---
+---
 
 ## View Builder vs. Logical Code
 
@@ -576,7 +563,7 @@ VStack {
 - \_Action_s are Logical code, for example, `Button` actions.
 - \_Content_s are View Builder code, for example, the content between the curly braces of a `VStack`, or those within the curly braces of a `.mask` modifier.
 
----vertical---
+---
 
 ## Is _this_ View Builder or Logical Code?
 
@@ -589,7 +576,7 @@ VStack {
   - From SwiftUI's perspective, it does not know when it should be running this line of code?
   - To run code when the view appears, check out the `.onAppear {}` modifier that allows you to write Logical Code within the curly braces
 
----vertical---
+---
 
 ## Conditionals? It's both.
 
@@ -626,7 +613,7 @@ VStack {
 
 [Download Completed Project](https://github.com/tinkercademy/swift-demo-projects/raw/main/Counter.zip/)
 
----vertical---
+---
 
 ## <img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="84px"> ContentView
 

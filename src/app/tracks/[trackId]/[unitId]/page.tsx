@@ -14,6 +14,7 @@ import "reveal.js/dist/theme/black.css";
 import "./reveal-theme.scss";
 import "./xcode-dark.scss";
 import styles from "./page.module.scss";
+import Link from "next/link";
 
 async function resolveParams(
   params: Promise<{ trackId: string; unitId: string }>
@@ -61,6 +62,7 @@ export default async function SlidesPage({
       <div className={styles.headers}>
         <Breadcrumb />
         <h1>{track?.title}</h1>
+        <Link href={`unit_${("0"+(Number(unit.id.split("_")[1])+1).toString()).slice(-2)}`}>NEXT</Link>
       </div>
       <RevealjsClientWrapper isPrint={isPrint} track={track} unit={unit}>
         <div className="slides">
@@ -85,7 +87,7 @@ export default async function SlidesPage({
               </h4>
               <h2>{track.title}</h2>
               <h1>{unit.title}</h1>
-              <p>{unit.subtitle}</p>
+              <p style={{ maxWidth: "40em" }}>{unit.subtitle}</p>
             </div>
           </section>
           <section
