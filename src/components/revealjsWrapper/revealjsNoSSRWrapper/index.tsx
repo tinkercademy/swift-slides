@@ -82,24 +82,25 @@ export function RevealjsNoSSRWrapper({ children, isPrint, track, unit }: { child
                         {
                             name: "fullscreen",
                             onClick: () => { setIsFullScreen(!isFullScreen) },
-                            icon: isFullScreen ? <FaCompress /> : <FaExpand />
+                            icon: isFullScreen ? FaCompress : FaExpand,
                         },
                         {
                             name: "print",
                             onClick: () => { handleOpenWithQuery("print-pdf", "true") },
-                            icon: <FaPrint />
+                            icon: FaPrint,
                         },
                         // {
                         //     name: "popout",
                         //     onClick: () => { handleOpenWithQuery("fullscreen", "true") },
-                        //     icon: <FaUpRightFromSquare />
+                        //     icon: FaUpRightFromSquare
                         // },
                         {
                             name: "edit",
+                            hoverText: "Suggest edits",
                             onClick: () => {
                                 window.open(`https://github.com/tinkercademy/swift-slides/tree/main/public/markdown/${track.id}/${unit.markdownId}.md`, "_blank")
                             },
-                            icon: <FaPenToSquare />
+                            icon: FaPenToSquare,
                         }
                     ]} />
                 </div>

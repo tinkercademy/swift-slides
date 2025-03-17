@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useEffect } from "react";
 import hljs from "highlight.js";
 import "highlight.js/styles/vs2015.css";
 import "highlight.js/lib/languages/markdown";

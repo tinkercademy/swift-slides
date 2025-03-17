@@ -4,22 +4,65 @@
     gap: 5px;
 
     div {
-        padding: 15px;
-        font-size: 20px;
+        position: relative;
 
         opacity: 0.8;
         scale: 1;
         transition: all 250ms;
-        cursor: pointer;
 
         &:hover {
             opacity: 0.9;
-            scale: 1.1;
+            scale: 1;
+
+            .hoverText {
+                transform: translateX(-50%) scale(100%);
+            }
         }
 
         &:active {
             opacity: 1;
             scale: 1;
         }
+
+        span svg {
+            padding: 15px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .hoverText {
+            cursor: default;
+            position: absolute;
+            background-color: var(--theme-background2);
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            top: 50px;
+            // center the popout
+            left: 50%;
+
+            transform: translateX(-50%) scale(0%);
+            transform-origin: top center;
+            transition: all 250ms;
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 0;
+                height: 0;
+                border-left: 10px solid transparent;
+                border-right: 10px solid transparent;
+                border-bottom: 10px solid var(--theme-background2);
+                top: -10px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 890px) {
+    .hoverText {
+        display: none;
     }
 }

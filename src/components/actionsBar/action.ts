@@ -1,7 +1,8 @@
-import { MouseEventHandler, ReactNode } from "react";
+import { IconType } from "react-icons";
 
 export interface Action {
     name: string
-    onClick: MouseEventHandler<HTMLDivElement> | undefined
-    icon: ReactNode
+    onClick: React.MouseEventHandler<HTMLDivElement> | undefined
+    icon: IconType
+    hoverText?: string
 }

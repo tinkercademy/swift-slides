@@ -1,6 +1,5 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { CSSProperties } from "react";
 
 import { tracks } from "../../../../../public/curriculum";
 import { getColorFromTrack, TrackEntry, UnitEntry } from "../../track";
@@ -45,7 +44,7 @@ export default async function SlidesPage({
     "--r-hover-shadow-color": `var(--colors-${color}-hovershadow)`,
     "--r-selection-background-color": `var(--colors-${color}-selectbg)`,
     "--r-gradient": `var(--colors-${color}-gradient)`,
-  } as CSSProperties;
+  } as React.CSSProperties;
 
   const isPrint = (await searchParams)["print-pdf"] !== undefined;
 
