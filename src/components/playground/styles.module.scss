@@ -1,0 +1,102 @@
+.container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.editorPane {
+  position: relative;
+  width: 50%; // Add default width
+  min-width: 200px;
+  max-width: 80%;
+  border-right: 1px solid #ccc;
+  user-select: none;
+  flex: 0 0 auto; // Prevent flex from affecting width
+  overflow: hidden; // Add this to contain the textarea
+  background: #1e1e1e; // Dark background
+  color: #d4d4d4; // Light text
+}
+
+.previewPane {
+  width: 50%;
+  min-width: 200px;
+  flex: 1;
+  overflow: auto;
+  background: #1e1e1e;
+  color: #d4d4d4;
+}
+
+.divider {
+  width: 8px;
+  background: #ddd;
+  cursor: col-resize;
+  transition: background-color 0.2s;
+  position: relative;
+  z-index: 10; // Add these to ensure divider stays on top
+  flex: 0 0 auto;
+
+  &:hover {
+    background: #bbb;
+  }
+}
+
+.textArea,
+.highlightWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+  padding: 1rem;
+  font-family: monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow: hidden;
+  box-sizing: border-box;
+  letter-spacing: normal;
+  vertical-align: baseline;
+  tab-size: 4;
+}
+
+.textArea {
+  width: 100%;
+  height: 100%;
+  border: none;
+  resize: none;
+  outline: none;
+  background: transparent;
+  color: transparent;
+  caret-color: #d4d4d4;
+  z-index: 2;
+}
+
+.highlightWrapper {
+  color: #d4d4d4;
+  background: #1e1e1e;
+  pointer-events: none;
+  z-index: 1;
+
+  pre {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+  }
+
+  code {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    white-space: inherit;
+    word-wrap: inherit;
+  }
+}
+
+.dragging {
+  user-select: none;
+  * {
+    user-select: none !important;
+  }
+}
