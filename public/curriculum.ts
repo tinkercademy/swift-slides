@@ -119,52 +119,46 @@ export const tracks: TrackEntry[] = [
         title: "Commands, For Loops and Conditionals",
         idDisplay: "Unit 01",
         subtitle: "Control Byte with Swift commands, loops, and conditionals.",
-        description:
-          "In this foundational unit, we'll explore basic Swift programming by learning about commands, loops, and conditional statements. You'll start by mastering fundamental commands to interact with characters on-screen, then progress to controlling repetitive tasks using loops. Conditional statements will enable you to execute specific blocks of code based on defined criteria, adding complexity and interactivity to your programs. By the end of this unit, you'll have the foundational knowledge required to write clear and logical Swift code.",
-        markdownId: "basicCommands",
+        description: "In this unit, you'll guide Byte through puzzles by learning foundational Swift concepts like commands, loops, and conditionals. Practice decision-making and repetition through interactive challenges, building a strong coding foundation in an enjoyable way.",
+        markdownId: "basicCommands"
       },
       {
         id: "unit_02",
-        title: "Logic, Variables and Types",
+        title: "Logic and Variable Types",
         idDisplay: "Unit 02",
         subtitle: "Discover logic, variables, and Swift data types.",
-        description:
-          "In this unit, you'll delve deeper into essential programming concepts including logic structures, variable declarations, and data types in Swift. We'll cover how to use Boolean logic to control the flow of your programs and explore various Swift data types such as integers, strings, and arrays. You'll practice storing, manipulating, and retrieving data efficiently, which is fundamental to all programming tasks. This unit ensures you gain confidence in handling different kinds of data, an essential skill for any Swift programmer.",
+        description: "In this unit, you'll explore logic structures and data management in Swift. Learn about variables, integers, strings, and arrays, practicing how to store and manipulate information crucial for creating responsive and interactive apps.",
         markdownId: "logic-variables",
-        disabled: true,
+        disabled: true
       },
       {
         id: "unit_03",
         title: "Initialisation, Function, Parameters",
         idDisplay: "Unit 03",
-        subtitle:
-          "Learn to initialize variables, define functions, and use parameters.",
-        description:
-          "This unit introduces more advanced programming concepts including the initialization of variables, defining reusable functions, and working effectively with parameters. You'll learn to create functions that perform specific tasks, accept inputs, and return outputs, greatly enhancing your code's efficiency and readability. We'll also discuss how proper initialization and parameter management contribute to robust and error-free code. By mastering these concepts, you'll take an important step forward in writing maintainable and scalable Swift programs.",
+        subtitle: "Learn to initialize variables, define functions, and use parameters.",
+        description: "In this unit, you'll learn to organize your code efficiently by initializing variables, defining reusable functions, and using parameters. Mastering these concepts will help keep your programs clear, maintainable, and scalable for future projects.",
         markdownId: "initialisation-func-parameters",
-        disabled: true,
+        disabled: true
       },
       {
         id: "unit_04",
-        title: "Getting Started With SwiftUI",
+        title: "Getting Started With Code",
         idDisplay: "Unit 04",
         subtitle: "Introduction to building apps with SwiftUI.",
-        description:
-          "In this unit, we transition from basic Swift programming to applying these skills within SwiftUI for app development. You'll explore SwiftUI fundamentals, understand how SwiftUI interacts with underlying Swift code, and start building simple, interactive apps. This introduction to SwiftUI sets the stage for creating dynamic interfaces and responsive apps, bridging the gap between programming fundamentals and real-world app development.",
+        description: "In this unit, you'll start building apps using SwiftUI. You'll learn how to design intuitive user interfaces and connect your Swift code, gaining practical experience in developing interactive and functional app elements.",
         markdownId: "initialisation-func-parameters",
-        disabled: true,
+        disabled: true
       },
       {
         id: "unit_05",
-        title: "About Me App",
+        title: "About me App",
         idDisplay: "Unit 05",
         subtitle: "Customize an interactive personal app.",
-        description:
-          "In this culminating unit, you'll apply your accumulated Swift programming and SwiftUI knowledge to create a personalized 'About Me' app. You will utilize various SwiftUI components, structure the app interface, manage user interactions, and integrate data effectively. By developing this app, you'll consolidate your programming skills, gain valuable experience in designing user-centric interfaces, and showcase your ability to create interactive, engaging applications.",
+        description: "In this unit, you'll create a personalized 'About Me' app, applying your Swift and SwiftUI skills. Design interactive elements, handle user input, and effectively present your personal information in an engaging and dynamic format.",
         markdownId: "about-me-app",
-        disabled: true,
-      },
-    ],
+        disabled: true
+      }
+    ]
   },
   {
     id: "track_b",
@@ -177,165 +171,136 @@ export const tracks: TrackEntry[] = [
     units: [
       {
         id: "unit_00",
-        title: "iPad and Swift Playgrounds",
+        title: "iPad and Swift",
         idDisplay: "Unit 00",
-        subtitle:
-          "Get started coding with Swift on your iPad using Swift Playgrounds.",
-        description:
-          "In this introductory unit, we will familiarize ourselves with Swift Playgrounds, the interactive coding environment designed specifically for iPad. You'll learn the basics of the Swift programming language, including variables, constants, functions, and simple data types. Hands-on activities will help you navigate Swift Playgrounds effectively, enabling you to write your first Swift programs directly on your iPad. This foundational unit sets the stage for more advanced topics and ensures you have the confidence and skills needed for subsequent app development units.",
-        markdownId: "introduction",
+        subtitle: "Get started coding with Swift on your iPad using Swift Playgrounds.",
+        description: "In this unit, you'll begin coding with Swift using your iPad. You'll explore Swift Playgrounds, familiarize yourself with its user-friendly interface, and write your first basic Swift programs, preparing for more advanced app-building tasks.",
+        markdownId: "introduction"
       },
       {
         id: "unit_01",
-        title: "Name Card App",
+        title: "Name Card",
         idDisplay: "Unit 01",
-        subtitle:
-          "Build a personal Name Card app using basic SwiftUI views and modifiers.",
-        description:
-          "In this unit, we will dive into the essentials of SwiftUI by developing a personalized Name Card app. You'll explore basic SwiftUI views such as Text, Image, and VStack, along with modifiers that enhance their appearance and functionality. We will structure content effectively, apply styling, and customize interactions. By creating a simple yet polished Name Card app, you'll gain a practical understanding of how SwiftUI components fit together to form interactive and visually appealing user interfaces.",
-        markdownId: "namecard",
+        subtitle: "Build a personal Name Card app using basic SwiftUI views and modifiers.",
+        description: "In this unit, you'll design and build a personalized Name Card app. You'll practice using essential SwiftUI views, apply basic modifiers, and understand how to organize layouts to create a simple but effective app interface.",
+        markdownId: "namecard"
       },
       {
         id: "unit_01A",
-        title: "Compose with Stacks and Shapes",
+        title: "Stacks and Shapes",
         idDisplay: "Unit 01A",
-        subtitle:
-          "Compose a self-portrait app using SwiftUI stacks, shapes, and colors.",
-        description:
-          "In this creative unit, you'll use SwiftUI stacks (HStack, VStack, and ZStack) and shapes (such as circles, rectangles, and rounded rectangles) to design a self-portrait app. You'll learn how to effectively layer, arrange, and align visual elements, and how to use colors, gradients, and shadows to bring your designs to life. This hands-on project encourages experimentation, allowing you to see how small adjustments in stacking and modifiers can significantly impact the overall visual outcome of your app.",
-        markdownId: "shapes",
+        subtitle: "Compose a self-portrait app using SwiftUI stacks, shapes, and colors.",
+        description: "In this unit, you'll creatively use SwiftUI stacks and shapes to build a self-portrait app. You'll learn to position and style shapes, combining colors and layout principles to create visually engaging and organized designs.",
+        markdownId: "shapes"
       },
       {
         id: "unit_02",
-        title: "Counter App",
+        title: "Counter",
         idDisplay: "Unit 02",
-        subtitle:
-          "Learn about Swift variables, state, and more by creating a simple counter app.",
-        description:
-          "In this foundational unit, you'll create a simple interactive counter app, introducing crucial Swift and SwiftUI concepts including state management, variables, and event handling. You'll implement user interaction through buttons and use Swift's state variables to dynamically update the UI based on these interactions. This project not only teaches basic Swift programming logic but also demonstrates how state changes drive UI updates, a fundamental concept in interactive app development.",
-        markdownId: "counter",
+        subtitle: "Learn about Swift variables, state, and more by creating a simple counter app.",
+        description: "In this unit, you'll build a functional counter app using SwiftUI. You'll grasp core programming concepts such as variables, state management, and interactive UI elements, developing a foundation for responsive and interactive apps.",
+        markdownId: "counter"
       },
       {
         id: "unit_02A",
         title: "Flag Raising",
         idDisplay: "Unit 02A",
-        subtitle:
-          "Enhance your Counter app with interactive buttons, stacks, and animations.",
-        description:
-          "Building upon your previous Counter app, this unit introduces advanced SwiftUI features such as interactive buttons, HStacks, and animations. You'll create an engaging visual experience by animating a flag raising action triggered by user interactions. Through this enhancement, you'll explore how animations and structured layout elements like stacks can significantly elevate user engagement and app functionality, reinforcing your understanding of SwiftUI's powerful interactive capabilities.",
-        markdownId: "flagraising",
+        subtitle: "Enhance your Counter app with interactive buttons, stacks, and animations.",
+        description: "In this unit, you'll enhance your counter app with interactive buttons, dynamic animations, and stack layouts. You'll practice creating responsive visual feedback, significantly improving user interaction and engagement within your app.",
+        markdownId: "flagraising"
       },
       {
         id: "unit_03",
-        title: "About Me App",
+        title: "About Me",
         idDisplay: "Unit 03",
-        subtitle:
-          "Build a multi-tab app highlighting personal information and exploring advanced layouts.",
-        description:
-          "In this comprehensive unit, you'll develop a multi-tabbed 'About Me' app designed to showcase personal interests, background, and skills. You'll use advanced SwiftUI techniques, including TabViews, NavigationViews, and complex layout structures to organize and present information clearly. By creating distinct sections within your app, you'll learn how to effectively manage multiple views and transitions, creating a polished and professional-looking application.",
-        markdownId: "aboutme",
+        subtitle: "Build a multi-tab app highlighting personal information and exploring advanced layouts.",
+        description: "In this unit, you'll build an 'About Me' app with multiple tabs. You'll use advanced SwiftUI techniques, mastering navigation and layout organization to effectively present detailed personal content in a structured, engaging interface.",
+        markdownId: "aboutme"
       },
       {
         id: "unit_04",
         title: "Quiz App",
         idDisplay: "Unit 04",
-        subtitle:
-          "Combine core SwiftUI concepts in creating a basic interactive quiz app.",
-        description:
-          "This interactive unit involves creating a basic quiz app using foundational SwiftUI concepts. You'll integrate buttons, conditional statements, and state management to build interactive quiz functionality. Additionally, you'll handle user input and provide immediate feedback, learning to dynamically adjust your app based on user interactions. This practical application reinforces your coding skills while introducing interactive logic structures crucial for app development.",
-        markdownId: "quiz_beginner",
+        subtitle: "Combine core SwiftUI concepts in creating a basic interactive quiz app.",
+        description: "In this unit, you'll create an interactive quiz app. You'll integrate fundamental SwiftUI elements like buttons, state management, and conditional logic to provide a seamless and engaging interactive experience for users.",
+        markdownId: "quiz_beginner"
       },
       {
         id: "unit_04A",
         title: "Arrays, Previews, and Structs",
         idDisplay: "Unit 04A",
-        subtitle:
-          "Dive deeper into Swift arrays, structs, and app previews to efficiently manage app data.",
-        description:
-          "In this advanced programming unit, you'll delve into core Swift data management structures like arrays and structs. You'll explore how to efficiently handle collections of data, use structs for organizing complex data models, and utilize SwiftUI previews to streamline your development process. Practical examples will demonstrate how these elements contribute to building scalable, organized, and maintainable apps, enhancing your data-handling capabilities significantly.",
-        markdownId: "arrays",
+        subtitle: "Dive deeper into Swift arrays, structs, and app previews to efficiently manage app data.",
+        description: "In this unit, you'll explore arrays, structs, and SwiftUI previews. You'll learn to efficiently handle data organization, preview app components, and enhance your development workflow, boosting your app-building proficiency significantly.",
+        markdownId: "arrays"
       },
       {
         id: "unit_04B",
-        title: "Jokes App",
+        title: "Jokes",
         idDisplay: "Unit 04B",
         subtitle: "Create a jokes app with alerts, structs, and arrays.",
-        description:
-          "In this engaging unit, you'll create a jokes app, applying your knowledge of arrays, structs, and SwiftUI's interactive elements such as alerts and sheets. You will learn to organize collections of jokes, display random selections, and manage user interactions effectively. The app will incorporate alerts to provide feedback and interactivity, enhancing your skills in handling dynamic content and user experience. This project offers an entertaining and practical way to deepen your understanding of data structures and SwiftUI functionalities.",
-        markdownId: "jokes",
+        description: "In this unit, you'll develop a jokes app incorporating alerts, structs, and arrays. You'll manage dynamic content effectively, provide interactive user feedback, and design interfaces that offer engaging user experiences and entertainment.",
+        markdownId: "jokes"
       },
       {
         id: "unit_04C",
-        title: "Quiz App 2.0",
+        title: "Quiz v2",
         idDisplay: "Unit 04C",
-        subtitle:
-          "Expand the basic quiz app with advanced UI elements like progress indicators, sheets and custom buttons.",
-        description:
-          "In this advanced unit, you will expand upon the foundational quiz app by integrating sophisticated UI components such as progress indicators to visually track quiz progress, custom buttons for improved interactivity, and sheets for displaying additional information and feedback. You'll gain insights into managing complex user interfaces, creating reusable components, and refining the overall user experience. This unit significantly enhances your SwiftUI expertise by pushing the boundaries of interactivity and design flexibility.",
-        markdownId: "quiz",
+        subtitle: "Expand the basic quiz app with advanced UI elements like progress indicators, sheets and custom buttons.",
+        description: "In this unit, you'll upgrade your quiz app using progress indicators, sheets, and custom buttons. These advanced UI elements will significantly improve the user experience by providing clear navigation and interactive enhancements.",
+        markdownId: "quiz"
       },
       {
         id: "unit_05",
         title: "Recipe App",
         idDisplay: "Unit 05",
-        subtitle:
-          "Develop a fully-functional CRUD (create, read, update, delete) app for recipes, using SwiftUI lists, navigation views, and modals.",
-        description:
-          "In this comprehensive unit, you will build a complete recipe management application featuring CRUD (create, read, update, delete) operations. You'll leverage SwiftUI lists for managing data collections, navigation views for seamless app navigation, and modals for creating and editing recipes interactively. This project emphasizes data handling, user input management, state persistence, and advanced layout techniques, preparing you to build robust, user-friendly applications.",
-        markdownId: "list",
+        subtitle: "Develop a fully-functional CRUD (create, read, update, delete) app for recipes, using SwiftUI lists, navigation views, and modals.",
+        description: "In this unit, you'll create a complete recipe app with full CRUD capabilities. You'll effectively manage recipe data using SwiftUI lists, modals, and navigation views, delivering an organized and intuitive user interface.",
+        markdownId: "list"
       },
       {
         id: "unit_06",
         title: "Capstone Project",
         idDisplay: "Unit 06",
-        subtitle:
-          "Apply your SwiftUI skills to design and prototype your own single-feature app.",
-        description:
-          "In this culminating unit, you'll integrate and showcase all your learned skills by designing and prototyping your own single-feature SwiftUI app. You will follow structured app development methodologies from ideation, wireframing, and UI planning to coding and prototyping. Throughout this project, you'll employ best practices in design, usability, state management, and interactivity, ultimately delivering a polished, functional application that highlights your comprehensive understanding of SwiftUI.",
-        markdownId: "project",
+        subtitle: "Apply your SwiftUI skills to design and prototype your own single-feature app.",
+        description: "In this final unit, you'll showcase your SwiftUI skills by developing a personalized single-feature app. You'll integrate all previously learned techniques to create a polished, interactive prototype that demonstrates your full app-development capabilities.",
+        markdownId: "project"
       },
       {
         id: "unit_07",
         title: "ChatGPT and APIs",
         idDisplay: "Project 01",
         subtitle: "Build an app integrating ChatGPT using OpenAI APIs.",
-        description:
-          "In this exciting advanced project, you'll integrate OpenAI's ChatGPT API into your SwiftUI app, allowing your application to interact dynamically with users. You'll learn to manage API requests, parse JSON data, and present AI-generated responses within your app. This unit covers key concepts including HTTP requests, asynchronous programming, and data handling, equipping you with the skills to enhance your apps with intelligent conversational capabilities.",
+        description: "In this unit, you'll integrate ChatGPT into your SwiftUI app using OpenAI APIs. You'll practice managing API requests, handling JSON data, and incorporating interactive conversational features to enhance user experiences within your apps.",
         markdownId: "chatgpt_and_apis",
-        disabled: true,
+        disabled: true
       },
       {
         id: "unit_08",
         title: "Solar System",
         idDisplay: "Project 02",
-        subtitle:
-          "Explore the Solar System with Augmented Reality and SwiftUI.",
-        description:
-          "In this exciting Augmented Reality (AR) project, you will build an interactive Solar System exploration app using SwiftUI and Apple's AR frameworks. You'll create 3D models of planets, implement AR experiences to visualize celestial objects in real-world space, and add interactive gestures and animations. This unit offers a deep dive into ARKit, SwiftUI integration, spatial reasoning, and interactive visual design, preparing you to develop innovative, immersive educational applications.",
+        subtitle: "Explore the Solar System with Augmented Reality and SwiftUI.",
+        description: "In this unit, you'll create an interactive Solar System app using Augmented Reality and SwiftUI. You'll learn to display 3D models, implement gestures, and build engaging AR experiences, bringing planets and space exploration vividly to life.",
         markdownId: "",
-        disabled: true,
+        disabled: true
       },
       {
         id: "unit_09",
         title: "Vision Game",
         idDisplay: "Project 03",
-        subtitle:
-          "Create a game using the built-in Computer Vision framework to encourage physical activity.",
-        description:
-          "This interactive unit guides you through creating a game leveraging Apple's built-in Computer Vision framework combined with SwiftUI. You'll learn how to track body movements, interpret gestures, and trigger game events based on real-time camera input. The game you develop will encourage physical activity by requiring users to move and interact with visual elements on the screen, bridging the gap between digital and physical experiences. Skills developed include real-time data processing, interactive design, and incorporating motion-based interactions into apps.",
+        subtitle: "Create a game using the built-in Computer Vision framework to encourage physical activity.",
+        description: "In this unit, you'll develop a game that uses Apple's Computer Vision framework. You'll learn to detect and interpret physical movements, creating an interactive experience that encourages users to move and engage physically with your app.",
         markdownId: "",
-        disabled: true,
+        disabled: true
       },
       {
         id: "unit_10",
-        title: "ML/AR Project",
+        title: "Project",
         idDisplay: "Project 04",
         subtitle: "Create a Machine Learning or Augmented Reality project.",
-        description:
-          "In this culminating unit, you have the option to pursue either a Machine Learning or Augmented Reality (AR) project, applying your advanced SwiftUI and programming skills. You'll select, plan, and develop your unique project, leveraging advanced concepts from Swift, SwiftUI, and Apple's frameworks for AR and ML. This project emphasizes creativity, problem-solving, and application of theoretical knowledge to practical scenarios, showcasing your comprehensive skills in app development.",
+        description: "In this final project, you'll apply your advanced skills by creating an app focused on Machine Learning or Augmented Reality. You'll independently design, develop, and prototype an innovative application, showcasing your full coding capabilities.",
         markdownId: "",
-        disabled: true,
-      },
+        disabled: true
+      }
     ],
   },
   // {
