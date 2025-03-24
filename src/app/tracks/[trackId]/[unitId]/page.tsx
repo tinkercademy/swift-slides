@@ -15,17 +15,20 @@ import "./reveal-theme.scss";
 import "./xcode-dark.scss";
 import styles from "./page.module.scss";
 import Link from "next/link";
+import UnitsNavigator from "@/components/unitsNavigator";
 
 async function resolveParams(
   params: Promise<{ trackId: string; unitId: string }>
-): Promise<{ track: TrackEntry; unit: UnitEntry }> {
+): Promise<{ track: TrackEntry; unit: UnitEntry; unitIndex: number; }> {
   const { trackId, unitId } = await params;
   const track = tracks.find((e) => e.id === trackId);
-  const unit = track?.units.find((e: UnitEntry) => e.id === unitId);
-  if (!track || !unit) {
+  const unitIndex = track?.units.findIndex((e: UnitEntry) => e.id === unitId);
+  console.log(unitIndex)
+  if (!track || unitIndex === undefined || unitIndex === -1) {
     notFound();
   }
-  return { track, unit };
+  const unit = track.units[unitIndex]
+  return { track, unit, unitIndex };
 }
 
 export default async function SlidesPage({
@@ -35,7 +38,7 @@ export default async function SlidesPage({
   params: Promise<{ trackId: string; unitId: string }>;
   searchParams: Promise<{ "print-pdf"?: boolean }>;
 }) {
-  const { track, unit } = await resolveParams(params);
+  const { track, unit, unitIndex } = await resolveParams(params);
 
   const color = getColorFromTrack(!!track.id ? track.id : undefined);
   const themeStyles = {
@@ -49,7 +52,7 @@ export default async function SlidesPage({
 
   const isPrint = (await searchParams)["print-pdf"] !== undefined;
 
-  // TODO: update to use Suspense
+  // TODO: update to use Suspense when using a proper database that fetches from elsewhere
 
   return (
     <div style={themeStyles}>
@@ -62,7 +65,6 @@ export default async function SlidesPage({
       <div className={styles.headers}>
         <Breadcrumb />
         <h1>{track?.title}</h1>
-        <Link href={`unit_${("0"+(Number(unit.id.split("_")[1])+1).toString()).slice(-2)}`}>NEXT</Link>
       </div>
       <RevealjsClientWrapper isPrint={isPrint} track={track} unit={unit}>
         <div className="slides">
@@ -122,9 +124,7 @@ export default async function SlidesPage({
                 height={576 / 7}
                 alt="Tinkercademy Logo"
               />
-              <p>
-                Swift Coding Club • Track {track.id.slice(-1).toUpperCase()}
-              </p>
+              <p>Swift Coding Club • Track {track.id.slice(-1).toUpperCase()}</p>
             </div>
           </section>
         </div>
@@ -137,6 +137,25 @@ export default async function SlidesPage({
       </RevealjsClientWrapper>
       <div className={styles.details}>
         <p>{unit.description}</p>
+        <div className={styles.navigation}>
+          {unitIndex > 0 && (
+            <Link
+              href={`/tracks/${track.id}/${track.units[unitIndex - 1].id}`}>
+              <div>
+                <p>Back</p>
+                <h2>{track.units[unitIndex - 1].title}</h2>
+              </div>
+            </Link>
+          )}
+          {unitIndex < track.units.length - 1 && (
+            <Link href={`/tracks/${track.id}/${track.units[unitIndex + 1].id}`}>
+              <div>
+                <p>Next</p>
+                <h2>{track.units[unitIndex + 1].title}</h2>
+              </div>
+            </Link>
+          )}
+        </div>
       </div>
     </div>
   );

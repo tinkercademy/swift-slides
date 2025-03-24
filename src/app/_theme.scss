@@ -49,6 +49,7 @@
         --theme-border: #{color.scale(c.color(black), $lightness: 15%)};
 
         --theme-p-color: #{c.color(white)};
+        --theme-p-color2: #{color.scale(c.color(white), $lightness: -20%)};
         --theme-h1-color: #{c.color(white)};
         --theme-h1-gradient: #{c.color(white-gradient)};
         --theme-a-color: #{c.color(tinkercademy-pink)};
@@ -68,6 +69,7 @@
         --theme-border: #{color.scale(c.color(white), $lightness: -20%)};
 
         --theme-p-color: #{c.color(black)};
+        --theme-p-color2: #{color.scale(c.color(black), $lightness: 20%)};
         --theme-h1-color: #{c.color(black)};
         --theme-h1-gradient: #{c.color(black-gradient)};
         --theme-a-color: #{c.color(tinkercademy-pink)};
