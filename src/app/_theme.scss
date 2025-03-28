@@ -58,7 +58,7 @@
     :has(.light) {
         --theme-background: #{c.color(white)};
         --theme-background2: #{color.scale(c.color(white), $lightness: -5%)};
-        --theme-background3: #{color.scale(c.color(white), $lightness: -20%)};
+        --theme-background3: #{color.scale(c.color(white), $lightness: -15%)};
         --theme-foreground: #{c.color(black)};
         --theme-border: #{color.scale(c.color(white), $lightness: -20%)};
 

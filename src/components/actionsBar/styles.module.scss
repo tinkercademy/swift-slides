@@ -33,9 +33,9 @@
         .hoverText {
             cursor: default;
             position: absolute;
-            background-color: var(--theme-background2);
+            background-color: var(--theme-background3);
             padding: 10px;
-            border-radius: 5px;
+            border-radius: 10px;
             text-align: center;
             top: 50px;
             // center the popout
@@ -52,7 +52,7 @@
                 height: 0;
                 border-left: 10px solid transparent;
                 border-right: 10px solid transparent;
-                border-bottom: 10px solid var(--theme-background2);
+                border-bottom: 10px solid var(--theme-background3);
                 top: -10px;
                 left: 50%;
                 transform: translateX(-50%);
