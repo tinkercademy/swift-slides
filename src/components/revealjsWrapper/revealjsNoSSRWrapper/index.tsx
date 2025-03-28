@@ -11,7 +11,7 @@ import styles from "./styles.module.scss";
 import "./slides.scss";
 import { ActionsBar } from '../../actionsBar';
 import { getColorFromTrack, TrackEntry, UnitEntry } from '@/app/tracks/track';
-import { useDarkMode } from 'usehooks-ts';
+import { useDarkMode } from "@/hooks/useDarkMode";
 
 function handleOpenWithQuery(name: string, value: string) {
     const url = new URL(window.location.href)

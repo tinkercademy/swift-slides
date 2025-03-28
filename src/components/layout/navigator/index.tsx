@@ -5,12 +5,12 @@ import styles from "./styles.module.scss";
 import Link from "next/link";
 import { ActionsBar } from "../../actionsBar";
 import { FaMoon, FaSun } from "react-icons/fa6";
-import { useDarkMode } from "usehooks-ts";
+import { useDarkMode } from "@/hooks/useDarkMode";
 import { ResponsiveImage } from "@/components/responsiveImage";
 
 export function Navigator() {
   const [isScrolled, setIsScrolled] = useState(false);
-  const { toggle: toggleDarkMode, isDarkMode } = useDarkMode({ initializeWithValue: false })
+  const { toggle: toggleDarkMode, isDarkMode } = useDarkMode()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -37,11 +37,11 @@ export function Navigator() {
         </Link>
       </div>
       <ActionsBar actions={[
-        // {
-        //   name: "theme",
-        //   onClick: () => { toggleDarkMode() },
-        //   icon: (isDarkMode ? <FaSun /> : <FaMoon />)
-        // }
+        {
+          name: "theme",
+          onClick: () => { toggleDarkMode() },
+          icon: (isDarkMode ? FaSun : FaMoon)
+        }
       ]} />
     </nav>
   );
