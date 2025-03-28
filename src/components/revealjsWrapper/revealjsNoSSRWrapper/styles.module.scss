@@ -12,8 +12,6 @@ body:has(.embedPlayer.fullscreen) {
     box-sizing: border-box;
 
     .deckContainer {
-        background-color: var(--r-background-color);
-
         position: absolute;
         inset: 0;
         z-index: 2;
@@ -21,10 +19,6 @@ body:has(.embedPlayer.fullscreen) {
 
     &.fullscreen .deckContainer {
         z-index: 11;
-    }
-
-    &.print .deckContainer {
-        background-color: var(--colors-purewhite);
     }
 
     .actions {

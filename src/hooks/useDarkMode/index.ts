@@ -6,19 +6,15 @@ export function useDarkMode() {
 
     const isDarkMode = value
 
-    const toggle = () => {
+    const toggleDarkMode = () => {
         setValue(!value)
     }
 
-    const enable = () => {
-        setValue(true)
-    }
-
-    const disable = () => {
-        setValue(false)
+    const setDarkMode = (value: boolean) => {
+        setValue(value)
     }
 
     return {
-        isDarkMode, toggle, enable, disable
+        isDarkMode, toggleDarkMode, setDarkMode
     }
 }

@@ -24,7 +24,7 @@ export function RevealjsNoSSRWrapper({ children, isPrint, track, unit }: { child
     const deckRef = useRef<Reveal.Api | null>(null);
 
     const [isFullScreen, setIsFullScreen] = useState(false);
-    const { isDarkMode } = useDarkMode()
+    const { isDarkMode, setDarkMode } = useDarkMode()
 
     const color = getColorFromTrack(!!track.id ? track.id : undefined);
     const themeStyles = {
@@ -77,6 +77,7 @@ export function RevealjsNoSSRWrapper({ children, isPrint, track, unit }: { child
     useEffect(() => {
         if (isPrint) {
             setIsFullScreen(true)
+            setDarkMode(false)
             setTimeout(() => {
                 window.print()
                 window.close()
@@ -101,11 +102,6 @@ export function RevealjsNoSSRWrapper({ children, isPrint, track, unit }: { child
                             onClick: () => { handleOpenWithQuery("print-pdf", "true") },
                             icon: FaPrint,
                         },
-                        // {
-                        //     name: "popout",
-                        //     onClick: () => { handleOpenWithQuery("fullscreen", "true") },
-                        //     icon: FaUpRightFromSquare
-                        // },
                         {
                             name: "edit",
                             hoverText: "Suggest edits",
@@ -118,7 +114,7 @@ export function RevealjsNoSSRWrapper({ children, isPrint, track, unit }: { child
                 </div>
             )}
             <div className={styles.deckContainer}>
-                <div className="reveal" ref={deckDivRef}> {/* className="reveal reveal-viewport slide embedded center has-vertical-slides has-horizontal-slides ready" */}
+                <div className={`reveal ${isPrint ? "print" : ""}`} ref={deckDivRef}> {/* className="reveal reveal-viewport slide embedded center has-vertical-slides has-horizontal-slides ready" */}
                     {children}
                 </div>
             </div>

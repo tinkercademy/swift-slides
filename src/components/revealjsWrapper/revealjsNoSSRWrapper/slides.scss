@@ -363,72 +363,52 @@
     }
   }
 
+}
 
-  /*********************************************
+.reveal-viewport.print {
+  background: var(--colors-purewhite) !important;
+}
+
+
+/*********************************************
    * PRINT BACKGROUND
    *********************************************/
-  /* To format slides into a printable pdf version */
-  @media print {
+/* To format slides into a printable pdf version */
+@media print {
 
-    /* Hide video elements */
-    video,
-    iframe,
-    .video-container {
-      display: none !important;
-    }
+  /* Hide video elements */
+  video,
+  iframe,
+  .video-container {
+    display: none !important;
+  }
 
-    /* Style links to show their URL */
-    a[href]:after {
-      content: " (" attr(href) ")";
-      font-style: italic;
-    }
+  /* Style links to show their URL */
+  a[href]:after {
+    content: " (" attr(href) ")";
+    font-style: italic;
+  }
 
-    /* Don't show URL for internal anchors */
-    a[href^="#"]:after {
-      content: "";
-    }
+  /* Don't show URL for internal anchors */
+  a[href^="#"]:after {
+    content: "";
+  }
 
-    /* Optional: Don't show URL for images */
-    a[href^="javascript:"]:after,
-    a[href^="#"]:after,
-    a:has(img):after {
-      content: "";
-    }
+  /* Optional: Don't show URL for images */
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after,
+  a:has(img):after {
+    content: "";
+  }
 
-    .reveal-viewport .slides {
+  .reveal-viewport {
+    .slides {
       font-size: 36px;
-      // background-color: white !important;
-      // color: black !important;
     }
 
-    .reveal-viewport .controls,
-    .reveal-viewport .progress {
+    .controls,
+    .progress {
       display: none !important;
     }
-
-    /* Ensure all text is black and background is white */
-    // body,
-    // .reveal-viewport .slides section,
-    // .reveal-viewport .slides {
-    //   background-color: white !important;
-    //   color: black !important;
-    // }
-
-    /* Style headings */
-    // h1,
-    // h2,
-    // h3,
-    // h4,
-    // h5,
-    // h6 {
-    //   background-color: white !important;
-    //   color: black !important;
-    // }
-
-    /* Ensure all elements have a white background */
-    // * {
-    //   background-color: white !important;
-    //   color: black !important;
-    // }
   }
 }
