@@ -10,7 +10,8 @@ import RevealNotes from "reveal.js/plugin/notes/notes";
 import styles from "./styles.module.scss";
 import "./slides.scss";
 import { ActionsBar } from '../../actionsBar';
-import { TrackEntry, UnitEntry } from '@/app/tracks/track';
+import { getColorFromTrack, TrackEntry, UnitEntry } from '@/app/tracks/track';
+import { useDarkMode } from 'usehooks-ts';
 
 function handleOpenWithQuery(name: string, value: string) {
     const url = new URL(window.location.href)
@@ -23,6 +24,17 @@ export function RevealjsNoSSRWrapper({ children, isPrint, track, unit }: { child
     const deckRef = useRef<Reveal.Api | null>(null);
 
     const [isFullScreen, setIsFullScreen] = useState(false);
+    const { isDarkMode } = useDarkMode()
+
+    const color = getColorFromTrack(!!track.id ? track.id : undefined);
+    const themeStyles = {
+        "--r-link-color": !isDarkMode ? `var(--colors-${color}-darklink)` : `var(--colors-${color}-link)`,
+        "--r-link-color-dark": isDarkMode ? `var(--colors-${color}-darklink)` : `var(--colors-${color}-link)`,
+        "--r-link-color-hover": isDarkMode ? `var(--colors-${color}-darklink)` : `var(--colors-${color}-link)`,
+        "--r-hover-shadow-color": `var(--colors-${color}-hovershadow)`,
+        "--r-selection-background-color": `var(--colors-${color}-selectbg)`,
+        "--r-gradient": `var(--colors-${color}-gradient)`,
+    } as React.CSSProperties;
 
     useEffect(() => {
         // Prevents double initialization in strict mode
@@ -75,7 +87,7 @@ export function RevealjsNoSSRWrapper({ children, isPrint, track, unit }: { child
     return (
         <div
             className={`${styles.embedPlayer} ${isFullScreen ? styles.fullscreen : ""} ${isPrint ? styles.print : ""}`}
-            style={{ position: isFullScreen ? "static" : "relative" }}>
+            style={{ ...themeStyles, position: isFullScreen ? "static" : "relative" }}>
             {!isPrint && (
                 <div className={styles.actions}>
                     <ActionsBar actions={[

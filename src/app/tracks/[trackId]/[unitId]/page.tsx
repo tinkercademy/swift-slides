@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import { tracks } from "../../../../../public/curriculum";
-import { getColorFromTrack, TrackEntry, UnitEntry } from "../../track";
+import { TrackEntry, UnitEntry } from "../../track";
 
 import { Breadcrumb } from "@/components/breadcrumb";
 import { SlidesQRCode } from "@/components/slidesQrCode";
@@ -39,22 +39,13 @@ export default async function SlidesPage({
 }) {
   const { track, unit, unitIndex } = await resolveParams(params);
 
-  const color = getColorFromTrack(!!track.id ? track.id : undefined);
-  const themeStyles = {
-    "--r-link-color": `var(--colors-${color}-link)`,
-    "--r-link-color-dark": `var(--colors-${color}-darklink)`,
-    "--r-link-color-hover": `var(--colors-${color}-hoverlink)`,
-    "--r-hover-shadow-color": `var(--colors-${color}-hovershadow)`,
-    "--r-selection-background-color": `var(--colors-${color}-selectbg)`,
-    "--r-gradient": `var(--colors-${color}-gradient)`,
-  } as React.CSSProperties;
-
   const isPrint = (await searchParams)["print-pdf"] !== undefined;
 
   // TODO: update to use Suspense when using a proper database that fetches from elsewhere
+  // TODO: refactor out any use of `track` or `unit` out of RevealjsClientWrapper, all track/unit logic should be handled here.
 
   return (
-    <div style={themeStyles}>
+    <div>
       <div
         className={styles.printCover}
         style={!isPrint ? { display: "none" } : {}}

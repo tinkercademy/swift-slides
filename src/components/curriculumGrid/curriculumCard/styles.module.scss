@@ -29,23 +29,23 @@ a.card {
   &:hover {
     z-index: 3;
     &.blue, & { // default is blue
-      box-shadow: 0px 0px 64px 2px var(--colors-blue-hovershadow);
-      border-color: color.adjust(c.color(blue-hovershadow), $lightness: 10%);
+      box-shadow: 0px 0px 64px 2px color.change(c.color(blue-darklink), $alpha: 50%);
+      border-color: color.change(color.adjust(c.color(blue-darklink), $lightness: 10%), $alpha: 50%);
     }
     
     &.green {
-      box-shadow: 0px 0px 64px 2px var(--colors-green-hovershadow);
-      border-color: color.adjust(c.color(green-hovershadow), $lightness: 10%)
+      box-shadow: 0px 0px 64px 2px color.change(c.color(green-darklink), $alpha: 50%);
+      border-color: color.change(color.adjust(c.color(green-darklink), $lightness: 10%), $alpha: 50%);
     }
     
     &.pink {
-      box-shadow: 0px 0px 64px 2px var(--colors-pink-hovershadow);
-      border-color: color.adjust(c.color(pink-hovershadow), $lightness: 10%)
+      box-shadow: 0px 0px 64px 2px color.change(c.color(pink-darklink), $alpha: 50%);
+      border-color: color.change(color.adjust(c.color(pink-darklink), $lightness: 10%), $alpha: 50%);
     }
     
     &.red {
-      box-shadow: 0px 0px 64px 2px var(--colors-red-hovershadow);
-      border-color: color.adjust(c.color(red-hovershadow), $lightness: 10%)
+      box-shadow: 0px 0px 64px 2px color.change(c.color(red-darklink), $alpha: 50%);
+      border-color: color.change(color.adjust(c.color(red-darklink), $lightness: 10%), $alpha: 50%);
     }
   }
 

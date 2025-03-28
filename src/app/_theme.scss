@@ -53,12 +53,6 @@
         --theme-h1-color: #{c.color(white)};
         --theme-h1-gradient: #{c.color(white-gradient)};
         --theme-a-color: #{c.color(tinkercademy-pink)};
-        // --theme-a_dark-color: 
-        // --theme-a_hover-color: 
-
-        //     --r-link-color: var(--colors-blue-link);
-        //   --r-link-color-dark: var(--colors-blue-darklink);
-        //   --r-link-color-hover: var(--colors-blue-hoverlink);
     }
 
     :has(.light) {
