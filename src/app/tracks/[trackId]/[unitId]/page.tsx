@@ -15,7 +15,6 @@ import "./reveal-theme.scss";
 import "./xcode-dark.scss";
 import styles from "./page.module.scss";
 import Link from "next/link";
-import UnitsNavigator from "@/components/unitsNavigator";
 
 async function resolveParams(
   params: Promise<{ trackId: string; unitId: string }>
