@@ -10,7 +10,7 @@ import { ResponsiveImage } from "@/components/responsiveImage";
 
 export function Navigator() {
   const [isScrolled, setIsScrolled] = useState(false);
-  const { toggle: toggleDarkMode, isDarkMode } = useDarkMode()
+  const { toggleDarkMode, isDarkMode } = useDarkMode()
 
   useEffect(() => {
     const handleScroll = () => {
