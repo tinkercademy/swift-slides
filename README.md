@@ -6,7 +6,7 @@ Tinkercademy Swift Explorer Slides website, rewritten in React.js (after previou
 
 ### Installation
 
-- Ensure you have [Node.JS](https://nodejs.org) and [Bun](https://www.npmjs.com/package/bun) installed.
+ - Ensure you have [Node.js 22+](https://nodejs.org) and [Bun](https://www.npmjs.com/package/bun) installed.
 - Run the development server with Bun (npm works too technically but less cool🤓)
 ```
 cd swift-slides
