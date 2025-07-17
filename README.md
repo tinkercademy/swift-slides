@@ -10,6 +10,7 @@ Slides website for the Swift Explorer programme built with Next.js and Reveal.js
 
 ### Install and run
 ```bash
+
 bun install
 bun run dev
 ```
