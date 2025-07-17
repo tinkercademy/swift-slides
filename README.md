@@ -1,97 +1,63 @@
-# swift-slides: Tinkercademy Swift Explorer Slides website
+# Swift Slides
 
-Tinkercademy Swift Explorer Slides website, rewritten in React.js (after previously being written in plain HTML/CSS/JS)!
+Slides website for the Swift Explorer programme built with Next.js and Reveal.js.
 
-## Introduction
+## Getting started
 
-### Installation
+### Requirements
+- Node.js 18+
+- [Bun](https://bun.sh) for installing dependencies (npm also works).
 
- - Ensure you have [Node.js 22+](https://nodejs.org) and [Bun](https://www.npmjs.com/package/bun) installed.
-- Run the development server with Bun (npm works too technically but less cool🤓)
-```
-cd swift-slides
+### Install and run
+```bash
+
 bun install
 bun run dev
 ```
-
-### Motivation
-
-This `README.md` file aims to onboard future maintainers of the `swift-slides` repository, which refer to 2 groups of people, please read the required sections in FULL before making changes to the codebase. Thank you!
-- Lesson content developers: Read [Updating Lesson Content](#updating-lesson-content)
-- Codebase maintainers: Read everything!
-
-## Updating Lesson Content
-
-You may need to do the following while updating lesson content <!-- rephrase -->
-1. Addding a new track/unit
-2. Adding/modifying slides
-3. Adding media to slides
-
-### Adding New Track/Unit
-
-
-
-## Understanding the Codebase Structure
-
-Future codebase maintainers should have at least basic understanding of the following technologies (except Reveal.js). The following sections will seek to lay out the structure and coding practices of the codebase to ensure uniformity.
-
-Tech stack:
-- Written in [React](https://react.dev/) with [Next.js](https://nextjs.org/).
-- Styled with [Sass](https://sass-lang.com/).
-- Slides ported over from Keynote and presented with [Reveal.js](https://revealjs.com/).
-
-### Structure
-
-As this is a Next.js project, we follow the typical structure of a Next.js 15 App Router project.
-
+Or with npm:
+```bash
+npm install
+npm run dev
 ```
-swift-slides/
-├── src/
-│   ├── app/
-│   │   ├── tracks/
-│   │   │   ├── [trackId]/
-│   │   │   │   ├── page.tsx
-│   │   │   │   ├── page.module.scss
-│   │   ├── _colors.scss
-│   ├── components/
-│   │   ├── navigator/
-│   │   │   ├── index.tsx
-│   │   │   ├── styles.module.scss
-│   ├── context/
-│   │   ├── ThemeContext.tsx
-│   ├── data/
-│   │   ├── curriculum/
-│   ├── pages/
-│   │   ├── _app.tsx
-│   ├── styles/
-│   │   ├── globals.scss
-│   ├── utils/
-│   │   ├── helpers.ts
+The site will be available at <http://localhost:3000>.
+
+### Production build
+```bash
+bun run build
+bun run start
 ```
 
-### Reveal.js (imported in a Client component)
+## Project structure
+```
+src/
+  app/          Next.js App Router pages and global styles
+    tracks/     [trackId]/[unitId] slide pages
+    playground/ Interactive playground
+  components/   Reusable React components
+  hooks/        Custom hooks
+public/
+  assets/       Static images
+  markdown/     Slide content in Markdown
+  curriculum.ts Track and unit definitions
+```
 
-Reveal.js is used to present slides. It is imported in a client component to ensure compatibility with Next.js's server-side rendering (SSR). 
+Markdown files for the slides live under `public/markdown/<track>`.
+Curriculum data is defined in `public/curriculum.ts` and referenced by the pages in `src/app/tracks`.
 
-#### Client Components
-Client components are used for interactive parts of the application. They are rendered on the client side and can use hooks like `useState` and `useEffect`.
+## Updating lesson content
+1. Edit `public/curriculum.ts` and add a new track object or extend an existing one with additional units.  Each unit entry specifies the `markdownId` for its slide deck.
+2. Create the slide deck in `public/markdown/<track>/<markdownId>.md`.  Use `---vertical---` to split vertical slides if needed.
+3. Place any images referenced in the Markdown under `public/assets`.
+4. Update `src/app/tracks/track.ts` if you need to assign a new color for the track.
 
-#### Server Components
-Server components are rendered on the server side. They are used for static content and can fetch data during the build process.
+## Reveal.js and Next.js
+Slides are rendered with Reveal.js inside a client component.  `src/app/tracks/[trackId]/[unitId]/page.tsx` wraps the `RevealjsClientWrapper`, which dynamically imports the non‑SSR wrapper so the slideshow can access browser APIs.  The wrapper reads the Markdown file via data attributes on a `<section>` element.
 
-#### Non-SSR Components
-Non-SSR components are components that should not be server-side rendered. They are typically used for third-party libraries that do not support SSR.
+## Theming
+Colors are defined in `src/app/_colors.scss` and mapped to CSS variables in `src/app/_theme.scss`.  The `ThemeManager` component toggles the `dark` or `light` class based on `useDarkMode`, allowing runtime theme switching.
 
-### Styles
-
-Styles are written in [Sass](https://sass-lang.com/), with `.scss` files, which is seamlessly cross compatible with all versions of normal `.css` files. CSS modules are used for component-based styles, and global CSS files are used mainly for theming and Reveal.js styles.
-
-### Colors
-
-All colors are defined in `app/_colors.scss`. 
-
-Some legacy code may reference colors not defined in `_colors.scss`. In such cases, update the legacy code to use the colors defined in `_colors.scss`.
-
-### Themes
-
-The application supports light and dark themes. Theme is managed by the `useDarkMode` hook and a class is passed to the `<body>` tag via a `ThemeManager` wrapper.
+## Contributing
+1. Fork this repository and create a feature branch.
+2. Install dependencies with Bun or npm.
+3. Run `bun run lint` (or `npm run lint`) before committing.
+4. Open a pull request describing your changes.
