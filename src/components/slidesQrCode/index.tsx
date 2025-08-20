@@ -20,7 +20,7 @@ export function SlidesQRCode() {
   const [currentURL, setCurrentURL] = useState("");
 
   useEffect(() => {
-    if (process) {
+    if (typeof window !== 'undefined') {
       const url = new URL(window.location.href);
       url.hash = "";
       url.search = "";

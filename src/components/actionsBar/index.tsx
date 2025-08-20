@@ -7,9 +7,14 @@ export function ActionsBar({ actions }: { actions: Action[] }) {
     <div className={styles.icons}>
       {actions.map((a) => (
         <div key={a.name}>
-          <span onClick={a.onClick}>
+          <button 
+            onClick={a.onClick}
+            aria-label={a.hoverText || a.name}
+            className={styles.actionButton}
+            type="button"
+          >
             <a.icon />
-          </span>
+          </button>
           {!!a.hoverText && (
             <small className={styles.hoverText}>{a.hoverText}</small>
           )}

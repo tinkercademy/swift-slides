@@ -22,9 +22,12 @@ import { TrackEntry, UnitEntry } from "@/app/tracks/track";
 
 import dynamic from "next/dynamic";
 
-const RevealjsNoSSRWrapper = dynamic(() =>
-    import('@/components/revealjsWrapper/revealjsNoSSRWrapper').then(module => module.RevealjsNoSSRWrapper),
-    { ssr: false }
+const RevealjsNoSSRWrapper = dynamic(
+    () => import('@/components/revealjsWrapper/revealjsNoSSRWrapper').then(mod => mod.RevealjsNoSSRWrapper),
+    { 
+        ssr: false,
+        loading: () => <div>Loading slides...</div>
+    }
 );
 
 export function RevealjsClientWrapper({ children, isPrint, track, unit }: { children: React.ReactNode, isPrint: boolean, track: TrackEntry, unit: UnitEntry }) {

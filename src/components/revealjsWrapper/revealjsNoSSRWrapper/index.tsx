@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import { FaExpand, FaCompress, FaPrint, FaUpRightFromSquare, FaPenToSquare } from "react-icons/fa6";
+import { FaExpand, FaCompress, FaPrint, FaPenToSquare } from "react-icons/fa6";
 import Reveal from 'reveal.js';
 import RevealMarkdown from "reveal.js/plugin/markdown/markdown";
 import RevealHighlight from "reveal.js/plugin/highlight/highlight";
@@ -58,7 +58,7 @@ export function RevealjsNoSSRWrapper({ children, isPrint, track, unit }: { child
                     deckRef.current.destroy();
                     deckRef.current = null;
                 }
-            } catch (e) {
+            } catch (_e) {
                 console.warn("Reveal.js destroy call failed.");
             }
         };
@@ -83,7 +83,7 @@ export function RevealjsNoSSRWrapper({ children, isPrint, track, unit }: { child
                 window.close()
             }, 2000); // Allow time for page to load before printing
         }
-    }, [isPrint])
+    }, [isPrint, setDarkMode])
 
     return (
         <div

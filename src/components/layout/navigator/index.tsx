@@ -40,7 +40,8 @@ export function Navigator() {
         {
           name: "theme",
           onClick: () => { toggleDarkMode() },
-          icon: (isDarkMode ? FaSun : FaMoon)
+          icon: (isDarkMode ? FaSun : FaMoon),
+          hoverText: isDarkMode ? "Switch to Light Mode" : "Switch to Dark Mode"
         }
       ]} />
     </nav>

@@ -22,7 +22,6 @@ async function resolveParams(
   const { trackId, unitId } = await params;
   const track = tracks.find((e) => e.id === trackId);
   const unitIndex = track?.units.findIndex((e: UnitEntry) => e.id === unitId);
-  console.log(unitIndex)
   if (!track || unitIndex === undefined || unitIndex === -1) {
     notFound();
   }
@@ -62,11 +61,13 @@ export default async function SlidesPage({
           <section>
             <div>
               <div style={{ textAlign: "left" }}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src="/assets/logos/tinkercademy.png"
                   alt="Tinkercademy Logo"
                   height="128px"
                 />
+                {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src="https://raw.githubusercontent.com/swiftinsg/branding/main/logos/icons/png/coloured%20-%20dark%20background.png"
                   alt="Swiftinsg Logo"

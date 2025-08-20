@@ -24,10 +24,17 @@
             scale: 1;
         }
 
-        span svg {
-            padding: 15px;
-            font-size: 20px;
+        .actionButton {
+            background: none;
+            border: none;
+            color: inherit;
+            padding: 0;
             cursor: pointer;
+            
+            svg {
+                padding: 15px;
+                font-size: 20px;
+            }
         }
 
         .hoverText {
