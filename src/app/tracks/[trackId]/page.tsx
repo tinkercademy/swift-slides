@@ -51,6 +51,20 @@ export default async function UnitsPage({
       unit.subtitle.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
+  // Pre-compute available webp cover filenames for this track to avoid repeated fs checks
+  const availableCovers = new Set<string>();
+  try {
+    const dir = path.join(process.cwd(), "public", "covers", track.id);
+    const entries = fs.readdirSync(dir, { withFileTypes: true });
+    for (const e of entries) {
+      if (e.isFile() && e.name.endsWith(".webp")) {
+        availableCovers.add(e.name);
+      }
+    }
+  } catch {
+    // directory might not exist; fall back to empty set
+  }
+
   return (
     <div>
       <div className={styles.flexbox}>
@@ -63,9 +77,11 @@ export default async function UnitsPage({
       <CurriculumGrid>
         {filteredUnits.length > 0 ? (
           filteredUnits.map((unit: UnitEntry) => {
-            const rel = `/covers/${track.id}/${unit.id}.webp`;
-            const abs = path.join(process.cwd(), "public", rel);
-            const imgURL = fs.existsSync(abs) ? rel : "/covers/placeholder.webp";
+            const fileName = `${unit.id}.webp`;
+            const rel = `/covers/${track.id}/${fileName}`;
+            const imgURL = availableCovers.has(fileName)
+              ? rel
+              : "/covers/placeholder.webp";
             return (
               <CurriculumCard
                 key={unit.id}

@@ -8,12 +8,14 @@ import { getColorFromTrack } from "./track";
 import { CurriculumCard } from "@/components/curriculumGrid/curriculumCard";
 import { CurriculumGrid } from "@/components/curriculumGrid/curriculumGrid";
 
+// Helper moved outside of component to avoid re-creation per render
+function coverForTrack(trackId: string) {
+  const rel = `/covers/${trackId}/track.webp`;
+  const abs = path.join(process.cwd(), "public", rel);
+  return fs.existsSync(abs) ? rel : "/covers/placeholder.webp";
+}
+
 export default async function TracksPage() {
-  const coverForTrack = (trackId: string) => {
-    const rel = `/covers/${trackId}/track.webp`;
-    const abs = path.join(process.cwd(), "public", rel);
-    return fs.existsSync(abs) ? rel : "/covers/placeholder.webp";
-  };
   return (
     <div>
       <CurriculumGrid>
