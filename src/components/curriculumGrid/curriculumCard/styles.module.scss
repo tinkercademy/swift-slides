@@ -15,7 +15,8 @@ a.card {
   border: var(--theme-border);
   border-width: 1px;
   border-style: solid;
-  transition: all 0.3s ease;
+  // make hover-in animated but hover-out immediate by placing transitions on :hover only
+  transition: none;
   z-index: 2;
   cursor: pointer;
   overflow: hidden;
@@ -27,24 +28,26 @@ a.card {
   }
 
   &:hover {
+    // subtle glow: smaller blur and lower alpha; animate only on hover-in
+    transition: box-shadow 200ms ease, border-color 200ms ease;
     z-index: 3;
     &.blue, & { // default is blue
-      box-shadow: 0px 0px 64px 2px color.change(c.color(blue-darklink), $alpha: 50%);
+      box-shadow: 0px 0px 32px 1px color.change(c.color(blue-darklink), $alpha: 25%);
       border-color: color.change(color.adjust(c.color(blue-darklink), $lightness: 10%), $alpha: 50%);
     }
     
     &.green {
-      box-shadow: 0px 0px 64px 2px color.change(c.color(green-darklink), $alpha: 50%);
+      box-shadow: 0px 0px 32px 1px color.change(c.color(green-darklink), $alpha: 25%);
       border-color: color.change(color.adjust(c.color(green-darklink), $lightness: 10%), $alpha: 50%);
     }
     
     &.pink {
-      box-shadow: 0px 0px 64px 2px color.change(c.color(pink-darklink), $alpha: 50%);
+      box-shadow: 0px 0px 32px 1px color.change(c.color(pink-darklink), $alpha: 25%);
       border-color: color.change(color.adjust(c.color(pink-darklink), $lightness: 10%), $alpha: 50%);
     }
     
     &.red {
-      box-shadow: 0px 0px 64px 2px color.change(c.color(red-darklink), $alpha: 50%);
+      box-shadow: 0px 0px 32px 1px color.change(c.color(red-darklink), $alpha: 25%);
       border-color: color.change(color.adjust(c.color(red-darklink), $lightness: 10%), $alpha: 50%);
     }
   }
