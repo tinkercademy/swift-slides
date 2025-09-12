@@ -17,7 +17,7 @@ export default async function TracksPage() {
               title={track.title}
               subtitle={track.idDisplay}
               description={track.subtitle}
-              imgURL={`/covers/${track.id}/track.png`}
+              imgURL={`/covers/${track.id}/track.webp`}
               pageURL={track.id}
               color={getColorFromTrack(track.id)}
               disabled={track.disabled}

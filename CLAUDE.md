@@ -216,3 +216,4 @@ git commit -m "fix: resolve issue"
 For slide content issues: Review existing patterns in `/public/markdown/`
 For technical issues: Check `/scripts/` for utility scripts
 For build issues: Verify Node.js 18+ and Bun are installed
+- We're in SGT, i.e. UTC+8

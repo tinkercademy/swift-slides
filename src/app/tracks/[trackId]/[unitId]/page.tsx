@@ -63,7 +63,7 @@ export default async function SlidesPage({
               <div style={{ textAlign: "left" }}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="/assets/logos/tinkercademy.png"
+                  src="/assets/logos/tinkercademy.webp"
                   alt="Tinkercademy Logo"
                   height="128px"
                 />
@@ -109,8 +109,8 @@ export default async function SlidesPage({
             >
               <ResponsiveImage
                 className={styles.tinkerLogo}
-                src="/assets/logos/tinkercademy_long_light.png"
-                darkSrc="/assets/logos/tinkercademy_long_dark.png"
+                src="/assets/logos/tinkercademy_long_light.webp"
+                darkSrc="/assets/logos/tinkercademy_long_dark.webp"
                 width={3680 / 7}
                 height={576 / 7}
                 alt="Tinkercademy Logo"

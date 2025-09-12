@@ -12,6 +12,7 @@ import "./slides.scss";
 import { ActionsBar } from '../../actionsBar';
 import { getColorFromTrack, TrackEntry, UnitEntry } from '@/app/tracks/track';
 import { useDarkMode } from "@/hooks/useDarkMode";
+import { initializeImageOptimizations } from '@/utils/imageOptimization';
 
 function handleOpenWithQuery(name: string, value: string) {
     const url = new URL(window.location.href)
@@ -50,7 +51,14 @@ export function RevealjsNoSSRWrapper({ children, isPrint, track, unit }: { child
             plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
         });
 
-        deckRef.current.initialize()
+        deckRef.current.initialize().then(() => {
+            // Initialize image optimizations after Reveal is ready
+            initializeImageOptimizations({
+                rootMargin: '500px', // Preload images 500px before they come into view
+                threshold: 0.01,
+                fadeIn: true
+            });
+        });
 
         return () => {
             try {
@@ -59,7 +67,7 @@ export function RevealjsNoSSRWrapper({ children, isPrint, track, unit }: { child
                     deckRef.current = null;
                 }
             } catch (_e) {
-                console.warn("Reveal.js destroy call failed.");
+                // Silently handle Reveal.js cleanup errors
             }
         };
     }, [deckRef]);

@@ -1,0 +1,3704 @@
+{
+  "webpReferences": [
+    {
+      "file": "src/app/layout.tsx",
+      "imagePath": "/assets/logos/tinkercademy.webp",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/logos/tinkercademy.webp",
+      "exists": true
+    },
+    {
+      "file": "src/app/layout.tsx",
+      "imagePath": "/assets/logos/swift_explorers_purple.webp",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/logos/swift_explorers_purple.webp",
+      "exists": true
+    },
+    {
+      "file": "src/app/layout.tsx",
+      "imagePath": "/covers/placeholder.webp",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/covers/placeholder.webp",
+      "exists": true
+    },
+    {
+      "file": "src/app/tracks/[trackId]/[unitId]/page.tsx",
+      "imagePath": "/assets/logos/tinkercademy.webp",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/logos/tinkercademy.webp",
+      "exists": true
+    },
+    {
+      "file": "src/app/tracks/[trackId]/[unitId]/page.tsx",
+      "imagePath": "/assets/logos/tinkercademy_long_light.webp",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/logos/tinkercademy_long_light.webp",
+      "exists": true
+    },
+    {
+      "file": "src/app/tracks/[trackId]/[unitId]/page.tsx",
+      "imagePath": "/assets/logos/tinkercademy_long_dark.webp",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/logos/tinkercademy_long_dark.webp",
+      "exists": true
+    },
+    {
+      "file": "src/app/tracks/[trackId]/page.tsx",
+      "imagePath": "/covers/${track.id}/${unit.id}.webp",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/covers/${track.id}/${unit.id}.webp",
+      "exists": false
+    },
+    {
+      "file": "src/app/tracks/page.tsx",
+      "imagePath": "/covers/${track.id}/track.webp",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/covers/${track.id}/track.webp",
+      "exists": false
+    },
+    {
+      "file": "src/components/curriculumGrid/curriculumCard/index.tsx",
+      "imagePath": "/covers/placeholder.webp",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/covers/placeholder.webp",
+      "exists": true
+    },
+    {
+      "file": "src/components/curriculumGrid/curriculumCard/index.tsx",
+      "imagePath": "/covers/placeholder.webp",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/covers/placeholder.webp",
+      "exists": true
+    },
+    {
+      "file": "src/components/curriculumGrid/curriculumCard/index.tsx",
+      "imagePath": "/covers/placeholder.webp",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/covers/placeholder.webp",
+      "exists": true
+    },
+    {
+      "file": "src/components/layout/footer/index.tsx",
+      "imagePath": "/assets/logos/tinkercademy_long_light.webp",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/logos/tinkercademy_long_light.webp",
+      "exists": true
+    },
+    {
+      "file": "src/components/layout/footer/index.tsx",
+      "imagePath": "/assets/logos/tinkercademy_long_dark.webp",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/logos/tinkercademy_long_dark.webp",
+      "exists": true
+    },
+    {
+      "file": "src/components/layout/navigator/index.tsx",
+      "imagePath": "/assets/logos/swift_explorers_yellow.webp",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/logos/swift_explorers_yellow.webp",
+      "exists": true
+    },
+    {
+      "file": "src/components/layout/navigator/index.tsx",
+      "imagePath": "/assets/logos/swift_explorers_purple.webp",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/logos/swift_explorers_purple.webp",
+      "exists": true
+    },
+    {
+      "file": "src/utils/imageOptimization.ts",
+      "imagePath": "/assets/logos/tinkercademy.webp",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/logos/tinkercademy.webp",
+      "exists": true
+    },
+    {
+      "file": "src/utils/imageOptimization.ts",
+      "imagePath": "/assets/logos/swift_explorers_purple.webp",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/logos/swift_explorers_purple.webp",
+      "exists": true
+    },
+    {
+      "file": "src/utils/imageOptimization.ts",
+      "imagePath": "/covers/placeholder.webp",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/covers/placeholder.webp",
+      "exists": true
+    }
+  ],
+  "missingWebpFiles": [
+    {
+      "file": "src/app/tracks/[trackId]/page.tsx",
+      "imagePath": "/covers/${track.id}/${unit.id}.webp",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/covers/${track.id}/${unit.id}.webp"
+    },
+    {
+      "file": "src/app/tracks/page.tsx",
+      "imagePath": "/covers/${track.id}/track.webp",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/covers/${track.id}/track.webp"
+    }
+  ],
+  "pngReferences": [
+    {
+      "file": "src/app/layout.tsx",
+      "imagePath": "/assets/logos/swift_explorers_yellow.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/logos/swift_explorers_yellow.png",
+      "exists": true
+    }
+  ],
+  "markdownImageRefs": [
+    {
+      "file": "public/markdown/track_a/appdesign.md",
+      "imagePath": "/markdown/track_a/assets/vision_physical_hearing_learning.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_a/assets/vision_physical_hearing_learning.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_a/appdesign.md",
+      "imagePath": "/markdown/track_a/assets/birth_acquired_age.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_a/assets/birth_acquired_age.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_a/appdesign.md",
+      "imagePath": "/markdown/track_a/assets/voiceover-text-voice-control.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_a/assets/voiceover-text-voice-control.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_a/appdesign.md",
+      "imagePath": "/markdown/track_a/assets/dots-vs-unread-flagged.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_a/assets/dots-vs-unread-flagged.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_a/appdesign.md",
+      "imagePath": "/markdown/track_a/assets/set-up-family-account.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_a/assets/set-up-family-account.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_a/appdesign.md",
+      "imagePath": "/markdown/track_a/assets/good-morning.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_a/assets/good-morning.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_a/appdesign.md",
+      "imagePath": "/markdown/track_a/assets/plan-inclusion.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_a/assets/plan-inclusion.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_a/apple-keynote.md",
+      "imagePath": "/markdown/track_a/assets/7a-s1-step1.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_a/assets/7a-s1-step1.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_a/apple-keynote.md",
+      "imagePath": "/markdown/track_a/assets/7a-s1-step2.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_a/assets/7a-s1-step2.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_a/apple-keynote.md",
+      "imagePath": "/markdown/track_a/assets/7a-s1-step3.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_a/assets/7a-s1-step3.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_a/apple-keynote.md",
+      "imagePath": "/markdown/track_a/assets/7a-s1-step4.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_a/assets/7a-s1-step4.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_a/apple-keynote.md",
+      "imagePath": "/markdown/track_a/assets/7a-s1-step5.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_a/assets/7a-s1-step5.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_a/apple-keynote.md",
+      "imagePath": "/markdown/track_a/assets/7a-s2-step0.jpg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_a/assets/7a-s2-step0.jpg",
+      "exists": true,
+      "extension": ".jpg"
+    },
+    {
+      "file": "public/markdown/track_a/apple-keynote.md",
+      "imagePath": "/markdown/track_a/assets/7a-s2-step0-2.jpg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_a/assets/7a-s2-step0-2.jpg",
+      "exists": true,
+      "extension": ".jpg"
+    },
+    {
+      "file": "public/markdown/track_a/apple-keynote.md",
+      "imagePath": "/markdown/track_a/assets/7a-s2-step0-3.jpg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_a/assets/7a-s2-step0-3.jpg",
+      "exists": true,
+      "extension": ".jpg"
+    },
+    {
+      "file": "public/markdown/track_a/apple-keynote.md",
+      "imagePath": "/markdown/track_a/assets/il_shape.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_a/assets/il_shape.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_a/apple-keynote.md",
+      "imagePath": "/markdown/track_a/assets/7a-s2-step1.jpg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_a/assets/7a-s2-step1.jpg",
+      "exists": true,
+      "extension": ".jpg"
+    },
+    {
+      "file": "public/markdown/track_a/apple-keynote.md",
+      "imagePath": "/markdown/track_a/assets/il_media.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_a/assets/il_media.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_a/apple-keynote.md",
+      "imagePath": "/markdown/track_a/assets/7a-s2-step2.jpg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_a/assets/7a-s2-step2.jpg",
+      "exists": true,
+      "extension": ".jpg"
+    },
+    {
+      "file": "public/markdown/track_a/apple-keynote.md",
+      "imagePath": "/markdown/track_a/assets/7a-s2-step3.jpg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_a/assets/7a-s2-step3.jpg",
+      "exists": true,
+      "extension": ".jpg"
+    },
+    {
+      "file": "public/markdown/track_a/apple-keynote.md",
+      "imagePath": "/markdown/track_a/assets/7a-s2-step4.jpg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_a/assets/7a-s2-step4.jpg",
+      "exists": true,
+      "extension": ".jpg"
+    },
+    {
+      "file": "public/markdown/track_a/apple-keynote.md",
+      "imagePath": "/markdown/track_a/assets/7a-s2-step5.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_a/assets/7a-s2-step5.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_a/apple-keynote.md",
+      "imagePath": "/markdown/track_a/assets/il_shape.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_a/assets/il_shape.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_a/apple-keynote.md",
+      "imagePath": "/markdown/track_a/assets/7a-s3-step1.jpg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_a/assets/7a-s3-step1.jpg",
+      "exists": true,
+      "extension": ".jpg"
+    },
+    {
+      "file": "public/markdown/track_a/apple-keynote.md",
+      "imagePath": "/markdown/track_a/assets/7a-s3-step2.jpg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_a/assets/7a-s3-step2.jpg",
+      "exists": true,
+      "extension": ".jpg"
+    },
+    {
+      "file": "public/markdown/track_a/apple-keynote.md",
+      "imagePath": "/markdown/track_a/assets/7a-s4-step1.jpg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_a/assets/7a-s4-step1.jpg",
+      "exists": true,
+      "extension": ".jpg"
+    },
+    {
+      "file": "public/markdown/track_a/apple-keynote.md",
+      "imagePath": "/markdown/track_a/assets/7a-s4-step2.jpg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_a/assets/7a-s4-step2.jpg",
+      "exists": true,
+      "extension": ".jpg"
+    },
+    {
+      "file": "public/markdown/track_a/brainstorm.md",
+      "imagePath": "/markdown/track_a/assets/brainstorm-purpose-ss.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_a/assets/brainstorm-purpose-ss.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_a/brainstorm.md",
+      "imagePath": "/markdown/track_a/assets/brainstorm-idea-ss.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_a/assets/brainstorm-idea-ss.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_a/brainstorm.md",
+      "imagePath": "/markdown/track_a/assets/brainstorm-focus-ss.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_a/assets/brainstorm-focus-ss.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_a/freeformIntro.md",
+      "imagePath": "/markdown/track_a/assets/5-newboard.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_a/assets/5-newboard.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_a/freeformIntro.md",
+      "imagePath": "/markdown/track_a/assets/5-renamingboard.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_a/assets/5-renamingboard.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_a/freeformIntro.md",
+      "imagePath": "/markdown/track_a/assets/freeform-tools.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_a/assets/freeform-tools.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_a/freeformIntro.md",
+      "imagePath": "/markdown/track_a/assets/freeform-tools-edited.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_a/assets/freeform-tools-edited.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_a/freeformIntro.md",
+      "imagePath": "/markdown/track_a/assets/5-notes.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_a/assets/5-notes.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_a/freeformIntro.md",
+      "imagePath": "/markdown/track_a/assets/5-shapes.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_a/assets/5-shapes.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_a/freeformIntro.md",
+      "imagePath": "/markdown/track_a/assets/5-links.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_a/assets/5-links.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_a/freeformIntro.md",
+      "imagePath": "/markdown/track_a/assets/5-export.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_a/assets/5-export.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_a/freeformIntro.md",
+      "imagePath": "/markdown/track_a/assets/5-collaborate.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_a/assets/5-collaborate.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_a/get-started-with-code.md",
+      "imagePath": "/markdown/track_a/assets/il_multitasking.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_a/assets/il_multitasking.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_a/get-started-with-code.md",
+      "imagePath": "/markdown/track_a/assets/open-playgrounds.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_a/assets/open-playgrounds.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_a/get-started-with-code.md",
+      "imagePath": "/markdown/track_a/assets/open-playgrounds-2.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_a/assets/open-playgrounds-2.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_a/get-started-with-code.md",
+      "imagePath": "/markdown/track_a/assets/learn-swiftplaygrounds.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_a/assets/learn-swiftplaygrounds.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_a/get-started-with-code.md",
+      "imagePath": "/markdown/track_a/assets/views-modifiers-symbols-colours.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_a/assets/views-modifiers-symbols-colours.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_a/get-started-with-code.md",
+      "imagePath": "/markdown/track_a/assets/writing-code-intro-to-swift-playgrounds.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_a/assets/writing-code-intro-to-swift-playgrounds.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_a/get-started-with-code.md",
+      "imagePath": "/markdown/track_a/assets/learning-swiftui-playgrounds.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_a/assets/learning-swiftui-playgrounds.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_a/get-started-with-code.md",
+      "imagePath": "/markdown/track_a/assets/learning-swift-playgrounds-ui.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_a/assets/learning-swift-playgrounds-ui.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_a/get-started-with-code.md",
+      "imagePath": "/markdown/track_a/assets/sharing-icon.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_a/assets/sharing-icon.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_a/get-started-with-code.md",
+      "imagePath": "/markdown/track_a/assets/sharing-swift-playgrounds.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_a/assets/sharing-swift-playgrounds.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_a/ipad-design.md",
+      "imagePath": "/markdown/track_a/assets/tab-bar.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_a/assets/tab-bar.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_a/ipad-design.md",
+      "imagePath": "/assets/icons/sidebar.left.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/icons/sidebar.left.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_a/ipad-design.md",
+      "imagePath": "/markdown/track_a/assets/sidebar-and-canvas.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_a/assets/sidebar-and-canvas.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_a/ipad-design.md",
+      "imagePath": "/markdown/track_a/assets/sidebar-and-canvas-example1.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_a/assets/sidebar-and-canvas-example1.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_a/ipad-design.md",
+      "imagePath": "/markdown/track_a/assets/sidebar-and-canvas-example2.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_a/assets/sidebar-and-canvas-example2.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_a/ipad-design.md",
+      "imagePath": "/markdown/track_a/assets/reminders-app.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_a/assets/reminders-app.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_a/ipad-design.md",
+      "imagePath": "/markdown/track_a/assets/navigationsplitview-vs-navigationstack.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_a/assets/navigationsplitview-vs-navigationstack.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_a/ipad-design.md",
+      "imagePath": "/markdown/track_a/assets/disclosure-indicators-example.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_a/assets/disclosure-indicators-example.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_a/ipad-design.md",
+      "imagePath": "/markdown/track_a/assets/popover-example.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_a/assets/popover-example.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_a/keynoteIntro.md",
+      "imagePath": "/assets/keynote-logo.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/keynote-logo.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_a/keynoteIntro.md",
+      "imagePath": "/markdown/track_a/assets/app-design-journal.jpg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_a/assets/app-design-journal.jpg",
+      "exists": true,
+      "extension": ".jpg"
+    },
+    {
+      "file": "public/markdown/track_a/keynoteIntro.md",
+      "imagePath": "/markdown/track_a/assets/getting-the-journal.jpg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_a/assets/getting-the-journal.jpg",
+      "exists": true,
+      "extension": ".jpg"
+    },
+    {
+      "file": "public/markdown/track_a/keynoteIntro.md",
+      "imagePath": "/markdown/track_a/assets/navigating-journal.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_a/assets/navigating-journal.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_a/keynoteIntro.md",
+      "imagePath": "/markdown/track_a/assets/editing-journal.jpg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_a/assets/editing-journal.jpg",
+      "exists": true,
+      "extension": ".jpg"
+    },
+    {
+      "file": "public/markdown/track_a/keynoteIntro.md",
+      "imagePath": "/markdown/track_a/assets/duplicate-slides.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_a/assets/duplicate-slides.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_a/keynoteIntro.md",
+      "imagePath": "/markdown/track_a/assets/take-screenshot.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_a/assets/take-screenshot.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_a/keynoteIntro.md",
+      "imagePath": "/markdown/track_a/assets/hands-on.jpg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_a/assets/hands-on.jpg",
+      "exists": true,
+      "extension": ".jpg"
+    },
+    {
+      "file": "public/markdown/track_a/keynoteIntro.md",
+      "imagePath": "/markdown/track_a/assets/keynote-collab.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_a/assets/keynote-collab.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_a/keynoteIntro.md",
+      "imagePath": "/markdown/track_a/assets/let-anyo-edit.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_a/assets/let-anyo-edit.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_a/keynoteIntro.md",
+      "imagePath": "/markdown/track_a/assets/sharing-options.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_a/assets/sharing-options.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_a/prototyping.md",
+      "imagePath": "/markdown/track_a/assets/keynote-user-guide.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_a/assets/keynote-user-guide.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_a/prototyping.md",
+      "imagePath": "/markdown/track_a/assets/setting-up-unit6.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_a/assets/setting-up-unit6.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_a/prototyping.md",
+      "imagePath": "/markdown/track_a/assets/adding-new-slides.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_a/assets/adding-new-slides.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_a/prototyping.md",
+      "imagePath": "/markdown/track_a/assets/paintbrush-icon.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_a/assets/paintbrush-icon.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_a/prototyping.md",
+      "imagePath": "/markdown/track_a/assets/animations-home.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_a/assets/animations-home.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_a/prototyping.md",
+      "imagePath": "/markdown/track_a/assets/keynote_transitions_magic_moves.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_a/assets/keynote_transitions_magic_moves.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_a/prototyping.md",
+      "imagePath": "/markdown/track_a/assets/evaluate-observation.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_a/assets/evaluate-observation.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_a/prototyping.md",
+      "imagePath": "/markdown/track_a/assets/prototype-some-more_learn-to-code.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_a/assets/prototype-some-more_learn-to-code.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_a/prototyping.md",
+      "imagePath": "/markdown/track_a/assets/everyone-can-code-puzzles.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_a/assets/everyone-can-code-puzzles.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_a/prototyping.md",
+      "imagePath": "/markdown/track_a/assets/quick-start-to-code.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_a/assets/quick-start-to-code.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_a/storyboard.md",
+      "imagePath": "/markdown/track_a/assets/food-buzz-prototype-final.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_a/assets/food-buzz-prototype-final.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_a/storyboard.md",
+      "imagePath": "/markdown/track_a/assets/label-app-storyboard.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_a/assets/label-app-storyboard.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_a/storyboard.md",
+      "imagePath": "/markdown/track_a/assets/bug-buzz-app-journal-final.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_a/assets/bug-buzz-app-journal-final.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_a/uiplanning.md",
+      "imagePath": "/markdown/track_a/assets/plan-useractions.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_a/assets/plan-useractions.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_a/uiplanning.md",
+      "imagePath": "/markdown/track_a/assets/bug-buzz-example.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_a/assets/bug-buzz-example.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_a/uiplanning.md",
+      "imagePath": "/markdown/track_a/assets/plan-input-and-app-state.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_a/assets/plan-input-and-app-state.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_a/uiplanning.md",
+      "imagePath": "/markdown/track_a/assets/bug-buzz-example2.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_a/assets/bug-buzz-example2.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_a/uiplanning.md",
+      "imagePath": "/markdown/track_a/assets/plan-choose-features.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_a/assets/plan-choose-features.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_a/uiplanning.md",
+      "imagePath": "/markdown/track_a/assets/bug-buzz-example3.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_a/assets/bug-buzz-example3.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/aboutme.md",
+      "imagePath": "/markdown/track_b/assets/aboutme-text-colours.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/aboutme-text-colours.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/aboutme.md",
+      "imagePath": "/markdown/track_b/assets/aboutme-padding.jpeg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/aboutme-padding.jpeg",
+      "exists": true,
+      "extension": ".jpeg"
+    },
+    {
+      "file": "public/markdown/track_b/aboutme.md",
+      "imagePath": "/markdown/track_b/assets/aboutme-getting-started-app.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/aboutme-getting-started-app.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/aboutme.md",
+      "imagePath": "/markdown/track_b/assets/aboutme-starter-app-1.PNG",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/aboutme-starter-app-1.PNG",
+      "exists": true,
+      "extension": ".PNG"
+    },
+    {
+      "file": "public/markdown/track_b/aboutme.md",
+      "imagePath": "/markdown/track_b/assets/aboutme-starter-app-2.PNG",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/aboutme-starter-app-2.PNG",
+      "exists": true,
+      "extension": ".PNG"
+    },
+    {
+      "file": "public/markdown/track_b/aboutme.md",
+      "imagePath": "/markdown/track_b/assets/aboutme-starter-app-3.PNG",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/aboutme-starter-app-3.PNG",
+      "exists": true,
+      "extension": ".PNG"
+    },
+    {
+      "file": "public/markdown/track_b/aboutme.md",
+      "imagePath": "/markdown/track_b/assets/aboutme-starter-app-4.PNG",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/aboutme-starter-app-4.PNG",
+      "exists": true,
+      "extension": ".PNG"
+    },
+    {
+      "file": "public/markdown/track_b/aboutme.md",
+      "imagePath": "/markdown/track_b/assets/aboutme-tab-views-commenting.jpeg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/aboutme-tab-views-commenting.jpeg",
+      "exists": true,
+      "extension": ".jpeg"
+    },
+    {
+      "file": "public/markdown/track_b/aboutme.md",
+      "imagePath": "/markdown/track_b/assets/aboutme-tab-item-label.jpeg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/aboutme-tab-item-label.jpeg",
+      "exists": true,
+      "extension": ".jpeg"
+    },
+    {
+      "file": "public/markdown/track_b/aboutme.md",
+      "imagePath": "/markdown/track_b/assets/aboutme-tab-item-icon.jpeg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/aboutme-tab-item-icon.jpeg",
+      "exists": true,
+      "extension": ".jpeg"
+    },
+    {
+      "file": "public/markdown/track_b/aboutme.md",
+      "imagePath": "/assets/icons/sidebar.left.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/icons/sidebar.left.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/aboutme.md",
+      "imagePath": "/markdown/track_b/assets/aboutme-accent-colour.jpeg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/aboutme-accent-colour.jpeg",
+      "exists": true,
+      "extension": ".jpeg"
+    },
+    {
+      "file": "public/markdown/track_b/aboutme.md",
+      "imagePath": "/assets/icons/sidebar.left.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/icons/sidebar.left.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/aboutme.md",
+      "imagePath": "/assets/icons/doc.badge.plus.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/icons/doc.badge.plus.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/aboutme.md",
+      "imagePath": "/markdown/track_b/assets/photo-dropbar.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/photo-dropbar.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/aboutme.md",
+      "imagePath": "/markdown/track_b/assets/aboutme-styling-text.jpeg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/aboutme-styling-text.jpeg",
+      "exists": true,
+      "extension": ".jpeg"
+    },
+    {
+      "file": "public/markdown/track_b/aboutme.md",
+      "imagePath": "/markdown/track_b/assets/aboutme-styling-image.jpeg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/aboutme-styling-image.jpeg",
+      "exists": true,
+      "extension": ".jpeg"
+    },
+    {
+      "file": "public/markdown/track_b/aboutme.md",
+      "imagePath": "/markdown/track_b/assets/aboutme-scrollview.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/aboutme-scrollview.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/aboutme.md",
+      "imagePath": "/markdown/track_b/assets/aboutme-creating-story.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/aboutme-creating-story.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/aboutme.md",
+      "imagePath": "/markdown/track_b/assets/aboutme-multiline-text.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/aboutme-multiline-text.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/aboutme.md",
+      "imagePath": "/markdown/track_b/assets/aboutme-favoritesview.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/aboutme-favoritesview.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/aboutme.md",
+      "imagePath": "/markdown/track_b/assets/aboutme-arrays.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/aboutme-arrays.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/aboutme.md",
+      "imagePath": "/assets/icons/sidebar.left.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/icons/sidebar.left.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/aboutme.md",
+      "imagePath": "/markdown/track_b/assets/aboutme-learn-to-code-2.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/aboutme-learn-to-code-2.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/aboutme.md",
+      "imagePath": "/markdown/track_b/assets/aboutme-learn-to-code-2-2.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/aboutme-learn-to-code-2-2.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/aboutme.md",
+      "imagePath": "/markdown/track_b/assets/aboutme-funfactsview.jpeg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/aboutme-funfactsview.jpeg",
+      "exists": true,
+      "extension": ".jpeg"
+    },
+    {
+      "file": "public/markdown/track_b/aboutme.md",
+      "imagePath": "/markdown/track_b/assets/aboutme-how-the-button-works.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/aboutme-how-the-button-works.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/aboutme.md",
+      "imagePath": "/markdown/track_b/assets/aboutme-styling-the-button.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/aboutme-styling-the-button.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/aboutme.md",
+      "imagePath": "/markdown/track_b/assets/aboutme-button1.jpeg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/aboutme-button1.jpeg",
+      "exists": true,
+      "extension": ".jpeg"
+    },
+    {
+      "file": "public/markdown/track_b/aboutme.md",
+      "imagePath": "/markdown/track_b/assets/aboutme-button2.jpeg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/aboutme-button2.jpeg",
+      "exists": true,
+      "extension": ".jpeg"
+    },
+    {
+      "file": "public/markdown/track_b/aboutme.md",
+      "imagePath": "/markdown/track_b/assets/aboutme-styling-the-button2.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/aboutme-styling-the-button2.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/aboutme.md",
+      "imagePath": "/markdown/track_b/assets/aboutme-creating-a-new-tab.jpeg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/aboutme-creating-a-new-tab.jpeg",
+      "exists": true,
+      "extension": ".jpeg"
+    },
+    {
+      "file": "public/markdown/track_b/aboutme.md",
+      "imagePath": "/markdown/track_b/assets/aboutme-creating-a-new-tab2.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/aboutme-creating-a-new-tab2.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/aboutme.md",
+      "imagePath": "/markdown/track_b/assets/aboutme-editing-galleryview.jpeg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/aboutme-editing-galleryview.jpeg",
+      "exists": true,
+      "extension": ".jpeg"
+    },
+    {
+      "file": "public/markdown/track_b/aboutme.md",
+      "imagePath": "/markdown/track_b/assets/aboutme-adding-the-first-item.jpeg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/aboutme-adding-the-first-item.jpeg",
+      "exists": true,
+      "extension": ".jpeg"
+    },
+    {
+      "file": "public/markdown/track_b/aboutme.md",
+      "imagePath": "/markdown/track_b/assets/aboutme-using-scrollview.jpeg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/aboutme-using-scrollview.jpeg",
+      "exists": true,
+      "extension": ".jpeg"
+    },
+    {
+      "file": "public/markdown/track_b/aboutme.md",
+      "imagePath": "/markdown/track_b/assets/aboutme-adding-images.jpeg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/aboutme-adding-images.jpeg",
+      "exists": true,
+      "extension": ".jpeg"
+    },
+    {
+      "file": "public/markdown/track_b/arrays.md",
+      "imagePath": "/markdown/track_b/assets/array-diagram.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/array-diagram.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/arrays.md",
+      "imagePath": "/markdown/track_b/assets/visualising-arrays-0.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/visualising-arrays-0.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/arrays.md",
+      "imagePath": "/markdown/track_b/assets/visualising-arrays-1.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/visualising-arrays-1.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/arrays.md",
+      "imagePath": "/markdown/track_b/assets/visualising-arrays-2.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/visualising-arrays-2.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/arrays.md",
+      "imagePath": "/markdown/track_b/assets/visualising-arrays-4.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/visualising-arrays-4.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/arrays.md",
+      "imagePath": "/markdown/track_b/assets/visualising-arrays-5.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/visualising-arrays-5.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/arrays.md",
+      "imagePath": "/markdown/track_b/assets/visualising-arrays-6.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/visualising-arrays-6.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/chatgpt_and_apis.md",
+      "imagePath": "/markdown/track_b/assets/assets/searching_http_get.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/assets/searching_http_get.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/chatgpt_and_apis.md",
+      "imagePath": "/markdown/track_b/assets/assets/cats.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/assets/cats.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/chatgpt_and_apis.md",
+      "imagePath": "/markdown/track_b/assets/assets/cats_json.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/assets/cats_json.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/chatgpt_and_apis.md",
+      "imagePath": "/markdown/track_b/assets/assets/cats_json_firefox.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/assets/cats_json_firefox.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/chatgpt_and_apis.md",
+      "imagePath": "/markdown/track_b/assets/assets/chagpt_intro.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/assets/chagpt_intro.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/chatgpt_and_apis.md",
+      "imagePath": "/markdown/track_b/assets/assets/package_adding.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/assets/package_adding.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/chatgpt_and_apis.md",
+      "imagePath": "/assets/icons/sidebar.left.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/icons/sidebar.left.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/chatgpt_and_apis.md",
+      "imagePath": "/assets/icons/doc.badge.plus.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/icons/doc.badge.plus.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/chatgpt_and_apis.md",
+      "imagePath": "/markdown/track_b/assets/assets/searching_stack_chatgpt.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/assets/searching_stack_chatgpt.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/chatgpt_and_apis.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/chatgpt_and_apis.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/chatgpt_and_apis.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/chatgpt_and_apis.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/chatgpt_and_apis.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/chatgpt_and_apis.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/chatgpt_and_apis.md",
+      "imagePath": "/markdown/track_b/assets/assets/try_await_error.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/assets/try_await_error.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/chatgpt_and_apis.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/chatgpt_and_apis.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/chatgpt_and_apis.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/counter.md",
+      "imagePath": "/markdown/track_b/assets/new-project-button.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/new-project-button.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/counter.md",
+      "imagePath": "/markdown/track_b/assets/new-project.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/new-project.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/counter.md",
+      "imagePath": "/assets/icons/dot.square.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/icons/dot.square.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/counter.md",
+      "imagePath": "/markdown/track_b/assets/clicker-wireframe-diagram.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/clicker-wireframe-diagram.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/counter.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/counter.md",
+      "imagePath": "/markdown/track_b/assets/preview-cookies-setup.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/preview-cookies-setup.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/counter.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/flagraising.md",
+      "imagePath": "/markdown/track_b/assets/flag-on-the-news.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/flag-on-the-news.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/flagraising.md",
+      "imagePath": "/markdown/track_b/assets/sg-flag.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/sg-flag.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/flagraising.md",
+      "imagePath": "/markdown/track_b/assets/flag-bare-content.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/flag-bare-content.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/flagraising.md",
+      "imagePath": "/markdown/track_b/assets/flag-bare.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/flag-bare.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/flagraising.md",
+      "imagePath": "/markdown/track_b/assets/flag-counter-offset.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/flag-counter-offset.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/flagraising.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/flagraising.md",
+      "imagePath": "/markdown/track_b/assets/sg-flag.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/sg-flag.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/introduction.md",
+      "imagePath": "/assets/swift-playgrounds.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-playgrounds.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/introduction.md",
+      "imagePath": "/markdown/track_b/assets/playgrounds-launch-ss.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/playgrounds-launch-ss.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/introduction.md",
+      "imagePath": "/markdown/track_b/assets/playgrounds-see_all-ss.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/playgrounds-see_all-ss.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/introduction.md",
+      "imagePath": "/markdown/track_b/assets/playgrounds-app-create-ss.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/playgrounds-app-create-ss.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/introduction.md",
+      "imagePath": "/markdown/track_b/assets/playgrounds-book-create-ss.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/playgrounds-book-create-ss.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/introduction.md",
+      "imagePath": "/markdown/track_b/assets/ipad-screenshot.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/ipad-screenshot.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/introduction.md",
+      "imagePath": "/markdown/track_b/assets/plus_button.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/plus_button.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/introduction.md",
+      "imagePath": "/markdown/track_b/assets/ipad-screenrecording-ss.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/ipad-screenrecording-ss.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/jokes.md",
+      "imagePath": "/markdown/track_b/assets/new-project-button.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/new-project-button.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/jokes.md",
+      "imagePath": "/markdown/track_b/assets/new-project.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/new-project.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/jokes.md",
+      "imagePath": "/markdown/track_b/assets/jokes-new-app-ss.PNG",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/jokes-new-app-ss.PNG",
+      "exists": true,
+      "extension": ".PNG"
+    },
+    {
+      "file": "public/markdown/track_b/jokes.md",
+      "imagePath": "/markdown/track_b/assets/jokes-layout.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/jokes-layout.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/jokes.md",
+      "imagePath": "/markdown/track_b/assets/jokes-layout2.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/jokes-layout2.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/jokes.md",
+      "imagePath": "/markdown/track_b/assets/jokes-starter.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/jokes-starter.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/jokes.md",
+      "imagePath": "/markdown/track_b/assets/jokes-starter-explained.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/jokes-starter-explained.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/jokes.md",
+      "imagePath": "/assets/icons/sidebar.left.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/icons/sidebar.left.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/jokes.md",
+      "imagePath": "/assets/icons/doc.badge.plus.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/icons/doc.badge.plus.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/jokes.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/jokes.md",
+      "imagePath": "/markdown/track_b/assets/jokes-new-file.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/jokes-new-file.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/jokes.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/jokes.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/jokes.md",
+      "imagePath": "/markdown/track_b/assets/jokes-using-structs.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/jokes-using-structs.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/jokes.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/jokes.md",
+      "imagePath": "/markdown/track_b/assets/jokes-hide-punchline.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/jokes-hide-punchline.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/jokes.md",
+      "imagePath": "/markdown/track_b/assets/jokes-show-punchline.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/jokes-show-punchline.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/jokes.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/jokes.md",
+      "imagePath": "/markdown/track_b/assets/jokes-currentJoke.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/jokes-currentJoke.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/jokes.md",
+      "imagePath": "/markdown/track_b/assets/jokes-zstack.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/jokes-zstack.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/jokes.md",
+      "imagePath": "/markdown/track_b/assets/crashed.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/crashed.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/jokes.md",
+      "imagePath": "/markdown/track_b/assets/jokes-indexoutofrange.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/jokes-indexoutofrange.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/jokes.md",
+      "imagePath": "/markdown/track_b/assets/jokes-resetindex1.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/jokes-resetindex1.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/jokes.md",
+      "imagePath": "/markdown/track_b/assets/jokes-alert-ss.jpeg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/jokes-alert-ss.jpeg",
+      "exists": true,
+      "extension": ".jpeg"
+    },
+    {
+      "file": "public/markdown/track_b/jokes.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/jokes.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/jokes.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/jokes.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/jokes.md",
+      "imagePath": "/markdown/track_b/assets/jokes-alert-deletefiles.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/jokes-alert-deletefiles.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/jokes.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/jokes.md",
+      "imagePath": "/markdown/track_b/assets/jokes-alert-description.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/jokes-alert-description.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/jokes.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/jokes.md",
+      "imagePath": "/markdown/track_b/assets/jokes-sheet-1-ss.jpeg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/jokes-sheet-1-ss.jpeg",
+      "exists": true,
+      "extension": ".jpeg"
+    },
+    {
+      "file": "public/markdown/track_b/jokes.md",
+      "imagePath": "/assets/icons/sidebar.left.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/icons/sidebar.left.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/jokes.md",
+      "imagePath": "/assets/icons/doc.badge.plus.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/icons/doc.badge.plus.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/jokes.md",
+      "imagePath": "/markdown/track_b/assets/photo-dropbar.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/photo-dropbar.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/jokes.md",
+      "imagePath": "/markdown/track_b/assets/jokes-add-images.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/jokes-add-images.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/jokes.md",
+      "imagePath": "/assets/icons/sidebar.left.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/icons/sidebar.left.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/jokes.md",
+      "imagePath": "/assets/icons/doc.badge.plus.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/icons/doc.badge.plus.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/jokes.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/jokes.md",
+      "imagePath": "/markdown/track_b/assets/jokes-new-view-ss.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/jokes-new-view-ss.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/jokes.md",
+      "imagePath": "/markdown/track_b/assets/jokes-new-view-renamed-ss.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/jokes-new-view-renamed-ss.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/jokes.md",
+      "imagePath": "/markdown/track_b/assets/jokes-model-view-explained.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/jokes-model-view-explained.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/jokes.md",
+      "imagePath": "/markdown/track_b/assets/jokes-feedbackview1.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/jokes-feedbackview1.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/jokes.md",
+      "imagePath": "/markdown/track_b/assets/Ternary-Operators.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/Ternary-Operators.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/jokes.md",
+      "imagePath": "/markdown/track_b/assets/jokes-2-previews.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/jokes-2-previews.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/jokes.md",
+      "imagePath": "/markdown/track_b/assets/jokes-isPositive.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/jokes-isPositive.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/jokes.md",
+      "imagePath": "/markdown/track_b/assets/jokes-feedback-presentation-contentview.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/jokes-feedback-presentation-contentview.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/jokes.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/jokes.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/jokes.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/jokes.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/jokes.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/jokes.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/jokes.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/jokes.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/jokes.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/jokes.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/jokes.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/jokes.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/jokes.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/jokes.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/jokes.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/jokes.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/jokes.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/list.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/list.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/list.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/list.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/list.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/list.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/list.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/list.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/list.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/list.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/list.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/list.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/list.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/list.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/list.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/list.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/list.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/list.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/list_old.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/list_old.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/list_old.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/list_old.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/list_old.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/list_old.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/list_old.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/list_old.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/list_old.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/list_old.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/list_old.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/list_old.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/list_old.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/namecard.md",
+      "imagePath": "/markdown/track_b/assets/new-project-button.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/new-project-button.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/namecard.md",
+      "imagePath": "/markdown/track_b/assets/new-project.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/new-project.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/namecard.md",
+      "imagePath": "/markdown/track_b/assets/playgrounds-empty-project.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/playgrounds-empty-project.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/namecard.md",
+      "imagePath": "/markdown/track_b/assets/annotated-playgrounds-interface.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/annotated-playgrounds-interface.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/namecard.md",
+      "imagePath": "/markdown/track_b/assets/annotated-playgrounds-toolbar.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/annotated-playgrounds-toolbar.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/namecard.md",
+      "imagePath": "/markdown/track_b/assets/playgrounds-app-settings.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/playgrounds-app-settings.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/namecard.md",
+      "imagePath": "/markdown/track_b/assets/playgrounds-app-settings-custom-icon.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/playgrounds-app-settings-custom-icon.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/namecard.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/namecard.md",
+      "imagePath": "/assets/icons/sidebar.left.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/icons/sidebar.left.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/namecard.md",
+      "imagePath": "/assets/icons/doc.badge.plus.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/icons/doc.badge.plus.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/namecard.md",
+      "imagePath": "/markdown/track_b/assets/playgrounds-image-asset.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/playgrounds-image-asset.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/namecard.md",
+      "imagePath": "/markdown/track_b/assets/playgrounds-image-preview.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/playgrounds-image-preview.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/namecard.md",
+      "imagePath": "/assets/icons/globe.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/icons/globe.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/namecard.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/namecard.md",
+      "imagePath": "/markdown/track_b/assets/vstack-diagram.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/vstack-diagram.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/namecard.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/namecard.md",
+      "imagePath": "/markdown/track_b/assets/hstack-diagram.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/hstack-diagram.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/namecard.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/namecard.md",
+      "imagePath": "/markdown/track_b/assets/playgrounds-curly-brace-highlight.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/playgrounds-curly-brace-highlight.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/namecard.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/namecard.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/namecard.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/namecard.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/namecard.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/namecard.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/namecard.md",
+      "imagePath": "/markdown/track_b/assets/link-diagram.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/link-diagram.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/namecard.md",
+      "imagePath": "/assets/icons/link.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/icons/link.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/namecard.md",
+      "imagePath": "/assets/icons/dot.square.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/icons/dot.square.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/namecard.md",
+      "imagePath": "/assets/icons/link.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/icons/link.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/namecard.md",
+      "imagePath": "/markdown/track_b/assets/playgrounds-views-library-link.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/playgrounds-views-library-link.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/namecard.md",
+      "imagePath": "/assets/icons/star.circle.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/icons/star.circle.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/namecard.md",
+      "imagePath": "/assets/icons/star.circle.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/icons/star.circle.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/namecard.md",
+      "imagePath": "/markdown/track_b/assets/playgrounds-symbols-library.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/playgrounds-symbols-library.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/namecard.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/namecard.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/project.md",
+      "imagePath": "/assets/oak.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/oak.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/project.md",
+      "imagePath": "/assets/download-on-app-store-white.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/download-on-app-store-white.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/quiz.md",
+      "imagePath": "/markdown/track_b/assets/shapes-create-app-ss.jpg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/shapes-create-app-ss.jpg",
+      "exists": true,
+      "extension": ".jpg"
+    },
+    {
+      "file": "public/markdown/track_b/quiz.md",
+      "imagePath": "/markdown/track_b/assets/quiz-rename-app.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/quiz-rename-app.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/quiz.md",
+      "imagePath": "/markdown/track_b/assets/quiz-ui.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/quiz-ui.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/quiz.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/quiz.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/quiz.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/quiz.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/quiz.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/quiz.md",
+      "imagePath": "/markdown/track_b/assets/quiz-creating-alert.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/quiz-creating-alert.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/quiz.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/quiz.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/quiz.md",
+      "imagePath": "/markdown/track_b/assets/jokes-kahoot.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/jokes-kahoot.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/quiz.md",
+      "imagePath": "/markdown/track_b/assets/quiz-symbols1.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/quiz-symbols1.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/quiz.md",
+      "imagePath": "/markdown/track_b/assets/quiz-symbol2.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/quiz-symbol2.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/quiz.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/quiz.md",
+      "imagePath": "/markdown/track_b/assets/jokes-init-parameters.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/jokes-init-parameters.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/quiz.md",
+      "imagePath": "/markdown/track_b/assets/quiz-progressbar.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/quiz-progressbar.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/quiz.md",
+      "imagePath": "/markdown/track_b/assets/quiz-sheet-layout.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/quiz-sheet-layout.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/quiz.md",
+      "imagePath": "/assets/icons/doc.badge.plus.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/icons/doc.badge.plus.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/quiz.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/quiz.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/quiz.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/quiz.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/quiz.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/quiz.md",
+      "imagePath": "/assets/icons/doc.badge.plus.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/icons/doc.badge.plus.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/quiz.md",
+      "imagePath": "/markdown/track_b/assets/circle-progress.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/circle-progress.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/quiz.md",
+      "imagePath": "/markdown/track_b/assets/CircularProgressView.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/CircularProgressView.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/quiz.md",
+      "imagePath": "/markdown/track_b/assets/making_a_ring.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/making_a_ring.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/quiz.md",
+      "imagePath": "/markdown/track_b/assets/CircleProgressIndicator2.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/CircleProgressIndicator2.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/quiz.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/quiz.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/quiz.md",
+      "imagePath": "/markdown/track_b/assets/cuttingTheCircle.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/cuttingTheCircle.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/quiz.md",
+      "imagePath": "/markdown/track_b/assets/drawingTheLine.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/drawingTheLine.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/quiz.md",
+      "imagePath": "/markdown/track_b/assets/changingLineColour.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/changingLineColour.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/quiz.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/quiz.md",
+      "imagePath": "/markdown/track_b/assets/addingProgressRing.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/addingProgressRing.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/shapes.md",
+      "imagePath": "/markdown/track_b/assets/shapes-create-app-ss.jpg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/shapes-create-app-ss.jpg",
+      "exists": true,
+      "extension": ".jpg"
+    },
+    {
+      "file": "public/markdown/track_b/shapes.md",
+      "imagePath": "/markdown/track_b/assets/shapes-rename-app1-ss.jpg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/shapes-rename-app1-ss.jpg",
+      "exists": true,
+      "extension": ".jpg"
+    },
+    {
+      "file": "public/markdown/track_b/shapes.md",
+      "imagePath": "/markdown/track_b/assets/shapes-rename-app2-ss.jpg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/shapes-rename-app2-ss.jpg",
+      "exists": true,
+      "extension": ".jpg"
+    },
+    {
+      "file": "public/markdown/track_b/shapes.md",
+      "imagePath": "/markdown/track_b/assets/shapes-delete-content1-ss.jpg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/shapes-delete-content1-ss.jpg",
+      "exists": true,
+      "extension": ".jpg"
+    },
+    {
+      "file": "public/markdown/track_b/shapes.md",
+      "imagePath": "/markdown/track_b/assets/shapes-delete-content2-ss.jpg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/shapes-delete-content2-ss.jpg",
+      "exists": true,
+      "extension": ".jpg"
+    },
+    {
+      "file": "public/markdown/track_b/shapes.md",
+      "imagePath": "/markdown/track_b/assets/shapes-step1-ss.jpg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/shapes-step1-ss.jpg",
+      "exists": true,
+      "extension": ".jpg"
+    },
+    {
+      "file": "public/markdown/track_b/shapes.md",
+      "imagePath": "/markdown/track_b/assets/view-icon.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/view-icon.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_b/shapes.md",
+      "imagePath": "/markdown/track_b/assets/shapes-step2-ss.jpg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/shapes-step2-ss.jpg",
+      "exists": true,
+      "extension": ".jpg"
+    },
+    {
+      "file": "public/markdown/track_b/shapes.md",
+      "imagePath": "/markdown/track_b/assets/shapes-step3-ss.jpg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/shapes-step3-ss.jpg",
+      "exists": true,
+      "extension": ".jpg"
+    },
+    {
+      "file": "public/markdown/track_b/shapes.md",
+      "imagePath": "/assets/swift-logo.svg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/assets/swift-logo.svg",
+      "exists": true,
+      "extension": ".svg"
+    },
+    {
+      "file": "public/markdown/track_b/shapes.md",
+      "imagePath": "/markdown/track_b/assets/shapes-step4-ss.jpg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/shapes-step4-ss.jpg",
+      "exists": true,
+      "extension": ".jpg"
+    },
+    {
+      "file": "public/markdown/track_b/shapes.md",
+      "imagePath": "/markdown/track_b/assets/shapes-step5-1-ss.jpg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/shapes-step5-1-ss.jpg",
+      "exists": true,
+      "extension": ".jpg"
+    },
+    {
+      "file": "public/markdown/track_b/shapes.md",
+      "imagePath": "/markdown/track_b/assets/shapes-step5-2-ss.jpg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/shapes-step5-2-ss.jpg",
+      "exists": true,
+      "extension": ".jpg"
+    },
+    {
+      "file": "public/markdown/track_b/shapes.md",
+      "imagePath": "/markdown/track_b/assets/shapes-step6-1-ss.jpg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/shapes-step6-1-ss.jpg",
+      "exists": true,
+      "extension": ".jpg"
+    },
+    {
+      "file": "public/markdown/track_b/shapes.md",
+      "imagePath": "/markdown/track_b/assets/shapes-step6-2-ss.jpg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/shapes-step6-2-ss.jpg",
+      "exists": true,
+      "extension": ".jpg"
+    },
+    {
+      "file": "public/markdown/track_b/shapes.md",
+      "imagePath": "/markdown/track_b/assets/shapes-step7-1-ss.jpg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/shapes-step7-1-ss.jpg",
+      "exists": true,
+      "extension": ".jpg"
+    },
+    {
+      "file": "public/markdown/track_b/shapes.md",
+      "imagePath": "/markdown/track_b/assets/shapes-step7-2-ss.jpg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/shapes-step7-2-ss.jpg",
+      "exists": true,
+      "extension": ".jpg"
+    },
+    {
+      "file": "public/markdown/track_b/shapes.md",
+      "imagePath": "/markdown/track_b/assets/shapes-step8-ss.jpg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/shapes-step8-ss.jpg",
+      "exists": true,
+      "extension": ".jpg"
+    },
+    {
+      "file": "public/markdown/track_b/shapes.md",
+      "imagePath": "/markdown/track_b/assets/shapes-step9-1-ss.jpg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/shapes-step9-1-ss.jpg",
+      "exists": true,
+      "extension": ".jpg"
+    },
+    {
+      "file": "public/markdown/track_b/shapes.md",
+      "imagePath": "/markdown/track_b/assets/shapes-step9-2-ss.jpg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/shapes-step9-2-ss.jpg",
+      "exists": true,
+      "extension": ".jpg"
+    },
+    {
+      "file": "public/markdown/track_b/shapes.md",
+      "imagePath": "/markdown/track_b/assets/shapes-step10-ss.jpg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/shapes-step10-ss.jpg",
+      "exists": true,
+      "extension": ".jpg"
+    },
+    {
+      "file": "public/markdown/track_b/shapes.md",
+      "imagePath": "/markdown/track_b/assets/shapes-step11-ss.jpg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/shapes-step11-ss.jpg",
+      "exists": true,
+      "extension": ".jpg"
+    },
+    {
+      "file": "public/markdown/track_b/shapes.md",
+      "imagePath": "/markdown/track_b/assets/shapes-step12-ss.jpg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/shapes-step12-ss.jpg",
+      "exists": true,
+      "extension": ".jpg"
+    },
+    {
+      "file": "public/markdown/track_b/shapes.md",
+      "imagePath": "/markdown/track_b/assets/shapes-step13-1-ss.jpg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/shapes-step13-1-ss.jpg",
+      "exists": true,
+      "extension": ".jpg"
+    },
+    {
+      "file": "public/markdown/track_b/shapes.md",
+      "imagePath": "/markdown/track_b/assets/shapes-step13-2-ss.jpg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/shapes-step13-2-ss.jpg",
+      "exists": true,
+      "extension": ".jpg"
+    },
+    {
+      "file": "public/markdown/track_b/shapes.md",
+      "imagePath": "/markdown/track_b/assets/shapes-step14-ss.jpg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/shapes-step14-ss.jpg",
+      "exists": true,
+      "extension": ".jpg"
+    },
+    {
+      "file": "public/markdown/track_b/shapes.md",
+      "imagePath": "/markdown/track_b/assets/shapes-tip-too-many-views-in-a-stack-ss.jpg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/shapes-tip-too-many-views-in-a-stack-ss.jpg",
+      "exists": true,
+      "extension": ".jpg"
+    },
+    {
+      "file": "public/markdown/track_b/shapes.md",
+      "imagePath": "/markdown/track_b/assets/shapes-step15-1-ss.jpg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/shapes-step15-1-ss.jpg",
+      "exists": true,
+      "extension": ".jpg"
+    },
+    {
+      "file": "public/markdown/track_b/shapes.md",
+      "imagePath": "/markdown/track_b/assets/shapes-step15-2-ss.jpg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/shapes-step15-2-ss.jpg",
+      "exists": true,
+      "extension": ".jpg"
+    },
+    {
+      "file": "public/markdown/track_b/shapes.md",
+      "imagePath": "/markdown/track_b/assets/shapes-step16-1-ss.jpg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/shapes-step16-1-ss.jpg",
+      "exists": true,
+      "extension": ".jpg"
+    },
+    {
+      "file": "public/markdown/track_b/shapes.md",
+      "imagePath": "/markdown/track_b/assets/shapes-step16-2-ss.jpg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_b/assets/shapes-step16-2-ss.jpg",
+      "exists": true,
+      "extension": ".jpg"
+    },
+    {
+      "file": "public/markdown/track_x/about-me-app.md",
+      "imagePath": "/markdown/track_x/assets/placeholder_getting_started_about_me.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/placeholder_getting_started_about_me.png",
+      "exists": false,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/about-me-app.md",
+      "imagePath": "/markdown/track_x/assets/placeholder_tabs_in_app.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/placeholder_tabs_in_app.png",
+      "exists": false,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/about-me-app.md",
+      "imagePath": "/markdown/track_x/assets/placeholder_hands_on_about_me.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/placeholder_hands_on_about_me.png",
+      "exists": false,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/about-me-app.md",
+      "imagePath": "/markdown/track_x/assets/placeholder_editing_tab_labels.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/placeholder_editing_tab_labels.png",
+      "exists": false,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/about-me-app.md",
+      "imagePath": "/markdown/track_x/assets/placeholder_adding_images_to_tabs.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/placeholder_adding_images_to_tabs.png",
+      "exists": false,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/about-me-app.md",
+      "imagePath": "/markdown/track_x/assets/placeholder_changing_accent_colors.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/placeholder_changing_accent_colors.png",
+      "exists": false,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/about-me-app.md",
+      "imagePath": "/markdown/track_x/assets/placeholder_styling_text.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/placeholder_styling_text.png",
+      "exists": false,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/basicCommands.md",
+      "imagePath": "/markdown/track_x/assets/x-1-8-0.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/x-1-8-0.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/basicCommands.md",
+      "imagePath": "/markdown/track_x/assets/x-1-10-0.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/x-1-10-0.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/basicCommands.md",
+      "imagePath": "/markdown/track_x/assets/iPad.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/iPad.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/basicCommands.md",
+      "imagePath": "/markdown/track_x/assets/x-1-11-0.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/x-1-11-0.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/basicCommands.md",
+      "imagePath": "/markdown/track_x/assets/iPad.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/iPad.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/basicCommands.md",
+      "imagePath": "/markdown/track_x/assets/x-1-14-0.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/x-1-14-0.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/basicCommands.md",
+      "imagePath": "/markdown/track_x/assets/iPad.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/iPad.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/basicCommands.md",
+      "imagePath": "/markdown/track_x/assets/x-1-14-1.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/x-1-14-1.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/basicCommands.md",
+      "imagePath": "/markdown/track_x/assets/iPad.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/iPad.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/basicCommands.md",
+      "imagePath": "/markdown/track_x/assets/x-1-15-0.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/x-1-15-0.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/basicCommands.md",
+      "imagePath": "/markdown/track_x/assets/iPad.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/iPad.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/basicCommands.md",
+      "imagePath": "/markdown/track_x/assets/x-1-15-1.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/x-1-15-1.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/basicCommands.md",
+      "imagePath": "/markdown/track_x/assets/iPad.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/iPad.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/basicCommands.md",
+      "imagePath": "/markdown/track_x/assets/x-1-16-0.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/x-1-16-0.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/basicCommands.md",
+      "imagePath": "/markdown/track_x/assets/iPad.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/iPad.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/basicCommands.md",
+      "imagePath": "/markdown/track_x/assets/x-1-16-1.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/x-1-16-1.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/basicCommands.md",
+      "imagePath": "/markdown/track_x/assets/iPad.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/iPad.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/basicCommands.md",
+      "imagePath": "/markdown/track_x/assets/x-1-17-0.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/x-1-17-0.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/basicCommands.md",
+      "imagePath": "/markdown/track_x/assets/iPad.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/iPad.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/basicCommands.md",
+      "imagePath": "/markdown/track_x/assets/x-1-18-0.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/x-1-18-0.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/basicCommands.md",
+      "imagePath": "/markdown/track_x/assets/iPad.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/iPad.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/basicCommands.md",
+      "imagePath": "/markdown/track_x/assets/x-1-19-0.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/x-1-19-0.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/basicCommands.md",
+      "imagePath": "/markdown/track_x/assets/iPad.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/iPad.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/basicCommands.md",
+      "imagePath": "/markdown/track_x/assets/x-1-20-0.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/x-1-20-0.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/basicCommands.md",
+      "imagePath": "/markdown/track_x/assets/iPad.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/iPad.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/basicCommands.md",
+      "imagePath": "/markdown/track_x/assets/x-1-20-1.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/x-1-20-1.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/basicCommands.md",
+      "imagePath": "/markdown/track_x/assets/iPad.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/iPad.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/basicCommands.md",
+      "imagePath": "/markdown/track_x/assets/x-1-22-0.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/x-1-22-0.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/basicCommands.md",
+      "imagePath": "/markdown/track_x/assets/iPad.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/iPad.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/basicCommands.md",
+      "imagePath": "/markdown/track_x/assets/x-1-22-1.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/x-1-22-1.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/basicCommands.md",
+      "imagePath": "/markdown/track_x/assets/iPad.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/iPad.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/basicCommands.md",
+      "imagePath": "/markdown/track_x/assets/x-1-23-0.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/x-1-23-0.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/basicCommands.md",
+      "imagePath": "/markdown/track_x/assets/iPad.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/iPad.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/basicCommands.md",
+      "imagePath": "/markdown/track_x/assets/x-1-23-1.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/x-1-23-1.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/basicCommands.md",
+      "imagePath": "/markdown/track_x/assets/iPad.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/iPad.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/basicCommands.md",
+      "imagePath": "/markdown/track_x/assets/x-1-26-0.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/x-1-26-0.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/basicCommands.md",
+      "imagePath": "/markdown/track_x/assets/iPad.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/iPad.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/basicCommands.md",
+      "imagePath": "/markdown/track_x/assets/x-1-26-1.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/x-1-26-1.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/basicCommands.md",
+      "imagePath": "/markdown/track_x/assets/iPad.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/iPad.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/basicCommands.md",
+      "imagePath": "/markdown/track_x/assets/x-1-28-0.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/x-1-28-0.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/basicCommands.md",
+      "imagePath": "/markdown/track_x/assets/iPad.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/iPad.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/basicCommands.md",
+      "imagePath": "/markdown/track_x/assets/x-1-29-0.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/x-1-29-0.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/basicCommands.md",
+      "imagePath": "/markdown/track_x/assets/iPad.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/iPad.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/basicCommands.md",
+      "imagePath": "/markdown/track_x/assets/x-1-29-1.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/x-1-29-1.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/basicCommands.md",
+      "imagePath": "/markdown/track_x/assets/iPad.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/iPad.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/basicCommands.md",
+      "imagePath": "/markdown/track_x/assets/x-1-30-0.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/x-1-30-0.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/basicCommands.md",
+      "imagePath": "/markdown/track_x/assets/iPad.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/iPad.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/basicCommands.md",
+      "imagePath": "/markdown/track_x/assets/x-1-30-1.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/x-1-30-1.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/basicCommands.md",
+      "imagePath": "/markdown/track_x/assets/iPad.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/iPad.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/basicCommands.md",
+      "imagePath": "/markdown/track_x/assets/x-1-33-0.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/x-1-33-0.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/basicCommands.md",
+      "imagePath": "/markdown/track_x/assets/iPad.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/iPad.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/basicCommands.md",
+      "imagePath": "/markdown/track_x/assets/x-1-33-1.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/x-1-33-1.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/basicCommands.md",
+      "imagePath": "/markdown/track_x/assets/iPad.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/iPad.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/basicCommands.md",
+      "imagePath": "/markdown/track_x/assets/x-1-34-0.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/x-1-34-0.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/basicCommands.md",
+      "imagePath": "/markdown/track_x/assets/iPad.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/iPad.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/basicCommands.md",
+      "imagePath": "/markdown/track_x/assets/x-1-34-1.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/x-1-34-1.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/basicCommands.md",
+      "imagePath": "/markdown/track_x/assets/iPad.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/iPad.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/basicCommands.md",
+      "imagePath": "/markdown/track_x/assets/x-1-34-2.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/x-1-34-2.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/basicCommands.md",
+      "imagePath": "/markdown/track_x/assets/iPad.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/iPad.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/getting-started-with-apps.md",
+      "imagePath": "/markdown/track_x/assets/placeholder_swiftui_basics.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/placeholder_swiftui_basics.png",
+      "exists": false,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/getting-started-with-apps.md",
+      "imagePath": "/markdown/track_x/assets/placeholder_getting_started.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/placeholder_getting_started.png",
+      "exists": false,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/initialisation-func-parameters.md",
+      "imagePath": "/markdown/track_x/assets/placeholder_initialisation.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/placeholder_initialisation.png",
+      "exists": false,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/initialisation-func-parameters.md",
+      "imagePath": "/markdown/track_x/assets/placeholder_hands_on_initialisation.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/placeholder_hands_on_initialisation.png",
+      "exists": false,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/initialisation-func-parameters.md",
+      "imagePath": "/markdown/track_x/assets/placeholder_functions.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/placeholder_functions.png",
+      "exists": false,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/initialisation-func-parameters.md",
+      "imagePath": "/markdown/track_x/assets/placeholder_hands_on_functions.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/placeholder_hands_on_functions.png",
+      "exists": false,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/initialisation-func-parameters.md",
+      "imagePath": "/markdown/track_x/assets/placeholder_parameters.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/placeholder_parameters.png",
+      "exists": false,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/initialisation-func-parameters.md",
+      "imagePath": "/markdown/track_x/assets/placeholder_hands_on_parameters.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/placeholder_hands_on_parameters.png",
+      "exists": false,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/logic-variables.md",
+      "imagePath": "/markdown/track_x/assets/x-2-4-0.PNG",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/x-2-4-0.PNG",
+      "exists": true,
+      "extension": ".PNG"
+    },
+    {
+      "file": "public/markdown/track_x/logic-variables.md",
+      "imagePath": "/markdown/track_x/assets/iPad.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/iPad.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/logic-variables.md",
+      "imagePath": "/markdown/track_x/assets/x-2-5-0.PNG",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/x-2-5-0.PNG",
+      "exists": true,
+      "extension": ".PNG"
+    },
+    {
+      "file": "public/markdown/track_x/logic-variables.md",
+      "imagePath": "/markdown/track_x/assets/iPad.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/iPad.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/logic-variables.md",
+      "imagePath": "/markdown/track_x/assets/x-2-5-1.PNG",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/x-2-5-1.PNG",
+      "exists": true,
+      "extension": ".PNG"
+    },
+    {
+      "file": "public/markdown/track_x/logic-variables.md",
+      "imagePath": "/markdown/track_x/assets/iPad.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/iPad.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/logic-variables.md",
+      "imagePath": "/markdown/track_x/assets/x-2-6-0.PNG",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/x-2-6-0.PNG",
+      "exists": true,
+      "extension": ".PNG"
+    },
+    {
+      "file": "public/markdown/track_x/logic-variables.md",
+      "imagePath": "/markdown/track_x/assets/iPad.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/iPad.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/logic-variables.md",
+      "imagePath": "/markdown/track_x/assets/x-2-6-1.PNG",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/x-2-6-1.PNG",
+      "exists": true,
+      "extension": ".PNG"
+    },
+    {
+      "file": "public/markdown/track_x/logic-variables.md",
+      "imagePath": "/markdown/track_x/assets/iPad.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/iPad.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/logic-variables.md",
+      "imagePath": "/markdown/track_x/assets/x-2-7-0.PNG",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/x-2-7-0.PNG",
+      "exists": true,
+      "extension": ".PNG"
+    },
+    {
+      "file": "public/markdown/track_x/logic-variables.md",
+      "imagePath": "/markdown/track_x/assets/iPad.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/iPad.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/logic-variables.md",
+      "imagePath": "/markdown/track_x/assets/x-2-7-1.PNG",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/x-2-7-1.PNG",
+      "exists": true,
+      "extension": ".PNG"
+    },
+    {
+      "file": "public/markdown/track_x/logic-variables.md",
+      "imagePath": "/markdown/track_x/assets/iPad.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/iPad.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/logic-variables.md",
+      "imagePath": "/markdown/track_x/assets/x-2-8-0.jpeg",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/x-2-8-0.jpeg",
+      "exists": true,
+      "extension": ".jpeg"
+    },
+    {
+      "file": "public/markdown/track_x/logic-variables.md",
+      "imagePath": "/markdown/track_x/assets/iPad.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/iPad.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/logic-variables.md",
+      "imagePath": "/markdown/track_x/assets/x-2-10-0.PNG",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/x-2-10-0.PNG",
+      "exists": true,
+      "extension": ".PNG"
+    },
+    {
+      "file": "public/markdown/track_x/logic-variables.md",
+      "imagePath": "/markdown/track_x/assets/iPad.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/iPad.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/logic-variables.md",
+      "imagePath": "/markdown/track_x/assets/x-2-10-1.PNG",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/x-2-10-1.PNG",
+      "exists": true,
+      "extension": ".PNG"
+    },
+    {
+      "file": "public/markdown/track_x/logic-variables.md",
+      "imagePath": "/markdown/track_x/assets/iPad.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/iPad.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/logic-variables.md",
+      "imagePath": "/markdown/track_x/assets/x-2-11-0.PNG",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/x-2-11-0.PNG",
+      "exists": true,
+      "extension": ".PNG"
+    },
+    {
+      "file": "public/markdown/track_x/logic-variables.md",
+      "imagePath": "/markdown/track_x/assets/iPad.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/iPad.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/logic-variables.md",
+      "imagePath": "/markdown/track_x/assets/x-2-11-1.PNG",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/x-2-11-1.PNG",
+      "exists": true,
+      "extension": ".PNG"
+    },
+    {
+      "file": "public/markdown/track_x/logic-variables.md",
+      "imagePath": "/markdown/track_x/assets/iPad.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/iPad.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/logic-variables.md",
+      "imagePath": "/markdown/track_x/assets/x-2-12-0.PNG",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/x-2-12-0.PNG",
+      "exists": true,
+      "extension": ".PNG"
+    },
+    {
+      "file": "public/markdown/track_x/logic-variables.md",
+      "imagePath": "/markdown/track_x/assets/iPad.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/iPad.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/logic-variables.md",
+      "imagePath": "/markdown/track_x/assets/x-2-12-1.PNG",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/x-2-12-1.PNG",
+      "exists": true,
+      "extension": ".PNG"
+    },
+    {
+      "file": "public/markdown/track_x/logic-variables.md",
+      "imagePath": "/markdown/track_x/assets/iPad.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/iPad.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/logic-variables.md",
+      "imagePath": "/markdown/track_x/assets/x-2-14-0.PNG",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/x-2-14-0.PNG",
+      "exists": true,
+      "extension": ".PNG"
+    },
+    {
+      "file": "public/markdown/track_x/logic-variables.md",
+      "imagePath": "/markdown/track_x/assets/iPad.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/iPad.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/logic-variables.md",
+      "imagePath": "/markdown/track_x/assets/x-2-14-1.PNG",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/x-2-14-1.PNG",
+      "exists": true,
+      "extension": ".PNG"
+    },
+    {
+      "file": "public/markdown/track_x/logic-variables.md",
+      "imagePath": "/markdown/track_x/assets/iPad.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/iPad.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/logic-variables.md",
+      "imagePath": "/markdown/track_x/assets/x-2-16-0.PNG",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/x-2-16-0.PNG",
+      "exists": true,
+      "extension": ".PNG"
+    },
+    {
+      "file": "public/markdown/track_x/logic-variables.md",
+      "imagePath": "/markdown/track_x/assets/iPad.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/iPad.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/logic-variables.md",
+      "imagePath": "/markdown/track_x/assets/x-2-16-1.PNG",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/x-2-16-1.PNG",
+      "exists": true,
+      "extension": ".PNG"
+    },
+    {
+      "file": "public/markdown/track_x/logic-variables.md",
+      "imagePath": "/markdown/track_x/assets/iPad.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/iPad.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/logic-variables.md",
+      "imagePath": "/markdown/track_x/assets/x-2-17-0.PNG",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/x-2-17-0.PNG",
+      "exists": true,
+      "extension": ".PNG"
+    },
+    {
+      "file": "public/markdown/track_x/logic-variables.md",
+      "imagePath": "/markdown/track_x/assets/iPad.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/iPad.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/logic-variables.md",
+      "imagePath": "/markdown/track_x/assets/x-2-17-1.PNG",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/x-2-17-1.PNG",
+      "exists": true,
+      "extension": ".PNG"
+    },
+    {
+      "file": "public/markdown/track_x/logic-variables.md",
+      "imagePath": "/markdown/track_x/assets/iPad.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/iPad.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/logic-variables.md",
+      "imagePath": "/markdown/track_x/assets/x-2-18-0.PNG",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/x-2-18-0.PNG",
+      "exists": true,
+      "extension": ".PNG"
+    },
+    {
+      "file": "public/markdown/track_x/logic-variables.md",
+      "imagePath": "/markdown/track_x/assets/iPad.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/iPad.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/logic-variables.md",
+      "imagePath": "/markdown/track_x/assets/x-2-18-1.PNG",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/x-2-18-1.PNG",
+      "exists": true,
+      "extension": ".PNG"
+    },
+    {
+      "file": "public/markdown/track_x/logic-variables.md",
+      "imagePath": "/markdown/track_x/assets/iPad.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/iPad.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/logic-variables.md",
+      "imagePath": "/markdown/track_x/assets/x-2-19-0.PNG",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/x-2-19-0.PNG",
+      "exists": true,
+      "extension": ".PNG"
+    },
+    {
+      "file": "public/markdown/track_x/logic-variables.md",
+      "imagePath": "/markdown/track_x/assets/iPad.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/iPad.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/logic-variables.md",
+      "imagePath": "/markdown/track_x/assets/x-2-20-0.PNG",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/x-2-20-0.PNG",
+      "exists": true,
+      "extension": ".PNG"
+    },
+    {
+      "file": "public/markdown/track_x/logic-variables.md",
+      "imagePath": "/markdown/track_x/assets/iPad.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/iPad.png",
+      "exists": true,
+      "extension": ".png"
+    },
+    {
+      "file": "public/markdown/track_x/logic-variables.md",
+      "imagePath": "/markdown/track_x/assets/x-2-20-1.PNG",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/x-2-20-1.PNG",
+      "exists": true,
+      "extension": ".PNG"
+    },
+    {
+      "file": "public/markdown/track_x/logic-variables.md",
+      "imagePath": "/markdown/track_x/assets/iPad.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/iPad.png",
+      "exists": true,
+      "extension": ".png"
+    }
+  ],
+  "missingMarkdownImages": [
+    {
+      "file": "public/markdown/track_x/about-me-app.md",
+      "imagePath": "/markdown/track_x/assets/placeholder_getting_started_about_me.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/placeholder_getting_started_about_me.png"
+    },
+    {
+      "file": "public/markdown/track_x/about-me-app.md",
+      "imagePath": "/markdown/track_x/assets/placeholder_tabs_in_app.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/placeholder_tabs_in_app.png"
+    },
+    {
+      "file": "public/markdown/track_x/about-me-app.md",
+      "imagePath": "/markdown/track_x/assets/placeholder_hands_on_about_me.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/placeholder_hands_on_about_me.png"
+    },
+    {
+      "file": "public/markdown/track_x/about-me-app.md",
+      "imagePath": "/markdown/track_x/assets/placeholder_editing_tab_labels.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/placeholder_editing_tab_labels.png"
+    },
+    {
+      "file": "public/markdown/track_x/about-me-app.md",
+      "imagePath": "/markdown/track_x/assets/placeholder_adding_images_to_tabs.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/placeholder_adding_images_to_tabs.png"
+    },
+    {
+      "file": "public/markdown/track_x/about-me-app.md",
+      "imagePath": "/markdown/track_x/assets/placeholder_changing_accent_colors.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/placeholder_changing_accent_colors.png"
+    },
+    {
+      "file": "public/markdown/track_x/about-me-app.md",
+      "imagePath": "/markdown/track_x/assets/placeholder_styling_text.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/placeholder_styling_text.png"
+    },
+    {
+      "file": "public/markdown/track_x/getting-started-with-apps.md",
+      "imagePath": "/markdown/track_x/assets/placeholder_swiftui_basics.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/placeholder_swiftui_basics.png"
+    },
+    {
+      "file": "public/markdown/track_x/getting-started-with-apps.md",
+      "imagePath": "/markdown/track_x/assets/placeholder_getting_started.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/placeholder_getting_started.png"
+    },
+    {
+      "file": "public/markdown/track_x/initialisation-func-parameters.md",
+      "imagePath": "/markdown/track_x/assets/placeholder_initialisation.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/placeholder_initialisation.png"
+    },
+    {
+      "file": "public/markdown/track_x/initialisation-func-parameters.md",
+      "imagePath": "/markdown/track_x/assets/placeholder_hands_on_initialisation.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/placeholder_hands_on_initialisation.png"
+    },
+    {
+      "file": "public/markdown/track_x/initialisation-func-parameters.md",
+      "imagePath": "/markdown/track_x/assets/placeholder_functions.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/placeholder_functions.png"
+    },
+    {
+      "file": "public/markdown/track_x/initialisation-func-parameters.md",
+      "imagePath": "/markdown/track_x/assets/placeholder_hands_on_functions.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/placeholder_hands_on_functions.png"
+    },
+    {
+      "file": "public/markdown/track_x/initialisation-func-parameters.md",
+      "imagePath": "/markdown/track_x/assets/placeholder_parameters.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/placeholder_parameters.png"
+    },
+    {
+      "file": "public/markdown/track_x/initialisation-func-parameters.md",
+      "imagePath": "/markdown/track_x/assets/placeholder_hands_on_parameters.png",
+      "fullImagePath": "/Users/yingjie/Developer/tt-projects/swift-slides/public/markdown/track_x/assets/placeholder_hands_on_parameters.png"
+    }
+  ],
+  "summary": {
+    "totalWebpReferences": 18,
+    "missingWebpFiles": 2,
+    "totalPngReferences": 1,
+    "totalMarkdownImageRefs": 497,
+    "missingMarkdownImages": 15,
+    "markdownImageTypes": {
+      "png": 278,
+      "jpg": 45,
+      "jpeg": 18,
+      "webp": 0,
+      "svg": 127
+    }
+  }
+}

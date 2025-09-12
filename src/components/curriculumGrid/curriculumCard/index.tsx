@@ -24,9 +24,9 @@ export function CurriculumCard({
         <Link href={pageURL?.startsWith("http") || pageURL?.startsWith("/") ? pageURL : `${pathname}/${pageURL}`} className={`${styles.card} ${styles[color]} ${(disabled ?? false) ? styles.disabled : ""}`}>
             <div className={styles.entryImg}>
                 <ResponsiveImage
-                    src={imgURL || "/covers/placeholder.png"}
-                    fallbackSrc="/covers/placeholder.png"
-                    placeholder="blur" blurDataURL="/covers/placeholder.png"
+                    src={imgURL || "/covers/placeholder.webp"}
+                    fallbackSrc="/covers/placeholder.webp"
+                    placeholder="blur" blurDataURL="/covers/placeholder.webp"
                     fill={true}
                     alt={`Cover image for "${subtitle ?? title}"`} />
             </div>
