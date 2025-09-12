@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Missing Images Tracker - Swift Slides</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #1a1a1a;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            color: #666;
+            font-size: 1.1em;
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .stat-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: bold;
+        }
+        
+        .stat-label {
+            font-size: 0.9em;
+            opacity: 0.9;
+            margin-top: 5px;
+        }
+        
+        .track-section {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .track-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        
+        .track-title {
+            font-size: 1.8em;
+            color: #333;
+        }
+        
+        .track-b { border-left: 4px solid #34C759; }
+        .track-x { border-left: 4px solid #FF3B30; }
+        
+        .unit-section {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 12px;
+        }
+        
+        .unit-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        
+        .unit-title {
+            font-size: 1.3em;
+            color: #444;
+        }
+        
+        .unit-badge {
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 600;
+        }
+        
+        .badge-disabled {
+            background: #ff3b3022;
+            color: #ff3b30;
+        }
+        
+        .badge-active {
+            background: #34c75922;
+            color: #34c759;
+        }
+        
+        .missing-images-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .missing-images-table th {
+            background: #667eea;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .missing-images-table td {
+            padding: 12px;
+            border-bottom: 1px solid #e0e0e0;
+            background: white;
+        }
+        
+        .missing-images-table tr:hover td {
+            background: #f5f5ff;
+        }
+        
+        .slide-link {
+            display: inline-block;
+            padding: 6px 14px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+        
+        .slide-link:hover {
+            background: #5a67d8;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 8px rgba(102, 126, 234, 0.3);
+        }
+        
+        .filename {
+            font-family: 'SF Mono', Monaco, monospace;
+            font-size: 0.9em;
+            color: #666;
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+        
+        .context {
+            color: #555;
+        }
+        
+        .warning-note {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 6px;
+        }
+        
+        .warning-note strong {
+            color: #856404;
+        }
+        
+        .info-note {
+            background: #d1ecf1;
+            border-left: 4px solid #0c5460;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 6px;
+        }
+        
+        .action-buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .btn {
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.2s;
+            display: inline-block;
+        }
+        
+        .btn-primary {
+            background: #667eea;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: #5a67d8;
+        }
+        
+        .btn-secondary {
+            background: #e0e0e0;
+            color: #333;
+        }
+        
+        .btn-secondary:hover {
+            background: #d0d0d0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔍 Missing Images Tracker</h1>
+            <p class="subtitle">Swift Slides - Image Backfill Requirements</p>
+            
+            <div class="stats">
+                <div class="stat-card">
+                    <div class="stat-number">22</div>
+                    <div class="stat-label">Total Missing Images</div>
+                </div>
+                <div class="stat-card" style="background: linear-gradient(135deg, #34C759 0%, #30d158 100%);">
+                    <div class="stat-number">7</div>
+                    <div class="stat-label">Track B Images</div>
+                </div>
+                <div class="stat-card" style="background: linear-gradient(135deg, #FF3B30 0%, #ff453a 100%);">
+                    <div class="stat-number">15</div>
+                    <div class="stat-label">Track X Images</div>
+                </div>
+                <div class="stat-card" style="background: linear-gradient(135deg, #FF9500 0%, #ffaa00 100%);">
+                    <div class="stat-number">3</div>
+                    <div class="stat-label">Affected Units</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Track B Section -->
+        <div class="track-section track-b">
+            <div class="track-header">
+                <h2 class="track-title">Track B: App Development with Swift</h2>
+                <a href="http://localhost:3000/tracks/track_b" class="btn btn-secondary">View Track</a>
+            </div>
+            
+            <div class="unit-section">
+                <div class="unit-header">
+                    <h3 class="unit-title">Unit 04A: Arrays, Previews, and Structs</h3>
+                    <span class="unit-badge badge-active">Active</span>
+                </div>
+                
+                <div class="warning-note">
+                    <strong>⚠️ Note:</strong> These are array visualisation diagrams that need to be created to explain Swift arrays concepts.
+                </div>
+                
+                <table class="missing-images-table">
+                    <thead>
+                        <tr>
+                            <th>Missing Image</th>
+                            <th>Description</th>
+                            <th>View Broken Slide</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="filename">array-diagram.png</span></td>
+                            <td class="context">Main array concept diagram</td>
+                            <td><a href="http://localhost:3000/tracks/track_b/unit_04A" class="slide-link">View Unit →</a></td>
+                        </tr>
+                        <tr>
+                            <td><span class="filename">visualising-arrays-0.png</span></td>
+                            <td class="context">Array visualisation step 0</td>
+                            <td><a href="http://localhost:3000/tracks/track_b/unit_04A" class="slide-link">View Unit →</a></td>
+                        </tr>
+                        <tr>
+                            <td><span class="filename">visualising-arrays-1.png</span></td>
+                            <td class="context">Array visualisation step 1</td>
+                            <td><a href="http://localhost:3000/tracks/track_b/unit_04A" class="slide-link">View Unit →</a></td>
+                        </tr>
+                        <tr>
+                            <td><span class="filename">visualising-arrays-2.png</span></td>
+                            <td class="context">Array visualisation step 2</td>
+                            <td><a href="http://localhost:3000/tracks/track_b/unit_04A" class="slide-link">View Unit →</a></td>
+                        </tr>
+                        <tr>
+                            <td><span class="filename">visualising-arrays-3.png</span></td>
+                            <td class="context">Array visualisation step 3</td>
+                            <td><a href="http://localhost:3000/tracks/track_b/unit_04A" class="slide-link">View Unit →</a></td>
+                        </tr>
+                        <tr>
+                            <td><span class="filename">visualising-arrays-4.png</span></td>
+                            <td class="context">Array visualisation step 4</td>
+                            <td><a href="http://localhost:3000/tracks/track_b/unit_04A" class="slide-link">View Unit →</a></td>
+                        </tr>
+                        <tr>
+                            <td><span class="filename">visualising-arrays-5.png</span></td>
+                            <td class="context">Array visualisation step 5</td>
+                            <td><a href="http://localhost:3000/tracks/track_b/unit_04A" class="slide-link">View Unit →</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Track X Section -->
+        <div class="track-section track-x">
+            <div class="track-header">
+                <h2 class="track-title">Track X: Get Started with Swift!</h2>
+                <a href="http://localhost:3000/tracks/track_x" class="btn btn-secondary">View Track</a>
+            </div>
+            
+            <!-- Unit 03 -->
+            <div class="unit-section">
+                <div class="unit-header">
+                    <h3 class="unit-title">Unit 03: Initialisation, Function, Parameters</h3>
+                    <span class="unit-badge badge-disabled">Disabled</span>
+                </div>
+                
+                <table class="missing-images-table">
+                    <thead>
+                        <tr>
+                            <th>Slide</th>
+                            <th>Missing Image</th>
+                            <th>Context</th>
+                            <th>View Broken Slide</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#2</td>
+                            <td><span class="filename">placeholder_initialisation.png</span></td>
+                            <td class="context">Initialisation concept</td>
+                            <td><a href="http://localhost:3000/tracks/track_x/unit_03#/1" class="slide-link">View Slide →</a></td>
+                        </tr>
+                        <tr>
+                            <td>#3</td>
+                            <td><span class="filename">placeholder_hands_on_initialisation.png</span></td>
+                            <td class="context">Hands-on: Initialisation</td>
+                            <td><a href="http://localhost:3000/tracks/track_x/unit_03#/2" class="slide-link">View Slide →</a></td>
+                        </tr>
+                        <tr>
+                            <td>#4</td>
+                            <td><span class="filename">placeholder_functions.png</span></td>
+                            <td class="context">Functions concept</td>
+                            <td><a href="http://localhost:3000/tracks/track_x/unit_03#/3" class="slide-link">View Slide →</a></td>
+                        </tr>
+                        <tr>
+                            <td>#5</td>
+                            <td><span class="filename">placeholder_hands_on_functions.png</span></td>
+                            <td class="context">Hands-on: Functions</td>
+                            <td><a href="http://localhost:3000/tracks/track_x/unit_03#/4" class="slide-link">View Slide →</a></td>
+                        </tr>
+                        <tr>
+                            <td>#6</td>
+                            <td><span class="filename">placeholder_parameters.png</span></td>
+                            <td class="context">Parameters concept</td>
+                            <td><a href="http://localhost:3000/tracks/track_x/unit_03#/5" class="slide-link">View Slide →</a></td>
+                        </tr>
+                        <tr>
+                            <td>#7</td>
+                            <td><span class="filename">placeholder_hands_on_parameters.png</span></td>
+                            <td class="context">Hands-on: Parameters</td>
+                            <td><a href="http://localhost:3000/tracks/track_x/unit_03#/6" class="slide-link">View Slide →</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- Unit 05 -->
+            <div class="unit-section">
+                <div class="unit-header">
+                    <h3 class="unit-title">Unit 05: About Me App</h3>
+                    <span class="unit-badge badge-disabled">Disabled</span>
+                </div>
+                
+                <table class="missing-images-table">
+                    <thead>
+                        <tr>
+                            <th>Slide</th>
+                            <th>Missing Image</th>
+                            <th>Context</th>
+                            <th>View Broken Slide</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#1</td>
+                            <td><span class="filename">placeholder_getting_started_about_me.png</span></td>
+                            <td class="context">Getting Started screen</td>
+                            <td><a href="http://localhost:3000/tracks/track_x/unit_05#/0" class="slide-link">View Slide →</a></td>
+                        </tr>
+                        <tr>
+                            <td>#3</td>
+                            <td><span class="filename">placeholder_tabs_in_app.png</span></td>
+                            <td class="context">Tabs in the App</td>
+                            <td><a href="http://localhost:3000/tracks/track_x/unit_05#/2" class="slide-link">View Slide →</a></td>
+                        </tr>
+                        <tr>
+                            <td>#4</td>
+                            <td><span class="filename">placeholder_hands_on_about_me.png</span></td>
+                            <td class="context">Hands-on exercise</td>
+                            <td><a href="http://localhost:3000/tracks/track_x/unit_05#/3" class="slide-link">View Slide →</a></td>
+                        </tr>
+                        <tr>
+                            <td>#6</td>
+                            <td><span class="filename">placeholder_editing_tab_labels.png</span></td>
+                            <td class="context">Changing Tab Labels</td>
+                            <td><a href="http://localhost:3000/tracks/track_x/unit_05#/5" class="slide-link">View Slide →</a></td>
+                        </tr>
+                        <tr>
+                            <td>#7</td>
+                            <td><span class="filename">placeholder_adding_images_to_tabs.png</span></td>
+                            <td class="context">Adding Images to Tabs</td>
+                            <td><a href="http://localhost:3000/tracks/track_x/unit_05#/6" class="slide-link">View Slide →</a></td>
+                        </tr>
+                        <tr>
+                            <td>#9</td>
+                            <td><span class="filename">placeholder_changing_accent_colors.png</span></td>
+                            <td class="context">Changing Accent Colours</td>
+                            <td><a href="http://localhost:3000/tracks/track_x/unit_05#/8" class="slide-link">View Slide →</a></td>
+                        </tr>
+                        <tr>
+                            <td>#10</td>
+                            <td><span class="filename">placeholder_styling_text.png</span></td>
+                            <td class="context">Styling the Text</td>
+                            <td><a href="http://localhost:3000/tracks/track_x/unit_05#/9" class="slide-link">View Slide →</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- Orphaned File -->
+            <div class="unit-section">
+                <div class="unit-header">
+                    <h3 class="unit-title">Orphaned: getting-started-with-apps.md</h3>
+                    <span class="unit-badge badge-disabled">Not Mapped</span>
+                </div>
+                
+                <div class="warning-note">
+                    <strong>⚠️ Issue:</strong> This markdown file exists but isn't mapped to any unit. Unit 04 incorrectly points to initialisation-func-parameters.md instead.
+                </div>
+                
+                <table class="missing-images-table">
+                    <thead>
+                        <tr>
+                            <th>Slide</th>
+                            <th>Missing Image</th>
+                            <th>Context</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#2</td>
+                            <td><span class="filename">placeholder_swiftui_basics.png</span></td>
+                            <td class="context">SwiftUI Basics</td>
+                            <td>Not accessible via UI</td>
+                        </tr>
+                        <tr>
+                            <td>#3</td>
+                            <td><span class="filename">placeholder_getting_started.png</span></td>
+                            <td class="context">Getting Started</td>
+                            <td>Not accessible via UI</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div class="track-section">
+            <h2 style="margin-bottom: 20px;">📋 Next Steps</h2>
+            
+            <div class="info-note">
+                <strong>To fix these missing images:</strong>
+                <ol style="margin-top: 10px; margin-left: 20px;">
+                    <li>Click the "View Slide" links to see exactly where each image should appear</li>
+                    <li>Take screenshots from Swift Playgrounds on iPad for the actual content</li>
+                    <li>Save images with the exact filenames shown above</li>
+                    <li>Place them in:
+                        <ul style="margin-top: 5px; margin-left: 20px;">
+                            <li><code>/public/markdown/track_b/assets/</code> for Track B images</li>
+                            <li><code>/public/markdown/track_x/assets/</code> for Track X images</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+            
+            <div class="action-buttons">
+                <a href="/TODO.md" class="btn btn-primary">View TODO.md</a>
+                <a href="http://localhost:3000/tracks" class="btn btn-secondary">Browse All Tracks</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

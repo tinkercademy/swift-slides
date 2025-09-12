@@ -28,8 +28,8 @@ export function Navigator() {
       <div className={styles.explorersLogo}>
         <Link href="/tracks">
           <ResponsiveImage
-            src="/assets/logos/swift_explorers_yellow.png"
-            darkSrc="/assets/logos/swift_explorers_purple.png"
+            src="/assets/logos/swift_explorers_yellow.webp"
+            darkSrc="/assets/logos/swift_explorers_purple.webp"
             key={isDarkMode ? "dark" : "light"}
             fill={true}
             alt="The Swift Explorers Logo"

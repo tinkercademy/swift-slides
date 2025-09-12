@@ -67,7 +67,7 @@ export default async function UnitsPage({
                 title={unit.title}
                 subtitle={unit.idDisplay}
                 description={unit.subtitle}
-                imgURL={`/covers/${track.id}/${unit.id}.png`}
+                imgURL={`/covers/${track.id}/${unit.id}.webp`}
                 pageURL={unit.id}
                 color={getColorFromTrack(track?.id)}
                 disabled={unit.disabled}

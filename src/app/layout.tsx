@@ -19,6 +19,12 @@ export default async function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={interFont.variable}>
+      <head>
+        {/* Preload critical images for better performance */}
+        <link rel="preload" as="image" href="/assets/logos/tinkercademy.webp" />
+        <link rel="preload" as="image" href="/assets/logos/swift_explorers_purple.webp" />
+        <link rel="preload" as="image" href="/covers/placeholder.webp" />
+      </head>
       <body>
         <ThemeManager>
           <main>
