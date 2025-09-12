@@ -57,7 +57,6 @@ export default async function SlidesPage({
       </div>
       <RevealjsClientWrapper isPrint={isPrint} track={track} unit={unit}>
         <div className="slides">
-          <base target="_blank" />
           <section>
             <div>
               <div style={{ textAlign: "left" }}>

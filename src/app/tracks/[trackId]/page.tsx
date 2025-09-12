@@ -3,6 +3,8 @@ import { notFound, redirect } from "next/navigation";
 import { FaMagnifyingGlass } from "react-icons/fa6";
 
 import { tracks } from "../../../../public/curriculum";
+import fs from "node:fs";
+import path from "node:path";
 import { getColorFromTrack, TrackEntry, UnitEntry } from "../track";
 
 import { CurriculumCard } from "@/components/curriculumGrid/curriculumCard";
@@ -61,13 +63,16 @@ export default async function UnitsPage({
       <CurriculumGrid>
         {filteredUnits.length > 0 ? (
           filteredUnits.map((unit: UnitEntry) => {
+            const rel = `/covers/${track.id}/${unit.id}.webp`;
+            const abs = path.join(process.cwd(), "public", rel);
+            const imgURL = fs.existsSync(abs) ? rel : "/covers/placeholder.webp";
             return (
               <CurriculumCard
                 key={unit.id}
                 title={unit.title}
                 subtitle={unit.idDisplay}
                 description={unit.subtitle}
-                imgURL={`/covers/${track.id}/${unit.id}.webp`}
+                imgURL={imgURL}
                 pageURL={unit.id}
                 color={getColorFromTrack(track?.id)}
                 disabled={unit.disabled}
