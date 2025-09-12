@@ -58,6 +58,17 @@ export function RevealjsNoSSRWrapper({ children, isPrint, track, unit }: { child
                 threshold: 0.01,
                 fadeIn: true
             });
+
+            // Ensure all links inside slides open in a new tab
+            // (replaces the previous <base target="_blank" /> usage which caused hydration issues)
+            const container = deckDivRef.current;
+            if (container) {
+                container.querySelectorAll('a[href]').forEach((el) => {
+                    const a = el as HTMLAnchorElement;
+                    a.setAttribute('target', '_blank');
+                    a.setAttribute('rel', 'noopener noreferrer');
+                });
+            }
         });
 
         return () => {
