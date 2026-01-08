@@ -129,7 +129,6 @@ export const tracks: TrackEntry[] = [
         subtitle: "Discover logic, variables, and Swift data types.",
         description: "In this unit, you'll explore logic structures and data management in Swift. Learn about variables, integers, strings, and arrays, practicing how to store and manipulate information crucial for creating responsive and interactive apps.",
         markdownId: "logic-variables",
-        disabled: true
       },
       {
         id: "unit_03",
@@ -138,7 +137,6 @@ export const tracks: TrackEntry[] = [
         subtitle: "Learn to initialize variables, define functions, and use parameters.",
         description: "In this unit, you'll learn to organize your code efficiently by initializing variables, defining reusable functions, and using parameters. Mastering these concepts will help keep your programs clear, maintainable, and scalable for future projects.",
         markdownId: "initialisation-func-parameters",
-        disabled: true
       },
       {
         id: "unit_04",
@@ -147,7 +145,6 @@ export const tracks: TrackEntry[] = [
         subtitle: "Introduction to building apps with SwiftUI.",
         description: "In this unit, you'll start building apps using SwiftUI. You'll learn how to design intuitive user interfaces and connect your Swift code, gaining practical experience in developing interactive and functional app elements.",
         markdownId: "initialisation-func-parameters",
-        disabled: true
       },
       {
         id: "unit_05",
@@ -156,7 +153,6 @@ export const tracks: TrackEntry[] = [
         subtitle: "Customize an interactive personal app.",
         description: "In this unit, you'll create a personalized 'About Me' app, applying your Swift and SwiftUI skills. Design interactive elements, handle user input, and effectively present your personal information in an engaging and dynamic format.",
         markdownId: "about-me-app",
-        disabled: true
       }
     ]
   },
