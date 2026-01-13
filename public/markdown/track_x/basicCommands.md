@@ -51,11 +51,44 @@
   <div style="flex: 1;">
     <ol>
       <li>Open the <strong>Swift Playgrounds</strong> app on your iPad.</li>
-      <li>Under “Get a Playground,” tap on <strong>Get Started with Code</strong>.</li>
+      <li>Tap on </strong>Learn to Code</strong>.</li>
     </ol>
   </div>
   <div style="flex: 1; position: relative; width: 700px; height: 500px;">
-    <img src="/markdown/track_x/assets/x-1-10-0.png" alt="Swift Playgrounds UI" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
+    <img src="/markdown/track_x/assets/x-1-35-0.png" alt="Swift Playgrounds Homepage" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
+    <img src="/markdown/track_x/assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
+  </div>
+</div>
+
+---
+
+### Getting Started
+
+<div style="display: flex; align-items: center; gap: 20px; padding: 20px;">
+  <div style="flex: 1;">
+    <ol>
+      <li>Download <strong>Get Started with Code</strong>.</li>
+    </ol>
+  </div>
+  <div style="flex: 1; position: relative; width: 700px; height: 500px;">
+    <img src="/markdown/track_x/assets/x-1-10-0.PNG" alt="Swift Playgrounds UI" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
+    <img src="/markdown/track_x/assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
+  </div>
+</div>
+
+---
+
+### Getting Started
+
+<div style="display: flex; align-items: center; gap: 20px; padding: 20px;">
+  <div style="flex: 1;">
+    <ol>
+      <li>Return back to the home screen.</li>
+      <li> You will see your copy of Get Started with Code.</li>
+    </ol>
+  </div>
+  <div style="flex: 1; position: relative; width: 700px; height: 500px;">
+    <img src="/markdown/track_x/assets/x-1-31-0.png" alt="Swift Playgrounds Homepage" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
     <img src="/markdown/track_x/assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
   </div>
 </div>
