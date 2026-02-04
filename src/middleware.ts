@@ -4,6 +4,14 @@ import { NextResponse } from "next/server";
 import { tracks } from "../public/curriculum";
 
 const trackRouteRegex = /^\/tracks\/([^/]+)\/?$/;
+const blockedUserAgentPatterns = [
+  /GPTBot/i,
+  /CCBot/i,
+  /ClaudeBot/i,
+  /Anthropic/i,
+  /Google-Extended/i,
+  /Bytespider/i,
+];
 
 export function middleware(request: NextRequest) {
   const { pathname, searchParams } = request.nextUrl;
@@ -11,6 +19,11 @@ export function middleware(request: NextRequest) {
 
   if (!match) {
     return NextResponse.next();
+  }
+
+  const userAgent = request.headers.get("user-agent") ?? "";
+  if (blockedUserAgentPatterns.some((pattern) => pattern.test(userAgent))) {
+    return new NextResponse("Forbidden", { status: 403 });
   }
 
   const deck = searchParams.get("deck");
