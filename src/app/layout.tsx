@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 
 import { Footer } from "@/components/layout/footer";
 import { Navigator } from "@/components/layout/navigator";
@@ -33,6 +34,7 @@ export default async function RootLayout({
           </main>
           <Footer />
         </ThemeManager>
+        <Analytics />
       </body>
     </html>
   );
