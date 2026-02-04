@@ -2,11 +2,16 @@
 import { FaMagnifyingGlass } from "react-icons/fa6";
 
 import styles from "./styles.module.scss";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export function SearchBar({ searchTerm }: { searchTerm: string }) {
     const [toggle, setToggle] = useState(false)
     const inputRef = useRef<HTMLInputElement>(null)
+    const [inputValue, setInputValue] = useState(searchTerm)
+
+    useEffect(() => {
+        setInputValue(searchTerm)
+    }, [searchTerm])
 
     return (
         <div className={styles.searchBar}>
@@ -25,7 +30,10 @@ export function SearchBar({ searchTerm }: { searchTerm: string }) {
                     type="text"
                     name="search"
                     placeholder="Search units..."
-                    defaultValue={searchTerm}
+                    value={inputValue}
+                    onChange={(event) => {
+                        setInputValue(event.target.value)
+                    }}
                     className={styles.searchInput}
                     style={{ height: (!!searchTerm || toggle) ? 50 : 0 }}
                 />
