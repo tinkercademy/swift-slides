@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { Suspense } from "react";
 import { notFound } from "next/navigation";
 
 import { tracks } from "../../../../../public/curriculum";
@@ -25,7 +26,9 @@ export default async function SlidesPage({
 }) {
   const { track, unit, unitIndex } = await resolveParams(params);
   return (
-    <SlidesPageClient track={track} unit={unit} unitIndex={unitIndex} />
+    <Suspense fallback={<div />}>
+      <SlidesPageClient track={track} unit={unit} unitIndex={unitIndex} />
+    </Suspense>
   );
 }
 

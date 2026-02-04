@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { Suspense } from "react";
 import { notFound } from "next/navigation";
 import { tracks } from "../../../../public/curriculum";
 import fs from "node:fs";
@@ -58,7 +59,11 @@ export default async function UnitsPage({
     };
   });
 
-  return <TrackUnitsClient track={track} unitCards={unitCards} />;
+  return (
+    <Suspense fallback={<div />}>
+      <TrackUnitsClient track={track} unitCards={unitCards} />
+    </Suspense>
+  );
 }
 
 export async function generateStaticParams() {
