@@ -24,6 +24,7 @@ export function getColorFromTrack(trackId: string | undefined): "blue" | "green"
       case "track_a": return "blue"
       case "track_b": return "green"
       case "track_c": return "pink"
+      case "track_sap": return "red"
       case "track_x": return "red"
       default: return "red"
     }

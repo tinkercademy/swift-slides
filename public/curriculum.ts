@@ -161,6 +161,26 @@ export const tracks: TrackEntry[] = [
     ]
   },
   {
+    id: "track_sap",
+    title: "SAP Materials",
+    idDisplay: "SAP Track",
+    subtitle:
+      "SAP materials imported from Notion for the Swift SAP Track, organized as slide-ready units in one dedicated place.",
+    description:
+      "This track is dedicated to Notion-imported SAP teaching materials. Each import becomes its own unit deck, so you can keep adding lessons without mixing with existing Swift Explorers tracks.",
+    units: [
+      {
+        id: "unit_01",
+        title: "Unit 1",
+        idDisplay: "Unit 01",
+        subtitle: "Imported from Notion for the Swift SAP Track.",
+        description:
+          "Foundational SwiftUI material imported from Notion and rendered as Reveal.js slides.",
+        markdownId: "unit_01"
+      }
+    ]
+  },
+  {
     id: "track_b",
     title: "App Development with Swift",
     idDisplay: "SwiftUI Track",

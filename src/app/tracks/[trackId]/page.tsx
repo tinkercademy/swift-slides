@@ -5,6 +5,7 @@ import { tracks } from "../../../../public/curriculum";
 import fs from "node:fs";
 import path from "node:path";
 import { TrackEntry, UnitEntry } from "../track";
+import { withSapUnits } from "../sapUnits";
 
 import { TrackUnitsClient } from "./TrackUnitsClient";
 
@@ -12,7 +13,8 @@ async function resolveParams(
   params: Promise<{ trackId: string }>
 ): Promise<{ track: TrackEntry }> {
   const { trackId } = await params;
-  const track = tracks.find((e) => e.id === trackId);
+  const baseTrack = tracks.find((e) => e.id === trackId);
+  const track = baseTrack ? withSapUnits(baseTrack) : undefined;
   if (!track) {
     notFound();
   }

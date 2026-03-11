@@ -4,13 +4,15 @@ import { notFound } from "next/navigation";
 
 import { tracks } from "../../../../../public/curriculum";
 import { TrackEntry, UnitEntry } from "../../track";
+import { withSapUnits } from "../../sapUnits";
 import { SlidesPageClient } from "./SlidesPageClient";
 
 async function resolveParams(
   params: Promise<{ trackId: string; unitId: string }>
 ): Promise<{ track: TrackEntry; unit: UnitEntry; unitIndex: number; }> {
   const { trackId, unitId } = await params;
-  const track = tracks.find((e) => e.id === trackId);
+  const baseTrack = tracks.find((e) => e.id === trackId);
+  const track = baseTrack ? withSapUnits(baseTrack) : undefined;
   const unitIndex = track?.units.findIndex((e: UnitEntry) => e.id === unitId);
   if (!track || unitIndex === undefined || unitIndex === -1) {
     notFound();
@@ -34,6 +36,7 @@ export default async function SlidesPage({
 
 export async function generateStaticParams() {
   return tracks
+    .map((track) => withSapUnits(track))
     .map((track) =>
       track.units.map((unit: UnitEntry) => ({
         trackId: track.id,

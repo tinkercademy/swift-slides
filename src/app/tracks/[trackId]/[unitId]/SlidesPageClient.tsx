@@ -98,7 +98,7 @@ export function SlidesPageClient({
                 height={576 / 7}
                 alt="Tinkercademy Logo"
               />
-              <p>Swift Coding Club • Track {track.id.slice(-1).toUpperCase()}</p>
+              <p>Swift Coding Club • {track.idDisplay}</p>
             </div>
           </section>
         </div>
