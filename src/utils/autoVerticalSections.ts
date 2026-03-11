@@ -14,6 +14,9 @@ interface MeasurementContext {
 
 const RUNTIME_SLIDE_CLASSES = new Set(["present", "past", "future", "stack"]);
 const DEFAULT_SEMANTIC_HEADING_TAGS = new Set(["H2", "H3", "H4"]);
+const LIST_SPLIT_MIN_ITEMS = 8;
+const LIST_SPLIT_MIN_OVERFLOW_RATIO = 1.2;
+const SPLIT_TOLERANCE_RATIO = 1.08;
 
 function isSectionElement(node: Element): node is HTMLElement {
   return node.tagName === "SECTION";
@@ -25,6 +28,10 @@ function isListElement(node: HTMLElement): boolean {
 
 function isHeadingElement(node: HTMLElement): boolean {
   return /^H[1-6]$/.test(node.tagName);
+}
+
+function isParagraphElement(node: HTMLElement): boolean {
+  return node.tagName === "P";
 }
 
 function cleanupRuntimeSlideState(slide: HTMLElement): void {
@@ -59,6 +66,28 @@ function cloneListWithItems(listElement: HTMLElement, items: HTMLElement[]): HTM
   listClone.removeAttribute("id");
   items.forEach((item) => listClone.appendChild(item.cloneNode(true)));
   return listClone;
+}
+
+function splitListBlockByItemCount(
+  listElement: HTMLElement,
+  firstChunkItemCount: number
+): { head: HTMLElement; tail: HTMLElement | null } {
+  const listItems = Array.from(listElement.children).filter(
+    (child): child is HTMLElement => child.tagName === "LI"
+  );
+  if (listItems.length <= firstChunkItemCount) {
+    return {
+      head: cloneListWithItems(listElement, listItems),
+      tail: null,
+    };
+  }
+
+  const headItems = listItems.slice(0, firstChunkItemCount);
+  const tailItems = listItems.slice(firstChunkItemCount);
+  return {
+    head: cloneListWithItems(listElement, headItems),
+    tail: tailItems.length > 0 ? cloneListWithItems(listElement, tailItems) : null,
+  };
 }
 
 function createMeasurementContext(
@@ -173,12 +202,16 @@ function splitOversizedListIntoBalancedBlocks(
 
   const fullListClone = cloneContentBlock(listElement);
   const fullListHeight = measureBlocksHeight(slideTemplate, [fullListClone], context);
-  if (fullListHeight <= context.maxContentHeight) {
+  if (
+    fullListHeight <= context.maxContentHeight ||
+    listItems.length < LIST_SPLIT_MIN_ITEMS ||
+    fullListHeight < context.maxContentHeight * LIST_SPLIT_MIN_OVERFLOW_RATIO
+  ) {
     return [fullListClone];
   }
 
   const targetChunkCount = Math.max(2, Math.ceil(fullListHeight / context.maxContentHeight));
-  const targetItemsPerChunk = Math.max(2, Math.ceil(listItems.length / targetChunkCount));
+  const targetItemsPerChunk = Math.max(3, Math.ceil(listItems.length / targetChunkCount));
 
   const groupedItems: HTMLElement[][] = [];
   let index = 0;
@@ -194,10 +227,10 @@ function splitOversizedListIntoBalancedBlocks(
     }
 
     // Shrink chunk if it still overflows.
-    while (end > index + 1) {
+    while (end > index + 2) {
       const candidate = cloneListWithItems(listElement, listItems.slice(index, end));
       const candidateHeight = measureBlocksHeight(slideTemplate, [candidate], context);
-      if (candidateHeight <= context.maxContentHeight) break;
+      if (candidateHeight <= context.maxContentHeight * SPLIT_TOLERANCE_RATIO) break;
       end -= 1;
     }
 
@@ -210,11 +243,11 @@ function splitOversizedListIntoBalancedBlocks(
 
     // Avoid orphaning a single trailing item when we can keep chunks more balanced.
     const remainingItems = listItems.length - end;
-    if (remainingItems === 1 && chunkItems.length >= 3) {
+    if (remainingItems === 1 && chunkItems.length >= 4) {
       const merged = listItems.slice(index, end + 1);
       const mergedList = cloneListWithItems(listElement, merged);
       const mergedHeight = measureBlocksHeight(slideTemplate, [mergedList], context);
-      if (mergedHeight <= context.maxContentHeight) {
+      if (mergedHeight <= context.maxContentHeight * SPLIT_TOLERANCE_RATIO) {
         chunkItems = merged;
         end += 1;
       }
@@ -270,7 +303,7 @@ function splitOversizedBlockGroup(
     const candidate = [...currentSection, block];
     const candidateHeight = measureBlocksHeight(slideTemplate, candidate, context);
 
-    if (currentSection.length > 0 && candidateHeight > context.maxContentHeight) {
+    if (currentSection.length > 0 && candidateHeight > context.maxContentHeight * SPLIT_TOLERANCE_RATIO) {
       sections.push(currentSection);
       currentSection = [block];
       return;
@@ -293,9 +326,46 @@ function splitOversizedBlockGroup(
       const movedBlock = previous[previous.length - 1];
       const rebalanceCandidate = [movedBlock, ...current];
       const rebalanceHeight = measureBlocksHeight(slideTemplate, rebalanceCandidate, context);
-      if (rebalanceHeight <= context.maxContentHeight) {
+      if (rebalanceHeight <= context.maxContentHeight * SPLIT_TOLERANCE_RATIO) {
         previous.pop();
         sections[i] = rebalanceCandidate;
+      }
+    }
+  }
+
+  // Avoid heading-only section by pulling supporting content from the next section.
+  if (
+    sections.length > 1 &&
+    sections[0].length === 1 &&
+    isHeadingElement(sections[0][0]) &&
+    sections[1].length > 0
+  ) {
+    const nextSection = sections[1];
+    const firstNextBlock = nextSection[0];
+
+    if (isListElement(firstNextBlock)) {
+      const listItems = Array.from(firstNextBlock.children).filter(
+        (child): child is HTMLElement => child.tagName === "LI"
+      );
+      const moveCount = Math.min(3, Math.max(2, Math.floor(listItems.length / 2)));
+      if (listItems.length > moveCount) {
+        const { head, tail } = splitListBlockByItemCount(firstNextBlock, moveCount);
+        const candidateFirstSection = [...sections[0], head];
+        const candidateHeight = measureBlocksHeight(slideTemplate, candidateFirstSection, context);
+        if (candidateHeight <= context.maxContentHeight * SPLIT_TOLERANCE_RATIO) {
+          sections[0] = candidateFirstSection;
+          nextSection[0] = tail!;
+        }
+      }
+    } else {
+      const candidateFirstSection = [...sections[0], firstNextBlock];
+      const candidateHeight = measureBlocksHeight(slideTemplate, candidateFirstSection, context);
+      if (candidateHeight <= context.maxContentHeight * SPLIT_TOLERANCE_RATIO) {
+        sections[0] = candidateFirstSection;
+        nextSection.shift();
+        if (nextSection.length === 0) {
+          sections.splice(1, 1);
+        }
       }
     }
   }
@@ -308,7 +378,36 @@ function normalizeSlideBlocks(slide: HTMLElement, _context: MeasurementContext):
     (child): child is HTMLElement => child instanceof HTMLElement
   );
 
-  return directBlocks.map((block) => cloneContentBlock(block));
+  const clonedBlocks = directBlocks.map((block) => cloneContentBlock(block));
+  const normalizedBlocks: HTMLElement[] = [];
+
+  clonedBlocks.forEach((block) => {
+    const previous = normalizedBlocks[normalizedBlocks.length - 1];
+
+    // Merge consecutive lists of the same type; Notion exports can fragment one logical list.
+    if (previous && isListElement(previous) && isListElement(block) && previous.tagName === block.tagName) {
+      Array.from(block.children).forEach((child) => {
+        previous.appendChild(child.cloneNode(true));
+      });
+      return;
+    }
+
+    // Merge consecutive short paragraphs into one speaking chunk.
+    if (previous && isParagraphElement(previous) && isParagraphElement(block)) {
+      const combinedText = `${previous.textContent ?? ""} ${block.textContent ?? ""}`.trim();
+      if (combinedText.length <= 280) {
+        previous.appendChild(document.createElement("br"));
+        Array.from(block.childNodes).forEach((node) => {
+          previous.appendChild(node.cloneNode(true));
+        });
+        return;
+      }
+    }
+
+    normalizedBlocks.push(block);
+  });
+
+  return normalizedBlocks;
 }
 
 function splitIntoVerticalBlockGroups(
@@ -341,7 +440,7 @@ function splitIntoVerticalBlockGroups(
     const candidateGroup = [...currentGroup, ...group];
     const candidateHeight = measureBlocksHeight(slide, candidateGroup, context);
 
-    if (currentGroup.length > 0 && candidateHeight > context.maxContentHeight) {
+    if (currentGroup.length > 0 && candidateHeight > context.maxContentHeight * SPLIT_TOLERANCE_RATIO) {
       finalGroups.push(currentGroup);
       currentGroup = [...group];
       return;
