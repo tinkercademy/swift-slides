@@ -4,6 +4,10 @@
   font-size: var(--r-main-font-size);
   font-weight: normal;
   color: var(--r-main-color);
+  --slide-safe-padding-top: 72px;
+  --slide-safe-padding-right: 88px;
+  --slide-safe-padding-bottom: 152px;
+  --slide-safe-padding-left: 44px;
 
   ::selection {
     color: var(--r-selection-color);
@@ -32,6 +36,16 @@
   .slides section>section {
     line-height: 1.3;
     font-weight: inherit;
+  }
+
+  // Keep content inside a safe area so it does not overlap slide number, controls, or footer/progress edges.
+  .slides>section:not(.stack),
+  .slides>section.stack>section {
+    box-sizing: border-box;
+    padding-top: var(--slide-safe-padding-top);
+    padding-right: var(--slide-safe-padding-right);
+    padding-bottom: var(--slide-safe-padding-bottom);
+    padding-left: var(--slide-safe-padding-left);
   }
 
   p {
@@ -363,6 +377,15 @@
     }
   }
 
+}
+
+@media only screen and (max-width: 890px) {
+  .reveal.reveal-viewport {
+    --slide-safe-padding-top: 56px;
+    --slide-safe-padding-right: 52px;
+    --slide-safe-padding-bottom: 112px;
+    --slide-safe-padding-left: 32px;
+  }
 }
 
 .reveal-viewport.print {

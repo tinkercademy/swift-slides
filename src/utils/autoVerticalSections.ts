@@ -16,7 +16,7 @@ const RUNTIME_SLIDE_CLASSES = new Set(["present", "past", "future", "stack"]);
 const DEFAULT_SEMANTIC_HEADING_TAGS = new Set(["H2", "H3", "H4"]);
 const LIST_SPLIT_MIN_ITEMS = 8;
 const LIST_SPLIT_MIN_OVERFLOW_RATIO = 1.2;
-const SPLIT_TOLERANCE_RATIO = 1.08;
+const SPLIT_TOLERANCE_RATIO = 1.0;
 
 function isSectionElement(node: Element): node is HTMLElement {
   return node.tagName === "SECTION";
@@ -505,7 +505,7 @@ export function autoSectionOverflowSlides(
   const config = deck.getConfig();
   const slideWidth = typeof config.width === "number" ? config.width : 1920;
   const slideHeight = typeof config.height === "number" ? config.height : 1080;
-  const maxHeightRatio = options.maxHeightRatio ?? 0.96;
+  const maxHeightRatio = options.maxHeightRatio ?? 0.93;
   const maxContentHeight = Math.floor(slideHeight * maxHeightRatio);
   const semanticHeadingTags = new Set(
     (options.semanticHeadingTags ?? Array.from(DEFAULT_SEMANTIC_HEADING_TAGS)).map((tag) =>
