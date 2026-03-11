@@ -13,6 +13,7 @@ import { ActionsBar } from '../../actionsBar';
 import { getColorFromTrack, TrackEntry, UnitEntry } from '@/app/tracks/track';
 import { useDarkMode } from "@/hooks/useDarkMode";
 import { initializeImageOptimizations } from '@/utils/imageOptimization';
+import { autoSectionOverflowSlides } from '@/utils/autoVerticalSections';
 
 function handleOpenWithQuery(name: string, value: string) {
     const url = new URL(window.location.href)
@@ -56,14 +57,55 @@ export function RevealjsNoSSRWrapper({ children, isPrint, track, unit }: { child
             hash: true,
             embedded: true,
             slideNumber: "c",
+            navigationMode: "default",
+            controls: true,
+            controlsBackArrows: "visible",
             plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
         });
         deckRef.current = deck;
+        let autoSectionRerunTimeout: number | null = null;
+        const imageLoadListeners: Array<{ image: HTMLImageElement; listener: () => void }> = [];
+
+        const clearAutoSectionRerunTimeout = () => {
+            if (autoSectionRerunTimeout !== null) {
+                window.clearTimeout(autoSectionRerunTimeout);
+                autoSectionRerunTimeout = null;
+            }
+        };
+
+        const scheduleAutoSectionOverflowPass = () => {
+            clearAutoSectionRerunTimeout();
+            autoSectionRerunTimeout = window.setTimeout(() => {
+                autoSectionRerunTimeout = null;
+                if (deckRef.current !== deck) return;
+                autoSectionOverflowSlides(deck);
+            }, 120);
+        };
 
         deck.initialize()
             .then(() => {
                 // A stale init can resolve after teardown; ignore in that case.
                 if (deckRef.current !== deck) return;
+
+                // Auto-split long markdown slides into vertical sections so overflow content
+                // can be navigated with up/down before moving to the next horizontal slide.
+                autoSectionOverflowSlides(deck);
+                scheduleAutoSectionOverflowPass();
+
+                const slidesElement = deck.getSlidesElement();
+                if (slidesElement) {
+                    slidesElement.querySelectorAll("img").forEach((imageElement) => {
+                        if (!(imageElement instanceof HTMLImageElement)) return;
+                        if (imageElement.complete) return;
+
+                        const onImageLoad = () => {
+                            scheduleAutoSectionOverflowPass();
+                        };
+
+                        imageElement.addEventListener("load", onImageLoad, { once: true });
+                        imageLoadListeners.push({ image: imageElement, listener: onImageLoad });
+                    });
+                }
 
                 // Initialize image optimizations after Reveal is ready
                 initializeImageOptimizations({
@@ -94,7 +136,38 @@ export function RevealjsNoSSRWrapper({ children, isPrint, track, unit }: { child
                 }
             });
 
+        const handleDeckClick = (event: MouseEvent) => {
+            if (event.defaultPrevented || event.button !== 0) return;
+            if (!deckRef.current?.isReady()) return;
+
+            const target = event.target as HTMLElement | null;
+            if (!target) return;
+
+            // Allow normal interactions for controls, links and media.
+            if (target.closest("a, button, input, textarea, select, label, video, audio, iframe, .controls, .progress, .slide-number")) {
+                return;
+            }
+
+            const hasTextSelection = !!window.getSelection()?.toString();
+            if (hasTextSelection) return;
+
+            const routes = deckRef.current.availableRoutes();
+            if (routes.down) {
+                deckRef.current.down();
+                return;
+            }
+            deckRef.current.next();
+        };
+
+        const revealElement = deck.getRevealElement();
+        revealElement?.addEventListener("click", handleDeckClick);
+
         return () => {
+            revealElement?.removeEventListener("click", handleDeckClick);
+            clearAutoSectionRerunTimeout();
+            imageLoadListeners.forEach(({ image, listener }) => {
+                image.removeEventListener("load", listener);
+            });
             destroyTimeoutRef.current = window.setTimeout(() => {
                 destroyTimeoutRef.current = null;
                 try {
