@@ -23,6 +23,7 @@ function handleOpenWithQuery(name: string, value: string) {
 export function RevealjsNoSSRWrapper({ children, isPrint, track, unit }: { children: React.ReactNode, isPrint: boolean, track: TrackEntry, unit: UnitEntry }) {
     const deckDivRef = useRef<HTMLDivElement>(null);
     const deckRef = useRef<Reveal.Api | null>(null);
+    const destroyTimeoutRef = useRef<number | null>(null);
 
     const [isFullScreen, setIsFullScreen] = useState(false);
     const { isDarkMode, setDarkMode } = useDarkMode()
@@ -38,10 +39,17 @@ export function RevealjsNoSSRWrapper({ children, isPrint, track, unit }: { child
     } as React.CSSProperties;
 
     useEffect(() => {
-        // Prevents double initialization in strict mode
-        if (deckRef.current) return;
+        // React strict mode (dev) runs effect cleanup + setup twice. Delay cleanup and cancel it
+        // on immediate replay to avoid tearing down Reveal while markdown plugin async work is in-flight.
+        if (destroyTimeoutRef.current !== null) {
+            window.clearTimeout(destroyTimeoutRef.current);
+            destroyTimeoutRef.current = null;
+        }
 
-        deckRef.current = new Reveal(deckDivRef.current!, {
+        // Prevent double initialization and guard against missing mount node.
+        if (deckRef.current || !deckDivRef.current) return;
+
+        const deck = new Reveal(deckDivRef.current, {
             transition: "slide",
             width: 1920,
             height: 1080,
@@ -50,38 +58,56 @@ export function RevealjsNoSSRWrapper({ children, isPrint, track, unit }: { child
             slideNumber: "c",
             plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
         });
+        deckRef.current = deck;
 
-        deckRef.current.initialize().then(() => {
-            // Initialize image optimizations after Reveal is ready
-            initializeImageOptimizations({
-                rootMargin: '500px', // Preload images 500px before they come into view
-                threshold: 0.01,
-                fadeIn: true
+        deck.initialize()
+            .then(() => {
+                // A stale init can resolve after teardown; ignore in that case.
+                if (deckRef.current !== deck) return;
+
+                // Initialize image optimizations after Reveal is ready
+                initializeImageOptimizations({
+                    rootMargin: '500px', // Preload images 500px before they come into view
+                    threshold: 0.01,
+                    fadeIn: true
+                });
+
+                // Ensure all links inside slides open in a new tab
+                // (replaces the previous <base target="_blank" /> usage which caused hydration issues)
+                const container = deckDivRef.current;
+                if (container) {
+                    container.querySelectorAll('a[href]').forEach((el) => {
+                        const a = el as HTMLAnchorElement;
+                        a.setAttribute('target', '_blank');
+                        a.setAttribute('rel', 'noopener noreferrer');
+                    });
+                }
+            })
+            .catch((error: unknown) => {
+                // Keep runtime overlay clean for known detached-node races.
+                const message = error instanceof Error ? error.message : String(error);
+                const isDetachedNodeOuterHtmlError =
+                    message.includes("Failed to set the 'outerHTML' property on 'Element'") &&
+                    message.includes('has no parent node');
+                if (!isDetachedNodeOuterHtmlError) {
+                    console.error("Reveal initialization failed", error);
+                }
             });
 
-            // Ensure all links inside slides open in a new tab
-            // (replaces the previous <base target="_blank" /> usage which caused hydration issues)
-            const container = deckDivRef.current;
-            if (container) {
-                container.querySelectorAll('a[href]').forEach((el) => {
-                    const a = el as HTMLAnchorElement;
-                    a.setAttribute('target', '_blank');
-                    a.setAttribute('rel', 'noopener noreferrer');
-                });
-            }
-        });
-
         return () => {
-            try {
-                if (deckRef.current) {
-                    deckRef.current.destroy();
-                    deckRef.current = null;
+            destroyTimeoutRef.current = window.setTimeout(() => {
+                destroyTimeoutRef.current = null;
+                try {
+                    if (deckRef.current) {
+                        deckRef.current.destroy();
+                        deckRef.current = null;
+                    }
+                } catch (_e) {
+                    // Silently handle Reveal.js cleanup errors
                 }
-            } catch (_e) {
-                // Silently handle Reveal.js cleanup errors
-            }
+            }, 0);
         };
-    }, [deckRef]);
+    }, []);
 
     useEffect(() => {
         if (deckRef.current?.isReady()) {
