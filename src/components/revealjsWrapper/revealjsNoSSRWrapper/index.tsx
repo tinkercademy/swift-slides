@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import { FaExpand, FaCompress, FaPrint, FaPenToSquare } from "react-icons/fa6";
+import { FaExpand, FaCompress, FaPrint, FaPenToSquare, FaCircleChevronRight } from "react-icons/fa6";
 import Reveal from 'reveal.js';
 import RevealMarkdown from "reveal.js/plugin/markdown/markdown";
 import RevealHighlight from "reveal.js/plugin/highlight/highlight";
@@ -19,6 +19,30 @@ function handleOpenWithQuery(name: string, value: string) {
     const url = new URL(window.location.href)
     url.searchParams.append(name, value);
     window.open(url, "_blank")
+}
+
+function advanceToNextMeaningfulStep(deckApi: Reveal.Api): boolean {
+    const { h, v = 0 } = deckApi.getIndices();
+    const horizontalSlides = deckApi.getHorizontalSlides();
+    const currentHorizontalSlide = horizontalSlides[h];
+    const verticalSections = currentHorizontalSlide
+        ? Array.from(currentHorizontalSlide.children).filter(
+            (child): child is HTMLElement => child instanceof HTMLElement && child.tagName === "SECTION"
+        )
+        : [];
+
+    // Presentation-step order: finish all vertical sections in this slide, then advance horizontally.
+    if (verticalSections.length > 1 && v < verticalSections.length - 1) {
+        deckApi.slide(h, v + 1);
+        return true;
+    }
+
+    if (h < horizontalSlides.length - 1) {
+        deckApi.slide(h + 1, 0);
+        return true;
+    }
+
+    return false;
 }
 
 export function RevealjsNoSSRWrapper({ children, isPrint, track, unit }: { children: React.ReactNode, isPrint: boolean, track: TrackEntry, unit: UnitEntry }) {
@@ -73,6 +97,26 @@ export function RevealjsNoSSRWrapper({ children, isPrint, track, unit }: { child
             }
         };
 
+        const handleDeckClick = (event: MouseEvent) => {
+            if (event.defaultPrevented || event.button !== 0) return;
+            const deckApi = deckRef.current;
+            if (!deckApi?.isReady()) return;
+
+            if (!(event.target instanceof Element)) return;
+
+            // Allow normal interactions for controls, links and media.
+            if (event.target.closest("a, button, input, textarea, select, label, video, audio, iframe, .controls, .progress, .slide-number")) {
+                return;
+            }
+
+            const hasTextSelection = !!window.getSelection()?.toString();
+            if (hasTextSelection) return;
+
+            advanceToNextMeaningfulStep(deckApi);
+        };
+
+        let clickAdvanceTarget: HTMLElement | null = null;
+
         const scheduleAutoSectionOverflowPass = () => {
             clearAutoSectionRerunTimeout();
             autoSectionRerunTimeout = window.setTimeout(() => {
@@ -107,6 +151,9 @@ export function RevealjsNoSSRWrapper({ children, isPrint, track, unit }: { child
                     });
                 }
 
+                clickAdvanceTarget = deck.getSlidesElement() ?? deck.getRevealElement();
+                clickAdvanceTarget?.addEventListener("click", handleDeckClick);
+
                 // Initialize image optimizations after Reveal is ready
                 initializeImageOptimizations({
                     rootMargin: '500px', // Preload images 500px before they come into view
@@ -136,34 +183,8 @@ export function RevealjsNoSSRWrapper({ children, isPrint, track, unit }: { child
                 }
             });
 
-        const handleDeckClick = (event: MouseEvent) => {
-            if (event.defaultPrevented || event.button !== 0) return;
-            if (!deckRef.current?.isReady()) return;
-
-            const target = event.target as HTMLElement | null;
-            if (!target) return;
-
-            // Allow normal interactions for controls, links and media.
-            if (target.closest("a, button, input, textarea, select, label, video, audio, iframe, .controls, .progress, .slide-number")) {
-                return;
-            }
-
-            const hasTextSelection = !!window.getSelection()?.toString();
-            if (hasTextSelection) return;
-
-            const routes = deckRef.current.availableRoutes();
-            if (routes.down) {
-                deckRef.current.down();
-                return;
-            }
-            deckRef.current.next();
-        };
-
-        const revealElement = deck.getRevealElement();
-        revealElement?.addEventListener("click", handleDeckClick);
-
         return () => {
-            revealElement?.removeEventListener("click", handleDeckClick);
+            clickAdvanceTarget?.removeEventListener("click", handleDeckClick);
             clearAutoSectionRerunTimeout();
             imageLoadListeners.forEach(({ image, listener }) => {
                 image.removeEventListener("load", listener);
@@ -210,6 +231,16 @@ export function RevealjsNoSSRWrapper({ children, isPrint, track, unit }: { child
             {!isPrint && (
                 <div className={styles.actions}>
                     <ActionsBar actions={[
+                        {
+                            name: "next",
+                            hoverText: "Next step",
+                            onClick: () => {
+                                const deckApi = deckRef.current;
+                                if (!deckApi?.isReady()) return;
+                                advanceToNextMeaningfulStep(deckApi);
+                            },
+                            icon: FaCircleChevronRight,
+                        },
                         {
                             name: "fullscreen",
                             onClick: () => { setIsFullScreen(!isFullScreen) },
