@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import { FaExpand, FaCompress, FaPrint, FaPenToSquare, FaCircleChevronRight } from "react-icons/fa6";
+import { FaExpand, FaCompress, FaPrint, FaPenToSquare, FaCircleChevronLeft, FaCircleChevronRight } from "react-icons/fa6";
 import Reveal from 'reveal.js';
 import RevealMarkdown from "reveal.js/plugin/markdown/markdown";
 import RevealHighlight from "reveal.js/plugin/highlight/highlight";
@@ -21,15 +21,19 @@ function handleOpenWithQuery(name: string, value: string) {
     window.open(url, "_blank")
 }
 
+function getVerticalSections(horizontalSlide: HTMLElement | undefined): HTMLElement[] {
+    return horizontalSlide
+        ? Array.from(horizontalSlide.children).filter(
+            (child): child is HTMLElement => child instanceof HTMLElement && child.tagName === "SECTION"
+        )
+        : [];
+}
+
 function advanceToNextMeaningfulStep(deckApi: Reveal.Api): boolean {
     const { h, v = 0 } = deckApi.getIndices();
     const horizontalSlides = deckApi.getHorizontalSlides();
     const currentHorizontalSlide = horizontalSlides[h];
-    const verticalSections = currentHorizontalSlide
-        ? Array.from(currentHorizontalSlide.children).filter(
-            (child): child is HTMLElement => child instanceof HTMLElement && child.tagName === "SECTION"
-        )
-        : [];
+    const verticalSections = getVerticalSections(currentHorizontalSlide);
 
     // Presentation-step order: finish all vertical sections in this slide, then advance horizontally.
     if (verticalSections.length > 1 && v < verticalSections.length - 1) {
@@ -39,6 +43,33 @@ function advanceToNextMeaningfulStep(deckApi: Reveal.Api): boolean {
 
     if (h < horizontalSlides.length - 1) {
         deckApi.slide(h + 1, 0);
+        return true;
+    }
+
+    return false;
+}
+
+function retreatToPreviousMeaningfulStep(deckApi: Reveal.Api): boolean {
+    const { h, v = 0 } = deckApi.getIndices();
+    const horizontalSlides = deckApi.getHorizontalSlides();
+    const currentHorizontalSlide = horizontalSlides[h];
+    const verticalSections = getVerticalSections(currentHorizontalSlide);
+
+    // Reverse the presentation-step order: move up within the current vertical stack
+    // before jumping back to the previous horizontal slide.
+    if (verticalSections.length > 1 && v > 0) {
+        deckApi.slide(h, v - 1);
+        return true;
+    }
+
+    if (h > 0) {
+        const previousHorizontalSlide = horizontalSlides[h - 1];
+        const previousVerticalSections = getVerticalSections(previousHorizontalSlide);
+        const previousVerticalIndex = previousVerticalSections.length > 1
+            ? previousVerticalSections.length - 1
+            : 0;
+
+        deckApi.slide(h - 1, previousVerticalIndex);
         return true;
     }
 
@@ -240,6 +271,16 @@ export function RevealjsNoSSRWrapper({ children, isPrint, track, unit }: { child
                                 advanceToNextMeaningfulStep(deckApi);
                             },
                             icon: FaCircleChevronRight,
+                        },
+                        {
+                            name: "previous",
+                            hoverText: "Previous step",
+                            onClick: () => {
+                                const deckApi = deckRef.current;
+                                if (!deckApi?.isReady()) return;
+                                retreatToPreviousMeaningfulStep(deckApi);
+                            },
+                            icon: FaCircleChevronLeft,
                         },
                         {
                             name: "fullscreen",
