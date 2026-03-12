@@ -181,6 +181,10 @@ async function downloadImage(url: string, targetPath: string): Promise<number> {
   return Math.max(1, Math.round(buffer.byteLength / 1024));
 }
 
+function imageAssetPath(track: string, unit: string, filename: string): string {
+  return `/assets/${track}/${unit}/${filename}`;
+}
+
 async function main(): Promise<void> {
   config();
 
@@ -267,6 +271,8 @@ async function main(): Promise<void> {
 
   const notionHostedImages = result.imageBlocks.filter((imageBlock) => imageBlock.isNotionHosted);
   let downloadedImageCount = 0;
+  const failedNotionHostedImages: typeof notionHostedImages = [];
+  let markdownOutput = result.markdown;
 
   if (notionHostedImages.length > 0) {
     console.log(`🖼️   Found ${notionHostedImages.length} Notion-hosted image(s) — downloading...`);
@@ -281,8 +287,20 @@ async function main(): Promise<void> {
         downloadedImageCount += 1;
       } catch (error) {
         console.warn(`    ⚠️  Failed to download ${imageBlock.suggestedFilename}: ${formatError(error)}`);
+        failedNotionHostedImages.push(imageBlock);
       }
     }
+  }
+
+  if (failedNotionHostedImages.length > 0) {
+    for (const imageBlock of failedNotionHostedImages) {
+      const localPath = imageAssetPath(args.track, args.unit, imageBlock.suggestedFilename);
+      markdownOutput = markdownOutput.replaceAll(`(${localPath})`, `(${imageBlock.notionUrl})`);
+    }
+
+    console.warn(
+      `⚠️   ${failedNotionHostedImages.length} image(s) will use temporary Notion URLs in markdown because local download failed.`,
+    );
   }
 
   if (fs.existsSync(markdownPath) && !args.overwrite) {
@@ -295,7 +313,7 @@ async function main(): Promise<void> {
 
   try {
     fs.mkdirSync(markdownDirectory, { recursive: true });
-    fs.writeFileSync(markdownPath, result.markdown, "utf8");
+    fs.writeFileSync(markdownPath, markdownOutput, "utf8");
   } catch (error) {
     console.error(`❌  Failed to write ${relativeMarkdownPath}: ${formatError(error)}`);
     process.exit(1);

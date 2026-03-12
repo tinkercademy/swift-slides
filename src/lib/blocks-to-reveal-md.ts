@@ -19,8 +19,132 @@ export interface ImageBlock {
 
 const ASSETS_FOLDER = "assets";
 
-function extractText(richText: RichTextItemResponse[]): string {
-  return richText.map((rt) => rt.plain_text).join("").trim();
+const NOTION_COLOR_STYLES: Record<
+  string,
+  {
+    text: string;
+    background: string;
+  }
+> = {
+  gray: { text: "#6b7280", background: "rgba(107, 114, 128, 0.2)" },
+  brown: { text: "#92400e", background: "rgba(146, 64, 14, 0.2)" },
+  orange: { text: "#c2410c", background: "rgba(194, 65, 12, 0.2)" },
+  yellow: { text: "#a16207", background: "rgba(161, 98, 7, 0.2)" },
+  green: { text: "#15803d", background: "rgba(21, 128, 61, 0.2)" },
+  blue: { text: "#1d4ed8", background: "rgba(29, 78, 216, 0.2)" },
+  purple: { text: "#7e22ce", background: "rgba(126, 34, 206, 0.2)" },
+  pink: { text: "#be185d", background: "rgba(190, 24, 93, 0.2)" },
+  red: { text: "#b91c1c", background: "rgba(185, 28, 28, 0.2)" },
+};
+
+function extractPlainText(
+  richText: RichTextItemResponse[],
+  options: {
+    trim?: boolean;
+  } = {},
+): string {
+  const { trim = true } = options;
+  const output = richText.map((rt) => rt.plain_text).join("");
+  return trim ? output.trim() : output;
+}
+
+function escapeInlineCodeText(text: string): string {
+  return text.replace(/`/g, "\\`");
+}
+
+function escapeHtml(text: string): string {
+  return text
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+
+function escapeLinkTarget(url: string): string {
+  return url.replace(/ /g, "%20").replace(/\)/g, "%29");
+}
+
+function colorStyle(color: RichTextItemResponse["annotations"]["color"]): string | null {
+  if (color === "default") {
+    return null;
+  }
+
+  if (color.endsWith("_background")) {
+    const baseColor = color.replace(/_background$/, "");
+    const style = NOTION_COLOR_STYLES[baseColor];
+    if (!style) {
+      return null;
+    }
+
+    return `background-color: ${style.background}; color: ${style.text}; border-radius: 0.15em; padding: 0 0.15em;`;
+  }
+
+  const style = NOTION_COLOR_STYLES[color];
+  if (!style) {
+    return null;
+  }
+
+  return `color: ${style.text};`;
+}
+
+function annotateText(text: string, annotations: RichTextItemResponse["annotations"]): string {
+  if (!text) {
+    return "";
+  }
+
+  let output = text;
+
+  if (annotations.code) {
+    output = `\`${escapeInlineCodeText(output)}\``;
+  } else {
+    if (annotations.bold) {
+      output = `**${output}**`;
+    }
+    if (annotations.italic) {
+      output = `*${output}*`;
+    }
+    if (annotations.strikethrough) {
+      output = `~~${output}~~`;
+    }
+    if (annotations.underline) {
+      output = `<u>${output}</u>`;
+    }
+  }
+
+  const style = colorStyle(annotations.color);
+  if (style) {
+    return `<span style="${style}">${output}</span>`;
+  }
+
+  return output;
+}
+
+function renderRichTextItem(item: RichTextItemResponse): string {
+  if (!item.plain_text) {
+    return "";
+  }
+
+  const baseText = escapeHtml(item.plain_text);
+  const annotated = annotateText(baseText, item.annotations);
+  const href = item.href;
+
+  if (href) {
+    return `[${annotated}](${escapeLinkTarget(href)})`;
+  }
+
+  return annotated;
+}
+
+function extractRichText(
+  richText: RichTextItemResponse[],
+  options: {
+    trim?: boolean;
+  } = {},
+): string {
+  const { trim = true } = options;
+  const output = richText.map((item) => renderRichTextItem(item)).join("");
+  return trim ? output.trim() : output;
 }
 
 function slugifyTitle(pageTitle: string): string {
@@ -96,47 +220,47 @@ export function blocksToRevealMd(
     unit?: string;
   } = {},
 ): ConversionResult {
-  const lines: string[] = [`## ${pageTitle}`];
+  const lines: string[] = [`# ${escapeHtml(pageTitle)}`];
   const imageBlocks: ImageBlock[] = [];
   let imageCounter = 0;
 
   for (const block of blocks) {
     switch (block.type) {
       case "heading_1": {
-        const text = extractText(block.heading_1.rich_text);
+        const text = extractRichText(block.heading_1.rich_text);
         if (text) {
-          lines.push("---", "", `## ${text}`);
+          lines.push("---", "", `# ${text}`);
         }
         break;
       }
       case "heading_2": {
-        const text = extractText(block.heading_2.rich_text);
+        const text = extractRichText(block.heading_2.rich_text);
+        if (text) {
+          lines.push(`## ${text}`);
+        }
+        break;
+      }
+      case "heading_3": {
+        const text = extractRichText(block.heading_3.rich_text);
         if (text) {
           lines.push(`### ${text}`);
         }
         break;
       }
-      case "heading_3": {
-        const text = extractText(block.heading_3.rich_text);
-        if (text) {
-          lines.push(`#### ${text}`);
-        }
-        break;
-      }
       case "paragraph": {
-        const text = extractText(block.paragraph.rich_text);
+        const text = extractRichText(block.paragraph.rich_text);
         lines.push(text);
         break;
       }
       case "bulleted_list_item": {
-        const text = extractText(block.bulleted_list_item.rich_text);
+        const text = extractRichText(block.bulleted_list_item.rich_text);
         if (text) {
           lines.push(`- ${text}`);
         }
         break;
       }
       case "numbered_list_item": {
-        const text = extractText(block.numbered_list_item.rich_text);
+        const text = extractRichText(block.numbered_list_item.rich_text);
         if (text) {
           lines.push(`1. ${text}`);
         }
@@ -144,7 +268,7 @@ export function blocksToRevealMd(
       }
       case "code": {
         const language = block.code.language;
-        const content = extractText(block.code.rich_text);
+        const content = extractPlainText(block.code.rich_text, { trim: false });
         lines.push(`\`\`\`${language}`, content, "\`\`\`");
         break;
       }
@@ -153,7 +277,7 @@ export function blocksToRevealMd(
         break;
       }
       case "callout": {
-        const text = extractText(block.callout.rich_text);
+        const text = extractRichText(block.callout.rich_text);
         if (text) {
           const icon = calloutIcon(block.callout);
           lines.push(icon ? `> ${icon} ${text}` : `> ${text}`);
@@ -161,14 +285,14 @@ export function blocksToRevealMd(
         break;
       }
       case "quote": {
-        const text = extractText(block.quote.rich_text);
+        const text = extractRichText(block.quote.rich_text);
         if (text) {
           lines.push(`> ${text}`);
         }
         break;
       }
       case "to_do": {
-        const text = extractText(block.to_do.rich_text);
+        const text = extractRichText(block.to_do.rich_text);
         if (text) {
           lines.push(`- [${block.to_do.checked ? "x" : " "}] ${text}`);
         }
@@ -178,7 +302,7 @@ export function blocksToRevealMd(
         imageCounter += 1;
 
         const suggestedFilename = `image-${String(imageCounter).padStart(3, "0")}.png`;
-        const caption = extractText(block.image.caption) || "image";
+        const caption = extractPlainText(block.image.caption) || "image";
 
         if (block.image.type === "external") {
           const notionUrl = block.image.external.url;
@@ -193,7 +317,9 @@ export function blocksToRevealMd(
 
         if (block.image.type === "file") {
           const notionUrl = block.image.file.url;
-          const isNotionHosted = notionUrl.includes("prod-files-secure.s3.amazonaws.com");
+          // Notion "file" image blocks are temporary signed URLs that should be downloaded
+          // to local assets for stable slide rendering.
+          const isNotionHosted = true;
           const localPath = buildLocalImagePath(options.track, options.unit, suggestedFilename);
 
           lines.push(`![${caption}](${localPath})`);
@@ -208,7 +334,7 @@ export function blocksToRevealMd(
         break;
       }
       case "toggle": {
-        const text = extractText(block.toggle.rich_text);
+        const text = extractRichText(block.toggle.rich_text);
         if (text) {
           lines.push(text);
         }

@@ -40,7 +40,7 @@ function defaultUnitDisplay(unitId: string): string {
 function extractTitleFromMarkdown(markdownPath: string, fallback: string): string {
   try {
     const content = fs.readFileSync(markdownPath, "utf8");
-    const titleMatch = content.match(/^##\s+(.+)\s*$/m);
+    const titleMatch = content.match(/^#{1,6}\s+(.+)\s*$/m);
     if (titleMatch?.[1]) {
       return titleMatch[1].trim();
     }
