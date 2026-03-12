@@ -2,6 +2,7 @@ import type {
   BlockObjectResponse,
   RichTextItemResponse,
 } from "@notionhq/client/build/src/api-endpoints";
+import { isolateImageSlidesInMarkdown } from "@/lib/isolate-image-slides";
 
 export interface ConversionResult {
   markdown: string;
@@ -212,6 +213,26 @@ function buildLocalImagePath(track: string | undefined, unit: string | undefined
   return parts.join("/");
 }
 
+function lastNonBlankLine(lines: string[]): string | undefined {
+  for (let index = lines.length - 1; index >= 0; index -= 1) {
+    const value = lines[index];
+    if (value.trim().length > 0) {
+      return value;
+    }
+  }
+
+  return undefined;
+}
+
+function ensureHorizontalSlideBreak(lines: string[]): void {
+  const lastLine = lastNonBlankLine(lines);
+  if (!lastLine || lastLine === "---") {
+    return;
+  }
+
+  lines.push("---");
+}
+
 export function blocksToRevealMd(
   blocks: BlockObjectResponse[],
   pageTitle: string,
@@ -223,78 +244,98 @@ export function blocksToRevealMd(
   const lines: string[] = [`# ${escapeHtml(pageTitle)}`];
   const imageBlocks: ImageBlock[] = [];
   let imageCounter = 0;
+  let shouldStartNewSlideBeforeNextContent = false;
+
+  const appendLine = (line: string): void => {
+    if (
+      shouldStartNewSlideBeforeNextContent &&
+      line.trim().length > 0 &&
+      line !== "---"
+    ) {
+      ensureHorizontalSlideBreak(lines);
+      shouldStartNewSlideBeforeNextContent = false;
+    }
+
+    lines.push(line);
+  };
+
+  const appendLines = (...contentLines: string[]): void => {
+    contentLines.forEach((line) => {
+      appendLine(line);
+    });
+  };
 
   for (const block of blocks) {
     switch (block.type) {
       case "heading_1": {
         const text = extractRichText(block.heading_1.rich_text);
         if (text) {
-          lines.push("---", "", `# ${text}`);
+          appendLines("---", "", `# ${text}`);
         }
         break;
       }
       case "heading_2": {
         const text = extractRichText(block.heading_2.rich_text);
         if (text) {
-          lines.push(`## ${text}`);
+          appendLine(`## ${text}`);
         }
         break;
       }
       case "heading_3": {
         const text = extractRichText(block.heading_3.rich_text);
         if (text) {
-          lines.push(`### ${text}`);
+          appendLine(`### ${text}`);
         }
         break;
       }
       case "paragraph": {
         const text = extractRichText(block.paragraph.rich_text);
-        lines.push(text);
+        appendLine(text);
         break;
       }
       case "bulleted_list_item": {
         const text = extractRichText(block.bulleted_list_item.rich_text);
         if (text) {
-          lines.push(`- ${text}`);
+          appendLine(`- ${text}`);
         }
         break;
       }
       case "numbered_list_item": {
         const text = extractRichText(block.numbered_list_item.rich_text);
         if (text) {
-          lines.push(`1. ${text}`);
+          appendLine(`1. ${text}`);
         }
         break;
       }
       case "code": {
         const language = block.code.language;
         const content = extractPlainText(block.code.rich_text, { trim: false });
-        lines.push(`\`\`\`${language}`, content, "\`\`\`");
+        appendLines(`\`\`\`${language}`, content, "\`\`\`");
         break;
       }
       case "divider": {
-        lines.push("---vertical---");
+        appendLine("---vertical---");
         break;
       }
       case "callout": {
         const text = extractRichText(block.callout.rich_text);
         if (text) {
           const icon = calloutIcon(block.callout);
-          lines.push(icon ? `> ${icon} ${text}` : `> ${text}`);
+          appendLine(icon ? `> ${icon} ${text}` : `> ${text}`);
         }
         break;
       }
       case "quote": {
         const text = extractRichText(block.quote.rich_text);
         if (text) {
-          lines.push(`> ${text}`);
+          appendLine(`> ${text}`);
         }
         break;
       }
       case "to_do": {
         const text = extractRichText(block.to_do.rich_text);
         if (text) {
-          lines.push(`- [${block.to_do.checked ? "x" : " "}] ${text}`);
+          appendLine(`- [${block.to_do.checked ? "x" : " "}] ${text}`);
         }
         break;
       }
@@ -306,7 +347,9 @@ export function blocksToRevealMd(
 
         if (block.image.type === "external") {
           const notionUrl = block.image.external.url;
-          lines.push(`![${caption}](${notionUrl})`);
+          ensureHorizontalSlideBreak(lines);
+          appendLine(`![${caption}](${notionUrl})`);
+          shouldStartNewSlideBeforeNextContent = true;
           imageBlocks.push({
             blockId: block.id,
             notionUrl,
@@ -322,7 +365,9 @@ export function blocksToRevealMd(
           const isNotionHosted = true;
           const localPath = buildLocalImagePath(options.track, options.unit, suggestedFilename);
 
-          lines.push(`![${caption}](${localPath})`);
+          ensureHorizontalSlideBreak(lines);
+          appendLine(`![${caption}](${localPath})`);
+          shouldStartNewSlideBeforeNextContent = true;
           imageBlocks.push({
             blockId: block.id,
             notionUrl,
@@ -336,7 +381,7 @@ export function blocksToRevealMd(
       case "toggle": {
         const text = extractRichText(block.toggle.rich_text);
         if (text) {
-          lines.push(text);
+          appendLine(text);
         }
         break;
       }
@@ -352,7 +397,7 @@ export function blocksToRevealMd(
   const separatorCount = lines.filter((line) => line === "---" || line === "---vertical---").length;
 
   return {
-    markdown: collapseBlankLines(lines),
+    markdown: isolateImageSlidesInMarkdown(collapseBlankLines(lines)),
     slideCount: separatorCount + 1,
     suggestedFilename: buildSuggestedFilename(pageTitle, options.unit),
     imageBlocks,

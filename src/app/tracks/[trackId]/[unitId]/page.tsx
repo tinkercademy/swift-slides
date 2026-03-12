@@ -1,8 +1,11 @@
+import fs from "node:fs/promises";
+import path from "node:path";
 import { Metadata } from "next";
 import { Suspense } from "react";
 import { notFound } from "next/navigation";
 
 import { tracks } from "../../../../../public/curriculum";
+import { isolateImageSlidesInMarkdown } from "@/lib/isolate-image-slides";
 import { TrackEntry, UnitEntry } from "../../track";
 import { withSapUnits } from "../../sapUnits";
 import { SlidesPageClient } from "./SlidesPageClient";
@@ -27,9 +30,30 @@ export default async function SlidesPage({
   params: Promise<{ trackId: string; unitId: string }>;
 }) {
   const { track, unit, unitIndex } = await resolveParams(params);
+  const markdownPath = path.join(
+    process.cwd(),
+    "public",
+    "markdown",
+    track.id,
+    `${unit.markdownId}.md`,
+  );
+
+  let markdownContent: string;
+  try {
+    const rawMarkdownContent = await fs.readFile(markdownPath, "utf8");
+    markdownContent = isolateImageSlidesInMarkdown(rawMarkdownContent);
+  } catch {
+    notFound();
+  }
+
   return (
     <Suspense fallback={<div />}>
-      <SlidesPageClient track={track} unit={unit} unitIndex={unitIndex} />
+      <SlidesPageClient
+        track={track}
+        unit={unit}
+        unitIndex={unitIndex}
+        markdownContent={markdownContent}
+      />
     </Suspense>
   );
 }
