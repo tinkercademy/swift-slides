@@ -58,6 +58,36 @@ For the full SAP import workflow (token setup, commands, overwrite flow, local p
 ## Reveal.js and Next.js
 Slides are rendered with Reveal.js inside a client component.  `src/app/tracks/[trackId]/[unitId]/page.tsx` wraps the `RevealjsClientWrapper`, which dynamically imports the non‑SSR wrapper so the slideshow can access browser APIs.  The wrapper reads the Markdown file via data attributes on a `<section>` element.
 
+## Slide navigation and controls
+
+### How slide sections work
+1. Horizontal slides are the main sequence of slides.
+2. Vertical slides are sub-slides under a single horizontal slide.
+3. In markdown:
+   - `---` creates a new horizontal slide.
+   - `---vertical---` creates a new vertical slide inside the same horizontal stack.
+4. Runtime overflow handling may auto-split long markdown slides into vertical sub-slides.
+
+### Navigation behavior in this app
+1. **Next step** goes through vertical sub-slides first, then moves to the next horizontal slide.
+2. **Previous step** goes upward through vertical sub-slides first, then moves to the previous horizontal slide.
+3. Reveal.js default arrow controls are still available for direct directional navigation.
+
+### Controls legend (matches numbered screenshot)
+1. Top-right **left circular arrow**: previous meaningful step (custom).
+2. Top-right **right circular arrow**: next meaningful step (custom).
+3. Bottom-right **left arrow**: previous horizontal slide.
+4. Bottom-right **up arrow**: previous vertical slide.
+5. Bottom-right **right arrow**: next horizontal slide.
+6. Bottom-right **down arrow**: next vertical slide.
+
+### Screenshot placeholder
+Replace this line with your final image path:
+
+```md
+![Slide Controls Reference](./docs/images/slide-controls-reference.png)
+```
+
 ## Theming
 Colors are defined in `src/app/_colors.scss` and mapped to CSS variables in `src/app/_theme.scss`.  The `ThemeManager` component toggles the `dark` or `light` class based on `useDarkMode`, allowing runtime theme switching.
 
