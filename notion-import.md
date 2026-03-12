@@ -2,6 +2,8 @@
 
 This guide covers the full flow for importing Notion content into the SAP track slides.
 
+**Placeholder disclaimer:** command examples that end with `--unit unit_01` or `--unit unit_02` use placeholder unit IDs. Replace those with the actual unit ID you are importing/updating.
+
 ## 1) Create a Notion integration (one-time)
 
 1. Go to [Notion Integrations](https://www.notion.so/profile/integrations/internal).

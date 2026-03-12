@@ -50,6 +50,11 @@ Curriculum data is defined in `public/curriculum.ts` and referenced by the pages
 3. Place any images referenced in the Markdown under `public/assets`.
 4. Update `src/app/tracks/track.ts` if you need to assign a new color for the track.
 
+## Notion import
+For the full SAP import workflow (token setup, commands, overwrite flow, local preview, and publish), see `notion-import.md`.
+
+**Placeholder disclaimer:** command examples that end with `--unit unit_01` or `--unit unit_02` use placeholder unit IDs. Replace those with the actual unit ID you are importing/updating.
+
 ## Reveal.js and Next.js
 Slides are rendered with Reveal.js inside a client component.  `src/app/tracks/[trackId]/[unitId]/page.tsx` wraps the `RevealjsClientWrapper`, which dynamically imports the non‑SSR wrapper so the slideshow can access browser APIs.  The wrapper reads the Markdown file via data attributes on a `<section>` element.
 
