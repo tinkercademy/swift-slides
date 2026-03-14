@@ -1,0 +1,12 @@
+.page {
+  width: min(1200px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 16px 0 32px;
+}
+
+@media only screen and (max-width: 640px) {
+  .page {
+    width: calc(100% - 32px);
+    padding-bottom: 24px;
+  }
+}

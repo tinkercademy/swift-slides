@@ -7,6 +7,7 @@ import { getColorFromTrack } from "./track";
 
 import { CurriculumCard } from "@/components/curriculumGrid/curriculumCard";
 import { CurriculumGrid } from "@/components/curriculumGrid/curriculumGrid";
+import styles from "./page.module.scss";
 
 // Helper moved outside of component to avoid re-creation per render
 function coverForTrack(trackId: string) {
@@ -19,7 +20,7 @@ export default async function TracksPage() {
   const visibleTracks = tracks.filter((track) => !track.hidden);
 
   return (
-    <div>
+    <div className={styles.page}>
       <CurriculumGrid>
         {visibleTracks.map((track) => {
           return (
