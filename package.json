@@ -10,7 +10,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "optimize-images": "node scripts/optimize-images.js"
+    "optimize-images": "node scripts/optimize-images.js",
+    "parity:slides": "bun run scripts/check-slide-parity.ts"
   },
   "dependencies": {
     "@types/reveal.js": "^5.0.5",
@@ -33,6 +34,7 @@
     "eslint": "^9",
     "eslint-config-next": "15.1.6",
     "glob": "^11.0.3",
+    "playwright": "^1.58.2",
     "sharp": "^0.34.3",
     "typescript": "5.8.3"
   }

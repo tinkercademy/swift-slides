@@ -217,6 +217,44 @@ Slides are rendered with Reveal.js inside a client component. `src/app/tracks/[t
 
 Colours are defined in `src/app/_colors.scss` and mapped to CSS variables in `src/app/_theme.scss`. `ThemeManager` toggles the `dark` or `light` class based on `useDarkMode`, allowing runtime theme switching.
 
+## Parity checker
+
+When migrating a deck from HTML-heavy markdown to the shared layouts, use the parity checker before moving on to the next unit.
+
+### What it checks
+
+- Structure parity: slide count, headings, image references, links, and code block counts
+- Visual parity: per-slide screenshots and diff images rendered through the real Reveal route
+
+### Run it
+
+```bash
+bun run parity:slides -- --unit track_b/01-name-card
+```
+
+Compare multiple units against the previous Git revision:
+
+```bash
+bun run parity:slides -- \
+  --base-ref HEAD^ \
+  --unit track_b/01-name-card \
+  --unit track_b/01a-stacks-and-shapes
+```
+
+### Output
+
+- Reports and screenshots are written to `output/playwright/slide-parity/<timestamp>/`
+- Open `report.html` for the human-friendly review
+- Use `report.json` for machine-readable output
+- Diff images are grouped by unit under `baseline/`, `current/`, and `diff/`
+
+### Notes
+
+- The checker defaults to comparing against `HEAD^`
+- `--unit` accepts either the public route ID such as `track_b/unit_01` or the markdown ID such as `track_b/01-name-card`
+- It temporarily writes generated markdown under `public/markdown/_parity/` and cleans it up after the run
+- Use `--visual-threshold <number>` if you want a stricter or looser screenshot diff threshold
+
 ## Contributing
 
 1. Create a short-lived branch for your work.

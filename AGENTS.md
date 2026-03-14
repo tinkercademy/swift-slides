@@ -34,5 +34,6 @@ Read `README.md` first for setup, authoring examples, layout usage, and contribu
 
 - Use `tmux` for `bun run dev` or other long-running local sessions.
 - Run `bun run lint` and `bun run build`.
+- When migrating a deck to the markdown-first layouts, run `bun run parity:slides -- --unit <trackId>/<unitId>` and review `output/playwright/slide-parity/<timestamp>/report.html`.
 - Check the affected deck at `/tracks/<trackId>/<unitId>`.
 - If slide content or styling changed, also verify light mode, dark mode, print view, and a narrow/mobile viewport.
