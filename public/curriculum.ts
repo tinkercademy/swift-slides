@@ -264,42 +264,6 @@ export const tracks: TrackEntry[] = [
         subtitle: "Apply your SwiftUI skills to design and prototype your own single-feature app.",
         description: "In this final unit, you'll showcase your SwiftUI skills by developing a personalized single-feature app. You'll integrate all previously learned techniques to create a polished, interactive prototype that demonstrates your full app-development capabilities.",
         markdownId: "project"
-      },
-      {
-        id: "unit_07",
-        title: "ChatGPT and APIs",
-        idDisplay: "Project 01",
-        subtitle: "Build an app integrating ChatGPT using OpenAI APIs.",
-        description: "In this unit, you'll integrate ChatGPT into your SwiftUI app using OpenAI APIs. You'll practice managing API requests, handling JSON data, and incorporating interactive conversational features to enhance user experiences within your apps.",
-        markdownId: "chatgpt_and_apis",
-        disabled: true
-      },
-      {
-        id: "unit_08",
-        title: "Solar System",
-        idDisplay: "Project 02",
-        subtitle: "Explore the Solar System with Augmented Reality and SwiftUI.",
-        description: "In this unit, you'll create an interactive Solar System app using Augmented Reality and SwiftUI. You'll learn to display 3D models, implement gestures, and build engaging AR experiences, bringing planets and space exploration vividly to life.",
-        markdownId: "",
-        disabled: true
-      },
-      {
-        id: "unit_09",
-        title: "Vision Game",
-        idDisplay: "Project 03",
-        subtitle: "Create a game using the built-in Computer Vision framework to encourage physical activity.",
-        description: "In this unit, you'll develop a game that uses Apple's Computer Vision framework. You'll learn to detect and interpret physical movements, creating an interactive experience that encourages users to move and engage physically with your app.",
-        markdownId: "",
-        disabled: true
-      },
-      {
-        id: "unit_10",
-        title: "Project",
-        idDisplay: "Project 04",
-        subtitle: "Create a Machine Learning or Augmented Reality project.",
-        description: "In this final project, you'll apply your advanced skills by creating an app focused on Machine Learning or Augmented Reality. You'll independently design, develop, and prototype an innovative application, showcasing your full coding capabilities.",
-        markdownId: "",
-        disabled: true
       }
     ],
   },
