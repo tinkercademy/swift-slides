@@ -142,9 +142,11 @@ struct ContentView: View {
 - We'll take a photo of ourselves, and put it into our app!
 - To do this, we'll use a `View` called `Image`. You would have already seen an example right above the `Text`.
   - In Playgrounds, we can take a photo, and show it on-screen using the `Image` view below. Add the photo's name in the quotes.
+
   ```swift
    Image("MyImageName")
   ```
+
   - This is just like the `Text`s we saw!
 
 ---
@@ -373,7 +375,7 @@ struct ContentView: View {
 
 # More Modifiers
 
-## or moredifiers…
+## More ways to modify your views!
 
 ---
 
