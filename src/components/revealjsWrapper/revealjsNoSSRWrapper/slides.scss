@@ -363,6 +363,214 @@
     }
   }
 
+  img[src^="/assets/icons/"]:not([height]):not([width]) {
+    display: inline-block;
+    width: auto;
+    height: 1em;
+    margin: 0 0.16em;
+    vertical-align: -0.14em;
+  }
+
+  :is(h1, h2, h3, h4, h5, h6) img[src^="/assets/icons/"]:not([height]):not([width]) {
+    height: 1.1em;
+    margin: 0 0.2em 0 0;
+    vertical-align: -0.1em;
+  }
+
+  :is(h1, h2, h3, h4, h5, h6, p) img[src="/assets/swift-logo.svg"]:not([height]):not([width]) {
+    display: inline-block;
+    width: auto;
+    margin: 0;
+    vertical-align: -0.14em;
+  }
+
+  p:has(> img[src="/assets/swift-logo.svg"]:not([height]):not([width]):first-child) {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5em;
+    width: auto;
+    margin: 0.6em 0 0;
+    font-size: 0.9em;
+  }
+
+  p > img[src="/assets/swift-logo.svg"]:not([height]):not([width]):first-child {
+    height: 1.1em;
+    flex: none;
+  }
+
+  :is(h1, h2, h3, h4, h5, h6) img[src="/assets/swift-logo.svg"]:not([height]):not([width]) {
+    height: 1em;
+    margin-right: 0.18em;
+  }
+
+  /* Markdown-first slide templates built on Reveal's slide classes. */
+  .slides section.layout-steps-media,
+  .slides section.layout-two-up,
+  .slides section.layout-gallery-4,
+  .slides section.layout-code-focus {
+    text-align: left;
+  }
+
+  .slides section.layout-steps-media {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+    gap: 28px 40px;
+    align-items: center;
+  }
+
+  .slides section.layout-steps-media>* {
+    min-width: 0;
+  }
+
+  .slides section.layout-steps-media>:is(h1, h2, h3, h4, h5, h6, p:not(:has(img, video, iframe)), ul, ol, pre, blockquote, table, small) {
+    grid-column: 1;
+  }
+
+  .slides section.layout-steps-media>:is(p, div):has(img, video, iframe) {
+    grid-column: 2;
+    grid-row: 1 / span 12;
+    align-self: center;
+    justify-self: center;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+  }
+
+  .slides section.layout-steps-media>:is(p, div):has(img, video, iframe) :is(img, video, iframe) {
+    width: 100%;
+    max-width: 100%;
+    max-height: 820px;
+    margin: 0 auto;
+    object-fit: contain;
+  }
+
+  .slides section.layout-media-centre {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    text-align: left;
+  }
+
+  .slides section.layout-media-centre>* {
+    min-width: 0;
+  }
+
+  .slides section.layout-media-centre>:is(h1, h2, h3, h4, h5, h6, p:not(:has(img, video, iframe)), ul, ol, pre, blockquote, table, small) {
+    width: 100%;
+  }
+
+  .slides section.layout-media-centre>:is(p, div):has(img, video, iframe) {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .slides section.layout-media-centre>:is(p, div):has(img, video, iframe) :is(img, video, iframe) {
+    width: auto;
+    max-width: 100%;
+    max-height: 860px;
+    margin: 0 auto;
+    object-fit: contain;
+  }
+
+  .slides section.layout-two-up {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px 24px;
+    align-items: start;
+  }
+
+  .slides section.layout-two-up>* {
+    min-width: 0;
+  }
+
+  .slides section.layout-two-up>:is(h1, h2, h3, h4, h5, h6, p:not(:has(img, video, iframe)), ul, ol, blockquote, table, small) {
+    grid-column: 1 / -1;
+  }
+
+  .slides section.layout-two-up>:is(p, div):has(img, video, iframe) {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+  }
+
+  .slides section.layout-two-up>:is(p, div):has(img, video, iframe) :is(img, video, iframe) {
+    width: auto;
+    max-width: 100%;
+    max-height: 720px;
+    margin: 0 auto;
+    object-fit: contain;
+  }
+
+  .slides section.layout-gallery-4 {
+    display: grid !important;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+    align-items: start;
+  }
+
+  .slides section.layout-gallery-4>* {
+    min-width: 0;
+  }
+
+  .slides section.layout-gallery-4>:is(h1, h2, h3, h4, h5, h6, p:not(:has(img, video, iframe)), ul, ol, pre, blockquote, table, small) {
+    grid-column: 1 / -1;
+  }
+
+  .slides section.layout-gallery-4>:is(p, div):has(img, video, iframe) {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+  }
+
+  .slides section.layout-gallery-4>:is(p, div):has(img, video, iframe) :is(img, video, iframe) {
+    width: 100%;
+    max-width: 100%;
+    max-height: 520px;
+    margin: 0 auto;
+    object-fit: contain;
+  }
+
+  .slides section.layout-code-focus {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto auto minmax(0, 1fr) auto;
+    gap: 20px;
+    align-items: start;
+  }
+
+  .slides section.layout-code-focus>* {
+    min-width: 0;
+  }
+
+  .slides section.layout-code-focus>pre {
+    width: 100%;
+    margin: 0;
+  }
+
+  .slides section.layout-code-focus>p:has(> img[src="/assets/swift-logo.svg"]:not([height]):not([width]):first-child) {
+    margin-top: 0;
+  }
+
+  @media (max-width: 1100px) {
+    .slides section.layout-steps-media,
+    .slides section.layout-two-up {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .slides section.layout-steps-media>:is(p, div):has(img, video, iframe),
+    .slides section.layout-two-up>:is(p, div):has(img, video, iframe) {
+      grid-column: 1;
+      grid-row: auto;
+    }
+
+    .slides section.layout-gallery-4 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
 }
 
 .reveal-viewport.print {

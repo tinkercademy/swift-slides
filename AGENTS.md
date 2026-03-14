@@ -1,6 +1,6 @@
 # Swift Slides Agent Guide
 
-Read `README.md` first for setup, authoring examples, and contributor workflow. Keep this file focused on repo-specific constraints that matter while editing.
+Read `README.md` first for setup, authoring examples, layout usage, and contributor workflow. Keep this file focused on repo-specific constraints that matter while editing.
 
 ## Core truths
 
@@ -21,6 +21,8 @@ Read `README.md` first for setup, authoring examples, and contributor workflow. 
   - `layout-gallery-4`
   - `layout-code-focus`
 - Treat raw HTML as an escape hatch for embeds like `iframe` and `video`, or for genuinely custom layouts.
+- Follow the practical layout examples in `README.md` when choosing between `layout-steps-media`, `layout-media-centre`, `layout-two-up`, `layout-gallery-4`, and `layout-code-focus`.
+- Shared icon and Swift caption styling only applies when markdown images do not set explicit `height` or `width`. Add explicit dimensions in HTML when you need a one-off size.
 - Canonical markdown-first examples live in `public/markdown/track_b/01-name-card.md` and `public/markdown/track_b/01a-stacks-and-shapes.md`.
 
 ## App constraints
