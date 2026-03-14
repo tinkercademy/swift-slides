@@ -2,6 +2,7 @@ import type { NextRequest } from "next/server";
 import { NextResponse } from "next/server";
 
 import { tracks } from "../public/curriculum";
+import { getUnitMarkdownIds } from "./app/tracks/track";
 
 const trackRouteRegex = /^\/tracks\/([^/]+)\/?$/;
 const blockedUserAgentPatterns = [
@@ -33,7 +34,7 @@ export function middleware(request: NextRequest) {
 
   const trackId = match[1];
   const track = tracks.find((entry) => entry.id === trackId);
-  const unitId = track?.units.find((unit) => unit.markdownId === deck)?.id;
+  const unitId = track?.units.find((unit) => getUnitMarkdownIds(unit).includes(deck))?.id;
 
   if (!unitId) {
     return NextResponse.next();

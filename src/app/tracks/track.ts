@@ -13,6 +13,11 @@ export interface TrackEntry extends Entry {
 
 export interface UnitEntry extends Entry {
     markdownId: string;
+    legacyMarkdownIds?: string[];
+}
+
+export function getUnitMarkdownIds(unit: UnitEntry): string[] {
+    return [unit.markdownId, ...(unit.legacyMarkdownIds ?? [])];
 }
 
 export function isTrackCurriculumEntry(entry: Entry): entry is TrackEntry {

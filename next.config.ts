@@ -1,4 +1,23 @@
-import type { NextConfig, Redirect } from "next";
+import type { NextConfig } from "next";
+import { tracks } from "./public/curriculum";
+
+type RedirectRule = {
+  source: string;
+  destination: string;
+  permanent: boolean;
+};
+
+function getLegacyMarkdownRedirects(): RedirectRule[] {
+  return tracks.flatMap((track) =>
+    track.units.flatMap((unit) =>
+      (unit.legacyMarkdownIds ?? []).map((legacyMarkdownId) => ({
+        source: `/markdown/${track.id}/${legacyMarkdownId}.md`,
+        destination: `/markdown/${track.id}/${unit.markdownId}.md`,
+        permanent: false,
+      }))
+    )
+  );
+}
 
 const nextConfig: NextConfig = {
   // Image optimization settings
@@ -44,7 +63,8 @@ const nextConfig: NextConfig = {
   },
   
   async redirects() {
-    return [
+    const redirects: RedirectRule[] = [
+      ...getLegacyMarkdownRedirects(),
       {
         source: "/",
         destination: "/tracks",
@@ -64,7 +84,9 @@ const nextConfig: NextConfig = {
         destination: "/tracks/track_:track",
         permanent: false
       },
-    ]
+    ];
+
+    return redirects;
   }
 }
 
