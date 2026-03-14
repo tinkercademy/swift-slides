@@ -24,6 +24,7 @@ Read `README.md` first for setup, authoring examples, layout usage, and contribu
 - Follow the practical layout examples in `README.md` when choosing between `layout-steps-media`, `layout-media-centre`, `layout-two-up`, `layout-gallery-4`, and `layout-code-focus`.
 - Shared icon and Swift caption styling only applies when markdown images do not set explicit `height` or `width`. Add explicit dimensions in HTML when you need a one-off size.
 - Canonical markdown-first examples live in `public/markdown/track_b/01-name-card.md` and `public/markdown/track_b/01a-stacks-and-shapes.md`.
+- For full deck-conversion workflow, parity expectations, and handoff format, follow `docs/skills/slide-migration/SKILL.md`.
 
 ## App constraints
 

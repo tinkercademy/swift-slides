@@ -209,6 +209,8 @@ These decks show the intended markdown-first patterns:
 - `public/markdown/track_b/01-name-card.md`
 - `public/markdown/track_b/01a-stacks-and-shapes.md`
 
+For a repeatable migration workflow, including parity-review expectations and the required handoff format, see `docs/skills/slide-migration/SKILL.md`.
+
 ## Reveal.js and Next.js
 
 Slides are rendered with Reveal.js inside a client component. `src/app/tracks/[trackId]/[unitId]/page.tsx` wraps `RevealjsClientWrapper`, which dynamically imports the non-SSR wrapper so the slideshow can access browser APIs. The markdown deck is loaded via Reveal's `data-markdown` support on the slide section.
