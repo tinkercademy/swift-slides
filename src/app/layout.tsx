@@ -19,14 +19,14 @@ export default async function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={interFont.variable}>
+    <html lang="en" className={interFont.variable} suppressHydrationWarning>
       <head>
         {/* Preload critical images for better performance */}
         <link rel="preload" as="image" href="/assets/logos/tinkercademy.webp" />
         <link rel="preload" as="image" href="/assets/logos/swift_explorers_purple.webp" />
         <link rel="preload" as="image" href="/covers/placeholder.webp" />
       </head>
-      <body>
+      <body suppressHydrationWarning>
         <ThemeManager>
           <main>
             <Navigator />

@@ -5,6 +5,7 @@ export interface Entry {
     subtitle: string;
     description: string;
     disabled?: boolean;
+    hidden?: boolean;
 }
 
 export interface TrackEntry extends Entry {

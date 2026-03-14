@@ -119,6 +119,7 @@ export const tracks: TrackEntry[] = [
     id: "track_x",
     title: "Get Started with Swift!",
     idDisplay: "Swift Track",
+    hidden: true,
     subtitle:
       "Start your coding journey by mastering fundamental Swift concepts such as commands, loops, logic, and variables, enabling you to build interactive and dynamic apps.",
     description:

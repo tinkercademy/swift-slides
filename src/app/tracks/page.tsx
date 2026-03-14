@@ -16,10 +16,12 @@ function coverForTrack(trackId: string) {
 }
 
 export default async function TracksPage() {
+  const visibleTracks = tracks.filter((track) => !track.hidden);
+
   return (
     <div>
       <CurriculumGrid>
-        {tracks.map((track) => {
+        {visibleTracks.map((track) => {
           return (
             <CurriculumCard
               key={track.id}
