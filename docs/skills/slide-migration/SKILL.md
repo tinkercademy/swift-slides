@@ -139,7 +139,7 @@ If only one slide is unusual, then a small local exception may be fine.
 
 ### 1. Run the parity checker
 
-For each converted unit, generate a fresh HTML report.
+For each converted unit, **always** generate a fresh HTML report. Do not wait for the user to ask: run the parity command as part of the migration handoff and include the report path in your output.
 
 Example:
 
@@ -162,7 +162,7 @@ Open:
 
 - `output/playwright/slide-parity/<timestamp>/report.html`
 
-For every converted unit, the agent must include the generated HTML report path in its handoff.
+For every converted unit, the agent must run the parity checker, then include the generated HTML report path in its handoff. **Regenerate the report after every change**: after finishing a migration, after any edit to `scripts/check-slide-parity.ts`, or after changing report layout/styling. Do it immediately; do not wait for the user to ask.
 
 The report is the primary review artefact. Always provide the full path so the user can open it (e.g. `output/playwright/slide-parity/<timestamp>/report.html` or `file:///.../report.html`). Do not rely on `report.json` for human review.
 
@@ -224,3 +224,5 @@ Remaining differences:
 ## Conversion checklist
 
 Use the detailed checklist in `references/checklist.md`.
+
+For a full list of units to migrate (compared to main), see `references/migration-checklist.md`.
