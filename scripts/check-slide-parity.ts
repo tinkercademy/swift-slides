@@ -9,6 +9,11 @@ import sharp from "sharp";
 import { chromium, type Browser, type Page } from "playwright";
 
 import { tracks } from "../public/curriculum";
+import {
+  renderSlideReviewAnnotationChrome,
+  renderSlideReviewAnnotationRuntime,
+  renderSlideReviewAnnotationStyles,
+} from "./lib/slide-review-annotations";
 
 type ParsedArgs = {
   baseRef: string;
@@ -888,7 +893,7 @@ function renderSlideRow(slide: SlideComparison, unitIndex: number): string {
 
   const afterPanel =
     currentLight || currentDark
-      ? `<div class="slide-panel after-panel" data-slide-index="${slide.index}" data-unit-index="${unitIndex}" title="Click to leave feedback">
+      ? `<div class="slide-panel after-panel" data-slide-index="${slide.index}" data-unit-index="${unitIndex}" data-src-light="${escapeHtml(currentLight ?? "")}" data-src-dark="${escapeHtml(currentDark ?? "")}" data-modal-label="After — Slide ${slide.index + 1}: ${escapeHtml(heading)}" title="Click to enlarge, then leave feedback" role="button" tabindex="0">
         <img src="${escapeHtml(currentLight ?? currentDark ?? "")}" alt="After" data-src-light="${escapeHtml(currentLight ?? "")}" data-src-dark="${escapeHtml(currentDark ?? "")}" />
         <div class="marker-layer" data-slide-index="${slide.index}" data-unit-index="${unitIndex}" aria-hidden="true"></div>
       </div>`
@@ -933,6 +938,13 @@ function writeHtmlReport(
     })),
   };
   const reportMetaJson = serialiseForInlineScript(reportMeta);
+  const annotationStyles = renderSlideReviewAnnotationStyles();
+  const annotationChrome = renderSlideReviewAnnotationChrome({
+    clearButtonTitle: "Clear all comments",
+    primaryActionLabel: "Generate prompt",
+    promptSubtitle: "Editable prompt summarising your parity review feedback.",
+  });
+  const annotationRuntime = renderSlideReviewAnnotationRuntime();
 
   const html = `<!doctype html>
 <html lang="en">
@@ -952,16 +964,25 @@ function writeHtmlReport(
       .slide-panel { display: block; padding: 0; border: none; background: #fafafa; min-height: 200px; }
       .before-panel { cursor: pointer; }
       .before-panel:hover { background: #f0f0f0; }
-      .after-panel { position: relative; cursor: crosshair; }
+      .after-panel { position: relative; cursor: zoom-in; }
       .after-panel:hover { background: #f0f0f0; }
+      .after-panel:focus-visible { outline: 2px solid #2563eb; outline-offset: -2px; }
       .slide-panel img { display: block; width: 100%; height: auto; object-fit: contain; }
       .slide-panel.empty { cursor: default; display: grid; place-items: center; color: #999; font-size: 1.5rem; }
       .divider { padding: 0 16px; display: grid; place-items: center; background: #f5f5f5; color: #999; font-weight: 600; }
       .modal { position: fixed; inset: 0; background: rgba(0,0,0,0.8); display: none; align-items: center; justify-content: center; padding: 24px; z-index: 999; }
       .modal.open { display: flex; }
-      .modal-content { max-width: 95vw; max-height: 95vh; background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 24px 48px rgba(0,0,0,0.3); }
-      .modal-content img { display: block; max-width: 95vw; max-height: 85vh; object-fit: contain; }
-      .modal-header { padding: 12px 16px; background: #fafafa; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; align-items: center; }
+      .modal-content { max-width: 95vw; max-height: 95vh; background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 24px 48px rgba(0,0,0,0.3); display: grid; }
+      .modal-header { padding: 12px 16px; background: #fafafa; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+      .modal-copy { min-width: 0; }
+      .modal-label { display: block; font-weight: 600; }
+      .modal-hint { display: block; margin-top: 4px; color: #666; font-size: 0.9rem; }
+      .modal-body { padding: 16px; display: flex; align-items: center; justify-content: center; overflow: auto; max-height: calc(95vh - 74px); }
+      .modal-image-shell { position: relative; display: inline-block; line-height: 0; max-width: min(calc(95vw - 64px), 1600px); }
+      .modal-image-shell img { display: block; max-width: 100%; max-height: calc(95vh - 122px); width: auto; height: auto; object-fit: contain; }
+      .modal-image-shell.commentable { cursor: crosshair; }
+      .modal-image-shell.commentable:hover { box-shadow: 0 0 0 1px rgba(37,99,235,0.25); border-radius: 8px; }
+      .modal-marker-layer[hidden] { display: none; }
       .modal-close { padding: 8px 12px; border: none; background: #eee; border-radius: 6px; cursor: pointer; font: inherit; }
       .modal-close:hover { background: #e0e0e0; }
       .report-header { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; margin-bottom: 24px; }
@@ -978,63 +999,12 @@ function writeHtmlReport(
       body.dark .divider { background: #1a1a1a; color: #737373; }
       body.dark .modal-content { background: #262626; box-shadow: 0 24px 48px rgba(0,0,0,0.6); }
       body.dark .modal-header { background: #262626; border-color: #404040; color: #e5e5e5; }
+      body.dark .modal-hint { color: #a3a3a3; }
       body.dark .modal-close { background: #404040; color: #e5e5e5; }
       body.dark .modal-close:hover { background: #525252; }
       body.dark .theme-toggle { background: #262626; border-color: #404040; color: #e5e5e5; }
       body.dark .theme-toggle:hover { background: #333; }
-      .marker-layer { position: absolute; inset: 0; pointer-events: none; }
-      .comment-marker { position: absolute; transform: translate(-50%, -50%); pointer-events: auto; width: 28px; height: 28px; border: none; border-radius: 999px; background: #2563eb; color: #fff; cursor: pointer; font-size: 0.8rem; font-weight: 700; box-shadow: 0 6px 16px rgba(37,99,235,0.28); z-index: 5; }
-      .comment-marker:hover { background: #1d4ed8; }
-      .annotation-editor { position: absolute; z-index: 20; width: min(340px, calc(100vw - 48px)); padding: 14px; border: 1px solid #ddd; border-radius: 12px; background: #fff; box-shadow: 0 20px 40px rgba(0,0,0,0.18); display: grid; gap: 10px; }
-      .annotation-editor[hidden] { display: none; }
-      .annotation-editor-header { display: flex; justify-content: space-between; gap: 12px; align-items: flex-start; }
-      .annotation-editor-title { margin: 0; font-size: 0.95rem; font-weight: 600; }
-      .annotation-editor-meta { margin: 4px 0 0; color: #666; font-size: 0.82rem; }
-      .annotation-editor-close { border: none; background: transparent; color: #666; cursor: pointer; font-size: 1.1rem; line-height: 1; padding: 0; }
-      .annotation-editor-close:hover { color: #111; }
-      .annotation-editor textarea { width: 100%; min-height: 100px; padding: 10px 12px; border: 1px solid #d4d4d4; border-radius: 10px; resize: vertical; font: inherit; }
-      .annotation-editor textarea:focus, .prompt-textarea:focus { outline: 2px solid rgba(37,99,235,0.35); outline-offset: 0; border-color: #2563eb; }
-      .annotation-editor-actions { display: flex; gap: 8px; justify-content: flex-end; flex-wrap: wrap; }
-      .btn-secondary, .btn-primary, .page-generate, .copy-button { border: none; border-radius: 10px; cursor: pointer; padding: 10px 14px; font: inherit; }
-      .btn-secondary { background: #eee; color: #333; }
-      .btn-secondary:hover { background: #e0e0e0; }
-      .btn-primary, .page-generate, .copy-button { background: #2563eb; color: #fff; }
-      .btn-primary:hover, .page-generate:hover, .copy-button:hover { background: #1d4ed8; }
-      .btn-destructive { margin-right: auto; background: #fee2e2; color: #b91c1c; }
-      .btn-destructive:hover { background: #fecaca; }
-      .page-fab-row { position: fixed; right: 24px; bottom: 24px; z-index: 40; display: flex; align-items: center; gap: 10px; }
-      .page-clear { border: none; border-radius: 10px; cursor: pointer; padding: 10px 14px; background: #fee2e2; color: #b91c1c; font: inherit; }
-      .page-clear:hover { background: #fecaca; }
-      .page-generate { box-shadow: 0 20px 30px rgba(37,99,235,0.25); }
-      .page-generate[hidden], .page-clear[hidden] { display: none; }
-      .prompt-modal { position: fixed; inset: 0; z-index: 50; background: rgba(0,0,0,0.65); display: none; align-items: center; justify-content: center; padding: 24px; }
-      .prompt-modal.open { display: flex; }
-      .prompt-card { width: min(960px, 100%); max-height: calc(100vh - 48px); overflow: auto; border-radius: 16px; background: #fff; box-shadow: 0 24px 48px rgba(0,0,0,0.25); padding: 20px; display: grid; gap: 14px; }
-      .prompt-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; }
-      .prompt-title { margin: 0; font-size: 1.1rem; font-weight: 700; }
-      .prompt-subtitle { margin: 6px 0 0; color: #666; }
-      .prompt-actions { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
-      .prompt-clear-btn { margin-right: auto; }
-      .prompt-close { border: none; background: transparent; color: #666; cursor: pointer; font-size: 1.3rem; line-height: 1; padding: 0; }
-      .prompt-close:hover { color: #111; }
-      .copy-button { display: inline-flex; gap: 8px; align-items: center; }
-      .copy-button svg { width: 1rem; height: 1rem; }
-      .prompt-textarea { width: 100%; min-height: 420px; padding: 14px 16px; border-radius: 12px; border: 1px solid #d4d4d4; resize: vertical; background: #fff; color: #111; font: inherit; }
-      .prompt-copy-status { margin: 0; min-height: 1.2em; color: #2563eb; font-size: 0.9rem; }
-      body.dark .annotation-editor, body.dark .prompt-card { background: #262626; border-color: #404040; color: #e5e5e5; }
-      body.dark .annotation-editor-close, body.dark .prompt-close { color: #a3a3a3; }
-      body.dark .annotation-editor-close:hover, body.dark .prompt-close:hover { color: #fff; }
-      body.dark .annotation-editor textarea, body.dark .prompt-textarea { background: #171717; color: #f5f5f5; border-color: #404040; }
-      body.dark .annotation-editor-meta, body.dark .prompt-subtitle { color: #a3a3a3; }
-      body.dark .btn-secondary { background: #404040; color: #e5e5e5; }
-      body.dark .btn-secondary:hover { background: #525252; }
-      body.dark .btn-destructive { background: #7f1d1d; color: #fee2e2; }
-      body.dark .btn-destructive:hover { background: #991b1b; }
-      body.dark .page-clear { background: #7f1d1d; color: #fee2e2; }
-      body.dark .page-clear:hover { background: #991b1b; }
-      body.dark .page-generate, body.dark .btn-primary, body.dark .copy-button { background: #3b82f6; }
-      body.dark .page-generate:hover, body.dark .btn-primary:hover, body.dark .copy-button:hover { background: #2563eb; }
-      body.dark .prompt-copy-status { color: #93c5fd; }
+${annotationStyles}
     </style>
   </head>
   <body>
@@ -1044,84 +1014,40 @@ function writeHtmlReport(
         <span id="theme-icon" aria-hidden="true"></span>
       </button>
     </div>
-    <p class="hint">Click the <strong>After</strong> screenshot to leave feedback. Click <strong>Before</strong> to enlarge. Use <strong>Generate prompt</strong> to export comments.</p>
+    <p class="hint">Click <strong>After</strong> to enlarge it, then click inside the modal image to leave feedback. Click <strong>Before</strong> to enlarge it. Use <strong>Generate prompt</strong> to export comments.</p>
     ${slidesHtml}
-    <div class="page-fab-row">
-      <button type="button" id="page-clear" class="page-clear" hidden title="Clear all comments">Clear</button>
-      <button type="button" id="page-generate" class="page-generate" hidden>Generate prompt</button>
-    </div>
-
-    <div id="annotation-editor" class="annotation-editor" hidden>
-      <div class="annotation-editor-header">
-        <div>
-          <p id="annotation-editor-title" class="annotation-editor-title">Slide comment</p>
-          <p id="annotation-editor-meta" class="annotation-editor-meta"></p>
-        </div>
-        <button type="button" id="annotation-close" class="annotation-editor-close" aria-label="Cancel" title="Cancel">&#215;</button>
-      </div>
-      <textarea id="annotation-text" placeholder="Describe what needs to change."></textarea>
-      <div class="annotation-editor-actions">
-        <button type="button" id="annotation-delete" class="btn-secondary btn-destructive" hidden>Delete</button>
-        <button type="button" id="annotation-cancel" class="btn-secondary">Cancel</button>
-        <button type="button" id="annotation-save" class="btn-primary">Done</button>
-      </div>
-    </div>
-
-    <div id="prompt-modal" class="prompt-modal" aria-hidden="true">
-      <div class="prompt-card">
-        <div class="prompt-header">
-          <div>
-            <h2 class="prompt-title">Agent Prompt</h2>
-            <p class="prompt-subtitle">Editable prompt summarising your parity review feedback.</p>
-          </div>
-          <div class="prompt-actions">
-            <button type="button" id="prompt-clear" class="btn-secondary prompt-clear-btn" title="Clear all comments">Clear</button>
-            <button type="button" id="prompt-copy" class="copy-button">
-              <svg aria-hidden="true" viewBox="0 0 448 512" fill="currentColor"><path d="M384 336l-192 0c-35.3 0-64-28.7-64-64l0-192c0-17.7 14.3-32 32-32l140.1 0L416 163.9 416 304c0 17.7-14.3 32-32 32zM128 368c0 17.7 14.3 32 32 32l224 0c35.3 0 64-28.7 64-64l0-140.1c0-17-6.7-33.3-18.7-45.3L313.4 34.7c-12-12-28.3-18.7-45.3-18.7L160 16c-35.3 0-64 28.7-64 64l0 16-32 0c-35.3 0-64 28.7-64 64L0 384c0 61.9 50.1 112 112 112l208 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-208 0c-26.5 0-48-21.5-48-48l0-224 32 0 0 112c0 53 43 96 96 96l112 0 0 16z"/></svg>
-              <span>Copy</span>
-            </button>
-            <button type="button" id="prompt-close" class="prompt-close" aria-label="Close" title="Close">&#215;</button>
-          </div>
-        </div>
-        <textarea id="prompt-textarea" class="prompt-textarea" spellcheck="false"></textarea>
-        <p id="prompt-copy-status" class="prompt-copy-status" aria-live="polite"></p>
-      </div>
-    </div>
+    ${annotationChrome}
 
     <div class="modal" id="modal" aria-hidden="true">
       <div class="modal-content">
         <div class="modal-header">
-          <span id="modal-label"></span>
+          <div class="modal-copy">
+            <span id="modal-label" class="modal-label"></span>
+            <span id="modal-hint" class="modal-hint"></span>
+          </div>
           <button type="button" class="modal-close" id="modal-close">Close</button>
         </div>
-        <img id="modal-img" alt="" />
+        <div class="modal-body">
+          <div id="modal-image-shell" class="modal-image-shell">
+            <img id="modal-img" alt="" />
+            <div id="modal-marker-layer" class="marker-layer modal-marker-layer" aria-hidden="true" hidden></div>
+          </div>
+        </div>
       </div>
     </div>
     <script>
-      const reportData = \${reportMetaJson};
+      const reportData = ${reportMetaJson};
+${annotationRuntime}
       const commentStorageKey = "parity-comments::" + reportData.runId;
 
       const themeToggle = document.getElementById("theme-toggle");
       const themeIcon = document.getElementById("theme-icon");
-      const pageGenerate = document.getElementById("page-generate");
-      const pageClear = document.getElementById("page-clear");
-      const annotationEditor = document.getElementById("annotation-editor");
-      const annotationTitle = document.getElementById("annotation-editor-title");
-      const annotationMeta = document.getElementById("annotation-editor-meta");
-      const annotationText = document.getElementById("annotation-text");
-      const annotationSave = document.getElementById("annotation-save");
-      const annotationCancel = document.getElementById("annotation-cancel");
-      const annotationDelete = document.getElementById("annotation-delete");
-      const annotationClose = document.getElementById("annotation-close");
-      const promptModal = document.getElementById("prompt-modal");
-      const promptTextarea = document.getElementById("prompt-textarea");
-      const promptCopy = document.getElementById("prompt-copy");
-      const promptClear = document.getElementById("prompt-clear");
-      const promptClose = document.getElementById("prompt-close");
-      const promptCopyStatus = document.getElementById("prompt-copy-status");
       const modal = document.getElementById("modal");
       const modalImg = document.getElementById("modal-img");
       const modalLabel = document.getElementById("modal-label");
+      const modalHint = document.getElementById("modal-hint");
+      const modalImageShell = document.getElementById("modal-image-shell");
+      const modalMarkerLayer = document.getElementById("modal-marker-layer");
       const modalClose = document.getElementById("modal-close");
 
       const moonSvg = '<svg aria-hidden="true" width="1.25em" height="1.25em" viewBox="0 0 384 512" fill="currentColor"><path d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"/></svg>';
@@ -1132,14 +1058,20 @@ function writeHtmlReport(
           p.dataset.unitIndex + ":" + p.dataset.slideIndex, p
         ])
       );
-      let comments = [];
-      let editorState = null;
+      const markerLayerMap = new Map(
+        Array.from(afterPanelMap.entries()).map(([key, panel]) => [
+          key, panel.querySelector(".marker-layer")
+        ])
+      );
+      let modalState = null;
 
-      function clamp(v, lo, hi) { return Math.min(Math.max(v, lo), hi); }
-      function roundToTenths(v) { return Math.round(v * 10) / 10; }
-      function fmtPct(v) { return roundToTenths(v).toFixed(1) + "%"; }
+      function keyFor(unitIndex, slideIndex) { return unitIndex + ":" + slideIndex; }
       function isDark() { return document.body.classList.contains("dark"); }
       function getThemeLabel() { return isDark() ? "dark" : "light"; }
+      function resolvePanelImageSrc(panel, dark) {
+        const key = dark ? "srcDark" : "srcLight";
+        return (panel.dataset[key] || "").trim() || (dark ? panel.dataset.srcLight : panel.dataset.srcDark) || "";
+      }
 
       function applyTheme(dark) {
         document.body.classList.toggle("dark", dark);
@@ -1149,238 +1081,275 @@ function writeHtmlReport(
         themeToggle.setAttribute("title", label);
         try { localStorage.setItem("isDarkMode", JSON.stringify(dark)); } catch (_) {}
       }
+      function updateModalImageForTheme(dark) {
+        if (!modalState) return;
+        const src = resolvePanelImageSrc(modalState.sourceEl, dark);
+        if (src) modalImg.src = src;
+      }
       function updateImagesForTheme(dark) {
         document.querySelectorAll(".slide-panel img[data-src-light], .slide-panel img[data-src-dark]").forEach((img) => {
           const src = dark ? (img.dataset.srcDark || img.dataset.srcLight) : (img.dataset.srcLight || img.dataset.srcDark);
           if (src) img.src = src;
         });
+        updateModalImageForTheme(dark);
+      }
+      function getCommentHost(options) {
+        if (
+          modalState &&
+          modalState.kind === "after" &&
+          modal.classList.contains("open") &&
+          modalState.unitIndex === options.unitIndex &&
+          modalState.slideIndex === options.slideIndex
+        ) {
+          return modalImageShell;
+        }
+        return afterPanelMap.get(keyFor(options.unitIndex, options.slideIndex)) || null;
       }
 
-      function describeBand(y) { return y < 20 ? "top band" : y > 80 ? "bottom band" : "main content area"; }
-      function describeRegion(x, y) {
-        const h = x < 33.34 ? "left" : x > 66.66 ? "right" : "centre";
-        const v = y < 33.34 ? "top" : y > 66.66 ? "bottom" : "middle";
-        if (h === "centre" && v === "middle") return "centre";
-        if (h === "centre") return v + "-centre";
-        if (v === "middle") return "middle-" + h;
-        return v + "-" + h;
+      const annotations = SlideReviewShared.createSlideReviewAnnotations({
+        buildPromptText(comments) {
+          const ordered = comments.slice().sort((a, b) => a.createdAt - b.createdAt);
+          const tick = String.fromCharCode(96);
+          const lines = [];
+          lines.push("Apply parity review feedback to the migrated slide decks.");
+          lines.push("");
+          lines.push("Base ref: " + tick + reportData.baseRef + tick + "  Generated: " + reportData.generatedAt);
+          lines.push("Comments: " + ordered.length);
+          lines.push("");
+          lines.push("Follow repo slide authoring rules (markdown-first, shared layouts, preserve flow).");
+          lines.push("");
+          ordered.forEach((comment, index) => {
+            const unit = reportData.units[comment.unitIndex];
+            const slide = unit && unit.slides[comment.slideIndex];
+            if (!unit || !slide) return;
+            const diffNote = slide.visualDiffPercent ? " (visual diff " + slide.visualDiffPercent + ")" : "";
+            lines.push((index + 1) + ". " + tick + unit.route + tick + " slide " + (slide.index + 1) + " " + tick + slide.heading + tick + " " + slide.hash + diffNote + " — " + comment.region + ", " + comment.band + ", " + comment.theme + " mode");
+            lines.push("   Source: " + tick + unit.currentMarkdownPath + tick);
+            lines.push("   Comment:");
+            comment.text.split(/\\r?\\n/).forEach((line) => { lines.push("     " + line); });
+          });
+          lines.push("");
+          lines.push("Outcome: fix each issue; regenerate parity report when done.");
+          return lines.join("\\n");
+        },
+        clearConfirmText: "Clear all comments? This cannot be undone.",
+        commentStorageKey,
+        copySuccessText: "Copied.",
+        createComment(options, text, themeLabel, utils) {
+          return {
+            band: options.band,
+            createdAt: Date.now(),
+            id: utils.createCommentId(),
+            region: options.region,
+            slideIndex: options.slideIndex,
+            text,
+            theme: themeLabel,
+            unitIndex: options.unitIndex,
+            xPercent: options.xPercent,
+            yPercent: options.yPercent,
+          };
+        },
+        getEditorCopy(options, utils) {
+          const unit = reportData.units[options.unitIndex];
+          const slide = unit && unit.slides[options.slideIndex];
+          if (!unit || !slide) {
+            return null;
+          }
+
+          return {
+            meta:
+              slide.heading +
+              " " +
+              slide.hash +
+              " • " +
+              utils.formatPercent(options.xPercent) +
+              " from left, " +
+              utils.formatPercent(options.yPercent) +
+              " from top",
+            title: unit.title + " — Slide " + (slide.index + 1),
+          };
+        },
+        getEditorHost(options) {
+          return getCommentHost(options);
+        },
+        getThemeLabel() {
+          return getThemeLabel();
+        },
+        onEscape(event) {
+          if (!modal.classList.contains("open")) {
+            return;
+          }
+          event.preventDefault();
+          closeModalFn();
+        },
+        primaryActionLabel: "Generate prompt",
+        renderMarkers({ comments, createMarkerButton, openExistingComment }) {
+          markerLayerMap.forEach((layer) => { if (layer) layer.textContent = ""; });
+          modalMarkerLayer.textContent = "";
+
+          comments.forEach((comment, index) => {
+            const key = keyFor(comment.unitIndex, comment.slideIndex);
+            const panel = afterPanelMap.get(key);
+            const layer = markerLayerMap.get(key);
+
+            if (panel && layer) {
+              layer.appendChild(
+                createMarkerButton(comment, index, (event) => {
+                  event.stopPropagation();
+                  openAfterModal(panel, comment.id);
+                })
+              );
+            }
+
+            if (
+              modalState &&
+              modalState.kind === "after" &&
+              modalState.unitIndex === comment.unitIndex &&
+              modalState.slideIndex === comment.slideIndex &&
+              !modalMarkerLayer.hidden
+            ) {
+              modalMarkerLayer.appendChild(
+                createMarkerButton(comment, index, (event) => {
+                  event.stopPropagation();
+                  openExistingComment(comment.id);
+                })
+              );
+            }
+          });
+        },
+      });
+
+      function whenModalImageReady(callback) {
+        if (modalImg.complete && modalImg.naturalWidth > 0) {
+          callback();
+          return;
+        }
+        modalImg.addEventListener("load", callback, { once: true });
       }
 
-      function loadComments() {
-        try { const r = localStorage.getItem(commentStorageKey); if (!r) return []; const p = JSON.parse(r); return Array.isArray(p) ? p.filter(c => c && c.text) : []; } catch (_) { return []; }
-      }
-      function persistComments() {
-        try { localStorage.setItem(commentStorageKey, JSON.stringify(comments)); } catch (_) {}
-      }
-
-      function updateFab() {
-        if (comments.length === 0) { pageGenerate.hidden = true; pageClear.hidden = true; pageGenerate.textContent = "Generate prompt"; return; }
-        pageGenerate.hidden = false; pageClear.hidden = false;
-        pageGenerate.textContent = "Generate prompt (" + comments.length + ")";
+      function syncModalView() {
+        if (!modalState) return;
+        const isAfter = modalState.kind === "after";
+        modalLabel.textContent = modalState.sourceEl.dataset.modalLabel || "";
+        modalHint.textContent = isAfter ? "Click the enlarged image to leave feedback." : "";
+        modalImageShell.classList.toggle("commentable", isAfter);
+        modalMarkerLayer.hidden = !isAfter;
+        updateModalImageForTheme(isDark());
+        annotations.renderMarkers();
       }
 
-      function renderMarkers() {
-        document.querySelectorAll(".marker-layer").forEach(l => { l.textContent = ""; });
-        comments.forEach((c, i) => {
-          const panel = afterPanelMap.get(c.unitIndex + ":" + c.slideIndex);
-          if (!panel) return;
-          const layer = panel.querySelector(".marker-layer");
-          if (!layer) return;
-          const m = document.createElement("button");
-          m.type = "button"; m.className = "comment-marker";
-          m.textContent = String(i + 1);
-          m.style.left = c.xPercent + "%"; m.style.top = c.yPercent + "%";
-          m.title = "Comment " + (i + 1) + ": " + c.text;
-          m.addEventListener("click", (e) => { e.stopPropagation(); openExistingComment(c.id); });
-          layer.appendChild(m);
-        });
-        updateFab();
+      function openBeforeModal(button) {
+        if (!annotations.closeEditor("switch")) return;
+        modalState = { kind: "before", sourceEl: button };
+        modal.classList.add("open");
+        modal.setAttribute("aria-hidden", "false");
+        syncModalView();
       }
 
-      function closeEditor(reason) {
-        if (!editorState) return true;
-        if ((reason === "cancel" || reason === "switch") && !window.confirm(editorState.commentId ? "Discard changes?" : "Discard this draft?")) return false;
-        annotationEditor.hidden = true;
-        if (annotationEditor.parentElement) annotationEditor.parentElement.removeChild(annotationEditor);
-        editorState = null; annotationText.value = "";
-        return true;
-      }
+      function openAfterModal(panel, focusCommentId = null) {
+        if (!annotations.closeEditor("switch")) return;
+        modalState = {
+          kind: "after",
+          sourceEl: panel,
+          slideIndex: Number(panel.dataset.slideIndex),
+          unitIndex: Number(panel.dataset.unitIndex),
+        };
+        modal.classList.add("open");
+        modal.setAttribute("aria-hidden", "false");
+        syncModalView();
 
-      function positionEditor(panel, ax, ay) {
-        annotationEditor.style.left = "12px"; annotationEditor.style.top = "12px"; annotationEditor.style.visibility = "hidden";
-        requestAnimationFrame(() => {
-          const m = 12;
-          const ml = Math.max(m, panel.clientWidth - annotationEditor.offsetWidth - m);
-          const mt = Math.max(m, panel.clientHeight - annotationEditor.offsetHeight - m);
-          annotationEditor.style.left = clamp(ax + 12, m, ml) + "px";
-          annotationEditor.style.top = clamp(ay + 12, m, mt) + "px";
-          annotationEditor.style.visibility = "visible"; annotationText.focus();
-        });
-      }
-
-      function openCommentEditor(opts) {
-        if (!closeEditor("switch")) return;
-        const unit = reportData.units[opts.unitIndex];
-        const slide = unit && unit.slides[opts.slideIndex];
-        const panel = afterPanelMap.get(opts.unitIndex + ":" + opts.slideIndex);
-        if (!slide || !panel) return;
-        editorState = opts;
-        annotationTitle.textContent = unit.title + " — Slide " + (slide.index + 1);
-        annotationMeta.textContent = slide.heading + " " + slide.hash + " • " + fmtPct(opts.xPercent) + " from left, " + fmtPct(opts.yPercent) + " from top";
-        annotationText.value = opts.text || "";
-        annotationDelete.hidden = !opts.commentId;
-        panel.appendChild(annotationEditor);
-        annotationEditor.hidden = false;
-        positionEditor(panel, opts.anchorX, opts.anchorY);
-      }
-
-      function openExistingComment(id) {
-        const c = comments.find(e => e.id === id);
-        if (!c) return;
-        const panel = afterPanelMap.get(c.unitIndex + ":" + c.slideIndex);
-        if (!panel) return;
-        openCommentEditor({
-          anchorX: (c.xPercent / 100) * panel.clientWidth,
-          anchorY: (c.yPercent / 100) * panel.clientHeight,
-          band: c.band, commentId: c.id, region: c.region,
-          slideIndex: c.slideIndex, text: c.text, theme: c.theme,
-          unitIndex: c.unitIndex, xPercent: c.xPercent, yPercent: c.yPercent,
-        });
-      }
-
-      function saveComment() {
-        if (!editorState) return;
-        const text = annotationText.value.trim();
-        if (!text) { window.alert("Add a comment first, or cancel."); annotationText.focus(); return; }
-        if (editorState.commentId) {
-          comments = comments.map(c => c.id === editorState.commentId ? { ...c, text } : c);
-        } else {
-          comments.push({
-            band: editorState.band, createdAt: Date.now(),
-            id: String(Date.now()) + "-" + Math.random().toString(36).slice(2, 8),
-            region: editorState.region, slideIndex: editorState.slideIndex,
-            text, theme: getThemeLabel(), unitIndex: editorState.unitIndex,
-            xPercent: editorState.xPercent, yPercent: editorState.yPercent,
+        if (focusCommentId) {
+          whenModalImageReady(() => {
+            if (!modalState || modalState.kind !== "after") return;
+            annotations.openExistingComment(focusCommentId);
           });
         }
-        persistComments(); renderMarkers(); closeEditor("save");
       }
 
-      function deleteComment() {
-        if (!editorState || !editorState.commentId) return;
-        if (!window.confirm("Delete this comment?")) return;
-        comments = comments.filter(c => c.id !== editorState.commentId);
-        persistComments(); renderMarkers(); closeEditor("delete");
+      function closeModalFn(reason = "cancel") {
+        if (annotations.isEditorInHost(modalImageShell) && !annotations.closeEditor(reason)) return;
+        modal.classList.remove("open");
+        modal.setAttribute("aria-hidden", "true");
+        modalImg.removeAttribute("src");
+        modalHint.textContent = "";
+        modalState = null;
+        annotations.renderMarkers();
       }
 
-      function buildPromptText() {
-        const ordered = comments.slice().sort((a, b) => a.createdAt - b.createdAt);
-        const tick = String.fromCharCode(96);
-        const lines = [];
-        lines.push("Apply parity review feedback to the migrated slide decks.");
-        lines.push("");
-        lines.push("Base ref: " + tick + reportData.baseRef + tick + "  Generated: " + reportData.generatedAt);
-        lines.push("Comments: " + ordered.length);
-        lines.push("");
-        lines.push("Follow repo slide authoring rules (markdown-first, shared layouts, preserve flow).");
-        lines.push("");
-        ordered.forEach((c, i) => {
-          const unit = reportData.units[c.unitIndex];
-          const slide = unit && unit.slides[c.slideIndex];
-          if (!unit || !slide) return;
-          const diffNote = slide.visualDiffPercent ? " (visual diff " + slide.visualDiffPercent + ")" : "";
-          lines.push((i + 1) + ". " + tick + unit.route + tick + " slide " + (slide.index + 1) + " " + tick + slide.heading + tick + " " + slide.hash + diffNote + " — " + c.region + ", " + c.band + ", " + c.theme + " mode");
-          lines.push("   Source: " + tick + unit.currentMarkdownPath + tick);
-          lines.push("   Comment:");
-          c.text.split(/\\r?\\n/).forEach(l => { lines.push("     " + l); });
-        });
-        lines.push("");
-        lines.push("Outcome: fix each issue; regenerate parity report when done.");
-        return lines.join("\\n");
+      themeToggle.addEventListener("click", () => {
+        applyTheme(!isDark());
+        updateImagesForTheme(isDark());
+      });
+      try {
+        const saved = localStorage.getItem("isDarkMode");
+        applyTheme(saved !== null ? JSON.parse(saved) === true : false);
+        updateImagesForTheme(isDark());
+      } catch (_) {
+        applyTheme(false);
       }
 
-      function openPromptModal() {
-        promptTextarea.value = buildPromptText();
-        promptCopyStatus.textContent = "";
-        promptModal.classList.add("open"); promptModal.setAttribute("aria-hidden", "false");
-        promptTextarea.focus();
-      }
-      function closePromptModal() {
-        promptModal.classList.remove("open"); promptModal.setAttribute("aria-hidden", "true");
-      }
-      function clearAllComments() {
-        if (!window.confirm("Clear all comments? This cannot be undone.")) return;
-        comments = []; persistComments(); renderMarkers();
-        if (promptModal.classList.contains("open")) closePromptModal();
-      }
-      async function copyPrompt() {
-        try { await navigator.clipboard.writeText(promptTextarea.value); promptCopyStatus.textContent = "Copied."; }
-        catch (_) { promptTextarea.select(); document.execCommand("copy"); promptCopyStatus.textContent = "Copied."; }
-      }
-
-      // Theme toggle
-      themeToggle.addEventListener("click", () => { applyTheme(!isDark()); updateImagesForTheme(isDark()); });
-      try { const s = localStorage.getItem("isDarkMode"); applyTheme(s !== null ? JSON.parse(s) === true : false); updateImagesForTheme(isDark()); } catch (_) { applyTheme(false); }
-
-      // Before panels: click to enlarge
-      document.querySelectorAll(".before-panel").forEach((btn) => {
-        btn.addEventListener("click", () => {
-          const dark = isDark();
-          const key = dark ? "srcDark" : "srcLight";
-          modalImg.src = (btn.dataset[key] || "").trim() || (dark ? btn.dataset.srcLight : btn.dataset.srcDark) || "";
-          modalLabel.textContent = btn.dataset.modalLabel || "";
-          modal.classList.add("open"); modal.setAttribute("aria-hidden", "false");
+      document.querySelectorAll(".before-panel").forEach((button) => {
+        button.addEventListener("click", () => {
+          openBeforeModal(button);
         });
       });
-      function closeModalFn() { modal.classList.remove("open"); modal.setAttribute("aria-hidden", "true"); }
-      modalClose.addEventListener("click", closeModalFn);
-      modal.addEventListener("click", (e) => { if (e.target === modal) closeModalFn(); });
 
-      // After panels: click to comment
       document.querySelectorAll(".after-panel").forEach((panel) => {
-        panel.addEventListener("click", (e) => {
-          if (e.target.closest(".annotation-editor") || e.target.closest(".comment-marker")) return;
-          const rect = panel.getBoundingClientRect();
-          const x = clamp(e.clientX - rect.left, 0, rect.width);
-          const y = clamp(e.clientY - rect.top, 0, rect.height);
-          const xPct = rect.width === 0 ? 0 : roundToTenths((x / rect.width) * 100);
-          const yPct = rect.height === 0 ? 0 : roundToTenths((y / rect.height) * 100);
-          openCommentEditor({
-            anchorX: x, anchorY: y, band: describeBand(yPct), commentId: null,
-            region: describeRegion(xPct, yPct), slideIndex: Number(panel.dataset.slideIndex),
-            text: "", theme: getThemeLabel(), unitIndex: Number(panel.dataset.unitIndex),
-            xPercent: xPct, yPercent: yPct,
-          });
+        panel.addEventListener("click", (event) => {
+          if (event.target.closest(".comment-marker")) return;
+          openAfterModal(panel);
+        });
+        panel.addEventListener("keydown", (event) => {
+          if (event.target !== panel) return;
+          if (event.key !== "Enter" && event.key !== " ") return;
+          event.preventDefault();
+          openAfterModal(panel);
         });
       });
 
-      annotationEditor.addEventListener("click", (e) => { e.stopPropagation(); });
-      annotationSave.addEventListener("click", saveComment);
-      annotationCancel.addEventListener("click", () => { closeEditor("cancel"); });
-      annotationClose.addEventListener("click", () => { closeEditor("cancel"); });
-      annotationDelete.addEventListener("click", deleteComment);
-      pageGenerate.addEventListener("click", () => { if (closeEditor("switch")) openPromptModal(); });
-      pageClear.addEventListener("click", clearAllComments);
-      promptClear.addEventListener("click", clearAllComments);
-      promptCopy.addEventListener("click", copyPrompt);
-      promptClose.addEventListener("click", closePromptModal);
-      promptModal.addEventListener("click", (e) => { if (e.target === promptModal) closePromptModal(); });
-
-      document.addEventListener("keydown", (e) => {
-        if (e.key !== "Escape") return;
-        if (promptModal.classList.contains("open")) { e.preventDefault(); closePromptModal(); return; }
-        if (modal.classList.contains("open")) { e.preventDefault(); closeModalFn(); return; }
-        if (!annotationEditor.hidden) { e.preventDefault(); closeEditor("cancel"); }
+      modalImageShell.addEventListener("click", (event) => {
+        if (!modalState || modalState.kind !== "after") return;
+        if (event.target.closest(".annotation-editor") || event.target.closest(".comment-marker")) return;
+        const rect = modalImageShell.getBoundingClientRect();
+        if (rect.width === 0 || rect.height === 0) return;
+        const x = SlideReviewShared.clamp(event.clientX - rect.left, 0, rect.width);
+        const y = SlideReviewShared.clamp(event.clientY - rect.top, 0, rect.height);
+        const xPercent = SlideReviewShared.roundToTenths((x / rect.width) * 100);
+        const yPercent = SlideReviewShared.roundToTenths((y / rect.height) * 100);
+        annotations.openCommentEditor({
+          anchorX: x,
+          anchorY: y,
+          band: SlideReviewShared.describeBand(yPercent),
+          commentId: null,
+          region: SlideReviewShared.describeRegion(xPercent, yPercent),
+          slideIndex: modalState.slideIndex,
+          text: "",
+          theme: getThemeLabel(),
+          unitIndex: modalState.unitIndex,
+          xPercent,
+          yPercent,
+        });
       });
 
-      comments = loadComments();
-      renderMarkers();
+      modalImg.addEventListener("load", () => {
+        annotations.renderMarkers();
+        annotations.repositionEditor();
+      });
+
+      window.addEventListener("resize", () => {
+        annotations.repositionEditor();
+      });
+
+      modalClose.addEventListener("click", () => { closeModalFn(); });
+      modal.addEventListener("click", (event) => { if (event.target === modal) closeModalFn(); });
+
+      annotations.init();
     </script>
   </body>
 </html>
 `;
 
-  return writeFile(outputPath, html);
+  return writeFile(outputPath, html.replace(/[ \t]+$/gm, ""));
 }
 
 function printDeckSummary(
