@@ -4,25 +4,14 @@ What we'll make: Well, a quiz app. There will be a few options, where you have t
 
 ---
 
-<div style="display: flex; ">
+<!-- .slide: class="layout-steps-media" -->
+## Project Preparation
 
-<div style="flex:1;">
+- Create a new ‘App’ in Swift Playgrounds
+- Rename it to ‘Quiz App’
 
-<h2> Project Preparation </h2>
-
-- Create a new ‘App' in Swift Playgrounds
-- Rename it to ‘Quiz App'
-
-</div>
-
-<div style="flex:1; display: flex; flex-direction: column;">
-
-<img width="500" src="/markdown/track_b/assets/shapes-create-app-ss.jpg">
-<img width="500" src="/markdown/track_b/assets/quiz-rename-app.png">
-
-</div>
-
-</div>
+![Create App](/markdown/track_b/assets/shapes-create-app-ss.jpg)
+![Rename App](/markdown/track_b/assets/quiz-rename-app.png)
 
 ---
 
@@ -32,15 +21,17 @@ What we'll make: Well, a quiz app. There will be a few options, where you have t
 
 ---
 
+<!-- .slide: class="layout-media-centre" -->
 ## Creating the User Interface
 
-<img height="800" src="/markdown/track_b/assets/quiz-ui.png">
+![Quiz UI](/markdown/track_b/assets/quiz-ui.png)
+<!-- .element: class="r-stretch" -->
 
 ---
 
 ## Creating the User Interface
 
-<p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift</p>
+![Swift](/assets/swift-logo.svg) ContentView.swift
 
 ```swift
 struct ContentView: View {
@@ -99,7 +90,7 @@ enum OptionChoice {
 
 ```
 
-<p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> Question.swift</p>
+![Swift](/assets/swift-logo.svg) Question.swift
 
 ---
 
@@ -121,7 +112,7 @@ struct Question {
 }
 ```
 
-<p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> Question.swift</p>
+![Swift](/assets/swift-logo.svg) Question.swift
 
 ---
 
@@ -149,7 +140,7 @@ struct ContentView: View {
 // more code here
 ```
 
-<p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift</p>
+![Swift](/assets/swift-logo.svg) ContentView.swift
 
 ---
 
@@ -160,7 +151,7 @@ struct ContentView: View {
 
 ---
 
-<p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift</p>
+![Swift](/assets/swift-logo.svg) ContentView.swift
 
 ```swift
 struct ContentView: View {
@@ -220,9 +211,11 @@ struct ContentView: View {
 
 ---
 
+<!-- .slide: class="layout-media-centre" -->
 ## Creating the Alert
 
-<img height="850" src="/markdown/track_b/assets/quiz-creating-alert.png">
+![Creating the Alert](/markdown/track_b/assets/quiz-creating-alert.png)
+<!-- .element: class="r-stretch" -->
 
 ---
 
@@ -244,7 +237,7 @@ func didTapOption(optionNumber: OptionChoice) {
 }
 ```
 
-<p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift</p>
+![Swift](/assets/swift-logo.svg) ContentView.swift
 
 ---
 
@@ -265,7 +258,7 @@ Button {
 }
 ```
 
-<p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift</p>
+![Swift](/assets/swift-logo.svg) ContentView.swift
 
 
 ---
@@ -276,24 +269,30 @@ Button {
 
 ---
 
+<!-- .slide: class="layout-media-centre" -->
 ## Symbols
 
 - We'll use these symbols because they resemble options in Kahoot!, a popular quiz app.
 - Feel free to choose your own!
 
-<img width="300" src="/markdown/track_b/assets/jokes-kahoot.png">
+![Kahoot Symbols](/markdown/track_b/assets/jokes-kahoot.png)
+<!-- .element: class="r-stretch" -->
 
 ---
 
+<!-- .slide: class="layout-media-centre" -->
 ## Adding the Symbols to your app
 
-<img height="850" src="/markdown/track_b/assets/quiz-symbols1.png">
+![Adding Symbols](/markdown/track_b/assets/quiz-symbols1.png)
+<!-- .element: class="r-stretch" -->
 
 ---
 
+<!-- .slide: class="layout-media-centre" -->
 ## Repeat this for the other buttons
 
-<img height="850" src="/markdown/track_b/assets/quiz-symbol2.png">
+![More Symbols](/markdown/track_b/assets/quiz-symbol2.png)
+<!-- .element: class="r-stretch" -->
 
 ---
 
@@ -308,7 +307,7 @@ Button {
 
 - To refactor `ContentView`, we will be placing the buttons into functions
 
-<p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift</p>
+![Swift](/assets/swift-logo.svg) ContentView.swift
 
 ```swift
 func optionButton(optionNumber: OptionChoice, iconName: String) -> some View {
@@ -346,24 +345,15 @@ func optionButton(optionNumber: OptionChoice, iconName: String) -> some View {
 
 ---
 
-##
-
-<div style="display:flex;">
-
-<div>
-
-<h2>How to implement a ProgressView?</h2>
+<!-- .slide: class="layout-steps-media" -->
+## How to implement a ProgressView?
 
 - A good way to figure out how to implement is using the documentation.
   - How to find the documentation? Click the link below, or search.
 - Look at the list of parameters.
   - You can use the parameters to set the current `value` and the `total` value!
 
-</div>
-
-<img src="/markdown/track_b/assets/jokes-init-parameters.png">
-
-</div>
+![ProgressView init parameters](/markdown/track_b/assets/jokes-init-parameters.png)
 
 ---
 
@@ -376,9 +366,11 @@ func optionButton(optionNumber: OptionChoice, iconName: String) -> some View {
 
 ---
 
+<!-- .slide: class="layout-media-centre" -->
 ## Implementing Progress Bar
 
-<img height="700" src="/markdown/track_b/assets/quiz-progressbar.png">
+![Progress Bar Implementation](/markdown/track_b/assets/quiz-progressbar.png)
+<!-- .element: class="r-stretch" -->
 
 ---
 
@@ -388,18 +380,20 @@ func optionButton(optionNumber: OptionChoice, iconName: String) -> some View {
 
 ---
 
+<!-- .slide: class="layout-media-centre" -->
 ## What is it?
 
 - A pop-up sheet to display the user's score
 
-<img src="/markdown/track_b/assets/quiz-sheet-layout.png">
+![Score Sheet Layout](/markdown/track_b/assets/quiz-sheet-layout.png)
+<!-- .element: class="r-stretch" -->
 
 ---
 
 ## Creating a new file
 
 - First, we need to create a new swift file in Swift Playgrounds
-- To create a new Swift File, click on the <img style="margin-bottom: -4px" height="40px" src="/assets/icons/doc.badge.plus.svg" > button, select ‘Swift File'
+- To create a new Swift File, click on the ![Icon](/assets/icons/doc.badge.plus.svg) button, select ‘Swift File'
 - Then, rename it to ‘ScoreView'
 
 ---
@@ -420,7 +414,7 @@ struct ScoreView: View {
 }
 ```
 
-<p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ScoreView.swift</p>
+![Swift](/assets/swift-logo.svg) ScoreView.swift
 
 ---
 
@@ -444,7 +438,7 @@ struct ScoreView: View {
 }
 ```
 
-<p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ScoreView.swift</p>
+![Swift](/assets/swift-logo.svg) ScoreView.swift
 
 ---
 
@@ -488,7 +482,7 @@ struct ContentView: View {
 }
 ```
 
-<p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift</p>
+![Swift](/assets/swift-logo.svg) ContentView.swift
 
 ---
 
@@ -525,7 +519,7 @@ struct ContentView: View {
 
 ```
 
-<p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift</p>
+![Swift](/assets/swift-logo.svg) ContentView.swift
 
 ---
 
@@ -593,7 +587,7 @@ struct ContentView: View {
 
 ```
 
-<p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift</p>
+![Swift](/assets/swift-logo.svg) ContentView.swift
 
 ---
 
@@ -605,35 +599,29 @@ struct ContentView: View {
 
 ## What to build?
 
-<div style="display:flex;">
-
-<div>
-
 - A circular progress view to show the results.
 - Unlike with the `ProgressView`, there isn't one available…
 - So we'll have to make our own.
-
-</div>
-
-<img src="">
 
 ---
 
 ## Create New View
 
 - First, we need to create a new swift file in Swift Playgrounds
-- To create a new Swift File, click on the <img style="margin-bottom: -4px" height="40px" src="/assets/icons/doc.badge.plus.svg" > button, select ‘Swift File'
+- To create a new Swift File, click on the ![Icon](/assets/icons/doc.badge.plus.svg) button, select ‘Swift File'
 - Then, rename it to ‘CircularProgressView'
 
 ---
 
+<!-- .slide: class="layout-media-centre" -->
 ## Breaking down a Progress Ring
 
 - 2 circles
   - One to show the ring
   - One to show the path
 
-<img height="500" src="/markdown/track_b/assets/circle-progress.png">
+![Circle Progress Breakdown](/markdown/track_b/assets/circle-progress.png)
+<!-- .element: class="r-stretch" -->
 
 ---
 
@@ -641,21 +629,27 @@ struct ContentView: View {
 
 ---
 
+<!-- .slide: class="layout-media-centre" -->
 ## Creating a Circle
 
-<img height="800" src="/markdown/track_b/assets/CircularProgressView.png">
+![Circular Progress View](/markdown/track_b/assets/CircularProgressView.png)
+<!-- .element: class="r-stretch" -->
 
 ---
 
+<!-- .slide: class="layout-media-centre" -->
 ## Making a Ring
 
-<img height="800" src="/markdown/track_b/assets/making_a_ring.png">
+![Making a Ring](/markdown/track_b/assets/making_a_ring.png)
+<!-- .element: class="r-stretch" -->
 
 ---
 
+<!-- .slide: class="layout-media-centre" -->
 ## Creating a Circle
 
-<img height="800" src="/markdown/track_b/assets/CircleProgressIndicator2.png">
+![Circle Progress Indicator](/markdown/track_b/assets/CircleProgressIndicator2.png)
+<!-- .element: class="r-stretch" -->
 
 ---
 
@@ -667,7 +661,7 @@ struct ContentView: View {
 
 Add a variable, `progress`, to keep track of the current progress. This is a `CGFloat` because that's the type of parameter we need to control the progress ring — a `Double` would work, too.
 
-<p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> CircularProgressView.swift</p>
+![Swift](/assets/swift-logo.svg) CircularProgressView.swift
 
 ```swift
 struct CircularProgressView: View {
@@ -694,7 +688,7 @@ struct CircularProgressView: View {
 
 ## Creating the Circle
 
-<p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> CircularProgressView.swift</p>
+![Swift](/assets/swift-logo.svg) CircularProgressView.swift
 
 ```swift
 struct CircularProgressView: View {
@@ -716,27 +710,33 @@ struct CircularProgressView: View {
 
 ---
 
+<!-- .slide: class="layout-media-centre" -->
 ## Cutting the Circle
 
-<img height="800" src="/markdown/track_b/assets/cuttingTheCircle.png">
+![Cutting the Circle](/markdown/track_b/assets/cuttingTheCircle.png)
+<!-- .element: class="r-stretch" -->
 
 ---
 
+<!-- .slide: class="layout-media-centre" -->
 ## Drawing the Line
 
-<img height="800" src="/markdown/track_b/assets/drawingTheLine.png">
+![Drawing the Line](/markdown/track_b/assets/drawingTheLine.png)
+<!-- .element: class="r-stretch" -->
 
 ---
 
+<!-- .slide: class="layout-media-centre" -->
 ## Change the line colour
 
-<img height="800" src="/markdown/track_b/assets/changingLineColour.png">
+![Changing Line Colour](/markdown/track_b/assets/changingLineColour.png)
+<!-- .element: class="r-stretch" -->
 
 ---
 
 ## Rotate it by 270º to start from top
 
-<p> <img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> CircularProgressView.swift </p>
+![Swift](/assets/swift-logo.svg) CircularProgressView.swift
 
 ```swift[16]
 struct CircularProgressView: View {
@@ -762,9 +762,11 @@ struct CircularProgressView: View {
 
 ---
 
+<!-- .slide: class="layout-media-centre" -->
 ## Adding Progress Ring
 
-<img height="800" src="/markdown/track_b/assets/addingProgressRing.png">
+![Adding Progress Ring](/markdown/track_b/assets/addingProgressRing.png)
+<!-- .element: class="r-stretch" -->
 
 ---
 

@@ -9,9 +9,6 @@ These allow you to combine multiple `if` conditions together.
 - A logical operator is a type of an operator that you can use to make your conditional code more specific.
 - Each of these three operators changes conditions in its own specific way:
 
-<br />
-<br />
-
 | Symbol | Description |
 | ------ | ----------- |
 | `&&`   | AND         |

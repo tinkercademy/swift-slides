@@ -1,7 +1,7 @@
 ## Unit Overview
 
 - Remember we used a button to increase a number, that we displayed on screen?
-  - Now, we'll tie that number to something visual — the position of a flag on a screen
+  - Now, we'll tie that number to something visual — the position of a flag on a screen
 - Flag Raising App
   - Laying out
   - Raising the Flag
@@ -9,28 +9,26 @@
 
 ---
 
-<div style="display: flex;justify-content: center; align-items: center;">
-    <div style="flex: 1;text-align: center;">    
-    <h2>Demo</h2>
-        <p>What we'll make: A flag raising app. You tap on a button and the flag moves up. And up. And up. And up. And up. And up. And up. And up. And up. And up. And up. And up. And up. And up. And up.</p>
-    </div>
-    <div style="flex: 1;text-align: center;">
-       <iframe width="500" height="900" src="/markdown/track_b/assets/flag-demo.mp4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-</div>
+<!-- .slide: class="layout-steps-media" -->
+## Demo
+
+What we'll make: A flag raising app. You tap on a button and the flag moves up. And up. And up. And up. And up. And up. And up. And up. And up. And up. And up. And up. And up. And up. And up.
+
+<video width="500" controls>
+  <source src="/markdown/track_b/assets/flag-demo.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ---
 
+<!-- .slide: class="layout-media-centre" -->
 ## What we're building
 
 - We'll build the famous flag raising app, as seen on Channel 8.
 - Raise a flag, be patriotic.
 
-<div style="display: flex;justify-content: center; align-items: center;">
-    <div style="flex: 1;text-align: center;">    
-        <img src="/markdown/track_b/assets/flag-on-the-news.png">
-    </div>
-</div>
+![Flag on the news](/markdown/track_b/assets/flag-on-the-news.png)
+<!-- .element: class="r-stretch" -->
 
 ---
 
@@ -45,7 +43,7 @@
 3. Add a flag pole
    1. Add a HStack.
    2. Add a Rectangle with a fixed width within the HStack. This is your flag pole.
-   3. Add a Text with an emoji in the HStack <img style="margin-bottom: -4px" src="/markdown/track_b/assets/sg-flag.png" height="40px">
+   3. Add a Text with an emoji in the HStack ![SG Flag](/markdown/track_b/assets/sg-flag.png)
    - To add in the emoji you can
      1. Use the emoji keyboard on your iPad
      2. Copy the emoji from the internet and paste it into your code
@@ -62,7 +60,7 @@
 ## Duplicate how?
 
 - Hold down on the **Counter** project and tap Duplicate\*\*\*\*
-- Rename the duplicate from **“Counter copy”** to **“Flag Raising”**
+- Rename the duplicate from **"Counter copy"** to **"Flag Raising"**
 
 ---
 
@@ -124,16 +122,11 @@ struct ContentView: View {
 
 ---
 
+<!-- .slide: class="layout-two-up" -->
 ## Part 2: Lay out your flag
 
-<div style="display: flex;justify-content: center; align-items: center;">
-    <div style="flex: 1;text-align: center;">    
-        <img width="400" src="/markdown/track_b/assets/flag-bare-content.png">
-    </div>
-    <div style="flex: 1;text-align: center;">
-        <img width="400" src="/markdown/track_b/assets/flag-bare.png">
-    </div>
-</div>
+![Flag bare content](/markdown/track_b/assets/flag-bare-content.png)
+![Flag bare](/markdown/track_b/assets/flag-bare.png)
 
 ---
 
@@ -317,29 +310,25 @@ struct ContentView: View {
 
 ---
 
+<!-- .slide: class="layout-media-centre" -->
 ## Code
 
-<img src="/markdown/track_b/assets/flag-counter-offset.png">
+![Counter offset code](/markdown/track_b/assets/flag-counter-offset.png)
+<!-- .element: class="r-stretch" -->
 
 ---
 
+<!-- .slide: class="layout-steps-media" -->
 ## Run your code!
-
-<div style="display:flex;" >
-<div style="flex:1;">
 
 - The flag raises!!
 - The flag moves!!!
 - It's alive!!!!!!!!!!!!
 
-</div>
-<div style="flex:1;">
 <video controls>
   <source src="/markdown/track_b/assets/flag-without-animations.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
-</div>
-</div>
 
 ---
 
@@ -401,10 +390,8 @@ Button {
 
 ---
 
+<!-- .slide: class="layout-steps-media" -->
 ## Run your code _again_!
-
-<div style="display:flex;" >
-<div style="flex:1;">
 
 - Such smooth animations
 - 5 stars on the App Store
@@ -413,20 +400,15 @@ Button {
 - 🤩 🤩 🤩 🤩 🤩
 - 🌟 🌟 🌟 🌟 🌟
 
-</div>
-<div style="flex:1;">
 <video controls>
   <source src="/markdown/track_b/assets/flag-final-demo.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
-</div>
-</div>
 
 ---
 
+<!-- .slide: class="layout-code-focus" -->
 ## Flag Raising Code
-
-<p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift</p>
 
 ```swift[]
 import SwiftUI
@@ -477,6 +459,8 @@ struct ContentView: View {
     }
 }
 ```
+
+![Swift](/assets/swift-logo.svg) ContentView.swift
 
 ---
 
@@ -536,7 +520,7 @@ struct ContentView: View {
 
 ---
 
-### <img style="margin-bottom: -4px" src="/markdown/track_b/assets/sg-flag.png" height="60px"> Flag Raising App
+### ![SG Flag](/markdown/track_b/assets/sg-flag.png) Flag Raising App
 
 # Full Code
 

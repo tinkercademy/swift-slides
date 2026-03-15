@@ -2,9 +2,7 @@
 ## [apple.co/designasimpleapp-project3](https://apple.co/designasimpleapp-project3)
 This will be where we document our journey building the app.
 
-<a href="https://apple.co/designasimpleapp-project3" style="width: 100%; display: flex;">
-<img src="https://chart.googleapis.com/chart?chs=512x512&cht=qr&chl=https://apple.co/designasimpleapp-project3" style="border-radius: 8%">
-</a>
+[![QR Code](https://chart.googleapis.com/chart?chs=512x512&cht=qr&chl=https://apple.co/designasimpleapp-project3)](https://apple.co/designasimpleapp-project3)
 
 ---
 
@@ -20,14 +18,14 @@ This will be where we document our journey building the app.
 
 ---
 
-## <img src="/assets/oak.png" style="border-radius: 22%; margin-bottom: -16px" height="96px"> Overengineered Arrow Keys
+## ![Overengineered Arrow Keys](/assets/oak.png) Overengineered Arrow Keys
 - This is literally a clicker app with 3 controls—next button, previous button, and a slider to exit.
     - If you really think about it, it's a 2-key wireless keyboard.
 - But it solves a problem, and does it's job really well.
 - It makes it quick and easy to connect a clicker to a presentation.
 - You can take a look at it on the App Store at [oak.jiachen.app](https://oak.jiachen.app).
 
-<a href="https://oak.jiachen.app"><img src="/assets/download-on-app-store-white.svg" height="96px"></a>
+[![Download on the App Store](/assets/download-on-app-store-white.svg)](https://oak.jiachen.app)
 
 ---
 

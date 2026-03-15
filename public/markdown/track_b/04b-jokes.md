@@ -4,45 +4,54 @@
 
 ---
 
+<!-- .slide: class="layout-steps-media" -->
 ## Create a Playground App
 
-<div style="display: flex; ">
-    <ol>
-        <li>Press the <img style="margin-bottom: -8px;" src="/markdown/track_b/assets/new-project-button.png" alt="New Project Button"> icon to create a new App</li>
-        <li>Hold down on the newly created app and tap <strong>Rename</strong></li>
-        <li>Name it <strong>"Jokes"</strong></li>
-        <li>Tap on the app to open it</li>
-    </ol>
-    <img src="/markdown/track_b/assets/new-project.png">
-</div>
+1. Press the ![New Project Button](/markdown/track_b/assets/new-project-button.png) icon to create a new App
+2. Hold down on the newly created app and tap **Rename**
+3. Name it **"Jokes"**
+4. Tap on the app to open it
+
+![New Project](/markdown/track_b/assets/new-project.png)
 
 ---
 
+<!-- .slide: class="layout-media-centre" -->
 ## This is how it should look like
 
-<img height="800" src="/markdown/track_b/assets/jokes-new-app-ss.PNG">
+![New app screenshot](/markdown/track_b/assets/jokes-new-app-ss.PNG)
+<!-- .element: class="r-stretch" -->
 
 ---
 
+<!-- .slide: class="layout-media-centre" -->
 ## Jokes layout
 
-<img height="800" src="/markdown/track_b/assets/jokes-layout.png">
+![Jokes layout](/markdown/track_b/assets/jokes-layout.png)
+<!-- .element: class="r-stretch" -->
 
 ---
 
-<img height="800" src="/markdown/track_b/assets/jokes-layout2.png">
+<!-- .slide: class="layout-media-centre" -->
+
+![Jokes layout 2](/markdown/track_b/assets/jokes-layout2.png)
+<!-- .element: class="r-stretch" -->
 
 ---
 
+<!-- .slide: class="layout-media-centre" -->
 ## Nothing too new here.
 
-<img height="800" src="/markdown/track_b/assets/jokes-starter.png">
+![Jokes starter](/markdown/track_b/assets/jokes-starter.png)
+<!-- .element: class="r-stretch" -->
 
 ---
 
+<!-- .slide: class="layout-media-centre" -->
 ## What's going on here
 
-<img height="800" src="/markdown/track_b/assets/jokes-starter-explained.png">
+![Jokes starter explained](/markdown/track_b/assets/jokes-starter-explained.png)
+<!-- .element: class="r-stretch" -->
 
 ---
 
@@ -62,24 +71,21 @@ Text("What?? **_Tell me_!!**")
 
 ---
 
+<!-- .slide: class="layout-steps-media" -->
 ## Create a new Swift File
 
-<div style="display: flex; ">
-<ul>
-
-- Tap on <img style="margin-bottom: -4px" height="32px" src="/assets/icons/sidebar.left.svg">
-- Press <img style="margin-bottom: -4px" height="40px" src="/assets/icons/doc.badge.plus.svg"  >
-- Choose Swift File <img style="margin-bottom: -4px" height="32px" src="/assets/swift-logo.svg">
+- Tap on ![Left Sidebar Icon](/assets/icons/sidebar.left.svg)
+- Press ![New Document Icon](/assets/icons/doc.badge.plus.svg)
+- Choose Swift File ![Swift](/assets/swift-logo.svg)
 - Name it Joke
   - Uppercase (not joke)
   - Singular (not Jokes)
 
-</ul>
-<img src="/markdown/track_b/assets/jokes-new-file.png">
-</div>
+![New file](/markdown/track_b/assets/jokes-new-file.png)
 
 ---
 
+<!-- .slide: class="layout-code-focus" -->
 ## Creating Jokes
 
 ```swift[3-6]
@@ -91,13 +97,12 @@ struct Joke {
 }
 ```
 
-<p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift</p>
+![Swift](/assets/swift-logo.svg) ContentView.swift
 
 ---
 
+<!-- .slide: class="layout-code-focus" -->
 ## Adding Jokes
-
-<p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift</p>
 
 ```swift[3-14]
 struct ContentView: View {
@@ -120,11 +125,15 @@ struct ContentView: View {
             ...
 ```
 
+![Swift](/assets/swift-logo.svg) ContentView.swift
+
 ---
 
+<!-- .slide: class="layout-media-centre" -->
 ## Show First Joke
 
-<img height="800" src="/markdown/track_b/assets/jokes-using-structs.png">
+![Using structs](/markdown/track_b/assets/jokes-using-structs.png)
+<!-- .element: class="r-stretch" -->
 
 ---
 
@@ -142,9 +151,8 @@ struct ContentView: View {
 
 ---
 
+<!-- .slide: class="layout-code-focus" -->
 ## Declare State Variable
-
-<p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift</p>
 
 ```swift[5]
 struct ContentView: View {
@@ -167,17 +175,23 @@ struct ContentView: View {
 ...
 ```
 
+![Swift](/assets/swift-logo.svg) ContentView.swift
+
 ---
 
+<!-- .slide: class="layout-media-centre" -->
 ## Hide the punchline!
 
-<img height="800" src="/markdown/track_b/assets/jokes-hide-punchline.png">
+![Hide punchline](/markdown/track_b/assets/jokes-hide-punchline.png)
+<!-- .element: class="r-stretch" -->
 
 ---
 
+<!-- .slide: class="layout-media-centre" -->
 ## Show Punchline when What? tapped
 
-<img height="800" src="/markdown/track_b/assets/jokes-show-punchline.png">
+![Show punchline](/markdown/track_b/assets/jokes-show-punchline.png)
+<!-- .element: class="r-stretch" -->
 
 ---
 
@@ -202,14 +216,13 @@ struct ContentView: View {
 
 ---
 
+<!-- .slide: class="layout-code-focus" -->
 ## Declare State Variable
-
-<p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift</p>
 
 ```swift[5-6]
 struct ContentView: View {
 
-    var jokes = […]
+    var jokes = [...]
 
     @State var showPunchline = false
     @State var currentJoke = 0
@@ -229,11 +242,15 @@ struct ContentView: View {
 ...
 ```
 
+![Swift](/assets/swift-logo.svg) ContentView.swift
+
 ---
 
+<!-- .slide: class="layout-media-centre" -->
 ## Implementing currentJoke
 
-<img height="800" src="/markdown/track_b/assets/jokes-currentJoke.png">
+![Implementing currentJoke](/markdown/track_b/assets/jokes-currentJoke.png)
+<!-- .element: class="r-stretch" -->
 
 ---
 
@@ -268,17 +285,22 @@ struct ContentView: View {
 
 ---
 
-<img height="900" src="/markdown/track_b/assets/jokes-zstack.png">
+<!-- .slide: class="layout-media-centre" -->
+
+![ZStack implementation](/markdown/track_b/assets/jokes-zstack.png)
+<!-- .element: class="r-stretch" -->
 
 ---
 
-<img height="1000" src="/markdown/track_b/assets/crashed.png">
+<!-- .slide: class="layout-media-centre" -->
+
+![Crashed](/markdown/track_b/assets/crashed.png)
+<!-- .element: class="r-stretch" -->
 
 ---
 
+<!-- .slide: class="layout-steps-media" -->
 ## What does this mean?
-
-<img src="/markdown/track_b/assets/jokes-indexoutofrange.png">
 
 - This just means we ran out of jokes
 - Swift doesn't know what to do now because there are no more jokes to show the user.
@@ -286,6 +308,8 @@ struct ContentView: View {
   - Stop the user from seeing more jokes after we're out of jokes
   - Assume the user has a memory of a goldfish and loop back, hoping they don't notice the jokes have looped.
     - We'll go for this option.
+
+![Index out of range](/markdown/track_b/assets/jokes-indexoutofrange.png)
 
 ---
 
@@ -298,7 +322,10 @@ struct ContentView: View {
 
 ---
 
-<img height="900" src="/markdown/track_b/assets/jokes-resetindex1.png">
+<!-- .slide: class="layout-media-centre" -->
+
+![Reset index](/markdown/track_b/assets/jokes-resetindex1.png)
+<!-- .element: class="r-stretch" -->
 
 ---
 
@@ -332,28 +359,25 @@ struct ContentView: View {
 
 ---
 
+<!-- .slide: class="layout-steps-media" -->
 ## What? Why alert?
-
-<div style="display: flex; ">
-<ul>
 
 - After each joke, ask the user what they thought of it.
 - We don't really do much with the response.
   - It gives the user the illusion that we care about their feelings.
   - More importantly, it lets us show you how to use alerts.
 
-</ul>
-<img src="/markdown/track_b/assets/jokes-alert-ss.jpeg">
-</div>
+![Alert screenshot](/markdown/track_b/assets/jokes-alert-ss.jpeg)
 
 ---
 
+<!-- .slide: class="layout-code-focus" -->
 ## More States
 
 ```swift[5-8]
 struct ContentView: View {
 
-    var jokes = […]
+    var jokes = [...]
 
     @State var showPunchline = false
     @State var currentJoke = 0
@@ -364,10 +388,11 @@ struct ContentView: View {
             ...
 ```
 
-<p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift</p>
+![Swift](/assets/swift-logo.svg) ContentView.swift
 
 ---
 
+<!-- .slide: class="layout-code-focus" -->
 ## Adding Alert
 
 ```swift[5-8]
@@ -382,10 +407,11 @@ var body: some View {
 }
 ```
 
-<p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift</p>
+![Swift](/assets/swift-logo.svg) ContentView.swift
 
 ---
 
+<!-- .slide: class="layout-code-focus" -->
 ## Creating an Alert
 
 ```swift[2-7]
@@ -399,10 +425,11 @@ var body: some View {
 }
 ```
 
-<p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift</p>
+![Swift](/assets/swift-logo.svg) ContentView.swift
 
 ---
 
+<!-- .slide: class="layout-code-focus" -->
 ## Present Alert
 
 ```swift[8]
@@ -419,33 +446,29 @@ var body: some View {
 ...
 ```
 
-<p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift</p>
+![Swift](/assets/swift-logo.svg) ContentView.swift
 
 ---
 
-<div style="display: flex;justify-content: center; align-items: center;">
-<div style="flex: 1;text-align: center;">    
-<h2>Run your code!!</h2>
-<ul>
+<!-- .slide: class="layout-steps-media" -->
+## Run your code!!
 
 - An alert shows up!!!!
 - Messages get printed out to your console!!
 - We're not exactly making the user experience any better with an alert appearing after every joke but… who cares?
 
-</ul>
-</div>
-<div style="flex: 1;text-align: center;">
-<iframe width="1400" height="600" src="/markdown/track_b/assets/jokes-alert-demo.mp4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-</div>
+<video controls>
+  <source src="/markdown/track_b/assets/jokes-alert-demo.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ---
 
 ## How does the alert work?
 
 - Note how we made the alert work!
-  - We set up a `@State` variable, a `Bool`, to determine whether the alert shows up. This variable starts off as `false`, i.e. “don't show the alert”.
-  - When we want the alert to show up, we change that variable to `true`, i.e. “show the alert”.
+  - We set up a `@State` variable, a `Bool`, to determine whether the alert shows up. This variable starts off as `false`, i.e. "don't show the alert".
+  - When we want the alert to show up, we change that variable to `true`, i.e. "show the alert".
   - We pass this variable to the `.alert` modifier as a binding (the `$` sign), so that when it's dismissed, the modifier can set it back to `false`.
 - This is a form of _declarative_ programming. More on this later.
 
@@ -457,14 +480,17 @@ var body: some View {
 
 ---
 
+<!-- .slide: class="layout-steps-media" -->
 ## Button Roles
 
 - **`.destructive`**: If an alert button results in a destructive action, like deleting content, specify the destructive button style to help people recognize it.
 - **`.cancel`**: A Cancel button provides a clear, safe way to avoid a destructive action. Cancel buttons are default buttons so that people must intentionally choose a button other than the default to continue with the destructive action.
 
-<img height="250" src="/markdown/track_b/assets/jokes-alert-deletefiles.png">
+![Delete files alert](/markdown/track_b/assets/jokes-alert-deletefiles.png)
 
 ---
+
+<!-- .slide: class="layout-code-focus" -->
 
 ```swift
 .alert("Are you sure you want to delete all files?",
@@ -478,18 +504,21 @@ var body: some View {
 }
 ```
 
-<p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift</p>
+![Swift](/assets/swift-logo.svg) ContentView.swift
 
 ---
 
+<!-- .slide: class="layout-steps-media" -->
 ## Alert Messages
 
 - Only add an alert message if it is needed
 - Add a short succinct message to provide the user with additional context and information.
 
-<img height="250" src="/markdown/track_b/assets/jokes-alert-description.png">
+![Alert description](/markdown/track_b/assets/jokes-alert-description.png)
 
 ---
+
+<!-- .slide: class="layout-code-focus" -->
 
 ```swift[9-11]
 .alert("Are you sure you want to delete all files?",
@@ -505,7 +534,7 @@ var body: some View {
 }
 ```
 
-<p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift</p>
+![Swift](/assets/swift-logo.svg) ContentView.swift
 
 ---
 
@@ -515,24 +544,14 @@ var body: some View {
 
 ---
 
+<!-- .slide: class="layout-steps-media" -->
 ## What are Sheets?
-
-<div style="display: flex;justify-content: center; align-items: center;">
-<div style="flex: 1;text-align: center;">    
-<ul>
 
 - Sheets are screens presented on top of the current screen that makes the current screen inactive
 - Essentially, creating new screens on top of the current screen
 - We'll put this screen in a separate file, and call it `FeedbackResponseView`
 
-</ul>
-</div>
-<div style="flex: 1;text-align: center;">
-
-<img width="700" src="/markdown/track_b/assets/jokes-sheet-1-ss.jpeg">
-
-</div>
-</div>
+![Sheet screenshot](/markdown/track_b/assets/jokes-sheet-1-ss.jpeg)
 
 ---
 
@@ -560,34 +579,19 @@ var body: some View {
 
 ---
 
+<!-- .slide: class="layout-steps-media" -->
 ## Importing Images
 
-<div style="display: flex;justify-content: center; align-items: center;">
-<div style="flex: 1;text-align: center; width:60%">    
-<ul>
-
-- Open the **Sidebar** <img style="margin-bottom: -4px" height="32px" src="/assets/icons/sidebar.left.svg" alt="Left Sidebar Icon">
-- Tap on the **Add File** button <img style="margin-bottom: -4px" height="40px" src="/assets/icons/doc.badge.plus.svg" >
-- Select Photo --------------------------------------------------->
+- Open the **Sidebar** ![Left Sidebar Icon](/assets/icons/sidebar.left.svg)
+- Tap on the **Add File** button ![New Document Icon](/assets/icons/doc.badge.plus.svg)
+- Select Photo ![Photo dropbar](/markdown/track_b/assets/photo-dropbar.png)
 - Select a photo from your Photos!
 - You'll see your image in the **Assets** section
 - Hold down on it's name and select Rename
-- Name it **“happy”**!
-- Repeat this for the second image and name it **“sad”**.
+- Name it **"happy"**!
+- Repeat this for the second image and name it **"sad"**.
 
-</ul>
-</div>
-<div style="text-align: center;height:450px">
-
-<img height="200" src="/markdown/track_b/assets/photo-dropbar.png">
-
-</div>
-<div style="flex: 1;text-align: center;">
-
-<img height="800" src="/markdown/track_b/assets/jokes-add-images.png">
-
-</div>
-</div>
+![Adding images](/markdown/track_b/assets/jokes-add-images.png)
 
 ---
 
@@ -599,34 +603,43 @@ var body: some View {
 
 ## Create a new `View`
 
-- Tap on <img style="margin-bottom: -4px" height="32px" src="/assets/icons/sidebar.left.svg" alt="Left Sidebar Icon">
-- Press <img style="margin-bottom: -4px" height="40px" src="/assets/icons/doc.badge.plus.svg" >
-- Choose **Swift File** <img style="margin-bottom: -4px" height="32px" src="/assets/swift-logo.svg">
+- Tap on ![Left Sidebar Icon](/assets/icons/sidebar.left.svg)
+- Press ![New Document Icon](/assets/icons/doc.badge.plus.svg)
+- Choose **Swift File** ![Swift](/assets/swift-logo.svg)
 - Name it **FeedbackResponseView**
 - Copy the code from [tk.sg/swiftNewView](https://tk.sg/swiftNewView)
 - Paste it in!
 
 ---
 
-<img height="900" src="/markdown/track_b/assets/jokes-new-view-ss.png">
+<!-- .slide: class="layout-media-centre" -->
+
+![New view screenshot](/markdown/track_b/assets/jokes-new-view-ss.png)
+<!-- .element: class="r-stretch" -->
 
 ---
 
+<!-- .slide: class="layout-steps-media" -->
 ## Updating your code.
 
 - Replace all instances of the _`MyView`_ with your _`FeedbackResponseView`_.
 
-<img height="700" src="/markdown/track_b/assets/jokes-new-view-renamed-ss.png">
+![New view renamed](/markdown/track_b/assets/jokes-new-view-renamed-ss.png)
 
 ---
 
-<img height="900" src="/markdown/track_b/assets/jokes-model-view-explained.png">
+<!-- .slide: class="layout-media-centre" -->
+
+![Model view explained](/markdown/track_b/assets/jokes-model-view-explained.png)
+<!-- .element: class="r-stretch" -->
 
 ---
 
+<!-- .slide: class="layout-media-centre" -->
 ## Positive Feedback
 
-<img src="/markdown/track_b/assets/jokes-feedbackview1.png">
+![Feedback view](/markdown/track_b/assets/jokes-feedbackview1.png)
+<!-- .element: class="r-stretch" -->
 
 ---
 
@@ -639,25 +652,30 @@ var body: some View {
 
 ---
 
+<!-- .slide: class="layout-steps-media" -->
 ## Ternary Operators
 
 - Ternary operators are single-line if-else statements ~~that make you feel cool using them.~~
 
-<img src="/markdown/track_b/assets/Ternary-Operators.png">
+![Ternary Operators](/markdown/track_b/assets/Ternary-Operators.png)
 
 ---
 
+<!-- .slide: class="layout-media-centre" -->
 ## Receiving Feedback Data
 
 The `isPositive` variable will be passed in _(or injected)_ when the View is created
 
-<img src="/markdown/track_b/assets/jokes-2-previews.png">
+![Two previews](/markdown/track_b/assets/jokes-2-previews.png)
+<!-- .element: class="r-stretch" -->
 
 ---
 
+<!-- .slide: class="layout-media-centre" -->
 ## Updating Content using isPositive
 
-<img src="/markdown/track_b/assets/jokes-isPositive.png">
+![isPositive](/markdown/track_b/assets/jokes-isPositive.png)
+<!-- .element: class="r-stretch" -->
 
 ---
 
@@ -667,11 +685,14 @@ The `isPositive` variable will be passed in _(or injected)_ when the View is cre
   - Similar to the alert!
   - Actually, alerts, like sheets, present a new View.
 - In this case, we will be creating a sheet to show a response to the user's feedback
-- Think of this `@State` variable as a “barrier” for the sheet to show up from the bottom of the screen. When true, we're letting it pop up!
+- Think of this `@State` variable as a "barrier" for the sheet to show up from the bottom of the screen. When true, we're letting it pop up!
 
 ---
 
-<img src="/markdown/track_b/assets/jokes-feedback-presentation-contentview.png">
+<!-- .slide: class="layout-media-centre" -->
+
+![Feedback presentation in ContentView](/markdown/track_b/assets/jokes-feedback-presentation-contentview.png)
+<!-- .element: class="r-stretch" -->
 
 ---
 
@@ -693,6 +714,7 @@ var body: some View {
 
 ---
 
+<!-- .slide: class="layout-code-focus" -->
 ## Present the sheet!!
 
 ```swift[9-10,14-15]
@@ -719,47 +741,32 @@ var body: some View {
 }
 ```
 
-<p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift</p>
+![Swift](/assets/swift-logo.svg) ContentView.swift
 
 ---
 
-<div style="display: flex;justify-content: center; align-items: center;">
-<div style="flex: 1;text-align: center;">    
-<h2>Run your code!!</h2>
-<ul>
+<!-- .slide: class="layout-steps-media" -->
+## Run your code!!
 
 - An alert shows up!!!!
 - A sheet shows up after the alert!!
 - The sheet changes based on whether the user liked it or not.
 
-</ul>
-</div>
-<div style="flex: 1;text-align: center;">
-<iframe width="1400 " height="600" src="/markdown/track_b/assets/jokes-demo-alerts-working.mp4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-</div>
+<video controls>
+  <source src="/markdown/track_b/assets/jokes-demo-alerts-working.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ---
 
 ## Further Animations
 
-<div>
-<h3 style="height:100px">
-
-<span style="font-size:24px">Scale</span>
-<span style="transform: rotate(180deg);display: inline-block;">Rotated</span>
-<span style="position:relative;top:25px">Offset</span>
-<span style="opacity: 0.5;">Opacity</span>
-
-</h3>
-</div>
+### Scale · Rotated · Offset · Opacity
 
 ---
 
-<div style="display: flex;justify-content: center; align-items: center;">
-<div style="flex: 1;text-align: center;">    
-<h2>What we'll build</h2>
-<ul>
+<!-- .slide: class="layout-steps-media" -->
+## What we'll build
 
 - What happens when the user clicks **What**?
   - Move the setup Text up
@@ -768,15 +775,14 @@ var body: some View {
 - Not very aesthetic, but lots to do and learn!
   - We'll implement these one by one.
 
-</ul>
-</div>
-<div style="flex: 1;text-align: center;">
-<iframe width="1400" height="600" src="/markdown/track_b/assets/jokes-animation-demo.mp4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-</div>
+<video controls>
+  <source src="/markdown/track_b/assets/jokes-animation-demo.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ---
 
+<!-- .slide: class="layout-code-focus" -->
 ## Automatic animation with withAnimation
 
 ###### english has died
@@ -801,13 +807,12 @@ VStack {
 ...
 ```
 
-<p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift</p>
+![Swift](/assets/swift-logo.svg) ContentView.swift
 
 ---
 
+<!-- .slide: class="layout-code-focus" -->
 ## Scaling - Create a State var
-
-<p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift</p>
 
 ```swift[13]
 struct ContentView: View {
@@ -837,8 +842,11 @@ struct ContentView: View {
 
 ```
 
+![Swift](/assets/swift-logo.svg) ContentView.swift
+
 ---
 
+<!-- .slide: class="layout-code-focus" -->
 ## Scaling - Connecting State var
 
 ```swift[4]
@@ -853,13 +861,12 @@ if showPunchline {
 }
 ```
 
-<p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift</p>
+![Swift](/assets/swift-logo.svg) ContentView.swift
 
 ---
 
+<!-- .slide: class="layout-code-focus" -->
 ## Scaling - Adding Animation
-
-<p> <img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift</p>
 
 ```swift[5-12]
 if showPunchline {
@@ -884,14 +891,12 @@ if showPunchline {
 }
 ```
 
+![Swift](/assets/swift-logo.svg) ContentView.swift
+
 ---
 
-<h2>
-<span style="transform: rotate(-15deg);display: inline-block;">Rotation</span>
-<span> - Create a State var</span>
-</h2>
-
-<p> <img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift</p>
+<!-- .slide: class="layout-code-focus" -->
+## Rotation - Create a State var
 
 ```swift[13]
 struct ContentView: View {
@@ -913,14 +918,12 @@ struct ContentView: View {
             ...
 ```
 
+![Swift](/assets/swift-logo.svg) ContentView.swift
+
 ---
 
-<h2 style="padding-bottom:20px;">
-<span style="transform: rotate(-30deg);display: inline-block;">Rotation</span>
-<span> - Create a State var</span>
-</h2>
-
-<p> <img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift</p>
+<!-- .slide: class="layout-code-focus" -->
+## Rotation - Create a State var
 
 ```swift[4]
 if showPunchline {
@@ -940,14 +943,12 @@ if showPunchline {
 }
 ```
 
+![Swift](/assets/swift-logo.svg) ContentView.swift
+
 ---
 
-<h2 style="padding-bottom:50px;">
-<span style="transform: rotate(-45deg);display: inline-block;">Rotation</span>
-<span> - Adding Animation</span>
-</h2>
-
-<p> <img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift</p>
+<!-- .slide: class="layout-code-focus" -->
+## Rotation - Adding Animation
 
 ```swift[9,14]
 if showPunchline {
@@ -974,14 +975,12 @@ if showPunchline {
 }
 ```
 
+![Swift](/assets/swift-logo.svg) ContentView.swift
+
 ---
 
-<h2>
-<span style="opacity:0.7;">Opacity</span>
-<span> - Create a State var</span>
-</h2>
-
-<p> <img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift</p>
+<!-- .slide: class="layout-code-focus" -->
+## Opacity - Create a State var
 
 ```swift[15]
 struct ContentView: View {
@@ -1005,14 +1004,12 @@ struct ContentView: View {
             ...
 ```
 
+![Swift](/assets/swift-logo.svg) ContentView.swift
+
 ---
 
-<h2>
-<span style="opacity:0.5;">Opacity</span>
-<span> - Connecting State var</span>
-</h2>
-
-<p> <img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift</p>
+<!-- .slide: class="layout-code-focus" -->
+## Opacity - Connecting State var
 
 ```swift[6,20]
 if showPunchline {
@@ -1039,14 +1036,12 @@ if showPunchline {
 
 ```
 
+![Swift](/assets/swift-logo.svg) ContentView.swift
+
 ---
 
-<h2>
-<span style="opacity:0.2;">Opacity</span>
-<span> - Adding Animation</span>
-</h2>
-
-<p> <img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift</p>
+<!-- .slide: class="layout-code-focus" -->
+## Opacity - Adding Animation
 
 ```swift[11,17]
 if showPunchline {
@@ -1075,15 +1070,12 @@ if showPunchline {
 
 ```
 
+![Swift](/assets/swift-logo.svg) ContentView.swift
+
 ---
 
-<h2>
-<span style="position:relative;bottom:20px">Offset</span>
-<span> - Create a State var</span>
-</h2>
-
-<p> <img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift</p>
-
+<!-- .slide: class="layout-code-focus" -->
+## Offset - Create a State var
 
 ```swift[16]
 struct ContentView: View {
@@ -1108,15 +1100,12 @@ struct ContentView: View {
             ...
 ```
 
+![Swift](/assets/swift-logo.svg) ContentView.swift
 
 ---
 
-
-
-<h2>
-<span style="position:relative;bottom:35px">Offset</span>
-<span> - Connecting State var</span>
-</h2>
+<!-- .slide: class="layout-code-focus" -->
+## Offset - Connecting State var
 
 ```swift[5]
 ...
@@ -1128,16 +1117,12 @@ Text("Tap to continue")
 ...
 ```
 
-<p> <img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift</p>
+![Swift](/assets/swift-logo.svg) ContentView.swift
 
 ---
 
-<h2>
-<span style="position:relative;bottom:50px;">Offset</span>
-<span> - Adding Animation</span>
-</h2>
-
-<p> <img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift</p>
+<!-- .slide: class="layout-code-focus" -->
+## Offset - Adding Animation
 
 ```swift[11,18]
 Text(jokes[currentJoke].punchline)
@@ -1161,6 +1146,7 @@ Text(jokes[currentJoke].punchline)
         }
 ```
 
+![Swift](/assets/swift-logo.svg) ContentView.swift
 
 ---
 
@@ -1177,7 +1163,7 @@ Text(jokes[currentJoke].punchline)
 
 ---
 
-<p> <img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift</p>
+<!-- .slide: class="layout-code-focus" -->
 
 ```swift
 import SwiftUI
@@ -1284,10 +1270,11 @@ struct ContentView: View {
 }
 ```
 
+![Swift](/assets/swift-logo.svg) ContentView.swift
 
 ---
 
-<p> <img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> FeedbackResponseView.swift</p>
+<!-- .slide: class="layout-code-focus" -->
 
 ```swift
 import SwiftUI
@@ -1315,9 +1302,11 @@ struct FeedbackResponseView: View {
 
 ```
 
+![Swift](/assets/swift-logo.svg) FeedbackResponseView.swift
+
 ---
 
-<p> <img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> Joke.swift</p>
+<!-- .slide: class="layout-code-focus" -->
 
 ```swift
 import SwiftUI
@@ -1327,6 +1316,8 @@ struct Joke {
     var punchline: String
 }
 ```
+
+![Swift](/assets/swift-logo.svg) Joke.swift
 
 ---
 

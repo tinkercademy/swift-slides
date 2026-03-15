@@ -25,19 +25,13 @@
 
 ---
 
+<!-- .slide: class="layout-steps-media" -->
 ## Swift
-<div style="display: flex; align-items: center; gap: 20px; padding: 20px;">
-  <div style="flex: 1;">
-    <ul>
-      <li>Swift is an open-source programming language created by Apple.</li>
-      <li>Used by developers to build apps for iOS, iPadOS, macOS, watchOS, tvOS, and more.</li>
-    </ul>
-  </div>
-  <div style="flex: 1;">
-    <img src="/markdown/track_x/assets/x-1-8-0.png" alt="XCode UI" style="width: 100%; max-width: 300px;">
-  </div>
-</div>
 
+- Swift is an open-source programming language created by Apple.
+- Used by developers to build apps for iOS, iPadOS, macOS, watchOS, tvOS, and more.
+
+![XCode UI](/markdown/track_x/assets/x-1-8-0.png)
 
 ---
 
@@ -45,72 +39,42 @@
 
 ---
 
+<!-- .slide: class="layout-steps-media" -->
 ### Getting Started
 
-<div style="display: flex; align-items: center; gap: 20px; padding: 20px;">
-  <div style="flex: 1;">
-    <ol>
-      <li>Open the <strong>Swift Playgrounds</strong> app on your iPad.</li>
-      <li>Tap on </strong>Learn to Code</strong>.</li>
-    </ol>
-  </div>
-  <div style="flex: 1; position: relative; width: 700px; height: 500px;">
-    <img src="/markdown/track_x/assets/x-1-35-0.png" alt="Swift Playgrounds Homepage" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
-    <img src="/markdown/track_x/assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
-  </div>
-</div>
+1. Open the **Swift Playgrounds** app on your iPad.
+2. Tap on **Learn to Code**.
+
+![Swift Playgrounds Homepage](/markdown/track_x/assets/x-1-35-0.png)
 
 ---
 
+<!-- .slide: class="layout-steps-media" -->
 ### Getting Started
 
-<div style="display: flex; align-items: center; gap: 20px; padding: 20px;">
-  <div style="flex: 1;">
-    <ol>
-      <li>Download <strong>Get Started with Code</strong>.</li>
-    </ol>
-  </div>
-  <div style="flex: 1; position: relative; width: 700px; height: 500px;">
-    <img src="/markdown/track_x/assets/x-1-10-0.PNG" alt="Swift Playgrounds UI" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
-    <img src="/markdown/track_x/assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
-  </div>
-</div>
+1. Download **Get Started with Code**.
+
+![Swift Playgrounds UI](/markdown/track_x/assets/x-1-10-0.PNG)
 
 ---
 
+<!-- .slide: class="layout-steps-media" -->
 ### Getting Started
 
-<div style="display: flex; align-items: center; gap: 20px; padding: 20px;">
-  <div style="flex: 1;">
-    <ol>
-      <li>Return back to the home screen.</li>
-      <li> You will see your copy of Get Started with Code.</li>
-    </ol>
-  </div>
-  <div style="flex: 1; position: relative; width: 700px; height: 500px;">
-    <img src="/markdown/track_x/assets/x-1-31-0.png" alt="Swift Playgrounds Homepage" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
-    <img src="/markdown/track_x/assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
-  </div>
-</div>
+1. Return back to the home screen.
+2. You will see your copy of Get Started with Code.
+
+![Swift Playgrounds Homepage](/markdown/track_x/assets/x-1-31-0.png)
 
 ---
 
+<!-- .slide: class="layout-steps-media" -->
 ### Navigating the Playground
 
-<div style="display: flex; align-items: center; gap: 20px; padding: 20px;">
-  <!-- Text Section -->
-  <div style="flex: 1;">
-    <ul>
-      <li>Tap on the <strong>sidebar icon</strong> to navigate through different chapters.</li>
-      <li>Tap on the <strong>X icon</strong> to return to <strong>My Playgrounds</strong>.</li>
-    </ul>
-  </div>
-  <!-- Image Section -->
-  <div style="flex: 1; position: relative; width: 700px; height: 500px;">
-    <img src="/markdown/track_x/assets/x-1-11-0.png" alt="Swift Playgrounds UI Sidebar" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
-    <img src="/markdown/track_x/assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
-  </div>
-</div>
+- Tap on the **sidebar icon** to navigate through different chapters.
+- Tap on the **X icon** to return to **My Playgrounds**.
+
+![Swift Playgrounds UI Sidebar](/markdown/track_x/assets/x-1-11-0.png)
 
 ---
 
@@ -125,107 +89,66 @@
 
 ---
 
-<div style="display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; padding: 20px;">
-  <div style="position: relative; width: 1050px; height: 650px;">
-    <img src="/markdown/track_x/assets/x-1-14-0.png" alt="Screenshot showing cake" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
-    <img src="/markdown/track_x/assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
-  </div>
-  <div style="position: relative; width: 1050px; height: 650px;">
-    <img src="/markdown/track_x/assets/x-1-14-1.png" alt="Screenshot showing drone blueprints" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
-    <img src="/markdown/track_x/assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
-  </div>
-</div>
+<!-- .slide: class="layout-two-up" -->
+
+![Screenshot showing cake](/markdown/track_x/assets/x-1-14-0.png)
+![Screenshot showing drone blueprints](/markdown/track_x/assets/x-1-14-1.png)
 
 ---
 
-<div style="display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; padding: 20px;">
-  <div style="position: relative; width: 1050px; height: 650px;">
-    <img src="/markdown/track_x/assets/x-1-15-0.png" alt="Screenshot showing drone" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
-    <img src="/markdown/track_x/assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
-  </div>
-  <div style="position: relative; width: 1050px; height: 650px;">
-    <img src="/markdown/track_x/assets/x-1-15-1.png" alt="Screenshot showing coding inspirational words" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
-    <img src="/markdown/track_x/assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
-  </div>
-</div>
+<!-- .slide: class="layout-two-up" -->
+
+![Screenshot showing drone](/markdown/track_x/assets/x-1-15-0.png)
+![Screenshot showing coding inspirational words](/markdown/track_x/assets/x-1-15-1.png)
 
 ---
 
+<!-- .slide: class="layout-two-up" -->
 ### Controlling Byte
-<div style="display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; padding: 20px;">
-  <div style="position: relative; width: 1050px; height: 650px;">
-    <img src="/markdown/track_x/assets/x-1-16-0.png" alt="Screenshot showing moveForward()" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
-    <img src="/markdown/track_x/assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
-  </div>
-  <div style="position: relative; width: 1050px; height: 650px;">
-    <img src="/markdown/track_x/assets/x-1-16-1.png" alt="Screenshot showing collectGem()" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
-    <img src="/markdown/track_x/assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
-  </div>
-</div>
+
+![Screenshot showing moveForward()](/markdown/track_x/assets/x-1-16-0.png)
+![Screenshot showing collectGem()](/markdown/track_x/assets/x-1-16-1.png)
 
 ---
 
+<!-- .slide: class="layout-steps-media" -->
 # camelCase
-<div style="display: flex; align-items: center; gap: 20px; padding: 20px;">
-  <div style="flex: 1;">
-    <ul>
-      <li>Commands have no spaces between words.</li>
-      <li>If your command has two or more words, the standard practice is to capitalize the first letter of every word <strong>EXCEPT</strong> the first word.</li>
-      <li>e.g., <code>moveForward()</code>, <code>collectGem()</code></li>
-    </ul>
-  </div>
-  <div style="flex: 1; position: relative; width: 700px; height: 500px;">
-    <img src="/markdown/track_x/assets/x-1-17-0.png" alt="Screenshot showing camelCase" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
-    <img src="/markdown/track_x/assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
-  </div>
-</div>
+
+- Commands have no spaces between words.
+- If your command has two or more words, the standard practice is to capitalize the first letter of every word **EXCEPT** the first word.
+- e.g., `moveForward()`, `collectGem()`
+
+![Screenshot showing camelCase](/markdown/track_x/assets/x-1-17-0.png)
 
 ---
 
+<!-- .slide: class="layout-media-centre" -->
 # Introduction to the interface
-<div style="display: flex; justify-content: center; align-items: center;">
-  <div style="position: relative; width: 1050px; height: 700px;">
-    <img src="/markdown/track_x/assets/x-1-18-0.png" alt="Screenshot of Swift Playgrounds UI" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
-    <img src="/markdown/track_x/assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
-  </div>
-</div>
+
+![Screenshot of Swift Playgrounds UI](/markdown/track_x/assets/x-1-18-0.png)
+<!-- .element: class="r-stretch" -->
 
 ---
 
+<!-- .slide: class="layout-steps-media" -->
 ## Let's try issuing commands!
-<div style="display: flex; align-items: center; gap: 20px; padding: 20px;">
-  <div style="flex: 1;">
-    <ul>
-      <li>After tapping <strong>Tap to enter code</strong>, you can either:
-        <ul>
-          <li>Type the code out, or</li>
-          <li>Use the keyboard shortcuts at the bottom of the screen.</li>
-        </ul>
-      </li>
-      <li>After you are done with the code, click <strong>Run My Code</strong> to see Byte in action!</li>
-      <li>You can tap on the <strong>Speedometer</strong> to speed Byte up or step through the code step by step.</li>
-    </ul>
-  </div>
-  <div style="flex: 1; position: relative; width: 700px; height: 500px;">
-    <img src="/markdown/track_x/assets/x-1-19-0.png" alt="Screenshot showing Issuing Commands in Swift Playgrounds" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
-    <img src="/markdown/track_x/assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
-  </div>
-</div>
+
+- After tapping **Tap to enter code**, you can either:
+  - Type the code out, or
+  - Use the keyboard shortcuts at the bottom of the screen.
+- After you are done with the code, click **Run My Code** to see Byte in action!
+- You can tap on the **Speedometer** to speed Byte up or step through the code step by step.
+
+![Screenshot showing Issuing Commands in Swift Playgrounds](/markdown/track_x/assets/x-1-19-0.png)
 
 ---
 
+<!-- .slide: class="layout-two-up" -->
 # Hands-On
 ### Try out the exercises under Commands!
-<div style="display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; padding: 20px;">
-  <div style="position: relative; width: 1050px; height: 650px;">
-    <img src="/markdown/track_x/assets/x-1-20-0.png" alt="Screenshot showing Finding and Fixing Bugs in Swift Playgrounds" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
-    <img src="/markdown/track_x/assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
-  </div>
-  <div style="position: relative; width: 1050px; height: 650px;">
-    <img src="/markdown/track_x/assets/x-1-20-1.png" alt="Screenshot showing Toggling a Switch in Swift Playgrounds" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
-    <img src="/markdown/track_x/assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
-  </div>
-</div>
+
+![Screenshot showing Finding and Fixing Bugs in Swift Playgrounds](/markdown/track_x/assets/x-1-20-0.png)
+![Screenshot showing Toggling a Switch in Swift Playgrounds](/markdown/track_x/assets/x-1-20-1.png)
 
 ---
 
@@ -233,29 +156,17 @@
 
 ---
 
-<div style="display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; padding: 20px;">
-  <div style="position: relative; width: 1050px; height: 650px;">
-    <img src="/markdown/track_x/assets/x-1-22-0.png" alt="Screenshot showing seeds in a garden" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
-    <img src="/markdown/track_x/assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
-  </div>
-  <div style="position: relative; width: 1050px; height: 650px;">
-    <img src="/markdown/track_x/assets/x-1-22-1.png" alt="Screenshot showing seeds with different text" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
-    <img src="/markdown/track_x/assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
-  </div>
-</div>
+<!-- .slide: class="layout-two-up" -->
+
+![Screenshot showing seeds in a garden](/markdown/track_x/assets/x-1-22-0.png)
+![Screenshot showing seeds with different text](/markdown/track_x/assets/x-1-22-1.png)
 
 ---
 
-<div style="display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; padding: 20px;">
-  <div style="position: relative; width: 1050px; height: 650px;">
-    <img src="/markdown/track_x/assets/x-1-23-0.png" alt="Screenshot showing a for loop being used for seeding" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
-    <img src="/markdown/track_x/assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
-  </div>
-  <div style="position: relative; width: 1050px; height: 650px;">
-    <img src="/markdown/track_x/assets/x-1-23-1.png" alt="Screenshot showing for loop's syntax for seeding" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
-    <img src="/markdown/track_x/assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
-  </div>
-</div>
+<!-- .slide: class="layout-two-up" -->
+
+![Screenshot showing a for loop being used for seeding](/markdown/track_x/assets/x-1-23-0.png)
+![Screenshot showing for loop's syntax for seeding](/markdown/track_x/assets/x-1-23-1.png)
 
 ---
 
@@ -276,18 +187,12 @@ for i in 1 ... 5 {
 
 ---
 
+<!-- .slide: class="layout-two-up" -->
 # Hands-On
 ### Try out the exercises under For Loops!
-<div style="display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; padding: 20px;">
-  <div style="position: relative; width: 1050px; height: 650px;">
-    <img src="/markdown/track_x/assets/x-1-26-0.png" alt="Screenshot showing Looping All The Sides in Swift Playgrounds" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
-    <img src="/markdown/track_x/assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
-  </div>
-  <div style="position: relative; width: 1050px; height: 650px;">
-    <img src="/markdown/track_x/assets/x-1-26-1.png" alt="Screenshot showing Using Loops in Swift Playgrounds" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
-    <img src="/markdown/track_x/assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
-  </div>
-</div>
+
+![Screenshot showing Looping All The Sides in Swift Playgrounds](/markdown/track_x/assets/x-1-26-0.png)
+![Screenshot showing Using Loops in Swift Playgrounds](/markdown/track_x/assets/x-1-26-1.png)
 
 ---
 
@@ -295,38 +200,24 @@ for i in 1 ... 5 {
 
 ---
 
-<div style="display: flex; justify-content: center; align-items: center;">
-  <div style="position: relative; width: 1400px; height: 1000px;">
-    <img src="/markdown/track_x/assets/x-1-28-0.png" alt="Screenshot displaying traffic jam on GPS" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
-    <img src="/markdown/track_x/assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
-  </div>
-</div>
+<!-- .slide: class="layout-media-centre" -->
+
+![Screenshot displaying traffic jam on GPS](/markdown/track_x/assets/x-1-28-0.png)
+<!-- .element: class="r-stretch" -->
 
 ---
 
-<div style="display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; padding: 20px;">
-  <div style="position: relative; width: 1050px; height: 650px;">
-    <img src="/markdown/track_x/assets/x-1-29-0.png" alt="Screenshot showing if-statement at traffic light" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
-    <img src="/markdown/track_x/assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
-  </div>
-  <div style="position: relative; width: 1050px; height: 650px;">
-    <img src="/markdown/track_x/assets/x-1-29-1.png" alt="Screenshot showing traffic light if-loop logic" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
-    <img src="/markdown/track_x/assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
-  </div>
-</div>
+<!-- .slide: class="layout-two-up" -->
+
+![Screenshot showing if-statement at traffic light](/markdown/track_x/assets/x-1-29-0.png)
+![Screenshot showing traffic light if-loop logic](/markdown/track_x/assets/x-1-29-1.png)
 
 ---
 
-<div style="display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; padding: 20px;">
-  <div style="position: relative; width: 1050px; height: 650px;">
-    <img src="/markdown/track_x/assets/x-1-30-0.png" alt="Screenshot showing explanation of if-loop logic" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
-    <img src="/markdown/track_x/assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
-  </div>
-  <div style="position: relative; width: 1050px; height: 650px;">
-    <img src="/markdown/track_x/assets/x-1-30-1.png" alt="Screenshot showing false if-loop" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
-    <img src="/markdown/track_x/assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
-  </div>
-</div>
+<!-- .slide: class="layout-two-up" -->
+
+![Screenshot showing explanation of if-loop logic](/markdown/track_x/assets/x-1-30-0.png)
+![Screenshot showing false if-loop](/markdown/track_x/assets/x-1-30-1.png)
 
 ---
 
@@ -359,32 +250,16 @@ We can also directly use statements using comparators (<=, <, >, >=, ==, !=) ins
 
 ---
 
-<div style="display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; padding: 20px;">
-  <div style="position: relative; width: 1050px; height: 650px;">
-    <img src="/markdown/track_x/assets/x-1-33-0.png" alt="Screenshot showing operators" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
-    <img src="/markdown/track_x/assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
-  </div>
-  <div style="position: relative; width: 1050px; height: 650px;">
-    <img src="/markdown/track_x/assets/x-1-33-1.png" alt="Screenshot showing operators and if-loop example" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
-    <img src="/markdown/track_x/assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
-  </div>
-</div>
+<!-- .slide: class="layout-two-up" -->
+
+![Screenshot showing operators](/markdown/track_x/assets/x-1-33-0.png)
+![Screenshot showing operators and if-loop example](/markdown/track_x/assets/x-1-33-1.png)
 
 ---
 
 # Hands-On
 ### Try out the exercises under Conditionals!
-<div style="display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; padding: 20px;">
-  <div style="position: relative; width: 1050px; height: 650px;">
-    <img src="/markdown/track_x/assets/x-1-34-0.png" alt="Screenshot showing Conditional Climb in Swift Playgrounds" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
-    <img src="/markdown/track_x/assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
-  </div>
-  <div style="position: relative; width: 1050px; height: 650px;">
-    <img src="/markdown/track_x/assets/x-1-34-1.png" alt="Screenshot showing Using else if in Swift Playgrounds" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
-    <img src="/markdown/track_x/assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
-  </div>
-  <div style="position: relative; width: 1050px; height: 650px;">
-    <img src="/markdown/track_x/assets/x-1-34-2.png" alt="Screenshot displaying Checking for Switches in Swift Playgrounds" style="position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;">
-    <img src="/markdown/track_x/assets/iPad.png" alt="iPad" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
-  </div>
-</div>
+
+![Screenshot showing Conditional Climb in Swift Playgrounds](/markdown/track_x/assets/x-1-34-0.png)
+![Screenshot showing Using else if in Swift Playgrounds](/markdown/track_x/assets/x-1-34-1.png)
+![Screenshot displaying Checking for Switches in Swift Playgrounds](/markdown/track_x/assets/x-1-34-2.png)

@@ -271,7 +271,7 @@ struct CreditsView: View {
 }
 ```
 
-<p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> CreditsView.swift</p>
+![Swift](/assets/swift-logo.svg) CreditsView.swift
 
 ---
 
@@ -434,22 +434,11 @@ struct CreditsView: View {
 
 ---
 
-<div style="display: flex;">
-<div style="flex: 1; display:flex; justify-content: center; align-items: center; padding-right:20px ">
+<!-- .slide: class="layout-steps-media" -->
+## List
 
-<div style="margin-top:-25%">
-
-<h2> List </h2>
-
-- Let's use the `List` view to display a list of items.
+- Let’s use the `List` view to display a list of items.
 - Wrap all the `NavigationLink` in a `List` view.
-
-</div>
-
-</div>
-<div style="width:60%; ">
-
-<p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift</p>
 
 ```swift[5-16]
 struct ContentView: View {
@@ -473,8 +462,7 @@ struct ContentView: View {
 }
 ```
 
-</div>
-</div>
+![Swift](/assets/swift-logo.svg) ContentView.swift
 
 ---
 
@@ -605,7 +593,7 @@ struct DetailView: View {
 }
 ```
 
-<p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> DetailView.swift</p>
+![Swift](/assets/swift-logo.svg) DetailView.swift
 
 ---
 
@@ -755,7 +743,7 @@ if isFavourite {
 - We can use structs to store data about the items in the list.
 - We can create a new file called `Recipe.swift` and add a struct called `Recipe` to store the name, description and other details of the recipe.
 
-<p> <img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> Recipe.swift </p>
+![Swift](/assets/swift-logo.svg) Recipe.swift
 
 ```swift
 import SwiftUI
@@ -1063,7 +1051,7 @@ NavigationLink {
 }
 ```
 
-<p> <img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift </p>
+![Swift](/assets/swift-logo.svg) ContentView.swift
 
 ---
 
@@ -1078,7 +1066,7 @@ NavigationLink {
 ```swift[2]
 @State private var showAdd = false
 ```
-<p> <img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift </p>
+![Swift](/assets/swift-logo.svg) ContentView.swift
 
 ---
 
@@ -1107,7 +1095,7 @@ NavigationLink {
     }
 }
 ```
-<p> <img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift </p>
+![Swift](/assets/swift-logo.svg) ContentView.swift
 
 ---
 
@@ -1118,7 +1106,7 @@ NavigationLink {
 ```swift[2]
 @State private var newRecipeTitle = ""
 ```
-<p> <img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift </p>
+![Swift](/assets/swift-logo.svg) ContentView.swift
 
 
 ---
@@ -1147,7 +1135,7 @@ NavigationLink {
     }
 }
 ```
-<p> <img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift </p>
+![Swift](/assets/swift-logo.svg) ContentView.swift
 
 ---
 
@@ -1177,7 +1165,7 @@ NavigationLink {
     }
 }
 ```
-<p> <img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift </p>
+![Swift](/assets/swift-logo.svg) ContentView.swift
 
 ---
 
@@ -1194,7 +1182,7 @@ List($recipes, editActions: [.all]){
     ...
 }
 ```
-<p> <img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift </p>
+![Swift](/assets/swift-logo.svg) ContentView.swift
 
 ---
 
@@ -1208,7 +1196,7 @@ List($recipes, editActions: [.all]){
     ...
 }
 ```
-<p> <img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift </p>
+![Swift](/assets/swift-logo.svg) ContentView.swift
 
 ---
 
@@ -1233,7 +1221,7 @@ struct Recipe: Identifiable {
     ]
 }
 ```
-<p> <img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> Recipe.swift </p>
+![Swift](/assets/swift-logo.svg) Recipe.swift
 
 ---
 
@@ -1247,7 +1235,7 @@ struct Recipe: Identifiable {
 // To start from a blank screen we can use this
 //@Binding private var recipes = [Recipe]()
 ```
-<p> <img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift </p>
+![Swift](/assets/swift-logo.svg) ContentView.swift
 
 
 ---
@@ -1283,7 +1271,7 @@ struct AddView: View {
     }
 }
 ```
-<p> <img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> AddView.swift </p>
+![Swift](/assets/swift-logo.svg) AddView.swift
 
 ---
 
@@ -1296,7 +1284,7 @@ struct AddView: View {
 @State private var newRecipeTitle = ""
 ...
 ```
-<p> <img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> AddView.swift </p>
+![Swift](/assets/swift-logo.svg) AddView.swift
 
 
 ---
@@ -1321,7 +1309,7 @@ struct AddView: View {
     AddView(recipes: .constant([]:))
 }
 ```
-<p> <img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> AddView.swift </p>
+![Swift](/assets/swift-logo.svg) AddView.swift
 
 ---
 
@@ -1334,7 +1322,7 @@ struct AddView: View {
     AddView(recipes: $recipes)
 }
 ```
-<p> <img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift </p>
+![Swift](/assets/swift-logo.svg) ContentView.swift
 
 
 ---

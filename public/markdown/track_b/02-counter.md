@@ -155,43 +155,38 @@ myAmazingString = 123 // Throws an error.
 
 ---
 
+<!-- .slide: class="layout-steps-media" -->
 ## Create a Playground App
 
-<div style="display: flex;">
-    <ol>
-        <li>Press the <img style="margin-bottom: -8px;" src="/markdown/track_b/assets/new-project-button.png" alt="New Project Button"> icon to create a new App</li>
-        <li>Hold down on the newly created app and tap <strong>Rename</strong></li>
-        <li>Name it <strong>“Counter”</strong></li>
-        <li>Tap on the app to open it</li>
-        <li>Customise the App Settings to your liking.</li>
-    </ol>
-    <img src="/markdown/track_b/assets/new-project.png">
-</div>
+1. Press the ![New Project Button](/markdown/track_b/assets/new-project-button.png) icon to create a new App
+2. Hold down on the newly created app and tap **Rename**
+3. Name it **“Counter”**
+4. Tap on the app to open it
+5. Customise the App Settings to your liking.
+
+![A screenshot of the New Project screen in Swift Playgrounds.](/markdown/track_b/assets/new-project.png)
 
 ---
 
+<!-- .slide: class="layout-steps-media" -->
 ## Interface Set Up
 
-<div style="display: flex;">
-    <div>
-    <ol>
-        <li>Delete the <code>Image</code> view</li>
-        <li>Set the Text's value to <code>"0 Cookies"</code></li>
-        <li>In the <img style="margin-bottom: -4px" src="/assets/icons/dot.square.svg" alt="Views Library Icon" height="32px"> <em>Views Library</em>, search for <code>Button</code> and insert two <code>Button</code>s into the <code>VStack</code>.</li>
-        <li>Set the titles of the <code>Button</code>s by replacing the  <code style="background: #007AFF; padding: 4px; border-radius: 4px; color: white;">"Button"</code> placeholder. One <code>Button</code> will increment, the other will decrement.</li>
-    </ol>
-    <p>Feel free to customize the <code>Text</code>'s value and <code>Button</code> titles. 
-    <br>
-    The examples will be Cookie Monster themed.</p>
-    </div>
-    <img src="/markdown/track_b/assets/clicker-wireframe-diagram.png">
-</div>
+1. Delete the `Image` view
+2. Set the Text’s value to `"0 Cookies"`
+3. In the ![Views Library Icon](/assets/icons/dot.square.svg) *Views Library*, search for `Button` and insert two `Button`s into the `VStack`.
+4. Set the titles of the `Button`s by replacing the `"Button"` placeholder. One `Button` will increment, the other will decrement.
+
+Feel free to customize the `Text`’s value and `Button` titles.
+The examples will be Cookie Monster themed.
+
+![Clicker wireframe diagram](/markdown/track_b/assets/clicker-wireframe-diagram.png)
 
 ---
 
-<div style="display: flex;">
-    <div style="">
-    <pre><code data-line-numbers="4-10" data-ln-start-from="3" class="hljs language-swift">struct ContentView: View {
+<!-- .slide: class="layout-steps-media" -->
+
+```swift[3:4-10]
+struct ContentView: View {
     var body: some View {
         VStack {
             Text("0 Cookies")
@@ -204,11 +199,11 @@ myAmazingString = 123 // Throws an error.
         }
     }
 }
-    </code></pre>
-    <p><img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift</p>
-    </div>
-    <img src="/markdown/track_b/assets/preview-cookies-setup.png" height="100%">
-</div>
+```
+
+![Swift](/assets/swift-logo.svg) ContentView.swift
+
+![Cookie counter preview](/markdown/track_b/assets/preview-cookies-setup.png)
 
 ---
 
@@ -615,7 +610,7 @@ VStack {
 
 ---
 
-## <img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="84px"> ContentView
+## ![Swift](/assets/swift-logo.svg) ContentView
 
 ```swift[1:]
 import SwiftUI

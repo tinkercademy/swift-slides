@@ -4,11 +4,15 @@
 
 ---
 
-<img height="800" src="/markdown/track_a/assets/vision_physical_hearing_learning.png">
+<!-- .slide: class="layout-media-centre" -->
+![Vision, Physical, Hearing, Learning](/markdown/track_a/assets/vision_physical_hearing_learning.png)
+<!-- .element: class="r-stretch" -->
 
 ---
 
-<img height="800" src="/markdown/track_a/assets/birth_acquired_age.png">
+<!-- .slide: class="layout-media-centre" -->
+![Birth, Acquired, Age](/markdown/track_a/assets/birth_acquired_age.png)
+<!-- .element: class="r-stretch" -->
 
 ---
 
@@ -24,9 +28,11 @@
 
 ---
 
+<!-- .slide: class="layout-media-centre" -->
 ## Accessibility Features
 
-<img height="800" src="/markdown/track_a/assets/voiceover-text-voice-control.png">
+![VoiceOver, Text, Voice Control](/markdown/track_a/assets/voiceover-text-voice-control.png)
+<!-- .element: class="r-stretch" -->
 
 ---
 
@@ -54,31 +60,34 @@ src="https://www.youtube.com/embed/eg22JaZWAgs">
 
 ---
 
+<!-- .slide: class="layout-media-centre" -->
 ## Clarity
 
-<img height="700" src="/markdown/track_a/assets/dots-vs-unread-flagged.png">
+![Dots vs Unread Flagged](/markdown/track_a/assets/dots-vs-unread-flagged.png)
+<!-- .element: class="r-stretch" -->
 
 ---
 
+<!-- .slide: class="layout-media-centre" -->
 ## Inclusive Language
 
-<img height="700" src="/markdown/track_a/assets/set-up-family-account.png">
+![Set Up Family Account](/markdown/track_a/assets/set-up-family-account.png)
+<!-- .element: class="r-stretch" -->
 
 ---
 
+<!-- .slide: class="layout-media-centre" -->
 ## Self Expression & Individuality
 
-<img height="700" src="/markdown/track_a/assets/good-morning.png">
+![Good Morning](/markdown/track_a/assets/good-morning.png)
+<!-- .element: class="r-stretch" -->
 
 ---
 
-<div style="display: flex;">
-    <div style="margin-top:10%;">
-    <h2>Hands-on</h2>
-    <ul>
-        <li>In the <strong>App Journal</strong>, fill in Page 14 on <strong>Inclusion</strong>.</li>
-        <li>You can check out other apps and how they integrate inclusive features in their apps!</li>
-    </ul>
-    </div>
-    <img src="/markdown/track_a/assets/plan-inclusion.png">
-</div>
+<!-- .slide: class="layout-steps-media" -->
+## Hands-on
+
+- In the **App Journal**, fill in Page 14 on **Inclusion**.
+- You can check out other apps and how they integrate inclusive features in their apps!
+
+![Inclusion planning page](/markdown/track_a/assets/plan-inclusion.png)
