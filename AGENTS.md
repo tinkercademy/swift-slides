@@ -37,5 +37,6 @@ Read `README.md` first for setup, authoring examples, layout usage, and contribu
 - Run `bun run lint` and `bun run build`.
 - **Parity report: regenerate after every change.** Whenever you change `scripts/check-slide-parity.ts` or finish migrating a deck, run `bun run parity:slides -- --unit <trackId>/<unitId>` immediately and include the report path in your handoff. Do not wait for the user to ask. Use the last migrated or edited unit (e.g. `track_a/unit_02`) if no specific unit was requested.
 - When migrating a deck to the markdown-first layouts, run the parity checker and review `output/playwright/slide-parity/<timestamp>/report.html`.
+- For a single-page scrollable preview of a deck (no comparison), run `bun run preview:slides -- --unit <trackId>/<unitId>`. The generated preview supports click-to-comment tester feedback and deterministic prompt export. When providing the preview to the user, give the full `file://` URL (e.g. `file:///Users/.../output/playwright/slide-preview/<unitSlug>/preview.html`) so they can open it directly.
 - Check the affected deck at `/tracks/<trackId>/<unitId>`.
 - If slide content or styling changed, also verify light mode, dark mode, print view, and a narrow/mobile viewport.

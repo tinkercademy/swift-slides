@@ -250,6 +250,19 @@ bun run parity:slides -- \
 - Use `report.json` for machine-readable output
 - Diff images are grouped by unit under `baseline/`, `current/`, and `diff/`
 
+### Slide preview (single-page)
+
+To generate a single-page HTML preview of a deck (all slides in one scrollable view, no comparison):
+
+```bash
+bun run preview:slides -- --unit track_a/unit_02
+```
+
+- Output: `output/playwright/slide-preview/<trackId>-<unitId>/preview.html`
+- Includes light/dark screenshots and a theme toggle (same behaviour as the parity report)
+- Testers can click a slide to leave numbered comments, then use the floating `Done` button to generate an editable deterministic agent prompt with copy support
+- Use `--output <dir>` to write elsewhere; use `--port <number>` if the default port clashes with another run
+
 ### Notes
 
 - The checker defaults to comparing against `HEAD^`
