@@ -1,7 +1,7 @@
 #!/usr/bin/env bun
 
 import { createWriteStream } from "node:fs";
-import { mkdir, readFile, rm, writeFile } from "node:fs/promises";
+import { cp, mkdir, readFile, rm, writeFile } from "node:fs/promises";
 import { spawn } from "node:child_process";
 import path from "node:path";
 
@@ -39,8 +39,10 @@ type SlideComparison = {
   index: number;
   visual: null | {
     baselinePath: string | null;
+    baselinePathDark: string | null;
     changedPixels: number;
     currentPath: string | null;
+    currentPathDark: string | null;
     diffPath: string | null;
     diffRatio: number | null;
     sizeMismatch: null | {
@@ -756,8 +758,10 @@ async function runVisualComparisons(
     if (!comparison.baseline || !comparison.current) {
       comparison.visual = {
         baselinePath: null,
+        baselinePathDark: null,
         changedPixels: 0,
         currentPath: null,
+        currentPathDark: null,
         diffPath: null,
         diffRatio: null,
         sizeMismatch: null,
@@ -780,8 +784,10 @@ async function runVisualComparisons(
 
     comparison.visual = {
       baselinePath: path.relative(outputDir, baselineShot),
+      baselinePathDark: null,
       changedPixels: diff.changedPixels,
       currentPath: path.relative(outputDir, currentShot),
+      currentPathDark: null,
       diffPath: diff.diffPath ? path.relative(outputDir, diff.diffPath) : null,
       diffRatio: diff.diffRatio,
       sizeMismatch: diff.sizeMismatch,
@@ -807,6 +813,50 @@ async function runVisualComparisons(
   }
 
   await context.close();
+
+  // Dark-mode pass: use a separate context so addInitScript can set isDarkMode "true" on load.
+  // (The light context's addInitScript runs on every load including reload, so reload would overwrite "true".)
+  const darkContext = await browser.newContext({
+    colorScheme: "dark",
+    viewport: { height: 1200, width: 1600 },
+  });
+  await darkContext.addInitScript(() => {
+    window.localStorage.setItem("isDarkMode", "true");
+  });
+
+  const baselinePageDark = await darkContext.newPage();
+  const currentPageDark = await darkContext.newPage();
+
+  await preparePage(baselinePageDark, baselineUrl, `${unitRun.route} baseline (dark)`);
+  await preparePage(currentPageDark, currentUrl, `${unitRun.route} current (dark)`);
+  await baselinePageDark.waitForSelector(".dark", { timeout: 15_000 });
+  await currentPageDark.waitForSelector(".dark", { timeout: 15_000 });
+  await waitForVisibleSlideAssets(baselinePageDark, `${unitRun.route} baseline (dark)`);
+  await waitForVisibleSlideAssets(currentPageDark, `${unitRun.route} current (dark)`);
+
+  for (const comparison of comparisons) {
+    if (!comparison.baseline || !comparison.current || !comparison.visual) continue;
+
+    const slideSlug = `${String(comparison.index + 1).padStart(2, "0")}-${sanitisePathPart(
+      comparison.current.heading ?? comparison.baseline.heading ?? "slide"
+    )}`;
+    const baselineDarkShot = path.join(unitOutputDir, "baseline-dark", `${slideSlug}.png`);
+    const currentDarkShot = path.join(unitOutputDir, "current-dark", `${slideSlug}.png`);
+
+    const baselineSlideUrl = `${baselineUrl.replace(/#.*$/, "")}#/${comparison.index + REVEAL_HORIZONTAL_OFFSET}/0`;
+    const currentSlideUrl = `${currentUrl.replace(/#.*$/, "")}#/${comparison.index + REVEAL_HORIZONTAL_OFFSET}/0`;
+    await baselinePageDark.goto(baselineSlideUrl, { waitUntil: "networkidle" });
+    await currentPageDark.goto(currentSlideUrl, { waitUntil: "networkidle" });
+    await delay(400);
+
+    await captureSlide(baselinePageDark, baselineDarkShot);
+    await captureSlide(currentPageDark, currentDarkShot);
+
+    comparison.visual.baselinePathDark = path.relative(outputDir, baselineDarkShot);
+    comparison.visual.currentPathDark = path.relative(outputDir, currentDarkShot);
+  }
+
+  await darkContext.close();
 }
 
 async function writeReport(outputPath: string, report: unknown): Promise<void> {
@@ -814,162 +864,48 @@ async function writeReport(outputPath: string, report: unknown): Promise<void> {
   await writeFile(outputPath, `${JSON.stringify(report, null, 2)}\n`);
 }
 
-function renderImagePanel(
-  label: string,
-  imagePath: string | null,
-  emptyMessage: string
-): string {
-  if (!imagePath) {
-    return `
-      <div class="image-panel">
-        <div class="image-placeholder">${escapeHtml(emptyMessage)}</div>
-        <p class="image-label">${escapeHtml(label)}</p>
-      </div>
-    `;
-  }
-
-  return `
-    <figure class="image-panel">
-      <button
-        class="image-button"
-        type="button"
-        data-lightbox-label="${escapeHtml(label)}"
-        data-lightbox-src="${escapeHtml(imagePath)}"
-      >
-        <img loading="lazy" src="${escapeHtml(imagePath)}" alt="${escapeHtml(label)}" />
-      </button>
-      <figcaption class="image-label">${escapeHtml(label)}</figcaption>
-    </figure>
-  `;
-}
-
-function renderManifestDiffs(diffs: string[]): string {
-  if (!diffs.length) {
-    return `<p class="manifest-empty">No structural mismatches on this slide.</p>`;
-  }
-
-  return `
-    <ul class="diff-list">
-      ${diffs.map((diff) => `<li>${escapeHtml(diff)}</li>`).join("\n")}
-    </ul>
-  `;
-}
-
-function renderSlideCard(slide: SlideComparison): string {
-  const heading = slide.current?.heading ?? slide.baseline?.heading ?? "Untitled slide";
+function renderSlideRow(slide: SlideComparison): string {
+  const heading = slide.current?.heading ?? slide.baseline?.heading ?? "Untitled";
   const visual = slide.visual;
-  const hasManifestMismatch = slide.diffs.length > 0;
-  const hasVisualMismatch = Boolean(visual && !visual.withinThreshold);
-  const isMismatch = hasManifestMismatch || hasVisualMismatch;
-  const cardClasses = [
-    "slide-card",
-    isMismatch ? "is-mismatch" : "is-clean",
-    hasManifestMismatch ? "has-manifest" : "",
-    hasVisualMismatch ? "has-visual" : "",
-  ]
-    .filter(Boolean)
-    .join(" ");
-  const summaryBits = [
-    hasManifestMismatch ? `<span class="badge badge-manifest">Manifest mismatch</span>` : "",
-    hasVisualMismatch ? `<span class="badge badge-visual">Visual mismatch</span>` : "",
-    !isMismatch ? `<span class="badge badge-clean">Matches</span>` : "",
-    visual?.diffRatio !== null && visual?.diffRatio !== undefined
-      ? `<span class="metric">Diff ratio ${escapeHtml(formatPercent(visual.diffRatio))}</span>`
-      : "",
-    visual?.changedPixels
-      ? `<span class="metric">${escapeHtml(visual.changedPixels.toLocaleString())} changed pixels</span>`
-      : "",
-  ]
-    .filter(Boolean)
-    .join("");
+  const baselineLight = visual?.baselinePath ?? null;
+  const baselineDark = visual?.baselinePathDark ?? null;
+  const currentLight = visual?.currentPath ?? null;
+  const currentDark = visual?.currentPathDark ?? null;
 
-  const sizeMismatchMarkup = visual?.sizeMismatch
-    ? `
-      <p class="size-warning">
-        Screenshot size mismatch: ${escapeHtml(
-          `${visual.sizeMismatch.baseline.width}x${visual.sizeMismatch.baseline.height}`
-        )} baseline vs ${escapeHtml(
-          `${visual.sizeMismatch.current.width}x${visual.sizeMismatch.current.height}`
-        )} current.
-      </p>
-    `
-    : "";
+  const beforePanel =
+    baselineLight || baselineDark
+      ? `<button type="button" class="slide-panel" data-src-light="${escapeHtml(baselineLight ?? "")}" data-src-dark="${escapeHtml(baselineDark ?? "")}" data-modal-label="Before — Slide ${slide.index + 1}: ${escapeHtml(heading)}">
+        <img src="${escapeHtml(baselineLight ?? baselineDark ?? "")}" alt="Before" data-src-light="${escapeHtml(baselineLight ?? "")}" data-src-dark="${escapeHtml(baselineDark ?? "")}" />
+      </button>`
+      : `<div class="slide-panel empty">—</div>`;
 
-  const baselinePanel = renderImagePanel(
-    "Baseline",
-    visual?.baselinePath ?? null,
-    "No baseline screenshot"
-  );
-  const currentPanel = renderImagePanel(
-    "Current",
-    visual?.currentPath ?? null,
-    "No current screenshot"
-  );
-  const diffPanel = renderImagePanel(
-    "Diff",
-    visual?.diffPath ?? null,
-    "No diff image generated"
-  );
-  const diffDisclosure = `
-    <details class="diff-details">
-      <summary>Show diff image</summary>
-      <div class="diff-panel-wrap">
-        ${diffPanel}
-      </div>
-    </details>
-  `;
+  const afterPanel =
+    currentLight || currentDark
+      ? `<button type="button" class="slide-panel" data-src-light="${escapeHtml(currentLight ?? "")}" data-src-dark="${escapeHtml(currentDark ?? "")}" data-modal-label="After — Slide ${slide.index + 1}: ${escapeHtml(heading)}">
+        <img src="${escapeHtml(currentLight ?? currentDark ?? "")}" alt="After" data-src-light="${escapeHtml(currentLight ?? "")}" data-src-dark="${escapeHtml(currentDark ?? "")}" />
+      </button>`
+      : `<div class="slide-panel empty">—</div>`;
 
   return `
-    <details class="${cardClasses}" ${isMismatch ? "open" : ""}>
-      <summary>
-        <span class="slide-title">Slide ${escapeHtml(String(slide.index + 1))}: ${escapeHtml(heading)}</span>
-        <span class="summary-meta">${summaryBits}</span>
-      </summary>
-      <div class="slide-body">
-        <section class="manifest-block">
-          <h4>Structural parity</h4>
-          ${renderManifestDiffs(slide.diffs)}
-        </section>
-        <section class="visual-block">
-          <div class="visual-header">
-            <h4>Visual parity</h4>
-            <p class="visual-copy">Click an image to inspect it in place and toggle between baseline and current.</p>
-          </div>
-          ${sizeMismatchMarkup}
-          <div class="image-grid">
-            ${baselinePanel}
-            ${currentPanel}
-          </div>
-          ${diffDisclosure}
-        </section>
+    <section class="slide-row">
+      <h2 class="slide-heading">${slide.index + 1}. ${escapeHtml(heading)}</h2>
+      <div class="slide-comparison">
+        ${beforePanel}
+        <span class="divider">|</span>
+        ${afterPanel}
       </div>
-    </details>
+    </section>
   `;
 }
 
-function writeHtmlReport(outputPath: string, report: ParityReport): Promise<void> {
-  const unitSummaries = report.units
-    .map((unit) => {
-      const summary = summariseDeckComparisons(unit.slides);
-      return {
-        ...unit,
-        summary,
-      };
-    });
-
-  const totals = unitSummaries.reduce(
-    (aggregate, unit) => {
-      aggregate.slideCount += unit.slides.length;
-      aggregate.manifestMismatchCount += unit.summary.manifestMismatchCount;
-      aggregate.visualMismatchCount += unit.summary.visualMismatchCount;
-      return aggregate;
-    },
-    {
-      manifestMismatchCount: 0,
-      slideCount: 0,
-      visualMismatchCount: 0,
-    }
-  );
+function writeHtmlReport(
+  outputPath: string,
+  report: ParityReport,
+  runId: string
+): Promise<void> {
+  const unitTitle = report.units.map((u) => u.title).join(" · ");
+  const slidesHtml = report.units.flatMap((unit) => unit.slides.map((s) => renderSlideRow(s))).join("");
+  const appViewUrl = `/parity-reports/${runId}`;
 
   const html = `<!doctype html>
 <html lang="en">
@@ -978,728 +914,121 @@ function writeHtmlReport(outputPath: string, report: ParityReport): Promise<void
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Slide Parity Report</title>
     <style>
-      :root {
-        color-scheme: light;
-        --bg: #f4efe6;
-        --surface: #fffdf8;
-        --surface-strong: #fff8ef;
-        --text: #1d1b18;
-        --muted: #6f685f;
-        --border: #dfd4c5;
-        --accent: #14532d;
-        --accent-soft: #dff5e7;
-        --warning: #b45309;
-        --warning-soft: #fff2df;
-        --danger: #9f1239;
-        --danger-soft: #ffe4ea;
-        --shadow: 0 18px 40px rgba(29, 27, 24, 0.08);
-        --radius: 18px;
-      }
-
-      * {
-        box-sizing: border-box;
-      }
-
-      body {
-        margin: 0;
-        font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif;
-        background:
-          radial-gradient(circle at top left, rgba(20, 83, 45, 0.08), transparent 30%),
-          linear-gradient(180deg, #f7f1e7 0%, var(--bg) 100%);
-        color: var(--text);
-      }
-
-      main {
-        width: min(1500px, calc(100% - 48px));
-        margin: 0 auto;
-        padding: 40px 0 64px;
-      }
-
-      .hero,
-      .unit-section,
-      .summary-card {
-        background: color-mix(in srgb, var(--surface) 92%, white 8%);
-        border: 1px solid var(--border);
-        border-radius: var(--radius);
-        box-shadow: var(--shadow);
-      }
-
-      .hero {
-        padding: 28px 32px;
-        margin-bottom: 28px;
-      }
-
-      .eyebrow {
-        margin: 0 0 12px;
-        font-size: 0.8rem;
-        letter-spacing: 0.16em;
-        text-transform: uppercase;
-        color: var(--accent);
-      }
-
-      h1,
-      h2,
-      h3,
-      h4,
-      p {
-        margin: 0;
-      }
-
-      .hero h1 {
-        font-size: clamp(2rem, 4vw, 3.5rem);
-        line-height: 0.95;
-        margin-bottom: 14px;
-      }
-
-      .hero p {
-        max-width: 70ch;
-        line-height: 1.5;
-        color: var(--muted);
-      }
-
-      .meta-grid,
-      .summary-grid {
-        display: grid;
-        gap: 16px;
-      }
-
-      .meta-grid {
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-        margin-top: 22px;
-      }
-
-      .summary-grid {
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        margin-bottom: 28px;
-      }
-
-      .summary-card {
-        padding: 18px 20px;
-      }
-
-      .summary-label {
-        display: block;
-        font-size: 0.78rem;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-        color: var(--muted);
-        margin-bottom: 10px;
-      }
-
-      .summary-value {
-        font-size: clamp(1.4rem, 3vw, 2.4rem);
-        line-height: 1;
-      }
-
-      .controls {
-        display: flex;
-        gap: 16px;
-        flex-wrap: wrap;
-        margin-top: 22px;
-      }
-
-      .toggle {
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-        padding: 12px 14px;
-        border-radius: 999px;
-        background: var(--surface-strong);
-        border: 1px solid var(--border);
-        font-size: 0.95rem;
-      }
-
-      .unit-section {
-        padding: 22px 22px 16px;
-        margin-bottom: 24px;
-      }
-
-      .unit-header {
-        display: flex;
-        justify-content: space-between;
-        gap: 18px;
-        align-items: flex-start;
-        flex-wrap: wrap;
-        margin-bottom: 18px;
-      }
-
-      .unit-title {
-        display: grid;
-        gap: 8px;
-      }
-
-      .unit-route {
-        font-family: ui-monospace, "SFMono-Regular", "SF Mono", Menlo, monospace;
-        color: var(--muted);
-        font-size: 0.92rem;
-      }
-
-      .unit-stats {
-        display: flex;
-        gap: 10px;
-        flex-wrap: wrap;
-      }
-
-      .chip,
-      .badge,
-      .metric {
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
-        border-radius: 999px;
-        padding: 7px 10px;
-        font-size: 0.82rem;
-        border: 1px solid transparent;
-        white-space: nowrap;
-      }
-
-      .chip {
-        background: var(--surface-strong);
-        border-color: var(--border);
-      }
-
-      .badge-manifest {
-        color: var(--warning);
-        background: var(--warning-soft);
-        border-color: color-mix(in srgb, var(--warning) 15%, white 85%);
-      }
-
-      .badge-visual {
-        color: var(--danger);
-        background: var(--danger-soft);
-        border-color: color-mix(in srgb, var(--danger) 15%, white 85%);
-      }
-
-      .badge-clean {
-        color: var(--accent);
-        background: var(--accent-soft);
-        border-color: color-mix(in srgb, var(--accent) 15%, white 85%);
-      }
-
-      .metric {
-        color: var(--muted);
-        background: rgba(255, 255, 255, 0.78);
-        border-color: var(--border);
-      }
-
-      .slides-list {
-        display: grid;
-        gap: 14px;
-      }
-
-      .slide-card {
-        border: 1px solid var(--border);
-        border-radius: 16px;
-        background: rgba(255, 253, 248, 0.85);
-        overflow: hidden;
-      }
-
-      .slide-card summary {
-        list-style: none;
-        cursor: pointer;
-        padding: 16px 18px;
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        gap: 16px;
-      }
-
-      .slide-card summary::-webkit-details-marker {
-        display: none;
-      }
-
-      .slide-title {
-        font-weight: 700;
-        font-size: 1.02rem;
-      }
-
-      .summary-meta {
-        display: flex;
-        gap: 8px;
-        flex-wrap: wrap;
-        justify-content: flex-end;
-      }
-
-      .slide-body {
-        padding: 0 18px 18px;
-        display: grid;
-        gap: 18px;
-      }
-
-      .manifest-block,
-      .visual-block {
-        padding: 16px;
-        border-radius: 14px;
-        background: rgba(255, 255, 255, 0.72);
-        border: 1px solid var(--border);
-      }
-
-      .manifest-block h4,
-      .visual-header h4 {
-        margin-bottom: 10px;
-      }
-
-      .visual-header {
-        display: flex;
-        justify-content: space-between;
-        gap: 12px;
-        align-items: baseline;
-        flex-wrap: wrap;
-        margin-bottom: 12px;
-      }
-
-      .visual-copy,
-      .manifest-empty,
-      .size-warning {
-        color: var(--muted);
-        line-height: 1.45;
-      }
-
-      .diff-list {
-        margin: 0;
-        padding-left: 20px;
-        display: grid;
-        gap: 8px;
-      }
-
-      .image-grid {
-        display: grid;
-        gap: 14px;
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      }
-
-      .image-panel {
-        margin: 0;
-        display: grid;
-        gap: 10px;
-      }
-
-      .image-button,
-      .image-placeholder {
-        display: block;
-        border-radius: 12px;
-        border: 1px solid var(--border);
-        overflow: hidden;
-        background: #f3ede3;
-      }
-
-      .image-button {
-        padding: 0;
-        cursor: zoom-in;
-      }
-
-      .image-panel img {
-        width: 100%;
-        display: block;
-        aspect-ratio: 4 / 3;
-        object-fit: cover;
-      }
-
-      .image-placeholder {
-        min-height: 180px;
-        display: grid;
-        place-items: center;
-        padding: 16px;
-        text-align: center;
-        color: var(--muted);
-      }
-
-      .image-label {
-        font-size: 0.88rem;
-        color: var(--muted);
-        text-align: center;
-      }
-
-      .diff-details {
-        margin-top: 14px;
-        border-top: 1px solid var(--border);
-        padding-top: 14px;
-      }
-
-      .diff-details summary {
-        cursor: pointer;
-        color: var(--muted);
-        font-size: 0.95rem;
-      }
-
-      .diff-panel-wrap {
-        margin-top: 12px;
-        max-width: 420px;
-      }
-
-      .is-mismatch {
-        border-color: color-mix(in srgb, var(--danger) 20%, var(--border) 80%);
-      }
-
-      .mismatch-only .slide-card.is-clean {
-        display: none;
-      }
-
-      .lightbox {
-        position: fixed;
-        inset: 0;
-        background: rgba(19, 15, 10, 0.7);
-        backdrop-filter: blur(10px);
-        display: none;
-        align-items: center;
-        justify-content: center;
-        padding: 28px;
-        z-index: 999;
-      }
-
-      .lightbox.is-open {
-        display: flex;
-      }
-
-      .lightbox-dialog {
-        width: min(1500px, 100%);
-        max-height: calc(100vh - 56px);
-        overflow: auto;
-        background: rgba(255, 252, 246, 0.98);
-        border: 1px solid rgba(223, 212, 197, 0.9);
-        border-radius: 24px;
-        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.22);
-        padding: 20px;
-      }
-
-      .lightbox-header {
-        display: flex;
-        justify-content: space-between;
-        gap: 16px;
-        align-items: center;
-        margin-bottom: 16px;
-        flex-wrap: wrap;
-      }
-
-      .lightbox-title {
-        display: grid;
-        gap: 6px;
-      }
-
-      .lightbox-title strong {
-        font-size: 1.1rem;
-      }
-
-      .lightbox-subtitle {
-        color: var(--muted);
-        font-size: 0.92rem;
-      }
-
-      .lightbox-controls {
-        display: flex;
-        gap: 10px;
-        align-items: center;
-        flex-wrap: wrap;
-      }
-
-      .lightbox-tabs {
-        display: inline-flex;
-        gap: 8px;
-        padding: 6px;
-        border-radius: 999px;
-        background: var(--surface-strong);
-        border: 1px solid var(--border);
-      }
-
-      .lightbox-tab,
-      .lightbox-close {
-        border: 1px solid var(--border);
-        background: rgba(255, 255, 255, 0.8);
-        color: var(--text);
-        border-radius: 999px;
-        padding: 10px 14px;
-        font: inherit;
-      }
-
-      .lightbox-tab {
-        cursor: pointer;
-      }
-
-      .lightbox-tab[data-target="diff"] {
-        opacity: 0.68;
-      }
-
-      .lightbox-tab.is-active {
-        background: var(--accent);
-        color: white;
-        border-color: var(--accent);
-        opacity: 1;
-      }
-
-      .lightbox-close {
-        cursor: pointer;
-      }
-
-      .lightbox-stage {
-        border-radius: 18px;
-        border: 1px solid var(--border);
-        background:
-          linear-gradient(180deg, rgba(247, 241, 231, 0.95), rgba(244, 239, 230, 0.95));
-        padding: 16px;
-      }
-
-      .lightbox-stage img {
-        width: 100%;
-        height: auto;
-        display: none;
-        border-radius: 12px;
-        background: white;
-      }
-
-      .lightbox-stage img.is-visible {
-        display: block;
-      }
-
-      @media (max-width: 900px) {
-        main {
-          width: min(100% - 24px, 1500px);
-          padding-top: 24px;
-        }
-
-        .hero,
-        .unit-section {
-          padding-left: 18px;
-          padding-right: 18px;
-        }
-
-        .slide-card summary {
-          flex-direction: column;
-        }
-
-        .summary-meta {
-          justify-content: flex-start;
-        }
-      }
+      * { box-sizing: border-box; }
+      body { margin: 0; font-family: system-ui, sans-serif; background: #f5f5f5; color: #333; padding: 24px; }
+      .hint { margin: 0 0 16px; font-size: 0.9rem; color: #666; }
+      .hint a { color: inherit; }
+      .unit-overview { margin: 0 0 32px; font-size: 1.5rem; font-weight: 600; }
+      .slide-row { margin-bottom: 32px; }
+      .slide-heading { margin: 0 0 12px; font-size: 1rem; font-weight: 600; }
+      .slide-comparison { display: grid; grid-template-columns: 1fr auto 1fr; gap: 0; align-items: stretch; width: 100%; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.08); border: 1px solid #eee; }
+      .slide-panel { display: block; padding: 0; border: none; background: #fafafa; cursor: pointer; min-height: 200px; }
+      .slide-panel:hover { background: #f0f0f0; }
+      .slide-panel img { display: block; width: 100%; height: auto; object-fit: contain; }
+      .slide-panel.empty { cursor: default; display: grid; place-items: center; color: #999; font-size: 1.5rem; }
+      .divider { padding: 0 16px; display: grid; place-items: center; background: #f5f5f5; color: #999; font-weight: 600; }
+      .modal { position: fixed; inset: 0; background: rgba(0,0,0,0.8); display: none; align-items: center; justify-content: center; padding: 24px; z-index: 999; }
+      .modal.open { display: flex; }
+      .modal-content { max-width: 95vw; max-height: 95vh; background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 24px 48px rgba(0,0,0,0.3); }
+      .modal-content img { display: block; max-width: 95vw; max-height: 85vh; object-fit: contain; }
+      .modal-header { padding: 12px 16px; background: #fafafa; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; align-items: center; }
+      .modal-close { padding: 8px 12px; border: none; background: #eee; border-radius: 6px; cursor: pointer; font: inherit; }
+      .modal-close:hover { background: #e0e0e0; }
+      .report-header { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; margin-bottom: 24px; }
+      .theme-toggle { padding: 8px; border: 1px solid #ddd; border-radius: 6px; background: #fff; cursor: pointer; font: inherit; color: #333; line-height: 1; }
+      .theme-toggle:hover { background: #f0f0f0; }
+      body.dark { background: #1a1a1a; color: #e5e5e5; }
+      body.dark .hint { color: #a3a3a3; }
+      body.dark .unit-overview { color: #e5e5e5; }
+      body.dark .slide-heading { color: #d4d4d4; }
+      body.dark .slide-comparison { background: #262626; border-color: #404040; box-shadow: 0 1px 3px rgba(0,0,0,0.3); }
+      body.dark .slide-panel { background: #262626; }
+      body.dark .slide-panel:hover { background: #333; }
+      body.dark .slide-panel.empty { color: #737373; }
+      body.dark .divider { background: #1a1a1a; color: #737373; }
+      body.dark .modal-content { background: #262626; box-shadow: 0 24px 48px rgba(0,0,0,0.6); }
+      body.dark .modal-header { background: #262626; border-color: #404040; color: #e5e5e5; }
+      body.dark .modal-close { background: #404040; color: #e5e5e5; }
+      body.dark .modal-close:hover { background: #525252; }
+      body.dark .theme-toggle { background: #262626; border-color: #404040; color: #e5e5e5; }
+      body.dark .theme-toggle:hover { background: #333; }
     </style>
   </head>
-  <body class="mismatch-only">
-    <main>
-      <section class="hero">
-        <p class="eyebrow">Slide parity report</p>
-        <h1>Review baseline vs current decks in one place</h1>
-        <p>
-          This report combines structural parity checks with side-by-side screenshots for each slide.
-          Use it to decide whether a migration kept the old deck intact enough, or whether a visual change
-          is intentional and worth keeping.
-        </p>
-        <div class="meta-grid">
-          <article class="summary-card">
-            <span class="summary-label">Generated</span>
-            <span class="summary-value">${escapeHtml(report.generatedAt)}</span>
-          </article>
-          <article class="summary-card">
-            <span class="summary-label">Base ref</span>
-            <span class="summary-value">${escapeHtml(report.baseRef)}</span>
-          </article>
-          <article class="summary-card">
-            <span class="summary-label">Visual threshold</span>
-            <span class="summary-value">${escapeHtml(formatPercent(report.visualThreshold))}</span>
-          </article>
+  <body>
+    <div class="report-header">
+      <h1 class="unit-overview">${escapeHtml(unitTitle)}</h1>
+      <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Switch to Dark Mode" title="Switch to Dark Mode">
+        <span id="theme-icon" aria-hidden="true"></span>
+      </button>
+    </div>
+    ${slidesHtml}
+    <div class="modal" id="modal" aria-hidden="true">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span id="modal-label"></span>
+          <button type="button" class="modal-close" id="modal-close">Close</button>
         </div>
-        <div class="controls">
-          <label class="toggle">
-            <input id="mismatch-toggle" type="checkbox" checked />
-            Show mismatches only
-          </label>
-        </div>
-      </section>
-
-      <section class="summary-grid">
-        <article class="summary-card">
-          <span class="summary-label">Units</span>
-          <span class="summary-value">${escapeHtml(String(unitSummaries.length))}</span>
-        </article>
-        <article class="summary-card">
-          <span class="summary-label">Slides reviewed</span>
-          <span class="summary-value">${escapeHtml(String(totals.slideCount))}</span>
-        </article>
-        <article class="summary-card">
-          <span class="summary-label">Structural mismatches</span>
-          <span class="summary-value">${escapeHtml(String(totals.manifestMismatchCount))}</span>
-        </article>
-        <article class="summary-card">
-          <span class="summary-label">Visual mismatches</span>
-          <span class="summary-value">${escapeHtml(String(totals.visualMismatchCount))}</span>
-        </article>
-      </section>
-
-      ${unitSummaries
-        .map((unit) => {
-          const mismatchCount =
-            unit.summary.manifestMismatchCount + unit.summary.visualMismatchCount;
-          return `
-            <section class="unit-section">
-              <div class="unit-header">
-                <div class="unit-title">
-                  <p class="eyebrow">Unit review</p>
-                  <h2>${escapeHtml(unit.title)}</h2>
-                  <p class="unit-route">${escapeHtml(unit.route)} - ${escapeHtml(
-                    unit.currentMarkdownPath
-                  )}</p>
-                </div>
-                <div class="unit-stats">
-                  <span class="chip">${escapeHtml(String(unit.slides.length))} slides</span>
-                  <span class="chip">${escapeHtml(
-                    String(unit.summary.manifestMismatchCount)
-                  )} structural mismatches</span>
-                  <span class="chip">${escapeHtml(
-                    String(unit.summary.visualMismatchCount)
-                  )} visual mismatches</span>
-                  <span class="chip">${escapeHtml(String(mismatchCount))} total flags</span>
-                </div>
-              </div>
-              <div class="slides-list">
-                ${unit.slides.map((slide) => renderSlideCard(slide)).join("\n")}
-              </div>
-            </section>
-          `;
-        })
-        .join("\n")}
-    </main>
-    <div class="lightbox" id="lightbox" aria-hidden="true">
-      <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-labelledby="lightbox-heading">
-        <div class="lightbox-header">
-          <div class="lightbox-title">
-            <strong id="lightbox-heading">Slide image</strong>
-            <span class="lightbox-subtitle" id="lightbox-subtitle">Select baseline, current, or diff.</span>
-          </div>
-          <div class="lightbox-controls">
-            <div class="lightbox-tabs" id="lightbox-tabs">
-              <button class="lightbox-tab" type="button" data-target="baseline">Baseline</button>
-              <button class="lightbox-tab" type="button" data-target="current">Current</button>
-              <button class="lightbox-tab" type="button" data-target="diff">Diff</button>
-            </div>
-            <button class="lightbox-close" id="lightbox-close" type="button">Close</button>
-          </div>
-        </div>
-        <div class="lightbox-stage">
-          <img id="lightbox-image-baseline" alt="Baseline slide screenshot" />
-          <img id="lightbox-image-current" alt="Current slide screenshot" />
-          <img id="lightbox-image-diff" alt="Slide diff screenshot" />
-        </div>
+        <img id="modal-img" alt="" />
       </div>
     </div>
     <script>
-      const checkbox = document.getElementById("mismatch-toggle");
-      if (checkbox) {
-        checkbox.addEventListener("change", () => {
-          document.body.classList.toggle("mismatch-only", checkbox.checked);
-        });
-      }
-
-      const lightbox = document.getElementById("lightbox");
-      const lightboxHeading = document.getElementById("lightbox-heading");
-      const lightboxSubtitle = document.getElementById("lightbox-subtitle");
-      const lightboxClose = document.getElementById("lightbox-close");
-      const lightboxTabs = Array.from(document.querySelectorAll(".lightbox-tab"));
-      const lightboxImages = {
-        baseline: document.getElementById("lightbox-image-baseline"),
-        current: document.getElementById("lightbox-image-current"),
-        diff: document.getElementById("lightbox-image-diff"),
+      const themeToggle = document.getElementById("theme-toggle");
+      const themeIcon = document.getElementById("theme-icon");
+      const moonSvg = '<svg aria-hidden="true" width="1.25em" height="1.25em" viewBox="0 0 384 512" fill="currentColor"><path d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"/></svg>';
+      const sunSvg = '<svg aria-hidden="true" width="1.25em" height="1.25em" viewBox="0 0 512 512" fill="currentColor"><path d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z"/></svg>';
+      const isDark = () => document.body.classList.contains("dark");
+      const applyTheme = (dark) => {
+        document.body.classList.toggle("dark", dark);
+        themeIcon.innerHTML = dark ? sunSvg : moonSvg;
+        const label = dark ? "Switch to Light Mode" : "Switch to Dark Mode";
+        themeToggle.setAttribute("aria-label", label);
+        themeToggle.setAttribute("title", label);
+        try { localStorage.setItem("isDarkMode", JSON.stringify(dark)); } catch (_) {}
       };
-      let activeLightboxTarget = "baseline";
-
-      function showLightboxTarget(target) {
-        activeLightboxTarget = target;
-        lightboxTabs.forEach((tab) => {
-          tab.classList.toggle("is-active", tab.dataset.target === target);
-        });
-
-        Object.entries(lightboxImages).forEach(([key, image]) => {
-          if (!image) return;
-          image.classList.toggle("is-visible", key === target);
+      function getSrcForTheme(btn, dark) {
+        const key = dark ? "srcDark" : "srcLight";
+        return (btn.dataset[key] || "").trim() || (dark ? btn.dataset.srcLight : btn.dataset.srcDark) || "";
+      }
+      function updateImagesForTheme(dark) {
+        document.querySelectorAll(".slide-panel img[data-src-light], .slide-panel img[data-src-dark]").forEach((img) => {
+          const src = dark ? (img.dataset.srcDark || img.dataset.srcLight) : (img.dataset.srcLight || img.dataset.srcDark);
+          if (src) img.src = src;
         });
       }
 
-      function openLightbox(button) {
-        const panel = button.closest(".visual-block");
-        if (!panel) return;
+      themeToggle.addEventListener("click", () => {
+        applyTheme(!isDark());
+        updateImagesForTheme(isDark());
+      });
+      try {
+        const saved = localStorage.getItem("isDarkMode");
+        const savedDark = saved !== null ? JSON.parse(saved) === true : false;
+        applyTheme(savedDark);
+        updateImagesForTheme(savedDark);
+      } catch (_) {}
 
-        const buttons = Array.from(panel.querySelectorAll(".image-button"));
-        const sources = {
-          baseline: null,
-          current: null,
-          diff: null,
-        };
+      const modal = document.getElementById("modal");
+      const modalImg = document.getElementById("modal-img");
+      const modalLabel = document.getElementById("modal-label");
+      const modalClose = document.getElementById("modal-close");
 
-        buttons.forEach((entry) => {
-          const label = (entry.dataset.lightboxLabel || "").toLowerCase();
-          if (label === "baseline" || label === "current" || label === "diff") {
-            sources[label] = entry.dataset.lightboxSrc || null;
-          }
+      document.querySelectorAll(".slide-panel:not(.empty)").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const dark = isDark();
+          modalImg.src = getSrcForTheme(btn, dark);
+          modalLabel.textContent = btn.dataset.modalLabel || "";
+          modal.classList.add("open");
+          modal.setAttribute("aria-hidden", "false");
         });
+      });
 
-        const startingLabel = (button.dataset.lightboxLabel || "Baseline").trim();
-        const startingTarget = startingLabel.toLowerCase();
-
-        Object.entries(lightboxImages).forEach(([key, image]) => {
-          if (!image) return;
-          const source = sources[key];
-          if (source) {
-            image.src = source;
-            image.style.display = "";
-          } else {
-            image.removeAttribute("src");
-            image.style.display = "none";
-          }
-        });
-
-        lightboxHeading.textContent = startingLabel;
-        lightboxSubtitle.textContent = "Toggle between baseline and current in place. Diff is available if you need it.";
-        lightbox.classList.add("is-open");
-        lightbox.setAttribute("aria-hidden", "false");
-
-        const fallbackTarget = sources[startingTarget]
-          ? startingTarget
-          : (sources.baseline && "baseline") ||
-            (sources.current && "current") ||
-            (sources.diff && "diff") ||
-            "baseline";
-        showLightboxTarget(fallbackTarget);
+      function closeModal() {
+        modal.classList.remove("open");
+        modal.setAttribute("aria-hidden", "true");
       }
-
-      function closeLightbox() {
-        lightbox.classList.remove("is-open");
-        lightbox.setAttribute("aria-hidden", "true");
-      }
-
-      document.querySelectorAll(".image-button").forEach((button) => {
-        button.addEventListener("click", () => openLightbox(button));
-      });
-
-      lightboxTabs.forEach((tab) => {
-        tab.addEventListener("click", () => {
-          showLightboxTarget(tab.dataset.target || "baseline");
-        });
-      });
-
-      lightboxClose?.addEventListener("click", closeLightbox);
-      lightbox?.addEventListener("click", (event) => {
-        if (event.target === lightbox) {
-          closeLightbox();
-        }
-      });
-
-      document.addEventListener("keydown", (event) => {
-        if (event.key === "Escape" && lightbox.classList.contains("is-open")) {
-          closeLightbox();
-        }
-        if (!lightbox.classList.contains("is-open")) {
-          return;
-        }
-        if (event.key === "ArrowLeft") {
-          const order = ["baseline", "current", "diff"];
-          const currentIndex = order.indexOf(activeLightboxTarget);
-          const nextIndex = (currentIndex + order.length - 1) % order.length;
-          showLightboxTarget(order[nextIndex]);
-        }
-        if (event.key === "ArrowRight") {
-          const order = ["baseline", "current", "diff"];
-          const currentIndex = order.indexOf(activeLightboxTarget);
-          const nextIndex = (currentIndex + 1) % order.length;
-          showLightboxTarget(order[nextIndex]);
-        }
-      });
+      modalClose.addEventListener("click", closeModal);
+      modal.addEventListener("click", (e) => { if (e.target === modal) closeModal(); });
+      document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeModal(); });
     </script>
   </body>
 </html>
@@ -1816,10 +1145,15 @@ async function main(): Promise<void> {
     };
 
     await writeReport(path.join(outputDir, "report.json"), report);
-    await writeHtmlReport(path.join(outputDir, "report.html"), report);
+    await writeHtmlReport(path.join(outputDir, "report.html"), report, runSlug);
+
+    const parityPublic = path.join(ROOT_DIR, "public", "parity-reports", runSlug);
+    await mkdir(path.dirname(parityPublic), { recursive: true });
+    await cp(outputDir, parityPublic, { recursive: true });
 
     console.log(`\nReport written to ${path.relative(ROOT_DIR, outputDir)}/report.json`);
     console.log(`HTML report written to ${path.relative(ROOT_DIR, outputDir)}/report.html`);
+    console.log(`View in app (uses site theme toggle): /parity-reports/${runSlug}`);
   } finally {
     if (browser) {
       await browser.close();
