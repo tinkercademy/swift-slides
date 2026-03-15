@@ -11,7 +11,8 @@
     "start": "next start",
     "lint": "next lint",
     "optimize-images": "node scripts/optimize-images.js",
-    "parity:slides": "bun run scripts/check-slide-parity.ts"
+    "parity:slides": "bun run scripts/check-slide-parity.ts",
+    "preview:slides": "bun run scripts/generate-slide-preview.ts"
   },
   "dependencies": {
     "@types/reveal.js": "^5.0.5",
