@@ -23,6 +23,8 @@ type ParsedArgs = {
   visualThreshold: number;
 };
 
+const PAGE_GOTO_TIMEOUT_MS = 120_000;
+
 type SlideSummary = {
   content: string;
   coordinate: {
@@ -544,7 +546,10 @@ async function stopServer(child: ReturnType<typeof spawn>): Promise<void> {
 }
 
 async function preparePage(page: Page, url: string, label: string): Promise<void> {
-  await page.goto(url, { waitUntil: "networkidle" });
+  await page.goto(url, {
+    timeout: PAGE_GOTO_TIMEOUT_MS,
+    waitUntil: "domcontentloaded",
+  });
   await page.waitForSelector(".reveal.ready", { timeout: 60_000 });
   await waitForVisibleSlideAssets(page, label);
 }
@@ -857,8 +862,14 @@ async function runVisualComparisons(
 
     const baselineSlideUrl = `${baselineUrl.replace(/#.*$/, "")}#/${comparison.index + REVEAL_HORIZONTAL_OFFSET}/0`;
     const currentSlideUrl = `${currentUrl.replace(/#.*$/, "")}#/${comparison.index + REVEAL_HORIZONTAL_OFFSET}/0`;
-    await baselinePageDark.goto(baselineSlideUrl, { waitUntil: "networkidle" });
-    await currentPageDark.goto(currentSlideUrl, { waitUntil: "networkidle" });
+    await baselinePageDark.goto(baselineSlideUrl, {
+      timeout: PAGE_GOTO_TIMEOUT_MS,
+      waitUntil: "domcontentloaded",
+    });
+    await currentPageDark.goto(currentSlideUrl, {
+      timeout: PAGE_GOTO_TIMEOUT_MS,
+      waitUntil: "domcontentloaded",
+    });
     await delay(400);
 
     await captureSlide(baselinePageDark, baselineDarkShot);
