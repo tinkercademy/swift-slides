@@ -20,6 +20,7 @@
 - Keep two-up images as consecutive markdown image lines
 - Keep Swift code captions in markdown
 - Leave embeds in raw HTML when markdown is not enough
+- For coloured inline text, use `<span class="focus-highlight">` (or a shared class in `slides.scss`) instead of inline styles
 
 ## After conversion
 
@@ -37,6 +38,6 @@
 ## Handoff
 
 - Include the converted file path
-- Include the parity report HTML path
+- Include the parity report HTML path (always provide this so the user can open `report.html`)
 - Include lint/build status
 - List the remaining known differences

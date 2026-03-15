@@ -117,6 +117,8 @@ These are the issues already discovered in this repo:
   - Use markdown, not raw `<img>` tags, unless a one-off custom size is required.
 - Icons:
   - Inline icons under `/assets/icons/` usually do not need custom HTML sizing.
+- Coloured or emphasised inline text:
+  - Standard markdown cannot express inline colour. Use a shared CSS class in `slides.scss` (e.g. `.focus-highlight`) and minimal HTML: `## My heading <span class="focus-highlight">highlighted term</span>`. Prefer this over inline styles or full HTML wrappers.
 
 ### 6. Prefer shared fixes over deck-specific hacks
 
@@ -124,6 +126,7 @@ If multiple slides fail in the same way, adjust `slides.scss` rather than patchi
 
 Examples of shared fixes that have already been needed:
 
+- adding shared classes for coloured inline text (e.g. `.focus-highlight` in `slides.scss`)
 - centring single-image slides vertically
 - keeping two-up screenshots side by side
 - adding more top breathing room
@@ -161,7 +164,7 @@ Open:
 
 For every converted unit, the agent must include the generated HTML report path in its handoff.
 
-The report is the review artefact. Do not rely on `report.json` for human review.
+The report is the primary review artefact. Always provide the full path so the user can open it (e.g. `output/playwright/slide-parity/<timestamp>/report.html` or `file:///.../report.html`). Do not rely on `report.json` for human review.
 
 ### 3. What to look for in the report
 
