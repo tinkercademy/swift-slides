@@ -46,7 +46,9 @@ verb _[with object]_
 
 ---
 
-<img height="800" src="/markdown/track_a/assets/brainstorm-purpose-ss.png">
+<!-- .slide: class="layout-media-centre" -->
+![A screenshot of the purpose page in the App Journal.](/markdown/track_a/assets/brainstorm-purpose-ss.png)
+<!-- .element: class="r-stretch" -->
 
 ---
 
@@ -67,7 +69,9 @@ verb _[with object]_
 
 ---
 
-<img height="800" src="/markdown/track_a/assets/brainstorm-idea-ss.png">
+<!-- .slide: class="layout-media-centre" -->
+![A screenshot of the ideas page in the App Journal.](/markdown/track_a/assets/brainstorm-idea-ss.png)
+<!-- .element: class="r-stretch" -->
 
 ---
 
@@ -93,29 +97,25 @@ verb _[with object]_
 
 ---
 
-<div>
-<h2>My app will help <span style="color: #ea6555;">immigrants</span></h2>
-<h2>with <span style="color: #ea6555;">housing</span></h2>
-<h2>by <span style="color: #ea6555;">providing a platform for them to rent homes</span></h2>
-</div>
+## My app will help <span class="focus-highlight">immigrants</span>
+## with <span class="focus-highlight">housing</span>
+## by <span class="focus-highlight">providing a platform for them to rent homes</span>
 
 ---
 
-<div>
-<h2>My app will help <span style="color: #ea6555;">students</span></h2>
-<h2>with <span style="color: #ea6555;">school announcements</span></h2>
-<h2>by <span style="color: #ea6555;">notifying them when a new one is posted</span></h2>
-</div>
+## My app will help <span class="focus-highlight">students</span>
+## with <span class="focus-highlight">school announcements</span>
+## by <span class="focus-highlight">notifying them when a new one is posted</span>
 
 ---
 
-<div>
-<h2>My app will help <span style="color: #ea6555;">teachers</span></h2>
-<h2>with <span style="color: #ea6555;">online classes</span></h2>
-<h2>by <span style="color: #ea6555;">allowing them to annotate on their Mac screens</span></h2>
-</div>
+## My app will help <span class="focus-highlight">teachers</span>
+## with <span class="focus-highlight">online classes</span>
+## by <span class="focus-highlight">allowing them to annotate on their Mac screens</span>
 
 ---
 
-<img height="800" src="/markdown/track_a/assets/brainstorm-focus-ss.png">
+<!-- .slide: class="layout-media-centre" -->
+![A screenshot of the focus page in the App Journal.](/markdown/track_a/assets/brainstorm-focus-ss.png)
+<!-- .element: class="r-stretch" -->
 
