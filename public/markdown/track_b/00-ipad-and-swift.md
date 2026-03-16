@@ -91,7 +91,7 @@
 ## Recording your Screen
 
 - First, ensure that the Screen Recording setting in Control Center is enabled
-  - Go to Settings → Control Center, then tap the Add Button ![Plus Button](/markdown/track_b/assets/plus_button.svg) next to Screen Recording
+  - Go to Settings → Control Center, then tap the Add Button <img src="/markdown/track_b/assets/plus_button.svg" alt="Plus Button" height="24" style="vertical-align: middle;" /> next to Screen Recording
 - Open the Control Center by swiping down from the top-right of the screen
 - Tap the Record Button, wait for the three-second countdown. Then, tap it again to stop the recording
 

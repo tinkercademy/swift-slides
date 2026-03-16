@@ -1,7 +1,7 @@
 {
   "baseRef": "main",
-  "generatedAt": "2026-03-15T15:30:22.395Z",
-  "outputDir": "output/playwright/slide-parity/2026-03-15T15-27-25-449Z",
+  "generatedAt": "2026-03-16T00:41:44.311Z",
+  "outputDir": "docs/skills/slide-migration/reports/track-b-group-1/2026-03-16T00-38-37-189Z",
   "units": [
     {
       "baseRef": "main",
@@ -466,7 +466,7 @@
             "links": []
           },
           "current": {
-            "content": "<!-- .slide: class=\"layout-steps-media\" -->\n## Recording your Screen\n\n- First, ensure that the Screen Recording setting in Control Center is enabled\n  - Go to Settings → Control Center, then tap the Add Button ![Plus Button](/markdown/track_b/assets/plus_button.svg) next to Screen Recording\n- Open the Control Center by swiping down from the top-right of the screen\n- Tap the Record Button, wait for the three-second countdown. Then, tap it again to stop the recording\n\n![Screen Recording](/markdown/track_b/assets/ipad-screenrecording-ss.png)",
+            "content": "<!-- .slide: class=\"layout-steps-media\" -->\n## Recording your Screen\n\n- First, ensure that the Screen Recording setting in Control Center is enabled\n  - Go to Settings → Control Center, then tap the Add Button <img src=\"/markdown/track_b/assets/plus_button.svg\" alt=\"Plus Button\" height=\"24\" style=\"vertical-align: middle;\" /> next to Screen Recording\n- Open the Control Center by swiping down from the top-right of the screen\n- Tap the Record Button, wait for the three-second countdown. Then, tap it again to stop the recording\n\n![Screen Recording](/markdown/track_b/assets/ipad-screenrecording-ss.png)",
             "coordinate": {
               "h": 11,
               "v": 0
@@ -486,11 +486,11 @@
           "visual": {
             "baselinePath": "track_b-unit_00/baseline/11-Recording-your-Screen.png",
             "baselinePathDark": "track_b-unit_00/baseline-dark/11-Recording-your-Screen.png",
-            "changedPixels": 346835,
+            "changedPixels": 227263,
             "currentPath": "track_b-unit_00/current/11-Recording-your-Screen.png",
             "currentPathDark": "track_b-unit_00/current-dark/11-Recording-your-Screen.png",
             "diffPath": "track_b-unit_00/diff/11-Recording-your-Screen.png",
-            "diffRatio": 0.3345412771473878,
+            "diffRatio": 0.21920756056438015,
             "sizeMismatch": null,
             "withinThreshold": false
           }
