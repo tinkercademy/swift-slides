@@ -23,6 +23,7 @@ function handleOpenWithQuery(name: string, value: string) {
 export function RevealjsNoSSRWrapper({ children, isPrint, track, unit }: { children: React.ReactNode, isPrint: boolean, track: TrackEntry, unit: UnitEntry }) {
     const deckDivRef = useRef<HTMLDivElement>(null);
     const deckRef = useRef<Reveal.Api | null>(null);
+    const initedRef = useRef(false);
 
     const [isFullScreen, setIsFullScreen] = useState(false);
     const { isDarkMode, setDarkMode } = useDarkMode()
@@ -38,10 +39,16 @@ export function RevealjsNoSSRWrapper({ children, isPrint, track, unit }: { child
     } as React.CSSProperties;
 
     useEffect(() => {
-        // Prevents double initialization in strict mode
-        if (deckRef.current) return;
+        // Prevent Strict Mode double-initialization. Reveal.js's markdown plugin
+        // fetches external .md files and replaces DOM elements via outerHTML during
+        // initialize(). If destroy() is called mid-flight (as Strict Mode does),
+        // the plugin tries to modify detached elements, causing
+        // NoModificationAllowedError. Since useRef persists across Strict Mode's
+        // simulated unmount/remount, this guard skips the second invocation entirely.
+        if (initedRef.current) return;
+        initedRef.current = true;
 
-        deckRef.current = new Reveal(deckDivRef.current!, {
+        const deck = new Reveal(deckDivRef.current!, {
             transition: "slide",
             width: 1920,
             height: 1080,
@@ -51,7 +58,9 @@ export function RevealjsNoSSRWrapper({ children, isPrint, track, unit }: { child
             plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
         });
 
-        deckRef.current.initialize().then(() => {
+        deckRef.current = deck;
+
+        deck.initialize().then(() => {
             // Initialize image optimizations after Reveal is ready
             initializeImageOptimizations({
                 rootMargin: '500px', // Preload images 500px before they come into view
@@ -70,18 +79,7 @@ export function RevealjsNoSSRWrapper({ children, isPrint, track, unit }: { child
                 });
             }
         });
-
-        return () => {
-            try {
-                if (deckRef.current) {
-                    deckRef.current.destroy();
-                    deckRef.current = null;
-                }
-            } catch (_e) {
-                // Silently handle Reveal.js cleanup errors
-            }
-        };
-    }, [deckRef]);
+    }, []);
 
     useEffect(() => {
         if (deckRef.current?.isReady()) {
