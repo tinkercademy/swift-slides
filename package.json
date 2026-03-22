@@ -11,6 +11,7 @@
     "start": "next start",
     "lint": "next lint",
     "optimize-images": "node scripts/optimize-images.js",
+    "check:slide-routes": "bun run scripts/check-slide-routes.ts",
     "parity:slides": "bun run scripts/check-slide-parity.ts",
     "preview:slides": "bun run scripts/generate-slide-preview.ts"
   },

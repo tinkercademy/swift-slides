@@ -270,6 +270,41 @@ bun run preview:slides -- --unit track_a/unit_02
 - It temporarily writes generated markdown under `public/markdown/_parity/` and cleans it up after the run
 - Use `--visual-threshold <number>` if you want a stricter or looser screenshot diff threshold
 
+## Slide route checker
+
+Use the slide route checker when you change route generation, Reveal initialisation, or deck asset paths.
+
+### What it checks
+
+- Every unit route from `public/curriculum.ts` by default, including units marked `disabled`
+- Reveal reaches a ready state for the route
+- Markdown lesson slides were actually parsed into the deck
+- The route expands beyond the four wrapper slides (title, markdown slot, QR, outro)
+- The expected markdown file request succeeds
+- Local markdown slide assets referenced by the rendered deck respond successfully
+
+### Run it
+
+Check every route:
+
+```bash
+bun run check:slide-routes
+```
+
+Check a specific route or markdown ID:
+
+```bash
+bun run check:slide-routes -- --unit track_b/unit_04A
+bun run check:slide-routes -- --unit track_b/04a-arrays-previews-and-structs
+```
+
+### Output
+
+- Reports are written to `output/playwright/slide-route-check/<timestamp>/report.json`
+- Failures also include a screenshot, HTML snapshot, Playwright trace, and server log
+- Use `--fail-fast` to stop on the first failing route
+- Use `--port <number>` or `--output-dir <path>` if the defaults clash with another run
+
 ## Contributing
 
 1. Create a short-lived branch for your work.
