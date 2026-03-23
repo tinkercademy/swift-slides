@@ -9,7 +9,7 @@ Download the Swift Playgrounds app on either iPad or Mac to get started.
 **Pro tips**:
 
 - Turn on iCloud Drive to continue working on your app playgrounds from multiple devices.
-- If you're using iPad to view the Learning Center or Keynote and Swift Playgrounds at the same time, tap the Multitasking button Multitasking button <img style="margin-bottom:-5px;" src="/markdown/track_a/assets/il_multitasking.png"> at the top of the screen to use Slide Over or Split View.
+- If you're using iPad to view the Learning Center or Keynote and Swift Playgrounds at the same time, reduce a window by swiping from the bottom right hand corner. This allows you to fit multiple windows in the same screen.
 
 [Learn more about multitasking](https://support.apple.com/en-us/102576)
 
@@ -21,7 +21,11 @@ Download the Swift Playgrounds app on either iPad or Mac to get started.
 
 ---
 
-<img height="800" src="/markdown/track_a/assets/open-playgrounds-2.png">
+<img height="800" src="/markdown/track_a/assets/rename-playgrounds.png">
+
+---
+
+<img height="800" src="/markdown/track_a/assets/learn-to-code-menu.png">
 
 ---
 
