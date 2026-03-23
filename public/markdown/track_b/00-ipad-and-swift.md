@@ -34,11 +34,22 @@
 <div style="display: flex;">
     <ul>
         <li>Swift Playgrounds offers interactive tutorials that teach Swift Fundamentals as SwiftUI elements</li>
-        <li>Can be accessed by clicking <code>See All</code> in More Playgrounds</li>
+        <li>Can be accessed by clicking <code>Learn to Code</code></li>
     </ul>
     <img style="width:70%" src="/markdown/track_b/assets/playgrounds-see_all-ss.png" alt="Swift Playgrounds See All Libaray" >
 </div>
 
+---
+
+## Choose App or Book mode
+
+<div style="display: flex;">
+<ul>
+<li>Press and hold <code>New Playground...</code></li>
+</ul>
+
+<img style="width:70%" src="/markdown/track_b/assets/playgrounds-app-or-book.png" alt="Swift Playgrounds App Create page " >
+</div>
 ---
 
 ## App mode
@@ -49,7 +60,7 @@
 
 ---
 
-## Playgrounds mode
+## Book mode
 
 #### Mainly used for running Swift code that does not require SwiftUI
 
