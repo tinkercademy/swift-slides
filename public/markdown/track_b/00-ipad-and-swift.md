@@ -77,10 +77,13 @@
 <div style="display: flex;">
     <ul style="width:60%">
         <li>Every lesson, we'll ask you to export a screenshot, so it's easier for us to take a look without having to connect to (and mess up) your iCloud version.</li>
-        <li>Press the home and power buttons at the same time to take a screenshot. </li>
-        <li>With Apple Pencil, you can also draw in from the bottom left..</li>
+        <li>On an iPad with a home button: Press the home and power buttons at the same time to take a screenshot. </li>
+        </li>
+        <li>On an iPad without a home button: Quickly press and release the top button and either volume button at the same time. </li>
+        <li>With Apple Pencil, swipe up diagonally from either corner at the bottom of the screen.</li>
     </ul>
     <img src="/markdown/track_b/assets/ipad-screenshot.png" alt="Taking screenshots on iPads">
+    <img src="/markdown/track_b/assets/ipad-screenshot-without-home-button.png" alt="Taking screenshots on iPads">
 </div>
 
 ---
@@ -89,13 +92,14 @@
 
 <div style="display: flex;">
     <ul style="width:60%">
-        <li>First, ensure that the Screen Recording setting in Control Center is enabled</li>
-            <ul>
-                <li>Go to Settings → Control Center, then tap the Add Button <img style="margin-bottom: -4px" src="/markdown/track_b/assets/plus_button.svg" alt="Plus Button" height="32px"> next to Screen Recording</li>
-            </ul>
-        <li>Open the Control Center by swiping down from the top-right of the screen</li>
+        <li>
+            Open the Control Center by swiping down from the top-right of the screen
         </li>
+        <li>
             Tap the Record Button, wait for the three-second countdown. Then, tap it again to stop the recording
+        </li>
+        <li> 
+            If the record button is not there, tap the <code>+</code> button at the top left hand corner → <code> Add a Control</code> → Screen Recording
         </li>
     </ul>
      <img style="width:50%" src="/markdown/track_b/assets/ipad-screenrecording-ss.png">
