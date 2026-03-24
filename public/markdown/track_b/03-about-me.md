@@ -101,12 +101,17 @@ HStack {
 - Open the Swift Playgrounds app on your iPad
 - Under “More Playgrounds”, tap on See All
 - Tap on the `GET` button next to the About Me playground
+- After it has loaded, go back to the Home screen to open the playground
 
 </div>
 
 <img width="800" src="/markdown/track_b/assets/aboutme-getting-started-app.png">
 
 </div>
+
+---
+
+<img src="/markdown/track_b/assets/aboutme-homepage.png" width="70%">
 
 ---
 
@@ -119,7 +124,7 @@ HStack {
 ## Navigating About Me
 
 - Just like Getting Started with Apps, there will be a tutorial to guide you through building a tab-based app using SwiftUI
-- Tap on Learn More, then Start Walkthrough, to start the tutorial
+- Tap on <img style="margin-bottom: -4px" height="32px" src="/markdown/track_b/assets/books.vertical icon.png" alt="books.vertical icon">, then <code>Start Building</code> to start the tutorial
 
 ---
 
@@ -152,7 +157,7 @@ HStack {
 
 - In the ContentView, you would notice that there are 4 `TabViews`, each corresponding to each of the tabs in the app
 - The `HomeView` is highlighted - let's try deleting it and see what happens
-- You can also try commenting the block of code out by adding two backslashes (**//**) in front of each line of code. This is called commenting
+- You can also try commenting the block of code out by adding two backslashes <code>//</code> in front of each line of code. This is called commenting
 - When you comment out a code, Swift will ignore it
 - Remember to uncomment the `HomeView` after!
 
