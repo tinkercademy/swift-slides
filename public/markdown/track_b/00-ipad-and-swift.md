@@ -48,7 +48,7 @@
 <li>Press and hold <code>New Playground...</code></li>
 </ul>
 
-<img style="width:70%" src="/markdown/track_b/assets/playgrounds-app-or-book.png" alt="Swift Playgrounds App Create page " >
+<img style="width:70%" src="/markdown/track_b/assets/playgrounds-app-or-book.PNG" alt="Swift Playgrounds App Create page " >
 </div>
 ---
 
