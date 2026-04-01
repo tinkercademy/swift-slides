@@ -1,0 +1,17 @@
+$ next dev --hostname "127.0.0.1" --port "3311"
+   ▲ Next.js 15.1.11
+   - Local:        http://127.0.0.1:3311
+   - Network:      http://127.0.0.1:3311
+   - Environments: .env.local
+
+ ✓ Starting...
+ ✓ Ready in 1115ms
+ ✓ Compiled /src/middleware in 74ms (100 modules)
+ ○ Compiling /tracks ...
+ ✓ Compiled /tracks in 558ms (716 modules)
+ GET /tracks 200 in 785ms
+ ✓ Compiled /tracks/[trackId]/[unitId] in 282ms (836 modules)
+ GET /tracks/track_b/unit_04A?markdown=%2Fmarkdown%2F_parity%2F2026-03-15T23-39-56-204Z%2Ftrack_b%2Funit_04A%2Fbaseline.md 200 in 656ms
+ GET /tracks/track_b/unit_04A?markdown=%2Fmarkdown%2F_parity%2F2026-03-15T23-39-56-204Z%2Ftrack_b%2Funit_04A%2Fcurrent.md 200 in 16ms
+ GET /tracks/track_b/unit_04A?markdown=%2Fmarkdown%2F_parity%2F2026-03-15T23-39-56-204Z%2Ftrack_b%2Funit_04A%2Fbaseline.md 200 in 18ms
+ GET /tracks/track_b/unit_04A?markdown=%2Fmarkdown%2F_parity%2F2026-03-15T23-39-56-204Z%2Ftrack_b%2Funit_04A%2Fcurrent.md 200 in 15ms

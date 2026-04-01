@@ -1,0 +1,1997 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Slide Parity Report</title>
+    <style>
+      * { box-sizing: border-box; }
+      body { margin: 0; font-family: system-ui, sans-serif; background: #f5f5f5; color: #333; padding: 24px; }
+      .hint { margin: 0 0 16px; font-size: 0.9rem; color: #666; }
+      .hint a { color: inherit; }
+      .unit-overview { margin: 0 0 32px; font-size: 1.5rem; font-weight: 600; }
+      .slide-row { margin-bottom: 32px; }
+      .slide-heading { margin: 0 0 12px; font-size: 1rem; font-weight: 600; }
+      .slide-comparison { display: grid; grid-template-columns: 1fr auto 1fr; gap: 0; align-items: stretch; width: 100%; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.08); border: 1px solid #eee; }
+      .slide-panel { display: block; padding: 0; border: none; background: #fafafa; cursor: pointer; min-height: 200px; }
+      .slide-panel:hover { background: #f0f0f0; }
+      .slide-panel img { display: block; width: 100%; height: auto; object-fit: contain; }
+      .slide-panel.empty { cursor: default; display: grid; place-items: center; color: #999; font-size: 1.5rem; }
+      .divider { padding: 0 16px; display: grid; place-items: center; background: #f5f5f5; color: #999; font-weight: 600; }
+      .modal { position: fixed; inset: 0; background: rgba(0,0,0,0.8); display: none; align-items: center; justify-content: center; padding: 24px; z-index: 999; }
+      .modal.open { display: flex; }
+      .modal-content { max-width: 95vw; max-height: 95vh; background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 24px 48px rgba(0,0,0,0.3); }
+      .modal-content img { display: block; max-width: 95vw; max-height: 85vh; object-fit: contain; }
+      .modal-header { padding: 12px 16px; background: #fafafa; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; align-items: center; }
+      .modal-close { padding: 8px 12px; border: none; background: #eee; border-radius: 6px; cursor: pointer; font: inherit; }
+      .modal-close:hover { background: #e0e0e0; }
+      .report-header { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; margin-bottom: 24px; }
+      .theme-toggle { padding: 8px; border: 1px solid #ddd; border-radius: 6px; background: #fff; cursor: pointer; font: inherit; color: #333; line-height: 1; }
+      .theme-toggle:hover { background: #f0f0f0; }
+      body.dark { background: #1a1a1a; color: #e5e5e5; }
+      body.dark .hint { color: #a3a3a3; }
+      body.dark .unit-overview { color: #e5e5e5; }
+      body.dark .slide-heading { color: #d4d4d4; }
+      body.dark .slide-comparison { background: #262626; border-color: #404040; box-shadow: 0 1px 3px rgba(0,0,0,0.3); }
+      body.dark .slide-panel { background: #262626; }
+      body.dark .slide-panel:hover { background: #333; }
+      body.dark .slide-panel.empty { color: #737373; }
+      body.dark .divider { background: #1a1a1a; color: #737373; }
+      body.dark .modal-content { background: #262626; box-shadow: 0 24px 48px rgba(0,0,0,0.6); }
+      body.dark .modal-header { background: #262626; border-color: #404040; color: #e5e5e5; }
+      body.dark .modal-close { background: #404040; color: #e5e5e5; }
+      body.dark .modal-close:hover { background: #525252; }
+      body.dark .theme-toggle { background: #262626; border-color: #404040; color: #e5e5e5; }
+      body.dark .theme-toggle:hover { background: #333; }
+    </style>
+  </head>
+  <body>
+    <div class="report-header">
+      <h1 class="unit-overview">Quiz v2 · Recipe App · Capstone Project</h1>
+      <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Switch to Dark Mode" title="Switch to Dark Mode">
+        <span id="theme-icon" aria-hidden="true"></span>
+      </button>
+    </div>
+    
+    <section class="slide-row">
+      <h2 class="slide-heading">1. Exploration Project: Quiz App</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/baseline/01-Exploration-Project--Quiz-App.png" data-src-dark="track_b-unit_04C/baseline-dark/01-Exploration-Project--Quiz-App.png" data-modal-label="Before — Slide 1: Exploration Project: Quiz App">
+        <img src="track_b-unit_04C/baseline/01-Exploration-Project--Quiz-App.png" alt="Before" data-src-light="track_b-unit_04C/baseline/01-Exploration-Project--Quiz-App.png" data-src-dark="track_b-unit_04C/baseline-dark/01-Exploration-Project--Quiz-App.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/current/01-Exploration-Project--Quiz-App.png" data-src-dark="track_b-unit_04C/current-dark/01-Exploration-Project--Quiz-App.png" data-modal-label="After — Slide 1: Exploration Project: Quiz App">
+        <img src="track_b-unit_04C/current/01-Exploration-Project--Quiz-App.png" alt="After" data-src-light="track_b-unit_04C/current/01-Exploration-Project--Quiz-App.png" data-src-dark="track_b-unit_04C/current-dark/01-Exploration-Project--Quiz-App.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">2. Project Preparation</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/baseline/02-Project-Preparation.png" data-src-dark="track_b-unit_04C/baseline-dark/02-Project-Preparation.png" data-modal-label="Before — Slide 2: Project Preparation">
+        <img src="track_b-unit_04C/baseline/02-Project-Preparation.png" alt="Before" data-src-light="track_b-unit_04C/baseline/02-Project-Preparation.png" data-src-dark="track_b-unit_04C/baseline-dark/02-Project-Preparation.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/current/02-Project-Preparation.png" data-src-dark="track_b-unit_04C/current-dark/02-Project-Preparation.png" data-modal-label="After — Slide 2: Project Preparation">
+        <img src="track_b-unit_04C/current/02-Project-Preparation.png" alt="After" data-src-light="track_b-unit_04C/current/02-Project-Preparation.png" data-src-dark="track_b-unit_04C/current-dark/02-Project-Preparation.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">3. UI Prep</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/baseline/03-UI-Prep.png" data-src-dark="track_b-unit_04C/baseline-dark/03-UI-Prep.png" data-modal-label="Before — Slide 3: UI Prep">
+        <img src="track_b-unit_04C/baseline/03-UI-Prep.png" alt="Before" data-src-light="track_b-unit_04C/baseline/03-UI-Prep.png" data-src-dark="track_b-unit_04C/baseline-dark/03-UI-Prep.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/current/03-UI-Prep.png" data-src-dark="track_b-unit_04C/current-dark/03-UI-Prep.png" data-modal-label="After — Slide 3: UI Prep">
+        <img src="track_b-unit_04C/current/03-UI-Prep.png" alt="After" data-src-light="track_b-unit_04C/current/03-UI-Prep.png" data-src-dark="track_b-unit_04C/current-dark/03-UI-Prep.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">4. Creating the User Interface</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/baseline/04-Creating-the-User-Interface.png" data-src-dark="track_b-unit_04C/baseline-dark/04-Creating-the-User-Interface.png" data-modal-label="Before — Slide 4: Creating the User Interface">
+        <img src="track_b-unit_04C/baseline/04-Creating-the-User-Interface.png" alt="Before" data-src-light="track_b-unit_04C/baseline/04-Creating-the-User-Interface.png" data-src-dark="track_b-unit_04C/baseline-dark/04-Creating-the-User-Interface.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/current/04-Creating-the-User-Interface.png" data-src-dark="track_b-unit_04C/current-dark/04-Creating-the-User-Interface.png" data-modal-label="After — Slide 4: Creating the User Interface">
+        <img src="track_b-unit_04C/current/04-Creating-the-User-Interface.png" alt="After" data-src-light="track_b-unit_04C/current/04-Creating-the-User-Interface.png" data-src-dark="track_b-unit_04C/current-dark/04-Creating-the-User-Interface.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">5. Creating the User Interface</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/baseline/05-Creating-the-User-Interface.png" data-src-dark="track_b-unit_04C/baseline-dark/05-Creating-the-User-Interface.png" data-modal-label="Before — Slide 5: Creating the User Interface">
+        <img src="track_b-unit_04C/baseline/05-Creating-the-User-Interface.png" alt="Before" data-src-light="track_b-unit_04C/baseline/05-Creating-the-User-Interface.png" data-src-dark="track_b-unit_04C/baseline-dark/05-Creating-the-User-Interface.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/current/05-Creating-the-User-Interface.png" data-src-dark="track_b-unit_04C/current-dark/05-Creating-the-User-Interface.png" data-modal-label="After — Slide 5: Creating the User Interface">
+        <img src="track_b-unit_04C/current/05-Creating-the-User-Interface.png" alt="After" data-src-light="track_b-unit_04C/current/05-Creating-the-User-Interface.png" data-src-dark="track_b-unit_04C/current-dark/05-Creating-the-User-Interface.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">6. Creating Questions</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/baseline/06-Creating-Questions.png" data-src-dark="track_b-unit_04C/baseline-dark/06-Creating-Questions.png" data-modal-label="Before — Slide 6: Creating Questions">
+        <img src="track_b-unit_04C/baseline/06-Creating-Questions.png" alt="Before" data-src-light="track_b-unit_04C/baseline/06-Creating-Questions.png" data-src-dark="track_b-unit_04C/baseline-dark/06-Creating-Questions.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/current/06-Creating-Questions.png" data-src-dark="track_b-unit_04C/current-dark/06-Creating-Questions.png" data-modal-label="After — Slide 6: Creating Questions">
+        <img src="track_b-unit_04C/current/06-Creating-Questions.png" alt="After" data-src-light="track_b-unit_04C/current/06-Creating-Questions.png" data-src-dark="track_b-unit_04C/current-dark/06-Creating-Questions.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">7. Creating Questions</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/baseline/07-Creating-Questions.png" data-src-dark="track_b-unit_04C/baseline-dark/07-Creating-Questions.png" data-modal-label="Before — Slide 7: Creating Questions">
+        <img src="track_b-unit_04C/baseline/07-Creating-Questions.png" alt="Before" data-src-light="track_b-unit_04C/baseline/07-Creating-Questions.png" data-src-dark="track_b-unit_04C/baseline-dark/07-Creating-Questions.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/current/07-Creating-Questions.png" data-src-dark="track_b-unit_04C/current-dark/07-Creating-Questions.png" data-modal-label="After — Slide 7: Creating Questions">
+        <img src="track_b-unit_04C/current/07-Creating-Questions.png" alt="After" data-src-light="track_b-unit_04C/current/07-Creating-Questions.png" data-src-dark="track_b-unit_04C/current-dark/07-Creating-Questions.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">8. Creating Questions</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/baseline/08-Creating-Questions.png" data-src-dark="track_b-unit_04C/baseline-dark/08-Creating-Questions.png" data-modal-label="Before — Slide 8: Creating Questions">
+        <img src="track_b-unit_04C/baseline/08-Creating-Questions.png" alt="Before" data-src-light="track_b-unit_04C/baseline/08-Creating-Questions.png" data-src-dark="track_b-unit_04C/baseline-dark/08-Creating-Questions.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/current/08-Creating-Questions.png" data-src-dark="track_b-unit_04C/current-dark/08-Creating-Questions.png" data-modal-label="After — Slide 8: Creating Questions">
+        <img src="track_b-unit_04C/current/08-Creating-Questions.png" alt="After" data-src-light="track_b-unit_04C/current/08-Creating-Questions.png" data-src-dark="track_b-unit_04C/current-dark/08-Creating-Questions.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">9. Changing question numbers</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/baseline/09-Changing-question-numbers.png" data-src-dark="track_b-unit_04C/baseline-dark/09-Changing-question-numbers.png" data-modal-label="Before — Slide 9: Changing question numbers">
+        <img src="track_b-unit_04C/baseline/09-Changing-question-numbers.png" alt="Before" data-src-light="track_b-unit_04C/baseline/09-Changing-question-numbers.png" data-src-dark="track_b-unit_04C/baseline-dark/09-Changing-question-numbers.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/current/09-Changing-question-numbers.png" data-src-dark="track_b-unit_04C/current-dark/09-Changing-question-numbers.png" data-modal-label="After — Slide 9: Changing question numbers">
+        <img src="track_b-unit_04C/current/09-Changing-question-numbers.png" alt="After" data-src-light="track_b-unit_04C/current/09-Changing-question-numbers.png" data-src-dark="track_b-unit_04C/current-dark/09-Changing-question-numbers.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">10. Untitled</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/baseline/10-slide.png" data-src-dark="track_b-unit_04C/baseline-dark/10-slide.png" data-modal-label="Before — Slide 10: Untitled">
+        <img src="track_b-unit_04C/baseline/10-slide.png" alt="Before" data-src-light="track_b-unit_04C/baseline/10-slide.png" data-src-dark="track_b-unit_04C/baseline-dark/10-slide.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/current/10-slide.png" data-src-dark="track_b-unit_04C/current-dark/10-slide.png" data-modal-label="After — Slide 10: Untitled">
+        <img src="track_b-unit_04C/current/10-slide.png" alt="After" data-src-light="track_b-unit_04C/current/10-slide.png" data-src-dark="track_b-unit_04C/current-dark/10-slide.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">11. Presenting an alert</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/baseline/11-Presenting-an-alert.png" data-src-dark="track_b-unit_04C/baseline-dark/11-Presenting-an-alert.png" data-modal-label="Before — Slide 11: Presenting an alert">
+        <img src="track_b-unit_04C/baseline/11-Presenting-an-alert.png" alt="Before" data-src-light="track_b-unit_04C/baseline/11-Presenting-an-alert.png" data-src-dark="track_b-unit_04C/baseline-dark/11-Presenting-an-alert.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/current/11-Presenting-an-alert.png" data-src-dark="track_b-unit_04C/current-dark/11-Presenting-an-alert.png" data-modal-label="After — Slide 11: Presenting an alert">
+        <img src="track_b-unit_04C/current/11-Presenting-an-alert.png" alt="After" data-src-light="track_b-unit_04C/current/11-Presenting-an-alert.png" data-src-dark="track_b-unit_04C/current-dark/11-Presenting-an-alert.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">12. Presenting an alert</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/baseline/12-Presenting-an-alert.png" data-src-dark="track_b-unit_04C/baseline-dark/12-Presenting-an-alert.png" data-modal-label="Before — Slide 12: Presenting an alert">
+        <img src="track_b-unit_04C/baseline/12-Presenting-an-alert.png" alt="Before" data-src-light="track_b-unit_04C/baseline/12-Presenting-an-alert.png" data-src-dark="track_b-unit_04C/baseline-dark/12-Presenting-an-alert.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/current/12-Presenting-an-alert.png" data-src-dark="track_b-unit_04C/current-dark/12-Presenting-an-alert.png" data-modal-label="After — Slide 12: Presenting an alert">
+        <img src="track_b-unit_04C/current/12-Presenting-an-alert.png" alt="After" data-src-light="track_b-unit_04C/current/12-Presenting-an-alert.png" data-src-dark="track_b-unit_04C/current-dark/12-Presenting-an-alert.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">13. Creating the Alert</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/baseline/13-Creating-the-Alert.png" data-src-dark="track_b-unit_04C/baseline-dark/13-Creating-the-Alert.png" data-modal-label="Before — Slide 13: Creating the Alert">
+        <img src="track_b-unit_04C/baseline/13-Creating-the-Alert.png" alt="Before" data-src-light="track_b-unit_04C/baseline/13-Creating-the-Alert.png" data-src-dark="track_b-unit_04C/baseline-dark/13-Creating-the-Alert.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/current/13-Creating-the-Alert.png" data-src-dark="track_b-unit_04C/current-dark/13-Creating-the-Alert.png" data-modal-label="After — Slide 13: Creating the Alert">
+        <img src="track_b-unit_04C/current/13-Creating-the-Alert.png" alt="After" data-src-light="track_b-unit_04C/current/13-Creating-the-Alert.png" data-src-dark="track_b-unit_04C/current-dark/13-Creating-the-Alert.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">14. Handling button presses</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/baseline/14-Handling-button-presses.png" data-src-dark="track_b-unit_04C/baseline-dark/14-Handling-button-presses.png" data-modal-label="Before — Slide 14: Handling button presses">
+        <img src="track_b-unit_04C/baseline/14-Handling-button-presses.png" alt="Before" data-src-light="track_b-unit_04C/baseline/14-Handling-button-presses.png" data-src-dark="track_b-unit_04C/baseline-dark/14-Handling-button-presses.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/current/14-Handling-button-presses.png" data-src-dark="track_b-unit_04C/current-dark/14-Handling-button-presses.png" data-modal-label="After — Slide 14: Handling button presses">
+        <img src="track_b-unit_04C/current/14-Handling-button-presses.png" alt="After" data-src-light="track_b-unit_04C/current/14-Handling-button-presses.png" data-src-dark="track_b-unit_04C/current-dark/14-Handling-button-presses.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">15. Handling button presses</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/baseline/15-Handling-button-presses.png" data-src-dark="track_b-unit_04C/baseline-dark/15-Handling-button-presses.png" data-modal-label="Before — Slide 15: Handling button presses">
+        <img src="track_b-unit_04C/baseline/15-Handling-button-presses.png" alt="Before" data-src-light="track_b-unit_04C/baseline/15-Handling-button-presses.png" data-src-dark="track_b-unit_04C/baseline-dark/15-Handling-button-presses.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/current/15-Handling-button-presses.png" data-src-dark="track_b-unit_04C/current-dark/15-Handling-button-presses.png" data-modal-label="After — Slide 15: Handling button presses">
+        <img src="track_b-unit_04C/current/15-Handling-button-presses.png" alt="After" data-src-light="track_b-unit_04C/current/15-Handling-button-presses.png" data-src-dark="track_b-unit_04C/current-dark/15-Handling-button-presses.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">16. Custom Buttons</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/baseline/16-Custom-Buttons.png" data-src-dark="track_b-unit_04C/baseline-dark/16-Custom-Buttons.png" data-modal-label="Before — Slide 16: Custom Buttons">
+        <img src="track_b-unit_04C/baseline/16-Custom-Buttons.png" alt="Before" data-src-light="track_b-unit_04C/baseline/16-Custom-Buttons.png" data-src-dark="track_b-unit_04C/baseline-dark/16-Custom-Buttons.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/current/16-Custom-Buttons.png" data-src-dark="track_b-unit_04C/current-dark/16-Custom-Buttons.png" data-modal-label="After — Slide 16: Custom Buttons">
+        <img src="track_b-unit_04C/current/16-Custom-Buttons.png" alt="After" data-src-light="track_b-unit_04C/current/16-Custom-Buttons.png" data-src-dark="track_b-unit_04C/current-dark/16-Custom-Buttons.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">17. Symbols</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/baseline/17-Symbols.png" data-src-dark="track_b-unit_04C/baseline-dark/17-Symbols.png" data-modal-label="Before — Slide 17: Symbols">
+        <img src="track_b-unit_04C/baseline/17-Symbols.png" alt="Before" data-src-light="track_b-unit_04C/baseline/17-Symbols.png" data-src-dark="track_b-unit_04C/baseline-dark/17-Symbols.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/current/17-Symbols.png" data-src-dark="track_b-unit_04C/current-dark/17-Symbols.png" data-modal-label="After — Slide 17: Symbols">
+        <img src="track_b-unit_04C/current/17-Symbols.png" alt="After" data-src-light="track_b-unit_04C/current/17-Symbols.png" data-src-dark="track_b-unit_04C/current-dark/17-Symbols.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">18. Adding the Symbols to your app</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/baseline/18-Adding-the-Symbols-to-your-app.png" data-src-dark="track_b-unit_04C/baseline-dark/18-Adding-the-Symbols-to-your-app.png" data-modal-label="Before — Slide 18: Adding the Symbols to your app">
+        <img src="track_b-unit_04C/baseline/18-Adding-the-Symbols-to-your-app.png" alt="Before" data-src-light="track_b-unit_04C/baseline/18-Adding-the-Symbols-to-your-app.png" data-src-dark="track_b-unit_04C/baseline-dark/18-Adding-the-Symbols-to-your-app.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/current/18-Adding-the-Symbols-to-your-app.png" data-src-dark="track_b-unit_04C/current-dark/18-Adding-the-Symbols-to-your-app.png" data-modal-label="After — Slide 18: Adding the Symbols to your app">
+        <img src="track_b-unit_04C/current/18-Adding-the-Symbols-to-your-app.png" alt="After" data-src-light="track_b-unit_04C/current/18-Adding-the-Symbols-to-your-app.png" data-src-dark="track_b-unit_04C/current-dark/18-Adding-the-Symbols-to-your-app.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">19. Repeat this for the other buttons</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/baseline/19-Repeat-this-for-the-other-buttons.png" data-src-dark="track_b-unit_04C/baseline-dark/19-Repeat-this-for-the-other-buttons.png" data-modal-label="Before — Slide 19: Repeat this for the other buttons">
+        <img src="track_b-unit_04C/baseline/19-Repeat-this-for-the-other-buttons.png" alt="Before" data-src-light="track_b-unit_04C/baseline/19-Repeat-this-for-the-other-buttons.png" data-src-dark="track_b-unit_04C/baseline-dark/19-Repeat-this-for-the-other-buttons.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/current/19-Repeat-this-for-the-other-buttons.png" data-src-dark="track_b-unit_04C/current-dark/19-Repeat-this-for-the-other-buttons.png" data-modal-label="After — Slide 19: Repeat this for the other buttons">
+        <img src="track_b-unit_04C/current/19-Repeat-this-for-the-other-buttons.png" alt="After" data-src-light="track_b-unit_04C/current/19-Repeat-this-for-the-other-buttons.png" data-src-dark="track_b-unit_04C/current-dark/19-Repeat-this-for-the-other-buttons.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">20. Repeated Code</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/baseline/20-Repeated-Code.png" data-src-dark="track_b-unit_04C/baseline-dark/20-Repeated-Code.png" data-modal-label="Before — Slide 20: Repeated Code">
+        <img src="track_b-unit_04C/baseline/20-Repeated-Code.png" alt="Before" data-src-light="track_b-unit_04C/baseline/20-Repeated-Code.png" data-src-dark="track_b-unit_04C/baseline-dark/20-Repeated-Code.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/current/20-Repeated-Code.png" data-src-dark="track_b-unit_04C/current-dark/20-Repeated-Code.png" data-modal-label="After — Slide 20: Repeated Code">
+        <img src="track_b-unit_04C/current/20-Repeated-Code.png" alt="After" data-src-light="track_b-unit_04C/current/20-Repeated-Code.png" data-src-dark="track_b-unit_04C/current-dark/20-Repeated-Code.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">21. Refactoring</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/baseline/21-Refactoring.png" data-src-dark="track_b-unit_04C/baseline-dark/21-Refactoring.png" data-modal-label="Before — Slide 21: Refactoring">
+        <img src="track_b-unit_04C/baseline/21-Refactoring.png" alt="Before" data-src-light="track_b-unit_04C/baseline/21-Refactoring.png" data-src-dark="track_b-unit_04C/baseline-dark/21-Refactoring.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/current/21-Refactoring.png" data-src-dark="track_b-unit_04C/current-dark/21-Refactoring.png" data-modal-label="After — Slide 21: Refactoring">
+        <img src="track_b-unit_04C/current/21-Refactoring.png" alt="After" data-src-light="track_b-unit_04C/current/21-Refactoring.png" data-src-dark="track_b-unit_04C/current-dark/21-Refactoring.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">22. Progress Bars</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/baseline/22-Progress-Bars.png" data-src-dark="track_b-unit_04C/baseline-dark/22-Progress-Bars.png" data-modal-label="Before — Slide 22: Progress Bars">
+        <img src="track_b-unit_04C/baseline/22-Progress-Bars.png" alt="Before" data-src-light="track_b-unit_04C/baseline/22-Progress-Bars.png" data-src-dark="track_b-unit_04C/baseline-dark/22-Progress-Bars.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/current/22-Progress-Bars.png" data-src-dark="track_b-unit_04C/current-dark/22-Progress-Bars.png" data-modal-label="After — Slide 22: Progress Bars">
+        <img src="track_b-unit_04C/current/22-Progress-Bars.png" alt="After" data-src-light="track_b-unit_04C/current/22-Progress-Bars.png" data-src-dark="track_b-unit_04C/current-dark/22-Progress-Bars.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">23. What is it?</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/baseline/23-What-is-it-.png" data-src-dark="track_b-unit_04C/baseline-dark/23-What-is-it-.png" data-modal-label="Before — Slide 23: What is it?">
+        <img src="track_b-unit_04C/baseline/23-What-is-it-.png" alt="Before" data-src-light="track_b-unit_04C/baseline/23-What-is-it-.png" data-src-dark="track_b-unit_04C/baseline-dark/23-What-is-it-.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/current/23-What-is-it-.png" data-src-dark="track_b-unit_04C/current-dark/23-What-is-it-.png" data-modal-label="After — Slide 23: What is it?">
+        <img src="track_b-unit_04C/current/23-What-is-it-.png" alt="After" data-src-light="track_b-unit_04C/current/23-What-is-it-.png" data-src-dark="track_b-unit_04C/current-dark/23-What-is-it-.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">24. How to implement a ProgressView?</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/baseline/24-How-to-implement-a-ProgressView-.png" data-src-dark="track_b-unit_04C/baseline-dark/24-How-to-implement-a-ProgressView-.png" data-modal-label="Before — Slide 24: How to implement a ProgressView?">
+        <img src="track_b-unit_04C/baseline/24-How-to-implement-a-ProgressView-.png" alt="Before" data-src-light="track_b-unit_04C/baseline/24-How-to-implement-a-ProgressView-.png" data-src-dark="track_b-unit_04C/baseline-dark/24-How-to-implement-a-ProgressView-.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/current/24-How-to-implement-a-ProgressView-.png" data-src-dark="track_b-unit_04C/current-dark/24-How-to-implement-a-ProgressView-.png" data-modal-label="After — Slide 24: How to implement a ProgressView?">
+        <img src="track_b-unit_04C/current/24-How-to-implement-a-ProgressView-.png" alt="After" data-src-light="track_b-unit_04C/current/24-How-to-implement-a-ProgressView-.png" data-src-dark="track_b-unit_04C/current-dark/24-How-to-implement-a-ProgressView-.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">25. How it works</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/baseline/25-How-it-works.png" data-src-dark="track_b-unit_04C/baseline-dark/25-How-it-works.png" data-modal-label="Before — Slide 25: How it works">
+        <img src="track_b-unit_04C/baseline/25-How-it-works.png" alt="Before" data-src-light="track_b-unit_04C/baseline/25-How-it-works.png" data-src-dark="track_b-unit_04C/baseline-dark/25-How-it-works.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/current/25-How-it-works.png" data-src-dark="track_b-unit_04C/current-dark/25-How-it-works.png" data-modal-label="After — Slide 25: How it works">
+        <img src="track_b-unit_04C/current/25-How-it-works.png" alt="After" data-src-light="track_b-unit_04C/current/25-How-it-works.png" data-src-dark="track_b-unit_04C/current-dark/25-How-it-works.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">26. Implementing Progress Bar</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/baseline/26-Implementing-Progress-Bar.png" data-src-dark="track_b-unit_04C/baseline-dark/26-Implementing-Progress-Bar.png" data-modal-label="Before — Slide 26: Implementing Progress Bar">
+        <img src="track_b-unit_04C/baseline/26-Implementing-Progress-Bar.png" alt="Before" data-src-light="track_b-unit_04C/baseline/26-Implementing-Progress-Bar.png" data-src-dark="track_b-unit_04C/baseline-dark/26-Implementing-Progress-Bar.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/current/26-Implementing-Progress-Bar.png" data-src-dark="track_b-unit_04C/current-dark/26-Implementing-Progress-Bar.png" data-modal-label="After — Slide 26: Implementing Progress Bar">
+        <img src="track_b-unit_04C/current/26-Implementing-Progress-Bar.png" alt="After" data-src-light="track_b-unit_04C/current/26-Implementing-Progress-Bar.png" data-src-dark="track_b-unit_04C/current-dark/26-Implementing-Progress-Bar.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">27. Score Sheet</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/baseline/27-Score-Sheet.png" data-src-dark="track_b-unit_04C/baseline-dark/27-Score-Sheet.png" data-modal-label="Before — Slide 27: Score Sheet">
+        <img src="track_b-unit_04C/baseline/27-Score-Sheet.png" alt="Before" data-src-light="track_b-unit_04C/baseline/27-Score-Sheet.png" data-src-dark="track_b-unit_04C/baseline-dark/27-Score-Sheet.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/current/27-Score-Sheet.png" data-src-dark="track_b-unit_04C/current-dark/27-Score-Sheet.png" data-modal-label="After — Slide 27: Score Sheet">
+        <img src="track_b-unit_04C/current/27-Score-Sheet.png" alt="After" data-src-light="track_b-unit_04C/current/27-Score-Sheet.png" data-src-dark="track_b-unit_04C/current-dark/27-Score-Sheet.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">28. What is it?</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/baseline/28-What-is-it-.png" data-src-dark="track_b-unit_04C/baseline-dark/28-What-is-it-.png" data-modal-label="Before — Slide 28: What is it?">
+        <img src="track_b-unit_04C/baseline/28-What-is-it-.png" alt="Before" data-src-light="track_b-unit_04C/baseline/28-What-is-it-.png" data-src-dark="track_b-unit_04C/baseline-dark/28-What-is-it-.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/current/28-What-is-it-.png" data-src-dark="track_b-unit_04C/current-dark/28-What-is-it-.png" data-modal-label="After — Slide 28: What is it?">
+        <img src="track_b-unit_04C/current/28-What-is-it-.png" alt="After" data-src-light="track_b-unit_04C/current/28-What-is-it-.png" data-src-dark="track_b-unit_04C/current-dark/28-What-is-it-.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">29. Creating a new file</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/baseline/29-Creating-a-new-file.png" data-src-dark="track_b-unit_04C/baseline-dark/29-Creating-a-new-file.png" data-modal-label="Before — Slide 29: Creating a new file">
+        <img src="track_b-unit_04C/baseline/29-Creating-a-new-file.png" alt="Before" data-src-light="track_b-unit_04C/baseline/29-Creating-a-new-file.png" data-src-dark="track_b-unit_04C/baseline-dark/29-Creating-a-new-file.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/current/29-Creating-a-new-file.png" data-src-dark="track_b-unit_04C/current-dark/29-Creating-a-new-file.png" data-modal-label="After — Slide 29: Creating a new file">
+        <img src="track_b-unit_04C/current/29-Creating-a-new-file.png" alt="After" data-src-light="track_b-unit_04C/current/29-Creating-a-new-file.png" data-src-dark="track_b-unit_04C/current-dark/29-Creating-a-new-file.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">30. Styling the Sheet</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/baseline/30-Styling-the-Sheet.png" data-src-dark="track_b-unit_04C/baseline-dark/30-Styling-the-Sheet.png" data-modal-label="Before — Slide 30: Styling the Sheet">
+        <img src="track_b-unit_04C/baseline/30-Styling-the-Sheet.png" alt="Before" data-src-light="track_b-unit_04C/baseline/30-Styling-the-Sheet.png" data-src-dark="track_b-unit_04C/baseline-dark/30-Styling-the-Sheet.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/current/30-Styling-the-Sheet.png" data-src-dark="track_b-unit_04C/current-dark/30-Styling-the-Sheet.png" data-modal-label="After — Slide 30: Styling the Sheet">
+        <img src="track_b-unit_04C/current/30-Styling-the-Sheet.png" alt="After" data-src-light="track_b-unit_04C/current/30-Styling-the-Sheet.png" data-src-dark="track_b-unit_04C/current-dark/30-Styling-the-Sheet.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">31. Allowing the values to change</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/baseline/31-Allowing-the-values-to-change.png" data-src-dark="track_b-unit_04C/baseline-dark/31-Allowing-the-values-to-change.png" data-modal-label="Before — Slide 31: Allowing the values to change">
+        <img src="track_b-unit_04C/baseline/31-Allowing-the-values-to-change.png" alt="Before" data-src-light="track_b-unit_04C/baseline/31-Allowing-the-values-to-change.png" data-src-dark="track_b-unit_04C/baseline-dark/31-Allowing-the-values-to-change.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/current/31-Allowing-the-values-to-change.png" data-src-dark="track_b-unit_04C/current-dark/31-Allowing-the-values-to-change.png" data-modal-label="After — Slide 31: Allowing the values to change">
+        <img src="track_b-unit_04C/current/31-Allowing-the-values-to-change.png" alt="After" data-src-light="track_b-unit_04C/current/31-Allowing-the-values-to-change.png" data-src-dark="track_b-unit_04C/current-dark/31-Allowing-the-values-to-change.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">32. Preparing for the sheet</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/baseline/32-Preparing-for-the-sheet.png" data-src-dark="track_b-unit_04C/baseline-dark/32-Preparing-for-the-sheet.png" data-modal-label="Before — Slide 32: Preparing for the sheet">
+        <img src="track_b-unit_04C/baseline/32-Preparing-for-the-sheet.png" alt="Before" data-src-light="track_b-unit_04C/baseline/32-Preparing-for-the-sheet.png" data-src-dark="track_b-unit_04C/baseline-dark/32-Preparing-for-the-sheet.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/current/32-Preparing-for-the-sheet.png" data-src-dark="track_b-unit_04C/current-dark/32-Preparing-for-the-sheet.png" data-modal-label="After — Slide 32: Preparing for the sheet">
+        <img src="track_b-unit_04C/current/32-Preparing-for-the-sheet.png" alt="After" data-src-light="track_b-unit_04C/current/32-Preparing-for-the-sheet.png" data-src-dark="track_b-unit_04C/current-dark/32-Preparing-for-the-sheet.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">33. Showing the sheet</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/baseline/33-Showing-the-sheet.png" data-src-dark="track_b-unit_04C/baseline-dark/33-Showing-the-sheet.png" data-modal-label="Before — Slide 33: Showing the sheet">
+        <img src="track_b-unit_04C/baseline/33-Showing-the-sheet.png" alt="Before" data-src-light="track_b-unit_04C/baseline/33-Showing-the-sheet.png" data-src-dark="track_b-unit_04C/baseline-dark/33-Showing-the-sheet.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/current/33-Showing-the-sheet.png" data-src-dark="track_b-unit_04C/current-dark/33-Showing-the-sheet.png" data-modal-label="After — Slide 33: Showing the sheet">
+        <img src="track_b-unit_04C/current/33-Showing-the-sheet.png" alt="After" data-src-light="track_b-unit_04C/current/33-Showing-the-sheet.png" data-src-dark="track_b-unit_04C/current-dark/33-Showing-the-sheet.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">34. Showing the new sheet</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/baseline/34-Showing-the-new-sheet.png" data-src-dark="track_b-unit_04C/baseline-dark/34-Showing-the-new-sheet.png" data-modal-label="Before — Slide 34: Showing the new sheet">
+        <img src="track_b-unit_04C/baseline/34-Showing-the-new-sheet.png" alt="Before" data-src-light="track_b-unit_04C/baseline/34-Showing-the-new-sheet.png" data-src-dark="track_b-unit_04C/baseline-dark/34-Showing-the-new-sheet.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/current/34-Showing-the-new-sheet.png" data-src-dark="track_b-unit_04C/current-dark/34-Showing-the-new-sheet.png" data-modal-label="After — Slide 34: Showing the new sheet">
+        <img src="track_b-unit_04C/current/34-Showing-the-new-sheet.png" alt="After" data-src-light="track_b-unit_04C/current/34-Showing-the-new-sheet.png" data-src-dark="track_b-unit_04C/current-dark/34-Showing-the-new-sheet.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">35. Resetting the score</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/baseline/35-Resetting-the-score.png" data-src-dark="track_b-unit_04C/baseline-dark/35-Resetting-the-score.png" data-modal-label="Before — Slide 35: Resetting the score">
+        <img src="track_b-unit_04C/baseline/35-Resetting-the-score.png" alt="Before" data-src-light="track_b-unit_04C/baseline/35-Resetting-the-score.png" data-src-dark="track_b-unit_04C/baseline-dark/35-Resetting-the-score.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/current/35-Resetting-the-score.png" data-src-dark="track_b-unit_04C/current-dark/35-Resetting-the-score.png" data-modal-label="After — Slide 35: Resetting the score">
+        <img src="track_b-unit_04C/current/35-Resetting-the-score.png" alt="After" data-src-light="track_b-unit_04C/current/35-Resetting-the-score.png" data-src-dark="track_b-unit_04C/current-dark/35-Resetting-the-score.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">36. Circular Progress Views</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/baseline/36-Circular-Progress-Views.png" data-src-dark="track_b-unit_04C/baseline-dark/36-Circular-Progress-Views.png" data-modal-label="Before — Slide 36: Circular Progress Views">
+        <img src="track_b-unit_04C/baseline/36-Circular-Progress-Views.png" alt="Before" data-src-light="track_b-unit_04C/baseline/36-Circular-Progress-Views.png" data-src-dark="track_b-unit_04C/baseline-dark/36-Circular-Progress-Views.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/current/36-Circular-Progress-Views.png" data-src-dark="track_b-unit_04C/current-dark/36-Circular-Progress-Views.png" data-modal-label="After — Slide 36: Circular Progress Views">
+        <img src="track_b-unit_04C/current/36-Circular-Progress-Views.png" alt="After" data-src-light="track_b-unit_04C/current/36-Circular-Progress-Views.png" data-src-dark="track_b-unit_04C/current-dark/36-Circular-Progress-Views.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">37. What to build?</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/baseline/37-What-to-build-.png" data-src-dark="track_b-unit_04C/baseline-dark/37-What-to-build-.png" data-modal-label="Before — Slide 37: What to build?">
+        <img src="track_b-unit_04C/baseline/37-What-to-build-.png" alt="Before" data-src-light="track_b-unit_04C/baseline/37-What-to-build-.png" data-src-dark="track_b-unit_04C/baseline-dark/37-What-to-build-.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/current/37-What-to-build-.png" data-src-dark="track_b-unit_04C/current-dark/37-What-to-build-.png" data-modal-label="After — Slide 37: What to build?">
+        <img src="track_b-unit_04C/current/37-What-to-build-.png" alt="After" data-src-light="track_b-unit_04C/current/37-What-to-build-.png" data-src-dark="track_b-unit_04C/current-dark/37-What-to-build-.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">38. Create New View</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/baseline/38-Create-New-View.png" data-src-dark="track_b-unit_04C/baseline-dark/38-Create-New-View.png" data-modal-label="Before — Slide 38: Create New View">
+        <img src="track_b-unit_04C/baseline/38-Create-New-View.png" alt="Before" data-src-light="track_b-unit_04C/baseline/38-Create-New-View.png" data-src-dark="track_b-unit_04C/baseline-dark/38-Create-New-View.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/current/38-Create-New-View.png" data-src-dark="track_b-unit_04C/current-dark/38-Create-New-View.png" data-modal-label="After — Slide 38: Create New View">
+        <img src="track_b-unit_04C/current/38-Create-New-View.png" alt="After" data-src-light="track_b-unit_04C/current/38-Create-New-View.png" data-src-dark="track_b-unit_04C/current-dark/38-Create-New-View.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">39. Breaking down a Progress Ring</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/baseline/39-Breaking-down-a-Progress-Ring.png" data-src-dark="track_b-unit_04C/baseline-dark/39-Breaking-down-a-Progress-Ring.png" data-modal-label="Before — Slide 39: Breaking down a Progress Ring">
+        <img src="track_b-unit_04C/baseline/39-Breaking-down-a-Progress-Ring.png" alt="Before" data-src-light="track_b-unit_04C/baseline/39-Breaking-down-a-Progress-Ring.png" data-src-dark="track_b-unit_04C/baseline-dark/39-Breaking-down-a-Progress-Ring.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/current/39-Breaking-down-a-Progress-Ring.png" data-src-dark="track_b-unit_04C/current-dark/39-Breaking-down-a-Progress-Ring.png" data-modal-label="After — Slide 39: Breaking down a Progress Ring">
+        <img src="track_b-unit_04C/current/39-Breaking-down-a-Progress-Ring.png" alt="After" data-src-light="track_b-unit_04C/current/39-Breaking-down-a-Progress-Ring.png" data-src-dark="track_b-unit_04C/current-dark/39-Breaking-down-a-Progress-Ring.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">40. Creating the Background Ring</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/baseline/40-Creating-the-Background-Ring.png" data-src-dark="track_b-unit_04C/baseline-dark/40-Creating-the-Background-Ring.png" data-modal-label="Before — Slide 40: Creating the Background Ring">
+        <img src="track_b-unit_04C/baseline/40-Creating-the-Background-Ring.png" alt="Before" data-src-light="track_b-unit_04C/baseline/40-Creating-the-Background-Ring.png" data-src-dark="track_b-unit_04C/baseline-dark/40-Creating-the-Background-Ring.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/current/40-Creating-the-Background-Ring.png" data-src-dark="track_b-unit_04C/current-dark/40-Creating-the-Background-Ring.png" data-modal-label="After — Slide 40: Creating the Background Ring">
+        <img src="track_b-unit_04C/current/40-Creating-the-Background-Ring.png" alt="After" data-src-light="track_b-unit_04C/current/40-Creating-the-Background-Ring.png" data-src-dark="track_b-unit_04C/current-dark/40-Creating-the-Background-Ring.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">41. Creating a Circle</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/baseline/41-Creating-a-Circle.png" data-src-dark="track_b-unit_04C/baseline-dark/41-Creating-a-Circle.png" data-modal-label="Before — Slide 41: Creating a Circle">
+        <img src="track_b-unit_04C/baseline/41-Creating-a-Circle.png" alt="Before" data-src-light="track_b-unit_04C/baseline/41-Creating-a-Circle.png" data-src-dark="track_b-unit_04C/baseline-dark/41-Creating-a-Circle.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/current/41-Creating-a-Circle.png" data-src-dark="track_b-unit_04C/current-dark/41-Creating-a-Circle.png" data-modal-label="After — Slide 41: Creating a Circle">
+        <img src="track_b-unit_04C/current/41-Creating-a-Circle.png" alt="After" data-src-light="track_b-unit_04C/current/41-Creating-a-Circle.png" data-src-dark="track_b-unit_04C/current-dark/41-Creating-a-Circle.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">42. Making a Ring</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/baseline/42-Making-a-Ring.png" data-src-dark="track_b-unit_04C/baseline-dark/42-Making-a-Ring.png" data-modal-label="Before — Slide 42: Making a Ring">
+        <img src="track_b-unit_04C/baseline/42-Making-a-Ring.png" alt="Before" data-src-light="track_b-unit_04C/baseline/42-Making-a-Ring.png" data-src-dark="track_b-unit_04C/baseline-dark/42-Making-a-Ring.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/current/42-Making-a-Ring.png" data-src-dark="track_b-unit_04C/current-dark/42-Making-a-Ring.png" data-modal-label="After — Slide 42: Making a Ring">
+        <img src="track_b-unit_04C/current/42-Making-a-Ring.png" alt="After" data-src-light="track_b-unit_04C/current/42-Making-a-Ring.png" data-src-dark="track_b-unit_04C/current-dark/42-Making-a-Ring.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">43. Creating a Circle</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/baseline/43-Creating-a-Circle.png" data-src-dark="track_b-unit_04C/baseline-dark/43-Creating-a-Circle.png" data-modal-label="Before — Slide 43: Creating a Circle">
+        <img src="track_b-unit_04C/baseline/43-Creating-a-Circle.png" alt="Before" data-src-light="track_b-unit_04C/baseline/43-Creating-a-Circle.png" data-src-dark="track_b-unit_04C/baseline-dark/43-Creating-a-Circle.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/current/43-Creating-a-Circle.png" data-src-dark="track_b-unit_04C/current-dark/43-Creating-a-Circle.png" data-modal-label="After — Slide 43: Creating a Circle">
+        <img src="track_b-unit_04C/current/43-Creating-a-Circle.png" alt="After" data-src-light="track_b-unit_04C/current/43-Creating-a-Circle.png" data-src-dark="track_b-unit_04C/current-dark/43-Creating-a-Circle.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">44. Create Progress Ring</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/baseline/44-Create-Progress-Ring.png" data-src-dark="track_b-unit_04C/baseline-dark/44-Create-Progress-Ring.png" data-modal-label="Before — Slide 44: Create Progress Ring">
+        <img src="track_b-unit_04C/baseline/44-Create-Progress-Ring.png" alt="Before" data-src-light="track_b-unit_04C/baseline/44-Create-Progress-Ring.png" data-src-dark="track_b-unit_04C/baseline-dark/44-Create-Progress-Ring.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/current/44-Create-Progress-Ring.png" data-src-dark="track_b-unit_04C/current-dark/44-Create-Progress-Ring.png" data-modal-label="After — Slide 44: Create Progress Ring">
+        <img src="track_b-unit_04C/current/44-Create-Progress-Ring.png" alt="After" data-src-light="track_b-unit_04C/current/44-Create-Progress-Ring.png" data-src-dark="track_b-unit_04C/current-dark/44-Create-Progress-Ring.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">45. Dependency Injection</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/baseline/45-Dependency-Injection.png" data-src-dark="track_b-unit_04C/baseline-dark/45-Dependency-Injection.png" data-modal-label="Before — Slide 45: Dependency Injection">
+        <img src="track_b-unit_04C/baseline/45-Dependency-Injection.png" alt="Before" data-src-light="track_b-unit_04C/baseline/45-Dependency-Injection.png" data-src-dark="track_b-unit_04C/baseline-dark/45-Dependency-Injection.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/current/45-Dependency-Injection.png" data-src-dark="track_b-unit_04C/current-dark/45-Dependency-Injection.png" data-modal-label="After — Slide 45: Dependency Injection">
+        <img src="track_b-unit_04C/current/45-Dependency-Injection.png" alt="After" data-src-light="track_b-unit_04C/current/45-Dependency-Injection.png" data-src-dark="track_b-unit_04C/current-dark/45-Dependency-Injection.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">46. Creating the Circle</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/baseline/46-Creating-the-Circle.png" data-src-dark="track_b-unit_04C/baseline-dark/46-Creating-the-Circle.png" data-modal-label="Before — Slide 46: Creating the Circle">
+        <img src="track_b-unit_04C/baseline/46-Creating-the-Circle.png" alt="Before" data-src-light="track_b-unit_04C/baseline/46-Creating-the-Circle.png" data-src-dark="track_b-unit_04C/baseline-dark/46-Creating-the-Circle.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/current/46-Creating-the-Circle.png" data-src-dark="track_b-unit_04C/current-dark/46-Creating-the-Circle.png" data-modal-label="After — Slide 46: Creating the Circle">
+        <img src="track_b-unit_04C/current/46-Creating-the-Circle.png" alt="After" data-src-light="track_b-unit_04C/current/46-Creating-the-Circle.png" data-src-dark="track_b-unit_04C/current-dark/46-Creating-the-Circle.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">47. Cutting the Circle</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/baseline/47-Cutting-the-Circle.png" data-src-dark="track_b-unit_04C/baseline-dark/47-Cutting-the-Circle.png" data-modal-label="Before — Slide 47: Cutting the Circle">
+        <img src="track_b-unit_04C/baseline/47-Cutting-the-Circle.png" alt="Before" data-src-light="track_b-unit_04C/baseline/47-Cutting-the-Circle.png" data-src-dark="track_b-unit_04C/baseline-dark/47-Cutting-the-Circle.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/current/47-Cutting-the-Circle.png" data-src-dark="track_b-unit_04C/current-dark/47-Cutting-the-Circle.png" data-modal-label="After — Slide 47: Cutting the Circle">
+        <img src="track_b-unit_04C/current/47-Cutting-the-Circle.png" alt="After" data-src-light="track_b-unit_04C/current/47-Cutting-the-Circle.png" data-src-dark="track_b-unit_04C/current-dark/47-Cutting-the-Circle.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">48. Drawing the Line</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/baseline/48-Drawing-the-Line.png" data-src-dark="track_b-unit_04C/baseline-dark/48-Drawing-the-Line.png" data-modal-label="Before — Slide 48: Drawing the Line">
+        <img src="track_b-unit_04C/baseline/48-Drawing-the-Line.png" alt="Before" data-src-light="track_b-unit_04C/baseline/48-Drawing-the-Line.png" data-src-dark="track_b-unit_04C/baseline-dark/48-Drawing-the-Line.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/current/48-Drawing-the-Line.png" data-src-dark="track_b-unit_04C/current-dark/48-Drawing-the-Line.png" data-modal-label="After — Slide 48: Drawing the Line">
+        <img src="track_b-unit_04C/current/48-Drawing-the-Line.png" alt="After" data-src-light="track_b-unit_04C/current/48-Drawing-the-Line.png" data-src-dark="track_b-unit_04C/current-dark/48-Drawing-the-Line.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">49. Change the line colour</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/baseline/49-Change-the-line-colour.png" data-src-dark="track_b-unit_04C/baseline-dark/49-Change-the-line-colour.png" data-modal-label="Before — Slide 49: Change the line colour">
+        <img src="track_b-unit_04C/baseline/49-Change-the-line-colour.png" alt="Before" data-src-light="track_b-unit_04C/baseline/49-Change-the-line-colour.png" data-src-dark="track_b-unit_04C/baseline-dark/49-Change-the-line-colour.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/current/49-Change-the-line-colour.png" data-src-dark="track_b-unit_04C/current-dark/49-Change-the-line-colour.png" data-modal-label="After — Slide 49: Change the line colour">
+        <img src="track_b-unit_04C/current/49-Change-the-line-colour.png" alt="After" data-src-light="track_b-unit_04C/current/49-Change-the-line-colour.png" data-src-dark="track_b-unit_04C/current-dark/49-Change-the-line-colour.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">50. Rotate it by 270º to start from top</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/baseline/50-Rotate-it-by-270--to-start-from-top.png" data-src-dark="track_b-unit_04C/baseline-dark/50-Rotate-it-by-270--to-start-from-top.png" data-modal-label="Before — Slide 50: Rotate it by 270º to start from top">
+        <img src="track_b-unit_04C/baseline/50-Rotate-it-by-270--to-start-from-top.png" alt="Before" data-src-light="track_b-unit_04C/baseline/50-Rotate-it-by-270--to-start-from-top.png" data-src-dark="track_b-unit_04C/baseline-dark/50-Rotate-it-by-270--to-start-from-top.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/current/50-Rotate-it-by-270--to-start-from-top.png" data-src-dark="track_b-unit_04C/current-dark/50-Rotate-it-by-270--to-start-from-top.png" data-modal-label="After — Slide 50: Rotate it by 270º to start from top">
+        <img src="track_b-unit_04C/current/50-Rotate-it-by-270--to-start-from-top.png" alt="After" data-src-light="track_b-unit_04C/current/50-Rotate-it-by-270--to-start-from-top.png" data-src-dark="track_b-unit_04C/current-dark/50-Rotate-it-by-270--to-start-from-top.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">51. Adding Progress Ring</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/baseline/51-Adding-Progress-Ring.png" data-src-dark="track_b-unit_04C/baseline-dark/51-Adding-Progress-Ring.png" data-modal-label="Before — Slide 51: Adding Progress Ring">
+        <img src="track_b-unit_04C/baseline/51-Adding-Progress-Ring.png" alt="Before" data-src-light="track_b-unit_04C/baseline/51-Adding-Progress-Ring.png" data-src-dark="track_b-unit_04C/baseline-dark/51-Adding-Progress-Ring.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/current/51-Adding-Progress-Ring.png" data-src-dark="track_b-unit_04C/current-dark/51-Adding-Progress-Ring.png" data-modal-label="After — Slide 51: Adding Progress Ring">
+        <img src="track_b-unit_04C/current/51-Adding-Progress-Ring.png" alt="After" data-src-light="track_b-unit_04C/current/51-Adding-Progress-Ring.png" data-src-dark="track_b-unit_04C/current-dark/51-Adding-Progress-Ring.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">52. Suggested extensions</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/baseline/52-Suggested-extensions.png" data-src-dark="track_b-unit_04C/baseline-dark/52-Suggested-extensions.png" data-modal-label="Before — Slide 52: Suggested extensions">
+        <img src="track_b-unit_04C/baseline/52-Suggested-extensions.png" alt="Before" data-src-light="track_b-unit_04C/baseline/52-Suggested-extensions.png" data-src-dark="track_b-unit_04C/baseline-dark/52-Suggested-extensions.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/current/52-Suggested-extensions.png" data-src-dark="track_b-unit_04C/current-dark/52-Suggested-extensions.png" data-modal-label="After — Slide 52: Suggested extensions">
+        <img src="track_b-unit_04C/current/52-Suggested-extensions.png" alt="After" data-src-light="track_b-unit_04C/current/52-Suggested-extensions.png" data-src-dark="track_b-unit_04C/current-dark/52-Suggested-extensions.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">53. And that&#39;s it!</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/baseline/53-And-that-s-it-.png" data-src-dark="track_b-unit_04C/baseline-dark/53-And-that-s-it-.png" data-modal-label="Before — Slide 53: And that&#39;s it!">
+        <img src="track_b-unit_04C/baseline/53-And-that-s-it-.png" alt="Before" data-src-light="track_b-unit_04C/baseline/53-And-that-s-it-.png" data-src-dark="track_b-unit_04C/baseline-dark/53-And-that-s-it-.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_04C/current/53-And-that-s-it-.png" data-src-dark="track_b-unit_04C/current-dark/53-And-that-s-it-.png" data-modal-label="After — Slide 53: And that&#39;s it!">
+        <img src="track_b-unit_04C/current/53-And-that-s-it-.png" alt="After" data-src-light="track_b-unit_04C/current/53-And-that-s-it-.png" data-src-dark="track_b-unit_04C/current-dark/53-And-that-s-it-.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">1. Lesson 1 : NavigationStack / NavigationLink</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/baseline/01-Lesson-1---NavigationStack---NavigationLink.png" data-src-dark="track_b-unit_05/baseline-dark/01-Lesson-1---NavigationStack---NavigationLink.png" data-modal-label="Before — Slide 1: Lesson 1 : NavigationStack / NavigationLink">
+        <img src="track_b-unit_05/baseline/01-Lesson-1---NavigationStack---NavigationLink.png" alt="Before" data-src-light="track_b-unit_05/baseline/01-Lesson-1---NavigationStack---NavigationLink.png" data-src-dark="track_b-unit_05/baseline-dark/01-Lesson-1---NavigationStack---NavigationLink.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/current/01-Lesson-1---NavigationStack---NavigationLink.png" data-src-dark="track_b-unit_05/current-dark/01-Lesson-1---NavigationStack---NavigationLink.png" data-modal-label="After — Slide 1: Lesson 1 : NavigationStack / NavigationLink">
+        <img src="track_b-unit_05/current/01-Lesson-1---NavigationStack---NavigationLink.png" alt="After" data-src-light="track_b-unit_05/current/01-Lesson-1---NavigationStack---NavigationLink.png" data-src-dark="track_b-unit_05/current-dark/01-Lesson-1---NavigationStack---NavigationLink.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">2. List App</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/baseline/02-List-App.png" data-src-dark="track_b-unit_05/baseline-dark/02-List-App.png" data-modal-label="Before — Slide 2: List App">
+        <img src="track_b-unit_05/baseline/02-List-App.png" alt="Before" data-src-light="track_b-unit_05/baseline/02-List-App.png" data-src-dark="track_b-unit_05/baseline-dark/02-List-App.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/current/02-List-App.png" data-src-dark="track_b-unit_05/current-dark/02-List-App.png" data-modal-label="After — Slide 2: List App">
+        <img src="track_b-unit_05/current/02-List-App.png" alt="After" data-src-light="track_b-unit_05/current/02-List-App.png" data-src-dark="track_b-unit_05/current-dark/02-List-App.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">3. What is Navigation?</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/baseline/03-What-is-Navigation-.png" data-src-dark="track_b-unit_05/baseline-dark/03-What-is-Navigation-.png" data-modal-label="Before — Slide 3: What is Navigation?">
+        <img src="track_b-unit_05/baseline/03-What-is-Navigation-.png" alt="Before" data-src-light="track_b-unit_05/baseline/03-What-is-Navigation-.png" data-src-dark="track_b-unit_05/baseline-dark/03-What-is-Navigation-.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/current/03-What-is-Navigation-.png" data-src-dark="track_b-unit_05/current-dark/03-What-is-Navigation-.png" data-modal-label="After — Slide 3: What is Navigation?">
+        <img src="track_b-unit_05/current/03-What-is-Navigation-.png" alt="After" data-src-light="track_b-unit_05/current/03-What-is-Navigation-.png" data-src-dark="track_b-unit_05/current-dark/03-What-is-Navigation-.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">4. Navigation Demo</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/baseline/04-Navigation-Demo.png" data-src-dark="track_b-unit_05/baseline-dark/04-Navigation-Demo.png" data-modal-label="Before — Slide 4: Navigation Demo">
+        <img src="track_b-unit_05/baseline/04-Navigation-Demo.png" alt="Before" data-src-light="track_b-unit_05/baseline/04-Navigation-Demo.png" data-src-dark="track_b-unit_05/baseline-dark/04-Navigation-Demo.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/current/04-Navigation-Demo.png" data-src-dark="track_b-unit_05/current-dark/04-Navigation-Demo.png" data-modal-label="After — Slide 4: Navigation Demo">
+        <img src="track_b-unit_05/current/04-Navigation-Demo.png" alt="After" data-src-light="track_b-unit_05/current/04-Navigation-Demo.png" data-src-dark="track_b-unit_05/current-dark/04-Navigation-Demo.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">5. Let&#39;s get started!</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/baseline/05-Let-s-get-started-.png" data-src-dark="track_b-unit_05/baseline-dark/05-Let-s-get-started-.png" data-modal-label="Before — Slide 5: Let&#39;s get started!">
+        <img src="track_b-unit_05/baseline/05-Let-s-get-started-.png" alt="Before" data-src-light="track_b-unit_05/baseline/05-Let-s-get-started-.png" data-src-dark="track_b-unit_05/baseline-dark/05-Let-s-get-started-.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/current/05-Let-s-get-started-.png" data-src-dark="track_b-unit_05/current-dark/05-Let-s-get-started-.png" data-modal-label="After — Slide 5: Let&#39;s get started!">
+        <img src="track_b-unit_05/current/05-Let-s-get-started-.png" alt="After" data-src-light="track_b-unit_05/current/05-Let-s-get-started-.png" data-src-dark="track_b-unit_05/current-dark/05-Let-s-get-started-.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">6. NavigationLink</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/baseline/06-NavigationLink.png" data-src-dark="track_b-unit_05/baseline-dark/06-NavigationLink.png" data-modal-label="Before — Slide 6: NavigationLink">
+        <img src="track_b-unit_05/baseline/06-NavigationLink.png" alt="Before" data-src-light="track_b-unit_05/baseline/06-NavigationLink.png" data-src-dark="track_b-unit_05/baseline-dark/06-NavigationLink.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/current/06-NavigationLink.png" data-src-dark="track_b-unit_05/current-dark/06-NavigationLink.png" data-modal-label="After — Slide 6: NavigationLink">
+        <img src="track_b-unit_05/current/06-NavigationLink.png" alt="After" data-src-light="track_b-unit_05/current/06-NavigationLink.png" data-src-dark="track_b-unit_05/current-dark/06-NavigationLink.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">7. NavigationLink</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/baseline/07-NavigationLink.png" data-src-dark="track_b-unit_05/baseline-dark/07-NavigationLink.png" data-modal-label="Before — Slide 7: NavigationLink">
+        <img src="track_b-unit_05/baseline/07-NavigationLink.png" alt="Before" data-src-light="track_b-unit_05/baseline/07-NavigationLink.png" data-src-dark="track_b-unit_05/baseline-dark/07-NavigationLink.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/current/07-NavigationLink.png" data-src-dark="track_b-unit_05/current-dark/07-NavigationLink.png" data-modal-label="After — Slide 7: NavigationLink">
+        <img src="track_b-unit_05/current/07-NavigationLink.png" alt="After" data-src-light="track_b-unit_05/current/07-NavigationLink.png" data-src-dark="track_b-unit_05/current-dark/07-NavigationLink.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">8. Adding a Spacer()</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/baseline/08-Adding-a-Spacer--.png" data-src-dark="track_b-unit_05/baseline-dark/08-Adding-a-Spacer--.png" data-modal-label="Before — Slide 8: Adding a Spacer()">
+        <img src="track_b-unit_05/baseline/08-Adding-a-Spacer--.png" alt="Before" data-src-light="track_b-unit_05/baseline/08-Adding-a-Spacer--.png" data-src-dark="track_b-unit_05/baseline-dark/08-Adding-a-Spacer--.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/current/08-Adding-a-Spacer--.png" data-src-dark="track_b-unit_05/current-dark/08-Adding-a-Spacer--.png" data-modal-label="After — Slide 8: Adding a Spacer()">
+        <img src="track_b-unit_05/current/08-Adding-a-Spacer--.png" alt="After" data-src-light="track_b-unit_05/current/08-Adding-a-Spacer--.png" data-src-dark="track_b-unit_05/current-dark/08-Adding-a-Spacer--.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">9. Lesson 2 : Sheet</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/baseline/09-Lesson-2---Sheet.png" data-src-dark="track_b-unit_05/baseline-dark/09-Lesson-2---Sheet.png" data-modal-label="Before — Slide 9: Lesson 2 : Sheet">
+        <img src="track_b-unit_05/baseline/09-Lesson-2---Sheet.png" alt="Before" data-src-light="track_b-unit_05/baseline/09-Lesson-2---Sheet.png" data-src-dark="track_b-unit_05/baseline-dark/09-Lesson-2---Sheet.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/current/09-Lesson-2---Sheet.png" data-src-dark="track_b-unit_05/current-dark/09-Lesson-2---Sheet.png" data-modal-label="After — Slide 9: Lesson 2 : Sheet">
+        <img src="track_b-unit_05/current/09-Lesson-2---Sheet.png" alt="After" data-src-light="track_b-unit_05/current/09-Lesson-2---Sheet.png" data-src-dark="track_b-unit_05/current-dark/09-Lesson-2---Sheet.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">10. Credits Screen</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/baseline/10-Credits-Screen.png" data-src-dark="track_b-unit_05/baseline-dark/10-Credits-Screen.png" data-modal-label="Before — Slide 10: Credits Screen">
+        <img src="track_b-unit_05/baseline/10-Credits-Screen.png" alt="Before" data-src-light="track_b-unit_05/baseline/10-Credits-Screen.png" data-src-dark="track_b-unit_05/baseline-dark/10-Credits-Screen.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/current/10-Credits-Screen.png" data-src-dark="track_b-unit_05/current-dark/10-Credits-Screen.png" data-modal-label="After — Slide 10: Credits Screen">
+        <img src="track_b-unit_05/current/10-Credits-Screen.png" alt="After" data-src-light="track_b-unit_05/current/10-Credits-Screen.png" data-src-dark="track_b-unit_05/current-dark/10-Credits-Screen.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">11. Creating a credits button</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/baseline/11-Creating-a-credits-button.png" data-src-dark="track_b-unit_05/baseline-dark/11-Creating-a-credits-button.png" data-modal-label="Before — Slide 11: Creating a credits button">
+        <img src="track_b-unit_05/baseline/11-Creating-a-credits-button.png" alt="Before" data-src-light="track_b-unit_05/baseline/11-Creating-a-credits-button.png" data-src-dark="track_b-unit_05/baseline-dark/11-Creating-a-credits-button.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/current/11-Creating-a-credits-button.png" data-src-dark="track_b-unit_05/current-dark/11-Creating-a-credits-button.png" data-modal-label="After — Slide 11: Creating a credits button">
+        <img src="track_b-unit_05/current/11-Creating-a-credits-button.png" alt="After" data-src-light="track_b-unit_05/current/11-Creating-a-credits-button.png" data-src-dark="track_b-unit_05/current-dark/11-Creating-a-credits-button.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">12. Adding styling to the button</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/baseline/12-Adding-styling-to-the-button.png" data-src-dark="track_b-unit_05/baseline-dark/12-Adding-styling-to-the-button.png" data-modal-label="Before — Slide 12: Adding styling to the button">
+        <img src="track_b-unit_05/baseline/12-Adding-styling-to-the-button.png" alt="Before" data-src-light="track_b-unit_05/baseline/12-Adding-styling-to-the-button.png" data-src-dark="track_b-unit_05/baseline-dark/12-Adding-styling-to-the-button.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/current/12-Adding-styling-to-the-button.png" data-src-dark="track_b-unit_05/current-dark/12-Adding-styling-to-the-button.png" data-modal-label="After — Slide 12: Adding styling to the button">
+        <img src="track_b-unit_05/current/12-Adding-styling-to-the-button.png" alt="After" data-src-light="track_b-unit_05/current/12-Adding-styling-to-the-button.png" data-src-dark="track_b-unit_05/current-dark/12-Adding-styling-to-the-button.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">13. Using a @State variable</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/baseline/13-Using-a--State-variable.png" data-src-dark="track_b-unit_05/baseline-dark/13-Using-a--State-variable.png" data-modal-label="Before — Slide 13: Using a @State variable">
+        <img src="track_b-unit_05/baseline/13-Using-a--State-variable.png" alt="Before" data-src-light="track_b-unit_05/baseline/13-Using-a--State-variable.png" data-src-dark="track_b-unit_05/baseline-dark/13-Using-a--State-variable.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/current/13-Using-a--State-variable.png" data-src-dark="track_b-unit_05/current-dark/13-Using-a--State-variable.png" data-modal-label="After — Slide 13: Using a @State variable">
+        <img src="track_b-unit_05/current/13-Using-a--State-variable.png" alt="After" data-src-light="track_b-unit_05/current/13-Using-a--State-variable.png" data-src-dark="track_b-unit_05/current-dark/13-Using-a--State-variable.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">14. Adding a Sheet</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/baseline/14-Adding-a-Sheet.png" data-src-dark="track_b-unit_05/baseline-dark/14-Adding-a-Sheet.png" data-modal-label="Before — Slide 14: Adding a Sheet">
+        <img src="track_b-unit_05/baseline/14-Adding-a-Sheet.png" alt="Before" data-src-light="track_b-unit_05/baseline/14-Adding-a-Sheet.png" data-src-dark="track_b-unit_05/baseline-dark/14-Adding-a-Sheet.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/current/14-Adding-a-Sheet.png" data-src-dark="track_b-unit_05/current-dark/14-Adding-a-Sheet.png" data-modal-label="After — Slide 14: Adding a Sheet">
+        <img src="track_b-unit_05/current/14-Adding-a-Sheet.png" alt="After" data-src-light="track_b-unit_05/current/14-Adding-a-Sheet.png" data-src-dark="track_b-unit_05/current-dark/14-Adding-a-Sheet.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">15. Creating the CreditsView</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/baseline/15-Creating-the-CreditsView.png" data-src-dark="track_b-unit_05/baseline-dark/15-Creating-the-CreditsView.png" data-modal-label="Before — Slide 15: Creating the CreditsView">
+        <img src="track_b-unit_05/baseline/15-Creating-the-CreditsView.png" alt="Before" data-src-light="track_b-unit_05/baseline/15-Creating-the-CreditsView.png" data-src-dark="track_b-unit_05/baseline-dark/15-Creating-the-CreditsView.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/current/15-Creating-the-CreditsView.png" data-src-dark="track_b-unit_05/current-dark/15-Creating-the-CreditsView.png" data-modal-label="After — Slide 15: Creating the CreditsView">
+        <img src="track_b-unit_05/current/15-Creating-the-CreditsView.png" alt="After" data-src-light="track_b-unit_05/current/15-Creating-the-CreditsView.png" data-src-dark="track_b-unit_05/current-dark/15-Creating-the-CreditsView.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">16. Adding content to the CreditsView</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/baseline/16-Adding-content-to-the-CreditsView.png" data-src-dark="track_b-unit_05/baseline-dark/16-Adding-content-to-the-CreditsView.png" data-modal-label="Before — Slide 16: Adding content to the CreditsView">
+        <img src="track_b-unit_05/baseline/16-Adding-content-to-the-CreditsView.png" alt="Before" data-src-light="track_b-unit_05/baseline/16-Adding-content-to-the-CreditsView.png" data-src-dark="track_b-unit_05/baseline-dark/16-Adding-content-to-the-CreditsView.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/current/16-Adding-content-to-the-CreditsView.png" data-src-dark="track_b-unit_05/current-dark/16-Adding-content-to-the-CreditsView.png" data-modal-label="After — Slide 16: Adding content to the CreditsView">
+        <img src="track_b-unit_05/current/16-Adding-content-to-the-CreditsView.png" alt="After" data-src-light="track_b-unit_05/current/16-Adding-content-to-the-CreditsView.png" data-src-dark="track_b-unit_05/current-dark/16-Adding-content-to-the-CreditsView.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">17. Making the CreditsView look better</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/baseline/17-Making-the-CreditsView-look-better.png" data-src-dark="track_b-unit_05/baseline-dark/17-Making-the-CreditsView-look-better.png" data-modal-label="Before — Slide 17: Making the CreditsView look better">
+        <img src="track_b-unit_05/baseline/17-Making-the-CreditsView-look-better.png" alt="Before" data-src-light="track_b-unit_05/baseline/17-Making-the-CreditsView-look-better.png" data-src-dark="track_b-unit_05/baseline-dark/17-Making-the-CreditsView-look-better.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/current/17-Making-the-CreditsView-look-better.png" data-src-dark="track_b-unit_05/current-dark/17-Making-the-CreditsView-look-better.png" data-modal-label="After — Slide 17: Making the CreditsView look better">
+        <img src="track_b-unit_05/current/17-Making-the-CreditsView-look-better.png" alt="After" data-src-light="track_b-unit_05/current/17-Making-the-CreditsView-look-better.png" data-src-dark="track_b-unit_05/current-dark/17-Making-the-CreditsView-look-better.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">18. Making the CreditsView look even better</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/baseline/18-Making-the-CreditsView-look-even-better.png" data-src-dark="track_b-unit_05/baseline-dark/18-Making-the-CreditsView-look-even-better.png" data-modal-label="Before — Slide 18: Making the CreditsView look even better">
+        <img src="track_b-unit_05/baseline/18-Making-the-CreditsView-look-even-better.png" alt="Before" data-src-light="track_b-unit_05/baseline/18-Making-the-CreditsView-look-even-better.png" data-src-dark="track_b-unit_05/baseline-dark/18-Making-the-CreditsView-look-even-better.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/current/18-Making-the-CreditsView-look-even-better.png" data-src-dark="track_b-unit_05/current-dark/18-Making-the-CreditsView-look-even-better.png" data-modal-label="After — Slide 18: Making the CreditsView look even better">
+        <img src="track_b-unit_05/current/18-Making-the-CreditsView-look-even-better.png" alt="After" data-src-light="track_b-unit_05/current/18-Making-the-CreditsView-look-even-better.png" data-src-dark="track_b-unit_05/current-dark/18-Making-the-CreditsView-look-even-better.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">19. Making the CreditsView look even even better</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/baseline/19-Making-the-CreditsView-look-even-even-better.png" data-src-dark="track_b-unit_05/baseline-dark/19-Making-the-CreditsView-look-even-even-better.png" data-modal-label="Before — Slide 19: Making the CreditsView look even even better">
+        <img src="track_b-unit_05/baseline/19-Making-the-CreditsView-look-even-even-better.png" alt="Before" data-src-light="track_b-unit_05/baseline/19-Making-the-CreditsView-look-even-even-better.png" data-src-dark="track_b-unit_05/baseline-dark/19-Making-the-CreditsView-look-even-even-better.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/current/19-Making-the-CreditsView-look-even-even-better.png" data-src-dark="track_b-unit_05/current-dark/19-Making-the-CreditsView-look-even-even-better.png" data-modal-label="After — Slide 19: Making the CreditsView look even even better">
+        <img src="track_b-unit_05/current/19-Making-the-CreditsView-look-even-even-better.png" alt="After" data-src-light="track_b-unit_05/current/19-Making-the-CreditsView-look-even-even-better.png" data-src-dark="track_b-unit_05/current-dark/19-Making-the-CreditsView-look-even-even-better.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">20. Making the CreditsView look even even even better</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/baseline/20-Making-the-CreditsView-look-even-even-even-better.png" data-src-dark="track_b-unit_05/baseline-dark/20-Making-the-CreditsView-look-even-even-even-better.png" data-modal-label="Before — Slide 20: Making the CreditsView look even even even better">
+        <img src="track_b-unit_05/baseline/20-Making-the-CreditsView-look-even-even-even-better.png" alt="Before" data-src-light="track_b-unit_05/baseline/20-Making-the-CreditsView-look-even-even-even-better.png" data-src-dark="track_b-unit_05/baseline-dark/20-Making-the-CreditsView-look-even-even-even-better.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/current/20-Making-the-CreditsView-look-even-even-even-better.png" data-src-dark="track_b-unit_05/current-dark/20-Making-the-CreditsView-look-even-even-even-better.png" data-modal-label="After — Slide 20: Making the CreditsView look even even even better">
+        <img src="track_b-unit_05/current/20-Making-the-CreditsView-look-even-even-even-better.png" alt="After" data-src-light="track_b-unit_05/current/20-Making-the-CreditsView-look-even-even-even-better.png" data-src-dark="track_b-unit_05/current-dark/20-Making-the-CreditsView-look-even-even-even-better.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">21. Making the CreditsView look even even even even better</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/baseline/21-Making-the-CreditsView-look-even-even-even-even-better.png" data-src-dark="track_b-unit_05/baseline-dark/21-Making-the-CreditsView-look-even-even-even-even-better.png" data-modal-label="Before — Slide 21: Making the CreditsView look even even even even better">
+        <img src="track_b-unit_05/baseline/21-Making-the-CreditsView-look-even-even-even-even-better.png" alt="Before" data-src-light="track_b-unit_05/baseline/21-Making-the-CreditsView-look-even-even-even-even-better.png" data-src-dark="track_b-unit_05/baseline-dark/21-Making-the-CreditsView-look-even-even-even-even-better.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/current/21-Making-the-CreditsView-look-even-even-even-even-better.png" data-src-dark="track_b-unit_05/current-dark/21-Making-the-CreditsView-look-even-even-even-even-better.png" data-modal-label="After — Slide 21: Making the CreditsView look even even even even better">
+        <img src="track_b-unit_05/current/21-Making-the-CreditsView-look-even-even-even-even-better.png" alt="After" data-src-light="track_b-unit_05/current/21-Making-the-CreditsView-look-even-even-even-even-better.png" data-src-dark="track_b-unit_05/current-dark/21-Making-the-CreditsView-look-even-even-even-even-better.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">22. Making the CreditsView look the best</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/baseline/22-Making-the-CreditsView-look-the-best.png" data-src-dark="track_b-unit_05/baseline-dark/22-Making-the-CreditsView-look-the-best.png" data-modal-label="Before — Slide 22: Making the CreditsView look the best">
+        <img src="track_b-unit_05/baseline/22-Making-the-CreditsView-look-the-best.png" alt="Before" data-src-light="track_b-unit_05/baseline/22-Making-the-CreditsView-look-the-best.png" data-src-dark="track_b-unit_05/baseline-dark/22-Making-the-CreditsView-look-the-best.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/current/22-Making-the-CreditsView-look-the-best.png" data-src-dark="track_b-unit_05/current-dark/22-Making-the-CreditsView-look-the-best.png" data-modal-label="After — Slide 22: Making the CreditsView look the best">
+        <img src="track_b-unit_05/current/22-Making-the-CreditsView-look-the-best.png" alt="After" data-src-light="track_b-unit_05/current/22-Making-the-CreditsView-look-the-best.png" data-src-dark="track_b-unit_05/current-dark/22-Making-the-CreditsView-look-the-best.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">23. Lesson 3 : List</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/baseline/23-Lesson-3---List.png" data-src-dark="track_b-unit_05/baseline-dark/23-Lesson-3---List.png" data-modal-label="Before — Slide 23: Lesson 3 : List">
+        <img src="track_b-unit_05/baseline/23-Lesson-3---List.png" alt="Before" data-src-light="track_b-unit_05/baseline/23-Lesson-3---List.png" data-src-dark="track_b-unit_05/baseline-dark/23-Lesson-3---List.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/current/23-Lesson-3---List.png" data-src-dark="track_b-unit_05/current-dark/23-Lesson-3---List.png" data-modal-label="After — Slide 23: Lesson 3 : List">
+        <img src="track_b-unit_05/current/23-Lesson-3---List.png" alt="After" data-src-light="track_b-unit_05/current/23-Lesson-3---List.png" data-src-dark="track_b-unit_05/current-dark/23-Lesson-3---List.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">24. List</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/baseline/24-List.png" data-src-dark="track_b-unit_05/baseline-dark/24-List.png" data-modal-label="Before — Slide 24: List">
+        <img src="track_b-unit_05/baseline/24-List.png" alt="Before" data-src-light="track_b-unit_05/baseline/24-List.png" data-src-dark="track_b-unit_05/baseline-dark/24-List.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/current/24-List.png" data-src-dark="track_b-unit_05/current-dark/24-List.png" data-modal-label="After — Slide 24: List">
+        <img src="track_b-unit_05/current/24-List.png" alt="After" data-src-light="track_b-unit_05/current/24-List.png" data-src-dark="track_b-unit_05/current-dark/24-List.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">25. Adding a title to the List</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/baseline/25-Adding-a-title-to-the-List.png" data-src-dark="track_b-unit_05/baseline-dark/25-Adding-a-title-to-the-List.png" data-modal-label="Before — Slide 25: Adding a title to the List">
+        <img src="track_b-unit_05/baseline/25-Adding-a-title-to-the-List.png" alt="Before" data-src-light="track_b-unit_05/baseline/25-Adding-a-title-to-the-List.png" data-src-dark="track_b-unit_05/baseline-dark/25-Adding-a-title-to-the-List.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/current/25-Adding-a-title-to-the-List.png" data-src-dark="track_b-unit_05/current-dark/25-Adding-a-title-to-the-List.png" data-modal-label="After — Slide 25: Adding a title to the List">
+        <img src="track_b-unit_05/current/25-Adding-a-title-to-the-List.png" alt="After" data-src-light="track_b-unit_05/current/25-Adding-a-title-to-the-List.png" data-src-dark="track_b-unit_05/current-dark/25-Adding-a-title-to-the-List.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">26. Adding more items to the List</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/baseline/26-Adding-more-items-to-the-List.png" data-src-dark="track_b-unit_05/baseline-dark/26-Adding-more-items-to-the-List.png" data-modal-label="Before — Slide 26: Adding more items to the List">
+        <img src="track_b-unit_05/baseline/26-Adding-more-items-to-the-List.png" alt="Before" data-src-light="track_b-unit_05/baseline/26-Adding-more-items-to-the-List.png" data-src-dark="track_b-unit_05/baseline-dark/26-Adding-more-items-to-the-List.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/current/26-Adding-more-items-to-the-List.png" data-src-dark="track_b-unit_05/current-dark/26-Adding-more-items-to-the-List.png" data-modal-label="After — Slide 26: Adding more items to the List">
+        <img src="track_b-unit_05/current/26-Adding-more-items-to-the-List.png" alt="After" data-src-light="track_b-unit_05/current/26-Adding-more-items-to-the-List.png" data-src-dark="track_b-unit_05/current-dark/26-Adding-more-items-to-the-List.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">27. Using SF Symbols</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/baseline/27-Using-SF-Symbols.png" data-src-dark="track_b-unit_05/baseline-dark/27-Using-SF-Symbols.png" data-modal-label="Before — Slide 27: Using SF Symbols">
+        <img src="track_b-unit_05/baseline/27-Using-SF-Symbols.png" alt="Before" data-src-light="track_b-unit_05/baseline/27-Using-SF-Symbols.png" data-src-dark="track_b-unit_05/baseline-dark/27-Using-SF-Symbols.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/current/27-Using-SF-Symbols.png" data-src-dark="track_b-unit_05/current-dark/27-Using-SF-Symbols.png" data-modal-label="After — Slide 27: Using SF Symbols">
+        <img src="track_b-unit_05/current/27-Using-SF-Symbols.png" alt="After" data-src-light="track_b-unit_05/current/27-Using-SF-Symbols.png" data-src-dark="track_b-unit_05/current-dark/27-Using-SF-Symbols.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">28. Lesson 4 : Using a generic detail view</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/baseline/28-Lesson-4---Using-a-generic-detail-view.png" data-src-dark="track_b-unit_05/baseline-dark/28-Lesson-4---Using-a-generic-detail-view.png" data-modal-label="Before — Slide 28: Lesson 4 : Using a generic detail view">
+        <img src="track_b-unit_05/baseline/28-Lesson-4---Using-a-generic-detail-view.png" alt="Before" data-src-light="track_b-unit_05/baseline/28-Lesson-4---Using-a-generic-detail-view.png" data-src-dark="track_b-unit_05/baseline-dark/28-Lesson-4---Using-a-generic-detail-view.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/current/28-Lesson-4---Using-a-generic-detail-view.png" data-src-dark="track_b-unit_05/current-dark/28-Lesson-4---Using-a-generic-detail-view.png" data-modal-label="After — Slide 28: Lesson 4 : Using a generic detail view">
+        <img src="track_b-unit_05/current/28-Lesson-4---Using-a-generic-detail-view.png" alt="After" data-src-light="track_b-unit_05/current/28-Lesson-4---Using-a-generic-detail-view.png" data-src-dark="track_b-unit_05/current-dark/28-Lesson-4---Using-a-generic-detail-view.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">29. Generic Detail View</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/baseline/29-Generic-Detail-View.png" data-src-dark="track_b-unit_05/baseline-dark/29-Generic-Detail-View.png" data-modal-label="Before — Slide 29: Generic Detail View">
+        <img src="track_b-unit_05/baseline/29-Generic-Detail-View.png" alt="Before" data-src-light="track_b-unit_05/baseline/29-Generic-Detail-View.png" data-src-dark="track_b-unit_05/baseline-dark/29-Generic-Detail-View.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/current/29-Generic-Detail-View.png" data-src-dark="track_b-unit_05/current-dark/29-Generic-Detail-View.png" data-modal-label="After — Slide 29: Generic Detail View">
+        <img src="track_b-unit_05/current/29-Generic-Detail-View.png" alt="After" data-src-light="track_b-unit_05/current/29-Generic-Detail-View.png" data-src-dark="track_b-unit_05/current-dark/29-Generic-Detail-View.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">30. Creating a DetailView</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/baseline/30-Creating-a-DetailView.png" data-src-dark="track_b-unit_05/baseline-dark/30-Creating-a-DetailView.png" data-modal-label="Before — Slide 30: Creating a DetailView">
+        <img src="track_b-unit_05/baseline/30-Creating-a-DetailView.png" alt="Before" data-src-light="track_b-unit_05/baseline/30-Creating-a-DetailView.png" data-src-dark="track_b-unit_05/baseline-dark/30-Creating-a-DetailView.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/current/30-Creating-a-DetailView.png" data-src-dark="track_b-unit_05/current-dark/30-Creating-a-DetailView.png" data-modal-label="After — Slide 30: Creating a DetailView">
+        <img src="track_b-unit_05/current/30-Creating-a-DetailView.png" alt="After" data-src-light="track_b-unit_05/current/30-Creating-a-DetailView.png" data-src-dark="track_b-unit_05/current-dark/30-Creating-a-DetailView.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">31. Adding content to the DetailView</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/baseline/31-Adding-content-to-the-DetailView.png" data-src-dark="track_b-unit_05/baseline-dark/31-Adding-content-to-the-DetailView.png" data-modal-label="Before — Slide 31: Adding content to the DetailView">
+        <img src="track_b-unit_05/baseline/31-Adding-content-to-the-DetailView.png" alt="Before" data-src-light="track_b-unit_05/baseline/31-Adding-content-to-the-DetailView.png" data-src-dark="track_b-unit_05/baseline-dark/31-Adding-content-to-the-DetailView.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/current/31-Adding-content-to-the-DetailView.png" data-src-dark="track_b-unit_05/current-dark/31-Adding-content-to-the-DetailView.png" data-modal-label="After — Slide 31: Adding content to the DetailView">
+        <img src="track_b-unit_05/current/31-Adding-content-to-the-DetailView.png" alt="After" data-src-light="track_b-unit_05/current/31-Adding-content-to-the-DetailView.png" data-src-dark="track_b-unit_05/current-dark/31-Adding-content-to-the-DetailView.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">32. Making our DetailView dynamic</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/baseline/32-Making-our-DetailView-dynamic.png" data-src-dark="track_b-unit_05/baseline-dark/32-Making-our-DetailView-dynamic.png" data-modal-label="Before — Slide 32: Making our DetailView dynamic">
+        <img src="track_b-unit_05/baseline/32-Making-our-DetailView-dynamic.png" alt="Before" data-src-light="track_b-unit_05/baseline/32-Making-our-DetailView-dynamic.png" data-src-dark="track_b-unit_05/baseline-dark/32-Making-our-DetailView-dynamic.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/current/32-Making-our-DetailView-dynamic.png" data-src-dark="track_b-unit_05/current-dark/32-Making-our-DetailView-dynamic.png" data-modal-label="After — Slide 32: Making our DetailView dynamic">
+        <img src="track_b-unit_05/current/32-Making-our-DetailView-dynamic.png" alt="After" data-src-light="track_b-unit_05/current/32-Making-our-DetailView-dynamic.png" data-src-dark="track_b-unit_05/current-dark/32-Making-our-DetailView-dynamic.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">33. Making our DetailView better</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/baseline/33-Making-our-DetailView-better.png" data-src-dark="track_b-unit_05/baseline-dark/33-Making-our-DetailView-better.png" data-modal-label="Before — Slide 33: Making our DetailView better">
+        <img src="track_b-unit_05/baseline/33-Making-our-DetailView-better.png" alt="Before" data-src-light="track_b-unit_05/baseline/33-Making-our-DetailView-better.png" data-src-dark="track_b-unit_05/baseline-dark/33-Making-our-DetailView-better.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/current/33-Making-our-DetailView-better.png" data-src-dark="track_b-unit_05/current-dark/33-Making-our-DetailView-better.png" data-modal-label="After — Slide 33: Making our DetailView better">
+        <img src="track_b-unit_05/current/33-Making-our-DetailView-better.png" alt="After" data-src-light="track_b-unit_05/current/33-Making-our-DetailView-better.png" data-src-dark="track_b-unit_05/current-dark/33-Making-our-DetailView-better.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">34. Let&#39;s test our DetailView</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/baseline/34-Let-s-test-our-DetailView.png" data-src-dark="track_b-unit_05/baseline-dark/34-Let-s-test-our-DetailView.png" data-modal-label="Before — Slide 34: Let&#39;s test our DetailView">
+        <img src="track_b-unit_05/baseline/34-Let-s-test-our-DetailView.png" alt="Before" data-src-light="track_b-unit_05/baseline/34-Let-s-test-our-DetailView.png" data-src-dark="track_b-unit_05/baseline-dark/34-Let-s-test-our-DetailView.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/current/34-Let-s-test-our-DetailView.png" data-src-dark="track_b-unit_05/current-dark/34-Let-s-test-our-DetailView.png" data-modal-label="After — Slide 34: Let&#39;s test our DetailView">
+        <img src="track_b-unit_05/current/34-Let-s-test-our-DetailView.png" alt="After" data-src-light="track_b-unit_05/current/34-Let-s-test-our-DetailView.png" data-src-dark="track_b-unit_05/current-dark/34-Let-s-test-our-DetailView.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">35. Using the DetailView from ContentView</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/baseline/35-Using-the-DetailView-from-ContentView.png" data-src-dark="track_b-unit_05/baseline-dark/35-Using-the-DetailView-from-ContentView.png" data-modal-label="Before — Slide 35: Using the DetailView from ContentView">
+        <img src="track_b-unit_05/baseline/35-Using-the-DetailView-from-ContentView.png" alt="Before" data-src-light="track_b-unit_05/baseline/35-Using-the-DetailView-from-ContentView.png" data-src-dark="track_b-unit_05/baseline-dark/35-Using-the-DetailView-from-ContentView.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/current/35-Using-the-DetailView-from-ContentView.png" data-src-dark="track_b-unit_05/current-dark/35-Using-the-DetailView-from-ContentView.png" data-modal-label="After — Slide 35: Using the DetailView from ContentView">
+        <img src="track_b-unit_05/current/35-Using-the-DetailView-from-ContentView.png" alt="After" data-src-light="track_b-unit_05/current/35-Using-the-DetailView-from-ContentView.png" data-src-dark="track_b-unit_05/current-dark/35-Using-the-DetailView-from-ContentView.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">36. Lesson 5 : Structs and Arrays</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/baseline/36-Lesson-5---Structs-and-Arrays.png" data-src-dark="track_b-unit_05/baseline-dark/36-Lesson-5---Structs-and-Arrays.png" data-modal-label="Before — Slide 36: Lesson 5 : Structs and Arrays">
+        <img src="track_b-unit_05/baseline/36-Lesson-5---Structs-and-Arrays.png" alt="Before" data-src-light="track_b-unit_05/baseline/36-Lesson-5---Structs-and-Arrays.png" data-src-dark="track_b-unit_05/baseline-dark/36-Lesson-5---Structs-and-Arrays.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/current/36-Lesson-5---Structs-and-Arrays.png" data-src-dark="track_b-unit_05/current-dark/36-Lesson-5---Structs-and-Arrays.png" data-modal-label="After — Slide 36: Lesson 5 : Structs and Arrays">
+        <img src="track_b-unit_05/current/36-Lesson-5---Structs-and-Arrays.png" alt="After" data-src-light="track_b-unit_05/current/36-Lesson-5---Structs-and-Arrays.png" data-src-dark="track_b-unit_05/current-dark/36-Lesson-5---Structs-and-Arrays.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">37. UUID and Identifiable in SwiftUI</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/baseline/37-UUID-and-Identifiable-in-SwiftUI.png" data-src-dark="track_b-unit_05/baseline-dark/37-UUID-and-Identifiable-in-SwiftUI.png" data-modal-label="Before — Slide 37: UUID and Identifiable in SwiftUI">
+        <img src="track_b-unit_05/baseline/37-UUID-and-Identifiable-in-SwiftUI.png" alt="Before" data-src-light="track_b-unit_05/baseline/37-UUID-and-Identifiable-in-SwiftUI.png" data-src-dark="track_b-unit_05/baseline-dark/37-UUID-and-Identifiable-in-SwiftUI.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/current/37-UUID-and-Identifiable-in-SwiftUI.png" data-src-dark="track_b-unit_05/current-dark/37-UUID-and-Identifiable-in-SwiftUI.png" data-modal-label="After — Slide 37: UUID and Identifiable in SwiftUI">
+        <img src="track_b-unit_05/current/37-UUID-and-Identifiable-in-SwiftUI.png" alt="After" data-src-light="track_b-unit_05/current/37-UUID-and-Identifiable-in-SwiftUI.png" data-src-dark="track_b-unit_05/current-dark/37-UUID-and-Identifiable-in-SwiftUI.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">38. Bool in Swift</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/baseline/38-Bool-in-Swift.png" data-src-dark="track_b-unit_05/baseline-dark/38-Bool-in-Swift.png" data-modal-label="Before — Slide 38: Bool in Swift">
+        <img src="track_b-unit_05/baseline/38-Bool-in-Swift.png" alt="Before" data-src-light="track_b-unit_05/baseline/38-Bool-in-Swift.png" data-src-dark="track_b-unit_05/baseline-dark/38-Bool-in-Swift.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/current/38-Bool-in-Swift.png" data-src-dark="track_b-unit_05/current-dark/38-Bool-in-Swift.png" data-modal-label="After — Slide 38: Bool in Swift">
+        <img src="track_b-unit_05/current/38-Bool-in-Swift.png" alt="After" data-src-light="track_b-unit_05/current/38-Bool-in-Swift.png" data-src-dark="track_b-unit_05/current-dark/38-Bool-in-Swift.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">39. Structs</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/baseline/39-Structs.png" data-src-dark="track_b-unit_05/baseline-dark/39-Structs.png" data-modal-label="Before — Slide 39: Structs">
+        <img src="track_b-unit_05/baseline/39-Structs.png" alt="Before" data-src-light="track_b-unit_05/baseline/39-Structs.png" data-src-dark="track_b-unit_05/baseline-dark/39-Structs.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/current/39-Structs.png" data-src-dark="track_b-unit_05/current-dark/39-Structs.png" data-modal-label="After — Slide 39: Structs">
+        <img src="track_b-unit_05/current/39-Structs.png" alt="After" data-src-light="track_b-unit_05/current/39-Structs.png" data-src-dark="track_b-unit_05/current-dark/39-Structs.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">40. Using the Recipe struct</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/baseline/40-Using-the-Recipe-struct.png" data-src-dark="track_b-unit_05/baseline-dark/40-Using-the-Recipe-struct.png" data-modal-label="Before — Slide 40: Using the Recipe struct">
+        <img src="track_b-unit_05/baseline/40-Using-the-Recipe-struct.png" alt="Before" data-src-light="track_b-unit_05/baseline/40-Using-the-Recipe-struct.png" data-src-dark="track_b-unit_05/baseline-dark/40-Using-the-Recipe-struct.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/current/40-Using-the-Recipe-struct.png" data-src-dark="track_b-unit_05/current-dark/40-Using-the-Recipe-struct.png" data-modal-label="After — Slide 40: Using the Recipe struct">
+        <img src="track_b-unit_05/current/40-Using-the-Recipe-struct.png" alt="After" data-src-light="track_b-unit_05/current/40-Using-the-Recipe-struct.png" data-src-dark="track_b-unit_05/current-dark/40-Using-the-Recipe-struct.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">41. Creating a list of Recipes</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/baseline/41-Creating-a-list-of-Recipes.png" data-src-dark="track_b-unit_05/baseline-dark/41-Creating-a-list-of-Recipes.png" data-modal-label="Before — Slide 41: Creating a list of Recipes">
+        <img src="track_b-unit_05/baseline/41-Creating-a-list-of-Recipes.png" alt="Before" data-src-light="track_b-unit_05/baseline/41-Creating-a-list-of-Recipes.png" data-src-dark="track_b-unit_05/baseline-dark/41-Creating-a-list-of-Recipes.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/current/41-Creating-a-list-of-Recipes.png" data-src-dark="track_b-unit_05/current-dark/41-Creating-a-list-of-Recipes.png" data-modal-label="After — Slide 41: Creating a list of Recipes">
+        <img src="track_b-unit_05/current/41-Creating-a-list-of-Recipes.png" alt="After" data-src-light="track_b-unit_05/current/41-Creating-a-list-of-Recipes.png" data-src-dark="track_b-unit_05/current-dark/41-Creating-a-list-of-Recipes.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">42. Using the Recipe struct in the ContentView</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/baseline/42-Using-the-Recipe-struct-in-the-ContentView.png" data-src-dark="track_b-unit_05/baseline-dark/42-Using-the-Recipe-struct-in-the-ContentView.png" data-modal-label="Before — Slide 42: Using the Recipe struct in the ContentView">
+        <img src="track_b-unit_05/baseline/42-Using-the-Recipe-struct-in-the-ContentView.png" alt="Before" data-src-light="track_b-unit_05/baseline/42-Using-the-Recipe-struct-in-the-ContentView.png" data-src-dark="track_b-unit_05/baseline-dark/42-Using-the-Recipe-struct-in-the-ContentView.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/current/42-Using-the-Recipe-struct-in-the-ContentView.png" data-src-dark="track_b-unit_05/current-dark/42-Using-the-Recipe-struct-in-the-ContentView.png" data-modal-label="After — Slide 42: Using the Recipe struct in the ContentView">
+        <img src="track_b-unit_05/current/42-Using-the-Recipe-struct-in-the-ContentView.png" alt="After" data-src-light="track_b-unit_05/current/42-Using-the-Recipe-struct-in-the-ContentView.png" data-src-dark="track_b-unit_05/current-dark/42-Using-the-Recipe-struct-in-the-ContentView.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">43. Lesson 6 : Making editable recipes</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/baseline/43-Lesson-6---Making-editable-recipes.png" data-src-dark="track_b-unit_05/baseline-dark/43-Lesson-6---Making-editable-recipes.png" data-modal-label="Before — Slide 43: Lesson 6 : Making editable recipes">
+        <img src="track_b-unit_05/baseline/43-Lesson-6---Making-editable-recipes.png" alt="Before" data-src-light="track_b-unit_05/baseline/43-Lesson-6---Making-editable-recipes.png" data-src-dark="track_b-unit_05/baseline-dark/43-Lesson-6---Making-editable-recipes.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/current/43-Lesson-6---Making-editable-recipes.png" data-src-dark="track_b-unit_05/current-dark/43-Lesson-6---Making-editable-recipes.png" data-modal-label="After — Slide 43: Lesson 6 : Making editable recipes">
+        <img src="track_b-unit_05/current/43-Lesson-6---Making-editable-recipes.png" alt="After" data-src-light="track_b-unit_05/current/43-Lesson-6---Making-editable-recipes.png" data-src-dark="track_b-unit_05/current-dark/43-Lesson-6---Making-editable-recipes.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">44. TextFields in SwiftUI</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/baseline/44-TextFields-in-SwiftUI.png" data-src-dark="track_b-unit_05/baseline-dark/44-TextFields-in-SwiftUI.png" data-modal-label="Before — Slide 44: TextFields in SwiftUI">
+        <img src="track_b-unit_05/baseline/44-TextFields-in-SwiftUI.png" alt="Before" data-src-light="track_b-unit_05/baseline/44-TextFields-in-SwiftUI.png" data-src-dark="track_b-unit_05/baseline-dark/44-TextFields-in-SwiftUI.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/current/44-TextFields-in-SwiftUI.png" data-src-dark="track_b-unit_05/current-dark/44-TextFields-in-SwiftUI.png" data-modal-label="After — Slide 44: TextFields in SwiftUI">
+        <img src="track_b-unit_05/current/44-TextFields-in-SwiftUI.png" alt="After" data-src-light="track_b-unit_05/current/44-TextFields-in-SwiftUI.png" data-src-dark="track_b-unit_05/current-dark/44-TextFields-in-SwiftUI.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">45. TextFields in SwiftUI</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/baseline/45-TextFields-in-SwiftUI.png" data-src-dark="track_b-unit_05/baseline-dark/45-TextFields-in-SwiftUI.png" data-modal-label="Before — Slide 45: TextFields in SwiftUI">
+        <img src="track_b-unit_05/baseline/45-TextFields-in-SwiftUI.png" alt="Before" data-src-light="track_b-unit_05/baseline/45-TextFields-in-SwiftUI.png" data-src-dark="track_b-unit_05/baseline-dark/45-TextFields-in-SwiftUI.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/current/45-TextFields-in-SwiftUI.png" data-src-dark="track_b-unit_05/current-dark/45-TextFields-in-SwiftUI.png" data-modal-label="After — Slide 45: TextFields in SwiftUI">
+        <img src="track_b-unit_05/current/45-TextFields-in-SwiftUI.png" alt="After" data-src-light="track_b-unit_05/current/45-TextFields-in-SwiftUI.png" data-src-dark="track_b-unit_05/current-dark/45-TextFields-in-SwiftUI.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">46. Adding TextFields to the DetailView</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/baseline/46-Adding-TextFields-to-the-DetailView.png" data-src-dark="track_b-unit_05/baseline-dark/46-Adding-TextFields-to-the-DetailView.png" data-modal-label="Before — Slide 46: Adding TextFields to the DetailView">
+        <img src="track_b-unit_05/baseline/46-Adding-TextFields-to-the-DetailView.png" alt="Before" data-src-light="track_b-unit_05/baseline/46-Adding-TextFields-to-the-DetailView.png" data-src-dark="track_b-unit_05/baseline-dark/46-Adding-TextFields-to-the-DetailView.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/current/46-Adding-TextFields-to-the-DetailView.png" data-src-dark="track_b-unit_05/current-dark/46-Adding-TextFields-to-the-DetailView.png" data-modal-label="After — Slide 46: Adding TextFields to the DetailView">
+        <img src="track_b-unit_05/current/46-Adding-TextFields-to-the-DetailView.png" alt="After" data-src-light="track_b-unit_05/current/46-Adding-TextFields-to-the-DetailView.png" data-src-dark="track_b-unit_05/current-dark/46-Adding-TextFields-to-the-DetailView.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">47. Lesson 7 : Binding</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/baseline/47-Lesson-7---Binding.png" data-src-dark="track_b-unit_05/baseline-dark/47-Lesson-7---Binding.png" data-modal-label="Before — Slide 47: Lesson 7 : Binding">
+        <img src="track_b-unit_05/baseline/47-Lesson-7---Binding.png" alt="Before" data-src-light="track_b-unit_05/baseline/47-Lesson-7---Binding.png" data-src-dark="track_b-unit_05/baseline-dark/47-Lesson-7---Binding.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/current/47-Lesson-7---Binding.png" data-src-dark="track_b-unit_05/current-dark/47-Lesson-7---Binding.png" data-modal-label="After — Slide 47: Lesson 7 : Binding">
+        <img src="track_b-unit_05/current/47-Lesson-7---Binding.png" alt="After" data-src-light="track_b-unit_05/current/47-Lesson-7---Binding.png" data-src-dark="track_b-unit_05/current-dark/47-Lesson-7---Binding.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">48. It did not work! Why?</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/baseline/48-It-did-not-work--Why-.png" data-src-dark="track_b-unit_05/baseline-dark/48-It-did-not-work--Why-.png" data-modal-label="Before — Slide 48: It did not work! Why?">
+        <img src="track_b-unit_05/baseline/48-It-did-not-work--Why-.png" alt="Before" data-src-light="track_b-unit_05/baseline/48-It-did-not-work--Why-.png" data-src-dark="track_b-unit_05/baseline-dark/48-It-did-not-work--Why-.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/current/48-It-did-not-work--Why-.png" data-src-dark="track_b-unit_05/current-dark/48-It-did-not-work--Why-.png" data-modal-label="After — Slide 48: It did not work! Why?">
+        <img src="track_b-unit_05/current/48-It-did-not-work--Why-.png" alt="After" data-src-light="track_b-unit_05/current/48-It-did-not-work--Why-.png" data-src-dark="track_b-unit_05/current-dark/48-It-did-not-work--Why-.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">49. Adding a binding to the DetailView</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/baseline/49-Adding-a-binding-to-the-DetailView.png" data-src-dark="track_b-unit_05/baseline-dark/49-Adding-a-binding-to-the-DetailView.png" data-modal-label="Before — Slide 49: Adding a binding to the DetailView">
+        <img src="track_b-unit_05/baseline/49-Adding-a-binding-to-the-DetailView.png" alt="Before" data-src-light="track_b-unit_05/baseline/49-Adding-a-binding-to-the-DetailView.png" data-src-dark="track_b-unit_05/baseline-dark/49-Adding-a-binding-to-the-DetailView.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/current/49-Adding-a-binding-to-the-DetailView.png" data-src-dark="track_b-unit_05/current-dark/49-Adding-a-binding-to-the-DetailView.png" data-modal-label="After — Slide 49: Adding a binding to the DetailView">
+        <img src="track_b-unit_05/current/49-Adding-a-binding-to-the-DetailView.png" alt="After" data-src-light="track_b-unit_05/current/49-Adding-a-binding-to-the-DetailView.png" data-src-dark="track_b-unit_05/current-dark/49-Adding-a-binding-to-the-DetailView.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">50. Using the DetailView with a binding</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/baseline/50-Using-the-DetailView-with-a-binding.png" data-src-dark="track_b-unit_05/baseline-dark/50-Using-the-DetailView-with-a-binding.png" data-modal-label="Before — Slide 50: Using the DetailView with a binding">
+        <img src="track_b-unit_05/baseline/50-Using-the-DetailView-with-a-binding.png" alt="Before" data-src-light="track_b-unit_05/baseline/50-Using-the-DetailView-with-a-binding.png" data-src-dark="track_b-unit_05/baseline-dark/50-Using-the-DetailView-with-a-binding.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/current/50-Using-the-DetailView-with-a-binding.png" data-src-dark="track_b-unit_05/current-dark/50-Using-the-DetailView-with-a-binding.png" data-modal-label="After — Slide 50: Using the DetailView with a binding">
+        <img src="track_b-unit_05/current/50-Using-the-DetailView-with-a-binding.png" alt="After" data-src-light="track_b-unit_05/current/50-Using-the-DetailView-with-a-binding.png" data-src-dark="track_b-unit_05/current-dark/50-Using-the-DetailView-with-a-binding.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">51. Sending recipes to the DetailView</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/baseline/51-Sending-recipes-to-the-DetailView.png" data-src-dark="track_b-unit_05/baseline-dark/51-Sending-recipes-to-the-DetailView.png" data-modal-label="Before — Slide 51: Sending recipes to the DetailView">
+        <img src="track_b-unit_05/baseline/51-Sending-recipes-to-the-DetailView.png" alt="Before" data-src-light="track_b-unit_05/baseline/51-Sending-recipes-to-the-DetailView.png" data-src-dark="track_b-unit_05/baseline-dark/51-Sending-recipes-to-the-DetailView.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/current/51-Sending-recipes-to-the-DetailView.png" data-src-dark="track_b-unit_05/current-dark/51-Sending-recipes-to-the-DetailView.png" data-modal-label="After — Slide 51: Sending recipes to the DetailView">
+        <img src="track_b-unit_05/current/51-Sending-recipes-to-the-DetailView.png" alt="After" data-src-light="track_b-unit_05/current/51-Sending-recipes-to-the-DetailView.png" data-src-dark="track_b-unit_05/current-dark/51-Sending-recipes-to-the-DetailView.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">52. Sending recipes to the DetailView</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/baseline/52-Sending-recipes-to-the-DetailView.png" data-src-dark="track_b-unit_05/baseline-dark/52-Sending-recipes-to-the-DetailView.png" data-modal-label="Before — Slide 52: Sending recipes to the DetailView">
+        <img src="track_b-unit_05/baseline/52-Sending-recipes-to-the-DetailView.png" alt="Before" data-src-light="track_b-unit_05/baseline/52-Sending-recipes-to-the-DetailView.png" data-src-dark="track_b-unit_05/baseline-dark/52-Sending-recipes-to-the-DetailView.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/current/52-Sending-recipes-to-the-DetailView.png" data-src-dark="track_b-unit_05/current-dark/52-Sending-recipes-to-the-DetailView.png" data-modal-label="After — Slide 52: Sending recipes to the DetailView">
+        <img src="track_b-unit_05/current/52-Sending-recipes-to-the-DetailView.png" alt="After" data-src-light="track_b-unit_05/current/52-Sending-recipes-to-the-DetailView.png" data-src-dark="track_b-unit_05/current-dark/52-Sending-recipes-to-the-DetailView.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">53. Let&#39;s change our Preview</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/baseline/53-Let-s-change-our-Preview.png" data-src-dark="track_b-unit_05/baseline-dark/53-Let-s-change-our-Preview.png" data-modal-label="Before — Slide 53: Let&#39;s change our Preview">
+        <img src="track_b-unit_05/baseline/53-Let-s-change-our-Preview.png" alt="Before" data-src-light="track_b-unit_05/baseline/53-Let-s-change-our-Preview.png" data-src-dark="track_b-unit_05/baseline-dark/53-Let-s-change-our-Preview.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/current/53-Let-s-change-our-Preview.png" data-src-dark="track_b-unit_05/current-dark/53-Let-s-change-our-Preview.png" data-modal-label="After — Slide 53: Let&#39;s change our Preview">
+        <img src="track_b-unit_05/current/53-Let-s-change-our-Preview.png" alt="After" data-src-light="track_b-unit_05/current/53-Let-s-change-our-Preview.png" data-src-dark="track_b-unit_05/current-dark/53-Let-s-change-our-Preview.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">54. Expanding our app</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/baseline/54-Expanding-our-app.png" data-src-dark="track_b-unit_05/baseline-dark/54-Expanding-our-app.png" data-modal-label="Before — Slide 54: Expanding our app">
+        <img src="track_b-unit_05/baseline/54-Expanding-our-app.png" alt="Before" data-src-light="track_b-unit_05/baseline/54-Expanding-our-app.png" data-src-dark="track_b-unit_05/baseline-dark/54-Expanding-our-app.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/current/54-Expanding-our-app.png" data-src-dark="track_b-unit_05/current-dark/54-Expanding-our-app.png" data-modal-label="After — Slide 54: Expanding our app">
+        <img src="track_b-unit_05/current/54-Expanding-our-app.png" alt="After" data-src-light="track_b-unit_05/current/54-Expanding-our-app.png" data-src-dark="track_b-unit_05/current-dark/54-Expanding-our-app.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">55. Show the favourite status in the list</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/baseline/55-Show-the-favourite-status-in-the-list.png" data-src-dark="track_b-unit_05/baseline-dark/55-Show-the-favourite-status-in-the-list.png" data-modal-label="Before — Slide 55: Show the favourite status in the list">
+        <img src="track_b-unit_05/baseline/55-Show-the-favourite-status-in-the-list.png" alt="Before" data-src-light="track_b-unit_05/baseline/55-Show-the-favourite-status-in-the-list.png" data-src-dark="track_b-unit_05/baseline-dark/55-Show-the-favourite-status-in-the-list.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/current/55-Show-the-favourite-status-in-the-list.png" data-src-dark="track_b-unit_05/current-dark/55-Show-the-favourite-status-in-the-list.png" data-modal-label="After — Slide 55: Show the favourite status in the list">
+        <img src="track_b-unit_05/current/55-Show-the-favourite-status-in-the-list.png" alt="After" data-src-light="track_b-unit_05/current/55-Show-the-favourite-status-in-the-list.png" data-src-dark="track_b-unit_05/current-dark/55-Show-the-favourite-status-in-the-list.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">56. Adding new recipes</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/baseline/56-Adding-new-recipes.png" data-src-dark="track_b-unit_05/baseline-dark/56-Adding-new-recipes.png" data-modal-label="Before — Slide 56: Adding new recipes">
+        <img src="track_b-unit_05/baseline/56-Adding-new-recipes.png" alt="Before" data-src-light="track_b-unit_05/baseline/56-Adding-new-recipes.png" data-src-dark="track_b-unit_05/baseline-dark/56-Adding-new-recipes.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/current/56-Adding-new-recipes.png" data-src-dark="track_b-unit_05/current-dark/56-Adding-new-recipes.png" data-modal-label="After — Slide 56: Adding new recipes">
+        <img src="track_b-unit_05/current/56-Adding-new-recipes.png" alt="After" data-src-light="track_b-unit_05/current/56-Adding-new-recipes.png" data-src-dark="track_b-unit_05/current-dark/56-Adding-new-recipes.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">57. Adding new recipes</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/baseline/57-Adding-new-recipes.png" data-src-dark="track_b-unit_05/baseline-dark/57-Adding-new-recipes.png" data-modal-label="Before — Slide 57: Adding new recipes">
+        <img src="track_b-unit_05/baseline/57-Adding-new-recipes.png" alt="Before" data-src-light="track_b-unit_05/baseline/57-Adding-new-recipes.png" data-src-dark="track_b-unit_05/baseline-dark/57-Adding-new-recipes.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/current/57-Adding-new-recipes.png" data-src-dark="track_b-unit_05/current-dark/57-Adding-new-recipes.png" data-modal-label="After — Slide 57: Adding new recipes">
+        <img src="track_b-unit_05/current/57-Adding-new-recipes.png" alt="After" data-src-light="track_b-unit_05/current/57-Adding-new-recipes.png" data-src-dark="track_b-unit_05/current-dark/57-Adding-new-recipes.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">58. Adding new recipes</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/baseline/58-Adding-new-recipes.png" data-src-dark="track_b-unit_05/baseline-dark/58-Adding-new-recipes.png" data-modal-label="Before — Slide 58: Adding new recipes">
+        <img src="track_b-unit_05/baseline/58-Adding-new-recipes.png" alt="Before" data-src-light="track_b-unit_05/baseline/58-Adding-new-recipes.png" data-src-dark="track_b-unit_05/baseline-dark/58-Adding-new-recipes.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/current/58-Adding-new-recipes.png" data-src-dark="track_b-unit_05/current-dark/58-Adding-new-recipes.png" data-modal-label="After — Slide 58: Adding new recipes">
+        <img src="track_b-unit_05/current/58-Adding-new-recipes.png" alt="After" data-src-light="track_b-unit_05/current/58-Adding-new-recipes.png" data-src-dark="track_b-unit_05/current-dark/58-Adding-new-recipes.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">59. Adding new recipes</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/baseline/59-Adding-new-recipes.png" data-src-dark="track_b-unit_05/baseline-dark/59-Adding-new-recipes.png" data-modal-label="Before — Slide 59: Adding new recipes">
+        <img src="track_b-unit_05/baseline/59-Adding-new-recipes.png" alt="Before" data-src-light="track_b-unit_05/baseline/59-Adding-new-recipes.png" data-src-dark="track_b-unit_05/baseline-dark/59-Adding-new-recipes.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/current/59-Adding-new-recipes.png" data-src-dark="track_b-unit_05/current-dark/59-Adding-new-recipes.png" data-modal-label="After — Slide 59: Adding new recipes">
+        <img src="track_b-unit_05/current/59-Adding-new-recipes.png" alt="After" data-src-light="track_b-unit_05/current/59-Adding-new-recipes.png" data-src-dark="track_b-unit_05/current-dark/59-Adding-new-recipes.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">60. Adding new recipes</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/baseline/60-Adding-new-recipes.png" data-src-dark="track_b-unit_05/baseline-dark/60-Adding-new-recipes.png" data-modal-label="Before — Slide 60: Adding new recipes">
+        <img src="track_b-unit_05/baseline/60-Adding-new-recipes.png" alt="Before" data-src-light="track_b-unit_05/baseline/60-Adding-new-recipes.png" data-src-dark="track_b-unit_05/baseline-dark/60-Adding-new-recipes.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/current/60-Adding-new-recipes.png" data-src-dark="track_b-unit_05/current-dark/60-Adding-new-recipes.png" data-modal-label="After — Slide 60: Adding new recipes">
+        <img src="track_b-unit_05/current/60-Adding-new-recipes.png" alt="After" data-src-light="track_b-unit_05/current/60-Adding-new-recipes.png" data-src-dark="track_b-unit_05/current-dark/60-Adding-new-recipes.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">61. Adding new recipes</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/baseline/61-Adding-new-recipes.png" data-src-dark="track_b-unit_05/baseline-dark/61-Adding-new-recipes.png" data-modal-label="Before — Slide 61: Adding new recipes">
+        <img src="track_b-unit_05/baseline/61-Adding-new-recipes.png" alt="Before" data-src-light="track_b-unit_05/baseline/61-Adding-new-recipes.png" data-src-dark="track_b-unit_05/baseline-dark/61-Adding-new-recipes.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/current/61-Adding-new-recipes.png" data-src-dark="track_b-unit_05/current-dark/61-Adding-new-recipes.png" data-modal-label="After — Slide 61: Adding new recipes">
+        <img src="track_b-unit_05/current/61-Adding-new-recipes.png" alt="After" data-src-light="track_b-unit_05/current/61-Adding-new-recipes.png" data-src-dark="track_b-unit_05/current-dark/61-Adding-new-recipes.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">62. Modifying recipes</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/baseline/62-Modifying-recipes.png" data-src-dark="track_b-unit_05/baseline-dark/62-Modifying-recipes.png" data-modal-label="Before — Slide 62: Modifying recipes">
+        <img src="track_b-unit_05/baseline/62-Modifying-recipes.png" alt="Before" data-src-light="track_b-unit_05/baseline/62-Modifying-recipes.png" data-src-dark="track_b-unit_05/baseline-dark/62-Modifying-recipes.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/current/62-Modifying-recipes.png" data-src-dark="track_b-unit_05/current-dark/62-Modifying-recipes.png" data-modal-label="After — Slide 62: Modifying recipes">
+        <img src="track_b-unit_05/current/62-Modifying-recipes.png" alt="After" data-src-light="track_b-unit_05/current/62-Modifying-recipes.png" data-src-dark="track_b-unit_05/current-dark/62-Modifying-recipes.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">63. Deleting recipes</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/baseline/63-Deleting-recipes.png" data-src-dark="track_b-unit_05/baseline-dark/63-Deleting-recipes.png" data-modal-label="Before — Slide 63: Deleting recipes">
+        <img src="track_b-unit_05/baseline/63-Deleting-recipes.png" alt="Before" data-src-light="track_b-unit_05/baseline/63-Deleting-recipes.png" data-src-dark="track_b-unit_05/baseline-dark/63-Deleting-recipes.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/current/63-Deleting-recipes.png" data-src-dark="track_b-unit_05/current-dark/63-Deleting-recipes.png" data-modal-label="After — Slide 63: Deleting recipes">
+        <img src="track_b-unit_05/current/63-Deleting-recipes.png" alt="After" data-src-light="track_b-unit_05/current/63-Deleting-recipes.png" data-src-dark="track_b-unit_05/current-dark/63-Deleting-recipes.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">64. Reordering recipes</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/baseline/64-Reordering-recipes.png" data-src-dark="track_b-unit_05/baseline-dark/64-Reordering-recipes.png" data-modal-label="Before — Slide 64: Reordering recipes">
+        <img src="track_b-unit_05/baseline/64-Reordering-recipes.png" alt="Before" data-src-light="track_b-unit_05/baseline/64-Reordering-recipes.png" data-src-dark="track_b-unit_05/baseline-dark/64-Reordering-recipes.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/current/64-Reordering-recipes.png" data-src-dark="track_b-unit_05/current-dark/64-Reordering-recipes.png" data-modal-label="After — Slide 64: Reordering recipes">
+        <img src="track_b-unit_05/current/64-Reordering-recipes.png" alt="After" data-src-light="track_b-unit_05/current/64-Reordering-recipes.png" data-src-dark="track_b-unit_05/current-dark/64-Reordering-recipes.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">65. Making the app look better</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/baseline/65-Making-the-app-look-better.png" data-src-dark="track_b-unit_05/baseline-dark/65-Making-the-app-look-better.png" data-modal-label="Before — Slide 65: Making the app look better">
+        <img src="track_b-unit_05/baseline/65-Making-the-app-look-better.png" alt="Before" data-src-light="track_b-unit_05/baseline/65-Making-the-app-look-better.png" data-src-dark="track_b-unit_05/baseline-dark/65-Making-the-app-look-better.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/current/65-Making-the-app-look-better.png" data-src-dark="track_b-unit_05/current-dark/65-Making-the-app-look-better.png" data-modal-label="After — Slide 65: Making the app look better">
+        <img src="track_b-unit_05/current/65-Making-the-app-look-better.png" alt="After" data-src-light="track_b-unit_05/current/65-Making-the-app-look-better.png" data-src-dark="track_b-unit_05/current-dark/65-Making-the-app-look-better.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">66. Cleaning up</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/baseline/66-Cleaning-up.png" data-src-dark="track_b-unit_05/baseline-dark/66-Cleaning-up.png" data-modal-label="Before — Slide 66: Cleaning up">
+        <img src="track_b-unit_05/baseline/66-Cleaning-up.png" alt="Before" data-src-light="track_b-unit_05/baseline/66-Cleaning-up.png" data-src-dark="track_b-unit_05/baseline-dark/66-Cleaning-up.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/current/66-Cleaning-up.png" data-src-dark="track_b-unit_05/current-dark/66-Cleaning-up.png" data-modal-label="After — Slide 66: Cleaning up">
+        <img src="track_b-unit_05/current/66-Cleaning-up.png" alt="After" data-src-light="track_b-unit_05/current/66-Cleaning-up.png" data-src-dark="track_b-unit_05/current-dark/66-Cleaning-up.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">67. Cleaning up</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/baseline/67-Cleaning-up.png" data-src-dark="track_b-unit_05/baseline-dark/67-Cleaning-up.png" data-modal-label="Before — Slide 67: Cleaning up">
+        <img src="track_b-unit_05/baseline/67-Cleaning-up.png" alt="Before" data-src-light="track_b-unit_05/baseline/67-Cleaning-up.png" data-src-dark="track_b-unit_05/baseline-dark/67-Cleaning-up.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/current/67-Cleaning-up.png" data-src-dark="track_b-unit_05/current-dark/67-Cleaning-up.png" data-modal-label="After — Slide 67: Cleaning up">
+        <img src="track_b-unit_05/current/67-Cleaning-up.png" alt="After" data-src-light="track_b-unit_05/current/67-Cleaning-up.png" data-src-dark="track_b-unit_05/current-dark/67-Cleaning-up.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">68. Making a custom AddView</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/baseline/68-Making-a-custom-AddView.png" data-src-dark="track_b-unit_05/baseline-dark/68-Making-a-custom-AddView.png" data-modal-label="Before — Slide 68: Making a custom AddView">
+        <img src="track_b-unit_05/baseline/68-Making-a-custom-AddView.png" alt="Before" data-src-light="track_b-unit_05/baseline/68-Making-a-custom-AddView.png" data-src-dark="track_b-unit_05/baseline-dark/68-Making-a-custom-AddView.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/current/68-Making-a-custom-AddView.png" data-src-dark="track_b-unit_05/current-dark/68-Making-a-custom-AddView.png" data-modal-label="After — Slide 68: Making a custom AddView">
+        <img src="track_b-unit_05/current/68-Making-a-custom-AddView.png" alt="After" data-src-light="track_b-unit_05/current/68-Making-a-custom-AddView.png" data-src-dark="track_b-unit_05/current-dark/68-Making-a-custom-AddView.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">69. Making a custom DetailView</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/baseline/69-Making-a-custom-DetailView.png" data-src-dark="track_b-unit_05/baseline-dark/69-Making-a-custom-DetailView.png" data-modal-label="Before — Slide 69: Making a custom DetailView">
+        <img src="track_b-unit_05/baseline/69-Making-a-custom-DetailView.png" alt="Before" data-src-light="track_b-unit_05/baseline/69-Making-a-custom-DetailView.png" data-src-dark="track_b-unit_05/baseline-dark/69-Making-a-custom-DetailView.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/current/69-Making-a-custom-DetailView.png" data-src-dark="track_b-unit_05/current-dark/69-Making-a-custom-DetailView.png" data-modal-label="After — Slide 69: Making a custom DetailView">
+        <img src="track_b-unit_05/current/69-Making-a-custom-DetailView.png" alt="After" data-src-light="track_b-unit_05/current/69-Making-a-custom-DetailView.png" data-src-dark="track_b-unit_05/current-dark/69-Making-a-custom-DetailView.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">70. Linking the recipes</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/baseline/70-Linking-the-recipes.png" data-src-dark="track_b-unit_05/baseline-dark/70-Linking-the-recipes.png" data-modal-label="Before — Slide 70: Linking the recipes">
+        <img src="track_b-unit_05/baseline/70-Linking-the-recipes.png" alt="Before" data-src-light="track_b-unit_05/baseline/70-Linking-the-recipes.png" data-src-dark="track_b-unit_05/baseline-dark/70-Linking-the-recipes.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/current/70-Linking-the-recipes.png" data-src-dark="track_b-unit_05/current-dark/70-Linking-the-recipes.png" data-modal-label="After — Slide 70: Linking the recipes">
+        <img src="track_b-unit_05/current/70-Linking-the-recipes.png" alt="After" data-src-light="track_b-unit_05/current/70-Linking-the-recipes.png" data-src-dark="track_b-unit_05/current-dark/70-Linking-the-recipes.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">71. Fixing the preview error</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/baseline/71-Fixing-the-preview-error.png" data-src-dark="track_b-unit_05/baseline-dark/71-Fixing-the-preview-error.png" data-modal-label="Before — Slide 71: Fixing the preview error">
+        <img src="track_b-unit_05/baseline/71-Fixing-the-preview-error.png" alt="Before" data-src-light="track_b-unit_05/baseline/71-Fixing-the-preview-error.png" data-src-dark="track_b-unit_05/baseline-dark/71-Fixing-the-preview-error.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/current/71-Fixing-the-preview-error.png" data-src-dark="track_b-unit_05/current-dark/71-Fixing-the-preview-error.png" data-modal-label="After — Slide 71: Fixing the preview error">
+        <img src="track_b-unit_05/current/71-Fixing-the-preview-error.png" alt="After" data-src-light="track_b-unit_05/current/71-Fixing-the-preview-error.png" data-src-dark="track_b-unit_05/current-dark/71-Fixing-the-preview-error.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">72. Updating the ContentView</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/baseline/72-Updating-the-ContentView.png" data-src-dark="track_b-unit_05/baseline-dark/72-Updating-the-ContentView.png" data-modal-label="Before — Slide 72: Updating the ContentView">
+        <img src="track_b-unit_05/baseline/72-Updating-the-ContentView.png" alt="Before" data-src-light="track_b-unit_05/baseline/72-Updating-the-ContentView.png" data-src-dark="track_b-unit_05/baseline-dark/72-Updating-the-ContentView.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/current/72-Updating-the-ContentView.png" data-src-dark="track_b-unit_05/current-dark/72-Updating-the-ContentView.png" data-modal-label="After — Slide 72: Updating the ContentView">
+        <img src="track_b-unit_05/current/72-Updating-the-ContentView.png" alt="After" data-src-light="track_b-unit_05/current/72-Updating-the-ContentView.png" data-src-dark="track_b-unit_05/current-dark/72-Updating-the-ContentView.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">73. Congratulations! You&#39;ve completed Unit 5!</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/baseline/73-Congratulations--You-ve-completed-Unit-5-.png" data-src-dark="track_b-unit_05/baseline-dark/73-Congratulations--You-ve-completed-Unit-5-.png" data-modal-label="Before — Slide 73: Congratulations! You&#39;ve completed Unit 5!">
+        <img src="track_b-unit_05/baseline/73-Congratulations--You-ve-completed-Unit-5-.png" alt="Before" data-src-light="track_b-unit_05/baseline/73-Congratulations--You-ve-completed-Unit-5-.png" data-src-dark="track_b-unit_05/baseline-dark/73-Congratulations--You-ve-completed-Unit-5-.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_05/current/73-Congratulations--You-ve-completed-Unit-5-.png" data-src-dark="track_b-unit_05/current-dark/73-Congratulations--You-ve-completed-Unit-5-.png" data-modal-label="After — Slide 73: Congratulations! You&#39;ve completed Unit 5!">
+        <img src="track_b-unit_05/current/73-Congratulations--You-ve-completed-Unit-5-.png" alt="After" data-src-light="track_b-unit_05/current/73-Congratulations--You-ve-completed-Unit-5-.png" data-src-dark="track_b-unit_05/current-dark/73-Congratulations--You-ve-completed-Unit-5-.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">1. Download the Keynote</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_06/baseline/01-Download-the-Keynote.png" data-src-dark="track_b-unit_06/baseline-dark/01-Download-the-Keynote.png" data-modal-label="Before — Slide 1: Download the Keynote">
+        <img src="track_b-unit_06/baseline/01-Download-the-Keynote.png" alt="Before" data-src-light="track_b-unit_06/baseline/01-Download-the-Keynote.png" data-src-dark="track_b-unit_06/baseline-dark/01-Download-the-Keynote.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_06/current/01-Download-the-Keynote.png" data-src-dark="track_b-unit_06/current-dark/01-Download-the-Keynote.png" data-modal-label="After — Slide 1: Download the Keynote">
+        <img src="track_b-unit_06/current/01-Download-the-Keynote.png" alt="After" data-src-light="track_b-unit_06/current/01-Download-the-Keynote.png" data-src-dark="track_b-unit_06/current-dark/01-Download-the-Keynote.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">2. Project Brief</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_06/baseline/02-Project-Brief.png" data-src-dark="track_b-unit_06/baseline-dark/02-Project-Brief.png" data-modal-label="Before — Slide 2: Project Brief">
+        <img src="track_b-unit_06/baseline/02-Project-Brief.png" alt="Before" data-src-light="track_b-unit_06/baseline/02-Project-Brief.png" data-src-dark="track_b-unit_06/baseline-dark/02-Project-Brief.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_06/current/02-Project-Brief.png" data-src-dark="track_b-unit_06/current-dark/02-Project-Brief.png" data-modal-label="After — Slide 2: Project Brief">
+        <img src="track_b-unit_06/current/02-Project-Brief.png" alt="After" data-src-light="track_b-unit_06/current/02-Project-Brief.png" data-src-dark="track_b-unit_06/current-dark/02-Project-Brief.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">3. Single-Feature iPad App</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_06/baseline/03-Single-Feature-iPad-App.png" data-src-dark="track_b-unit_06/baseline-dark/03-Single-Feature-iPad-App.png" data-modal-label="Before — Slide 3: Single-Feature iPad App">
+        <img src="track_b-unit_06/baseline/03-Single-Feature-iPad-App.png" alt="Before" data-src-light="track_b-unit_06/baseline/03-Single-Feature-iPad-App.png" data-src-dark="track_b-unit_06/baseline-dark/03-Single-Feature-iPad-App.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_06/current/03-Single-Feature-iPad-App.png" data-src-dark="track_b-unit_06/current-dark/03-Single-Feature-iPad-App.png" data-modal-label="After — Slide 3: Single-Feature iPad App">
+        <img src="track_b-unit_06/current/03-Single-Feature-iPad-App.png" alt="After" data-src-light="track_b-unit_06/current/03-Single-Feature-iPad-App.png" data-src-dark="track_b-unit_06/current-dark/03-Single-Feature-iPad-App.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">4. ![Overengineered Arrow Keys](/assets/oak.png) Overengineered Arrow Keys</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_06/baseline/04---Overengineered-Arrow-Keys---assets-oak.png--Overengineered-Arrow-Keys.png" data-src-dark="track_b-unit_06/baseline-dark/04---Overengineered-Arrow-Keys---assets-oak.png--Overengineered-Arrow-Keys.png" data-modal-label="Before — Slide 4: ![Overengineered Arrow Keys](/assets/oak.png) Overengineered Arrow Keys">
+        <img src="track_b-unit_06/baseline/04---Overengineered-Arrow-Keys---assets-oak.png--Overengineered-Arrow-Keys.png" alt="Before" data-src-light="track_b-unit_06/baseline/04---Overengineered-Arrow-Keys---assets-oak.png--Overengineered-Arrow-Keys.png" data-src-dark="track_b-unit_06/baseline-dark/04---Overengineered-Arrow-Keys---assets-oak.png--Overengineered-Arrow-Keys.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_06/current/04---Overengineered-Arrow-Keys---assets-oak.png--Overengineered-Arrow-Keys.png" data-src-dark="track_b-unit_06/current-dark/04---Overengineered-Arrow-Keys---assets-oak.png--Overengineered-Arrow-Keys.png" data-modal-label="After — Slide 4: ![Overengineered Arrow Keys](/assets/oak.png) Overengineered Arrow Keys">
+        <img src="track_b-unit_06/current/04---Overengineered-Arrow-Keys---assets-oak.png--Overengineered-Arrow-Keys.png" alt="After" data-src-light="track_b-unit_06/current/04---Overengineered-Arrow-Keys---assets-oak.png--Overengineered-Arrow-Keys.png" data-src-dark="track_b-unit_06/current-dark/04---Overengineered-Arrow-Keys---assets-oak.png--Overengineered-Arrow-Keys.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">5. Think Simple</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_06/baseline/05-Think-Simple.png" data-src-dark="track_b-unit_06/baseline-dark/05-Think-Simple.png" data-modal-label="Before — Slide 5: Think Simple">
+        <img src="track_b-unit_06/baseline/05-Think-Simple.png" alt="Before" data-src-light="track_b-unit_06/baseline/05-Think-Simple.png" data-src-dark="track_b-unit_06/baseline-dark/05-Think-Simple.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_06/current/05-Think-Simple.png" data-src-dark="track_b-unit_06/current-dark/05-Think-Simple.png" data-modal-label="After — Slide 5: Think Simple">
+        <img src="track_b-unit_06/current/05-Think-Simple.png" alt="After" data-src-light="track_b-unit_06/current/05-Think-Simple.png" data-src-dark="track_b-unit_06/current-dark/05-Think-Simple.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">6. Brainstorm &amp; Plan</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_06/baseline/06-Brainstorm---Plan.png" data-src-dark="track_b-unit_06/baseline-dark/06-Brainstorm---Plan.png" data-modal-label="Before — Slide 6: Brainstorm &amp; Plan">
+        <img src="track_b-unit_06/baseline/06-Brainstorm---Plan.png" alt="Before" data-src-light="track_b-unit_06/baseline/06-Brainstorm---Plan.png" data-src-dark="track_b-unit_06/baseline-dark/06-Brainstorm---Plan.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_06/current/06-Brainstorm---Plan.png" data-src-dark="track_b-unit_06/current-dark/06-Brainstorm---Plan.png" data-modal-label="After — Slide 6: Brainstorm &amp; Plan">
+        <img src="track_b-unit_06/current/06-Brainstorm---Plan.png" alt="After" data-src-light="track_b-unit_06/current/06-Brainstorm---Plan.png" data-src-dark="track_b-unit_06/current-dark/06-Brainstorm---Plan.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">7. Generate Ideas</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_06/baseline/07-Generate-Ideas.png" data-src-dark="track_b-unit_06/baseline-dark/07-Generate-Ideas.png" data-modal-label="Before — Slide 7: Generate Ideas">
+        <img src="track_b-unit_06/baseline/07-Generate-Ideas.png" alt="Before" data-src-light="track_b-unit_06/baseline/07-Generate-Ideas.png" data-src-dark="track_b-unit_06/baseline-dark/07-Generate-Ideas.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_06/current/07-Generate-Ideas.png" data-src-dark="track_b-unit_06/current-dark/07-Generate-Ideas.png" data-modal-label="After — Slide 7: Generate Ideas">
+        <img src="track_b-unit_06/current/07-Generate-Ideas.png" alt="After" data-src-light="track_b-unit_06/current/07-Generate-Ideas.png" data-src-dark="track_b-unit_06/current-dark/07-Generate-Ideas.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">8. Hear from Others</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_06/baseline/08-Hear-from-Others.png" data-src-dark="track_b-unit_06/baseline-dark/08-Hear-from-Others.png" data-modal-label="Before — Slide 8: Hear from Others">
+        <img src="track_b-unit_06/baseline/08-Hear-from-Others.png" alt="Before" data-src-light="track_b-unit_06/baseline/08-Hear-from-Others.png" data-src-dark="track_b-unit_06/baseline-dark/08-Hear-from-Others.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_06/current/08-Hear-from-Others.png" data-src-dark="track_b-unit_06/current-dark/08-Hear-from-Others.png" data-modal-label="After — Slide 8: Hear from Others">
+        <img src="track_b-unit_06/current/08-Hear-from-Others.png" alt="After" data-src-light="track_b-unit_06/current/08-Hear-from-Others.png" data-src-dark="track_b-unit_06/current-dark/08-Hear-from-Others.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">9. Rapid Prototyping</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_06/baseline/09-Rapid-Prototyping.png" data-src-dark="track_b-unit_06/baseline-dark/09-Rapid-Prototyping.png" data-modal-label="Before — Slide 9: Rapid Prototyping">
+        <img src="track_b-unit_06/baseline/09-Rapid-Prototyping.png" alt="Before" data-src-light="track_b-unit_06/baseline/09-Rapid-Prototyping.png" data-src-dark="track_b-unit_06/baseline-dark/09-Rapid-Prototyping.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_06/current/09-Rapid-Prototyping.png" data-src-dark="track_b-unit_06/current-dark/09-Rapid-Prototyping.png" data-modal-label="After — Slide 9: Rapid Prototyping">
+        <img src="track_b-unit_06/current/09-Rapid-Prototyping.png" alt="After" data-src-light="track_b-unit_06/current/09-Rapid-Prototyping.png" data-src-dark="track_b-unit_06/current-dark/09-Rapid-Prototyping.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">10. Prototype Feedback</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_06/baseline/10-Prototype-Feedback.png" data-src-dark="track_b-unit_06/baseline-dark/10-Prototype-Feedback.png" data-modal-label="Before — Slide 10: Prototype Feedback">
+        <img src="track_b-unit_06/baseline/10-Prototype-Feedback.png" alt="Before" data-src-light="track_b-unit_06/baseline/10-Prototype-Feedback.png" data-src-dark="track_b-unit_06/baseline-dark/10-Prototype-Feedback.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_06/current/10-Prototype-Feedback.png" data-src-dark="track_b-unit_06/current-dark/10-Prototype-Feedback.png" data-modal-label="After — Slide 10: Prototype Feedback">
+        <img src="track_b-unit_06/current/10-Prototype-Feedback.png" alt="After" data-src-light="track_b-unit_06/current/10-Prototype-Feedback.png" data-src-dark="track_b-unit_06/current-dark/10-Prototype-Feedback.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">11. Combining Prototypes</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_06/baseline/11-Combining-Prototypes.png" data-src-dark="track_b-unit_06/baseline-dark/11-Combining-Prototypes.png" data-modal-label="Before — Slide 11: Combining Prototypes">
+        <img src="track_b-unit_06/baseline/11-Combining-Prototypes.png" alt="Before" data-src-light="track_b-unit_06/baseline/11-Combining-Prototypes.png" data-src-dark="track_b-unit_06/baseline-dark/11-Combining-Prototypes.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_06/current/11-Combining-Prototypes.png" data-src-dark="track_b-unit_06/current-dark/11-Combining-Prototypes.png" data-modal-label="After — Slide 11: Combining Prototypes">
+        <img src="track_b-unit_06/current/11-Combining-Prototypes.png" alt="After" data-src-light="track_b-unit_06/current/11-Combining-Prototypes.png" data-src-dark="track_b-unit_06/current-dark/11-Combining-Prototypes.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">12. Keynote Prototyping</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_06/baseline/12-Keynote-Prototyping.png" data-src-dark="track_b-unit_06/baseline-dark/12-Keynote-Prototyping.png" data-modal-label="Before — Slide 12: Keynote Prototyping">
+        <img src="track_b-unit_06/baseline/12-Keynote-Prototyping.png" alt="Before" data-src-light="track_b-unit_06/baseline/12-Keynote-Prototyping.png" data-src-dark="track_b-unit_06/baseline-dark/12-Keynote-Prototyping.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_06/current/12-Keynote-Prototyping.png" data-src-dark="track_b-unit_06/current-dark/12-Keynote-Prototyping.png" data-modal-label="After — Slide 12: Keynote Prototyping">
+        <img src="track_b-unit_06/current/12-Keynote-Prototyping.png" alt="After" data-src-light="track_b-unit_06/current/12-Keynote-Prototyping.png" data-src-dark="track_b-unit_06/current-dark/12-Keynote-Prototyping.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">13. Prototyping</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_06/baseline/13-Prototyping.png" data-src-dark="track_b-unit_06/baseline-dark/13-Prototyping.png" data-modal-label="Before — Slide 13: Prototyping">
+        <img src="track_b-unit_06/baseline/13-Prototyping.png" alt="Before" data-src-light="track_b-unit_06/baseline/13-Prototyping.png" data-src-dark="track_b-unit_06/baseline-dark/13-Prototyping.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_06/current/13-Prototyping.png" data-src-dark="track_b-unit_06/current-dark/13-Prototyping.png" data-modal-label="After — Slide 13: Prototyping">
+        <img src="track_b-unit_06/current/13-Prototyping.png" alt="After" data-src-light="track_b-unit_06/current/13-Prototyping.png" data-src-dark="track_b-unit_06/current-dark/13-Prototyping.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">14. Evaluate</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_06/baseline/14-Evaluate.png" data-src-dark="track_b-unit_06/baseline-dark/14-Evaluate.png" data-modal-label="Before — Slide 14: Evaluate">
+        <img src="track_b-unit_06/baseline/14-Evaluate.png" alt="Before" data-src-light="track_b-unit_06/baseline/14-Evaluate.png" data-src-dark="track_b-unit_06/baseline-dark/14-Evaluate.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_06/current/14-Evaluate.png" data-src-dark="track_b-unit_06/current-dark/14-Evaluate.png" data-modal-label="After — Slide 14: Evaluate">
+        <img src="track_b-unit_06/current/14-Evaluate.png" alt="After" data-src-light="track_b-unit_06/current/14-Evaluate.png" data-src-dark="track_b-unit_06/current-dark/14-Evaluate.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">15. Show it Off!</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_06/baseline/15-Show-it-Off-.png" data-src-dark="track_b-unit_06/baseline-dark/15-Show-it-Off-.png" data-modal-label="Before — Slide 15: Show it Off!">
+        <img src="track_b-unit_06/baseline/15-Show-it-Off-.png" alt="Before" data-src-light="track_b-unit_06/baseline/15-Show-it-Off-.png" data-src-dark="track_b-unit_06/baseline-dark/15-Show-it-Off-.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_06/current/15-Show-it-Off-.png" data-src-dark="track_b-unit_06/current-dark/15-Show-it-Off-.png" data-modal-label="After — Slide 15: Show it Off!">
+        <img src="track_b-unit_06/current/15-Show-it-Off-.png" alt="After" data-src-light="track_b-unit_06/current/15-Show-it-Off-.png" data-src-dark="track_b-unit_06/current-dark/15-Show-it-Off-.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">16. Consider Their Feedback</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_06/baseline/16-Consider-Their-Feedback.png" data-src-dark="track_b-unit_06/baseline-dark/16-Consider-Their-Feedback.png" data-modal-label="Before — Slide 16: Consider Their Feedback">
+        <img src="track_b-unit_06/baseline/16-Consider-Their-Feedback.png" alt="Before" data-src-light="track_b-unit_06/baseline/16-Consider-Their-Feedback.png" data-src-dark="track_b-unit_06/baseline-dark/16-Consider-Their-Feedback.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_06/current/16-Consider-Their-Feedback.png" data-src-dark="track_b-unit_06/current-dark/16-Consider-Their-Feedback.png" data-modal-label="After — Slide 16: Consider Their Feedback">
+        <img src="track_b-unit_06/current/16-Consider-Their-Feedback.png" alt="After" data-src-light="track_b-unit_06/current/16-Consider-Their-Feedback.png" data-src-dark="track_b-unit_06/current-dark/16-Consider-Their-Feedback.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">17. Development</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_06/baseline/17-Development.png" data-src-dark="track_b-unit_06/baseline-dark/17-Development.png" data-modal-label="Before — Slide 17: Development">
+        <img src="track_b-unit_06/baseline/17-Development.png" alt="Before" data-src-light="track_b-unit_06/baseline/17-Development.png" data-src-dark="track_b-unit_06/baseline-dark/17-Development.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_06/current/17-Development.png" data-src-dark="track_b-unit_06/current-dark/17-Development.png" data-modal-label="After — Slide 17: Development">
+        <img src="track_b-unit_06/current/17-Development.png" alt="After" data-src-light="track_b-unit_06/current/17-Development.png" data-src-dark="track_b-unit_06/current-dark/17-Development.png" />
+      </button>
+      </div>
+    </section>
+  
+    <section class="slide-row">
+      <h2 class="slide-heading">18. Get Started!</h2>
+      <div class="slide-comparison">
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_06/baseline/18-Get-Started-.png" data-src-dark="track_b-unit_06/baseline-dark/18-Get-Started-.png" data-modal-label="Before — Slide 18: Get Started!">
+        <img src="track_b-unit_06/baseline/18-Get-Started-.png" alt="Before" data-src-light="track_b-unit_06/baseline/18-Get-Started-.png" data-src-dark="track_b-unit_06/baseline-dark/18-Get-Started-.png" />
+      </button>
+        <span class="divider">|</span>
+        <button type="button" class="slide-panel" data-src-light="track_b-unit_06/current/18-Get-Started-.png" data-src-dark="track_b-unit_06/current-dark/18-Get-Started-.png" data-modal-label="After — Slide 18: Get Started!">
+        <img src="track_b-unit_06/current/18-Get-Started-.png" alt="After" data-src-light="track_b-unit_06/current/18-Get-Started-.png" data-src-dark="track_b-unit_06/current-dark/18-Get-Started-.png" />
+      </button>
+      </div>
+    </section>
+  
+    <div class="modal" id="modal" aria-hidden="true">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span id="modal-label"></span>
+          <button type="button" class="modal-close" id="modal-close">Close</button>
+        </div>
+        <img id="modal-img" alt="" />
+      </div>
+    </div>
+    <script>
+      const themeToggle = document.getElementById("theme-toggle");
+      const themeIcon = document.getElementById("theme-icon");
+      const moonSvg = '<svg aria-hidden="true" width="1.25em" height="1.25em" viewBox="0 0 384 512" fill="currentColor"><path d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"/></svg>';
+      const sunSvg = '<svg aria-hidden="true" width="1.25em" height="1.25em" viewBox="0 0 512 512" fill="currentColor"><path d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z"/></svg>';
+      const isDark = () => document.body.classList.contains("dark");
+      const applyTheme = (dark) => {
+        document.body.classList.toggle("dark", dark);
+        themeIcon.innerHTML = dark ? sunSvg : moonSvg;
+        const label = dark ? "Switch to Light Mode" : "Switch to Dark Mode";
+        themeToggle.setAttribute("aria-label", label);
+        themeToggle.setAttribute("title", label);
+        try { localStorage.setItem("isDarkMode", JSON.stringify(dark)); } catch (_) {}
+      };
+      function getSrcForTheme(btn, dark) {
+        const key = dark ? "srcDark" : "srcLight";
+        return (btn.dataset[key] || "").trim() || (dark ? btn.dataset.srcLight : btn.dataset.srcDark) || "";
+      }
+      function updateImagesForTheme(dark) {
+        document.querySelectorAll(".slide-panel img[data-src-light], .slide-panel img[data-src-dark]").forEach((img) => {
+          const src = dark ? (img.dataset.srcDark || img.dataset.srcLight) : (img.dataset.srcLight || img.dataset.srcDark);
+          if (src) img.src = src;
+        });
+      }
+
+      themeToggle.addEventListener("click", () => {
+        applyTheme(!isDark());
+        updateImagesForTheme(isDark());
+      });
+      try {
+        const saved = localStorage.getItem("isDarkMode");
+        const savedDark = saved !== null ? JSON.parse(saved) === true : false;
+        applyTheme(savedDark);
+        updateImagesForTheme(savedDark);
+      } catch (_) {}
+
+      const modal = document.getElementById("modal");
+      const modalImg = document.getElementById("modal-img");
+      const modalLabel = document.getElementById("modal-label");
+      const modalClose = document.getElementById("modal-close");
+
+      document.querySelectorAll(".slide-panel:not(.empty)").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const dark = isDark();
+          modalImg.src = getSrcForTheme(btn, dark);
+          modalLabel.textContent = btn.dataset.modalLabel || "";
+          modal.classList.add("open");
+          modal.setAttribute("aria-hidden", "false");
+        });
+      });
+
+      function closeModal() {
+        modal.classList.remove("open");
+        modal.setAttribute("aria-hidden", "true");
+      }
+      modalClose.addEventListener("click", closeModal);
+      modal.addEventListener("click", (e) => { if (e.target === modal) closeModal(); });
+      document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeModal(); });
+    </script>
+  </body>
+</html>

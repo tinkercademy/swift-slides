@@ -1,0 +1,1574 @@
+{
+  "baseRef": "main",
+  "generatedAt": "2026-03-15T13:29:56.988Z",
+  "outputDir": "output/playwright/slide-parity/2026-03-15T13-29-03-840Z",
+  "units": [
+    {
+      "baseRef": "main",
+      "currentMarkdownPath": "public/markdown/track_b/04-quiz-app.md",
+      "route": "track_b/unit_04",
+      "slides": [
+        {
+          "baseline": {
+            "content": "# 4.1 Simple Quiz App",
+            "coordinate": {
+              "h": 1,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/1/0",
+            "heading": "4.1 Simple Quiz App",
+            "images": [],
+            "index": 0,
+            "links": []
+          },
+          "current": {
+            "content": "# 4.1 Simple Quiz App",
+            "coordinate": {
+              "h": 1,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/1/0",
+            "heading": "4.1 Simple Quiz App",
+            "images": [],
+            "index": 0,
+            "links": []
+          },
+          "diffs": [],
+          "index": 0,
+          "visual": {
+            "baselinePath": "track_b-unit_04/baseline/01-4.1-Simple-Quiz-App.png",
+            "baselinePathDark": "track_b-unit_04/baseline-dark/01-4.1-Simple-Quiz-App.png",
+            "changedPixels": 0,
+            "currentPath": "track_b-unit_04/current/01-4.1-Simple-Quiz-App.png",
+            "currentPathDark": "track_b-unit_04/current-dark/01-4.1-Simple-Quiz-App.png",
+            "diffPath": null,
+            "diffRatio": 0,
+            "sizeMismatch": null,
+            "withinThreshold": true
+          }
+        },
+        {
+          "baseline": {
+            "content": "## Let's get started!\n\n- Make a new SwiftUI project and call it `Quiz App`\n- Remove the Image in the ContentView\n\n```swift\nimport SwiftUI\n\nstruct ContentView: View {\n    var body: some View {\n        VStack{\n            Text(\"Hello, World!\")\n        }\n    }\n}\n```",
+            "coordinate": {
+              "h": 2,
+              "v": 0
+            },
+            "codeBlockCount": 1,
+            "hash": "#/2/0",
+            "heading": "Let's get started!",
+            "images": [],
+            "index": 1,
+            "links": []
+          },
+          "current": {
+            "content": "## Let's get started!\n\n- Make a new SwiftUI project and call it `Quiz App`\n- Remove the Image in the ContentView\n\n```swift\nimport SwiftUI\n\nstruct ContentView: View {\n    var body: some View {\n        VStack{\n            Text(\"Hello, World!\")\n        }\n    }\n}\n```",
+            "coordinate": {
+              "h": 2,
+              "v": 0
+            },
+            "codeBlockCount": 1,
+            "hash": "#/2/0",
+            "heading": "Let's get started!",
+            "images": [],
+            "index": 1,
+            "links": []
+          },
+          "diffs": [],
+          "index": 1,
+          "visual": {
+            "baselinePath": "track_b-unit_04/baseline/02-Let-s-get-started-.png",
+            "baselinePathDark": "track_b-unit_04/baseline-dark/02-Let-s-get-started-.png",
+            "changedPixels": 0,
+            "currentPath": "track_b-unit_04/current/02-Let-s-get-started-.png",
+            "currentPathDark": "track_b-unit_04/current-dark/02-Let-s-get-started-.png",
+            "diffPath": null,
+            "diffRatio": 0,
+            "sizeMismatch": null,
+            "withinThreshold": true
+          }
+        },
+        {
+          "baseline": {
+            "content": "## Let's mock up the quiz app UI\n\n- Change `Hello, World!` to any question you like.\n- Let's also center the text by adding `.multilineTextAlignment(.center)` to the `Text` view.\n\n```swift\n\nstruct ContentView: View {\n    var body: some View {\n        VStack{\n            Text(\"What is Taylor Swift's 2020s concert series called?\")\n                .multilineTextAlignment(.center)\n        }\n    }\n}\n```",
+            "coordinate": {
+              "h": 3,
+              "v": 0
+            },
+            "codeBlockCount": 1,
+            "hash": "#/3/0",
+            "heading": "Let's mock up the quiz app UI",
+            "images": [],
+            "index": 2,
+            "links": []
+          },
+          "current": {
+            "content": "## Let's mock up the quiz app UI\n\n- Change `Hello, World!` to any question you like.\n- Let's also center the text by adding `.multilineTextAlignment(.center)` to the `Text` view.\n\n```swift\n\nstruct ContentView: View {\n    var body: some View {\n        VStack{\n            Text(\"What is Taylor Swift's 2020s concert series called?\")\n                .multilineTextAlignment(.center)\n        }\n    }\n}\n```",
+            "coordinate": {
+              "h": 3,
+              "v": 0
+            },
+            "codeBlockCount": 1,
+            "hash": "#/3/0",
+            "heading": "Let's mock up the quiz app UI",
+            "images": [],
+            "index": 2,
+            "links": []
+          },
+          "diffs": [],
+          "index": 2,
+          "visual": {
+            "baselinePath": "track_b-unit_04/baseline/03-Let-s-mock-up-the-quiz-app-UI.png",
+            "baselinePathDark": "track_b-unit_04/baseline-dark/03-Let-s-mock-up-the-quiz-app-UI.png",
+            "changedPixels": 0,
+            "currentPath": "track_b-unit_04/current/03-Let-s-mock-up-the-quiz-app-UI.png",
+            "currentPathDark": "track_b-unit_04/current-dark/03-Let-s-mock-up-the-quiz-app-UI.png",
+            "diffPath": null,
+            "diffRatio": 0,
+            "sizeMismatch": null,
+            "withinThreshold": true
+          }
+        },
+        {
+          "baseline": {
+            "content": "## Let's add some buttons\n\n- Create a 2 button layout using `HStack` and `Button` views.\n\n```swift\nstruct ContentView: View {\n    var body: some View {\n        VStack{\n            Text(\"What is Taylor Swift's 2020s concert series called?\")\\\n                .multilineTextAlignment(.center)\n\n            HStack{\n                Button(\"The Eras Tour\"){\n\n                }\n                .buttonStyle(.borderedProminent)\n\n                Button(\"The (Syntax) Erros Tour\"){\n\n                }\n                .buttonStyle(.borderedProminent)\n            }\n\n        }\n    }\n}\n```",
+            "coordinate": {
+              "h": 4,
+              "v": 0
+            },
+            "codeBlockCount": 1,
+            "hash": "#/4/0",
+            "heading": "Let's add some buttons",
+            "images": [],
+            "index": 3,
+            "links": []
+          },
+          "current": {
+            "content": "## Let's add some buttons\n\n- Create a 2 button layout using `HStack` and `Button` views.\n\n```swift\nstruct ContentView: View {\n    var body: some View {\n        VStack{\n            Text(\"What is Taylor Swift's 2020s concert series called?\")\\\n                .multilineTextAlignment(.center)\n\n            HStack{\n                Button(\"The Eras Tour\"){\n\n                }\n                .buttonStyle(.borderedProminent)\n\n                Button(\"The (Syntax) Erros Tour\"){\n\n                }\n                .buttonStyle(.borderedProminent)\n            }\n\n        }\n    }\n}\n```",
+            "coordinate": {
+              "h": 4,
+              "v": 0
+            },
+            "codeBlockCount": 1,
+            "hash": "#/4/0",
+            "heading": "Let's add some buttons",
+            "images": [],
+            "index": 3,
+            "links": []
+          },
+          "diffs": [],
+          "index": 3,
+          "visual": {
+            "baselinePath": "track_b-unit_04/baseline/04-Let-s-add-some-buttons.png",
+            "baselinePathDark": "track_b-unit_04/baseline-dark/04-Let-s-add-some-buttons.png",
+            "changedPixels": 0,
+            "currentPath": "track_b-unit_04/current/04-Let-s-add-some-buttons.png",
+            "currentPathDark": "track_b-unit_04/current-dark/04-Let-s-add-some-buttons.png",
+            "diffPath": null,
+            "diffRatio": 0,
+            "sizeMismatch": null,
+            "withinThreshold": true
+          }
+        },
+        {
+          "baseline": {
+            "content": "## Add 2 more buttons below\n\n- Add 2 more buttons below the first 2 buttons.\n\n```swift\nstruct ContentView: View {\n    var body: some View {\n        VStack{\n            Text(\"What is Taylor Swift's 2020s concert series called?\")\n                .multilineTextAlignment(.center)\n\n            HStack{\n                Button(\"The Eras Tour\"){\n\n                }\n                .buttonStyle(.borderedProminent)\n\n                Button(\"The (Syntax) Erros Tour\"){\n\n                }\n                .buttonStyle(.borderedProminent)\n            }\n\n            HStack{\n                Button(\"The Aromas Tour\"){\n\n                }\n                .buttonStyle(.borderedProminent)\n\n                Button(\"The Areas Tour\"){\n\n                }\n                .buttonStyle(.borderedProminent)\n            }\n\n        }\n    }\n}\n```",
+            "coordinate": {
+              "h": 5,
+              "v": 0
+            },
+            "codeBlockCount": 1,
+            "hash": "#/5/0",
+            "heading": "Add 2 more buttons below",
+            "images": [],
+            "index": 4,
+            "links": []
+          },
+          "current": {
+            "content": "## Add 2 more buttons below\n\n- Add 2 more buttons below the first 2 buttons.\n\n```swift\nstruct ContentView: View {\n    var body: some View {\n        VStack{\n            Text(\"What is Taylor Swift's 2020s concert series called?\")\n                .multilineTextAlignment(.center)\n\n            HStack{\n                Button(\"The Eras Tour\"){\n\n                }\n                .buttonStyle(.borderedProminent)\n\n                Button(\"The (Syntax) Erros Tour\"){\n\n                }\n                .buttonStyle(.borderedProminent)\n            }\n\n            HStack{\n                Button(\"The Aromas Tour\"){\n\n                }\n                .buttonStyle(.borderedProminent)\n\n                Button(\"The Areas Tour\"){\n\n                }\n                .buttonStyle(.borderedProminent)\n            }\n\n        }\n    }\n}\n```",
+            "coordinate": {
+              "h": 5,
+              "v": 0
+            },
+            "codeBlockCount": 1,
+            "hash": "#/5/0",
+            "heading": "Add 2 more buttons below",
+            "images": [],
+            "index": 4,
+            "links": []
+          },
+          "diffs": [],
+          "index": 4,
+          "visual": {
+            "baselinePath": "track_b-unit_04/baseline/05-Add-2-more-buttons-below.png",
+            "baselinePathDark": "track_b-unit_04/baseline-dark/05-Add-2-more-buttons-below.png",
+            "changedPixels": 0,
+            "currentPath": "track_b-unit_04/current/05-Add-2-more-buttons-below.png",
+            "currentPathDark": "track_b-unit_04/current-dark/05-Add-2-more-buttons-below.png",
+            "diffPath": null,
+            "diffRatio": 0,
+            "sizeMismatch": null,
+            "withinThreshold": true
+          }
+        },
+        {
+          "baseline": {
+            "content": "## Correct Or Wrong?\n\n- Add a `Text` view below the buttons to show if the user got the answer correct or wrong.\n- Add a `@State` variable to keep track of the user's answer.\n\n```swift\nstruct ContentView: View {\n    @State private var correctOrWrong = \"\"\n\n    var body: some View {\n        VStack{\n            Text(\"What is Taylor Swift's 2020s concert series called?\")\n                .multilineTextAlignment(.center)\n\n            HStack{\n                Button(\"The Eras Tour\"){\n\n                }\n                .buttonStyle(.borderedProminent)\n\n                Button(\"The (Syntax) Erros Tour\"){\n\n                }\n                .buttonStyle(.borderedProminent)\n            }\n\n            HStack{\n                Button(\"The Aromas Tour\"){\n\n                }\n                .buttonStyle(.borderedProminent)\n\n                Button(\"The Areas Tour\"){\n\n                }\n                .buttonStyle(.borderedProminent)\n            }\n\n            Text(correctOrWrong)\n        }\n    }\n}\n```",
+            "coordinate": {
+              "h": 6,
+              "v": 0
+            },
+            "codeBlockCount": 1,
+            "hash": "#/6/0",
+            "heading": "Correct Or Wrong?",
+            "images": [],
+            "index": 5,
+            "links": []
+          },
+          "current": {
+            "content": "## Correct Or Wrong?\n\n- Add a `Text` view below the buttons to show if the user got the answer correct or wrong.\n- Add a `@State` variable to keep track of the user's answer.\n\n```swift\nstruct ContentView: View {\n    @State private var correctOrWrong = \"\"\n\n    var body: some View {\n        VStack{\n            Text(\"What is Taylor Swift's 2020s concert series called?\")\n                .multilineTextAlignment(.center)\n\n            HStack{\n                Button(\"The Eras Tour\"){\n\n                }\n                .buttonStyle(.borderedProminent)\n\n                Button(\"The (Syntax) Erros Tour\"){\n\n                }\n                .buttonStyle(.borderedProminent)\n            }\n\n            HStack{\n                Button(\"The Aromas Tour\"){\n\n                }\n                .buttonStyle(.borderedProminent)\n\n                Button(\"The Areas Tour\"){\n\n                }\n                .buttonStyle(.borderedProminent)\n            }\n\n            Text(correctOrWrong)\n        }\n    }\n}\n```",
+            "coordinate": {
+              "h": 6,
+              "v": 0
+            },
+            "codeBlockCount": 1,
+            "hash": "#/6/0",
+            "heading": "Correct Or Wrong?",
+            "images": [],
+            "index": 5,
+            "links": []
+          },
+          "diffs": [],
+          "index": 5,
+          "visual": {
+            "baselinePath": "track_b-unit_04/baseline/06-Correct-Or-Wrong-.png",
+            "baselinePathDark": "track_b-unit_04/baseline-dark/06-Correct-Or-Wrong-.png",
+            "changedPixels": 0,
+            "currentPath": "track_b-unit_04/current/06-Correct-Or-Wrong-.png",
+            "currentPathDark": "track_b-unit_04/current-dark/06-Correct-Or-Wrong-.png",
+            "diffPath": null,
+            "diffRatio": 0,
+            "sizeMismatch": null,
+            "withinThreshold": true
+          }
+        },
+        {
+          "baseline": {
+            "content": "## Check the answer\n\n- Add a function to check the answer and update the `correctOrWrong` variable.\n\n```swift\nstruct ContentView: View {\n    @State private var correctOrWrong = \"\"\n\n    var body: some View {\n        VStack{\n            Text(\"What is Taylor Swift's 2020s concert series called?\")\n                .multilineTextAlignment(.center)\n\n            HStack{\n                Button(\"The Eras Tour\"){\n                    correctOrWrong = \"You are correct!\"\n                }\n                .buttonStyle(.borderedProminent)\n\n                Button(\"The (Syntax) Erros Tour\"){\n                    correctOrWrong = \"You are wrong!\"\n                }\n                .buttonStyle(.borderedProminent)\n            }\n\n            HStack{\n                Button(\"The Aromas Tour\"){\n                    correctOrWrong = \"You are wrong!\"\n                }\n                .buttonStyle(.borderedProminent)\n\n                Button(\"The Areas Tour\"){\n                    correctOrWrong = \"You are wrong!\"\n                }\n                .buttonStyle(.borderedProminent)\n            }\n\n            Text(correctOrWrong)\n        }\n    }\n}\n```",
+            "coordinate": {
+              "h": 7,
+              "v": 0
+            },
+            "codeBlockCount": 1,
+            "hash": "#/7/0",
+            "heading": "Check the answer",
+            "images": [],
+            "index": 6,
+            "links": []
+          },
+          "current": {
+            "content": "## Check the answer\n\n- Add a function to check the answer and update the `correctOrWrong` variable.\n\n```swift\nstruct ContentView: View {\n    @State private var correctOrWrong = \"\"\n\n    var body: some View {\n        VStack{\n            Text(\"What is Taylor Swift's 2020s concert series called?\")\n                .multilineTextAlignment(.center)\n\n            HStack{\n                Button(\"The Eras Tour\"){\n                    correctOrWrong = \"You are correct!\"\n                }\n                .buttonStyle(.borderedProminent)\n\n                Button(\"The (Syntax) Erros Tour\"){\n                    correctOrWrong = \"You are wrong!\"\n                }\n                .buttonStyle(.borderedProminent)\n            }\n\n            HStack{\n                Button(\"The Aromas Tour\"){\n                    correctOrWrong = \"You are wrong!\"\n                }\n                .buttonStyle(.borderedProminent)\n\n                Button(\"The Areas Tour\"){\n                    correctOrWrong = \"You are wrong!\"\n                }\n                .buttonStyle(.borderedProminent)\n            }\n\n            Text(correctOrWrong)\n        }\n    }\n}\n```",
+            "coordinate": {
+              "h": 7,
+              "v": 0
+            },
+            "codeBlockCount": 1,
+            "hash": "#/7/0",
+            "heading": "Check the answer",
+            "images": [],
+            "index": 6,
+            "links": []
+          },
+          "diffs": [],
+          "index": 6,
+          "visual": {
+            "baselinePath": "track_b-unit_04/baseline/07-Check-the-answer.png",
+            "baselinePathDark": "track_b-unit_04/baseline-dark/07-Check-the-answer.png",
+            "changedPixels": 0,
+            "currentPath": "track_b-unit_04/current/07-Check-the-answer.png",
+            "currentPathDark": "track_b-unit_04/current-dark/07-Check-the-answer.png",
+            "diffPath": null,
+            "diffRatio": 0,
+            "sizeMismatch": null,
+            "withinThreshold": true
+          }
+        },
+        {
+          "baseline": {
+            "content": "## Comments\n\n- Let's add some comments to our code to make it easier to understand.\n\n```swift\nstruct ContentView: View {\n    @State private var correctOrWrong = \"\"\n\n    var body: some View {\n        VStack{\n            // Question\n            Text(\"What is Taylor Swift's 2020s concert series called?\")\n                .multilineTextAlignment(.center)\n\n            // Options\n            HStack{\n                Button(\"The Eras Tour\"){\n                    correctOrWrong = \"You are correct!\"\n                }\n                .buttonStyle(.borderedProminent)\n\n                Button(\"The (Syntax) Erros Tour\"){\n                    correctOrWrong = \"You are wrong!\"\n                }\n                .buttonStyle(.borderedProminent)\n            }\n            HStack{\n                Button(\"The Aromas Tour\"){\n                    correctOrWrong = \"You are wrong!\"\n                }\n                .buttonStyle(.borderedProminent)\n\n                Button(\"The Areas Tour\"){\n                    correctOrWrong = \"You are wrong!\"\n                }\n                .buttonStyle(.borderedProminent)\n            }\n\n\n            // Feedback on whether the answer is correct\n            Text(correctOrWrong)\n        }\n    }\n}\n```",
+            "coordinate": {
+              "h": 8,
+              "v": 0
+            },
+            "codeBlockCount": 1,
+            "hash": "#/8/0",
+            "heading": "Comments",
+            "images": [],
+            "index": 7,
+            "links": []
+          },
+          "current": {
+            "content": "## Comments\n\n- Let's add some comments to our code to make it easier to understand.\n\n```swift\nstruct ContentView: View {\n    @State private var correctOrWrong = \"\"\n\n    var body: some View {\n        VStack{\n            // Question\n            Text(\"What is Taylor Swift's 2020s concert series called?\")\n                .multilineTextAlignment(.center)\n\n            // Options\n            HStack{\n                Button(\"The Eras Tour\"){\n                    correctOrWrong = \"You are correct!\"\n                }\n                .buttonStyle(.borderedProminent)\n\n                Button(\"The (Syntax) Erros Tour\"){\n                    correctOrWrong = \"You are wrong!\"\n                }\n                .buttonStyle(.borderedProminent)\n            }\n            HStack{\n                Button(\"The Aromas Tour\"){\n                    correctOrWrong = \"You are wrong!\"\n                }\n                .buttonStyle(.borderedProminent)\n\n                Button(\"The Areas Tour\"){\n                    correctOrWrong = \"You are wrong!\"\n                }\n                .buttonStyle(.borderedProminent)\n            }\n\n\n            // Feedback on whether the answer is correct\n            Text(correctOrWrong)\n        }\n    }\n}\n```",
+            "coordinate": {
+              "h": 8,
+              "v": 0
+            },
+            "codeBlockCount": 1,
+            "hash": "#/8/0",
+            "heading": "Comments",
+            "images": [],
+            "index": 7,
+            "links": []
+          },
+          "diffs": [],
+          "index": 7,
+          "visual": {
+            "baselinePath": "track_b-unit_04/baseline/08-Comments.png",
+            "baselinePathDark": "track_b-unit_04/baseline-dark/08-Comments.png",
+            "changedPixels": 0,
+            "currentPath": "track_b-unit_04/current/08-Comments.png",
+            "currentPathDark": "track_b-unit_04/current-dark/08-Comments.png",
+            "diffPath": null,
+            "diffRatio": 0,
+            "sizeMismatch": null,
+            "withinThreshold": true
+          }
+        },
+        {
+          "baseline": {
+            "content": "# 4.2 Simple Quiz App but with better code",
+            "coordinate": {
+              "h": 9,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/9/0",
+            "heading": "4.2 Simple Quiz App but with better code",
+            "images": [],
+            "index": 8,
+            "links": []
+          },
+          "current": {
+            "content": "# 4.2 Simple Quiz App but with better code",
+            "coordinate": {
+              "h": 9,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/9/0",
+            "heading": "4.2 Simple Quiz App but with better code",
+            "images": [],
+            "index": 8,
+            "links": []
+          },
+          "diffs": [],
+          "index": 8,
+          "visual": {
+            "baselinePath": "track_b-unit_04/baseline/09-4.2-Simple-Quiz-App-but-with-better-code.png",
+            "baselinePathDark": "track_b-unit_04/baseline-dark/09-4.2-Simple-Quiz-App-but-with-better-code.png",
+            "changedPixels": 0,
+            "currentPath": "track_b-unit_04/current/09-4.2-Simple-Quiz-App-but-with-better-code.png",
+            "currentPathDark": "track_b-unit_04/current-dark/09-4.2-Simple-Quiz-App-but-with-better-code.png",
+            "diffPath": null,
+            "diffRatio": 0,
+            "sizeMismatch": null,
+            "withinThreshold": true
+          }
+        },
+        {
+          "baseline": {
+            "content": "## Similar Buttons\n\n- The buttons are similar, so we can create a function to create the buttons.\n\n```swift\nstruct ContentView: View {\n    @State private var correctOrWrong = \"\"\n\n    func option(title: String, isCorrect:Bool) -> some View{\n        Button(title){\n            if isCorrect{\n                correctOrWrong = \"You are correct!\"\n            }else{\n                correctOrWrong = \"You are wrong!\"\n            }\n        }\n        .buttonStyle(.borderedProminent)\n    }\n\n    var body: some View {\n        ...\n    }\n}\n```",
+            "coordinate": {
+              "h": 10,
+              "v": 0
+            },
+            "codeBlockCount": 1,
+            "hash": "#/10/0",
+            "heading": "Similar Buttons",
+            "images": [],
+            "index": 9,
+            "links": []
+          },
+          "current": {
+            "content": "## Similar Buttons\n\n- The buttons are similar, so we can create a function to create the buttons.\n\n```swift\nstruct ContentView: View {\n    @State private var correctOrWrong = \"\"\n\n    func option(title: String, isCorrect:Bool) -> some View{\n        Button(title){\n            if isCorrect{\n                correctOrWrong = \"You are correct!\"\n            }else{\n                correctOrWrong = \"You are wrong!\"\n            }\n        }\n        .buttonStyle(.borderedProminent)\n    }\n\n    var body: some View {\n        ...\n    }\n}\n```",
+            "coordinate": {
+              "h": 10,
+              "v": 0
+            },
+            "codeBlockCount": 1,
+            "hash": "#/10/0",
+            "heading": "Similar Buttons",
+            "images": [],
+            "index": 9,
+            "links": []
+          },
+          "diffs": [],
+          "index": 9,
+          "visual": {
+            "baselinePath": "track_b-unit_04/baseline/10-Similar-Buttons.png",
+            "baselinePathDark": "track_b-unit_04/baseline-dark/10-Similar-Buttons.png",
+            "changedPixels": 0,
+            "currentPath": "track_b-unit_04/current/10-Similar-Buttons.png",
+            "currentPathDark": "track_b-unit_04/current-dark/10-Similar-Buttons.png",
+            "diffPath": null,
+            "diffRatio": 0,
+            "sizeMismatch": null,
+            "withinThreshold": true
+          }
+        },
+        {
+          "baseline": {
+            "content": "## Using the function\n\n- Use the `option` function to create the buttons.\n\n```swift\nstruct ContentView: View {\n    @State private var correctOrWrong = \"\"\n\n    func option(title: String, isCorrect:Bool) -> some View{\n        Button(title){\n            if isCorrect{\n                correctOrWrong = \"You are correct!\"\n            }else{\n                correctOrWrong = \"You are wrong!\"\n            }\n        }\n        .buttonStyle(.borderedProminent)\n    }\n\n    var body: some View {\n        VStack{\n\n            // Question\n            Text(\"What is Taylor Swift's 2020s concert series called?\")\n                .multilineTextAlignment(.center)\n\n            // Options\n            HStack{\n                option(title: \"The Eras Tour\", isCorrect: true)\n                option(title: \"The (Syntax) Erros Tour\", isCorrect: false)\n            }\n            HStack{\n                option(title: \"The Aromas Tour\", isCorrect: false)\n                option(title: \"The Areas Tour\", isCorrect: false)\n            }\n\n            // Feedback on whether the answer is correct\n            Text(correctOrWrong)\n        }\n    }\n}\n```",
+            "coordinate": {
+              "h": 11,
+              "v": 0
+            },
+            "codeBlockCount": 1,
+            "hash": "#/11/0",
+            "heading": "Using the function",
+            "images": [],
+            "index": 10,
+            "links": []
+          },
+          "current": {
+            "content": "## Using the function\n\n- Use the `option` function to create the buttons.\n\n```swift\nstruct ContentView: View {\n    @State private var correctOrWrong = \"\"\n\n    func option(title: String, isCorrect:Bool) -> some View{\n        Button(title){\n            if isCorrect{\n                correctOrWrong = \"You are correct!\"\n            }else{\n                correctOrWrong = \"You are wrong!\"\n            }\n        }\n        .buttonStyle(.borderedProminent)\n    }\n\n    var body: some View {\n        VStack{\n\n            // Question\n            Text(\"What is Taylor Swift's 2020s concert series called?\")\n                .multilineTextAlignment(.center)\n\n            // Options\n            HStack{\n                option(title: \"The Eras Tour\", isCorrect: true)\n                option(title: \"The (Syntax) Erros Tour\", isCorrect: false)\n            }\n            HStack{\n                option(title: \"The Aromas Tour\", isCorrect: false)\n                option(title: \"The Areas Tour\", isCorrect: false)\n            }\n\n            // Feedback on whether the answer is correct\n            Text(correctOrWrong)\n        }\n    }\n}\n```",
+            "coordinate": {
+              "h": 11,
+              "v": 0
+            },
+            "codeBlockCount": 1,
+            "hash": "#/11/0",
+            "heading": "Using the function",
+            "images": [],
+            "index": 10,
+            "links": []
+          },
+          "diffs": [],
+          "index": 10,
+          "visual": {
+            "baselinePath": "track_b-unit_04/baseline/11-Using-the-function.png",
+            "baselinePathDark": "track_b-unit_04/baseline-dark/11-Using-the-function.png",
+            "changedPixels": 0,
+            "currentPath": "track_b-unit_04/current/11-Using-the-function.png",
+            "currentPathDark": "track_b-unit_04/current-dark/11-Using-the-function.png",
+            "diffPath": null,
+            "diffRatio": 0,
+            "sizeMismatch": null,
+            "withinThreshold": true
+          }
+        },
+        {
+          "baseline": {
+            "content": "# 4.3 Simple Quiz App with multiple questions",
+            "coordinate": {
+              "h": 12,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/12/0",
+            "heading": "4.3 Simple Quiz App with multiple questions",
+            "images": [],
+            "index": 11,
+            "links": []
+          },
+          "current": {
+            "content": "# 4.3 Simple Quiz App with multiple questions",
+            "coordinate": {
+              "h": 12,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/12/0",
+            "heading": "4.3 Simple Quiz App with multiple questions",
+            "images": [],
+            "index": 11,
+            "links": []
+          },
+          "diffs": [],
+          "index": 11,
+          "visual": {
+            "baselinePath": "track_b-unit_04/baseline/12-4.3-Simple-Quiz-App-with-multiple-questions.png",
+            "baselinePathDark": "track_b-unit_04/baseline-dark/12-4.3-Simple-Quiz-App-with-multiple-questions.png",
+            "changedPixels": 0,
+            "currentPath": "track_b-unit_04/current/12-4.3-Simple-Quiz-App-with-multiple-questions.png",
+            "currentPathDark": "track_b-unit_04/current-dark/12-4.3-Simple-Quiz-App-with-multiple-questions.png",
+            "diffPath": null,
+            "diffRatio": 0,
+            "sizeMismatch": null,
+            "withinThreshold": true
+          }
+        },
+        {
+          "baseline": {
+            "content": "## Let's create questionNumber variable\n\n- Create a `questionNumber` variable to keep track of the current question.\n- In programming, we start counting from 0.\n\n```swift\nstruct ContentView: View {\n    @State private var correctOrWrong = \"\"\n    @State private var questionNumber = 0\n\n    func option(title: String, isCorrect:Bool) -> some View{\n       ...\n    }\n\n    var body: some View {\n        ...\n    }\n}\n```",
+            "coordinate": {
+              "h": 13,
+              "v": 0
+            },
+            "codeBlockCount": 1,
+            "hash": "#/13/0",
+            "heading": "Let's create questionNumber variable",
+            "images": [],
+            "index": 12,
+            "links": []
+          },
+          "current": {
+            "content": "## Let's create questionNumber variable\n\n- Create a `questionNumber` variable to keep track of the current question.\n- In programming, we start counting from 0.\n\n```swift\nstruct ContentView: View {\n    @State private var correctOrWrong = \"\"\n    @State private var questionNumber = 0\n\n    func option(title: String, isCorrect:Bool) -> some View{\n       ...\n    }\n\n    var body: some View {\n        ...\n    }\n}\n```",
+            "coordinate": {
+              "h": 13,
+              "v": 0
+            },
+            "codeBlockCount": 1,
+            "hash": "#/13/0",
+            "heading": "Let's create questionNumber variable",
+            "images": [],
+            "index": 12,
+            "links": []
+          },
+          "diffs": [],
+          "index": 12,
+          "visual": {
+            "baselinePath": "track_b-unit_04/baseline/13-Let-s-create-questionNumber-variable.png",
+            "baselinePathDark": "track_b-unit_04/baseline-dark/13-Let-s-create-questionNumber-variable.png",
+            "changedPixels": 0,
+            "currentPath": "track_b-unit_04/current/13-Let-s-create-questionNumber-variable.png",
+            "currentPathDark": "track_b-unit_04/current-dark/13-Let-s-create-questionNumber-variable.png",
+            "diffPath": null,
+            "diffRatio": 0,
+            "sizeMismatch": null,
+            "withinThreshold": true
+          }
+        },
+        {
+          "baseline": {
+            "content": "## Show different questions\n\n- Use an if statement to show different questions based on the `questionNumber`.\n\n```swift\nstruct ContentView: View {\n    @State private var correctOrWrong = \"\"\n    @State private var questionNumber = 0\n\n    func option(title: String, isCorrect:Bool) -> some View{\n        ...\n    }\n\n    var body: some View {\n        VStack{\n            if questionNumber == 0{\n                // Question 1\n                Text(\"What is Taylor Swift's 2020s concert series called?\")\n                    .multilineTextAlignment(.center)\n\n                // Options\n                HStack{\n                    option(title: \"The Eras Tour\", isCorrect: true)\n                    option(title: \"The (Syntax) Erros Tour\", isCorrect: false)\n                }\n                HStack{\n                    option(title: \"The Aromas Tour\", isCorrect: false)\n                    option(title: \"The Areas Tour\", isCorrect: false)\n                }\n            }\n\n            // Feedback on whether the answer is correct\n            Text(correctOrWrong)\n        }\n    }\n}\n```",
+            "coordinate": {
+              "h": 14,
+              "v": 0
+            },
+            "codeBlockCount": 1,
+            "hash": "#/14/0",
+            "heading": "Show different questions",
+            "images": [],
+            "index": 13,
+            "links": []
+          },
+          "current": {
+            "content": "## Show different questions\n\n- Use an if statement to show different questions based on the `questionNumber`.\n\n```swift\nstruct ContentView: View {\n    @State private var correctOrWrong = \"\"\n    @State private var questionNumber = 0\n\n    func option(title: String, isCorrect:Bool) -> some View{\n        ...\n    }\n\n    var body: some View {\n        VStack{\n            if questionNumber == 0{\n                // Question 1\n                Text(\"What is Taylor Swift's 2020s concert series called?\")\n                    .multilineTextAlignment(.center)\n\n                // Options\n                HStack{\n                    option(title: \"The Eras Tour\", isCorrect: true)\n                    option(title: \"The (Syntax) Erros Tour\", isCorrect: false)\n                }\n                HStack{\n                    option(title: \"The Aromas Tour\", isCorrect: false)\n                    option(title: \"The Areas Tour\", isCorrect: false)\n                }\n            }\n\n            // Feedback on whether the answer is correct\n            Text(correctOrWrong)\n        }\n    }\n}\n```",
+            "coordinate": {
+              "h": 14,
+              "v": 0
+            },
+            "codeBlockCount": 1,
+            "hash": "#/14/0",
+            "heading": "Show different questions",
+            "images": [],
+            "index": 13,
+            "links": []
+          },
+          "diffs": [],
+          "index": 13,
+          "visual": {
+            "baselinePath": "track_b-unit_04/baseline/14-Show-different-questions.png",
+            "baselinePathDark": "track_b-unit_04/baseline-dark/14-Show-different-questions.png",
+            "changedPixels": 0,
+            "currentPath": "track_b-unit_04/current/14-Show-different-questions.png",
+            "currentPathDark": "track_b-unit_04/current-dark/14-Show-different-questions.png",
+            "diffPath": null,
+            "diffRatio": 0,
+            "sizeMismatch": null,
+            "withinThreshold": true
+          }
+        },
+        {
+          "baseline": {
+            "content": "## Next Question Button\n\n- Add a `Button` view to go to the next question.\n- First we must have a variable to keep track if the question is answered.\n- Second we change its value when the user answers the question.\n\n```swift\nstruct ContentView: View {\n    @State private var correctOrWrong = \"\"\n    @State private var questionNumber = 0\n    @State private var showNextButton = false\n\n    func option(title: String, isCorrect:Bool) -> some View{\n        Button(title){\n            if isCorrect{\n                correctOrWrong = \"You are correct!\"\n            }else{\n                correctOrWrong = \"You are wrong!\"\n            }\n            showNextButton = true\n        }\n    }\n\n    var body: some View {\n        ...\n    }\n}\n```",
+            "coordinate": {
+              "h": 15,
+              "v": 0
+            },
+            "codeBlockCount": 1,
+            "hash": "#/15/0",
+            "heading": "Next Question Button",
+            "images": [],
+            "index": 14,
+            "links": []
+          },
+          "current": {
+            "content": "## Next Question Button\n\n- Add a `Button` view to go to the next question.\n- First we must have a variable to keep track if the question is answered.\n- Second we change its value when the user answers the question.\n\n```swift\nstruct ContentView: View {\n    @State private var correctOrWrong = \"\"\n    @State private var questionNumber = 0\n    @State private var showNextButton = false\n\n    func option(title: String, isCorrect:Bool) -> some View{\n        Button(title){\n            if isCorrect{\n                correctOrWrong = \"You are correct!\"\n            }else{\n                correctOrWrong = \"You are wrong!\"\n            }\n            showNextButton = true\n        }\n    }\n\n    var body: some View {\n        ...\n    }\n}\n```",
+            "coordinate": {
+              "h": 15,
+              "v": 0
+            },
+            "codeBlockCount": 1,
+            "hash": "#/15/0",
+            "heading": "Next Question Button",
+            "images": [],
+            "index": 14,
+            "links": []
+          },
+          "diffs": [],
+          "index": 14,
+          "visual": {
+            "baselinePath": "track_b-unit_04/baseline/15-Next-Question-Button.png",
+            "baselinePathDark": "track_b-unit_04/baseline-dark/15-Next-Question-Button.png",
+            "changedPixels": 0,
+            "currentPath": "track_b-unit_04/current/15-Next-Question-Button.png",
+            "currentPathDark": "track_b-unit_04/current-dark/15-Next-Question-Button.png",
+            "diffPath": null,
+            "diffRatio": 0,
+            "sizeMismatch": null,
+            "withinThreshold": true
+          }
+        },
+        {
+          "baseline": {
+            "content": "## Next Question Button\n\n- Thirdly, we show the button is showNextButton is true.\n- We style this button to make it look different from the other buttons.\n\n```swift\nstruct ContentView: View {\n    @State private var correctOrWrong = \"\"\n    @State private var questionNumber = 0\n    @State private var showNextButton = false\n\n    func option(title: String, isCorrect:Bool) -> some View{\n        ...\n    }\n\n    var body: some View {\n        VStack{\n            if questionNumber == 0{\n                ...\n            }\n\n            // Feedback on whether the answer is correct\n            Text(correctOrWrong)\n\n            // Next Question Button\n            if showNextButton{\n                Button(\"Next Question\"){\n\n                }\n                .buttonStyle(.bordered)\n                .tint(.blue)\n            }\n        }\n    }\n}\n```",
+            "coordinate": {
+              "h": 16,
+              "v": 0
+            },
+            "codeBlockCount": 1,
+            "hash": "#/16/0",
+            "heading": "Next Question Button",
+            "images": [],
+            "index": 15,
+            "links": []
+          },
+          "current": {
+            "content": "## Next Question Button\n\n- Thirdly, we show the button is showNextButton is true.\n- We style this button to make it look different from the other buttons.\n\n```swift\nstruct ContentView: View {\n    @State private var correctOrWrong = \"\"\n    @State private var questionNumber = 0\n    @State private var showNextButton = false\n\n    func option(title: String, isCorrect:Bool) -> some View{\n        ...\n    }\n\n    var body: some View {\n        VStack{\n            if questionNumber == 0{\n                ...\n            }\n\n            // Feedback on whether the answer is correct\n            Text(correctOrWrong)\n\n            // Next Question Button\n            if showNextButton{\n                Button(\"Next Question\"){\n\n                }\n                .buttonStyle(.bordered)\n                .tint(.blue)\n            }\n        }\n    }\n}\n```",
+            "coordinate": {
+              "h": 16,
+              "v": 0
+            },
+            "codeBlockCount": 1,
+            "hash": "#/16/0",
+            "heading": "Next Question Button",
+            "images": [],
+            "index": 15,
+            "links": []
+          },
+          "diffs": [],
+          "index": 15,
+          "visual": {
+            "baselinePath": "track_b-unit_04/baseline/16-Next-Question-Button.png",
+            "baselinePathDark": "track_b-unit_04/baseline-dark/16-Next-Question-Button.png",
+            "changedPixels": 0,
+            "currentPath": "track_b-unit_04/current/16-Next-Question-Button.png",
+            "currentPathDark": "track_b-unit_04/current-dark/16-Next-Question-Button.png",
+            "diffPath": null,
+            "diffRatio": 0,
+            "sizeMismatch": null,
+            "withinThreshold": true
+          }
+        },
+        {
+          "baseline": {
+            "content": "# 4.4 Go to the next question and reset the answer",
+            "coordinate": {
+              "h": 17,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/17/0",
+            "heading": "4.4 Go to the next question and reset the answer",
+            "images": [],
+            "index": 16,
+            "links": []
+          },
+          "current": {
+            "content": "# 4.4 Go to the next question and reset the answer",
+            "coordinate": {
+              "h": 17,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/17/0",
+            "heading": "4.4 Go to the next question and reset the answer",
+            "images": [],
+            "index": 16,
+            "links": []
+          },
+          "diffs": [],
+          "index": 16,
+          "visual": {
+            "baselinePath": "track_b-unit_04/baseline/17-4.4-Go-to-the-next-question-and-reset-the-answer.png",
+            "baselinePathDark": "track_b-unit_04/baseline-dark/17-4.4-Go-to-the-next-question-and-reset-the-answer.png",
+            "changedPixels": 0,
+            "currentPath": "track_b-unit_04/current/17-4.4-Go-to-the-next-question-and-reset-the-answer.png",
+            "currentPathDark": "track_b-unit_04/current-dark/17-4.4-Go-to-the-next-question-and-reset-the-answer.png",
+            "diffPath": null,
+            "diffRatio": 0,
+            "sizeMismatch": null,
+            "withinThreshold": true
+          }
+        },
+        {
+          "baseline": {
+            "content": "## Going to the next question\n\n- Add 1 to the `questionNumber` variable to go to the next question.\n\n```swift\nstruct ContentView: View {\n    @State private var correctOrWrong = \"\"\n    @State private var questionNumber = 0\n    @State private var showNextButton = false\n\n    func option(title: String, isCorrect:Bool) -> some View{\n        ...\n    }\n\n    var body: some View {\n        VStack{\n            if questionNumber == 0{\n                ...\n            }\n\n            // Feedback on whether the answer is correct\n            Text(correctOrWrong)\n\n            // Next Question Button\n            if showNextButton{\n                Button(\"Next Question\"){\n                    questionNumber = questionNumber + 1\n                }\n                .buttonStyle(.bordered)\n                .tint(.blue)\n            }\n        }\n    }\n}\n```",
+            "coordinate": {
+              "h": 18,
+              "v": 0
+            },
+            "codeBlockCount": 1,
+            "hash": "#/18/0",
+            "heading": "Going to the next question",
+            "images": [],
+            "index": 17,
+            "links": []
+          },
+          "current": {
+            "content": "## Going to the next question\n\n- Add 1 to the `questionNumber` variable to go to the next question.\n\n```swift\nstruct ContentView: View {\n    @State private var correctOrWrong = \"\"\n    @State private var questionNumber = 0\n    @State private var showNextButton = false\n\n    func option(title: String, isCorrect:Bool) -> some View{\n        ...\n    }\n\n    var body: some View {\n        VStack{\n            if questionNumber == 0{\n                ...\n            }\n\n            // Feedback on whether the answer is correct\n            Text(correctOrWrong)\n\n            // Next Question Button\n            if showNextButton{\n                Button(\"Next Question\"){\n                    questionNumber = questionNumber + 1\n                }\n                .buttonStyle(.bordered)\n                .tint(.blue)\n            }\n        }\n    }\n}\n```",
+            "coordinate": {
+              "h": 18,
+              "v": 0
+            },
+            "codeBlockCount": 1,
+            "hash": "#/18/0",
+            "heading": "Going to the next question",
+            "images": [],
+            "index": 17,
+            "links": []
+          },
+          "diffs": [],
+          "index": 17,
+          "visual": {
+            "baselinePath": "track_b-unit_04/baseline/18-Going-to-the-next-question.png",
+            "baselinePathDark": "track_b-unit_04/baseline-dark/18-Going-to-the-next-question.png",
+            "changedPixels": 0,
+            "currentPath": "track_b-unit_04/current/18-Going-to-the-next-question.png",
+            "currentPathDark": "track_b-unit_04/current-dark/18-Going-to-the-next-question.png",
+            "diffPath": null,
+            "diffRatio": 0,
+            "sizeMismatch": null,
+            "withinThreshold": true
+          }
+        },
+        {
+          "baseline": {
+            "content": "## Going to the next question\n\n- Show the next question based on the `questionNumber`.\n\n```swift\nstruct ContentView: View {\n    @State private var correctOrWrong = \"\"\n    @State private var questionNumber = 0\n    @State private var showNextButton = false\n\n    func option(title: String, isCorrect:Bool) -> some View{\n        ...\n    }\n\n    var body: some View {\n        VStack{\n            if questionNumber == 0{\n                ...\n            }\n            else if questionNumber == 1{\n                // Question 2\n                Text(\"Who wrote Gulliver's Travels?\")\n                    .multilineTextAlignment(.center)\n\n                // Options\n                HStack{\n                    option(title: \"Tim Swift\", isCorrect: false)\n                    option(title: \"Jonathan Swift\", isCorrect: true)\n                }\n                HStack{\n                    option(title: \"Joe Swift\", isCorrect: false)\n                    option(title: \"Taylor Swift\", isCorrect: false)\n                }\n            }\n\n            // Feedback on whether the answer is correct\n            Text(correctOrWrong)\n\n            // Next Question Button\n            if showNextButton{\n                Button(\"Next Question\"){\n                    questionNumber = questionNumber + 1\n                }\n                .buttonStyle(.bordered)\n                .tint(.blue)\n            }\n        }\n    }\n}\n```",
+            "coordinate": {
+              "h": 19,
+              "v": 0
+            },
+            "codeBlockCount": 1,
+            "hash": "#/19/0",
+            "heading": "Going to the next question",
+            "images": [],
+            "index": 18,
+            "links": []
+          },
+          "current": {
+            "content": "## Going to the next question\n\n- Show the next question based on the `questionNumber`.\n\n```swift\nstruct ContentView: View {\n    @State private var correctOrWrong = \"\"\n    @State private var questionNumber = 0\n    @State private var showNextButton = false\n\n    func option(title: String, isCorrect:Bool) -> some View{\n        ...\n    }\n\n    var body: some View {\n        VStack{\n            if questionNumber == 0{\n                ...\n            }\n            else if questionNumber == 1{\n                // Question 2\n                Text(\"Who wrote Gulliver's Travels?\")\n                    .multilineTextAlignment(.center)\n\n                // Options\n                HStack{\n                    option(title: \"Tim Swift\", isCorrect: false)\n                    option(title: \"Jonathan Swift\", isCorrect: true)\n                }\n                HStack{\n                    option(title: \"Joe Swift\", isCorrect: false)\n                    option(title: \"Taylor Swift\", isCorrect: false)\n                }\n            }\n\n            // Feedback on whether the answer is correct\n            Text(correctOrWrong)\n\n            // Next Question Button\n            if showNextButton{\n                Button(\"Next Question\"){\n                    questionNumber = questionNumber + 1\n                }\n                .buttonStyle(.bordered)\n                .tint(.blue)\n            }\n        }\n    }\n}\n```",
+            "coordinate": {
+              "h": 19,
+              "v": 0
+            },
+            "codeBlockCount": 1,
+            "hash": "#/19/0",
+            "heading": "Going to the next question",
+            "images": [],
+            "index": 18,
+            "links": []
+          },
+          "diffs": [],
+          "index": 18,
+          "visual": {
+            "baselinePath": "track_b-unit_04/baseline/19-Going-to-the-next-question.png",
+            "baselinePathDark": "track_b-unit_04/baseline-dark/19-Going-to-the-next-question.png",
+            "changedPixels": 0,
+            "currentPath": "track_b-unit_04/current/19-Going-to-the-next-question.png",
+            "currentPathDark": "track_b-unit_04/current-dark/19-Going-to-the-next-question.png",
+            "diffPath": null,
+            "diffRatio": 0,
+            "sizeMismatch": null,
+            "withinThreshold": true
+          }
+        },
+        {
+          "baseline": {
+            "content": "## Hide the Next Question Button\n\n- Now that we are able to show the next question, we should hide the next question button after the user answers the question.\n\n```swift\nstruct ContentView: View {\n    @State private var correctOrWrong = \"\"\n    @State private var questionNumber = 0\n    @State private var showNextButton = false\n\n    func option(title: String, isCorrect:Bool) -> some View{\n        ...\n    }\n\n    var body: some View {\n        VStack{\n            if questionNumber == 0{\n                ...\n            }\n            else if questionNumber == 1{\n                ...\n            }\n\n            // Feedback on whether the answer is correct\n            Text(correctOrWrong)\n\n            // Next Question Button\n            if showNextButton{\n                Button(\"Next Question\"){\n                    questionNumber = questionNumber + 1\n                    showNextButton = false\n                    correctOrWrong = \"\"\n                }\n                .buttonStyle(.bordered)\n                .tint(.blue)\n            }\n        }\n    }\n}\n```",
+            "coordinate": {
+              "h": 20,
+              "v": 0
+            },
+            "codeBlockCount": 1,
+            "hash": "#/20/0",
+            "heading": "Hide the Next Question Button",
+            "images": [],
+            "index": 19,
+            "links": []
+          },
+          "current": {
+            "content": "## Hide the Next Question Button\n\n- Now that we are able to show the next question, we should hide the next question button after the user answers the question.\n\n```swift\nstruct ContentView: View {\n    @State private var correctOrWrong = \"\"\n    @State private var questionNumber = 0\n    @State private var showNextButton = false\n\n    func option(title: String, isCorrect:Bool) -> some View{\n        ...\n    }\n\n    var body: some View {\n        VStack{\n            if questionNumber == 0{\n                ...\n            }\n            else if questionNumber == 1{\n                ...\n            }\n\n            // Feedback on whether the answer is correct\n            Text(correctOrWrong)\n\n            // Next Question Button\n            if showNextButton{\n                Button(\"Next Question\"){\n                    questionNumber = questionNumber + 1\n                    showNextButton = false\n                    correctOrWrong = \"\"\n                }\n                .buttonStyle(.bordered)\n                .tint(.blue)\n            }\n        }\n    }\n}\n```",
+            "coordinate": {
+              "h": 20,
+              "v": 0
+            },
+            "codeBlockCount": 1,
+            "hash": "#/20/0",
+            "heading": "Hide the Next Question Button",
+            "images": [],
+            "index": 19,
+            "links": []
+          },
+          "diffs": [],
+          "index": 19,
+          "visual": {
+            "baselinePath": "track_b-unit_04/baseline/20-Hide-the-Next-Question-Button.png",
+            "baselinePathDark": "track_b-unit_04/baseline-dark/20-Hide-the-Next-Question-Button.png",
+            "changedPixels": 0,
+            "currentPath": "track_b-unit_04/current/20-Hide-the-Next-Question-Button.png",
+            "currentPathDark": "track_b-unit_04/current-dark/20-Hide-the-Next-Question-Button.png",
+            "diffPath": null,
+            "diffRatio": 0,
+            "sizeMismatch": null,
+            "withinThreshold": true
+          }
+        },
+        {
+          "baseline": {
+            "content": "## End the quiz if there are no more questions\n\n- Add an `else` statement to show the end of the quiz.\n\n```swift\nstruct ContentView: View {\n    @State private var correctOrWrong = \"\"\n    @State private var questionNumber = 0\n    @State private var showNextButton = false\n\n    func option(title: String, isCorrect:Bool) -> some View{\n        ...\n    }\n\n    var body: some View {\n        VStack{\n            if questionNumber == 0{\n                ...\n            }\n            else if questionNumber == 1{\n                ...\n            }\n            else{\n                Text(\"The quiz is over.\")\n            }\n\n            // Feedback on whether the answer is correct\n            Text(correctOrWrong)\n\n            // Next Question Button\n            if showNextButton{\n                Button(\"Next Question\"){\n                    questionNumber = questionNumber + 1\n                    showNextButton = false\n                    correctOrWrong = \"\"\n                }\n                .buttonStyle(.bordered)\n                .tint(.blue)\n            }\n        }\n    }\n}\n```",
+            "coordinate": {
+              "h": 21,
+              "v": 0
+            },
+            "codeBlockCount": 1,
+            "hash": "#/21/0",
+            "heading": "End the quiz if there are no more questions",
+            "images": [],
+            "index": 20,
+            "links": []
+          },
+          "current": {
+            "content": "## End the quiz if there are no more questions\n\n- Add an `else` statement to show the end of the quiz.\n\n```swift\nstruct ContentView: View {\n    @State private var correctOrWrong = \"\"\n    @State private var questionNumber = 0\n    @State private var showNextButton = false\n\n    func option(title: String, isCorrect:Bool) -> some View{\n        ...\n    }\n\n    var body: some View {\n        VStack{\n            if questionNumber == 0{\n                ...\n            }\n            else if questionNumber == 1{\n                ...\n            }\n            else{\n                Text(\"The quiz is over.\")\n            }\n\n            // Feedback on whether the answer is correct\n            Text(correctOrWrong)\n\n            // Next Question Button\n            if showNextButton{\n                Button(\"Next Question\"){\n                    questionNumber = questionNumber + 1\n                    showNextButton = false\n                    correctOrWrong = \"\"\n                }\n                .buttonStyle(.bordered)\n                .tint(.blue)\n            }\n        }\n    }\n}\n```",
+            "coordinate": {
+              "h": 21,
+              "v": 0
+            },
+            "codeBlockCount": 1,
+            "hash": "#/21/0",
+            "heading": "End the quiz if there are no more questions",
+            "images": [],
+            "index": 20,
+            "links": []
+          },
+          "diffs": [],
+          "index": 20,
+          "visual": {
+            "baselinePath": "track_b-unit_04/baseline/21-End-the-quiz-if-there-are-no-more-questions.png",
+            "baselinePathDark": "track_b-unit_04/baseline-dark/21-End-the-quiz-if-there-are-no-more-questions.png",
+            "changedPixels": 0,
+            "currentPath": "track_b-unit_04/current/21-End-the-quiz-if-there-are-no-more-questions.png",
+            "currentPathDark": "track_b-unit_04/current-dark/21-End-the-quiz-if-there-are-no-more-questions.png",
+            "diffPath": null,
+            "diffRatio": 0,
+            "sizeMismatch": null,
+            "withinThreshold": true
+          }
+        },
+        {
+          "baseline": {
+            "content": "## Now let's imagine we have 10 questions\n\n- If we have 10 questions, we will have to write a lot of code to show all the questions.\n- Thus we should create a function to show the question and options.\n- Copy and paste the code for the first question into a VStack in the function and we will modify it in the next step.\n\n```swift\nstruct ContentView: View {\n    ...\n\n    func question(question: String, option1: String, option2: String, option3: String, option4: String, correctOption: Int) -> some View{\n        VStack{\n            // Question\n            Text(\"What is Taylor Swift's 2020s concert series called?\")\n                .multilineTextAlignment(.center)\n\n            // Options\n            HStack{\n                option(title: \"The Eras Tour\", isCorrect: true)\n                option(title: \"The (Syntax) Erros Tour\", isCorrect: false)\n            }\n            HStack{\n                option(title: \"The Aromas Tour\", isCorrect: false)\n                option(title: \"The Areas Tour\", isCorrect: false)\n            }\n        }\n    }\n\n    var body: some View {\n        ...\n    }\n}\n```",
+            "coordinate": {
+              "h": 22,
+              "v": 0
+            },
+            "codeBlockCount": 1,
+            "hash": "#/22/0",
+            "heading": "Now let's imagine we have 10 questions",
+            "images": [],
+            "index": 21,
+            "links": []
+          },
+          "current": {
+            "content": "## Now let's imagine we have 10 questions\n\n- If we have 10 questions, we will have to write a lot of code to show all the questions.\n- Thus we should create a function to show the question and options.\n- Copy and paste the code for the first question into a VStack in the function and we will modify it in the next step.\n\n```swift\nstruct ContentView: View {\n    ...\n\n    func question(question: String, option1: String, option2: String, option3: String, option4: String, correctOption: Int) -> some View{\n        VStack{\n            // Question\n            Text(\"What is Taylor Swift's 2020s concert series called?\")\n                .multilineTextAlignment(.center)\n\n            // Options\n            HStack{\n                option(title: \"The Eras Tour\", isCorrect: true)\n                option(title: \"The (Syntax) Erros Tour\", isCorrect: false)\n            }\n            HStack{\n                option(title: \"The Aromas Tour\", isCorrect: false)\n                option(title: \"The Areas Tour\", isCorrect: false)\n            }\n        }\n    }\n\n    var body: some View {\n        ...\n    }\n}\n```",
+            "coordinate": {
+              "h": 22,
+              "v": 0
+            },
+            "codeBlockCount": 1,
+            "hash": "#/22/0",
+            "heading": "Now let's imagine we have 10 questions",
+            "images": [],
+            "index": 21,
+            "links": []
+          },
+          "diffs": [],
+          "index": 21,
+          "visual": {
+            "baselinePath": "track_b-unit_04/baseline/22-Now-let-s-imagine-we-have-10-questions.png",
+            "baselinePathDark": "track_b-unit_04/baseline-dark/22-Now-let-s-imagine-we-have-10-questions.png",
+            "changedPixels": 0,
+            "currentPath": "track_b-unit_04/current/22-Now-let-s-imagine-we-have-10-questions.png",
+            "currentPathDark": "track_b-unit_04/current-dark/22-Now-let-s-imagine-we-have-10-questions.png",
+            "diffPath": null,
+            "diffRatio": 0,
+            "sizeMismatch": null,
+            "withinThreshold": true
+          }
+        },
+        {
+          "baseline": {
+            "content": "## Making the question and options dynamic\n\n- Make the question and options dynamic by using the function.\n\n```swift\n...\nfunc question(question: String, option1: String, option2: String, option3: String, option4: String, correctOption: Int) -> some View{\n    VStack{\n        // Question\n        Text(question)\n            .multilineTextAlignment(.center)\n\n        // Options\n        HStack{\n            option(title: option1, isCorrect: correctOption == 1)\n            option(title: option2, isCorrect: correctOption == 2)\n        }\n        HStack{\n            option(title: option3, isCorrect: correctOption == 3)\n            option(title: option4, isCorrect: correctOption == 4)\n        }\n    }\n}\n```",
+            "coordinate": {
+              "h": 23,
+              "v": 0
+            },
+            "codeBlockCount": 1,
+            "hash": "#/23/0",
+            "heading": "Making the question and options dynamic",
+            "images": [],
+            "index": 22,
+            "links": []
+          },
+          "current": {
+            "content": "## Making the question and options dynamic\n\n- Make the question and options dynamic by using the function.\n\n```swift\n...\nfunc question(question: String, option1: String, option2: String, option3: String, option4: String, correctOption: Int) -> some View{\n    VStack{\n        // Question\n        Text(question)\n            .multilineTextAlignment(.center)\n\n        // Options\n        HStack{\n            option(title: option1, isCorrect: correctOption == 1)\n            option(title: option2, isCorrect: correctOption == 2)\n        }\n        HStack{\n            option(title: option3, isCorrect: correctOption == 3)\n            option(title: option4, isCorrect: correctOption == 4)\n        }\n    }\n}\n```",
+            "coordinate": {
+              "h": 23,
+              "v": 0
+            },
+            "codeBlockCount": 1,
+            "hash": "#/23/0",
+            "heading": "Making the question and options dynamic",
+            "images": [],
+            "index": 22,
+            "links": []
+          },
+          "diffs": [],
+          "index": 22,
+          "visual": {
+            "baselinePath": "track_b-unit_04/baseline/23-Making-the-question-and-options-dynamic.png",
+            "baselinePathDark": "track_b-unit_04/baseline-dark/23-Making-the-question-and-options-dynamic.png",
+            "changedPixels": 0,
+            "currentPath": "track_b-unit_04/current/23-Making-the-question-and-options-dynamic.png",
+            "currentPathDark": "track_b-unit_04/current-dark/23-Making-the-question-and-options-dynamic.png",
+            "diffPath": null,
+            "diffRatio": 0,
+            "sizeMismatch": null,
+            "withinThreshold": true
+          }
+        },
+        {
+          "baseline": {
+            "content": "## Using the function\n\n- Use the `question` function to show the questions.\n\n```swift\nstruct ContentView: View {\n\n    ...\n\n    func question(question: String, option1: String, option2: String, option3: String, option4: String, correctOption: Int) -> some View{\n        ...\n    }\n\n    var body: some View {\n        VStack{\n            if questionNumber == 0{\n                question(question: \"What is Taylor Swift's 2020s concert series called?\", option1: \"The Eras Tour\", option2: \"The (Syntax) Erros Tour\", option3: \"The Aromas Tour\", option4: \"The Areas Tour\", correctOption: 1)\n            }\n            else if questionNumber == 1{\n                question(question: \"Who wrote Gulliver's Travels?\", option1: \"Tim Swift\", option2: \"Jonathan Swift\", option3: \"Joe Swift\", option4: \"Taylor Swift\", correctOption: 2)\n            }\n            else{\n                Text(\"The quiz is over.\")\n            }\n\n            // Feedback on whether the answer is correct\n            Text(correctOrWrong)\n\n            // Next Question Button\n            if showNextButton{\n                Button(\"Next Question\"){\n                    questionNumber = questionNumber + 1\n                    showNextButton = false\n                    correctOrWrong = \"\"\n                }\n                .buttonStyle(.bordered)\n                .tint(.blue)\n            }\n        }\n    }\n}\n```",
+            "coordinate": {
+              "h": 24,
+              "v": 0
+            },
+            "codeBlockCount": 1,
+            "hash": "#/24/0",
+            "heading": "Using the function",
+            "images": [],
+            "index": 23,
+            "links": []
+          },
+          "current": {
+            "content": "## Using the function\n\n- Use the `question` function to show the questions.\n\n```swift\nstruct ContentView: View {\n\n    ...\n\n    func question(question: String, option1: String, option2: String, option3: String, option4: String, correctOption: Int) -> some View{\n        ...\n    }\n\n    var body: some View {\n        VStack{\n            if questionNumber == 0{\n                question(question: \"What is Taylor Swift's 2020s concert series called?\", option1: \"The Eras Tour\", option2: \"The (Syntax) Erros Tour\", option3: \"The Aromas Tour\", option4: \"The Areas Tour\", correctOption: 1)\n            }\n            else if questionNumber == 1{\n                question(question: \"Who wrote Gulliver's Travels?\", option1: \"Tim Swift\", option2: \"Jonathan Swift\", option3: \"Joe Swift\", option4: \"Taylor Swift\", correctOption: 2)\n            }\n            else{\n                Text(\"The quiz is over.\")\n            }\n\n            // Feedback on whether the answer is correct\n            Text(correctOrWrong)\n\n            // Next Question Button\n            if showNextButton{\n                Button(\"Next Question\"){\n                    questionNumber = questionNumber + 1\n                    showNextButton = false\n                    correctOrWrong = \"\"\n                }\n                .buttonStyle(.bordered)\n                .tint(.blue)\n            }\n        }\n    }\n}\n```",
+            "coordinate": {
+              "h": 24,
+              "v": 0
+            },
+            "codeBlockCount": 1,
+            "hash": "#/24/0",
+            "heading": "Using the function",
+            "images": [],
+            "index": 23,
+            "links": []
+          },
+          "diffs": [],
+          "index": 23,
+          "visual": {
+            "baselinePath": "track_b-unit_04/baseline/24-Using-the-function.png",
+            "baselinePathDark": "track_b-unit_04/baseline-dark/24-Using-the-function.png",
+            "changedPixels": 0,
+            "currentPath": "track_b-unit_04/current/24-Using-the-function.png",
+            "currentPathDark": "track_b-unit_04/current-dark/24-Using-the-function.png",
+            "diffPath": null,
+            "diffRatio": 0,
+            "sizeMismatch": null,
+            "withinThreshold": true
+          }
+        },
+        {
+          "baseline": {
+            "content": "# 4.5 Using switch-case and withAnimation",
+            "coordinate": {
+              "h": 25,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/25/0",
+            "heading": "4.5 Using switch-case and withAnimation",
+            "images": [],
+            "index": 24,
+            "links": []
+          },
+          "current": {
+            "content": "# 4.5 Using switch-case and withAnimation",
+            "coordinate": {
+              "h": 25,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/25/0",
+            "heading": "4.5 Using switch-case and withAnimation",
+            "images": [],
+            "index": 24,
+            "links": []
+          },
+          "diffs": [],
+          "index": 24,
+          "visual": {
+            "baselinePath": "track_b-unit_04/baseline/25-4.5-Using-switch-case-and-withAnimation.png",
+            "baselinePathDark": "track_b-unit_04/baseline-dark/25-4.5-Using-switch-case-and-withAnimation.png",
+            "changedPixels": 0,
+            "currentPath": "track_b-unit_04/current/25-4.5-Using-switch-case-and-withAnimation.png",
+            "currentPathDark": "track_b-unit_04/current-dark/25-4.5-Using-switch-case-and-withAnimation.png",
+            "diffPath": null,
+            "diffRatio": 0,
+            "sizeMismatch": null,
+            "withinThreshold": true
+          }
+        },
+        {
+          "baseline": {
+            "content": "## Using switch-case\n\n- We can use a `switch-case` statement to show different questions.\n- This makes the code cleaner and easier to read.\n\n```swift\nstruct ContentView: View {\n\n    ...\n\n    var body: some View {\n        VStack{\n            switch questionNumber{\n            case 0:\n                question(question: \"What is Taylor Swift's 2020s concert series called?\", option1: \"The Eras Tour\", option2: \"The (Syntax) Erros Tour\", option3: \"The Aromas Tour\", option4: \"The Areas Tour\", correctOption: 1)\n            case 1:\n                question(question: \"Who wrote Gulliver's Travels?\", option1: \"Tim Swift\", option2: \"Jonathan Swift\", option3: \"Joe Swift\", option4: \"Taylor Swift\", correctOption: 2)\n            default:\n                Text(\"The quiz is over.\")\n            }\n\n            // Feedback on whether the answer is correct\n            Text(correctOrWrong)\n\n            // Next Question Button\n            if showNextButton{\n                Button(\"Next Question\"){\n                    questionNumber = questionNumber + 1\n                    showNextButton = false\n                    correctOrWrong = \"\"\n                }\n                .buttonStyle(.bordered)\n                .tint(.blue)\n            }\n        }\n    }\n}\n```",
+            "coordinate": {
+              "h": 26,
+              "v": 0
+            },
+            "codeBlockCount": 1,
+            "hash": "#/26/0",
+            "heading": "Using switch-case",
+            "images": [],
+            "index": 25,
+            "links": []
+          },
+          "current": {
+            "content": "## Using switch-case\n\n- We can use a `switch-case` statement to show different questions.\n- This makes the code cleaner and easier to read.\n\n```swift\nstruct ContentView: View {\n\n    ...\n\n    var body: some View {\n        VStack{\n            switch questionNumber{\n            case 0:\n                question(question: \"What is Taylor Swift's 2020s concert series called?\", option1: \"The Eras Tour\", option2: \"The (Syntax) Erros Tour\", option3: \"The Aromas Tour\", option4: \"The Areas Tour\", correctOption: 1)\n            case 1:\n                question(question: \"Who wrote Gulliver's Travels?\", option1: \"Tim Swift\", option2: \"Jonathan Swift\", option3: \"Joe Swift\", option4: \"Taylor Swift\", correctOption: 2)\n            default:\n                Text(\"The quiz is over.\")\n            }\n\n            // Feedback on whether the answer is correct\n            Text(correctOrWrong)\n\n            // Next Question Button\n            if showNextButton{\n                Button(\"Next Question\"){\n                    questionNumber = questionNumber + 1\n                    showNextButton = false\n                    correctOrWrong = \"\"\n                }\n                .buttonStyle(.bordered)\n                .tint(.blue)\n            }\n        }\n    }\n}\n```",
+            "coordinate": {
+              "h": 26,
+              "v": 0
+            },
+            "codeBlockCount": 1,
+            "hash": "#/26/0",
+            "heading": "Using switch-case",
+            "images": [],
+            "index": 25,
+            "links": []
+          },
+          "diffs": [],
+          "index": 25,
+          "visual": {
+            "baselinePath": "track_b-unit_04/baseline/26-Using-switch-case.png",
+            "baselinePathDark": "track_b-unit_04/baseline-dark/26-Using-switch-case.png",
+            "changedPixels": 0,
+            "currentPath": "track_b-unit_04/current/26-Using-switch-case.png",
+            "currentPathDark": "track_b-unit_04/current-dark/26-Using-switch-case.png",
+            "diffPath": null,
+            "diffRatio": 0,
+            "sizeMismatch": null,
+            "withinThreshold": true
+          }
+        },
+        {
+          "baseline": {
+            "content": "## Using switch-case\n\n- We can add more cases to show more questions.\n\n```swift\nstruct ContentView: View {\n    ...\n    var body: some View {\n        VStack{\n            switch questionNumber{\n            case 0:\n                question(\n                    question: \"What is Taylor Swift's 2020s concert series called?\",\n                    option1: \"The Eras Tour\",\n                    option2: \"The (Syntax) Erros Tour\",\n                    option3: \"The Aromas Tour\",\n                    option4: \"The Areas Tour\",\n                    correctOption: 1\n                )\n            case 1:\n                question(\n                    question: \"Who wrote Gulliver's Travels?\",\n                    option1: \"Tim Swift\",\n                    option2: \"Jonathan Swift\",\n                    option3: \"Joe Swift\",\n                    option4: \"Taylor Swift\",\n                    correctOption: 2\n                    )\n            case 2:\n                question(\n                    question: \"Who makes the Swift car?\",\n                    option1: \"Nissan\",\n                    option2: \"BMW\",\n                    option3: \"Suzuki\",\n                    option4: \"Apple\",\n                    correctOption: 3\n                )\n            default:\n                Text(\"The quiz is over.\")\n            }\n\n           ...\n        }\n    }\n}\n```",
+            "coordinate": {
+              "h": 27,
+              "v": 0
+            },
+            "codeBlockCount": 1,
+            "hash": "#/27/0",
+            "heading": "Using switch-case",
+            "images": [],
+            "index": 26,
+            "links": []
+          },
+          "current": {
+            "content": "## Using switch-case\n\n- We can add more cases to show more questions.\n\n```swift\nstruct ContentView: View {\n    ...\n    var body: some View {\n        VStack{\n            switch questionNumber{\n            case 0:\n                question(\n                    question: \"What is Taylor Swift's 2020s concert series called?\",\n                    option1: \"The Eras Tour\",\n                    option2: \"The (Syntax) Erros Tour\",\n                    option3: \"The Aromas Tour\",\n                    option4: \"The Areas Tour\",\n                    correctOption: 1\n                )\n            case 1:\n                question(\n                    question: \"Who wrote Gulliver's Travels?\",\n                    option1: \"Tim Swift\",\n                    option2: \"Jonathan Swift\",\n                    option3: \"Joe Swift\",\n                    option4: \"Taylor Swift\",\n                    correctOption: 2\n                    )\n            case 2:\n                question(\n                    question: \"Who makes the Swift car?\",\n                    option1: \"Nissan\",\n                    option2: \"BMW\",\n                    option3: \"Suzuki\",\n                    option4: \"Apple\",\n                    correctOption: 3\n                )\n            default:\n                Text(\"The quiz is over.\")\n            }\n\n           ...\n        }\n    }\n}\n```",
+            "coordinate": {
+              "h": 27,
+              "v": 0
+            },
+            "codeBlockCount": 1,
+            "hash": "#/27/0",
+            "heading": "Using switch-case",
+            "images": [],
+            "index": 26,
+            "links": []
+          },
+          "diffs": [],
+          "index": 26,
+          "visual": {
+            "baselinePath": "track_b-unit_04/baseline/27-Using-switch-case.png",
+            "baselinePathDark": "track_b-unit_04/baseline-dark/27-Using-switch-case.png",
+            "changedPixels": 0,
+            "currentPath": "track_b-unit_04/current/27-Using-switch-case.png",
+            "currentPathDark": "track_b-unit_04/current-dark/27-Using-switch-case.png",
+            "diffPath": null,
+            "diffRatio": 0,
+            "sizeMismatch": null,
+            "withinThreshold": true
+          }
+        },
+        {
+          "baseline": {
+            "content": "## Using withAnimation\n\n- We can use `withAnimation` to animate the transition between questions.\n- Add in `withAnimation` in the `option` function.\n\n```swift\nstruct ContentView: View {\n\n    func option(title: String, isCorrect:Bool) -> some View{\n        Button(title){\n            withAnimation{\n                if isCorrect{\n                    correctOrWrong = \"You are correct!\"\n                }else{\n                    correctOrWrong = \"You are wrong!\"\n                }\n                showNextButton = true\n            }\n        }\n    }\n\n    func question(question: String, option1: String, option2: String, option3: String, option4: String, correctOption: Int) -> some View{\n        ...\n    }\n\n    var body: some View {\n        ...\n    }\n}\n```",
+            "coordinate": {
+              "h": 28,
+              "v": 0
+            },
+            "codeBlockCount": 1,
+            "hash": "#/28/0",
+            "heading": "Using withAnimation",
+            "images": [],
+            "index": 27,
+            "links": []
+          },
+          "current": {
+            "content": "## Using withAnimation\n\n- We can use `withAnimation` to animate the transition between questions.\n- Add in `withAnimation` in the `option` function.\n\n```swift\nstruct ContentView: View {\n\n    func option(title: String, isCorrect:Bool) -> some View{\n        Button(title){\n            withAnimation{\n                if isCorrect{\n                    correctOrWrong = \"You are correct!\"\n                }else{\n                    correctOrWrong = \"You are wrong!\"\n                }\n                showNextButton = true\n            }\n        }\n    }\n\n    func question(question: String, option1: String, option2: String, option3: String, option4: String, correctOption: Int) -> some View{\n        ...\n    }\n\n    var body: some View {\n        ...\n    }\n}\n```",
+            "coordinate": {
+              "h": 28,
+              "v": 0
+            },
+            "codeBlockCount": 1,
+            "hash": "#/28/0",
+            "heading": "Using withAnimation",
+            "images": [],
+            "index": 27,
+            "links": []
+          },
+          "diffs": [],
+          "index": 27,
+          "visual": {
+            "baselinePath": "track_b-unit_04/baseline/28-Using-withAnimation.png",
+            "baselinePathDark": "track_b-unit_04/baseline-dark/28-Using-withAnimation.png",
+            "changedPixels": 0,
+            "currentPath": "track_b-unit_04/current/28-Using-withAnimation.png",
+            "currentPathDark": "track_b-unit_04/current-dark/28-Using-withAnimation.png",
+            "diffPath": null,
+            "diffRatio": 0,
+            "sizeMismatch": null,
+            "withinThreshold": true
+          }
+        },
+        {
+          "baseline": {
+            "content": "## Using withAnimation\n\n- Add in `withAnimation` in the `Next Question` button.\n\n```swift\nstruct ContentView: View {\n    ...\n    var body: some View {\n        VStack{\n            switch questionNumber{\n            ...\n            }\n\n            // Feedback on whether the answer is correct\n            Text(correctOrWrong)\n\n            // Next Question Button\n            if showNextButton{\n                Button(\"Next Question\"){\n                    withAnimation{\n                        questionNumber = questionNumber + 1\n                        showNextButton = false\n                        correctOrWrong = \"\"\n                    }\n                }\n                .buttonStyle(.bordered)\n                .tint(.blue)\n            }\n        }\n    }\n}\n```",
+            "coordinate": {
+              "h": 29,
+              "v": 0
+            },
+            "codeBlockCount": 1,
+            "hash": "#/29/0",
+            "heading": "Using withAnimation",
+            "images": [],
+            "index": 28,
+            "links": []
+          },
+          "current": {
+            "content": "## Using withAnimation\n\n- Add in `withAnimation` in the `Next Question` button.\n\n```swift\nstruct ContentView: View {\n    ...\n    var body: some View {\n        VStack{\n            switch questionNumber{\n            ...\n            }\n\n            // Feedback on whether the answer is correct\n            Text(correctOrWrong)\n\n            // Next Question Button\n            if showNextButton{\n                Button(\"Next Question\"){\n                    withAnimation{\n                        questionNumber = questionNumber + 1\n                        showNextButton = false\n                        correctOrWrong = \"\"\n                    }\n                }\n                .buttonStyle(.bordered)\n                .tint(.blue)\n            }\n        }\n    }\n}\n```",
+            "coordinate": {
+              "h": 29,
+              "v": 0
+            },
+            "codeBlockCount": 1,
+            "hash": "#/29/0",
+            "heading": "Using withAnimation",
+            "images": [],
+            "index": 28,
+            "links": []
+          },
+          "diffs": [],
+          "index": 28,
+          "visual": {
+            "baselinePath": "track_b-unit_04/baseline/29-Using-withAnimation.png",
+            "baselinePathDark": "track_b-unit_04/baseline-dark/29-Using-withAnimation.png",
+            "changedPixels": 0,
+            "currentPath": "track_b-unit_04/current/29-Using-withAnimation.png",
+            "currentPathDark": "track_b-unit_04/current-dark/29-Using-withAnimation.png",
+            "diffPath": null,
+            "diffRatio": 0,
+            "sizeMismatch": null,
+            "withinThreshold": true
+          }
+        },
+        {
+          "baseline": {
+            "content": "# 4.6 Adding in a score",
+            "coordinate": {
+              "h": 30,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/30/0",
+            "heading": "4.6 Adding in a score",
+            "images": [],
+            "index": 29,
+            "links": []
+          },
+          "current": {
+            "content": "# 4.6 Adding in a score",
+            "coordinate": {
+              "h": 30,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/30/0",
+            "heading": "4.6 Adding in a score",
+            "images": [],
+            "index": 29,
+            "links": []
+          },
+          "diffs": [],
+          "index": 29,
+          "visual": {
+            "baselinePath": "track_b-unit_04/baseline/30-4.6-Adding-in-a-score.png",
+            "baselinePathDark": "track_b-unit_04/baseline-dark/30-4.6-Adding-in-a-score.png",
+            "changedPixels": 0,
+            "currentPath": "track_b-unit_04/current/30-4.6-Adding-in-a-score.png",
+            "currentPathDark": "track_b-unit_04/current-dark/30-4.6-Adding-in-a-score.png",
+            "diffPath": null,
+            "diffRatio": 0,
+            "sizeMismatch": null,
+            "withinThreshold": true
+          }
+        },
+        {
+          "baseline": {
+            "content": "## Creating a `@State` variable for the score\n\n- Create a `@State` variable to keep track of the user's score.\n\n```swift\nstruct ContentView: View {\n    @State private var correctOrWrong = \"\"\n    @State private var questionNumber = 0\n    @State private var showNextButton = false\n    @State private var score = 0\n\n    ...\n}\n```",
+            "coordinate": {
+              "h": 31,
+              "v": 0
+            },
+            "codeBlockCount": 1,
+            "hash": "#/31/0",
+            "heading": "Creating a `@State` variable for the score",
+            "images": [],
+            "index": 30,
+            "links": []
+          },
+          "current": {
+            "content": "## Creating a `@State` variable for the score\n\n- Create a `@State` variable to keep track of the user's score.\n\n```swift\nstruct ContentView: View {\n    @State private var correctOrWrong = \"\"\n    @State private var questionNumber = 0\n    @State private var showNextButton = false\n    @State private var score = 0\n\n    ...\n}\n```",
+            "coordinate": {
+              "h": 31,
+              "v": 0
+            },
+            "codeBlockCount": 1,
+            "hash": "#/31/0",
+            "heading": "Creating a `@State` variable for the score",
+            "images": [],
+            "index": 30,
+            "links": []
+          },
+          "diffs": [],
+          "index": 30,
+          "visual": {
+            "baselinePath": "track_b-unit_04/baseline/31-Creating-a---State--variable-for-the-score.png",
+            "baselinePathDark": "track_b-unit_04/baseline-dark/31-Creating-a---State--variable-for-the-score.png",
+            "changedPixels": 0,
+            "currentPath": "track_b-unit_04/current/31-Creating-a---State--variable-for-the-score.png",
+            "currentPathDark": "track_b-unit_04/current-dark/31-Creating-a---State--variable-for-the-score.png",
+            "diffPath": null,
+            "diffRatio": 0,
+            "sizeMismatch": null,
+            "withinThreshold": true
+          }
+        },
+        {
+          "baseline": {
+            "content": "## Updating the score\n\n- Update the score when the user answers the question correctly.\n\n```swift\nstruct ContentView: View {\n    @State private var correctOrWrong = \"\"\n    @State private var questionNumber = 0\n    @State private var showNextButton = false\n    @State private var score = 0\n\n    func option(title: String, isCorrect:Bool) -> some View{\n        Button(title){\n            withAnimation{\n                if isCorrect{\n                    correctOrWrong = \"You are correct!\"\n                    score += 1\n                }else{\n                    correctOrWrong = \"You are wrong!\"\n                }\n                showNextButton = true\n            }\n        }\n        .buttonStyle(.borderedProminent)\n    }\n\n    ...\n}\n```",
+            "coordinate": {
+              "h": 32,
+              "v": 0
+            },
+            "codeBlockCount": 1,
+            "hash": "#/32/0",
+            "heading": "Updating the score",
+            "images": [],
+            "index": 31,
+            "links": []
+          },
+          "current": {
+            "content": "## Updating the score\n\n- Update the score when the user answers the question correctly.\n\n```swift\nstruct ContentView: View {\n    @State private var correctOrWrong = \"\"\n    @State private var questionNumber = 0\n    @State private var showNextButton = false\n    @State private var score = 0\n\n    func option(title: String, isCorrect:Bool) -> some View{\n        Button(title){\n            withAnimation{\n                if isCorrect{\n                    correctOrWrong = \"You are correct!\"\n                    score += 1\n                }else{\n                    correctOrWrong = \"You are wrong!\"\n                }\n                showNextButton = true\n            }\n        }\n        .buttonStyle(.borderedProminent)\n    }\n\n    ...\n}\n```",
+            "coordinate": {
+              "h": 32,
+              "v": 0
+            },
+            "codeBlockCount": 1,
+            "hash": "#/32/0",
+            "heading": "Updating the score",
+            "images": [],
+            "index": 31,
+            "links": []
+          },
+          "diffs": [],
+          "index": 31,
+          "visual": {
+            "baselinePath": "track_b-unit_04/baseline/32-Updating-the-score.png",
+            "baselinePathDark": "track_b-unit_04/baseline-dark/32-Updating-the-score.png",
+            "changedPixels": 0,
+            "currentPath": "track_b-unit_04/current/32-Updating-the-score.png",
+            "currentPathDark": "track_b-unit_04/current-dark/32-Updating-the-score.png",
+            "diffPath": null,
+            "diffRatio": 0,
+            "sizeMismatch": null,
+            "withinThreshold": true
+          }
+        },
+        {
+          "baseline": {
+            "content": "## Showing the score\n\n- Show the score at the end of the quiz.\n\n```swift\nstruct ContentView: View {\n    ...\n    var body: some View {\n        VStack{\n            ...\n            if showNextButton{\n                ...\n            }\n\n            Text(\"Your score is \\(score)\")\n        }\n    }\n}\n```",
+            "coordinate": {
+              "h": 33,
+              "v": 0
+            },
+            "codeBlockCount": 1,
+            "hash": "#/33/0",
+            "heading": "Showing the score",
+            "images": [],
+            "index": 32,
+            "links": []
+          },
+          "current": {
+            "content": "## Showing the score\n\n- Show the score at the end of the quiz.\n\n```swift\nstruct ContentView: View {\n    ...\n    var body: some View {\n        VStack{\n            ...\n            if showNextButton{\n                ...\n            }\n\n            Text(\"Your score is \\(score)\")\n        }\n    }\n}\n```",
+            "coordinate": {
+              "h": 33,
+              "v": 0
+            },
+            "codeBlockCount": 1,
+            "hash": "#/33/0",
+            "heading": "Showing the score",
+            "images": [],
+            "index": 32,
+            "links": []
+          },
+          "diffs": [],
+          "index": 32,
+          "visual": {
+            "baselinePath": "track_b-unit_04/baseline/33-Showing-the-score.png",
+            "baselinePathDark": "track_b-unit_04/baseline-dark/33-Showing-the-score.png",
+            "changedPixels": 0,
+            "currentPath": "track_b-unit_04/current/33-Showing-the-score.png",
+            "currentPathDark": "track_b-unit_04/current-dark/33-Showing-the-score.png",
+            "diffPath": null,
+            "diffRatio": 0,
+            "sizeMismatch": null,
+            "withinThreshold": true
+          }
+        },
+        {
+          "baseline": {
+            "content": "## Conditionally showing the score\n\n- Only show the score if the quiz is over.\n- Change the `default` case to show the score.\n\n```swift\nstruct ContentView: View {\n    ...\n    var body: some View {\n        VStack{\n            ...\n            switch questionNumber{\n            ...\n            default:\n                Text(\"The quiz is over.\")\n                Text(\"Your score is \\(score)\")\n            }\n\n            ...\n        }\n    }\n}\n```",
+            "coordinate": {
+              "h": 34,
+              "v": 0
+            },
+            "codeBlockCount": 1,
+            "hash": "#/34/0",
+            "heading": "Conditionally showing the score",
+            "images": [],
+            "index": 33,
+            "links": []
+          },
+          "current": {
+            "content": "## Conditionally showing the score\n\n- Only show the score if the quiz is over.\n- Change the `default` case to show the score.\n\n```swift\nstruct ContentView: View {\n    ...\n    var body: some View {\n        VStack{\n            ...\n            switch questionNumber{\n            ...\n            default:\n                Text(\"The quiz is over.\")\n                Text(\"Your score is \\(score)\")\n            }\n\n            ...\n        }\n    }\n}\n```",
+            "coordinate": {
+              "h": 34,
+              "v": 0
+            },
+            "codeBlockCount": 1,
+            "hash": "#/34/0",
+            "heading": "Conditionally showing the score",
+            "images": [],
+            "index": 33,
+            "links": []
+          },
+          "diffs": [],
+          "index": 33,
+          "visual": {
+            "baselinePath": "track_b-unit_04/baseline/34-Conditionally-showing-the-score.png",
+            "baselinePathDark": "track_b-unit_04/baseline-dark/34-Conditionally-showing-the-score.png",
+            "changedPixels": 0,
+            "currentPath": "track_b-unit_04/current/34-Conditionally-showing-the-score.png",
+            "currentPathDark": "track_b-unit_04/current-dark/34-Conditionally-showing-the-score.png",
+            "diffPath": null,
+            "diffRatio": 0,
+            "sizeMismatch": null,
+            "withinThreshold": true
+          }
+        },
+        {
+          "baseline": {
+            "content": "## Giving feedback\n\n- Show thumbs up if they got more than 1 question correct.\n- Let's make it big and colour it with an gradient.\n\n```swift\nstruct ContentView: View {\n    ...\n    var body: some View {\n        VStack{\n            ...\n            switch questionNumber{\n            ...\n            default:\n                Text(\"The quiz is over.\")\n                Text(\"Your score is \\(score)\")\n                if score > 1{\n                    Image(systemName: \"hand.thumbsup.fill\")\n                        .font(.system(size: 100))\n                        .foregroundStyle(LinearGradient(colors: [.red, .green, .blue], startPoint: .top, endPoint: .bottomLeading))\n                }\n            }\n\n            ...\n        }\n    }\n}\n```",
+            "coordinate": {
+              "h": 35,
+              "v": 0
+            },
+            "codeBlockCount": 1,
+            "hash": "#/35/0",
+            "heading": "Giving feedback",
+            "images": [],
+            "index": 34,
+            "links": []
+          },
+          "current": {
+            "content": "## Giving feedback\n\n- Show thumbs up if they got more than 1 question correct.\n- Let's make it big and colour it with an gradient.\n\n```swift\nstruct ContentView: View {\n    ...\n    var body: some View {\n        VStack{\n            ...\n            switch questionNumber{\n            ...\n            default:\n                Text(\"The quiz is over.\")\n                Text(\"Your score is \\(score)\")\n                if score > 1{\n                    Image(systemName: \"hand.thumbsup.fill\")\n                        .font(.system(size: 100))\n                        .foregroundStyle(LinearGradient(colors: [.red, .green, .blue], startPoint: .top, endPoint: .bottomLeading))\n                }\n            }\n\n            ...\n        }\n    }\n}\n```",
+            "coordinate": {
+              "h": 35,
+              "v": 0
+            },
+            "codeBlockCount": 1,
+            "hash": "#/35/0",
+            "heading": "Giving feedback",
+            "images": [],
+            "index": 34,
+            "links": []
+          },
+          "diffs": [],
+          "index": 34,
+          "visual": {
+            "baselinePath": "track_b-unit_04/baseline/35-Giving-feedback.png",
+            "baselinePathDark": "track_b-unit_04/baseline-dark/35-Giving-feedback.png",
+            "changedPixels": 0,
+            "currentPath": "track_b-unit_04/current/35-Giving-feedback.png",
+            "currentPathDark": "track_b-unit_04/current-dark/35-Giving-feedback.png",
+            "diffPath": null,
+            "diffRatio": 0,
+            "sizeMismatch": null,
+            "withinThreshold": true
+          }
+        },
+        {
+          "baseline": {
+            "content": "## Giving feedback\n\n- Show 🗑️ if they got 0 questions correct.\n\n```swift\nstruct ContentView: View {\n    ...\n    var body: some View {\n        VStack{\n            ...\n            switch questionNumber{\n            ...\n            default:\n                Text(\"The quiz is over.\")\n                Text(\"Your score is \\(score)\")\n                if score > 1{\n                    Image(systemName: \"hand.thumbsup.fill\")\n                        .font(.system(size: 100))\n                        .foregroundStyle(LinearGradient(colors: [.red, .green, .blue], startPoint: .top, endPoint: .bottomLeading))\n                }else if score == 0{\n                    Image(systemName: \"trash.fill\")\n                        .font(.system(size: 100))\n                }\n            }\n\n            ...\n        }\n    }\n}\n```",
+            "coordinate": {
+              "h": 36,
+              "v": 0
+            },
+            "codeBlockCount": 1,
+            "hash": "#/36/0",
+            "heading": "Giving feedback",
+            "images": [],
+            "index": 35,
+            "links": []
+          },
+          "current": {
+            "content": "## Giving feedback\n\n- Show 🗑️ if they got 0 questions correct.\n\n```swift\nstruct ContentView: View {\n    ...\n    var body: some View {\n        VStack{\n            ...\n            switch questionNumber{\n            ...\n            default:\n                Text(\"The quiz is over.\")\n                Text(\"Your score is \\(score)\")\n                if score > 1{\n                    Image(systemName: \"hand.thumbsup.fill\")\n                        .font(.system(size: 100))\n                        .foregroundStyle(LinearGradient(colors: [.red, .green, .blue], startPoint: .top, endPoint: .bottomLeading))\n                }else if score == 0{\n                    Image(systemName: \"trash.fill\")\n                        .font(.system(size: 100))\n                }\n            }\n\n            ...\n        }\n    }\n}\n```",
+            "coordinate": {
+              "h": 36,
+              "v": 0
+            },
+            "codeBlockCount": 1,
+            "hash": "#/36/0",
+            "heading": "Giving feedback",
+            "images": [],
+            "index": 35,
+            "links": []
+          },
+          "diffs": [],
+          "index": 35,
+          "visual": {
+            "baselinePath": "track_b-unit_04/baseline/36-Giving-feedback.png",
+            "baselinePathDark": "track_b-unit_04/baseline-dark/36-Giving-feedback.png",
+            "changedPixels": 0,
+            "currentPath": "track_b-unit_04/current/36-Giving-feedback.png",
+            "currentPathDark": "track_b-unit_04/current-dark/36-Giving-feedback.png",
+            "diffPath": null,
+            "diffRatio": 0,
+            "sizeMismatch": null,
+            "withinThreshold": true
+          }
+        },
+        {
+          "baseline": {
+            "content": "## Disabling the buttons\n\n- We dont want the user to be able to answer the question after they have answered it.\n- We can disable the buttons using the `disabled` modifier.\n\n```swift\nstruct ContentView: View {\n    ...\n    func option(title: String, isCorrect:Bool) -> some View{\n        Button(title){\n            withAnimation{\n                if isCorrect{\n                    correctOrWrong = \"You are correct!\"\n                    score += 1\n                }else{\n                    correctOrWrong = \"You are wrong!\"\n                }\n                showNextButton = true\n            }\n        }\n        .buttonStyle(.borderedProminent)\n        .disabled(showNextButton)\n    }\n\n    ...\n}\n```",
+            "coordinate": {
+              "h": 37,
+              "v": 0
+            },
+            "codeBlockCount": 1,
+            "hash": "#/37/0",
+            "heading": "Disabling the buttons",
+            "images": [],
+            "index": 36,
+            "links": []
+          },
+          "current": {
+            "content": "## Disabling the buttons\n\n- We dont want the user to be able to answer the question after they have answered it.\n- We can disable the buttons using the `disabled` modifier.\n\n```swift\nstruct ContentView: View {\n    ...\n    func option(title: String, isCorrect:Bool) -> some View{\n        Button(title){\n            withAnimation{\n                if isCorrect{\n                    correctOrWrong = \"You are correct!\"\n                    score += 1\n                }else{\n                    correctOrWrong = \"You are wrong!\"\n                }\n                showNextButton = true\n            }\n        }\n        .buttonStyle(.borderedProminent)\n        .disabled(showNextButton)\n    }\n\n    ...\n}\n```",
+            "coordinate": {
+              "h": 37,
+              "v": 0
+            },
+            "codeBlockCount": 1,
+            "hash": "#/37/0",
+            "heading": "Disabling the buttons",
+            "images": [],
+            "index": 36,
+            "links": []
+          },
+          "diffs": [],
+          "index": 36,
+          "visual": {
+            "baselinePath": "track_b-unit_04/baseline/37-Disabling-the-buttons.png",
+            "baselinePathDark": "track_b-unit_04/baseline-dark/37-Disabling-the-buttons.png",
+            "changedPixels": 0,
+            "currentPath": "track_b-unit_04/current/37-Disabling-the-buttons.png",
+            "currentPathDark": "track_b-unit_04/current-dark/37-Disabling-the-buttons.png",
+            "diffPath": null,
+            "diffRatio": 0,
+            "sizeMismatch": null,
+            "withinThreshold": true
+          }
+        },
+        {
+          "baseline": {
+            "content": "# Congratulations\n\nYou have made a simple quiz app with multiple questions and a score system!",
+            "coordinate": {
+              "h": 38,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/38/0",
+            "heading": "Congratulations",
+            "images": [],
+            "index": 37,
+            "links": []
+          },
+          "current": {
+            "content": "# Congratulations\n\nYou have made a simple quiz app with multiple questions and a score system!",
+            "coordinate": {
+              "h": 38,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/38/0",
+            "heading": "Congratulations",
+            "images": [],
+            "index": 37,
+            "links": []
+          },
+          "diffs": [],
+          "index": 37,
+          "visual": {
+            "baselinePath": "track_b-unit_04/baseline/38-Congratulations.png",
+            "baselinePathDark": "track_b-unit_04/baseline-dark/38-Congratulations.png",
+            "changedPixels": 0,
+            "currentPath": "track_b-unit_04/current/38-Congratulations.png",
+            "currentPathDark": "track_b-unit_04/current-dark/38-Congratulations.png",
+            "diffPath": null,
+            "diffRatio": 0,
+            "sizeMismatch": null,
+            "withinThreshold": true
+          }
+        }
+      ],
+      "title": "Quiz App"
+    }
+  ],
+  "visualThreshold": 0.01
+}

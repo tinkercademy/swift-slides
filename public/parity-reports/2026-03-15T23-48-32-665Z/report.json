@@ -1,0 +1,503 @@
+{
+  "baseRef": "main",
+  "generatedAt": "2026-03-15T23:48:51.845Z",
+  "outputDir": "output/playwright/slide-parity/2026-03-15T23-48-32-665Z",
+  "units": [
+    {
+      "baseRef": "main",
+      "currentMarkdownPath": "public/markdown/track_b/00-ipad-and-swift.md",
+      "route": "track_b/unit_00",
+      "slides": [
+        {
+          "baseline": {
+            "content": "## What is Swift?\n\n- Swift is an open-source programming language created by Apple\n- Used by developers to build apps for iOS, iPadOS, macOS, watchOS, tvOS, and more.",
+            "coordinate": {
+              "h": 1,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/1/0",
+            "heading": "What is Swift?",
+            "images": [],
+            "index": 0,
+            "links": []
+          },
+          "current": {
+            "content": "## What is Swift?\n\n- Swift is an open-source programming language created by Apple\n- Used by developers to build apps for iOS, iPadOS, macOS, watchOS, tvOS, and more.",
+            "coordinate": {
+              "h": 1,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/1/0",
+            "heading": "What is Swift?",
+            "images": [],
+            "index": 0,
+            "links": []
+          },
+          "diffs": [],
+          "index": 0,
+          "visual": {
+            "baselinePath": "track_b-unit_00/baseline/01-What-is-Swift-.png",
+            "baselinePathDark": "track_b-unit_00/baseline-dark/01-What-is-Swift-.png",
+            "changedPixels": 0,
+            "currentPath": "track_b-unit_00/current/01-What-is-Swift-.png",
+            "currentPathDark": "track_b-unit_00/current-dark/01-What-is-Swift-.png",
+            "diffPath": null,
+            "diffRatio": 0,
+            "sizeMismatch": null,
+            "withinThreshold": true
+          }
+        },
+        {
+          "baseline": {
+            "content": "# Introduction to Swift Playgrounds",
+            "coordinate": {
+              "h": 2,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/2/0",
+            "heading": "Introduction to Swift Playgrounds",
+            "images": [],
+            "index": 1,
+            "links": []
+          },
+          "current": {
+            "content": "# Introduction to Swift Playgrounds",
+            "coordinate": {
+              "h": 2,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/2/0",
+            "heading": "Introduction to Swift Playgrounds",
+            "images": [],
+            "index": 1,
+            "links": []
+          },
+          "diffs": [],
+          "index": 1,
+          "visual": {
+            "baselinePath": "track_b-unit_00/baseline/02-Introduction-to-Swift-Playgrounds.png",
+            "baselinePathDark": "track_b-unit_00/baseline-dark/02-Introduction-to-Swift-Playgrounds.png",
+            "changedPixels": 0,
+            "currentPath": "track_b-unit_00/current/02-Introduction-to-Swift-Playgrounds.png",
+            "currentPathDark": "track_b-unit_00/current-dark/02-Introduction-to-Swift-Playgrounds.png",
+            "diffPath": null,
+            "diffRatio": 0,
+            "sizeMismatch": null,
+            "withinThreshold": true
+          }
+        },
+        {
+          "baseline": {
+            "content": "## Getting Started\n\n### 🚀 Swift Playgrounds for iPad",
+            "coordinate": {
+              "h": 3,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/3/0",
+            "heading": "Getting Started",
+            "images": [],
+            "index": 2,
+            "links": []
+          },
+          "current": {
+            "content": "## Getting Started\n\n### 🚀 Swift Playgrounds for iPad",
+            "coordinate": {
+              "h": 3,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/3/0",
+            "heading": "Getting Started",
+            "images": [],
+            "index": 2,
+            "links": []
+          },
+          "diffs": [],
+          "index": 2,
+          "visual": {
+            "baselinePath": "track_b-unit_00/baseline/03-Getting-Started.png",
+            "baselinePathDark": "track_b-unit_00/baseline-dark/03-Getting-Started.png",
+            "changedPixels": 0,
+            "currentPath": "track_b-unit_00/current/03-Getting-Started.png",
+            "currentPathDark": "track_b-unit_00/current-dark/03-Getting-Started.png",
+            "diffPath": null,
+            "diffRatio": 0,
+            "sizeMismatch": null,
+            "withinThreshold": true
+          }
+        },
+        {
+          "baseline": {
+            "content": "## <img style=\"margin-bottom: -8px\" src=\"/assets/swift-playgrounds.png\"> Swift Playgrounds\n\n### _Swift Playgrounds_ helps you learn to code and build apps using Swift, the same powerful language used to create world-class apps for the App Store.\n\n[Swift Playgrounds on the App Store](https://apps.apple.com/app/id908519492).",
+            "coordinate": {
+              "h": 4,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/4/0",
+            "heading": "<img style=\"margin-bottom: -8px\" src=\"/assets/swift-playgrounds.png\"> Swift Playgrounds",
+            "images": [
+              "/assets/swift-playgrounds.png"
+            ],
+            "index": 3,
+            "links": [
+              "https://apps.apple.com/app/id908519492"
+            ]
+          },
+          "current": {
+            "content": "## ![Swift Playgrounds](/assets/swift-playgrounds.png) Swift Playgrounds\n\n### _Swift Playgrounds_ helps you learn to code and build apps using Swift, the same powerful language used to create world-class apps for the App Store.\n\n[Swift Playgrounds on the App Store](https://apps.apple.com/app/id908519492).",
+            "coordinate": {
+              "h": 4,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/4/0",
+            "heading": "![Swift Playgrounds](/assets/swift-playgrounds.png) Swift Playgrounds",
+            "images": [
+              "/assets/swift-playgrounds.png"
+            ],
+            "index": 3,
+            "links": [
+              "https://apps.apple.com/app/id908519492"
+            ]
+          },
+          "diffs": [
+            "Heading changed: \"<img style=\"margin-bottom: -8px\" src=\"/assets/swift-playgrounds.png\"> Swift Playgrounds\" -> \"![Swift Playgrounds](/assets/swift-playgrounds.png) Swift Playgrounds\""
+          ],
+          "index": 3,
+          "visual": {
+            "baselinePath": "track_b-unit_00/baseline/04---Swift-Playgrounds---assets-swift-playgrounds.png--Swift-Playgrounds.png",
+            "baselinePathDark": "track_b-unit_00/baseline-dark/04---Swift-Playgrounds---assets-swift-playgrounds.png--Swift-Playgrounds.png",
+            "changedPixels": 63115,
+            "currentPath": "track_b-unit_00/current/04---Swift-Playgrounds---assets-swift-playgrounds.png--Swift-Playgrounds.png",
+            "currentPathDark": "track_b-unit_00/current-dark/04---Swift-Playgrounds---assets-swift-playgrounds.png--Swift-Playgrounds.png",
+            "diffPath": "track_b-unit_00/diff/04---Swift-Playgrounds---assets-swift-playgrounds.png--Swift-Playgrounds.png",
+            "diffRatio": 0.0608778603865163,
+            "sizeMismatch": null,
+            "withinThreshold": false
+          }
+        },
+        {
+          "baseline": {
+            "content": "## Swift Playgrounds\n\n<img src=\"/markdown/track_b/assets/playgrounds-launch-ss.png\" alt=\"Swift Playgrounds Launch\" width=\"50%\">",
+            "coordinate": {
+              "h": 5,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/5/0",
+            "heading": "Swift Playgrounds",
+            "images": [
+              "/markdown/track_b/assets/playgrounds-launch-ss.png"
+            ],
+            "index": 4,
+            "links": []
+          },
+          "current": {
+            "content": "<!-- .slide: class=\"layout-media-centre\" -->\n## Swift Playgrounds\n\n![Swift Playgrounds Launch](/markdown/track_b/assets/playgrounds-launch-ss.png)\n<!-- .element: class=\"r-stretch\" -->",
+            "coordinate": {
+              "h": 5,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/5/0",
+            "heading": "Swift Playgrounds",
+            "images": [
+              "/markdown/track_b/assets/playgrounds-launch-ss.png"
+            ],
+            "index": 4,
+            "links": []
+          },
+          "diffs": [],
+          "index": 4,
+          "visual": {
+            "baselinePath": "track_b-unit_00/baseline/05-Swift-Playgrounds.png",
+            "baselinePathDark": "track_b-unit_00/baseline-dark/05-Swift-Playgrounds.png",
+            "changedPixels": 280896,
+            "currentPath": "track_b-unit_00/current/05-Swift-Playgrounds.png",
+            "currentPathDark": "track_b-unit_00/current-dark/05-Swift-Playgrounds.png",
+            "diffPath": "track_b-unit_00/diff/05-Swift-Playgrounds.png",
+            "diffRatio": 0.2709395147133151,
+            "sizeMismatch": null,
+            "withinThreshold": false
+          }
+        },
+        {
+          "baseline": {
+            "content": "## Learning with Swift Playgrounds\n\n<div style=\"display: flex;\">\n    <ul>\n        <li>Swift Playgrounds offers interactive tutorials that teach Swift Fundamentals as SwiftUI elements</li>\n        <li>Can be accessed by clicking <code>See All</code> in More Playgrounds</li>\n    </ul>\n    <img style=\"width:70%\" src=\"/markdown/track_b/assets/playgrounds-see_all-ss.png\" alt=\"Swift Playgrounds See All Libaray\" >\n</div>",
+            "coordinate": {
+              "h": 6,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/6/0",
+            "heading": "Learning with Swift Playgrounds",
+            "images": [
+              "/markdown/track_b/assets/playgrounds-see_all-ss.png"
+            ],
+            "index": 5,
+            "links": []
+          },
+          "current": {
+            "content": "<!-- .slide: class=\"layout-steps-media\" -->\n## Learning with Swift Playgrounds\n\n- Swift Playgrounds offers interactive tutorials that teach Swift Fundamentals as SwiftUI elements\n- Can be accessed by clicking `See All` in More Playgrounds\n\n![Swift Playgrounds See All Library](/markdown/track_b/assets/playgrounds-see_all-ss.png)",
+            "coordinate": {
+              "h": 6,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/6/0",
+            "heading": "Learning with Swift Playgrounds",
+            "images": [
+              "/markdown/track_b/assets/playgrounds-see_all-ss.png"
+            ],
+            "index": 5,
+            "links": []
+          },
+          "diffs": [],
+          "index": 5,
+          "visual": {
+            "baselinePath": "track_b-unit_00/baseline/06-Learning-with-Swift-Playgrounds.png",
+            "baselinePathDark": "track_b-unit_00/baseline-dark/06-Learning-with-Swift-Playgrounds.png",
+            "changedPixels": 192441,
+            "currentPath": "track_b-unit_00/current/06-Learning-with-Swift-Playgrounds.png",
+            "currentPathDark": "track_b-unit_00/current-dark/06-Learning-with-Swift-Playgrounds.png",
+            "diffPath": "track_b-unit_00/diff/06-Learning-with-Swift-Playgrounds.png",
+            "diffRatio": 0.18561984204454698,
+            "sizeMismatch": null,
+            "withinThreshold": false
+          }
+        },
+        {
+          "baseline": {
+            "content": "## App mode\n\n#### Mainly used when you want to create an App with SwiftUI\n\n<img style=\"width:70%\" src=\"/markdown/track_b/assets/playgrounds-app-create-ss.png\" alt=\"Swift Playgrounds App Create page \" >",
+            "coordinate": {
+              "h": 7,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/7/0",
+            "heading": "App mode",
+            "images": [
+              "/markdown/track_b/assets/playgrounds-app-create-ss.png"
+            ],
+            "index": 6,
+            "links": []
+          },
+          "current": {
+            "content": "<!-- .slide: class=\"layout-media-centre\" -->\n## App mode\n\n#### Mainly used when you want to create an App with SwiftUI\n\n![Swift Playgrounds App Create page](/markdown/track_b/assets/playgrounds-app-create-ss.png)\n<!-- .element: class=\"r-stretch\" -->",
+            "coordinate": {
+              "h": 7,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/7/0",
+            "heading": "App mode",
+            "images": [
+              "/markdown/track_b/assets/playgrounds-app-create-ss.png"
+            ],
+            "index": 6,
+            "links": []
+          },
+          "diffs": [],
+          "index": 6,
+          "visual": {
+            "baselinePath": "track_b-unit_00/baseline/07-App-mode.png",
+            "baselinePathDark": "track_b-unit_00/baseline-dark/07-App-mode.png",
+            "changedPixels": 144220,
+            "currentPath": "track_b-unit_00/current/07-App-mode.png",
+            "currentPathDark": "track_b-unit_00/current-dark/07-App-mode.png",
+            "diffPath": "track_b-unit_00/diff/07-App-mode.png",
+            "diffRatio": 0.1391080571170622,
+            "sizeMismatch": null,
+            "withinThreshold": false
+          }
+        },
+        {
+          "baseline": {
+            "content": "## Playgrounds mode\n\n#### Mainly used for running Swift code that does not require SwiftUI\n\n<img style=\"width:70%\" src=\"/markdown/track_b/assets/playgrounds-book-create-ss.png\" alt=\"Swift Playgrounds Book Create page\" >",
+            "coordinate": {
+              "h": 8,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/8/0",
+            "heading": "Playgrounds mode",
+            "images": [
+              "/markdown/track_b/assets/playgrounds-book-create-ss.png"
+            ],
+            "index": 7,
+            "links": []
+          },
+          "current": {
+            "content": "<!-- .slide: class=\"layout-media-centre\" -->\n## Playgrounds mode\n\n#### Mainly used for running Swift code that does not require SwiftUI\n\n![Swift Playgrounds Book Create page](/markdown/track_b/assets/playgrounds-book-create-ss.png)\n<!-- .element: class=\"r-stretch\" -->",
+            "coordinate": {
+              "h": 8,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/8/0",
+            "heading": "Playgrounds mode",
+            "images": [
+              "/markdown/track_b/assets/playgrounds-book-create-ss.png"
+            ],
+            "index": 7,
+            "links": []
+          },
+          "diffs": [],
+          "index": 7,
+          "visual": {
+            "baselinePath": "track_b-unit_00/baseline/08-Playgrounds-mode.png",
+            "baselinePathDark": "track_b-unit_00/baseline-dark/08-Playgrounds-mode.png",
+            "changedPixels": 220759,
+            "currentPath": "track_b-unit_00/current/08-Playgrounds-mode.png",
+            "currentPathDark": "track_b-unit_00/current-dark/08-Playgrounds-mode.png",
+            "diffPath": "track_b-unit_00/diff/08-Playgrounds-mode.png",
+            "diffRatio": 0.21293409777496555,
+            "sizeMismatch": null,
+            "withinThreshold": false
+          }
+        },
+        {
+          "baseline": {
+            "content": "# Screen Capturing",
+            "coordinate": {
+              "h": 9,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/9/0",
+            "heading": "Screen Capturing",
+            "images": [],
+            "index": 8,
+            "links": []
+          },
+          "current": {
+            "content": "# Screen Capturing",
+            "coordinate": {
+              "h": 9,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/9/0",
+            "heading": "Screen Capturing",
+            "images": [],
+            "index": 8,
+            "links": []
+          },
+          "diffs": [],
+          "index": 8,
+          "visual": {
+            "baselinePath": "track_b-unit_00/baseline/09-Screen-Capturing.png",
+            "baselinePathDark": "track_b-unit_00/baseline-dark/09-Screen-Capturing.png",
+            "changedPixels": 0,
+            "currentPath": "track_b-unit_00/current/09-Screen-Capturing.png",
+            "currentPathDark": "track_b-unit_00/current-dark/09-Screen-Capturing.png",
+            "diffPath": null,
+            "diffRatio": 0,
+            "sizeMismatch": null,
+            "withinThreshold": true
+          }
+        },
+        {
+          "baseline": {
+            "content": "## Taking a Screenshot\n\n<div style=\"display: flex;\">\n    <ul style=\"width:60%\">\n        <li>Every lesson, we'll ask you to export a screenshot, so it's easier for us to take a look without having to connect to (and mess up) your iCloud version.</li>\n        <li>Press the home and power buttons at the same time to take a screenshot. </li>\n        <li>With Apple Pencil, you can also draw in from the bottom left..</li>\n    </ul>\n    <img src=\"/markdown/track_b/assets/ipad-screenshot.png\" alt=\"Taking screenshots on iPads\">\n</div>",
+            "coordinate": {
+              "h": 10,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/10/0",
+            "heading": "Taking a Screenshot",
+            "images": [
+              "/markdown/track_b/assets/ipad-screenshot.png"
+            ],
+            "index": 9,
+            "links": []
+          },
+          "current": {
+            "content": "<!-- .slide: class=\"layout-steps-media\" -->\n## Taking a Screenshot\n\n- Every lesson, we'll ask you to export a screenshot, so it's easier for us to take a look without having to connect to (and mess up) your iCloud version.\n- Press the home and power buttons at the same time to take a screenshot.\n- With Apple Pencil, you can also draw in from the bottom left.\n\n![Taking screenshots on iPads](/markdown/track_b/assets/ipad-screenshot.png)",
+            "coordinate": {
+              "h": 10,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/10/0",
+            "heading": "Taking a Screenshot",
+            "images": [
+              "/markdown/track_b/assets/ipad-screenshot.png"
+            ],
+            "index": 9,
+            "links": []
+          },
+          "diffs": [],
+          "index": 9,
+          "visual": {
+            "baselinePath": "track_b-unit_00/baseline/10-Taking-a-Screenshot.png",
+            "baselinePathDark": "track_b-unit_00/baseline-dark/10-Taking-a-Screenshot.png",
+            "changedPixels": 69511,
+            "currentPath": "track_b-unit_00/current/10-Taking-a-Screenshot.png",
+            "currentPathDark": "track_b-unit_00/current-dark/10-Taking-a-Screenshot.png",
+            "diffPath": "track_b-unit_00/diff/10-Taking-a-Screenshot.png",
+            "diffRatio": 0.06704715128459375,
+            "sizeMismatch": null,
+            "withinThreshold": false
+          }
+        },
+        {
+          "baseline": {
+            "content": "## Recording your Screen\n\n<div style=\"display: flex;\">\n    <ul style=\"width:60%\">\n        <li>First, ensure that the Screen Recording setting in Control Center is enabled</li>\n            <ul>\n                <li>Go to Settings → Control Center, then tap the Add Button <img style=\"margin-bottom: -4px\" src=\"/markdown/track_b/assets/plus_button.svg\" alt=\"Plus Button\" height=\"32px\"> next to Screen Recording</li>\n            </ul>\n        <li>Open the Control Center by swiping down from the top-right of the screen</li>\n        </li>\n            Tap the Record Button, wait for the three-second countdown. Then, tap it again to stop the recording\n        </li>\n    </ul>\n     <img style=\"width:50%\" src=\"/markdown/track_b/assets/ipad-screenrecording-ss.png\">\n</div>",
+            "coordinate": {
+              "h": 11,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/11/0",
+            "heading": "Recording your Screen",
+            "images": [
+              "/markdown/track_b/assets/ipad-screenrecording-ss.png",
+              "/markdown/track_b/assets/plus_button.svg"
+            ],
+            "index": 10,
+            "links": []
+          },
+          "current": {
+            "content": "<!-- .slide: class=\"layout-steps-media\" -->\n## Recording your Screen\n\n- First, ensure that the Screen Recording setting in Control Center is enabled\n  - Go to Settings → Control Center, then tap the Add Button ![Plus Button](/markdown/track_b/assets/plus_button.svg) next to Screen Recording\n- Open the Control Center by swiping down from the top-right of the screen\n- Tap the Record Button, wait for the three-second countdown. Then, tap it again to stop the recording\n\n![Screen Recording](/markdown/track_b/assets/ipad-screenrecording-ss.png)",
+            "coordinate": {
+              "h": 11,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/11/0",
+            "heading": "Recording your Screen",
+            "images": [
+              "/markdown/track_b/assets/ipad-screenrecording-ss.png",
+              "/markdown/track_b/assets/plus_button.svg"
+            ],
+            "index": 10,
+            "links": []
+          },
+          "diffs": [],
+          "index": 10,
+          "visual": {
+            "baselinePath": "track_b-unit_00/baseline/11-Recording-your-Screen.png",
+            "baselinePathDark": "track_b-unit_00/baseline-dark/11-Recording-your-Screen.png",
+            "changedPixels": 346835,
+            "currentPath": "track_b-unit_00/current/11-Recording-your-Screen.png",
+            "currentPathDark": "track_b-unit_00/current-dark/11-Recording-your-Screen.png",
+            "diffPath": "track_b-unit_00/diff/11-Recording-your-Screen.png",
+            "diffRatio": 0.3345412771473878,
+            "sizeMismatch": null,
+            "withinThreshold": false
+          }
+        }
+      ],
+      "title": "iPad and Swift"
+    }
+  ],
+  "visualThreshold": 0.01
+}

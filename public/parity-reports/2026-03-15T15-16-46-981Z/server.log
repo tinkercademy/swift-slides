@@ -1,0 +1,110 @@
+$ next dev --hostname "127.0.0.1" --port "3305"
+   ▲ Next.js 15.1.11
+   - Local:        http://127.0.0.1:3305
+   - Network:      http://127.0.0.1:3305
+   - Environments: .env.local
+
+ ✓ Starting...
+ ✓ Ready in 1074ms
+ ✓ Compiled /src/middleware in 76ms (100 modules)
+ ○ Compiling /tracks ...
+ ✓ Compiled /tracks in 549ms (716 modules)
+ GET /tracks 200 in 773ms
+ ✓ Compiled /tracks/[trackId]/[unitId] in 226ms (836 modules)
+ GET /tracks/track_x/unit_01?markdown=%2Fmarkdown%2F_parity%2F2026-03-15T15-16-46-981Z%2Ftrack_x%2Funit_01%2Fbaseline.md 200 in 599ms
+ GET /tracks/track_x/unit_01?markdown=%2Fmarkdown%2F_parity%2F2026-03-15T15-16-46-981Z%2Ftrack_x%2Funit_01%2Fcurrent.md 200 in 16ms
+ GET /tracks/track_x/unit_01?markdown=%2Fmarkdown%2F_parity%2F2026-03-15T15-16-46-981Z%2Ftrack_x%2Funit_01%2Fbaseline.md 200 in 17ms
+ GET /tracks/track_x/unit_01?markdown=%2Fmarkdown%2F_parity%2F2026-03-15T15-16-46-981Z%2Ftrack_x%2Funit_01%2Fcurrent.md 200 in 14ms
+ GET /tracks/track_x/unit_02?markdown=%2Fmarkdown%2F_parity%2F2026-03-15T15-16-46-981Z%2Ftrack_x%2Funit_02%2Fbaseline.md 200 in 13ms
+ GET /tracks/track_x/unit_02?markdown=%2Fmarkdown%2F_parity%2F2026-03-15T15-16-46-981Z%2Ftrack_x%2Funit_02%2Fcurrent.md 200 in 13ms
+ GET /tracks/track_x/unit_02?markdown=%2Fmarkdown%2F_parity%2F2026-03-15T15-16-46-981Z%2Ftrack_x%2Funit_02%2Fbaseline.md 200 in 14ms
+ GET /tracks/track_x/unit_02?markdown=%2Fmarkdown%2F_parity%2F2026-03-15T15-16-46-981Z%2Ftrack_x%2Funit_02%2Fcurrent.md 200 in 15ms
+ GET /tracks/track_x/unit_03?markdown=%2Fmarkdown%2F_parity%2F2026-03-15T15-16-46-981Z%2Ftrack_x%2Funit_03%2Fbaseline.md 200 in 17ms
+ ✓ Compiled /_not-found in 153ms (827 modules)
+ GET /markdown/track_x/assets/placeholder_functions.png 404 in 281ms
+ GET /markdown/track_x/assets/placeholder_hands_on_initialisation.png 404 in 281ms
+ GET /markdown/track_x/assets/placeholder_initialisation.png 404 in 282ms
+ GET /markdown/track_x/assets/placeholder_hands_on_parameters.png 404 in 281ms
+ GET /markdown/track_x/assets/placeholder_parameters.png 404 in 281ms
+ GET /markdown/track_x/assets/placeholder_hands_on_functions.png 404 in 281ms
+ GET /tracks/track_x/unit_03?markdown=%2Fmarkdown%2F_parity%2F2026-03-15T15-16-46-981Z%2Ftrack_x%2Funit_03%2Fcurrent.md 200 in 24ms
+ GET /markdown/track_x/assets/placeholder_initialisation.png 404 in 28ms
+ GET /markdown/track_x/assets/placeholder_functions.png 404 in 27ms
+ GET /markdown/track_x/assets/placeholder_hands_on_parameters.png 404 in 28ms
+ GET /markdown/track_x/assets/placeholder_parameters.png 404 in 28ms
+ GET /markdown/track_x/assets/placeholder_hands_on_functions.png 404 in 28ms
+ GET /markdown/track_x/assets/placeholder_hands_on_initialisation.png 404 in 29ms
+ GET /tracks/track_x/unit_03?markdown=%2Fmarkdown%2F_parity%2F2026-03-15T15-16-46-981Z%2Ftrack_x%2Funit_03%2Fbaseline.md 200 in 12ms
+ GET /markdown/track_x/assets/placeholder_hands_on_initialisation.png 404 in 30ms
+ GET /markdown/track_x/assets/placeholder_initialisation.png 404 in 32ms
+ GET /markdown/track_x/assets/placeholder_parameters.png 404 in 30ms
+ GET /markdown/track_x/assets/placeholder_functions.png 404 in 31ms
+ GET /markdown/track_x/assets/placeholder_hands_on_parameters.png 404 in 30ms
+ GET /markdown/track_x/assets/placeholder_hands_on_functions.png 404 in 31ms
+ GET /tracks/track_x/unit_03?markdown=%2Fmarkdown%2F_parity%2F2026-03-15T15-16-46-981Z%2Ftrack_x%2Funit_03%2Fcurrent.md 200 in 13ms
+ GET /markdown/track_x/assets/placeholder_initialisation.png 404 in 23ms
+ GET /markdown/track_x/assets/placeholder_hands_on_initialisation.png 404 in 23ms
+ GET /markdown/track_x/assets/placeholder_functions.png 404 in 23ms
+ GET /markdown/track_x/assets/placeholder_hands_on_parameters.png 404 in 24ms
+ GET /markdown/track_x/assets/placeholder_hands_on_functions.png 404 in 24ms
+ GET /markdown/track_x/assets/placeholder_parameters.png 404 in 24ms
+ GET /tracks/track_x/unit_04?markdown=%2Fmarkdown%2F_parity%2F2026-03-15T15-16-46-981Z%2Ftrack_x%2Funit_04%2Fbaseline.md 200 in 10ms
+ GET /markdown/track_x/assets/placeholder_initialisation.png 404 in 29ms
+ GET /markdown/track_x/assets/placeholder_functions.png 404 in 29ms
+ GET /markdown/track_x/assets/placeholder_parameters.png 404 in 29ms
+ GET /markdown/track_x/assets/placeholder_hands_on_functions.png 404 in 29ms
+ GET /markdown/track_x/assets/placeholder_hands_on_parameters.png 404 in 29ms
+ GET /markdown/track_x/assets/placeholder_hands_on_initialisation.png 404 in 30ms
+ GET /tracks/track_x/unit_04?markdown=%2Fmarkdown%2F_parity%2F2026-03-15T15-16-46-981Z%2Ftrack_x%2Funit_04%2Fcurrent.md 200 in 10ms
+ GET /markdown/track_x/assets/placeholder_hands_on_initialisation.png 404 in 24ms
+ GET /markdown/track_x/assets/placeholder_parameters.png 404 in 24ms
+ GET /markdown/track_x/assets/placeholder_initialisation.png 404 in 25ms
+ GET /markdown/track_x/assets/placeholder_hands_on_parameters.png 404 in 25ms
+ GET /markdown/track_x/assets/placeholder_functions.png 404 in 25ms
+ GET /markdown/track_x/assets/placeholder_hands_on_functions.png 404 in 25ms
+ GET /tracks/track_x/unit_04?markdown=%2Fmarkdown%2F_parity%2F2026-03-15T15-16-46-981Z%2Ftrack_x%2Funit_04%2Fbaseline.md 200 in 14ms
+ GET /markdown/track_x/assets/placeholder_initialisation.png 404 in 31ms
+ GET /markdown/track_x/assets/placeholder_functions.png 404 in 30ms
+ GET /markdown/track_x/assets/placeholder_hands_on_parameters.png 404 in 29ms
+ GET /markdown/track_x/assets/placeholder_hands_on_initialisation.png 404 in 30ms
+ GET /markdown/track_x/assets/placeholder_hands_on_functions.png 404 in 29ms
+ GET /markdown/track_x/assets/placeholder_parameters.png 404 in 29ms
+ GET /tracks/track_x/unit_04?markdown=%2Fmarkdown%2F_parity%2F2026-03-15T15-16-46-981Z%2Ftrack_x%2Funit_04%2Fcurrent.md 200 in 10ms
+ GET /markdown/track_x/assets/placeholder_initialisation.png 404 in 31ms
+ GET /markdown/track_x/assets/placeholder_hands_on_initialisation.png 404 in 30ms
+ GET /markdown/track_x/assets/placeholder_parameters.png 404 in 29ms
+ GET /markdown/track_x/assets/placeholder_functions.png 404 in 30ms
+ GET /markdown/track_x/assets/placeholder_hands_on_functions.png 404 in 30ms
+ GET /markdown/track_x/assets/placeholder_hands_on_parameters.png 404 in 29ms
+ GET /tracks/track_x/unit_05?markdown=%2Fmarkdown%2F_parity%2F2026-03-15T15-16-46-981Z%2Ftrack_x%2Funit_05%2Fbaseline.md 200 in 9ms
+ GET /markdown/track_x/assets/placeholder_changing_accent_colors.png 404 in 23ms
+ GET /markdown/track_x/assets/placeholder_hands_on_about_me.png 404 in 27ms
+ GET /markdown/track_x/assets/placeholder_adding_images_to_tabs.png 404 in 23ms
+ GET /markdown/track_x/assets/placeholder_editing_tab_labels.png 404 in 23ms
+ GET /markdown/track_x/assets/placeholder_tabs_in_app.png 404 in 27ms
+ GET /markdown/track_x/assets/placeholder_getting_started_about_me.png 404 in 23ms
+ GET /markdown/track_x/assets/placeholder_styling_text.png 404 in 7ms
+ GET /tracks/track_x/unit_05?markdown=%2Fmarkdown%2F_parity%2F2026-03-15T15-16-46-981Z%2Ftrack_x%2Funit_05%2Fcurrent.md 200 in 10ms
+ GET /markdown/track_x/assets/placeholder_getting_started_about_me.png 404 in 25ms
+ GET /markdown/track_x/assets/placeholder_editing_tab_labels.png 404 in 24ms
+ GET /markdown/track_x/assets/placeholder_hands_on_about_me.png 404 in 24ms
+ GET /markdown/track_x/assets/placeholder_adding_images_to_tabs.png 404 in 25ms
+ GET /markdown/track_x/assets/placeholder_changing_accent_colors.png 404 in 25ms
+ GET /markdown/track_x/assets/placeholder_tabs_in_app.png 404 in 25ms
+ GET /markdown/track_x/assets/placeholder_styling_text.png 404 in 7ms
+ GET /tracks/track_x/unit_05?markdown=%2Fmarkdown%2F_parity%2F2026-03-15T15-16-46-981Z%2Ftrack_x%2Funit_05%2Fbaseline.md 200 in 10ms
+ GET /markdown/track_x/assets/placeholder_tabs_in_app.png 404 in 23ms
+ GET /markdown/track_x/assets/placeholder_hands_on_about_me.png 404 in 23ms
+ GET /markdown/track_x/assets/placeholder_adding_images_to_tabs.png 404 in 22ms
+ GET /markdown/track_x/assets/placeholder_getting_started_about_me.png 404 in 23ms
+ GET /markdown/track_x/assets/placeholder_changing_accent_colors.png 404 in 23ms
+ GET /markdown/track_x/assets/placeholder_editing_tab_labels.png 404 in 24ms
+ GET /markdown/track_x/assets/placeholder_styling_text.png 404 in 7ms
+ GET /tracks/track_x/unit_05?markdown=%2Fmarkdown%2F_parity%2F2026-03-15T15-16-46-981Z%2Ftrack_x%2Funit_05%2Fcurrent.md 200 in 11ms
+ GET /markdown/track_x/assets/placeholder_adding_images_to_tabs.png 404 in 31ms
+ GET /markdown/track_x/assets/placeholder_editing_tab_labels.png 404 in 31ms
+ GET /markdown/track_x/assets/placeholder_hands_on_about_me.png 404 in 31ms
+ GET /markdown/track_x/assets/placeholder_tabs_in_app.png 404 in 32ms
+ GET /markdown/track_x/assets/placeholder_getting_started_about_me.png 404 in 32ms
+ GET /markdown/track_x/assets/placeholder_changing_accent_colors.png 404 in 32ms
+ GET /markdown/track_x/assets/placeholder_styling_text.png 404 in 7ms

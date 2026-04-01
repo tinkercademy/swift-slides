@@ -1,0 +1,3814 @@
+{
+  "baseRef": "main",
+  "generatedAt": "2026-03-15T15:34:59.632Z",
+  "outputDir": "output/playwright/slide-parity/2026-03-15T15-33-09-687Z",
+  "units": [
+    {
+      "baseRef": "main",
+      "currentMarkdownPath": "public/markdown/track_x/01-commands-for-loops-and-conditionals.md",
+      "route": "track_x/unit_01",
+      "slides": [
+        {
+          "baseline": {
+            "content": "# Phase Overview\n\n- Commands\n- For Loops\n- Conditional Code",
+            "coordinate": {
+              "h": 1,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/1/0",
+            "heading": "Phase Overview",
+            "images": [],
+            "index": 0,
+            "links": []
+          },
+          "current": {
+            "content": "# Phase Overview\n\n- Commands\n- For Loops\n- Conditional Code",
+            "coordinate": {
+              "h": 1,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/1/0",
+            "heading": "Phase Overview",
+            "images": [],
+            "index": 0,
+            "links": []
+          },
+          "diffs": [],
+          "index": 0,
+          "visual": {
+            "baselinePath": "track_x-unit_01/baseline/01-Phase-Overview.png",
+            "baselinePathDark": "track_x-unit_01/baseline-dark/01-Phase-Overview.png",
+            "changedPixels": 0,
+            "currentPath": "track_x-unit_01/current/01-Phase-Overview.png",
+            "currentPathDark": "track_x-unit_01/current-dark/01-Phase-Overview.png",
+            "diffPath": null,
+            "diffRatio": 0,
+            "sizeMismatch": null,
+            "withinThreshold": true
+          }
+        },
+        {
+          "baseline": {
+            "content": "# Lesson Plan\n\n### What you'll learn:\n- Commands\n- For Loops\n- Conditional Code\n\n### What you'll do:\n- Get Started with Code on Swift Playgrounds\n\n### What you'll need:\n- Swift Playgrounds App on your iPad",
+            "coordinate": {
+              "h": 2,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/2/0",
+            "heading": "Lesson Plan",
+            "images": [],
+            "index": 1,
+            "links": []
+          },
+          "current": {
+            "content": "# Lesson Plan\n\n### What you'll learn:\n- Commands\n- For Loops\n- Conditional Code\n\n### What you'll do:\n- Get Started with Code on Swift Playgrounds\n\n### What you'll need:\n- Swift Playgrounds App on your iPad",
+            "coordinate": {
+              "h": 2,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/2/0",
+            "heading": "Lesson Plan",
+            "images": [],
+            "index": 1,
+            "links": []
+          },
+          "diffs": [],
+          "index": 1,
+          "visual": {
+            "baselinePath": "track_x-unit_01/baseline/02-Lesson-Plan.png",
+            "baselinePathDark": "track_x-unit_01/baseline-dark/02-Lesson-Plan.png",
+            "changedPixels": 0,
+            "currentPath": "track_x-unit_01/current/02-Lesson-Plan.png",
+            "currentPathDark": "track_x-unit_01/current-dark/02-Lesson-Plan.png",
+            "diffPath": null,
+            "diffRatio": 0,
+            "sizeMismatch": null,
+            "withinThreshold": true
+          }
+        },
+        {
+          "baseline": {
+            "content": "# What is Swift?",
+            "coordinate": {
+              "h": 3,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/3/0",
+            "heading": "What is Swift?",
+            "images": [],
+            "index": 2,
+            "links": []
+          },
+          "current": {
+            "content": "# What is Swift?",
+            "coordinate": {
+              "h": 3,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/3/0",
+            "heading": "What is Swift?",
+            "images": [],
+            "index": 2,
+            "links": []
+          },
+          "diffs": [],
+          "index": 2,
+          "visual": {
+            "baselinePath": "track_x-unit_01/baseline/03-What-is-Swift-.png",
+            "baselinePathDark": "track_x-unit_01/baseline-dark/03-What-is-Swift-.png",
+            "changedPixels": 0,
+            "currentPath": "track_x-unit_01/current/03-What-is-Swift-.png",
+            "currentPathDark": "track_x-unit_01/current-dark/03-What-is-Swift-.png",
+            "diffPath": null,
+            "diffRatio": 0,
+            "sizeMismatch": null,
+            "withinThreshold": true
+          }
+        },
+        {
+          "baseline": {
+            "content": "## Swift\n<div style=\"display: flex; align-items: center; gap: 20px; padding: 20px;\">\n  <div style=\"flex: 1;\">\n    <ul>\n      <li>Swift is an open-source programming language created by Apple.</li>\n      <li>Used by developers to build apps for iOS, iPadOS, macOS, watchOS, tvOS, and more.</li>\n    </ul>\n  </div>\n  <div style=\"flex: 1;\">\n    <img src=\"/markdown/track_x/assets/x-1-8-0.png\" alt=\"XCode UI\" style=\"width: 100%; max-width: 300px;\">\n  </div>\n</div>",
+            "coordinate": {
+              "h": 4,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/4/0",
+            "heading": "Swift",
+            "images": [
+              "/markdown/track_x/assets/x-1-8-0.png"
+            ],
+            "index": 3,
+            "links": []
+          },
+          "current": {
+            "content": "<!-- .slide: class=\"layout-steps-media\" -->\n## Swift\n\n- Swift is an open-source programming language created by Apple.\n- Used by developers to build apps for iOS, iPadOS, macOS, watchOS, tvOS, and more.\n\n![XCode UI](/markdown/track_x/assets/x-1-8-0.png)",
+            "coordinate": {
+              "h": 4,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/4/0",
+            "heading": "Swift",
+            "images": [
+              "/markdown/track_x/assets/x-1-8-0.png"
+            ],
+            "index": 3,
+            "links": []
+          },
+          "diffs": [],
+          "index": 3,
+          "visual": {
+            "baselinePath": "track_x-unit_01/baseline/04-Swift.png",
+            "baselinePathDark": "track_x-unit_01/baseline-dark/04-Swift.png",
+            "changedPixels": 210267,
+            "currentPath": "track_x-unit_01/current/04-Swift.png",
+            "currentPathDark": "track_x-unit_01/current-dark/04-Swift.png",
+            "diffPath": "track_x-unit_01/diff/04-Swift.png",
+            "diffRatio": 0.20281399144247203,
+            "sizeMismatch": null,
+            "withinThreshold": false
+          }
+        },
+        {
+          "baseline": {
+            "content": "# Introduction to Swift Playgrounds",
+            "coordinate": {
+              "h": 5,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/5/0",
+            "heading": "Introduction to Swift Playgrounds",
+            "images": [],
+            "index": 4,
+            "links": []
+          },
+          "current": {
+            "content": "# Introduction to Swift Playgrounds",
+            "coordinate": {
+              "h": 5,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/5/0",
+            "heading": "Introduction to Swift Playgrounds",
+            "images": [],
+            "index": 4,
+            "links": []
+          },
+          "diffs": [],
+          "index": 4,
+          "visual": {
+            "baselinePath": "track_x-unit_01/baseline/05-Introduction-to-Swift-Playgrounds.png",
+            "baselinePathDark": "track_x-unit_01/baseline-dark/05-Introduction-to-Swift-Playgrounds.png",
+            "changedPixels": 0,
+            "currentPath": "track_x-unit_01/current/05-Introduction-to-Swift-Playgrounds.png",
+            "currentPathDark": "track_x-unit_01/current-dark/05-Introduction-to-Swift-Playgrounds.png",
+            "diffPath": null,
+            "diffRatio": 0,
+            "sizeMismatch": null,
+            "withinThreshold": true
+          }
+        },
+        {
+          "baseline": {
+            "content": "### Getting Started\n\n<div style=\"display: flex; align-items: center; gap: 20px; padding: 20px;\">\n  <div style=\"flex: 1;\">\n    <ol>\n      <li>Open the <strong>Swift Playgrounds</strong> app on your iPad.</li>\n      <li>Tap on </strong>Learn to Code</strong>.</li>\n    </ol>\n  </div>\n  <div style=\"flex: 1; position: relative; width: 700px; height: 500px;\">\n    <img src=\"/markdown/track_x/assets/x-1-35-0.png\" alt=\"Swift Playgrounds Homepage\" style=\"position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;\">\n    <img src=\"/markdown/track_x/assets/iPad.png\" alt=\"iPad\" style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;\">\n  </div>\n</div>",
+            "coordinate": {
+              "h": 6,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/6/0",
+            "heading": "Getting Started",
+            "images": [
+              "/markdown/track_x/assets/iPad.png",
+              "/markdown/track_x/assets/x-1-35-0.png"
+            ],
+            "index": 5,
+            "links": []
+          },
+          "current": {
+            "content": "<!-- .slide: class=\"layout-steps-media\" -->\n### Getting Started\n\n1. Open the **Swift Playgrounds** app on your iPad.\n2. Tap on **Learn to Code**.\n\n![Swift Playgrounds Homepage](/markdown/track_x/assets/x-1-35-0.png)",
+            "coordinate": {
+              "h": 6,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/6/0",
+            "heading": "Getting Started",
+            "images": [
+              "/markdown/track_x/assets/x-1-35-0.png"
+            ],
+            "index": 5,
+            "links": []
+          },
+          "diffs": [
+            "Image references changed"
+          ],
+          "index": 5,
+          "visual": {
+            "baselinePath": "track_x-unit_01/baseline/06-Getting-Started.png",
+            "baselinePathDark": "track_x-unit_01/baseline-dark/06-Getting-Started.png",
+            "changedPixels": 211144,
+            "currentPath": "track_x-unit_01/current/06-Getting-Started.png",
+            "currentPathDark": "track_x-unit_01/current-dark/06-Getting-Started.png",
+            "diffPath": "track_x-unit_01/diff/06-Getting-Started.png",
+            "diffRatio": 0.2036599057823116,
+            "sizeMismatch": null,
+            "withinThreshold": false
+          }
+        },
+        {
+          "baseline": {
+            "content": "### Getting Started\n\n<div style=\"display: flex; align-items: center; gap: 20px; padding: 20px;\">\n  <div style=\"flex: 1;\">\n    <ol>\n      <li>Download <strong>Get Started with Code</strong>.</li>\n    </ol>\n  </div>\n  <div style=\"flex: 1; position: relative; width: 700px; height: 500px;\">\n    <img src=\"/markdown/track_x/assets/x-1-10-0.PNG\" alt=\"Swift Playgrounds UI\" style=\"position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;\">\n    <img src=\"/markdown/track_x/assets/iPad.png\" alt=\"iPad\" style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;\">\n  </div>\n</div>",
+            "coordinate": {
+              "h": 7,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/7/0",
+            "heading": "Getting Started",
+            "images": [
+              "/markdown/track_x/assets/iPad.png",
+              "/markdown/track_x/assets/x-1-10-0.PNG"
+            ],
+            "index": 6,
+            "links": []
+          },
+          "current": {
+            "content": "<!-- .slide: class=\"layout-steps-media\" -->\n### Getting Started\n\n1. Download **Get Started with Code**.\n\n![Swift Playgrounds UI](/markdown/track_x/assets/x-1-10-0.PNG)",
+            "coordinate": {
+              "h": 7,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/7/0",
+            "heading": "Getting Started",
+            "images": [
+              "/markdown/track_x/assets/x-1-10-0.PNG"
+            ],
+            "index": 6,
+            "links": []
+          },
+          "diffs": [
+            "Image references changed"
+          ],
+          "index": 6,
+          "visual": {
+            "baselinePath": "track_x-unit_01/baseline/07-Getting-Started.png",
+            "baselinePathDark": "track_x-unit_01/baseline-dark/07-Getting-Started.png",
+            "changedPixels": 194985,
+            "currentPath": "track_x-unit_01/current/07-Getting-Started.png",
+            "currentPathDark": "track_x-unit_01/current-dark/07-Getting-Started.png",
+            "diffPath": "track_x-unit_01/diff/07-Getting-Started.png",
+            "diffRatio": 0.18807366881826634,
+            "sizeMismatch": null,
+            "withinThreshold": false
+          }
+        },
+        {
+          "baseline": {
+            "content": "### Getting Started\n\n<div style=\"display: flex; align-items: center; gap: 20px; padding: 20px;\">\n  <div style=\"flex: 1;\">\n    <ol>\n      <li>Return back to the home screen.</li>\n      <li> You will see your copy of Get Started with Code.</li>\n    </ol>\n  </div>\n  <div style=\"flex: 1; position: relative; width: 700px; height: 500px;\">\n    <img src=\"/markdown/track_x/assets/x-1-31-0.png\" alt=\"Swift Playgrounds Homepage\" style=\"position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;\">\n    <img src=\"/markdown/track_x/assets/iPad.png\" alt=\"iPad\" style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;\">\n  </div>\n</div>",
+            "coordinate": {
+              "h": 8,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/8/0",
+            "heading": "Getting Started",
+            "images": [
+              "/markdown/track_x/assets/iPad.png",
+              "/markdown/track_x/assets/x-1-31-0.png"
+            ],
+            "index": 7,
+            "links": []
+          },
+          "current": {
+            "content": "<!-- .slide: class=\"layout-steps-media\" -->\n### Getting Started\n\n1. Return back to the home screen.\n2. You will see your copy of Get Started with Code.\n\n![Swift Playgrounds Homepage](/markdown/track_x/assets/x-1-31-0.png)",
+            "coordinate": {
+              "h": 8,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/8/0",
+            "heading": "Getting Started",
+            "images": [
+              "/markdown/track_x/assets/x-1-31-0.png"
+            ],
+            "index": 7,
+            "links": []
+          },
+          "diffs": [
+            "Image references changed"
+          ],
+          "index": 7,
+          "visual": {
+            "baselinePath": "track_x-unit_01/baseline/08-Getting-Started.png",
+            "baselinePathDark": "track_x-unit_01/baseline-dark/08-Getting-Started.png",
+            "changedPixels": 224825,
+            "currentPath": "track_x-unit_01/current/08-Getting-Started.png",
+            "currentPathDark": "track_x-unit_01/current-dark/08-Getting-Started.png",
+            "diffPath": "track_x-unit_01/diff/08-Getting-Started.png",
+            "diffRatio": 0.2168559765728991,
+            "sizeMismatch": null,
+            "withinThreshold": false
+          }
+        },
+        {
+          "baseline": {
+            "content": "### Navigating the Playground\n\n<div style=\"display: flex; align-items: center; gap: 20px; padding: 20px;\">\n  <!-- Text Section -->\n  <div style=\"flex: 1;\">\n    <ul>\n      <li>Tap on the <strong>sidebar icon</strong> to navigate through different chapters.</li>\n      <li>Tap on the <strong>X icon</strong> to return to <strong>My Playgrounds</strong>.</li>\n    </ul>\n  </div>\n  <!-- Image Section -->\n  <div style=\"flex: 1; position: relative; width: 700px; height: 500px;\">\n    <img src=\"/markdown/track_x/assets/x-1-11-0.png\" alt=\"Swift Playgrounds UI Sidebar\" style=\"position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;\">\n    <img src=\"/markdown/track_x/assets/iPad.png\" alt=\"iPad\" style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;\">\n  </div>\n</div>",
+            "coordinate": {
+              "h": 9,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/9/0",
+            "heading": "Navigating the Playground",
+            "images": [
+              "/markdown/track_x/assets/iPad.png",
+              "/markdown/track_x/assets/x-1-11-0.png"
+            ],
+            "index": 8,
+            "links": []
+          },
+          "current": {
+            "content": "<!-- .slide: class=\"layout-steps-media\" -->\n### Navigating the Playground\n\n- Tap on the **sidebar icon** to navigate through different chapters.\n- Tap on the **X icon** to return to **My Playgrounds**.\n\n![Swift Playgrounds UI Sidebar](/markdown/track_x/assets/x-1-11-0.png)",
+            "coordinate": {
+              "h": 9,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/9/0",
+            "heading": "Navigating the Playground",
+            "images": [
+              "/markdown/track_x/assets/x-1-11-0.png"
+            ],
+            "index": 8,
+            "links": []
+          },
+          "diffs": [
+            "Image references changed"
+          ],
+          "index": 8,
+          "visual": {
+            "baselinePath": "track_x-unit_01/baseline/09-Navigating-the-Playground.png",
+            "baselinePathDark": "track_x-unit_01/baseline-dark/09-Navigating-the-Playground.png",
+            "changedPixels": 190489,
+            "currentPath": "track_x-unit_01/current/09-Navigating-the-Playground.png",
+            "currentPathDark": "track_x-unit_01/current-dark/09-Navigating-the-Playground.png",
+            "diffPath": "track_x-unit_01/diff/09-Navigating-the-Playground.png",
+            "diffRatio": 0.18373703156408308,
+            "sizeMismatch": null,
+            "withinThreshold": false
+          }
+        },
+        {
+          "baseline": {
+            "content": "### What you will be doing:\n\n- Control a character, Byte, using Swift.\n- Navigate around the game world and complete tasks such as toggling switches and collecting gems.",
+            "coordinate": {
+              "h": 10,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/10/0",
+            "heading": "What you will be doing:",
+            "images": [],
+            "index": 9,
+            "links": []
+          },
+          "current": {
+            "content": "### What you will be doing:\n\n- Control a character, Byte, using Swift.\n- Navigate around the game world and complete tasks such as toggling switches and collecting gems.",
+            "coordinate": {
+              "h": 10,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/10/0",
+            "heading": "What you will be doing:",
+            "images": [],
+            "index": 9,
+            "links": []
+          },
+          "diffs": [],
+          "index": 9,
+          "visual": {
+            "baselinePath": "track_x-unit_01/baseline/10-What-you-will-be-doing-.png",
+            "baselinePathDark": "track_x-unit_01/baseline-dark/10-What-you-will-be-doing-.png",
+            "changedPixels": 0,
+            "currentPath": "track_x-unit_01/current/10-What-you-will-be-doing-.png",
+            "currentPathDark": "track_x-unit_01/current-dark/10-What-you-will-be-doing-.png",
+            "diffPath": null,
+            "diffRatio": 0,
+            "sizeMismatch": null,
+            "withinThreshold": true
+          }
+        },
+        {
+          "baseline": {
+            "content": "# Commands",
+            "coordinate": {
+              "h": 11,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/11/0",
+            "heading": "Commands",
+            "images": [],
+            "index": 10,
+            "links": []
+          },
+          "current": {
+            "content": "# Commands",
+            "coordinate": {
+              "h": 11,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/11/0",
+            "heading": "Commands",
+            "images": [],
+            "index": 10,
+            "links": []
+          },
+          "diffs": [],
+          "index": 10,
+          "visual": {
+            "baselinePath": "track_x-unit_01/baseline/11-Commands.png",
+            "baselinePathDark": "track_x-unit_01/baseline-dark/11-Commands.png",
+            "changedPixels": 0,
+            "currentPath": "track_x-unit_01/current/11-Commands.png",
+            "currentPathDark": "track_x-unit_01/current-dark/11-Commands.png",
+            "diffPath": null,
+            "diffRatio": 0,
+            "sizeMismatch": null,
+            "withinThreshold": true
+          }
+        },
+        {
+          "baseline": {
+            "content": "<div style=\"display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; padding: 20px;\">\n  <div style=\"position: relative; width: 1050px; height: 650px;\">\n    <img src=\"/markdown/track_x/assets/x-1-14-0.png\" alt=\"Screenshot showing cake\" style=\"position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;\">\n    <img src=\"/markdown/track_x/assets/iPad.png\" alt=\"iPad\" style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;\">\n  </div>\n  <div style=\"position: relative; width: 1050px; height: 650px;\">\n    <img src=\"/markdown/track_x/assets/x-1-14-1.png\" alt=\"Screenshot showing drone blueprints\" style=\"position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;\">\n    <img src=\"/markdown/track_x/assets/iPad.png\" alt=\"iPad\" style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;\">\n  </div>\n</div>",
+            "coordinate": {
+              "h": 12,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/12/0",
+            "heading": null,
+            "images": [
+              "/markdown/track_x/assets/iPad.png",
+              "/markdown/track_x/assets/iPad.png",
+              "/markdown/track_x/assets/x-1-14-0.png",
+              "/markdown/track_x/assets/x-1-14-1.png"
+            ],
+            "index": 11,
+            "links": []
+          },
+          "current": {
+            "content": "<!-- .slide: class=\"layout-two-up\" -->\n\n![Screenshot showing cake](/markdown/track_x/assets/x-1-14-0.png)\n![Screenshot showing drone blueprints](/markdown/track_x/assets/x-1-14-1.png)",
+            "coordinate": {
+              "h": 12,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/12/0",
+            "heading": null,
+            "images": [
+              "/markdown/track_x/assets/x-1-14-0.png",
+              "/markdown/track_x/assets/x-1-14-1.png"
+            ],
+            "index": 11,
+            "links": []
+          },
+          "diffs": [
+            "Image references changed"
+          ],
+          "index": 11,
+          "visual": {
+            "baselinePath": "track_x-unit_01/baseline/12-slide.png",
+            "baselinePathDark": "track_x-unit_01/baseline-dark/12-slide.png",
+            "changedPixels": 321811,
+            "currentPath": "track_x-unit_01/current/12-slide.png",
+            "currentPathDark": "track_x-unit_01/current-dark/12-slide.png",
+            "diffPath": "track_x-unit_01/diff/12-slide.png",
+            "diffRatio": 0.31040426410275207,
+            "sizeMismatch": null,
+            "withinThreshold": false
+          }
+        },
+        {
+          "baseline": {
+            "content": "<div style=\"display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; padding: 20px;\">\n  <div style=\"position: relative; width: 1050px; height: 650px;\">\n    <img src=\"/markdown/track_x/assets/x-1-15-0.png\" alt=\"Screenshot showing drone\" style=\"position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;\">\n    <img src=\"/markdown/track_x/assets/iPad.png\" alt=\"iPad\" style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;\">\n  </div>\n  <div style=\"position: relative; width: 1050px; height: 650px;\">\n    <img src=\"/markdown/track_x/assets/x-1-15-1.png\" alt=\"Screenshot showing coding inspirational words\" style=\"position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;\">\n    <img src=\"/markdown/track_x/assets/iPad.png\" alt=\"iPad\" style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;\">\n  </div>\n</div>",
+            "coordinate": {
+              "h": 13,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/13/0",
+            "heading": null,
+            "images": [
+              "/markdown/track_x/assets/iPad.png",
+              "/markdown/track_x/assets/iPad.png",
+              "/markdown/track_x/assets/x-1-15-0.png",
+              "/markdown/track_x/assets/x-1-15-1.png"
+            ],
+            "index": 12,
+            "links": []
+          },
+          "current": {
+            "content": "<!-- .slide: class=\"layout-two-up\" -->\n\n![Screenshot showing drone](/markdown/track_x/assets/x-1-15-0.png)\n![Screenshot showing coding inspirational words](/markdown/track_x/assets/x-1-15-1.png)",
+            "coordinate": {
+              "h": 13,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/13/0",
+            "heading": null,
+            "images": [
+              "/markdown/track_x/assets/x-1-15-0.png",
+              "/markdown/track_x/assets/x-1-15-1.png"
+            ],
+            "index": 12,
+            "links": []
+          },
+          "diffs": [
+            "Image references changed"
+          ],
+          "index": 12,
+          "visual": {
+            "baselinePath": "track_x-unit_01/baseline/13-slide.png",
+            "baselinePathDark": "track_x-unit_01/baseline-dark/13-slide.png",
+            "changedPixels": 315339,
+            "currentPath": "track_x-unit_01/current/13-slide.png",
+            "currentPathDark": "track_x-unit_01/current-dark/13-slide.png",
+            "diffPath": "track_x-unit_01/diff/13-slide.png",
+            "diffRatio": 0.30416166705891884,
+            "sizeMismatch": null,
+            "withinThreshold": false
+          }
+        },
+        {
+          "baseline": {
+            "content": "### Controlling Byte\n<div style=\"display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; padding: 20px;\">\n  <div style=\"position: relative; width: 1050px; height: 650px;\">\n    <img src=\"/markdown/track_x/assets/x-1-16-0.png\" alt=\"Screenshot showing moveForward()\" style=\"position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;\">\n    <img src=\"/markdown/track_x/assets/iPad.png\" alt=\"iPad\" style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;\">\n  </div>\n  <div style=\"position: relative; width: 1050px; height: 650px;\">\n    <img src=\"/markdown/track_x/assets/x-1-16-1.png\" alt=\"Screenshot showing collectGem()\" style=\"position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;\">\n    <img src=\"/markdown/track_x/assets/iPad.png\" alt=\"iPad\" style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;\">\n  </div>\n</div>",
+            "coordinate": {
+              "h": 14,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/14/0",
+            "heading": "Controlling Byte",
+            "images": [
+              "/markdown/track_x/assets/iPad.png",
+              "/markdown/track_x/assets/iPad.png",
+              "/markdown/track_x/assets/x-1-16-0.png",
+              "/markdown/track_x/assets/x-1-16-1.png"
+            ],
+            "index": 13,
+            "links": []
+          },
+          "current": {
+            "content": "<!-- .slide: class=\"layout-two-up\" -->\n### Controlling Byte\n\n![Screenshot showing moveForward()](/markdown/track_x/assets/x-1-16-0.png)\n![Screenshot showing collectGem()](/markdown/track_x/assets/x-1-16-1.png)",
+            "coordinate": {
+              "h": 14,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/14/0",
+            "heading": "Controlling Byte",
+            "images": [
+              "/markdown/track_x/assets/x-1-16-0.png",
+              "/markdown/track_x/assets/x-1-16-1.png"
+            ],
+            "index": 13,
+            "links": []
+          },
+          "diffs": [
+            "Image references changed"
+          ],
+          "index": 13,
+          "visual": {
+            "baselinePath": "track_x-unit_01/baseline/14-Controlling-Byte.png",
+            "baselinePathDark": "track_x-unit_01/baseline-dark/14-Controlling-Byte.png",
+            "changedPixels": 312711,
+            "currentPath": "track_x-unit_01/current/14-Controlling-Byte.png",
+            "currentPathDark": "track_x-unit_01/current-dark/14-Controlling-Byte.png",
+            "diffPath": "track_x-unit_01/diff/14-Controlling-Byte.png",
+            "diffRatio": 0.3016268177030484,
+            "sizeMismatch": null,
+            "withinThreshold": false
+          }
+        },
+        {
+          "baseline": {
+            "content": "# camelCase\n<div style=\"display: flex; align-items: center; gap: 20px; padding: 20px;\">\n  <div style=\"flex: 1;\">\n    <ul>\n      <li>Commands have no spaces between words.</li>\n      <li>If your command has two or more words, the standard practice is to capitalize the first letter of every word <strong>EXCEPT</strong> the first word.</li>\n      <li>e.g., <code>moveForward()</code>, <code>collectGem()</code></li>\n    </ul>\n  </div>\n  <div style=\"flex: 1; position: relative; width: 700px; height: 500px;\">\n    <img src=\"/markdown/track_x/assets/x-1-17-0.png\" alt=\"Screenshot showing camelCase\" style=\"position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;\">\n    <img src=\"/markdown/track_x/assets/iPad.png\" alt=\"iPad\" style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;\">\n  </div>\n</div>",
+            "coordinate": {
+              "h": 15,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/15/0",
+            "heading": "camelCase",
+            "images": [
+              "/markdown/track_x/assets/iPad.png",
+              "/markdown/track_x/assets/x-1-17-0.png"
+            ],
+            "index": 14,
+            "links": []
+          },
+          "current": {
+            "content": "<!-- .slide: class=\"layout-steps-media\" -->\n# camelCase\n\n- Commands have no spaces between words.\n- If your command has two or more words, the standard practice is to capitalize the first letter of every word **EXCEPT** the first word.\n- e.g., `moveForward()`, `collectGem()`\n\n![Screenshot showing camelCase](/markdown/track_x/assets/x-1-17-0.png)",
+            "coordinate": {
+              "h": 15,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/15/0",
+            "heading": "camelCase",
+            "images": [
+              "/markdown/track_x/assets/x-1-17-0.png"
+            ],
+            "index": 14,
+            "links": []
+          },
+          "diffs": [
+            "Image references changed"
+          ],
+          "index": 14,
+          "visual": {
+            "baselinePath": "track_x-unit_01/baseline/15-camelCase.png",
+            "baselinePathDark": "track_x-unit_01/baseline-dark/15-camelCase.png",
+            "changedPixels": 231494,
+            "currentPath": "track_x-unit_01/current/15-camelCase.png",
+            "currentPathDark": "track_x-unit_01/current-dark/15-camelCase.png",
+            "diffPath": "track_x-unit_01/diff/15-camelCase.png",
+            "diffRatio": 0.22328859086296765,
+            "sizeMismatch": null,
+            "withinThreshold": false
+          }
+        },
+        {
+          "baseline": {
+            "content": "# Introduction to the interface\n<div style=\"display: flex; justify-content: center; align-items: center;\">\n  <div style=\"position: relative; width: 1050px; height: 700px;\">\n    <img src=\"/markdown/track_x/assets/x-1-18-0.png\" alt=\"Screenshot of Swift Playgrounds UI\" style=\"position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;\">\n    <img src=\"/markdown/track_x/assets/iPad.png\" alt=\"iPad\" style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;\">\n  </div>\n</div>",
+            "coordinate": {
+              "h": 16,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/16/0",
+            "heading": "Introduction to the interface",
+            "images": [
+              "/markdown/track_x/assets/iPad.png",
+              "/markdown/track_x/assets/x-1-18-0.png"
+            ],
+            "index": 15,
+            "links": []
+          },
+          "current": {
+            "content": "<!-- .slide: class=\"layout-media-centre\" -->\n# Introduction to the interface\n\n![Screenshot of Swift Playgrounds UI](/markdown/track_x/assets/x-1-18-0.png)\n<!-- .element: class=\"r-stretch\" -->",
+            "coordinate": {
+              "h": 16,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/16/0",
+            "heading": "Introduction to the interface",
+            "images": [
+              "/markdown/track_x/assets/x-1-18-0.png"
+            ],
+            "index": 15,
+            "links": []
+          },
+          "diffs": [
+            "Image references changed"
+          ],
+          "index": 15,
+          "visual": {
+            "baselinePath": "track_x-unit_01/baseline/16-Introduction-to-the-interface.png",
+            "baselinePathDark": "track_x-unit_01/baseline-dark/16-Introduction-to-the-interface.png",
+            "changedPixels": 283798,
+            "currentPath": "track_x-unit_01/current/16-Introduction-to-the-interface.png",
+            "currentPathDark": "track_x-unit_01/current-dark/16-Introduction-to-the-interface.png",
+            "diffPath": "track_x-unit_01/diff/16-Introduction-to-the-interface.png",
+            "diffRatio": 0.2737386520157261,
+            "sizeMismatch": null,
+            "withinThreshold": false
+          }
+        },
+        {
+          "baseline": {
+            "content": "## Let's try issuing commands!\n<div style=\"display: flex; align-items: center; gap: 20px; padding: 20px;\">\n  <div style=\"flex: 1;\">\n    <ul>\n      <li>After tapping <strong>Tap to enter code</strong>, you can either:\n        <ul>\n          <li>Type the code out, or</li>\n          <li>Use the keyboard shortcuts at the bottom of the screen.</li>\n        </ul>\n      </li>\n      <li>After you are done with the code, click <strong>Run My Code</strong> to see Byte in action!</li>\n      <li>You can tap on the <strong>Speedometer</strong> to speed Byte up or step through the code step by step.</li>\n    </ul>\n  </div>\n  <div style=\"flex: 1; position: relative; width: 700px; height: 500px;\">\n    <img src=\"/markdown/track_x/assets/x-1-19-0.png\" alt=\"Screenshot showing Issuing Commands in Swift Playgrounds\" style=\"position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;\">\n    <img src=\"/markdown/track_x/assets/iPad.png\" alt=\"iPad\" style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;\">\n  </div>\n</div>",
+            "coordinate": {
+              "h": 17,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/17/0",
+            "heading": "Let's try issuing commands!",
+            "images": [
+              "/markdown/track_x/assets/iPad.png",
+              "/markdown/track_x/assets/x-1-19-0.png"
+            ],
+            "index": 16,
+            "links": []
+          },
+          "current": {
+            "content": "<!-- .slide: class=\"layout-steps-media\" -->\n## Let's try issuing commands!\n\n- After tapping **Tap to enter code**, you can either:\n  - Type the code out, or\n  - Use the keyboard shortcuts at the bottom of the screen.\n- After you are done with the code, click **Run My Code** to see Byte in action!\n- You can tap on the **Speedometer** to speed Byte up or step through the code step by step.\n\n![Screenshot showing Issuing Commands in Swift Playgrounds](/markdown/track_x/assets/x-1-19-0.png)",
+            "coordinate": {
+              "h": 17,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/17/0",
+            "heading": "Let's try issuing commands!",
+            "images": [
+              "/markdown/track_x/assets/x-1-19-0.png"
+            ],
+            "index": 16,
+            "links": []
+          },
+          "diffs": [
+            "Image references changed"
+          ],
+          "index": 16,
+          "visual": {
+            "baselinePath": "track_x-unit_01/baseline/17-Let-s-try-issuing-commands-.png",
+            "baselinePathDark": "track_x-unit_01/baseline-dark/17-Let-s-try-issuing-commands-.png",
+            "changedPixels": 255585,
+            "currentPath": "track_x-unit_01/current/17-Let-s-try-issuing-commands-.png",
+            "currentPathDark": "track_x-unit_01/current-dark/17-Let-s-try-issuing-commands-.png",
+            "diffPath": "track_x-unit_01/diff/17-Let-s-try-issuing-commands-.png",
+            "diffRatio": 0.2465256745129964,
+            "sizeMismatch": null,
+            "withinThreshold": false
+          }
+        },
+        {
+          "baseline": {
+            "content": "# Hands-On\n### Try out the exercises under Commands!\n<div style=\"display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; padding: 20px;\">\n  <div style=\"position: relative; width: 1050px; height: 650px;\">\n    <img src=\"/markdown/track_x/assets/x-1-20-0.png\" alt=\"Screenshot showing Finding and Fixing Bugs in Swift Playgrounds\" style=\"position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;\">\n    <img src=\"/markdown/track_x/assets/iPad.png\" alt=\"iPad\" style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;\">\n  </div>\n  <div style=\"position: relative; width: 1050px; height: 650px;\">\n    <img src=\"/markdown/track_x/assets/x-1-20-1.png\" alt=\"Screenshot showing Toggling a Switch in Swift Playgrounds\" style=\"position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;\">\n    <img src=\"/markdown/track_x/assets/iPad.png\" alt=\"iPad\" style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;\">\n  </div>\n</div>",
+            "coordinate": {
+              "h": 18,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/18/0",
+            "heading": "Hands-On",
+            "images": [
+              "/markdown/track_x/assets/iPad.png",
+              "/markdown/track_x/assets/iPad.png",
+              "/markdown/track_x/assets/x-1-20-0.png",
+              "/markdown/track_x/assets/x-1-20-1.png"
+            ],
+            "index": 17,
+            "links": []
+          },
+          "current": {
+            "content": "<!-- .slide: class=\"layout-two-up\" -->\n# Hands-On\n### Try out the exercises under Commands!\n\n![Screenshot showing Finding and Fixing Bugs in Swift Playgrounds](/markdown/track_x/assets/x-1-20-0.png)\n![Screenshot showing Toggling a Switch in Swift Playgrounds](/markdown/track_x/assets/x-1-20-1.png)",
+            "coordinate": {
+              "h": 18,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/18/0",
+            "heading": "Hands-On",
+            "images": [
+              "/markdown/track_x/assets/x-1-20-0.png",
+              "/markdown/track_x/assets/x-1-20-1.png"
+            ],
+            "index": 17,
+            "links": []
+          },
+          "diffs": [
+            "Image references changed"
+          ],
+          "index": 17,
+          "visual": {
+            "baselinePath": "track_x-unit_01/baseline/18-Hands-On.png",
+            "baselinePathDark": "track_x-unit_01/baseline-dark/18-Hands-On.png",
+            "changedPixels": 428077,
+            "currentPath": "track_x-unit_01/current/18-Hands-On.png",
+            "currentPathDark": "track_x-unit_01/current-dark/18-Hands-On.png",
+            "diffPath": "track_x-unit_01/diff/18-Hands-On.png",
+            "diffRatio": 0.41290361785120394,
+            "sizeMismatch": null,
+            "withinThreshold": false
+          }
+        },
+        {
+          "baseline": {
+            "content": "# For Loops",
+            "coordinate": {
+              "h": 19,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/19/0",
+            "heading": "For Loops",
+            "images": [],
+            "index": 18,
+            "links": []
+          },
+          "current": {
+            "content": "# For Loops",
+            "coordinate": {
+              "h": 19,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/19/0",
+            "heading": "For Loops",
+            "images": [],
+            "index": 18,
+            "links": []
+          },
+          "diffs": [],
+          "index": 18,
+          "visual": {
+            "baselinePath": "track_x-unit_01/baseline/19-For-Loops.png",
+            "baselinePathDark": "track_x-unit_01/baseline-dark/19-For-Loops.png",
+            "changedPixels": 0,
+            "currentPath": "track_x-unit_01/current/19-For-Loops.png",
+            "currentPathDark": "track_x-unit_01/current-dark/19-For-Loops.png",
+            "diffPath": null,
+            "diffRatio": 0,
+            "sizeMismatch": null,
+            "withinThreshold": true
+          }
+        },
+        {
+          "baseline": {
+            "content": "<div style=\"display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; padding: 20px;\">\n  <div style=\"position: relative; width: 1050px; height: 650px;\">\n    <img src=\"/markdown/track_x/assets/x-1-22-0.png\" alt=\"Screenshot showing seeds in a garden\" style=\"position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;\">\n    <img src=\"/markdown/track_x/assets/iPad.png\" alt=\"iPad\" style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;\">\n  </div>\n  <div style=\"position: relative; width: 1050px; height: 650px;\">\n    <img src=\"/markdown/track_x/assets/x-1-22-1.png\" alt=\"Screenshot showing seeds with different text\" style=\"position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;\">\n    <img src=\"/markdown/track_x/assets/iPad.png\" alt=\"iPad\" style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;\">\n  </div>\n</div>",
+            "coordinate": {
+              "h": 20,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/20/0",
+            "heading": null,
+            "images": [
+              "/markdown/track_x/assets/iPad.png",
+              "/markdown/track_x/assets/iPad.png",
+              "/markdown/track_x/assets/x-1-22-0.png",
+              "/markdown/track_x/assets/x-1-22-1.png"
+            ],
+            "index": 19,
+            "links": []
+          },
+          "current": {
+            "content": "<!-- .slide: class=\"layout-two-up\" -->\n\n![Screenshot showing seeds in a garden](/markdown/track_x/assets/x-1-22-0.png)\n![Screenshot showing seeds with different text](/markdown/track_x/assets/x-1-22-1.png)",
+            "coordinate": {
+              "h": 20,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/20/0",
+            "heading": null,
+            "images": [
+              "/markdown/track_x/assets/x-1-22-0.png",
+              "/markdown/track_x/assets/x-1-22-1.png"
+            ],
+            "index": 19,
+            "links": []
+          },
+          "diffs": [
+            "Image references changed"
+          ],
+          "index": 19,
+          "visual": {
+            "baselinePath": "track_x-unit_01/baseline/20-slide.png",
+            "baselinePathDark": "track_x-unit_01/baseline-dark/20-slide.png",
+            "changedPixels": 375395,
+            "currentPath": "track_x-unit_01/current/20-slide.png",
+            "currentPathDark": "track_x-unit_01/current-dark/20-slide.png",
+            "diffPath": "track_x-unit_01/diff/20-slide.png",
+            "diffRatio": 0.36208895507876554,
+            "sizeMismatch": null,
+            "withinThreshold": false
+          }
+        },
+        {
+          "baseline": {
+            "content": "<div style=\"display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; padding: 20px;\">\n  <div style=\"position: relative; width: 1050px; height: 650px;\">\n    <img src=\"/markdown/track_x/assets/x-1-23-0.png\" alt=\"Screenshot showing a for loop being used for seeding\" style=\"position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;\">\n    <img src=\"/markdown/track_x/assets/iPad.png\" alt=\"iPad\" style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;\">\n  </div>\n  <div style=\"position: relative; width: 1050px; height: 650px;\">\n    <img src=\"/markdown/track_x/assets/x-1-23-1.png\" alt=\"Screenshot showing for loop's syntax for seeding\" style=\"position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;\">\n    <img src=\"/markdown/track_x/assets/iPad.png\" alt=\"iPad\" style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;\">\n  </div>\n</div>",
+            "coordinate": {
+              "h": 21,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/21/0",
+            "heading": null,
+            "images": [
+              "/markdown/track_x/assets/iPad.png",
+              "/markdown/track_x/assets/iPad.png",
+              "/markdown/track_x/assets/x-1-23-0.png",
+              "/markdown/track_x/assets/x-1-23-1.png"
+            ],
+            "index": 20,
+            "links": []
+          },
+          "current": {
+            "content": "<!-- .slide: class=\"layout-two-up\" -->\n\n![Screenshot showing a for loop being used for seeding](/markdown/track_x/assets/x-1-23-0.png)\n![Screenshot showing for loop's syntax for seeding](/markdown/track_x/assets/x-1-23-1.png)",
+            "coordinate": {
+              "h": 21,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/21/0",
+            "heading": null,
+            "images": [
+              "/markdown/track_x/assets/x-1-23-0.png",
+              "/markdown/track_x/assets/x-1-23-1.png"
+            ],
+            "index": 20,
+            "links": []
+          },
+          "diffs": [
+            "Image references changed"
+          ],
+          "index": 20,
+          "visual": {
+            "baselinePath": "track_x-unit_01/baseline/21-slide.png",
+            "baselinePathDark": "track_x-unit_01/baseline-dark/21-slide.png",
+            "changedPixels": 399141,
+            "currentPath": "track_x-unit_01/current/21-slide.png",
+            "currentPathDark": "track_x-unit_01/current-dark/21-slide.png",
+            "diffPath": "track_x-unit_01/diff/21-slide.png",
+            "diffRatio": 0.38499326740924505,
+            "sizeMismatch": null,
+            "withinThreshold": false
+          }
+        },
+        {
+          "baseline": {
+            "content": "### for-loop Syntax\n\n```swift\nfor i in 1 ... 5 {\n    // code to be repeated\n}\n```",
+            "coordinate": {
+              "h": 22,
+              "v": 0
+            },
+            "codeBlockCount": 1,
+            "hash": "#/22/0",
+            "heading": "for-loop Syntax",
+            "images": [],
+            "index": 21,
+            "links": []
+          },
+          "current": {
+            "content": "### for-loop Syntax\n\n```swift\nfor i in 1 ... 5 {\n    // code to be repeated\n}\n```",
+            "coordinate": {
+              "h": 22,
+              "v": 0
+            },
+            "codeBlockCount": 1,
+            "hash": "#/22/0",
+            "heading": "for-loop Syntax",
+            "images": [],
+            "index": 21,
+            "links": []
+          },
+          "diffs": [],
+          "index": 21,
+          "visual": {
+            "baselinePath": "track_x-unit_01/baseline/22-for-loop-Syntax.png",
+            "baselinePathDark": "track_x-unit_01/baseline-dark/22-for-loop-Syntax.png",
+            "changedPixels": 0,
+            "currentPath": "track_x-unit_01/current/22-for-loop-Syntax.png",
+            "currentPathDark": "track_x-unit_01/current-dark/22-for-loop-Syntax.png",
+            "diffPath": null,
+            "diffRatio": 0,
+            "sizeMismatch": null,
+            "withinThreshold": true
+          }
+        },
+        {
+          "baseline": {
+            "content": "### What is `i`?\n\n- `i` is a variable. It represents a value and can be named anything (e.g., `i` or `potato`).\n- The for loop sets `i` to 1 initially and repeats the code inside the curly brackets for each value of `i` until the loop ends.",
+            "coordinate": {
+              "h": 23,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/23/0",
+            "heading": "What is `i`?",
+            "images": [],
+            "index": 22,
+            "links": []
+          },
+          "current": {
+            "content": "### What is `i`?\n\n- `i` is a variable. It represents a value and can be named anything (e.g., `i` or `potato`).\n- The for loop sets `i` to 1 initially and repeats the code inside the curly brackets for each value of `i` until the loop ends.",
+            "coordinate": {
+              "h": 23,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/23/0",
+            "heading": "What is `i`?",
+            "images": [],
+            "index": 22,
+            "links": []
+          },
+          "diffs": [],
+          "index": 22,
+          "visual": {
+            "baselinePath": "track_x-unit_01/baseline/23-What-is--i--.png",
+            "baselinePathDark": "track_x-unit_01/baseline-dark/23-What-is--i--.png",
+            "changedPixels": 0,
+            "currentPath": "track_x-unit_01/current/23-What-is--i--.png",
+            "currentPathDark": "track_x-unit_01/current-dark/23-What-is--i--.png",
+            "diffPath": null,
+            "diffRatio": 0,
+            "sizeMismatch": null,
+            "withinThreshold": true
+          }
+        },
+        {
+          "baseline": {
+            "content": "# Hands-On\n### Try out the exercises under For Loops!\n<div style=\"display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; padding: 20px;\">\n  <div style=\"position: relative; width: 1050px; height: 650px;\">\n    <img src=\"/markdown/track_x/assets/x-1-26-0.png\" alt=\"Screenshot showing Looping All The Sides in Swift Playgrounds\" style=\"position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;\">\n    <img src=\"/markdown/track_x/assets/iPad.png\" alt=\"iPad\" style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;\">\n  </div>\n  <div style=\"position: relative; width: 1050px; height: 650px;\">\n    <img src=\"/markdown/track_x/assets/x-1-26-1.png\" alt=\"Screenshot showing Using Loops in Swift Playgrounds\" style=\"position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;\">\n    <img src=\"/markdown/track_x/assets/iPad.png\" alt=\"iPad\" style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;\">\n  </div>\n</div>",
+            "coordinate": {
+              "h": 24,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/24/0",
+            "heading": "Hands-On",
+            "images": [
+              "/markdown/track_x/assets/iPad.png",
+              "/markdown/track_x/assets/iPad.png",
+              "/markdown/track_x/assets/x-1-26-0.png",
+              "/markdown/track_x/assets/x-1-26-1.png"
+            ],
+            "index": 23,
+            "links": []
+          },
+          "current": {
+            "content": "<!-- .slide: class=\"layout-two-up\" -->\n# Hands-On\n### Try out the exercises under For Loops!\n\n![Screenshot showing Looping All The Sides in Swift Playgrounds](/markdown/track_x/assets/x-1-26-0.png)\n![Screenshot showing Using Loops in Swift Playgrounds](/markdown/track_x/assets/x-1-26-1.png)",
+            "coordinate": {
+              "h": 24,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/24/0",
+            "heading": "Hands-On",
+            "images": [
+              "/markdown/track_x/assets/x-1-26-0.png",
+              "/markdown/track_x/assets/x-1-26-1.png"
+            ],
+            "index": 23,
+            "links": []
+          },
+          "diffs": [
+            "Image references changed"
+          ],
+          "index": 23,
+          "visual": {
+            "baselinePath": "track_x-unit_01/baseline/24-Hands-On.png",
+            "baselinePathDark": "track_x-unit_01/baseline-dark/24-Hands-On.png",
+            "changedPixels": 419296,
+            "currentPath": "track_x-unit_01/current/24-Hands-On.png",
+            "currentPathDark": "track_x-unit_01/current-dark/24-Hands-On.png",
+            "diffPath": "track_x-unit_01/diff/24-Hands-On.png",
+            "diffRatio": 0.4044338643527646,
+            "sizeMismatch": null,
+            "withinThreshold": false
+          }
+        },
+        {
+          "baseline": {
+            "content": "# Conditionals",
+            "coordinate": {
+              "h": 25,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/25/0",
+            "heading": "Conditionals",
+            "images": [],
+            "index": 24,
+            "links": []
+          },
+          "current": {
+            "content": "# Conditionals",
+            "coordinate": {
+              "h": 25,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/25/0",
+            "heading": "Conditionals",
+            "images": [],
+            "index": 24,
+            "links": []
+          },
+          "diffs": [],
+          "index": 24,
+          "visual": {
+            "baselinePath": "track_x-unit_01/baseline/25-Conditionals.png",
+            "baselinePathDark": "track_x-unit_01/baseline-dark/25-Conditionals.png",
+            "changedPixels": 0,
+            "currentPath": "track_x-unit_01/current/25-Conditionals.png",
+            "currentPathDark": "track_x-unit_01/current-dark/25-Conditionals.png",
+            "diffPath": null,
+            "diffRatio": 0,
+            "sizeMismatch": null,
+            "withinThreshold": true
+          }
+        },
+        {
+          "baseline": {
+            "content": "<div style=\"display: flex; justify-content: center; align-items: center;\">\n  <div style=\"position: relative; width: 1400px; height: 1000px;\">\n    <img src=\"/markdown/track_x/assets/x-1-28-0.png\" alt=\"Screenshot displaying traffic jam on GPS\" style=\"position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;\">\n    <img src=\"/markdown/track_x/assets/iPad.png\" alt=\"iPad\" style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;\">\n  </div>\n</div>",
+            "coordinate": {
+              "h": 26,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/26/0",
+            "heading": null,
+            "images": [
+              "/markdown/track_x/assets/iPad.png",
+              "/markdown/track_x/assets/x-1-28-0.png"
+            ],
+            "index": 25,
+            "links": []
+          },
+          "current": {
+            "content": "<!-- .slide: class=\"layout-media-centre\" -->\n\n![Screenshot displaying traffic jam on GPS](/markdown/track_x/assets/x-1-28-0.png)\n<!-- .element: class=\"r-stretch\" -->",
+            "coordinate": {
+              "h": 26,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/26/0",
+            "heading": null,
+            "images": [
+              "/markdown/track_x/assets/x-1-28-0.png"
+            ],
+            "index": 25,
+            "links": []
+          },
+          "diffs": [
+            "Image references changed"
+          ],
+          "index": 25,
+          "visual": {
+            "baselinePath": "track_x-unit_01/baseline/26-slide.png",
+            "baselinePathDark": "track_x-unit_01/baseline-dark/26-slide.png",
+            "changedPixels": 359539,
+            "currentPath": "track_x-unit_01/current/26-slide.png",
+            "currentPathDark": "track_x-unit_01/current-dark/26-slide.png",
+            "diffPath": "track_x-unit_01/diff/26-slide.png",
+            "diffRatio": 0.34679497814319393,
+            "sizeMismatch": null,
+            "withinThreshold": false
+          }
+        },
+        {
+          "baseline": {
+            "content": "<div style=\"display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; padding: 20px;\">\n  <div style=\"position: relative; width: 1050px; height: 650px;\">\n    <img src=\"/markdown/track_x/assets/x-1-29-0.png\" alt=\"Screenshot showing if-statement at traffic light\" style=\"position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;\">\n    <img src=\"/markdown/track_x/assets/iPad.png\" alt=\"iPad\" style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;\">\n  </div>\n  <div style=\"position: relative; width: 1050px; height: 650px;\">\n    <img src=\"/markdown/track_x/assets/x-1-29-1.png\" alt=\"Screenshot showing traffic light if-loop logic\" style=\"position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;\">\n    <img src=\"/markdown/track_x/assets/iPad.png\" alt=\"iPad\" style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;\">\n  </div>\n</div>",
+            "coordinate": {
+              "h": 27,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/27/0",
+            "heading": null,
+            "images": [
+              "/markdown/track_x/assets/iPad.png",
+              "/markdown/track_x/assets/iPad.png",
+              "/markdown/track_x/assets/x-1-29-0.png",
+              "/markdown/track_x/assets/x-1-29-1.png"
+            ],
+            "index": 26,
+            "links": []
+          },
+          "current": {
+            "content": "<!-- .slide: class=\"layout-two-up\" -->\n\n![Screenshot showing if-statement at traffic light](/markdown/track_x/assets/x-1-29-0.png)\n![Screenshot showing traffic light if-loop logic](/markdown/track_x/assets/x-1-29-1.png)",
+            "coordinate": {
+              "h": 27,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/27/0",
+            "heading": null,
+            "images": [
+              "/markdown/track_x/assets/x-1-29-0.png",
+              "/markdown/track_x/assets/x-1-29-1.png"
+            ],
+            "index": 26,
+            "links": []
+          },
+          "diffs": [
+            "Image references changed"
+          ],
+          "index": 26,
+          "visual": {
+            "baselinePath": "track_x-unit_01/baseline/27-slide.png",
+            "baselinePathDark": "track_x-unit_01/baseline-dark/27-slide.png",
+            "changedPixels": 339697,
+            "currentPath": "track_x-unit_01/current/27-slide.png",
+            "currentPathDark": "track_x-unit_01/current-dark/27-slide.png",
+            "diffPath": "track_x-unit_01/diff/27-slide.png",
+            "diffRatio": 0.32765628677364217,
+            "sizeMismatch": null,
+            "withinThreshold": false
+          }
+        },
+        {
+          "baseline": {
+            "content": "<div style=\"display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; padding: 20px;\">\n  <div style=\"position: relative; width: 1050px; height: 650px;\">\n    <img src=\"/markdown/track_x/assets/x-1-30-0.png\" alt=\"Screenshot showing explanation of if-loop logic\" style=\"position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;\">\n    <img src=\"/markdown/track_x/assets/iPad.png\" alt=\"iPad\" style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;\">\n  </div>\n  <div style=\"position: relative; width: 1050px; height: 650px;\">\n    <img src=\"/markdown/track_x/assets/x-1-30-1.png\" alt=\"Screenshot showing false if-loop\" style=\"position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;\">\n    <img src=\"/markdown/track_x/assets/iPad.png\" alt=\"iPad\" style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;\">\n  </div>\n</div>",
+            "coordinate": {
+              "h": 28,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/28/0",
+            "heading": null,
+            "images": [
+              "/markdown/track_x/assets/iPad.png",
+              "/markdown/track_x/assets/iPad.png",
+              "/markdown/track_x/assets/x-1-30-0.png",
+              "/markdown/track_x/assets/x-1-30-1.png"
+            ],
+            "index": 27,
+            "links": []
+          },
+          "current": {
+            "content": "<!-- .slide: class=\"layout-two-up\" -->\n\n![Screenshot showing explanation of if-loop logic](/markdown/track_x/assets/x-1-30-0.png)\n![Screenshot showing false if-loop](/markdown/track_x/assets/x-1-30-1.png)",
+            "coordinate": {
+              "h": 28,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/28/0",
+            "heading": null,
+            "images": [
+              "/markdown/track_x/assets/x-1-30-0.png",
+              "/markdown/track_x/assets/x-1-30-1.png"
+            ],
+            "index": 27,
+            "links": []
+          },
+          "diffs": [
+            "Image references changed"
+          ],
+          "index": 27,
+          "visual": {
+            "baselinePath": "track_x-unit_01/baseline/28-slide.png",
+            "baselinePathDark": "track_x-unit_01/baseline-dark/28-slide.png",
+            "changedPixels": 344749,
+            "currentPath": "track_x-unit_01/current/28-slide.png",
+            "currentPathDark": "track_x-unit_01/current-dark/28-slide.png",
+            "diffPath": "track_x-unit_01/diff/28-slide.png",
+            "diffRatio": 0.33252921635730187,
+            "sizeMismatch": null,
+            "withinThreshold": false
+          }
+        },
+        {
+          "baseline": {
+            "content": "### if-else Syntax\n\n```swift\nif condition {\n    // code if condition is true\n} else {\n    // code if condition is NOT true\n}\n```",
+            "coordinate": {
+              "h": 29,
+              "v": 0
+            },
+            "codeBlockCount": 1,
+            "hash": "#/29/0",
+            "heading": "if-else Syntax",
+            "images": [],
+            "index": 28,
+            "links": []
+          },
+          "current": {
+            "content": "### if-else Syntax\n\n```swift\nif condition {\n    // code if condition is true\n} else {\n    // code if condition is NOT true\n}\n```",
+            "coordinate": {
+              "h": 29,
+              "v": 0
+            },
+            "codeBlockCount": 1,
+            "hash": "#/29/0",
+            "heading": "if-else Syntax",
+            "images": [],
+            "index": 28,
+            "links": []
+          },
+          "diffs": [],
+          "index": 28,
+          "visual": {
+            "baselinePath": "track_x-unit_01/baseline/29-if-else-Syntax.png",
+            "baselinePathDark": "track_x-unit_01/baseline-dark/29-if-else-Syntax.png",
+            "changedPixels": 0,
+            "currentPath": "track_x-unit_01/current/29-if-else-Syntax.png",
+            "currentPathDark": "track_x-unit_01/current-dark/29-if-else-Syntax.png",
+            "diffPath": null,
+            "diffRatio": 0,
+            "sizeMismatch": null,
+            "withinThreshold": true
+          }
+        },
+        {
+          "baseline": {
+            "content": "# Comparators",
+            "coordinate": {
+              "h": 30,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/30/0",
+            "heading": "Comparators",
+            "images": [],
+            "index": 29,
+            "links": []
+          },
+          "current": {
+            "content": "# Comparators",
+            "coordinate": {
+              "h": 30,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/30/0",
+            "heading": "Comparators",
+            "images": [],
+            "index": 29,
+            "links": []
+          },
+          "diffs": [],
+          "index": 29,
+          "visual": {
+            "baselinePath": "track_x-unit_01/baseline/30-Comparators.png",
+            "baselinePathDark": "track_x-unit_01/baseline-dark/30-Comparators.png",
+            "changedPixels": 0,
+            "currentPath": "track_x-unit_01/current/30-Comparators.png",
+            "currentPathDark": "track_x-unit_01/current-dark/30-Comparators.png",
+            "diffPath": null,
+            "diffRatio": 0,
+            "sizeMismatch": null,
+            "withinThreshold": true
+          }
+        },
+        {
+          "baseline": {
+            "content": "### Comparators\n\nIn the Playgrounds tutorial, the if statement uses the value of isOnClosedSwitch or isOnGem to make decisions.\n\nThese are boolean (Bool) variables, which can be either true or false.\n- isOnClosedSwitch represents whether a switch is closed\n- isOnGem represents whether Byte is on a gem\n\nWe can also directly use statements using comparators (<=, <, >, >=, ==, !=) instead of boolean variables.\n- For example, a == b will be true if a is equal to b, and false if a is not equal to b.",
+            "coordinate": {
+              "h": 31,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/31/0",
+            "heading": "Comparators",
+            "images": [],
+            "index": 30,
+            "links": []
+          },
+          "current": {
+            "content": "### Comparators\n\nIn the Playgrounds tutorial, the if statement uses the value of isOnClosedSwitch or isOnGem to make decisions.\n\nThese are boolean (Bool) variables, which can be either true or false.\n- isOnClosedSwitch represents whether a switch is closed\n- isOnGem represents whether Byte is on a gem\n\nWe can also directly use statements using comparators (<=, <, >, >=, ==, !=) instead of boolean variables.\n- For example, a == b will be true if a is equal to b, and false if a is not equal to b.",
+            "coordinate": {
+              "h": 31,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/31/0",
+            "heading": "Comparators",
+            "images": [],
+            "index": 30,
+            "links": []
+          },
+          "diffs": [],
+          "index": 30,
+          "visual": {
+            "baselinePath": "track_x-unit_01/baseline/31-Comparators.png",
+            "baselinePathDark": "track_x-unit_01/baseline-dark/31-Comparators.png",
+            "changedPixels": 0,
+            "currentPath": "track_x-unit_01/current/31-Comparators.png",
+            "currentPathDark": "track_x-unit_01/current-dark/31-Comparators.png",
+            "diffPath": null,
+            "diffRatio": 0,
+            "sizeMismatch": null,
+            "withinThreshold": true
+          }
+        },
+        {
+          "baseline": {
+            "content": "<div style=\"display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; padding: 20px;\">\n  <div style=\"position: relative; width: 1050px; height: 650px;\">\n    <img src=\"/markdown/track_x/assets/x-1-33-0.png\" alt=\"Screenshot showing operators\" style=\"position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;\">\n    <img src=\"/markdown/track_x/assets/iPad.png\" alt=\"iPad\" style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;\">\n  </div>\n  <div style=\"position: relative; width: 1050px; height: 650px;\">\n    <img src=\"/markdown/track_x/assets/x-1-33-1.png\" alt=\"Screenshot showing operators and if-loop example\" style=\"position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;\">\n    <img src=\"/markdown/track_x/assets/iPad.png\" alt=\"iPad\" style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;\">\n  </div>\n</div>",
+            "coordinate": {
+              "h": 32,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/32/0",
+            "heading": null,
+            "images": [
+              "/markdown/track_x/assets/iPad.png",
+              "/markdown/track_x/assets/iPad.png",
+              "/markdown/track_x/assets/x-1-33-0.png",
+              "/markdown/track_x/assets/x-1-33-1.png"
+            ],
+            "index": 31,
+            "links": []
+          },
+          "current": {
+            "content": "<!-- .slide: class=\"layout-two-up\" -->\n\n![Screenshot showing operators](/markdown/track_x/assets/x-1-33-0.png)\n![Screenshot showing operators and if-loop example](/markdown/track_x/assets/x-1-33-1.png)",
+            "coordinate": {
+              "h": 32,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/32/0",
+            "heading": null,
+            "images": [
+              "/markdown/track_x/assets/x-1-33-0.png",
+              "/markdown/track_x/assets/x-1-33-1.png"
+            ],
+            "index": 31,
+            "links": []
+          },
+          "diffs": [
+            "Image references changed"
+          ],
+          "index": 31,
+          "visual": {
+            "baselinePath": "track_x-unit_01/baseline/32-slide.png",
+            "baselinePathDark": "track_x-unit_01/baseline-dark/32-slide.png",
+            "changedPixels": 329663,
+            "currentPath": "track_x-unit_01/current/32-slide.png",
+            "currentPathDark": "track_x-unit_01/current-dark/32-slide.png",
+            "diffPath": "track_x-unit_01/diff/32-slide.png",
+            "diffRatio": 0.3179779464247821,
+            "sizeMismatch": null,
+            "withinThreshold": false
+          }
+        },
+        {
+          "baseline": {
+            "content": "# Hands-On\n### Try out the exercises under Conditionals!\n<div style=\"display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; padding: 20px;\">\n  <div style=\"position: relative; width: 1050px; height: 650px;\">\n    <img src=\"/markdown/track_x/assets/x-1-34-0.png\" alt=\"Screenshot showing Conditional Climb in Swift Playgrounds\" style=\"position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;\">\n    <img src=\"/markdown/track_x/assets/iPad.png\" alt=\"iPad\" style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;\">\n  </div>\n  <div style=\"position: relative; width: 1050px; height: 650px;\">\n    <img src=\"/markdown/track_x/assets/x-1-34-1.png\" alt=\"Screenshot showing Using else if in Swift Playgrounds\" style=\"position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;\">\n    <img src=\"/markdown/track_x/assets/iPad.png\" alt=\"iPad\" style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;\">\n  </div>\n  <div style=\"position: relative; width: 1050px; height: 650px;\">\n    <img src=\"/markdown/track_x/assets/x-1-34-2.png\" alt=\"Screenshot displaying Checking for Switches in Swift Playgrounds\" style=\"position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;\">\n    <img src=\"/markdown/track_x/assets/iPad.png\" alt=\"iPad\" style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;\">\n  </div>\n</div>",
+            "coordinate": {
+              "h": 33,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/33/0",
+            "heading": "Hands-On",
+            "images": [
+              "/markdown/track_x/assets/iPad.png",
+              "/markdown/track_x/assets/iPad.png",
+              "/markdown/track_x/assets/iPad.png",
+              "/markdown/track_x/assets/x-1-34-0.png",
+              "/markdown/track_x/assets/x-1-34-1.png",
+              "/markdown/track_x/assets/x-1-34-2.png"
+            ],
+            "index": 32,
+            "links": []
+          },
+          "current": {
+            "content": "# Hands-On\n### Try out the exercises under Conditionals!\n\n![Screenshot showing Conditional Climb in Swift Playgrounds](/markdown/track_x/assets/x-1-34-0.png)\n![Screenshot showing Using else if in Swift Playgrounds](/markdown/track_x/assets/x-1-34-1.png)\n![Screenshot displaying Checking for Switches in Swift Playgrounds](/markdown/track_x/assets/x-1-34-2.png)",
+            "coordinate": {
+              "h": 33,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/33/0",
+            "heading": "Hands-On",
+            "images": [
+              "/markdown/track_x/assets/x-1-34-0.png",
+              "/markdown/track_x/assets/x-1-34-1.png",
+              "/markdown/track_x/assets/x-1-34-2.png"
+            ],
+            "index": 32,
+            "links": []
+          },
+          "diffs": [
+            "Image references changed"
+          ],
+          "index": 32,
+          "visual": {
+            "baselinePath": "track_x-unit_01/baseline/33-Hands-On.png",
+            "baselinePathDark": "track_x-unit_01/baseline-dark/33-Hands-On.png",
+            "changedPixels": 648921,
+            "currentPath": "track_x-unit_01/current/33-Hands-On.png",
+            "currentPathDark": "track_x-unit_01/current-dark/33-Hands-On.png",
+            "diffPath": "track_x-unit_01/diff/33-Hands-On.png",
+            "diffRatio": 0.62591970276287,
+            "sizeMismatch": null,
+            "withinThreshold": false
+          }
+        }
+      ],
+      "title": "Commands, For Loops and Conditionals"
+    },
+    {
+      "baseRef": "main",
+      "currentMarkdownPath": "public/markdown/track_x/02-logic-and-variable-types.md",
+      "route": "track_x/unit_02",
+      "slides": [
+        {
+          "baseline": {
+            "content": "# Lesson Plan\n\n### What you'll learn\n- Logical Operators  \n- Variables  \n- Types  \n\n### What you'll do\n- Get Started with Code on Swift Playgrounds  \n\n### What you'll need\n- Swift Playgrounds App on your iPad",
+            "coordinate": {
+              "h": 1,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/1/0",
+            "heading": "Lesson Plan",
+            "images": [],
+            "index": 0,
+            "links": []
+          },
+          "current": {
+            "content": "# Lesson Plan\n\n### What you'll learn\n- Logical Operators  \n- Variables  \n- Types  \n\n### What you'll do\n- Get Started with Code on Swift Playgrounds  \n\n### What you'll need\n- Swift Playgrounds App on your iPad",
+            "coordinate": {
+              "h": 1,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/1/0",
+            "heading": "Lesson Plan",
+            "images": [],
+            "index": 0,
+            "links": []
+          },
+          "diffs": [],
+          "index": 0,
+          "visual": {
+            "baselinePath": "track_x-unit_02/baseline/01-Lesson-Plan.png",
+            "baselinePathDark": "track_x-unit_02/baseline-dark/01-Lesson-Plan.png",
+            "changedPixels": 0,
+            "currentPath": "track_x-unit_02/current/01-Lesson-Plan.png",
+            "currentPathDark": "track_x-unit_02/current-dark/01-Lesson-Plan.png",
+            "diffPath": null,
+            "diffRatio": 0,
+            "sizeMismatch": null,
+            "withinThreshold": true
+          }
+        },
+        {
+          "baseline": {
+            "content": "# Logical Operators",
+            "coordinate": {
+              "h": 2,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/2/0",
+            "heading": "Logical Operators",
+            "images": [],
+            "index": 1,
+            "links": []
+          },
+          "current": {
+            "content": "# Logical Operators",
+            "coordinate": {
+              "h": 2,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/2/0",
+            "heading": "Logical Operators",
+            "images": [],
+            "index": 1,
+            "links": []
+          },
+          "diffs": [],
+          "index": 1,
+          "visual": {
+            "baselinePath": "track_x-unit_02/baseline/02-Logical-Operators.png",
+            "baselinePathDark": "track_x-unit_02/baseline-dark/02-Logical-Operators.png",
+            "changedPixels": 0,
+            "currentPath": "track_x-unit_02/current/02-Logical-Operators.png",
+            "currentPathDark": "track_x-unit_02/current-dark/02-Logical-Operators.png",
+            "diffPath": null,
+            "diffRatio": 0,
+            "sizeMismatch": null,
+            "withinThreshold": true
+          }
+        },
+        {
+          "baseline": {
+            "content": "<div style=\"display: flex; justify-content: center; align-items: center;\">\n  <div style=\"position: relative; width: 1400px; height: 1000px;\">\n    <img src=\"/markdown/track_x/assets/x-2-4-0.PNG\" alt=\"Screenshot displaying 3 logic conditionals\" style=\"position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;\">\n    <img src=\"/markdown/track_x/assets/iPad.png\" alt=\"iPad\" style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;\">\n  </div>\n</div>",
+            "coordinate": {
+              "h": 3,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/3/0",
+            "heading": null,
+            "images": [
+              "/markdown/track_x/assets/iPad.png",
+              "/markdown/track_x/assets/x-2-4-0.PNG"
+            ],
+            "index": 2,
+            "links": []
+          },
+          "current": {
+            "content": "<!-- .slide: class=\"layout-media-centre\" -->\n\n![Screenshot displaying 3 logic conditionals](/markdown/track_x/assets/x-2-4-0.PNG)\n<!-- .element: class=\"r-stretch\" -->",
+            "coordinate": {
+              "h": 3,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/3/0",
+            "heading": null,
+            "images": [
+              "/markdown/track_x/assets/x-2-4-0.PNG"
+            ],
+            "index": 2,
+            "links": []
+          },
+          "diffs": [
+            "Image references changed"
+          ],
+          "index": 2,
+          "visual": {
+            "baselinePath": "track_x-unit_02/baseline/03-slide.png",
+            "baselinePathDark": "track_x-unit_02/baseline-dark/03-slide.png",
+            "changedPixels": 253323,
+            "currentPath": "track_x-unit_02/current/03-slide.png",
+            "currentPathDark": "track_x-unit_02/current-dark/03-slide.png",
+            "diffPath": "track_x-unit_02/diff/03-slide.png",
+            "diffRatio": 0.2443438521222129,
+            "sizeMismatch": null,
+            "withinThreshold": false
+          }
+        },
+        {
+          "baseline": {
+            "content": "<div style=\"display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; padding: 20px;\">\n  <div style=\"position: relative; width: 1050px; height: 650px;\">\n    <img src=\"/markdown/track_x/assets/x-2-5-0.PNG\" alt=\"Screenshot displaying && example\" style=\"position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;\">\n    <img src=\"/markdown/track_x/assets/iPad.png\" alt=\"iPad\" style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;\">\n  </div>\n  <div style=\"position: relative; width: 1050px; height: 650px;\">\n    <img src=\"/markdown/track_x/assets/x-2-5-1.PNG\" alt=\"Screenshot displaying AND example\" style=\"position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;\">\n    <img src=\"/markdown/track_x/assets/iPad.png\" alt=\"iPad\" style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;\">\n  </div>\n</div>",
+            "coordinate": {
+              "h": 4,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/4/0",
+            "heading": null,
+            "images": [
+              "/markdown/track_x/assets/iPad.png",
+              "/markdown/track_x/assets/iPad.png",
+              "/markdown/track_x/assets/x-2-5-0.PNG",
+              "/markdown/track_x/assets/x-2-5-1.PNG"
+            ],
+            "index": 3,
+            "links": []
+          },
+          "current": {
+            "content": "<!-- .slide: class=\"layout-two-up\" -->\n\n![Screenshot displaying && example](/markdown/track_x/assets/x-2-5-0.PNG)\n![Screenshot displaying AND example](/markdown/track_x/assets/x-2-5-1.PNG)",
+            "coordinate": {
+              "h": 4,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/4/0",
+            "heading": null,
+            "images": [
+              "/markdown/track_x/assets/x-2-5-0.PNG",
+              "/markdown/track_x/assets/x-2-5-1.PNG"
+            ],
+            "index": 3,
+            "links": []
+          },
+          "diffs": [
+            "Image references changed"
+          ],
+          "index": 3,
+          "visual": {
+            "baselinePath": "track_x-unit_02/baseline/04-slide.png",
+            "baselinePathDark": "track_x-unit_02/baseline-dark/04-slide.png",
+            "changedPixels": 302154,
+            "currentPath": "track_x-unit_02/current/04-slide.png",
+            "currentPathDark": "track_x-unit_02/current-dark/04-slide.png",
+            "diffPath": "track_x-unit_02/diff/04-slide.png",
+            "diffRatio": 0.29144401532484265,
+            "sizeMismatch": null,
+            "withinThreshold": false
+          }
+        },
+        {
+          "baseline": {
+            "content": "<div style=\"display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; padding: 20px;\">\n  <div style=\"position: relative; width: 1050px; height: 650px;\">\n    <img src=\"/markdown/track_x/assets/x-2-6-0.PNG\" alt=\"Screenshot displaying || example\" style=\"position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;\">\n    <img src=\"/markdown/track_x/assets/iPad.png\" alt=\"iPad\" style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;\">\n  </div>\n  <div style=\"position: relative; width: 1050px; height: 650px;\">\n    <img src=\"/markdown/track_x/assets/x-2-6-1.PNG\" alt=\"Screenshot displaying OR example\" style=\"position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;\">\n    <img src=\"/markdown/track_x/assets/iPad.png\" alt=\"iPad\" style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;\">\n  </div>\n</div>",
+            "coordinate": {
+              "h": 5,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/5/0",
+            "heading": null,
+            "images": [
+              "/markdown/track_x/assets/iPad.png",
+              "/markdown/track_x/assets/iPad.png",
+              "/markdown/track_x/assets/x-2-6-0.PNG",
+              "/markdown/track_x/assets/x-2-6-1.PNG"
+            ],
+            "index": 4,
+            "links": []
+          },
+          "current": {
+            "content": "<!-- .slide: class=\"layout-two-up\" -->\n\n![Screenshot displaying || example](/markdown/track_x/assets/x-2-6-0.PNG)\n![Screenshot displaying OR example](/markdown/track_x/assets/x-2-6-1.PNG)",
+            "coordinate": {
+              "h": 5,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/5/0",
+            "heading": null,
+            "images": [
+              "/markdown/track_x/assets/x-2-6-0.PNG",
+              "/markdown/track_x/assets/x-2-6-1.PNG"
+            ],
+            "index": 4,
+            "links": []
+          },
+          "diffs": [
+            "Image references changed"
+          ],
+          "index": 4,
+          "visual": {
+            "baselinePath": "track_x-unit_02/baseline/05-slide.png",
+            "baselinePathDark": "track_x-unit_02/baseline-dark/05-slide.png",
+            "changedPixels": 318356,
+            "currentPath": "track_x-unit_02/current/05-slide.png",
+            "currentPathDark": "track_x-unit_02/current-dark/05-slide.png",
+            "diffPath": "track_x-unit_02/diff/05-slide.png",
+            "diffRatio": 0.30707172813451294,
+            "sizeMismatch": null,
+            "withinThreshold": false
+          }
+        },
+        {
+          "baseline": {
+            "content": "<div style=\"display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; padding: 20px;\">\n  <div style=\"position: relative; width: 1050px; height: 650px;\">\n    <img src=\"/markdown/track_x/assets/x-2-7-0.PNG\" alt=\"Screenshot displaying ! example\" style=\"position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;\">\n    <img src=\"/markdown/track_x/assets/iPad.png\" alt=\"iPad\" style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;\">\n  </div>\n  <div style=\"position: relative; width: 1050px; height: 650px;\">\n    <img src=\"/markdown/track_x/assets/x-2-7-1.PNG\" alt=\"Screenshot displaying NOT example\" style=\"position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;\">\n    <img src=\"/markdown/track_x/assets/iPad.png\" alt=\"iPad\" style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;\">\n  </div>\n</div>",
+            "coordinate": {
+              "h": 6,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/6/0",
+            "heading": null,
+            "images": [
+              "/markdown/track_x/assets/iPad.png",
+              "/markdown/track_x/assets/iPad.png",
+              "/markdown/track_x/assets/x-2-7-0.PNG",
+              "/markdown/track_x/assets/x-2-7-1.PNG"
+            ],
+            "index": 5,
+            "links": []
+          },
+          "current": {
+            "content": "<!-- .slide: class=\"layout-two-up\" -->\n\n![Screenshot displaying ! example](/markdown/track_x/assets/x-2-7-0.PNG)\n![Screenshot displaying NOT example](/markdown/track_x/assets/x-2-7-1.PNG)",
+            "coordinate": {
+              "h": 6,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/6/0",
+            "heading": null,
+            "images": [
+              "/markdown/track_x/assets/x-2-7-0.PNG",
+              "/markdown/track_x/assets/x-2-7-1.PNG"
+            ],
+            "index": 5,
+            "links": []
+          },
+          "diffs": [
+            "Image references changed"
+          ],
+          "index": 5,
+          "visual": {
+            "baselinePath": "track_x-unit_02/baseline/06-slide.png",
+            "baselinePathDark": "track_x-unit_02/baseline-dark/06-slide.png",
+            "changedPixels": 306117,
+            "currentPath": "track_x-unit_02/current/06-slide.png",
+            "currentPathDark": "track_x-unit_02/current-dark/06-slide.png",
+            "diffPath": "track_x-unit_02/diff/06-slide.png",
+            "diffRatio": 0.29526654500418614,
+            "sizeMismatch": null,
+            "withinThreshold": false
+          }
+        },
+        {
+          "baseline": {
+            "content": "# Hands-On\n### Try out the exercise under Logical Operators!\n<div style=\"display: flex; justify-content: center; align-items: center;\">\n  <div style=\"position: relative; width: 1050px; height: 700px;\">\n    <img src=\"/markdown/track_x/assets/x-2-8-0.jpeg\" alt=\"Screenshot displaying 3 logic conditionals\" style=\"position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;\">\n    <img src=\"/markdown/track_x/assets/iPad.png\" alt=\"iPad\" style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;\">\n  </div>\n</div>",
+            "coordinate": {
+              "h": 7,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/7/0",
+            "heading": "Hands-On",
+            "images": [
+              "/markdown/track_x/assets/iPad.png",
+              "/markdown/track_x/assets/x-2-8-0.jpeg"
+            ],
+            "index": 6,
+            "links": []
+          },
+          "current": {
+            "content": "<!-- .slide: class=\"layout-media-centre\" -->\n# Hands-On\n### Try out the exercise under Logical Operators!\n\n![Screenshot displaying 3 logic conditionals](/markdown/track_x/assets/x-2-8-0.jpeg)\n<!-- .element: class=\"r-stretch\" -->",
+            "coordinate": {
+              "h": 7,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/7/0",
+            "heading": "Hands-On",
+            "images": [
+              "/markdown/track_x/assets/x-2-8-0.jpeg"
+            ],
+            "index": 6,
+            "links": []
+          },
+          "diffs": [
+            "Image references changed"
+          ],
+          "index": 6,
+          "visual": {
+            "baselinePath": "track_x-unit_02/baseline/07-Hands-On.png",
+            "baselinePathDark": "track_x-unit_02/baseline-dark/07-Hands-On.png",
+            "changedPixels": 197731,
+            "currentPath": "track_x-unit_02/current/07-Hands-On.png",
+            "currentPathDark": "track_x-unit_02/current-dark/07-Hands-On.png",
+            "diffPath": "track_x-unit_02/diff/07-Hands-On.png",
+            "diffRatio": 0.19072233561096813,
+            "sizeMismatch": null,
+            "withinThreshold": false
+          }
+        },
+        {
+          "baseline": {
+            "content": "# Variables",
+            "coordinate": {
+              "h": 8,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/8/0",
+            "heading": "Variables",
+            "images": [],
+            "index": 7,
+            "links": []
+          },
+          "current": {
+            "content": "# Variables",
+            "coordinate": {
+              "h": 8,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/8/0",
+            "heading": "Variables",
+            "images": [],
+            "index": 7,
+            "links": []
+          },
+          "diffs": [],
+          "index": 7,
+          "visual": {
+            "baselinePath": "track_x-unit_02/baseline/08-Variables.png",
+            "baselinePathDark": "track_x-unit_02/baseline-dark/08-Variables.png",
+            "changedPixels": 0,
+            "currentPath": "track_x-unit_02/current/08-Variables.png",
+            "currentPathDark": "track_x-unit_02/current-dark/08-Variables.png",
+            "diffPath": null,
+            "diffRatio": 0,
+            "sizeMismatch": null,
+            "withinThreshold": true
+          }
+        },
+        {
+          "baseline": {
+            "content": "<div style=\"display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; padding: 20px;\">\n  <div style=\"position: relative; width: 1050px; height: 650px;\">\n    <img src=\"/markdown/track_x/assets/x-2-10-0.PNG\" alt=\"Screenshot showing a contact list\" style=\"position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;\">\n    <img src=\"/markdown/track_x/assets/iPad.png\" alt=\"iPad\" style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;\">\n  </div>\n  <div style=\"position: relative; width: 1050px; height: 650px;\">\n    <img src=\"/markdown/track_x/assets/x-2-10-1.PNG\" alt=\"Screenshot showing a Mia\" style=\"position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;\">\n    <img src=\"/markdown/track_x/assets/iPad.png\" alt=\"iPad\" style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;\">\n  </div>\n</div>",
+            "coordinate": {
+              "h": 9,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/9/0",
+            "heading": null,
+            "images": [
+              "/markdown/track_x/assets/iPad.png",
+              "/markdown/track_x/assets/iPad.png",
+              "/markdown/track_x/assets/x-2-10-0.PNG",
+              "/markdown/track_x/assets/x-2-10-1.PNG"
+            ],
+            "index": 8,
+            "links": []
+          },
+          "current": {
+            "content": "<!-- .slide: class=\"layout-two-up\" -->\n\n![Screenshot showing a contact list](/markdown/track_x/assets/x-2-10-0.PNG)\n![Screenshot showing a Mia](/markdown/track_x/assets/x-2-10-1.PNG)",
+            "coordinate": {
+              "h": 9,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/9/0",
+            "heading": null,
+            "images": [
+              "/markdown/track_x/assets/x-2-10-0.PNG",
+              "/markdown/track_x/assets/x-2-10-1.PNG"
+            ],
+            "index": 8,
+            "links": []
+          },
+          "diffs": [
+            "Image references changed"
+          ],
+          "index": 8,
+          "visual": {
+            "baselinePath": "track_x-unit_02/baseline/09-slide.png",
+            "baselinePathDark": "track_x-unit_02/baseline-dark/09-slide.png",
+            "changedPixels": 323538,
+            "currentPath": "track_x-unit_02/current/09-slide.png",
+            "currentPathDark": "track_x-unit_02/current-dark/09-slide.png",
+            "diffPath": "track_x-unit_02/diff/09-slide.png",
+            "diffRatio": 0.3120700498095969,
+            "sizeMismatch": null,
+            "withinThreshold": false
+          }
+        },
+        {
+          "baseline": {
+            "content": "<div style=\"display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; padding: 20px;\">\n  <div style=\"position: relative; width: 1050px; height: 650px;\">\n    <img src=\"/markdown/track_x/assets/x-2-11-0.PNG\" alt=\"Screenshot showing an annotated Mia\" style=\"position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;\">\n    <img src=\"/markdown/track_x/assets/iPad.png\" alt=\"iPad\" style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;\">\n  </div>\n  <div style=\"position: relative; width: 1050px; height: 650px;\">\n    <img src=\"/markdown/track_x/assets/x-2-11-1.PNG\" alt=\"Screenshot showing Chris and age\" style=\"position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;\">\n    <img src=\"/markdown/track_x/assets/iPad.png\" alt=\"iPad\" style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;\">\n  </div>\n</div>",
+            "coordinate": {
+              "h": 10,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/10/0",
+            "heading": null,
+            "images": [
+              "/markdown/track_x/assets/iPad.png",
+              "/markdown/track_x/assets/iPad.png",
+              "/markdown/track_x/assets/x-2-11-0.PNG",
+              "/markdown/track_x/assets/x-2-11-1.PNG"
+            ],
+            "index": 9,
+            "links": []
+          },
+          "current": {
+            "content": "<!-- .slide: class=\"layout-two-up\" -->\n\n![Screenshot showing an annotated Mia](/markdown/track_x/assets/x-2-11-0.PNG)\n![Screenshot showing Chris and age](/markdown/track_x/assets/x-2-11-1.PNG)",
+            "coordinate": {
+              "h": 10,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/10/0",
+            "heading": null,
+            "images": [
+              "/markdown/track_x/assets/x-2-11-0.PNG",
+              "/markdown/track_x/assets/x-2-11-1.PNG"
+            ],
+            "index": 9,
+            "links": []
+          },
+          "diffs": [
+            "Image references changed"
+          ],
+          "index": 9,
+          "visual": {
+            "baselinePath": "track_x-unit_02/baseline/10-slide.png",
+            "baselinePathDark": "track_x-unit_02/baseline-dark/10-slide.png",
+            "changedPixels": 359563,
+            "currentPath": "track_x-unit_02/current/10-slide.png",
+            "currentPathDark": "track_x-unit_02/current-dark/10-slide.png",
+            "diffPath": "track_x-unit_02/diff/10-slide.png",
+            "diffRatio": 0.34681812745237994,
+            "sizeMismatch": null,
+            "withinThreshold": false
+          }
+        },
+        {
+          "baseline": {
+            "content": "<div style=\"display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; padding: 20px;\">\n  <div style=\"position: relative; width: 1050px; height: 650px;\">\n    <img src=\"/markdown/track_x/assets/x-2-12-0.PNG\" alt=\"Screenshot showing Chris with data type error\" style=\"position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;\">\n    <img src=\"/markdown/track_x/assets/iPad.png\" alt=\"iPad\" style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;\">\n  </div>\n  <div style=\"position: relative; width: 1050px; height: 650px;\">\n    <img src=\"/markdown/track_x/assets/x-2-12-1.PNG\" alt=\"Screenshot showing Chris and changed age\" style=\"position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;\">\n    <img src=\"/markdown/track_x/assets/iPad.png\" alt=\"iPad\" style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;\">\n  </div>\n</div>",
+            "coordinate": {
+              "h": 11,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/11/0",
+            "heading": null,
+            "images": [
+              "/markdown/track_x/assets/iPad.png",
+              "/markdown/track_x/assets/iPad.png",
+              "/markdown/track_x/assets/x-2-12-0.PNG",
+              "/markdown/track_x/assets/x-2-12-1.PNG"
+            ],
+            "index": 10,
+            "links": []
+          },
+          "current": {
+            "content": "<!-- .slide: class=\"layout-two-up\" -->\n\n![Screenshot showing Chris with data type error](/markdown/track_x/assets/x-2-12-0.PNG)\n![Screenshot showing Chris and changed age](/markdown/track_x/assets/x-2-12-1.PNG)",
+            "coordinate": {
+              "h": 11,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/11/0",
+            "heading": null,
+            "images": [
+              "/markdown/track_x/assets/x-2-12-0.PNG",
+              "/markdown/track_x/assets/x-2-12-1.PNG"
+            ],
+            "index": 10,
+            "links": []
+          },
+          "diffs": [
+            "Image references changed"
+          ],
+          "index": 10,
+          "visual": {
+            "baselinePath": "track_x-unit_02/baseline/11-slide.png",
+            "baselinePathDark": "track_x-unit_02/baseline-dark/11-slide.png",
+            "changedPixels": 340631,
+            "currentPath": "track_x-unit_02/current/11-slide.png",
+            "currentPathDark": "track_x-unit_02/current-dark/11-slide.png",
+            "diffPath": "track_x-unit_02/diff/11-slide.png",
+            "diffRatio": 0.3285571807227986,
+            "sizeMismatch": null,
+            "withinThreshold": false
+          }
+        },
+        {
+          "baseline": {
+            "content": "# Variables Summary\n\n- A variable is something that represents a value. The value can change, so the variable has a name for you to refer to it by.",
+            "coordinate": {
+              "h": 12,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/12/0",
+            "heading": "Variables Summary",
+            "images": [],
+            "index": 11,
+            "links": []
+          },
+          "current": {
+            "content": "# Variables Summary\n\n- A variable is something that represents a value. The value can change, so the variable has a name for you to refer to it by.",
+            "coordinate": {
+              "h": 12,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/12/0",
+            "heading": "Variables Summary",
+            "images": [],
+            "index": 11,
+            "links": []
+          },
+          "diffs": [],
+          "index": 11,
+          "visual": {
+            "baselinePath": "track_x-unit_02/baseline/12-Variables-Summary.png",
+            "baselinePathDark": "track_x-unit_02/baseline-dark/12-Variables-Summary.png",
+            "changedPixels": 0,
+            "currentPath": "track_x-unit_02/current/12-Variables-Summary.png",
+            "currentPathDark": "track_x-unit_02/current-dark/12-Variables-Summary.png",
+            "diffPath": null,
+            "diffRatio": 0,
+            "sizeMismatch": null,
+            "withinThreshold": true
+          }
+        },
+        {
+          "baseline": {
+            "content": "## Declaring Variables:\n```swift\nvar variableName = 0\n```",
+            "coordinate": {
+              "h": 13,
+              "v": 0
+            },
+            "codeBlockCount": 1,
+            "hash": "#/13/0",
+            "heading": "Declaring Variables:",
+            "images": [],
+            "index": 12,
+            "links": []
+          },
+          "current": {
+            "content": "## Declaring Variables:\n```swift\nvar variableName = 0\n```",
+            "coordinate": {
+              "h": 13,
+              "v": 0
+            },
+            "codeBlockCount": 1,
+            "hash": "#/13/0",
+            "heading": "Declaring Variables:",
+            "images": [],
+            "index": 12,
+            "links": []
+          },
+          "diffs": [],
+          "index": 12,
+          "visual": {
+            "baselinePath": "track_x-unit_02/baseline/13-Declaring-Variables-.png",
+            "baselinePathDark": "track_x-unit_02/baseline-dark/13-Declaring-Variables-.png",
+            "changedPixels": 0,
+            "currentPath": "track_x-unit_02/current/13-Declaring-Variables-.png",
+            "currentPathDark": "track_x-unit_02/current-dark/13-Declaring-Variables-.png",
+            "diffPath": null,
+            "diffRatio": 0,
+            "sizeMismatch": null,
+            "withinThreshold": true
+          }
+        },
+        {
+          "baseline": {
+            "content": "## Changing Variables:\n```swift\nmyVariableName = 2\nmyVariableName = myVariableName + 1\n```",
+            "coordinate": {
+              "h": 14,
+              "v": 0
+            },
+            "codeBlockCount": 1,
+            "hash": "#/14/0",
+            "heading": "Changing Variables:",
+            "images": [],
+            "index": 13,
+            "links": []
+          },
+          "current": {
+            "content": "## Changing Variables:\n```swift\nmyVariableName = 2\nmyVariableName = myVariableName + 1\n```",
+            "coordinate": {
+              "h": 14,
+              "v": 0
+            },
+            "codeBlockCount": 1,
+            "hash": "#/14/0",
+            "heading": "Changing Variables:",
+            "images": [],
+            "index": 13,
+            "links": []
+          },
+          "diffs": [],
+          "index": 13,
+          "visual": {
+            "baselinePath": "track_x-unit_02/baseline/14-Changing-Variables-.png",
+            "baselinePathDark": "track_x-unit_02/baseline-dark/14-Changing-Variables-.png",
+            "changedPixels": 0,
+            "currentPath": "track_x-unit_02/current/14-Changing-Variables-.png",
+            "currentPathDark": "track_x-unit_02/current-dark/14-Changing-Variables-.png",
+            "diffPath": null,
+            "diffRatio": 0,
+            "sizeMismatch": null,
+            "withinThreshold": true
+          }
+        },
+        {
+          "baseline": {
+            "content": "## Using Variables in Code:\n```swift\nprint(myVariable)\nvar newVariable = variableName + 11000\n```\n\n- Variables that cannot be changed after you declare them are called **constants**:\n```swift\nlet myConstant = 0\n```",
+            "coordinate": {
+              "h": 15,
+              "v": 0
+            },
+            "codeBlockCount": 2,
+            "hash": "#/15/0",
+            "heading": "Using Variables in Code:",
+            "images": [],
+            "index": 14,
+            "links": []
+          },
+          "current": {
+            "content": "## Using Variables in Code:\n```swift\nprint(myVariable)\nvar newVariable = variableName + 11000\n```\n\n- Variables that cannot be changed after you declare them are called **constants**:\n```swift\nlet myConstant = 0\n```",
+            "coordinate": {
+              "h": 15,
+              "v": 0
+            },
+            "codeBlockCount": 2,
+            "hash": "#/15/0",
+            "heading": "Using Variables in Code:",
+            "images": [],
+            "index": 14,
+            "links": []
+          },
+          "diffs": [],
+          "index": 14,
+          "visual": {
+            "baselinePath": "track_x-unit_02/baseline/15-Using-Variables-in-Code-.png",
+            "baselinePathDark": "track_x-unit_02/baseline-dark/15-Using-Variables-in-Code-.png",
+            "changedPixels": 0,
+            "currentPath": "track_x-unit_02/current/15-Using-Variables-in-Code-.png",
+            "currentPathDark": "track_x-unit_02/current-dark/15-Using-Variables-in-Code-.png",
+            "diffPath": null,
+            "diffRatio": 0,
+            "sizeMismatch": null,
+            "withinThreshold": true
+          }
+        },
+        {
+          "baseline": {
+            "content": "# Hands-On\n### Try out the exercises under Variables!\n<div style=\"display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; padding: 20px;\">\n  <div style=\"position: relative; width: 1050px; height: 650px;\">\n    <img src=\"/markdown/track_x/assets/x-2-14-0.PNG\" alt=\"Screenshot showing the Incrementing The Value activity in Swift Playgrounds\" style=\"position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;\">\n    <img src=\"/markdown/track_x/assets/iPad.png\" alt=\"iPad\" style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;\">\n  </div>\n  <div style=\"position: relative; width: 1050px; height: 650px;\">\n    <img src=\"/markdown/track_x/assets/x-2-14-1.PNG\" alt=\"Screenshot showing the Keeping Track activity in Swift Playgrounds\" style=\"position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;\">\n    <img src=\"/markdown/track_x/assets/iPad.png\" alt=\"iPad\" style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;\">\n  </div>\n</div>",
+            "coordinate": {
+              "h": 16,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/16/0",
+            "heading": "Hands-On",
+            "images": [
+              "/markdown/track_x/assets/iPad.png",
+              "/markdown/track_x/assets/iPad.png",
+              "/markdown/track_x/assets/x-2-14-0.PNG",
+              "/markdown/track_x/assets/x-2-14-1.PNG"
+            ],
+            "index": 15,
+            "links": []
+          },
+          "current": {
+            "content": "<!-- .slide: class=\"layout-two-up\" -->\n# Hands-On\n### Try out the exercises under Variables!\n\n![Screenshot showing the Incrementing The Value activity in Swift Playgrounds](/markdown/track_x/assets/x-2-14-0.PNG)\n![Screenshot showing the Keeping Track activity in Swift Playgrounds](/markdown/track_x/assets/x-2-14-1.PNG)",
+            "coordinate": {
+              "h": 16,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/16/0",
+            "heading": "Hands-On",
+            "images": [
+              "/markdown/track_x/assets/x-2-14-0.PNG",
+              "/markdown/track_x/assets/x-2-14-1.PNG"
+            ],
+            "index": 15,
+            "links": []
+          },
+          "diffs": [
+            "Image references changed"
+          ],
+          "index": 15,
+          "visual": {
+            "baselinePath": "track_x-unit_02/baseline/16-Hands-On.png",
+            "baselinePathDark": "track_x-unit_02/baseline-dark/16-Hands-On.png",
+            "changedPixels": 416277,
+            "currentPath": "track_x-unit_02/current/16-Hands-On.png",
+            "currentPathDark": "track_x-unit_02/current-dark/16-Hands-On.png",
+            "diffPath": "track_x-unit_02/diff/16-Hands-On.png",
+            "diffRatio": 0.4015218741680717,
+            "sizeMismatch": null,
+            "withinThreshold": false
+          }
+        },
+        {
+          "baseline": {
+            "content": "# Types",
+            "coordinate": {
+              "h": 17,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/17/0",
+            "heading": "Types",
+            "images": [],
+            "index": 16,
+            "links": []
+          },
+          "current": {
+            "content": "# Types",
+            "coordinate": {
+              "h": 17,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/17/0",
+            "heading": "Types",
+            "images": [],
+            "index": 16,
+            "links": []
+          },
+          "diffs": [],
+          "index": 16,
+          "visual": {
+            "baselinePath": "track_x-unit_02/baseline/17-Types.png",
+            "baselinePathDark": "track_x-unit_02/baseline-dark/17-Types.png",
+            "changedPixels": 0,
+            "currentPath": "track_x-unit_02/current/17-Types.png",
+            "currentPathDark": "track_x-unit_02/current-dark/17-Types.png",
+            "diffPath": null,
+            "diffRatio": 0,
+            "sizeMismatch": null,
+            "withinThreshold": true
+          }
+        },
+        {
+          "baseline": {
+            "content": "<div style=\"display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; padding: 20px;\">\n  <div style=\"position: relative; width: 1050px; height: 650px;\">\n    <img src=\"/markdown/track_x/assets/x-2-16-0.PNG\" alt=\"Screenshot showing blueprint\" style=\"position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;\">\n    <img src=\"/markdown/track_x/assets/iPad.png\" alt=\"iPad\" style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;\">\n  </div>\n  <div style=\"position: relative; width: 1050px; height: 650px;\">\n    <img src=\"/markdown/track_x/assets/x-2-16-1.PNG\" alt=\"Screenshot showing blueprint and houses\" style=\"position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;\">\n    <img src=\"/markdown/track_x/assets/iPad.png\" alt=\"iPad\" style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;\">\n  </div>\n</div>",
+            "coordinate": {
+              "h": 18,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/18/0",
+            "heading": null,
+            "images": [
+              "/markdown/track_x/assets/iPad.png",
+              "/markdown/track_x/assets/iPad.png",
+              "/markdown/track_x/assets/x-2-16-0.PNG",
+              "/markdown/track_x/assets/x-2-16-1.PNG"
+            ],
+            "index": 17,
+            "links": []
+          },
+          "current": {
+            "content": "<!-- .slide: class=\"layout-two-up\" -->\n\n![Screenshot showing blueprint](/markdown/track_x/assets/x-2-16-0.PNG)\n![Screenshot showing blueprint and houses](/markdown/track_x/assets/x-2-16-1.PNG)",
+            "coordinate": {
+              "h": 18,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/18/0",
+            "heading": null,
+            "images": [
+              "/markdown/track_x/assets/x-2-16-0.PNG",
+              "/markdown/track_x/assets/x-2-16-1.PNG"
+            ],
+            "index": 17,
+            "links": []
+          },
+          "diffs": [
+            "Image references changed"
+          ],
+          "index": 17,
+          "visual": {
+            "baselinePath": "track_x-unit_02/baseline/18-slide.png",
+            "baselinePathDark": "track_x-unit_02/baseline-dark/18-slide.png",
+            "changedPixels": 346768,
+            "currentPath": "track_x-unit_02/current/18-slide.png",
+            "currentPathDark": "track_x-unit_02/current-dark/18-slide.png",
+            "diffPath": "track_x-unit_02/diff/18-slide.png",
+            "diffRatio": 0.3344766519925768,
+            "sizeMismatch": null,
+            "withinThreshold": false
+          }
+        },
+        {
+          "baseline": {
+            "content": "<div style=\"display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; padding: 20px;\">\n  <div style=\"position: relative; width: 1050px; height: 650px;\">\n    <img src=\"/markdown/track_x/assets/x-2-17-0.PNG\" alt=\"Screenshot showing features and behaviours\" style=\"position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;\">\n    <img src=\"/markdown/track_x/assets/iPad.png\" alt=\"iPad\" style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;\">\n  </div>\n  <div style=\"position: relative; width: 1050px; height: 650px;\">\n    <img src=\"/markdown/track_x/assets/x-2-17-1.PNG\" alt=\"Screenshot showing properties and methods\" style=\"position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;\">\n    <img src=\"/markdown/track_x/assets/iPad.png\" alt=\"iPad\" style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;\">\n  </div>\n</div>",
+            "coordinate": {
+              "h": 19,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/19/0",
+            "heading": null,
+            "images": [
+              "/markdown/track_x/assets/iPad.png",
+              "/markdown/track_x/assets/iPad.png",
+              "/markdown/track_x/assets/x-2-17-0.PNG",
+              "/markdown/track_x/assets/x-2-17-1.PNG"
+            ],
+            "index": 18,
+            "links": []
+          },
+          "current": {
+            "content": "<!-- .slide: class=\"layout-two-up\" -->\n\n![Screenshot showing features and behaviours](/markdown/track_x/assets/x-2-17-0.PNG)\n![Screenshot showing properties and methods](/markdown/track_x/assets/x-2-17-1.PNG)",
+            "coordinate": {
+              "h": 19,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/19/0",
+            "heading": null,
+            "images": [
+              "/markdown/track_x/assets/x-2-17-0.PNG",
+              "/markdown/track_x/assets/x-2-17-1.PNG"
+            ],
+            "index": 18,
+            "links": []
+          },
+          "diffs": [
+            "Image references changed"
+          ],
+          "index": 18,
+          "visual": {
+            "baselinePath": "track_x-unit_02/baseline/19-slide.png",
+            "baselinePathDark": "track_x-unit_02/baseline-dark/19-slide.png",
+            "changedPixels": 341162,
+            "currentPath": "track_x-unit_02/current/19-slide.png",
+            "currentPathDark": "track_x-unit_02/current-dark/19-slide.png",
+            "diffPath": "track_x-unit_02/diff/19-slide.png",
+            "diffRatio": 0.3290693591885395,
+            "sizeMismatch": null,
+            "withinThreshold": false
+          }
+        },
+        {
+          "baseline": {
+            "content": "<div style=\"display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; padding: 20px;\">\n  <div style=\"position: relative; width: 1050px; height: 650px;\">\n    <img src=\"/markdown/track_x/assets/x-2-18-0.PNG\" alt=\"Screenshot showing 3 houses with names\" style=\"position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;\">\n    <img src=\"/markdown/track_x/assets/iPad.png\" alt=\"iPad\" style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;\">\n  </div>\n  <div style=\"position: relative; width: 1050px; height: 650px;\">\n    <img src=\"/markdown/track_x/assets/x-2-18-1.PNG\" alt=\"Screenshot showing anotated house selection code\" style=\"position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;\">\n    <img src=\"/markdown/track_x/assets/iPad.png\" alt=\"iPad\" style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;\">\n  </div>\n</div>",
+            "coordinate": {
+              "h": 20,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/20/0",
+            "heading": null,
+            "images": [
+              "/markdown/track_x/assets/iPad.png",
+              "/markdown/track_x/assets/iPad.png",
+              "/markdown/track_x/assets/x-2-18-0.PNG",
+              "/markdown/track_x/assets/x-2-18-1.PNG"
+            ],
+            "index": 19,
+            "links": []
+          },
+          "current": {
+            "content": "<!-- .slide: class=\"layout-two-up\" -->\n\n![Screenshot showing 3 houses with names](/markdown/track_x/assets/x-2-18-0.PNG)\n![Screenshot showing annotated house selection code](/markdown/track_x/assets/x-2-18-1.PNG)",
+            "coordinate": {
+              "h": 20,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/20/0",
+            "heading": null,
+            "images": [
+              "/markdown/track_x/assets/x-2-18-0.PNG",
+              "/markdown/track_x/assets/x-2-18-1.PNG"
+            ],
+            "index": 19,
+            "links": []
+          },
+          "diffs": [
+            "Image references changed"
+          ],
+          "index": 19,
+          "visual": {
+            "baselinePath": "track_x-unit_02/baseline/20-slide.png",
+            "baselinePathDark": "track_x-unit_02/baseline-dark/20-slide.png",
+            "changedPixels": 375389,
+            "currentPath": "track_x-unit_02/current/20-slide.png",
+            "currentPathDark": "track_x-unit_02/current-dark/20-slide.png",
+            "diffPath": "track_x-unit_02/diff/20-slide.png",
+            "diffRatio": 0.36208316775146904,
+            "sizeMismatch": null,
+            "withinThreshold": false
+          }
+        },
+        {
+          "baseline": {
+            "content": "<div style=\"display: flex; justify-content: center; align-items: center;\">\n  <div style=\"position: relative; width: 1400px; height: 1000px;\">\n    <img src=\"/markdown/track_x/assets/x-2-19-0.PNG\" alt=\"Screenshot showing blue portal\" style=\"position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;\">\n    <img src=\"/markdown/track_x/assets/iPad.png\" alt=\"iPad\" style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;\">\n  </div>\n</div>",
+            "coordinate": {
+              "h": 21,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/21/0",
+            "heading": null,
+            "images": [
+              "/markdown/track_x/assets/iPad.png",
+              "/markdown/track_x/assets/x-2-19-0.PNG"
+            ],
+            "index": 20,
+            "links": []
+          },
+          "current": {
+            "content": "<!-- .slide: class=\"layout-media-centre\" -->\n\n![Screenshot showing blue portal](/markdown/track_x/assets/x-2-19-0.PNG)\n<!-- .element: class=\"r-stretch\" -->",
+            "coordinate": {
+              "h": 21,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/21/0",
+            "heading": null,
+            "images": [
+              "/markdown/track_x/assets/x-2-19-0.PNG"
+            ],
+            "index": 20,
+            "links": []
+          },
+          "diffs": [
+            "Image references changed"
+          ],
+          "index": 20,
+          "visual": {
+            "baselinePath": "track_x-unit_02/baseline/21-slide.png",
+            "baselinePathDark": "track_x-unit_02/baseline-dark/21-slide.png",
+            "changedPixels": 287818,
+            "currentPath": "track_x-unit_02/current/21-slide.png",
+            "currentPathDark": "track_x-unit_02/current-dark/21-slide.png",
+            "diffPath": "track_x-unit_02/diff/21-slide.png",
+            "diffRatio": 0.27761616130438643,
+            "sizeMismatch": null,
+            "withinThreshold": false
+          }
+        },
+        {
+          "baseline": {
+            "content": "# Hands-On\n### Try out the exercises under Types!\n<div style=\"display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; padding: 20px;\">\n  <div style=\"position: relative; width: 1050px; height: 650px;\">\n    <img src=\"/markdown/track_x/assets/x-2-20-0.PNG\" alt=\"Screenshot showing Setting the Right Portal in Swift Playgrounds\" style=\"position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;\">\n    <img src=\"/markdown/track_x/assets/iPad.png\" alt=\"iPad\" style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;\">\n  </div>\n  <div style=\"position: relative; width: 1050px; height: 650px;\">\n    <img src=\"/markdown/track_x/assets/x-2-20-1.PNG\" alt=\"Screenshot showing Deactivating a Portal in Swift Playgrounds\" style=\"position: absolute; top: 5%; left: 8.2%; width: 79%; height: auto; z-index: 1;\">\n    <img src=\"/markdown/track_x/assets/iPad.png\" alt=\"iPad\" style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;\">\n  </div>\n</div>",
+            "coordinate": {
+              "h": 22,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/22/0",
+            "heading": "Hands-On",
+            "images": [
+              "/markdown/track_x/assets/iPad.png",
+              "/markdown/track_x/assets/iPad.png",
+              "/markdown/track_x/assets/x-2-20-0.PNG",
+              "/markdown/track_x/assets/x-2-20-1.PNG"
+            ],
+            "index": 21,
+            "links": []
+          },
+          "current": {
+            "content": "<!-- .slide: class=\"layout-two-up\" -->\n# Hands-On\n### Try out the exercises under Types!\n\n![Screenshot showing Setting the Right Portal in Swift Playgrounds](/markdown/track_x/assets/x-2-20-0.PNG)\n![Screenshot showing Deactivating a Portal in Swift Playgrounds](/markdown/track_x/assets/x-2-20-1.PNG)",
+            "coordinate": {
+              "h": 22,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/22/0",
+            "heading": "Hands-On",
+            "images": [
+              "/markdown/track_x/assets/x-2-20-0.PNG",
+              "/markdown/track_x/assets/x-2-20-1.PNG"
+            ],
+            "index": 21,
+            "links": []
+          },
+          "diffs": [
+            "Image references changed"
+          ],
+          "index": 21,
+          "visual": {
+            "baselinePath": "track_x-unit_02/baseline/22-Hands-On.png",
+            "baselinePathDark": "track_x-unit_02/baseline-dark/22-Hands-On.png",
+            "changedPixels": 414166,
+            "currentPath": "track_x-unit_02/current/22-Hands-On.png",
+            "currentPathDark": "track_x-unit_02/current-dark/22-Hands-On.png",
+            "diffPath": "track_x-unit_02/diff/22-Hands-On.png",
+            "diffRatio": 0.39948569951425034,
+            "sizeMismatch": null,
+            "withinThreshold": false
+          }
+        }
+      ],
+      "title": "Logic and Variable Types"
+    },
+    {
+      "baseRef": "main",
+      "currentMarkdownPath": "public/markdown/track_x/03-initialisation-function-parameters.md",
+      "route": "track_x/unit_03",
+      "slides": [
+        {
+          "baseline": {
+            "content": "# Lesson Plan\n\n### What you'll learn\n- Initialisation  \n- Functions  \n- Parameters  \n\n### What you'll do\n- Get Started with Code on Swift Playgrounds  \n\n### What you'll need\n- Swift Playgrounds App on your iPad",
+            "coordinate": {
+              "h": 1,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/1/0",
+            "heading": "Lesson Plan",
+            "images": [],
+            "index": 0,
+            "links": []
+          },
+          "current": {
+            "content": "# Lesson Plan\n\n### What you'll learn\n- Initialisation  \n- Functions  \n- Parameters  \n\n### What you'll do\n- Get Started with Code on Swift Playgrounds  \n\n### What you'll need\n- Swift Playgrounds App on your iPad",
+            "coordinate": {
+              "h": 1,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/1/0",
+            "heading": "Lesson Plan",
+            "images": [],
+            "index": 0,
+            "links": []
+          },
+          "diffs": [],
+          "index": 0,
+          "visual": {
+            "baselinePath": "track_x-unit_03/baseline/01-Lesson-Plan.png",
+            "baselinePathDark": "track_x-unit_03/baseline-dark/01-Lesson-Plan.png",
+            "changedPixels": 0,
+            "currentPath": "track_x-unit_03/current/01-Lesson-Plan.png",
+            "currentPathDark": "track_x-unit_03/current-dark/01-Lesson-Plan.png",
+            "diffPath": null,
+            "diffRatio": 0,
+            "sizeMismatch": null,
+            "withinThreshold": true
+          }
+        },
+        {
+          "baseline": {
+            "content": "# Initialisation\n\n<img height=\"800\" src=\"/markdown/track_x/assets/placeholder_initialisation.png\">",
+            "coordinate": {
+              "h": 2,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/2/0",
+            "heading": "Initialisation",
+            "images": [
+              "/markdown/track_x/assets/placeholder_initialisation.png"
+            ],
+            "index": 1,
+            "links": []
+          },
+          "current": {
+            "content": "<!-- .slide: class=\"layout-media-centre\" -->\n# Initialisation\n\n![Initialisation](/markdown/track_x/assets/placeholder_initialisation.png)\n<!-- .element: class=\"r-stretch\" -->",
+            "coordinate": {
+              "h": 2,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/2/0",
+            "heading": "Initialisation",
+            "images": [
+              "/markdown/track_x/assets/placeholder_initialisation.png"
+            ],
+            "index": 1,
+            "links": []
+          },
+          "diffs": [],
+          "index": 1,
+          "visual": {
+            "baselinePath": "track_x-unit_03/baseline/02-Initialisation.png",
+            "baselinePathDark": "track_x-unit_03/baseline-dark/02-Initialisation.png",
+            "changedPixels": 40331,
+            "currentPath": "track_x-unit_03/current/02-Initialisation.png",
+            "currentPathDark": "track_x-unit_03/current-dark/02-Initialisation.png",
+            "diffPath": "track_x-unit_03/diff/02-Initialisation.png",
+            "diffRatio": 0.03890144953257686,
+            "sizeMismatch": null,
+            "withinThreshold": false
+          }
+        },
+        {
+          "baseline": {
+            "content": "# Hands-On\n\n### Try out the exercise under Initialisation!\n\n<img height=\"800\" src=\"/markdown/track_x/assets/placeholder_hands_on_initialisation.png\">",
+            "coordinate": {
+              "h": 3,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/3/0",
+            "heading": "Hands-On",
+            "images": [
+              "/markdown/track_x/assets/placeholder_hands_on_initialisation.png"
+            ],
+            "index": 2,
+            "links": []
+          },
+          "current": {
+            "content": "<!-- .slide: class=\"layout-media-centre\" -->\n# Hands-On\n\n### Try out the exercise under Initialisation!\n\n![Hands-on Initialisation](/markdown/track_x/assets/placeholder_hands_on_initialisation.png)\n<!-- .element: class=\"r-stretch\" -->",
+            "coordinate": {
+              "h": 3,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/3/0",
+            "heading": "Hands-On",
+            "images": [
+              "/markdown/track_x/assets/placeholder_hands_on_initialisation.png"
+            ],
+            "index": 2,
+            "links": []
+          },
+          "diffs": [],
+          "index": 2,
+          "visual": {
+            "baselinePath": "track_x-unit_03/baseline/03-Hands-On.png",
+            "baselinePathDark": "track_x-unit_03/baseline-dark/03-Hands-On.png",
+            "changedPixels": 48500,
+            "currentPath": "track_x-unit_03/current/03-Hands-On.png",
+            "currentPathDark": "track_x-unit_03/current-dark/03-Hands-On.png",
+            "diffPath": "track_x-unit_03/diff/03-Hands-On.png",
+            "diffRatio": 0.04678089564677241,
+            "sizeMismatch": null,
+            "withinThreshold": false
+          }
+        },
+        {
+          "baseline": {
+            "content": "# Functions\n\n<img height=\"800\" src=\"/markdown/track_x/assets/placeholder_functions.png\">",
+            "coordinate": {
+              "h": 4,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/4/0",
+            "heading": "Functions",
+            "images": [
+              "/markdown/track_x/assets/placeholder_functions.png"
+            ],
+            "index": 3,
+            "links": []
+          },
+          "current": {
+            "content": "<!-- .slide: class=\"layout-media-centre\" -->\n# Functions\n\n![Functions](/markdown/track_x/assets/placeholder_functions.png)\n<!-- .element: class=\"r-stretch\" -->",
+            "coordinate": {
+              "h": 4,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/4/0",
+            "heading": "Functions",
+            "images": [
+              "/markdown/track_x/assets/placeholder_functions.png"
+            ],
+            "index": 3,
+            "links": []
+          },
+          "diffs": [],
+          "index": 3,
+          "visual": {
+            "baselinePath": "track_x-unit_03/baseline/04-Functions.png",
+            "baselinePathDark": "track_x-unit_03/baseline-dark/04-Functions.png",
+            "changedPixels": 30030,
+            "currentPath": "track_x-unit_03/current/04-Functions.png",
+            "currentPathDark": "track_x-unit_03/current-dark/04-Functions.png",
+            "diffPath": "track_x-unit_03/diff/04-Functions.png",
+            "diffRatio": 0.028965573119022172,
+            "sizeMismatch": null,
+            "withinThreshold": false
+          }
+        },
+        {
+          "baseline": {
+            "content": "# Hands-On\n\n### Try out the exercise under Functions!\n\n<img height=\"800\" src=\"/markdown/track_x/assets/placeholder_hands_on_functions.png\">",
+            "coordinate": {
+              "h": 5,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/5/0",
+            "heading": "Hands-On",
+            "images": [
+              "/markdown/track_x/assets/placeholder_hands_on_functions.png"
+            ],
+            "index": 4,
+            "links": []
+          },
+          "current": {
+            "content": "<!-- .slide: class=\"layout-media-centre\" -->\n# Hands-On\n\n### Try out the exercise under Functions!\n\n![Hands-on Functions](/markdown/track_x/assets/placeholder_hands_on_functions.png)\n<!-- .element: class=\"r-stretch\" -->",
+            "coordinate": {
+              "h": 5,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/5/0",
+            "heading": "Hands-On",
+            "images": [
+              "/markdown/track_x/assets/placeholder_hands_on_functions.png"
+            ],
+            "index": 4,
+            "links": []
+          },
+          "diffs": [],
+          "index": 4,
+          "visual": {
+            "baselinePath": "track_x-unit_03/baseline/05-Hands-On.png",
+            "baselinePathDark": "track_x-unit_03/baseline-dark/05-Hands-On.png",
+            "changedPixels": 46614,
+            "currentPath": "track_x-unit_03/current/05-Hands-On.png",
+            "currentPathDark": "track_x-unit_03/current-dark/05-Hands-On.png",
+            "diffPath": "track_x-unit_03/diff/05-Hands-On.png",
+            "diffRatio": 0.04496174576657008,
+            "sizeMismatch": null,
+            "withinThreshold": false
+          }
+        },
+        {
+          "baseline": {
+            "content": "# Parameters\n\n<img height=\"800\" src=\"/markdown/track_x/assets/placeholder_parameters.png\">",
+            "coordinate": {
+              "h": 6,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/6/0",
+            "heading": "Parameters",
+            "images": [
+              "/markdown/track_x/assets/placeholder_parameters.png"
+            ],
+            "index": 5,
+            "links": []
+          },
+          "current": {
+            "content": "<!-- .slide: class=\"layout-media-centre\" -->\n# Parameters\n\n![Parameters](/markdown/track_x/assets/placeholder_parameters.png)\n<!-- .element: class=\"r-stretch\" -->",
+            "coordinate": {
+              "h": 6,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/6/0",
+            "heading": "Parameters",
+            "images": [
+              "/markdown/track_x/assets/placeholder_parameters.png"
+            ],
+            "index": 5,
+            "links": []
+          },
+          "diffs": [],
+          "index": 5,
+          "visual": {
+            "baselinePath": "track_x-unit_03/baseline/06-Parameters.png",
+            "baselinePathDark": "track_x-unit_03/baseline-dark/06-Parameters.png",
+            "changedPixels": 35813,
+            "currentPath": "track_x-unit_03/current/06-Parameters.png",
+            "currentPathDark": "track_x-unit_03/current-dark/06-Parameters.png",
+            "diffPath": "track_x-unit_03/diff/06-Parameters.png",
+            "diffRatio": 0.034543592078306394,
+            "sizeMismatch": null,
+            "withinThreshold": false
+          }
+        },
+        {
+          "baseline": {
+            "content": "# Hands-On\n\n### Try out the exercises under Parameters!\n\n<img height=\"800\" src=\"/markdown/track_x/assets/placeholder_hands_on_parameters.png\">",
+            "coordinate": {
+              "h": 7,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/7/0",
+            "heading": "Hands-On",
+            "images": [
+              "/markdown/track_x/assets/placeholder_hands_on_parameters.png"
+            ],
+            "index": 6,
+            "links": []
+          },
+          "current": {
+            "content": "<!-- .slide: class=\"layout-media-centre\" -->\n# Hands-On\n\n### Try out the exercises under Parameters!\n\n![Hands-on Parameters](/markdown/track_x/assets/placeholder_hands_on_parameters.png)\n<!-- .element: class=\"r-stretch\" -->",
+            "coordinate": {
+              "h": 7,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/7/0",
+            "heading": "Hands-On",
+            "images": [
+              "/markdown/track_x/assets/placeholder_hands_on_parameters.png"
+            ],
+            "index": 6,
+            "links": []
+          },
+          "diffs": [],
+          "index": 6,
+          "visual": {
+            "baselinePath": "track_x-unit_03/baseline/07-Hands-On.png",
+            "baselinePathDark": "track_x-unit_03/baseline-dark/07-Hands-On.png",
+            "changedPixels": 48468,
+            "currentPath": "track_x-unit_03/current/07-Hands-On.png",
+            "currentPathDark": "track_x-unit_03/current-dark/07-Hands-On.png",
+            "diffPath": "track_x-unit_03/diff/07-Hands-On.png",
+            "diffRatio": 0.04675002990119103,
+            "sizeMismatch": null,
+            "withinThreshold": false
+          }
+        },
+        {
+          "baseline": {
+            "content": "<div style=\"text-align: center;\">\n    <h2>Contact Us</h2>\n    <p><a href=\"mailto:hello@tk.sg\">hello@tk.sg</a></p>\n    <p><a href=\"http://tinkercademy.com\">tinkercademy.com</a></p>\n</div>",
+            "coordinate": {
+              "h": 8,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/8/0",
+            "heading": null,
+            "images": [],
+            "index": 7,
+            "links": [
+              "http://tinkercademy.com",
+              "mailto:hello@tk.sg"
+            ]
+          },
+          "current": {
+            "content": "## Contact Us\n\n[hello@tk.sg](mailto:hello@tk.sg)\n\n[tinkercademy.com](http://tinkercademy.com)",
+            "coordinate": {
+              "h": 8,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/8/0",
+            "heading": "Contact Us",
+            "images": [],
+            "index": 7,
+            "links": [
+              "http://tinkercademy.com",
+              "mailto:hello@tk.sg"
+            ]
+          },
+          "diffs": [
+            "Heading changed: \"(none)\" -> \"Contact Us\""
+          ],
+          "index": 7,
+          "visual": {
+            "baselinePath": "track_x-unit_03/baseline/08-Contact-Us.png",
+            "baselinePathDark": "track_x-unit_03/baseline-dark/08-Contact-Us.png",
+            "changedPixels": 0,
+            "currentPath": "track_x-unit_03/current/08-Contact-Us.png",
+            "currentPathDark": "track_x-unit_03/current-dark/08-Contact-Us.png",
+            "diffPath": null,
+            "diffRatio": 0,
+            "sizeMismatch": null,
+            "withinThreshold": true
+          }
+        }
+      ],
+      "title": "Initialisation, Function, Parameters"
+    },
+    {
+      "baseRef": "main",
+      "currentMarkdownPath": "public/markdown/track_x/04-getting-started-with-code.md",
+      "route": "track_x/unit_04",
+      "slides": [
+        {
+          "baseline": {
+            "content": "# Lesson Plan\n\n### What you'll learn\n- Initialisation  \n- Functions  \n- Parameters  \n\n### What you'll do\n- Get Started with Code on Swift Playgrounds  \n\n### What you'll need\n- Swift Playgrounds App on your iPad",
+            "coordinate": {
+              "h": 1,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/1/0",
+            "heading": "Lesson Plan",
+            "images": [],
+            "index": 0,
+            "links": []
+          },
+          "current": {
+            "content": "# Lesson Plan\n\n### What you'll learn\n- Initialisation  \n- Functions  \n- Parameters  \n\n### What you'll do\n- Get Started with Code on Swift Playgrounds  \n\n### What you'll need\n- Swift Playgrounds App on your iPad",
+            "coordinate": {
+              "h": 1,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/1/0",
+            "heading": "Lesson Plan",
+            "images": [],
+            "index": 0,
+            "links": []
+          },
+          "diffs": [],
+          "index": 0,
+          "visual": {
+            "baselinePath": "track_x-unit_04/baseline/01-Lesson-Plan.png",
+            "baselinePathDark": "track_x-unit_04/baseline-dark/01-Lesson-Plan.png",
+            "changedPixels": 0,
+            "currentPath": "track_x-unit_04/current/01-Lesson-Plan.png",
+            "currentPathDark": "track_x-unit_04/current-dark/01-Lesson-Plan.png",
+            "diffPath": null,
+            "diffRatio": 0,
+            "sizeMismatch": null,
+            "withinThreshold": true
+          }
+        },
+        {
+          "baseline": {
+            "content": "# Initialisation\n\n<img height=\"800\" src=\"/markdown/track_x/assets/placeholder_initialisation.png\">",
+            "coordinate": {
+              "h": 2,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/2/0",
+            "heading": "Initialisation",
+            "images": [
+              "/markdown/track_x/assets/placeholder_initialisation.png"
+            ],
+            "index": 1,
+            "links": []
+          },
+          "current": {
+            "content": "<!-- .slide: class=\"layout-media-centre\" -->\n# Initialisation\n\n![Initialisation](/markdown/track_x/assets/placeholder_initialisation.png)\n<!-- .element: class=\"r-stretch\" -->",
+            "coordinate": {
+              "h": 2,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/2/0",
+            "heading": "Initialisation",
+            "images": [
+              "/markdown/track_x/assets/placeholder_initialisation.png"
+            ],
+            "index": 1,
+            "links": []
+          },
+          "diffs": [],
+          "index": 1,
+          "visual": {
+            "baselinePath": "track_x-unit_04/baseline/02-Initialisation.png",
+            "baselinePathDark": "track_x-unit_04/baseline-dark/02-Initialisation.png",
+            "changedPixels": 40331,
+            "currentPath": "track_x-unit_04/current/02-Initialisation.png",
+            "currentPathDark": "track_x-unit_04/current-dark/02-Initialisation.png",
+            "diffPath": "track_x-unit_04/diff/02-Initialisation.png",
+            "diffRatio": 0.03890144953257686,
+            "sizeMismatch": null,
+            "withinThreshold": false
+          }
+        },
+        {
+          "baseline": {
+            "content": "# Hands-On\n\n### Try out the exercise under Initialisation!\n\n<img height=\"800\" src=\"/markdown/track_x/assets/placeholder_hands_on_initialisation.png\">",
+            "coordinate": {
+              "h": 3,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/3/0",
+            "heading": "Hands-On",
+            "images": [
+              "/markdown/track_x/assets/placeholder_hands_on_initialisation.png"
+            ],
+            "index": 2,
+            "links": []
+          },
+          "current": {
+            "content": "<!-- .slide: class=\"layout-media-centre\" -->\n# Hands-On\n\n### Try out the exercise under Initialisation!\n\n![Hands-on Initialisation](/markdown/track_x/assets/placeholder_hands_on_initialisation.png)\n<!-- .element: class=\"r-stretch\" -->",
+            "coordinate": {
+              "h": 3,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/3/0",
+            "heading": "Hands-On",
+            "images": [
+              "/markdown/track_x/assets/placeholder_hands_on_initialisation.png"
+            ],
+            "index": 2,
+            "links": []
+          },
+          "diffs": [],
+          "index": 2,
+          "visual": {
+            "baselinePath": "track_x-unit_04/baseline/03-Hands-On.png",
+            "baselinePathDark": "track_x-unit_04/baseline-dark/03-Hands-On.png",
+            "changedPixels": 48500,
+            "currentPath": "track_x-unit_04/current/03-Hands-On.png",
+            "currentPathDark": "track_x-unit_04/current-dark/03-Hands-On.png",
+            "diffPath": "track_x-unit_04/diff/03-Hands-On.png",
+            "diffRatio": 0.04678089564677241,
+            "sizeMismatch": null,
+            "withinThreshold": false
+          }
+        },
+        {
+          "baseline": {
+            "content": "# Functions\n\n<img height=\"800\" src=\"/markdown/track_x/assets/placeholder_functions.png\">",
+            "coordinate": {
+              "h": 4,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/4/0",
+            "heading": "Functions",
+            "images": [
+              "/markdown/track_x/assets/placeholder_functions.png"
+            ],
+            "index": 3,
+            "links": []
+          },
+          "current": {
+            "content": "<!-- .slide: class=\"layout-media-centre\" -->\n# Functions\n\n![Functions](/markdown/track_x/assets/placeholder_functions.png)\n<!-- .element: class=\"r-stretch\" -->",
+            "coordinate": {
+              "h": 4,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/4/0",
+            "heading": "Functions",
+            "images": [
+              "/markdown/track_x/assets/placeholder_functions.png"
+            ],
+            "index": 3,
+            "links": []
+          },
+          "diffs": [],
+          "index": 3,
+          "visual": {
+            "baselinePath": "track_x-unit_04/baseline/04-Functions.png",
+            "baselinePathDark": "track_x-unit_04/baseline-dark/04-Functions.png",
+            "changedPixels": 30030,
+            "currentPath": "track_x-unit_04/current/04-Functions.png",
+            "currentPathDark": "track_x-unit_04/current-dark/04-Functions.png",
+            "diffPath": "track_x-unit_04/diff/04-Functions.png",
+            "diffRatio": 0.028965573119022172,
+            "sizeMismatch": null,
+            "withinThreshold": false
+          }
+        },
+        {
+          "baseline": {
+            "content": "# Hands-On\n\n### Try out the exercise under Functions!\n\n<img height=\"800\" src=\"/markdown/track_x/assets/placeholder_hands_on_functions.png\">",
+            "coordinate": {
+              "h": 5,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/5/0",
+            "heading": "Hands-On",
+            "images": [
+              "/markdown/track_x/assets/placeholder_hands_on_functions.png"
+            ],
+            "index": 4,
+            "links": []
+          },
+          "current": {
+            "content": "<!-- .slide: class=\"layout-media-centre\" -->\n# Hands-On\n\n### Try out the exercise under Functions!\n\n![Hands-on Functions](/markdown/track_x/assets/placeholder_hands_on_functions.png)\n<!-- .element: class=\"r-stretch\" -->",
+            "coordinate": {
+              "h": 5,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/5/0",
+            "heading": "Hands-On",
+            "images": [
+              "/markdown/track_x/assets/placeholder_hands_on_functions.png"
+            ],
+            "index": 4,
+            "links": []
+          },
+          "diffs": [],
+          "index": 4,
+          "visual": {
+            "baselinePath": "track_x-unit_04/baseline/05-Hands-On.png",
+            "baselinePathDark": "track_x-unit_04/baseline-dark/05-Hands-On.png",
+            "changedPixels": 46614,
+            "currentPath": "track_x-unit_04/current/05-Hands-On.png",
+            "currentPathDark": "track_x-unit_04/current-dark/05-Hands-On.png",
+            "diffPath": "track_x-unit_04/diff/05-Hands-On.png",
+            "diffRatio": 0.04496174576657008,
+            "sizeMismatch": null,
+            "withinThreshold": false
+          }
+        },
+        {
+          "baseline": {
+            "content": "# Parameters\n\n<img height=\"800\" src=\"/markdown/track_x/assets/placeholder_parameters.png\">",
+            "coordinate": {
+              "h": 6,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/6/0",
+            "heading": "Parameters",
+            "images": [
+              "/markdown/track_x/assets/placeholder_parameters.png"
+            ],
+            "index": 5,
+            "links": []
+          },
+          "current": {
+            "content": "<!-- .slide: class=\"layout-media-centre\" -->\n# Parameters\n\n![Parameters](/markdown/track_x/assets/placeholder_parameters.png)\n<!-- .element: class=\"r-stretch\" -->",
+            "coordinate": {
+              "h": 6,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/6/0",
+            "heading": "Parameters",
+            "images": [
+              "/markdown/track_x/assets/placeholder_parameters.png"
+            ],
+            "index": 5,
+            "links": []
+          },
+          "diffs": [],
+          "index": 5,
+          "visual": {
+            "baselinePath": "track_x-unit_04/baseline/06-Parameters.png",
+            "baselinePathDark": "track_x-unit_04/baseline-dark/06-Parameters.png",
+            "changedPixels": 35813,
+            "currentPath": "track_x-unit_04/current/06-Parameters.png",
+            "currentPathDark": "track_x-unit_04/current-dark/06-Parameters.png",
+            "diffPath": "track_x-unit_04/diff/06-Parameters.png",
+            "diffRatio": 0.034543592078306394,
+            "sizeMismatch": null,
+            "withinThreshold": false
+          }
+        },
+        {
+          "baseline": {
+            "content": "# Hands-On\n\n### Try out the exercises under Parameters!\n\n<img height=\"800\" src=\"/markdown/track_x/assets/placeholder_hands_on_parameters.png\">",
+            "coordinate": {
+              "h": 7,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/7/0",
+            "heading": "Hands-On",
+            "images": [
+              "/markdown/track_x/assets/placeholder_hands_on_parameters.png"
+            ],
+            "index": 6,
+            "links": []
+          },
+          "current": {
+            "content": "<!-- .slide: class=\"layout-media-centre\" -->\n# Hands-On\n\n### Try out the exercises under Parameters!\n\n![Hands-on Parameters](/markdown/track_x/assets/placeholder_hands_on_parameters.png)\n<!-- .element: class=\"r-stretch\" -->",
+            "coordinate": {
+              "h": 7,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/7/0",
+            "heading": "Hands-On",
+            "images": [
+              "/markdown/track_x/assets/placeholder_hands_on_parameters.png"
+            ],
+            "index": 6,
+            "links": []
+          },
+          "diffs": [],
+          "index": 6,
+          "visual": {
+            "baselinePath": "track_x-unit_04/baseline/07-Hands-On.png",
+            "baselinePathDark": "track_x-unit_04/baseline-dark/07-Hands-On.png",
+            "changedPixels": 48468,
+            "currentPath": "track_x-unit_04/current/07-Hands-On.png",
+            "currentPathDark": "track_x-unit_04/current-dark/07-Hands-On.png",
+            "diffPath": "track_x-unit_04/diff/07-Hands-On.png",
+            "diffRatio": 0.04675002990119103,
+            "sizeMismatch": null,
+            "withinThreshold": false
+          }
+        },
+        {
+          "baseline": {
+            "content": "<div style=\"text-align: center;\">\n    <h2>Contact Us</h2>\n    <p><a href=\"mailto:hello@tk.sg\">hello@tk.sg</a></p>\n    <p><a href=\"http://tinkercademy.com\">tinkercademy.com</a></p>\n</div>",
+            "coordinate": {
+              "h": 8,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/8/0",
+            "heading": null,
+            "images": [],
+            "index": 7,
+            "links": [
+              "http://tinkercademy.com",
+              "mailto:hello@tk.sg"
+            ]
+          },
+          "current": {
+            "content": "## Contact Us\n\n[hello@tk.sg](mailto:hello@tk.sg)\n\n[tinkercademy.com](http://tinkercademy.com)",
+            "coordinate": {
+              "h": 8,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/8/0",
+            "heading": "Contact Us",
+            "images": [],
+            "index": 7,
+            "links": [
+              "http://tinkercademy.com",
+              "mailto:hello@tk.sg"
+            ]
+          },
+          "diffs": [
+            "Heading changed: \"(none)\" -> \"Contact Us\""
+          ],
+          "index": 7,
+          "visual": {
+            "baselinePath": "track_x-unit_04/baseline/08-Contact-Us.png",
+            "baselinePathDark": "track_x-unit_04/baseline-dark/08-Contact-Us.png",
+            "changedPixels": 0,
+            "currentPath": "track_x-unit_04/current/08-Contact-Us.png",
+            "currentPathDark": "track_x-unit_04/current-dark/08-Contact-Us.png",
+            "diffPath": null,
+            "diffRatio": 0,
+            "sizeMismatch": null,
+            "withinThreshold": true
+          }
+        }
+      ],
+      "title": "Getting Started With Code"
+    },
+    {
+      "baseRef": "main",
+      "currentMarkdownPath": "public/markdown/track_x/05-about-me-app.md",
+      "route": "track_x/unit_05",
+      "slides": [
+        {
+          "baseline": {
+            "content": "# Getting Started\n\n- Open **Swift Playgrounds** on your iPad.  \n- Under “More Playgrounds,” tap **See All** and download the About Me playground.  \n\n<img height=\"800\" src=\"/markdown/track_x/assets/placeholder_getting_started_about_me.png\">",
+            "coordinate": {
+              "h": 1,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/1/0",
+            "heading": "Getting Started",
+            "images": [
+              "/markdown/track_x/assets/placeholder_getting_started_about_me.png"
+            ],
+            "index": 0,
+            "links": []
+          },
+          "current": {
+            "content": "# Getting Started\n\n- Open **Swift Playgrounds** on your iPad.  \n- Under \"More Playgrounds,\" tap **See All** and download the About Me playground.  \n\n![Getting Started with About Me](/markdown/track_x/assets/placeholder_getting_started_about_me.png)\n<!-- .element: class=\"r-stretch\" -->",
+            "coordinate": {
+              "h": 1,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/1/0",
+            "heading": "Getting Started",
+            "images": [
+              "/markdown/track_x/assets/placeholder_getting_started_about_me.png"
+            ],
+            "index": 0,
+            "links": []
+          },
+          "diffs": [],
+          "index": 0,
+          "visual": {
+            "baselinePath": "track_x-unit_05/baseline/01-Getting-Started.png",
+            "baselinePathDark": "track_x-unit_05/baseline-dark/01-Getting-Started.png",
+            "changedPixels": 6315,
+            "currentPath": "track_x-unit_05/current/01-Getting-Started.png",
+            "currentPathDark": "track_x-unit_05/current-dark/01-Getting-Started.png",
+            "diffPath": "track_x-unit_05/diff/01-Getting-Started.png",
+            "diffRatio": 0.006091161979574593,
+            "sizeMismatch": null,
+            "withinThreshold": true
+          }
+        },
+        {
+          "baseline": {
+            "content": "# About Me App",
+            "coordinate": {
+              "h": 2,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/2/0",
+            "heading": "About Me App",
+            "images": [],
+            "index": 1,
+            "links": []
+          },
+          "current": {
+            "content": "# About Me App",
+            "coordinate": {
+              "h": 2,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/2/0",
+            "heading": "About Me App",
+            "images": [],
+            "index": 1,
+            "links": []
+          },
+          "diffs": [],
+          "index": 1,
+          "visual": {
+            "baselinePath": "track_x-unit_05/baseline/02-About-Me-App.png",
+            "baselinePathDark": "track_x-unit_05/baseline-dark/02-About-Me-App.png",
+            "changedPixels": 0,
+            "currentPath": "track_x-unit_05/current/02-About-Me-App.png",
+            "currentPathDark": "track_x-unit_05/current-dark/02-About-Me-App.png",
+            "diffPath": null,
+            "diffRatio": 0,
+            "sizeMismatch": null,
+            "withinThreshold": true
+          }
+        },
+        {
+          "baseline": {
+            "content": "## Tabs in the App\n\n- Explore and customize the built-in tabs in the app.  \n\n<img height=\"800\" src=\"/markdown/track_x/assets/placeholder_tabs_in_app.png\">",
+            "coordinate": {
+              "h": 3,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/3/0",
+            "heading": "Tabs in the App",
+            "images": [
+              "/markdown/track_x/assets/placeholder_tabs_in_app.png"
+            ],
+            "index": 2,
+            "links": []
+          },
+          "current": {
+            "content": "<!-- .slide: class=\"layout-media-centre\" -->\n## Tabs in the App\n\n- Explore and customize the built-in tabs in the app.  \n\n![Tabs in the App](/markdown/track_x/assets/placeholder_tabs_in_app.png)\n<!-- .element: class=\"r-stretch\" -->",
+            "coordinate": {
+              "h": 3,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/3/0",
+            "heading": "Tabs in the App",
+            "images": [
+              "/markdown/track_x/assets/placeholder_tabs_in_app.png"
+            ],
+            "index": 2,
+            "links": []
+          },
+          "diffs": [],
+          "index": 2,
+          "visual": {
+            "baselinePath": "track_x-unit_05/baseline/03-Tabs-in-the-App.png",
+            "baselinePathDark": "track_x-unit_05/baseline-dark/03-Tabs-in-the-App.png",
+            "changedPixels": 28126,
+            "currentPath": "track_x-unit_05/current/03-Tabs-in-the-App.png",
+            "currentPathDark": "track_x-unit_05/current-dark/03-Tabs-in-the-App.png",
+            "diffPath": "track_x-unit_05/diff/03-Tabs-in-the-App.png",
+            "diffRatio": 0.027129061256930324,
+            "sizeMismatch": null,
+            "withinThreshold": false
+          }
+        },
+        {
+          "baseline": {
+            "content": "# Hands-On\n\n### Experiment with tabs, images, and app customization!\n\n<img height=\"800\" src=\"/markdown/track_x/assets/placeholder_hands_on_about_me.png\">",
+            "coordinate": {
+              "h": 4,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/4/0",
+            "heading": "Hands-On",
+            "images": [
+              "/markdown/track_x/assets/placeholder_hands_on_about_me.png"
+            ],
+            "index": 3,
+            "links": []
+          },
+          "current": {
+            "content": "<!-- .slide: class=\"layout-media-centre\" -->\n# Hands-On\n\n### Experiment with tabs, images, and app customization!\n\n![Hands-on About Me](/markdown/track_x/assets/placeholder_hands_on_about_me.png)\n<!-- .element: class=\"r-stretch\" -->",
+            "coordinate": {
+              "h": 4,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/4/0",
+            "heading": "Hands-On",
+            "images": [
+              "/markdown/track_x/assets/placeholder_hands_on_about_me.png"
+            ],
+            "index": 3,
+            "links": []
+          },
+          "diffs": [],
+          "index": 3,
+          "visual": {
+            "baselinePath": "track_x-unit_05/baseline/04-Hands-On.png",
+            "baselinePathDark": "track_x-unit_05/baseline-dark/04-Hands-On.png",
+            "changedPixels": 55129,
+            "currentPath": "track_x-unit_05/current/04-Hands-On.png",
+            "currentPathDark": "track_x-unit_05/current-dark/04-Hands-On.png",
+            "diffPath": "track_x-unit_05/diff/04-Hands-On.png",
+            "diffRatio": 0.05317492775486425,
+            "sizeMismatch": null,
+            "withinThreshold": false
+          }
+        },
+        {
+          "baseline": {
+            "content": "# Editing Tabs",
+            "coordinate": {
+              "h": 5,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/5/0",
+            "heading": "Editing Tabs",
+            "images": [],
+            "index": 4,
+            "links": []
+          },
+          "current": {
+            "content": "# Editing Tabs",
+            "coordinate": {
+              "h": 5,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/5/0",
+            "heading": "Editing Tabs",
+            "images": [],
+            "index": 4,
+            "links": []
+          },
+          "diffs": [],
+          "index": 4,
+          "visual": {
+            "baselinePath": "track_x-unit_05/baseline/05-Editing-Tabs.png",
+            "baselinePathDark": "track_x-unit_05/baseline-dark/05-Editing-Tabs.png",
+            "changedPixels": 0,
+            "currentPath": "track_x-unit_05/current/05-Editing-Tabs.png",
+            "currentPathDark": "track_x-unit_05/current-dark/05-Editing-Tabs.png",
+            "diffPath": null,
+            "diffRatio": 0,
+            "sizeMismatch": null,
+            "withinThreshold": true
+          }
+        },
+        {
+          "baseline": {
+            "content": "## Changing Tab Labels\n\n- Modify the `.tabItem` modifier to change the label text.  \n- Example: Change `\"Home\"` to `\"Your Name\"`.\n\n<img height=\"800\" src=\"/markdown/track_x/assets/placeholder_editing_tab_labels.png\">",
+            "coordinate": {
+              "h": 6,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/6/0",
+            "heading": "Changing Tab Labels",
+            "images": [
+              "/markdown/track_x/assets/placeholder_editing_tab_labels.png"
+            ],
+            "index": 5,
+            "links": []
+          },
+          "current": {
+            "content": "<!-- .slide: class=\"layout-media-centre\" -->\n## Changing Tab Labels\n\n- Modify the `.tabItem` modifier to change the label text.  \n- Example: Change `\"Home\"` to `\"Your Name\"`.\n\n![Editing Tab Labels](/markdown/track_x/assets/placeholder_editing_tab_labels.png)\n<!-- .element: class=\"r-stretch\" -->",
+            "coordinate": {
+              "h": 6,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/6/0",
+            "heading": "Changing Tab Labels",
+            "images": [
+              "/markdown/track_x/assets/placeholder_editing_tab_labels.png"
+            ],
+            "index": 5,
+            "links": []
+          },
+          "diffs": [],
+          "index": 5,
+          "visual": {
+            "baselinePath": "track_x-unit_05/baseline/06-Changing-Tab-Labels.png",
+            "baselinePathDark": "track_x-unit_05/baseline-dark/06-Changing-Tab-Labels.png",
+            "changedPixels": 42329,
+            "currentPath": "track_x-unit_05/current/06-Changing-Tab-Labels.png",
+            "currentPathDark": "track_x-unit_05/current-dark/06-Changing-Tab-Labels.png",
+            "diffPath": "track_x-unit_05/diff/06-Changing-Tab-Labels.png",
+            "diffRatio": 0.040828629522314,
+            "sizeMismatch": null,
+            "withinThreshold": false
+          }
+        },
+        {
+          "baseline": {
+            "content": "## Adding Images to Tabs\n\n- Import your own image into the playground.  \n- Use it in the app by replacing the placeholder image.\n\n<img height=\"800\" src=\"/markdown/track_x/assets/placeholder_adding_images_to_tabs.png\">",
+            "coordinate": {
+              "h": 7,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/7/0",
+            "heading": "Adding Images to Tabs",
+            "images": [
+              "/markdown/track_x/assets/placeholder_adding_images_to_tabs.png"
+            ],
+            "index": 6,
+            "links": []
+          },
+          "current": {
+            "content": "<!-- .slide: class=\"layout-media-centre\" -->\n## Adding Images to Tabs\n\n- Import your own image into the playground.  \n- Use it in the app by replacing the placeholder image.\n\n![Adding Images to Tabs](/markdown/track_x/assets/placeholder_adding_images_to_tabs.png)\n<!-- .element: class=\"r-stretch\" -->",
+            "coordinate": {
+              "h": 7,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/7/0",
+            "heading": "Adding Images to Tabs",
+            "images": [
+              "/markdown/track_x/assets/placeholder_adding_images_to_tabs.png"
+            ],
+            "index": 6,
+            "links": []
+          },
+          "diffs": [],
+          "index": 6,
+          "visual": {
+            "baselinePath": "track_x-unit_05/baseline/07-Adding-Images-to-Tabs.png",
+            "baselinePathDark": "track_x-unit_05/baseline-dark/07-Adding-Images-to-Tabs.png",
+            "changedPixels": 45918,
+            "currentPath": "track_x-unit_05/current/07-Adding-Images-to-Tabs.png",
+            "currentPathDark": "track_x-unit_05/current-dark/07-Adding-Images-to-Tabs.png",
+            "diffPath": "track_x-unit_05/diff/07-Adding-Images-to-Tabs.png",
+            "diffRatio": 0.04429041580017516,
+            "sizeMismatch": null,
+            "withinThreshold": false
+          }
+        },
+        {
+          "baseline": {
+            "content": "# Customization",
+            "coordinate": {
+              "h": 8,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/8/0",
+            "heading": "Customization",
+            "images": [],
+            "index": 7,
+            "links": []
+          },
+          "current": {
+            "content": "# Customization",
+            "coordinate": {
+              "h": 8,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/8/0",
+            "heading": "Customization",
+            "images": [],
+            "index": 7,
+            "links": []
+          },
+          "diffs": [],
+          "index": 7,
+          "visual": {
+            "baselinePath": "track_x-unit_05/baseline/08-Customization.png",
+            "baselinePathDark": "track_x-unit_05/baseline-dark/08-Customization.png",
+            "changedPixels": 0,
+            "currentPath": "track_x-unit_05/current/08-Customization.png",
+            "currentPathDark": "track_x-unit_05/current-dark/08-Customization.png",
+            "diffPath": null,
+            "diffRatio": 0,
+            "sizeMismatch": null,
+            "withinThreshold": true
+          }
+        },
+        {
+          "baseline": {
+            "content": "## Changing Accent Colors\n\n- Open settings and modify the accent color for the app.\n\n<img height=\"800\" src=\"/markdown/track_x/assets/placeholder_changing_accent_colors.png\">",
+            "coordinate": {
+              "h": 9,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/9/0",
+            "heading": "Changing Accent Colors",
+            "images": [
+              "/markdown/track_x/assets/placeholder_changing_accent_colors.png"
+            ],
+            "index": 8,
+            "links": []
+          },
+          "current": {
+            "content": "<!-- .slide: class=\"layout-media-centre\" -->\n## Changing Accent Colors\n\n- Open settings and modify the accent color for the app.\n\n![Changing Accent Colors](/markdown/track_x/assets/placeholder_changing_accent_colors.png)\n<!-- .element: class=\"r-stretch\" -->",
+            "coordinate": {
+              "h": 9,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/9/0",
+            "heading": "Changing Accent Colors",
+            "images": [
+              "/markdown/track_x/assets/placeholder_changing_accent_colors.png"
+            ],
+            "index": 8,
+            "links": []
+          },
+          "diffs": [],
+          "index": 8,
+          "visual": {
+            "baselinePath": "track_x-unit_05/baseline/09-Changing-Accent-Colors.png",
+            "baselinePathDark": "track_x-unit_05/baseline-dark/09-Changing-Accent-Colors.png",
+            "changedPixels": 41651,
+            "currentPath": "track_x-unit_05/current/09-Changing-Accent-Colors.png",
+            "currentPathDark": "track_x-unit_05/current-dark/09-Changing-Accent-Colors.png",
+            "diffPath": "track_x-unit_05/diff/09-Changing-Accent-Colors.png",
+            "diffRatio": 0.04017466153780861,
+            "sizeMismatch": null,
+            "withinThreshold": false
+          }
+        },
+        {
+          "baseline": {
+            "content": "## Styling the Text\n\n- Use modifiers like `.font(.largeTitle)` and `.padding()` to customize text styles.\n\n<img height=\"800\" src=\"/markdown/track_x/assets/placeholder_styling_text.png\">",
+            "coordinate": {
+              "h": 10,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/10/0",
+            "heading": "Styling the Text",
+            "images": [
+              "/markdown/track_x/assets/placeholder_styling_text.png"
+            ],
+            "index": 9,
+            "links": []
+          },
+          "current": {
+            "content": "<!-- .slide: class=\"layout-media-centre\" -->\n## Styling the Text\n\n- Use modifiers like `.font(.largeTitle)` and `.padding()` to customize text styles.\n\n![Styling Text](/markdown/track_x/assets/placeholder_styling_text.png)\n<!-- .element: class=\"r-stretch\" -->",
+            "coordinate": {
+              "h": 10,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/10/0",
+            "heading": "Styling the Text",
+            "images": [
+              "/markdown/track_x/assets/placeholder_styling_text.png"
+            ],
+            "index": 9,
+            "links": []
+          },
+          "diffs": [],
+          "index": 9,
+          "visual": {
+            "baselinePath": "track_x-unit_05/baseline/10-Styling-the-Text.png",
+            "baselinePathDark": "track_x-unit_05/baseline-dark/10-Styling-the-Text.png",
+            "changedPixels": 32229,
+            "currentPath": "track_x-unit_05/current/10-Styling-the-Text.png",
+            "currentPathDark": "track_x-unit_05/current-dark/10-Styling-the-Text.png",
+            "diffPath": "track_x-unit_05/diff/10-Styling-the-Text.png",
+            "diffRatio": 0.03108662857319233,
+            "sizeMismatch": null,
+            "withinThreshold": false
+          }
+        },
+        {
+          "baseline": {
+            "content": "<div style=\"text-align: center;\">\n    <h2>Contact Us</h2>\n    <p><a href=\"mailto:hello@tk.sg\">hello@tk.sg</a></p>\n    <p><a href=\"http://tinkercademy.com\">tinkercademy.com</a></p>\n</div>",
+            "coordinate": {
+              "h": 11,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/11/0",
+            "heading": null,
+            "images": [],
+            "index": 10,
+            "links": [
+              "http://tinkercademy.com",
+              "mailto:hello@tk.sg"
+            ]
+          },
+          "current": {
+            "content": "## Contact Us\n\n[hello@tk.sg](mailto:hello@tk.sg)\n\n[tinkercademy.com](http://tinkercademy.com)",
+            "coordinate": {
+              "h": 11,
+              "v": 0
+            },
+            "codeBlockCount": 0,
+            "hash": "#/11/0",
+            "heading": "Contact Us",
+            "images": [],
+            "index": 10,
+            "links": [
+              "http://tinkercademy.com",
+              "mailto:hello@tk.sg"
+            ]
+          },
+          "diffs": [
+            "Heading changed: \"(none)\" -> \"Contact Us\""
+          ],
+          "index": 10,
+          "visual": {
+            "baselinePath": "track_x-unit_05/baseline/11-Contact-Us.png",
+            "baselinePathDark": "track_x-unit_05/baseline-dark/11-Contact-Us.png",
+            "changedPixels": 0,
+            "currentPath": "track_x-unit_05/current/11-Contact-Us.png",
+            "currentPathDark": "track_x-unit_05/current-dark/11-Contact-Us.png",
+            "diffPath": null,
+            "diffRatio": 0,
+            "sizeMismatch": null,
+            "withinThreshold": true
+          }
+        }
+      ],
+      "title": "About me App"
+    }
+  ],
+  "visualThreshold": 0.01
+}
