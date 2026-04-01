@@ -24,11 +24,15 @@
 
 ---
 
-<img height="800" src="/markdown/track_a/assets/plan-useractions.png">
+<!-- .slide: class="layout-media-centre" -->
+![User Actions planning page](/markdown/track_a/assets/plan-useractions.png)
+<!-- .element: class="r-stretch" -->
 
 ---
 
-<img height="800" src="/markdown/track_a/assets/bug-buzz-example.png">
+<!-- .slide: class="layout-media-centre" -->
+![Bug Buzz example](/markdown/track_a/assets/bug-buzz-example.png)
+<!-- .element: class="r-stretch" -->
 
 ---
 
@@ -50,11 +54,15 @@
 
 ---
 
-<img height="800" src="/markdown/track_a/assets/plan-input-and-app-state.png">
+<!-- .slide: class="layout-media-centre" -->
+![Input and App State planning page](/markdown/track_a/assets/plan-input-and-app-state.png)
+<!-- .element: class="r-stretch" -->
 
 ---
 
-<img height="800" src="/markdown/track_a/assets/bug-buzz-example2.png">
+<!-- .slide: class="layout-media-centre" -->
+![Bug Buzz example 2](/markdown/track_a/assets/bug-buzz-example2.png)
+<!-- .element: class="r-stretch" -->
 
 ---
 
@@ -68,10 +76,14 @@
 
 ---
 
-<img height="800" src="/markdown/track_a/assets/plan-choose-features.png">
+<!-- .slide: class="layout-media-centre" -->
+![Choose Features planning page](/markdown/track_a/assets/plan-choose-features.png)
+<!-- .element: class="r-stretch" -->
 
 ---
 
-<img height="800" src="/markdown/track_a/assets/bug-buzz-example3.png">
+<!-- .slide: class="layout-media-centre" -->
+![Bug Buzz example 3](/markdown/track_a/assets/bug-buzz-example3.png)
+<!-- .element: class="r-stretch" -->
 
 ---

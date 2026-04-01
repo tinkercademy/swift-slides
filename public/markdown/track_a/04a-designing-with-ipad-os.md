@@ -8,7 +8,7 @@
 
 ---
 
-# Tab Bars <img src="/markdown/track_a/assets/tab-bar.png">
+# Tab Bars ![Tab Bar](/markdown/track_a/assets/tab-bar.png)
 
 ---
 
@@ -30,17 +30,11 @@
 
 ## Example: Clock App
 
-<div style="display: flex;">
-    <ul>
-        <li>Tabs in the Clock app include:</li>
-        <ul>
-            <li>World Clock: Shows the different times in different places around the world</li>
-            <li>Alarm: Shows the different alarms you have created</li>
-            <li>Stopwatch: Create a timer that counts up</li>
-            <li>Timer: Creates a timer that counts down</li>
-        </ul>
-    </ul>
-</div>
+- Tabs in the Clock app include:
+  - World Clock: Shows the different times in different places around the world
+  - Alarm: Shows the different alarms you have created
+  - Stopwatch: Create a timer that counts up
+  - Timer: Creates a timer that counts down
 
 ---
 
@@ -58,7 +52,7 @@
 
 ---
 
-# Side Bars <img style="margin-bottom: -4px" height="128px" src="/assets/icons/sidebar.left.svg">
+# Side Bars ![Sidebar Icon](/assets/icons/sidebar.left.svg)
 
 ---
 
@@ -71,21 +65,27 @@
 
 ---
 
+<!-- .slide: class="layout-media-centre" -->
 ## Side Bar and Canvas
 
-<img height="850" src="/markdown/track_a/assets/sidebar-and-canvas.png">
+![Side Bar and Canvas](/markdown/track_a/assets/sidebar-and-canvas.png)
+<!-- .element: class="r-stretch" -->
 
 ---
 
+<!-- .slide: class="layout-media-centre" -->
 ## Example: Photos App
 
-<img height="850" src="/markdown/track_a/assets/sidebar-and-canvas-example1.png">
+![Photos App sidebar example](/markdown/track_a/assets/sidebar-and-canvas-example1.png)
+<!-- .element: class="r-stretch" -->
 
 ---
 
+<!-- .slide: class="layout-media-centre" -->
 ## Example: Calendar App
 
-<img height="850" src="/markdown/track_a/assets/sidebar-and-canvas-example2.png">
+![Calendar App sidebar example](/markdown/track_a/assets/sidebar-and-canvas-example2.png)
+<!-- .element: class="r-stretch" -->
 
 ---
 
@@ -111,16 +111,13 @@
 
 ---
 
-<div style="display: flex;">
-    <div style="margin-top:10%;">
-    <h2>Example: Reminders App</h2>
-    <ul style="margin-top:5%;">
-        <li>When the user clicks on the + button to add a new list, a Modal is presented</li>
-        <li>The Modal is used to allow users to enter information about this new list, and can only be dismissed when the user is done, or cancels the operation</li>
-    </ul>
-    </div>
-    <img src="/markdown/track_a/assets/reminders-app.png">
-</div>
+<!-- .slide: class="layout-steps-media" -->
+## Example: Reminders App
+
+- When the user clicks on the + button to add a new list, a Modal is presented
+- The Modal is used to allow users to enter information about this new list, and can only be dismissed when the user is done, or cancels the operation
+
+![Reminders App](/markdown/track_a/assets/reminders-app.png)
 
 ---
 
@@ -138,9 +135,11 @@
 
 ---
 
+<!-- .slide: class="layout-media-centre" -->
 ## NavigationSplitView vs NavigationStack
 
-<img height="800" src="/markdown/track_a/assets/navigationsplitview-vs-navigationstack.png">
+![NavigationSplitView vs NavigationStack](/markdown/track_a/assets/navigationsplitview-vs-navigationstack.png)
+<!-- .element: class="r-stretch" -->
 
 ---
 
@@ -154,48 +153,32 @@
 
 ## Disclosure Indicators
 
-<div style="display: flex;">
-    <ul>
-        <li>Also referred to as a <strong>chevron ( ‹ )</strong></li>
-        <li>The <strong>chevron</strong> points in the direction that the user is expected to transition to and helps our mental model of progression</li>
-        <ul>
-            <li>Indicates <em>progress</em></li>
-            <li>For example, in</li>
-            <ul>
-                <li><em>left to right</em> languages like English, it points from <em>left to right</em>, but</li>
-                <li><em>right to left</em> languages like Arabic, it points from <em>right to left</em></li>
-            </ul>
-        </ul>
-    </ul>
-</div>
+- Also referred to as a **chevron ( ‹ )**
+- The **chevron** points in the direction that the user is expected to transition to and helps our mental model of progression
+  - Indicates _progress_
+  - For example, in
+    - _left to right_ languages like English, it points from _left to right_, but
+    - _right to left_ languages like Arabic, it points from _right to left_
 
 ---
 
 ## Example: Settings App
 
 - The User taps to go into more detail about App Store Notification settings (App Store → Notifications → Show Previews)
-- The Disclosure Indicator shows the name of the last view, letting the user know where they are in the app and giving them an option to go back</li>
+- The Disclosure Indicator shows the name of the last view, letting the user know where they are in the app and giving them an option to go back
 
-<img src="/markdown/track_a/assets/disclosure-indicators-example.png">
+![Disclosure Indicators example](/markdown/track_a/assets/disclosure-indicators-example.png)
 
 ---
 
 ## Guidelines for Navigation Views
 
-<div style="display: flex;">
-    <ul>
-        <li>Provide a descriptive and concise title</li>
-        <li>Use the standard ‘Back' button in the navigation bar</li>
-        <ul>
-            <li>In the Photos app, viewing a photo will make it take up the entire screen. Users can close by swiping down.</li>
-        </ul>
-        <li>Sometimes, consider hiding the navigation bar temporarily for a more immersive experience</li>
-        <ul>
-            <li>Users are accustomed to retracing their steps with the Back button</li>
-        </ul>
-        <li>Note: Navigation bars can also come with accessories (e.g. Buttons or a Search Bar)</li>
-    </ul>
-</div>
+- Provide a descriptive and concise title
+- Use the standard ‘Back' button in the navigation bar
+  - In the Photos app, viewing a photo will make it take up the entire screen. Users can close by swiping down.
+- Sometimes, consider hiding the navigation bar temporarily for a more immersive experience
+  - Users are accustomed to retracing their steps with the Back button
+- Note: Navigation bars can also come with accessories (e.g. Buttons or a Search Bar)
 
 ---
 
@@ -212,13 +195,10 @@
 
 ---
 
-<div style="display: flex;">
-    <div style="margin-top:10%;">
-    <h2>Example: Calendar App</h2>
-    <ul>
-        <li>When the user clicks on the + button to add a new event, a popover appears from the button</li>
-        <li>The popover cannot be dismissed unless the Cancel button is pressed, or the user is done entering information</li>
-    </ul>
-    </div>
-    <img height="800" width="555" src="/markdown/track_a/assets/popover-example.png">
-</div>
+<!-- .slide: class="layout-steps-media" -->
+## Example: Calendar App
+
+- When the user clicks on the + button to add a new event, a popover appears from the button
+- The popover cannot be dismissed unless the Cancel button is pressed, or the user is done entering information
+
+![Calendar App popover example](/markdown/track_a/assets/popover-example.png)

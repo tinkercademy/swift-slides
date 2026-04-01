@@ -13,50 +13,62 @@
 
 ---
 
+<!-- .slide: class="layout-media-centre" -->
 # Initialisation
 
-<img height="800" src="/markdown/track_x/assets/placeholder_initialisation.png">
+![Initialisation](/markdown/track_x/assets/placeholder_initialisation.png)
+<!-- .element: class="r-stretch" -->
 
 ---
 
+<!-- .slide: class="layout-media-centre" -->
 # Hands-On
 
 ### Try out the exercise under Initialisation!
 
-<img height="800" src="/markdown/track_x/assets/placeholder_hands_on_initialisation.png">
+![Hands-on Initialisation](/markdown/track_x/assets/placeholder_hands_on_initialisation.png)
+<!-- .element: class="r-stretch" -->
 
 ---
 
+<!-- .slide: class="layout-media-centre" -->
 # Functions
 
-<img height="800" src="/markdown/track_x/assets/placeholder_functions.png">
+![Functions](/markdown/track_x/assets/placeholder_functions.png)
+<!-- .element: class="r-stretch" -->
 
 ---
 
+<!-- .slide: class="layout-media-centre" -->
 # Hands-On
 
 ### Try out the exercise under Functions!
 
-<img height="800" src="/markdown/track_x/assets/placeholder_hands_on_functions.png">
+![Hands-on Functions](/markdown/track_x/assets/placeholder_hands_on_functions.png)
+<!-- .element: class="r-stretch" -->
 
 ---
 
+<!-- .slide: class="layout-media-centre" -->
 # Parameters
 
-<img height="800" src="/markdown/track_x/assets/placeholder_parameters.png">
+![Parameters](/markdown/track_x/assets/placeholder_parameters.png)
+<!-- .element: class="r-stretch" -->
 
 ---
 
+<!-- .slide: class="layout-media-centre" -->
 # Hands-On
 
 ### Try out the exercises under Parameters!
 
-<img height="800" src="/markdown/track_x/assets/placeholder_hands_on_parameters.png">
+![Hands-on Parameters](/markdown/track_x/assets/placeholder_hands_on_parameters.png)
+<!-- .element: class="r-stretch" -->
 
 ---
 
-<div style="text-align: center;">
-    <h2>Contact Us</h2>
-    <p><a href="mailto:hello@tk.sg">hello@tk.sg</a></p>
-    <p><a href="http://tinkercademy.com">tinkercademy.com</a></p>
-</div>
+## Contact Us
+
+[hello@tk.sg](mailto:hello@tk.sg)
+
+[tinkercademy.com](http://tinkercademy.com)

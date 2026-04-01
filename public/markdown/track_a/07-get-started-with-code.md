@@ -15,17 +15,27 @@ Download the Swift Playgrounds app on either iPad or Mac to get started.
 
 ---
 
+<!-- .slide: class="layout-media-centre" -->
 ## Open Playgrounds
 
-<img height="800" src="/markdown/track_a/assets/open-playgrounds.png">
+![Open Playgrounds](/markdown/track_a/assets/open-playgrounds.png)
+<!-- .element: class="r-stretch" -->
 
 ---
 
-<img height="800" src="/markdown/track_a/assets/rename-playgrounds.png">
+<!-- .slide: class="layout-media-centre" -->
+## Rename Playgrounds
+
+![Rename Playgrounds](/markdown/track_a/assets/rename-playgrounds.png)
+<!-- .element: class="r-stretch" -->
 
 ---
 
-<img height="800" src="/markdown/track_a/assets/learn-to-code-menu.png">
+<!-- .slide: class="layout-media-centre" -->
+## Learn to Code
+
+![Learn to Code menu](/markdown/track_a/assets/learn-to-code-menu.png)
+<!-- .element: class="r-stretch" -->
 
 ---
 
@@ -39,9 +49,11 @@ Download the Swift Playgrounds app on either iPad or Mac to get started.
 
 ---
 
+<!-- .slide: class="layout-media-centre" -->
 ## Writing Code
 
-<img src="/markdown/track_a/assets/learn-swiftplaygrounds.png" height="800">
+![Learn Swift Playgrounds](/markdown/track_a/assets/learn-swiftplaygrounds.png)
+<!-- .element: class="r-stretch" -->
 
 ---
 
@@ -51,13 +63,15 @@ Swift Playgrounds teaches Swift and SwiftUI, the programming technologies create
 
 You can add SwiftUI controls, views, modifiers, symbols, and colors from the library by tapping the icons in the toolbar above the coding area.
 
-<img src="/markdown/track_a/assets/views-modifiers-symbols-colours.png">
+![Views, Modifiers, Symbols, Colours](/markdown/track_a/assets/views-modifiers-symbols-colours.png)
 
 ---
 
+<!-- .slide: class="layout-media-centre" -->
 ## Writing Code
 
-<img height="750" src="/markdown/track_a/assets/writing-code-intro-to-swift-playgrounds.png">
+![Writing Code intro to Swift Playgrounds](/markdown/track_a/assets/writing-code-intro-to-swift-playgrounds.png)
+<!-- .element: class="r-stretch" -->
 
 ---
 
@@ -65,15 +79,19 @@ You can add SwiftUI controls, views, modifiers, symbols, and colors from the lib
 
 ---
 
+<!-- .slide: class="layout-media-centre" -->
 ## Learn Within Playgrounds
 
-<img height="800" src="/markdown/track_a/assets/learning-swiftui-playgrounds.png">
+![Learning SwiftUI Playgrounds](/markdown/track_a/assets/learning-swiftui-playgrounds.png)
+<!-- .element: class="r-stretch" -->
 
 ---
 
+<!-- .slide: class="layout-media-centre" -->
 ## Learn Within Playgrounds
 
-<img height="800" src="/markdown/track_a/assets/learning-swift-playgrounds-ui.png">
+![Learning Swift Playgrounds UI](/markdown/track_a/assets/learning-swift-playgrounds-ui.png)
+<!-- .element: class="r-stretch" -->
 
 ---
 
@@ -83,6 +101,7 @@ You can add SwiftUI controls, views, modifiers, symbols, and colors from the lib
 
 ## Share Your App Playground
 
-There are several options to share your app playgrounds with other people. Tap the app name in the toolbar, then tap the Share button <img style="margin-bottom:-5px;" src="/markdown/track_a/assets/sharing-icon.png"> to bring up the share sheet.
+There are several options to share your app playgrounds with other people. Tap the app name in the toolbar, then tap the Share button ![Share button](/markdown/track_a/assets/sharing-icon.png) to bring up the share sheet.
 
-<img height="700" src="/markdown/track_a/assets/sharing-swift-playgrounds.png">
+![Sharing Swift Playgrounds](/markdown/track_a/assets/sharing-swift-playgrounds.png)
+<!-- .element: class="r-stretch" -->

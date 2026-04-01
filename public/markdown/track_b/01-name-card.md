@@ -14,72 +14,62 @@
 
 ---
 
+<!-- .slide: class="layout-steps-media" -->
 ## Create a Playground App
 
-<div style="display: flex; ">
-    <ol>
-        <li>Press the <img style="margin-bottom: -8px;" src="/markdown/track_b/assets/new-project-button.png" alt="New Project Button"> icon to create a new App</li>
-        <li>Hold down on the newly created app and tap <strong>Rename</strong></li>
-        <li>Name it <strong>“Name Card”</strong></li>
-        <li>Tap on the app to open it</li>
-    </ol>
-    <img src="/markdown/track_b/assets/new-project.png">
-</div>
+1. Press the ![New Project Button](/markdown/track_b/assets/new-project-button.png) icon to create a new app.
+2. Hold down on the newly created app and tap **Rename**.
+3. Name it **Name Card**.
+4. Tap on the app to open it.
+
+![A screenshot of the New Project screen in Swift Playgrounds.](/markdown/track_b/assets/new-project.png)
 
 ---
 
-<div style="display:flex;justify-content:center;align-items:center;">
-    <img src="/markdown/track_b/assets/playgrounds-empty-project.png" alt="A screenshot of an empty Playgrounds project with ContentView open">
-</div>
+<!-- .slide: class="layout-media-centre" -->
+![A screenshot of an empty Playgrounds project with ContentView open.](/markdown/track_b/assets/playgrounds-empty-project.png)
+<!-- .element: class="r-stretch" -->
 
 ---
 
-<div style="display:flex;justify-content:center;align-items:center;">
-    <img src="/markdown/track_b/assets/annotated-playgrounds-interface.png" alt="An annotated Playgrounds screenshot pointing out the various features such as the side bar, toolbar, tab bar, editor, and console.">
-</div>
+<!-- .slide: class="layout-media-centre" -->
+![An annotated Playgrounds screenshot pointing out the sidebar, toolbar, tab bar, editor, and console.](/markdown/track_b/assets/annotated-playgrounds-interface.png)
+<!-- .element: class="r-stretch" -->
 
 ---
 
-## What's in the toolbar
+<!-- .slide: class="layout-media-centre" -->
+## What's in the Toolbar
 
-<div style="display:flex;justify-content:center;align-items:center;">
-    <img src="/markdown/track_b/assets/annotated-playgrounds-toolbar.png" alt="An annotated Playgrounds screenshot pointing out the various buttons in the toolbar.">
-</div>
+![An annotated Playgrounds screenshot pointing out the various buttons in the toolbar.](/markdown/track_b/assets/annotated-playgrounds-toolbar.png)
+<!-- .element: class="r-stretch" -->
 
 ---
 
+<!-- .slide: class="layout-steps-media" -->
 ## Configuring Your Project
 
-<div style="display: flex; ">
-    <ol>
-        <li>Open the Sidebar</li>
-        <li>Select App Settings</li>
-        <li>Make sure our app's name is “Name card”</li>
-        <li>Select your favourite colour as your <em>Accent Color</em>.</li>
-    </ol>
-    <img src="/markdown/track_b/assets/playgrounds-app-settings.png" width="70%">
-    
-</div>
+1. Open the sidebar.
+2. Select App Settings.
+3. Make sure your app's name is **Name Card**.
+4. Select your favourite colour as your *Accent Color*.
+
+![The app settings screen in Swift Playgrounds.](/markdown/track_b/assets/playgrounds-app-settings.png)
 
 ---
 
+<!-- .slide: class="layout-steps-media" -->
 ## Setting an App Icon
 
-<div style="display: flex; ">
-    <ol>
-        <li>Open iPad's Camera app</li>
-        <li>Take a selfie!</li>
-        <li>Back in Playgrounds,
-            <ol>
-                <li>Select Custom App Icon</li>
-                <li>Choose from Photos</li>
-                <li>Add the image you just took</li>
-            </ol>
-        </li>
-        <li>You're now an app icon!</li>
-    </ol>
-    <img src="/markdown/track_b/assets/playgrounds-app-settings-custom-icon.png" width="50%">
-</div>
+1. Open the iPad Camera app.
+2. Take a selfie.
+3. Back in Playgrounds:
+   1. Select Custom App Icon.
+   2. Choose from Photos.
+   3. Add the image you just took.
+4. You're now an app icon.
+
+![The custom app icon flow in Swift Playgrounds.](/markdown/track_b/assets/playgrounds-app-settings-custom-icon.png)
 
 ---
 
@@ -116,6 +106,7 @@ Text("Swift instructor")
 
 ---
 
+<!-- .slide: class="layout-code-focus" -->
 ```swift[9-10]
 import SwiftUI
 
@@ -132,7 +123,7 @@ struct ContentView: View {
 }
 ```
 
-<img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift
+![Swift](/assets/swift-logo.svg) ContentView.swift
 
 ---
 
@@ -151,42 +142,45 @@ struct ContentView: View {
 
 ---
 
+<!-- .slide: class="layout-steps-media" -->
 ## Importing Images
 
-<div style="display: flex; ">
-    <ol>
-        <li>Open the Sidebar <img style="margin-bottom: -4px" src="/assets/icons/sidebar.left.svg" alt="Left Sidebar Icon" height="32px"></li>
-        <li>Tap on the Add File button <img style="margin-bottom: -4px" src="/assets/icons/doc.badge.plus.svg" alt="New Document Icon" width="32px"></li>
-        <li>Select Photo</li>
-        <li>Select a photo from your Photos!</li>
-        <li>You'll see your image in the <strong>Assets</strong> section</li>
-        <li>Hold down on its name and select <strong>Rename</strong></li>
-        <li>Name it <strong>MyImage</strong>.</li>
-    </ol>
-    <img src="/markdown/track_b/assets/playgrounds-image-asset.png" width="70%">
-</div>
+1. Open the sidebar ![Left Sidebar Icon](/assets/icons/sidebar.left.svg).
+2. Tap the Add File button ![New Document Icon](/assets/icons/doc.badge.plus.svg).
+3. Select Photo.
+4. Select a photo from your Photos.
+5. You'll see your image in the **Assets** section.
+6. Hold down on its name and select **Rename**.
+7. Name it **MyImage**.
+
+![The Assets section with an imported photo.](/markdown/track_b/assets/playgrounds-image-asset.png)
 
 ---
 
+<!-- .slide: class="layout-steps-media" -->
 ## Adding Your Image
 
-<div style="display: flex; ">
-    <img src="/markdown/track_b/assets/playgrounds-image-preview.png">
-    <ol>
-        <li>Replace the <img style="margin-bottom: -4px" src="/assets/icons/globe.svg" alt="Globe Icon" width="32px"> <code>Image</code> provided with your own image!</li>
-        <li>
-        Change
-        <pre><code class="hljs language-swift" data-line-numbers data-ln-start-from="6">Image(systemName: "globe")
+1. Replace the ![Globe Icon](/assets/icons/globe.svg) `Image` provided with your own image.
+2. Change:
+
+```swift[6]
+Image(systemName: "globe")
     .imageScale(.large)
-    .foregroundColor(.accentColor)</code></pre>
-        to
-        <pre><code class="hljs language-swift" data-line-numbers data-ln-start-from="6">Image("MyImage")</code></pre>
-        this will make sure that your image shows up on screen.
-        </li>
-        <li>Get a heart attack because your face now looks gigantic</li>
-        <li>Add the <code>.resizable()</code> modifier and <code>.scaledToFit()</code> modifiers to fix this.</li>
-    </ol>
-</div>
+    .foregroundColor(.accentColor)
+```
+
+to:
+
+```swift[6]
+Image("MyImage")
+```
+
+This will make sure that your image shows up on screen.
+
+3. Get a heart attack because your face now looks gigantic.
+4. Add the `.resizable()` and `.scaledToFit()` modifiers to fix this.
+
+![A preview of the imported image in Swift Playgrounds.](/markdown/track_b/assets/playgrounds-image-preview.png)
 
 ---
 
@@ -199,6 +193,7 @@ struct ContentView: View {
 
 ---
 
+<!-- .slide: class="layout-code-focus" -->
 ```swift[3:4-6]
 struct ContentView: View {
     var body: some View {
@@ -213,7 +208,7 @@ struct ContentView: View {
 }
 ```
 
-<img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift
+![Swift](/assets/swift-logo.svg) ContentView.swift
 
 ---
 
@@ -228,18 +223,17 @@ struct ContentView: View {
 
 ---
 
+<!-- .slide: class="layout-steps-media" -->
 ## `VStack`
 
-<div style="display: flex; ">
-    <ul>
-        <li>We've seen it already! There was one provided free for us when we created our app.</li>
-        <li>If you are arranging items vertically, you'll need a <code>VStack</code>.</li>
-    </ul>
-    <img src="/markdown/track_b/assets/vstack-diagram.png">
-</div>
+- We've seen it already. There was one provided free for us when we created our app.
+- If you are arranging items vertically, you'll need a `VStack`.
+
+![A diagram showing a VStack layout.](/markdown/track_b/assets/vstack-diagram.png)
 
 ---
 
+<!-- .slide: class="layout-code-focus" -->
 ```swift[3:3,9]
 struct ContentView: View {
     var body: some View {
@@ -254,27 +248,23 @@ struct ContentView: View {
 }
 ```
 
-<img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift
+![Swift](/assets/swift-logo.svg) ContentView.swift
 
 ---
 
+<!-- .slide: class="layout-steps-media" -->
 ## `HStack`
 
-<div style="display: flex; ">
-    <ul>
-        <li>We want our image to be on the left of the two pieces of text.</li>
-        <li>To do this, we can use a <code>HStack</code>, containing two <code>View</code>s:
-            <ul>
-                <li>The <code>Image</code> itself, on the left</li>
-                <li>The <code>VStack</code>, on the right.</li>
-            </ul>
-        </li>
-    </ul>
-    <img src="/markdown/track_b/assets/hstack-diagram.png">
-</div>
+- We want our image to be on the left of the two pieces of text.
+- To do this, we can use a `HStack`, containing two `View`s:
+  - The `Image` itself, on the left
+  - The `VStack`, on the right
+
+![A diagram showing an HStack layout.](/markdown/track_b/assets/hstack-diagram.png)
 
 ---
 
+<!-- .slide: class="layout-code-focus" -->
 ```swift[3:3,7,10,11]
 struct ContentView: View {
     var body: some View {
@@ -291,21 +281,17 @@ struct ContentView: View {
 }
 ```
 
-<img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift
+![Swift](/assets/swift-logo.svg) ContentView.swift
 
 ---
 
-<div style="display: flex; ">
-    <div>
-        <h2>What's in what?</h2>
-        <ul>
-            <li>We've started nesting <code>HStack</code>s in <code>VStack</code>s and this can quickly get confusing trying to figure out what belongs in which stack view.
-            </li>
-            <li>You can tap on ether the <code>{</code> or <code>}</code> to get the entire area highlighted.</li>
-        </ul>
-    </div>
-    <img src="/markdown/track_b/assets/playgrounds-curly-brace-highlight.png">
-</div>
+<!-- .slide: class="layout-steps-media" -->
+## What's in What?
+
+- We've started nesting `HStack`s in `VStack`s and this can quickly get confusing when you're trying to figure out what belongs in which stack view.
+- You can tap on either `{` or `}` to get the entire area highlighted.
+
+![A highlighted pair of curly braces in Swift Playgrounds.](/markdown/track_b/assets/playgrounds-curly-brace-highlight.png)
 
 ---
 
@@ -319,6 +305,7 @@ struct ContentView: View {
 
 ---
 
+<!-- .slide: class="layout-code-focus" -->
 ```swift[3:3]
 struct ContentView: View {
     var body: some View {
@@ -335,7 +322,7 @@ struct ContentView: View {
 }
 ```
 
-<img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift
+![Swift](/assets/swift-logo.svg) ContentView.swift
 
 ---
 
@@ -344,12 +331,13 @@ struct ContentView: View {
 - Let's add some background colour to our app.
 - A background colour will, naturally, go behind the `View`s.
 - In SwiftUI, a background colour is a View, that goes behind other Views, using a `ZStack`.
-- The `Color`<subscript>\*</subscript> View has a few built-in options you can use, such as <code style="color: #0A84FF">.blue</code>, <code style="color: #FF453A">.red</code>, <code style="color: #FFD60A">.yellow</code>, <code style="color: #30D158">.green</code>. Try them out!
+- The `Color` View has a few built-in options you can use, such as `.blue`, `.red`, `.yellow`, and `.green`. Try them out.
 
-<small style="text-align: left; width:100%; margin-top: 64px"><subscript>\*</subscript> 🇺🇸 American spelling, because <em>Designed by Apple in California</em> and all that.</small>
+*🇺🇸 American spelling, because _Designed by Apple in California_ and all that.*
 
 ---
 
+<!-- .slide: class="layout-code-focus" -->
 ```swift[3:3-4,14]
 struct ContentView: View {
     var body: some View {
@@ -369,7 +357,7 @@ struct ContentView: View {
 }
 ```
 
-<img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift
+![Swift](/assets/swift-logo.svg) ContentView.swift
 
 ---
 
@@ -401,7 +389,7 @@ struct ContentView: View {
 .italic()
 ```
 
-- Changes `Text` font size to <span style="font-size: 100px">100</span>.
+- Changes `Text` font size to `100`.
 
 ```swift
 .font(.system(size: 100))
@@ -409,6 +397,7 @@ struct ContentView: View {
 
 ---
 
+<!-- .slide: class="layout-code-focus" -->
 ```swift[3:11-13,15]
 struct ContentView: View {
     var body: some View {
@@ -432,19 +421,19 @@ struct ContentView: View {
 }
 ```
 
-<img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift
+![Swift](/assets/swift-logo.svg) ContentView.swift
 
 ---
 
 ## Colours & Padding
 
-- Makes the foreground style (e.g. `Text`/symbol colour) <span style="color: #0A84FF">blue</span>.
+- Makes the foreground style (for example the `Text` or symbol colour) blue.
 
 ```swift
 .foregroundStyle(.blue)
 ```
 
-- Make the background of any `View` <span style="background: #FF453A">red</span>.
+- Make the background of any `View` red.
 
 ```swift
 .background(.red)
@@ -458,10 +447,11 @@ struct ContentView: View {
 
 You can also include a number, to define how much padding to give
 
-_Note that order matters — if you add padding <span style="background: #FF453A; padding: 16px">before a background</span>, your padding will also receive that background._
+_Note that order matters. If you add padding before a background, your padding will also receive that background._
 
 ---
 
+<!-- .slide: class="layout-code-focus" -->
 ```swift[3:14-16]
 struct ContentView: View {
     var body: some View {
@@ -488,7 +478,7 @@ struct ContentView: View {
 }
 ```
 
-<img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift
+![Swift](/assets/swift-logo.svg) ContentView.swift
 
 ---
 
@@ -504,6 +494,7 @@ struct ContentView: View {
 
 ---
 
+<!-- .slide: class="layout-code-focus" -->
 ```swift[3:9]
 struct ContentView: View {
     var body: some View {
@@ -531,7 +522,7 @@ struct ContentView: View {
 }
 ```
 
-<img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift
+![Swift](/assets/swift-logo.svg) ContentView.swift
 
 ---
 
@@ -576,6 +567,7 @@ struct ContentView: View {
 
 ---
 
+<!-- .slide: class="layout-code-focus" -->
 ```swift[3:10]
 struct ContentView: View {
     var body: some View {
@@ -604,7 +596,7 @@ struct ContentView: View {
 }
 ```
 
-<img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift
+![Swift](/assets/swift-logo.svg) ContentView.swift
 
 ---
 
@@ -614,34 +606,30 @@ struct ContentView: View {
 
 ---
 
+<!-- .slide: class="layout-steps-media" -->
 ## Set Up
 
-<div style="display: flex;">
-    <ul>
-        <li>We'll create some tappable icons in a <code>HStack</code> for users of our app to find out more about us.</li>
-        <li>Within the <code>VStack</code>, create an empty <code>HStack</code>. It will be populated with our <code>Link</code>s later.</li>
-    </ul>
-    <img src="/markdown/track_b/assets/link-diagram.png">
-</div>
+- We'll create some tappable icons in a `HStack` for users of our app to find out more about us.
+- Within the `VStack`, create an empty `HStack`. It will be populated with our `Link`s later.
+
+![A diagram showing the link row layout.](/markdown/track_b/assets/link-diagram.png)
 
 ---
 
-## <img src="/assets/icons/link.svg" height="84px" style="margin-bottom: -8px"> Adding a Link
+<!-- .slide: class="layout-steps-media" -->
+## ![Link Icon](/assets/icons/link.svg) Adding a Link
 
-<div style="display: flex; ">
-    <ol>
-        <li>Tap on the space within the <code>HStack</code> to create an insertion point</li>
-        <li>In the toolbar, select <img style="margin-bottom: -4px" src="/assets/icons/dot.square.svg" alt="Views Library Icon" height="32px"> to open the <em>Views Library</em></li>
-        <li>Search and select <strong>”<img style="margin-bottom: -4px" src="/assets/icons/link.svg" alt="Views Library Icon" height="32px"> Link”</strong></li>
-    </ol>
-    <img src="/markdown/track_b/assets/playgrounds-views-library-link.png" width="70%">
-</div>
+1. Tap on the space within the `HStack` to create an insertion point.
+2. In the toolbar, select ![Views Library Icon](/assets/icons/dot.square.svg) to open the *Views Library*.
+3. Search for and select **![Link Icon](/assets/icons/link.svg) Link**.
+
+![The Views Library showing the Link view.](/markdown/track_b/assets/playgrounds-views-library-link.png)
 
 ---
 
 ## Setting the `Link` Destination
 
-1. Tap on the <code style="background: #007AFF; padding: 4px; border-radius: 4px; color: white;">URL</code> placeholder
+1. Tap on the `URL` placeholder.
 2. Replace it with the following
 
 ```swift
@@ -656,22 +644,21 @@ Feel free to change the link from [apple.com](https://apple.com) to something el
 
 ---
 
-## <img src="/assets/icons/star.circle.svg" height="84px" style="margin-bottom: -8px"> Adding SF Symbols
+<!-- .slide: class="layout-steps-media" -->
+## ![SF Symbols Icon](/assets/icons/star.circle.svg) Adding SF Symbols
 
-<div style="display: flex; ">
-    <ol>
-        <li>Tap on the <code style="background: #007AFF; padding: 4px; border-radius: 4px; color: white;">Text("Link")</code> placeholder</li>
-        <li>In the toolbar, select <img style="margin-bottom: -4px" src="/assets/icons/star.circle.svg" alt="Symbols Library Icon" height="32px"> to open the <em>Symbols Library</em></li>
-        <li>Browse through hundreds of beautifully designed icons that you can use within your apps</li>
-        <li>When you've found one you like, select it and it will automatically add itself into your code.</li>
-        <li>After you're done, add more links!</li>
-        <li>Use modifiers you learnt earlier to customise them!</li>
-    </ol>
-    <img src="/markdown/track_b/assets/playgrounds-symbols-library.png" width="50%">
-</div>
+1. Tap on the `Text("Link")` placeholder.
+2. In the toolbar, select ![Symbols Library Icon](/assets/icons/star.circle.svg) to open the *Symbols Library*.
+3. Browse through hundreds of beautifully designed icons that you can use within your apps.
+4. When you've found one you like, select it and it will automatically add itself into your code.
+5. After you're done, add more links.
+6. Use modifiers you learnt earlier to customise them.
+
+![The Symbols Library in Swift Playgrounds.](/markdown/track_b/assets/playgrounds-symbols-library.png)
 
 ---
 
+<!-- .slide: class="layout-code-focus" -->
 ```swift[3:21-28]
 struct ContentView: View {
     var body: some View {
@@ -711,7 +698,7 @@ struct ContentView: View {
 }
 ```
 
-<img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="32px"> ContentView.swift
+![Swift](/assets/swift-logo.svg) ContentView.swift
 
 ---
 
@@ -723,7 +710,8 @@ struct ContentView: View {
 
 ---
 
-## <img src="/assets/swift-logo.svg" style="margin-bottom: -4px" height="84px"> ContentView
+<!-- .slide: class="layout-code-focus" -->
+## ![Swift](/assets/swift-logo.svg) ContentView
 
 ```swift[1:]
 import SwiftUI

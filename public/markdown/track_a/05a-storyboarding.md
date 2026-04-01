@@ -1,5 +1,8 @@
+<!-- .slide: class="layout-media-centre" -->
 ## Example Food Buzz Prototype
-<img height="750" src="/markdown/track_a/assets/food-buzz-prototype-final.png">
+
+![Food Buzz prototype final](/markdown/track_a/assets/food-buzz-prototype-final.png)
+<!-- .element: class="r-stretch" -->
 
 ---
 
@@ -64,9 +67,11 @@
 
 ---
 
+<!-- .slide: class="layout-media-centre" -->
 ## Example App Behaviour
 
-<img height="750" src="/markdown/track_a/assets/label-app-storyboard.png">
+![Label app storyboard](/markdown/track_a/assets/label-app-storyboard.png)
+<!-- .element: class="r-stretch" -->
 
 ---
 
@@ -85,7 +90,9 @@
 
 ---
 
+<!-- .slide: class="layout-media-centre" -->
 ## App Journal
 
-<img src="/markdown/track_a/assets/bug-buzz-app-journal-final.png">
+![Bug Buzz App Journal final](/markdown/track_a/assets/bug-buzz-app-journal-final.png)
+<!-- .element: class="r-stretch" -->
 

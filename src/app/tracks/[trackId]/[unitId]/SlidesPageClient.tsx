@@ -26,6 +26,11 @@ export function SlidesPageClient({
 }) {
   const searchParams = useSearchParams();
   const isPrint = searchParams?.has("print-pdf") ?? false;
+  const markdownOverride = searchParams?.get("markdown");
+  const markdownPath =
+    markdownOverride && markdownOverride.startsWith("/markdown/")
+      ? markdownOverride
+      : `/markdown/${track?.id}/${unit?.markdownId}.md`;
 
   return (
     <div>
@@ -68,7 +73,7 @@ export function SlidesPageClient({
           </section>
           <section
             id="slide-view"
-            data-markdown={`/markdown/${track?.id}/${unit?.markdownId}.md`}
+            data-markdown={markdownPath}
             data-separator-vertical="^\n---vertical---"
             data-separator-notes="^Note:"
           />
