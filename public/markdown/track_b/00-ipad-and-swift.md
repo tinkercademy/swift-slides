@@ -46,8 +46,7 @@
 
 - Press and hold `New Playground...`
 
-![Choose App or Book mode](/markdown/track_b/assets/playgrounds-app-or-book.png)
-
+![Choose App or Book mode](/markdown/track_b/assets/playgrounds-app-or-book.PNG)
 ---
 
 <!-- .slide: class="layout-media-centre" -->
