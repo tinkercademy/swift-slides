@@ -56,9 +56,11 @@ a.card {
     width: 100%;
     height: 220px;
     position: relative;
+    background: #1f1d1f;
 
     img {
-      object-fit: cover;
+      object-fit: contain;
+      object-position: center;
     }
   }
 

@@ -1,0 +1,527 @@
+## Unit Overview
+
+- Remember we used a button to increase a number, that we displayed on screen?
+  - Now, we'll tie that number to something visual — the position of a flag on a screen
+- Flag Raising App
+  - Laying out
+  - Raising the Flag
+  - Animations
+
+---
+
+<!-- .slide: class="layout-steps-media" -->
+## Demo
+
+What we'll make: A flag raising app. You tap on a button and the flag moves up. And up. And up. And up. And up. And up. And up. And up. And up. And up. And up. And up. And up. And up. And up.
+
+<video width="500" controls>
+  <source src="/markdown/track_b/assets/flag-demo.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+---
+
+<!-- .slide: class="layout-media-centre" -->
+## What we're building
+
+- We'll build the famous flag raising app, as seen on Channel 8.
+- Raise a flag, be patriotic.
+
+![Flag on the news](/markdown/track_b/assets/flag-on-the-news.png)
+<!-- .element: class="r-stretch" -->
+
+---
+
+# Laying out Flag Raising
+
+---
+
+## Let's break it down
+
+1. Duplicate the Counter
+2. Rename the items from cookie-related terms to flag raising related terms
+3. Add a flag pole
+   1. Add a HStack.
+   2. Add a Rectangle with a fixed width within the HStack. This is your flag pole.
+   3. Add a Text with an emoji in the HStack ![SG Flag](/markdown/track_b/assets/sg-flag.png)
+   - To add in the emoji you can
+     1. Use the emoji keyboard on your iPad
+     2. Copy the emoji from the internet and paste it into your code
+
+---
+
+## Duplicate why?
+
+- The flag raising app, at its core, is just a counter on steroids
+- Why waste time rewriting all that code we've already written when we can just work off of what we already have?
+
+---
+
+## Duplicate how?
+
+- Hold down on the **Counter** project and tap Duplicate\*\*\*\*
+- Rename the duplicate from **"Counter copy"** to **"Flag Raising"**
+
+---
+
+## Counter → Flag Raising
+
+- Rename our counter-related words to flag raising related ones.
+- Feel free to use whatever words you like, whether it's an National Day song or whatever.
+
+---
+
+```swift[]
+// ContentView.swift
+import SwiftUI
+
+struct ContentView: View {
+
+    @State var counter = 0
+    @State var message = ""
+
+    var body: some View {
+        VStack {
+            Text("\(counter)")
+
+            Button {
+                print("Raise Flag!!")
+                counter += 1
+
+                if counter >= 40 {
+                    message = "See this island"
+                } else if counter >= 30 {
+                    message = "Every grain of sand"
+                } else {
+                    message = "Hear this anthem"
+                }
+            } label: {
+                Text("Raise Flag")
+                    .padding()
+                    .background(.blue)
+                    .foregroundColor(.white)
+            }
+
+            if counter >= 20 {
+                Text(message)
+            }
+        }
+    }
+}
+
+```
+
+---
+
+## Part 1: Run your code!
+
+- Tap on the button in the toolbar to run the code!
+- It's the same as our old cookie clicker, but with flag raising terms
+- This is fairly common in programming where you copy, paste and reuse code.
+- There's no point rewriting everything if the outcome is going to be similar.
+
+---
+
+<!-- .slide: class="layout-two-up" -->
+## Part 2: Lay out your flag
+
+![Flag bare content](/markdown/track_b/assets/flag-bare-content.png)
+![Flag bare](/markdown/track_b/assets/flag-bare.png)
+
+---
+
+## Customising Stacks
+
+`HStack(alignment: .top, spacing: 10) {}`
+
+- With `HStack`s and `VStack`s, you can customise properties such as the spacing between elements, alignment (leading is left, trailing is right).
+- For our flag, we will need to use a `HStack` to place the flag and flag pole next to one another.
+  - The HStack should be aligned to the `.bottom` and with `-10` spacing. We can't possibly have the flag separated from the flag pole.
+
+---
+
+## Code
+
+```swift[11-13]
+// ContentView.swift
+struct ContentView: View {
+
+    @State var counter = 0
+    @State var message = ""
+
+    var body: some View {
+        VStack {
+            Text("\(counter)")
+
+            HStack(alignment: .bottom, spacing: -10) {
+
+            }
+
+            Button {
+                print("Raise flag")
+                counter += 1
+
+                if counter >= 40 {
+                    message = "See this island"
+                } else if counter >= 30 {
+                    message = "Every grain of sand"
+                } else {
+                    message = "Hear this anthem"
+                }
+            } label: {
+                Text("Raise Flag")
+                    .padding()
+                    .background(Color.blue)
+                    .foregroundColor(.white)
+            }
+
+            if counter >= 20 {
+                Text(message)
+            }
+        }
+    }
+}
+```
+
+---
+
+## Customising Stacks
+
+`.frame(width: 20)`
+
+- Fix the width of a View to 20 points.
+- If you want to control the height, add the `height:` parameter
+- For our flag raising app, we will be fixing the width of a `Rectangle`.
+
+---
+
+## Rectangle
+
+`Rectangle()`
+
+- A rectangle that takes up as much space as possible (a filling View).
+  - Views like `Text` try to take up as little space as needed (fitting Views) while Views such as Rectangle attempt to take up as much space as possible.
+- Rectangle works similarly to `Circle`.
+- For our flag raising app, we will use a `Rectangle` for the flag pole and constrain the `width` (using the `frame` modifier) to 30 points.
+
+---
+
+## Rectangle
+
+```swift[10-13]
+struct ContentView: View {
+
+    @State var counter = 0
+    @State var message = ""
+
+    var body: some View {
+        VStack {
+            Text("\(counter)")
+
+            HStack(alignment: .bottom, spacing: -10) {
+                Rectangle()
+                    .frame(width: 20)
+            }
+
+            Button {
+                print("Raise flag")
+                counter += 1
+
+                if counter >= 40 {
+                    message = "See this island"
+                } else if counter >= 30 {
+                    message = "Every grain of sand"
+                } else {
+                    message = "Hear this anthem"
+                }
+            } label: {
+                Text("Raise Flag")
+                    .padding()
+                    .background(Color.blue)
+                    .foregroundColor(.white)
+            }
+        }
+    }
+}
+```
+
+---
+
+## Add a flag! `🇸🇬 🇸🇬 🇸🇬 🇸🇬 🇸🇬 🇸🇬 🇸🇬 🇸🇬`
+
+The flag is created using a Text with the 🇸🇬 emoji and a gigantic font size.
+
+```swift[14-16]
+struct ContentView: View {
+
+    @State var counter = 0
+    @State var message = ""
+
+    var body: some View {
+        VStack {
+            Text("\(counter)")
+
+            HStack(alignment: .bottom, spacing: -10) {
+                Rectangle()
+                    .frame(width: 20)
+
+                Text("🇸🇬")
+                    .font(.system(size: 100))
+            }
+
+            Button {
+                print("Raise flag")
+                counter += 1
+                 if counter >= 40 {
+                    message = "See this island"
+                } else if counter >= 30 {
+                    message = "Every grain of sand"
+                } else {
+                    message = "Hear this anthem"
+                }
+            } label: {
+                Text("Raise Flag")
+                    .padding()
+                    .background(Color.blue)
+                    .foregroundColor(.white)
+            }
+            // Rest of the code remains the same
+        }
+    }
+}
+```
+
+---
+
+## Positioning
+
+`.offset(x: 100, y: 200)`
+
+- Lets you move your object from where it's supposed to be
+- If you only want to move x or y, you can leave out the other parameter
+- For the flag raising app, we need to use the offset to move the flag up.
+
+---
+
+## Co-ordinate system
+
+- On iOS, the origin `(0, 0)` is at the top left corner.
+- As such, in order for the rectangle to move up, we have to reduce the Y offset.
+
+---
+
+<!-- .slide: class="layout-media-centre" -->
+## Code
+
+![Counter offset code](/markdown/track_b/assets/flag-counter-offset.png)
+<!-- .element: class="r-stretch" -->
+
+---
+
+<!-- .slide: class="layout-steps-media" -->
+## Run your code!
+
+- The flag raises!!
+- The flag moves!!!
+- It's alive!!!!!!!!!!!!
+
+<video controls>
+  <source src="/markdown/track_b/assets/flag-without-animations.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+---
+
+# Using `withAnimation`s?
+
+---
+
+## What do we want?
+
+- Instead of the flag jumping, can we have it nicely animate up?
+- When the text appears, it jumps everything
+- Just have smooth animations
+- Now when something changes, it jumps awkwardly.
+
+---
+
+## Animations
+
+`withAnimation {}`
+
+- Animate a @State variable change!
+- If the variable is mutated within the curly braces of withAnimation, the state change will be animated nicely
+- Yup that's it. It's that simple.
+
+---
+
+## Code
+
+- Embed the `Button`'s action into the `withAnimation` block and you're done!
+
+```swift[8-18]
+// ContentView.swift
+
+...
+
+Button {
+    print("Raise flag")
+
+    withAnimation {
+        counter += 1
+
+        if counter >= 40 {
+            message = "See this island"
+        } else if counter >= 30 {
+            message = "Every grain of sand"
+        } else {
+            message = "Hear this anthem"
+        }
+    }
+} label: {
+    Text("Raise Flag")
+        .padding()
+        .background(Color.blue)
+        .foregroundColor(.white)
+}
+
+...
+```
+
+---
+
+<!-- .slide: class="layout-steps-media" -->
+## Run your code _again_!
+
+- Such smooth animations
+- 5 stars on the App Store
+- ❤️ ❤️ ❤️ ❤️ ❤️
+- ⭐️ ⭐️ ⭐️ ⭐️ ⭐️
+- 🤩 🤩 🤩 🤩 🤩
+- 🌟 🌟 🌟 🌟 🌟
+
+<video controls>
+  <source src="/markdown/track_b/assets/flag-final-demo.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+---
+
+<!-- .slide: class="layout-code-focus" -->
+## Flag Raising Code
+
+```swift[]
+import SwiftUI
+
+struct ContentView: View {
+
+    @State var counter = 0
+    @State var message = ""
+
+    var body: some View {
+        VStack {
+            Text("\(counter)")
+
+            HStack(alignment: .bottom, spacing: -10) {
+                Rectangle()
+                    .frame(width: 20)
+
+                Text("🇸🇬")
+                    .font(.system(size: 100))
+                    .offset(y: -10 * CGFloat(counter))
+            }
+
+            Button {
+                print("Raise Flag!!")
+
+                withAnimation {
+                    counter += 1
+
+                    if counter >= 40 {
+                        message = "See this island"
+                    } else if counter >= 30 {
+                        message = "Every grain of sand"
+                    } else {
+                        message = "Hear this anthem"
+                    }
+                }
+            } label: {
+                Text("Raise Flag")
+                    .padding()
+                    .background(.blue)
+                    .foregroundColor(.white)
+            }
+
+            if counter >= 20 {
+                Text(message)
+            }
+        }
+    }
+}
+```
+
+![Swift](/assets/swift-logo.svg) ContentView.swift
+
+---
+
+# Extension
+
+---
+
+## Example Other Clickers
+
+### This concept extends beyond just increasing a counter and raising a flag… you can change a whole bunch of properties using state variables! Here are some examples.
+
+---
+
+<video width="500" controls>
+  <source  src="/markdown/track_b/assets/flag-example0.mov" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+---
+
+<video width="500" controls>
+  <source  src="/markdown/track_b/assets/flag-example1.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+---
+
+<video width="500" controls>
+  <source  src="/markdown/track_b/assets/flag-example2.mov" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+---
+
+<video width="500" controls>
+  <source  src="/markdown/track_b/assets/flag-example3.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+---
+
+<video width="500" controls>
+  <source  src="/markdown/track_b/assets/flag-example4.mov" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+---
+
+<video width="500" controls>
+  <source  src="/markdown/track_b/assets/flag-example5.mov" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+---
+
+# And that's it!
+
+---
+
+### ![SG Flag](/markdown/track_b/assets/sg-flag.png) Flag Raising App
+
+# Full Code
+
+[Download Completed Project](https://github.com/tinkercademy/swift-demo-projects/raw/main/Flag%20Raising.zip/)

@@ -12,6 +12,7 @@
 
 # testing
 /coverage
+/output/
 
 # next.js
 /.next/
@@ -53,3 +54,5 @@ log/*.log
 tmp/**
 node_modules/
 .sass-cache
+.env*.local
+public/markdown/_parity/

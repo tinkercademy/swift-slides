@@ -10,6 +10,9 @@ import { TrackEntry, UnitEntry } from "../../track";
 import { withSapUnits } from "../../sapUnits";
 import { SlidesPageClient } from "./SlidesPageClient";
 
+const PUBLIC_ROOT = path.join(process.cwd(), "public");
+const PUBLIC_MARKDOWN_ROOT = path.join(PUBLIC_ROOT, "markdown");
+
 async function resolveParams(
   params: Promise<{ trackId: string; unitId: string }>
 ): Promise<{ track: TrackEntry; unit: UnitEntry; unitIndex: number; }> {
@@ -24,19 +27,42 @@ async function resolveParams(
   return { track, unit, unitIndex };
 }
 
-export default async function SlidesPage({
-  params,
-}: {
-  params: Promise<{ trackId: string; unitId: string }>;
-}) {
-  const { track, unit, unitIndex } = await resolveParams(params);
-  const markdownPath = path.join(
-    process.cwd(),
-    "public",
-    "markdown",
+function resolveMarkdownPath(
+  track: TrackEntry,
+  unit: UnitEntry,
+  markdownOverride: string | string[] | undefined,
+): string {
+  const defaultPath = path.join(
+    PUBLIC_MARKDOWN_ROOT,
     track.id,
     `${unit.markdownId}.md`,
   );
+
+  if (typeof markdownOverride !== "string" || !markdownOverride.startsWith("/markdown/")) {
+    return defaultPath;
+  }
+
+  const overridePath = path.resolve(PUBLIC_ROOT, `.${markdownOverride}`);
+  if (
+    !overridePath.startsWith(`${PUBLIC_MARKDOWN_ROOT}${path.sep}`) ||
+    path.extname(overridePath) !== ".md"
+  ) {
+    return defaultPath;
+  }
+
+  return overridePath;
+}
+
+export default async function SlidesPage({
+  params,
+  searchParams,
+}: {
+  params: Promise<{ trackId: string; unitId: string }>;
+  searchParams: Promise<{ markdown?: string | string[] }>;
+}) {
+  const { track, unit, unitIndex } = await resolveParams(params);
+  const { markdown } = await searchParams;
+  const markdownPath = resolveMarkdownPath(track, unit, markdown);
 
   let markdownContent: string;
   try {

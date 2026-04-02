@@ -12,7 +12,7 @@ This page shows all 22 missing images with clickable links to view each broken s
 
 **URL**: `http://localhost:3000/tracks/track_b/unit_04A` or `http://explore.swiftin.sg/tracks/track_b/unit_04A`
 
-**Markdown**: `/public/markdown/track_b/arrays.md`
+**Markdown**: `/public/markdown/track_b/04a-arrays-previews-and-structs.md`
 
 Missing array visualization diagrams:
 - [ ] `/public/markdown/track_b/assets/array-diagram.png`
@@ -29,7 +29,7 @@ Missing array visualization diagrams:
 
 #### Unit 05: About Me App
 **URL**: `http://localhost:3000/tracks/track_x/unit_05` or `http://explore.swiftin.sg/tracks/track_x/unit_05`  
-**Markdown**: `/public/markdown/track_x/about-me-app.md`  
+**Markdown**: `/public/markdown/track_x/05-about-me-app.md`  
 **Status**: ⚠️ Unit is disabled in curriculum (won't appear in navigation)
 
 | Slide # | Missing Image | Context | View at |
@@ -44,7 +44,7 @@ Missing array visualization diagrams:
 
 #### Unit 03: Initialisation, Function, Parameters
 **URL**: `http://localhost:3000/tracks/track_x/unit_03` or `http://explore.swiftin.sg/tracks/track_x/unit_03`  
-**Markdown**: `/public/markdown/track_x/initialisation-func-parameters.md`  
+**Markdown**: `/public/markdown/track_x/03-initialisation-function-parameters.md`  
 **Status**: ⚠️ Unit is disabled in curriculum (won't appear in navigation)
 
 | Slide # | Missing Image | Context | View at |
@@ -56,21 +56,21 @@ Missing array visualization diagrams:
 | 6 | `placeholder_parameters.png` | Parameters | `#/5` |
 | 7 | `placeholder_hands_on_parameters.png` | Hands-On (Parameters) | `#/6` |
 
-#### Getting Started with Apps (Not mapped to any unit)
-**Markdown**: `/public/markdown/track_x/getting-started-with-apps.md`  
-**Status**: ❌ Not accessible via UI (no unit uses this markdown file)
+#### Unit 04: Getting Started with Code
+**Markdown**: `/public/markdown/track_x/04-getting-started-with-code.md`  
+**Status**: ⚠️ Unit is disabled in curriculum (won't appear in navigation)
 
 | Slide # | Missing Image | Context |
 |---------|--------------|---------|
 | 2 | `placeholder_swiftui_basics.png` | SwiftUI Basics |
 | 3 | `placeholder_getting_started.png` | Getting Started |
 
-**Note**: This file appears to be incomplete/unused. Unit 04 "Getting Started With Code" incorrectly points to `initialisation-func-parameters.md` instead.
+**Note**: Unit 04 now has its own numbered markdown file while the older `getting-started-with-apps.md` draft remains outside the curriculum mapping.
 
 **Action Required**:
 1. Create actual screenshots/diagrams for these placeholders
 2. OR temporarily comment out the image references in the markdown files
-3. Fix the mapping for Unit 04 if `getting-started-with-apps.md` should be used
+3. Review whether the standalone `getting-started-with-apps.md` draft should be folded into the curriculum or removed
 
 ## ✅ Recently Completed
 
