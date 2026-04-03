@@ -135,8 +135,8 @@ export function RevealjsNoSSRWrapper({ children, isPrint, track, unit }: { child
 
             if (!(event.target instanceof Element)) return;
 
-            // Allow normal interactions for controls, links and media.
-            if (event.target.closest("a, button, input, textarea, select, label, video, audio, iframe, .controls, .progress, .slide-number")) {
+            // Allow normal interactions for controls, links, media, and copy-friendly content.
+            if (event.target.closest("a, button, input, textarea, select, label, video, audio, iframe, pre, code, table, .controls, .progress, .slide-number")) {
                 return;
             }
 

@@ -411,10 +411,15 @@ function isBenignRequestFailure(
   failure: CapturedRequest,
   successfulAssetPaths: Set<string>
 ): boolean {
+  const isLocalMarkdownMediaAbort =
+    failure.resourceType === "media" && failure.url.startsWith("/markdown/");
+
   return (
-    failure.resourceType === "media" &&
     failure.error === "net::ERR_ABORTED" &&
-    (successfulAssetPaths.has(failure.url) || failure.url.startsWith("/markdown/"))
+    (
+      (failure.resourceType === "media" && successfulAssetPaths.has(failure.url)) ||
+      isLocalMarkdownMediaAbort
+    )
   );
 }
 

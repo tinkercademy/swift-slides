@@ -18,7 +18,6 @@ This guide covers the full flow for importing Notion content into the SAP track 
 Run from project root:
 
 ```bash
-cd /Users/kaushikmanian/Desktop/SwiftSlides/swift-slides
 printf 'NOTION_TOKEN=ntn_your_token_here\n' > .env
 ```
 

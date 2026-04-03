@@ -243,13 +243,6 @@ Slides are rendered with Reveal.js inside a client component. `src/app/tracks/[t
 5. Bottom-right **right arrow**: next horizontal slide.
 6. Bottom-right **down arrow**: next vertical slide.
 
-### Screenshot placeholder
-Replace this line with your final image path:
-
-```md
-![Slide Controls Reference](./docs/images/slide-controls-reference.png)
-```
-
 ## Theming
 
 Colours are defined in `src/app/_colors.scss` and mapped to CSS variables in `src/app/_theme.scss`. `ThemeManager` toggles the `dark` or `light` class based on `useDarkMode`, allowing runtime theme switching.
