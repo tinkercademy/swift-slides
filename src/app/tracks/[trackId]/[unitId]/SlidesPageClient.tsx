@@ -19,18 +19,15 @@ export function SlidesPageClient({
   track,
   unit,
   unitIndex,
+  markdownContent,
 }: {
   track: TrackEntry;
   unit: UnitEntry;
   unitIndex: number;
+  markdownContent: string;
 }) {
   const searchParams = useSearchParams();
   const isPrint = searchParams?.has("print-pdf") ?? false;
-  const markdownOverride = searchParams?.get("markdown");
-  const markdownPath =
-    markdownOverride && markdownOverride.startsWith("/markdown/")
-      ? markdownOverride
-      : `/markdown/${track?.id}/${unit?.markdownId}.md`;
 
   return (
     <div>
@@ -73,10 +70,12 @@ export function SlidesPageClient({
           </section>
           <section
             id="slide-view"
-            data-markdown={markdownPath}
+            data-markdown=""
             data-separator-vertical="^\n---vertical---"
             data-separator-notes="^Note:"
-          />
+          >
+            <textarea data-template defaultValue={markdownContent} hidden readOnly />
+          </section>
           <section>
             <div style={{ display: "flex" }}>
               <div>
@@ -103,7 +102,7 @@ export function SlidesPageClient({
                 height={576 / 7}
                 alt="Tinkercademy Logo"
               />
-              <p>Swift Coding Club • Track {track.id.slice(-1).toUpperCase()}</p>
+              <p>Swift Coding Club • {track.idDisplay}</p>
             </div>
           </section>
         </div>

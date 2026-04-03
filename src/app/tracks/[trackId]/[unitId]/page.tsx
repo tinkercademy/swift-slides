@@ -1,16 +1,24 @@
+import fs from "node:fs/promises";
+import path from "node:path";
 import { Metadata } from "next";
 import { Suspense } from "react";
 import { notFound } from "next/navigation";
 
 import { tracks } from "../../../../../public/curriculum";
+import { isolateImageSlidesInMarkdown } from "@/lib/isolate-image-slides";
 import { TrackEntry, UnitEntry } from "../../track";
+import { withSapUnits } from "../../sapUnits";
 import { SlidesPageClient } from "./SlidesPageClient";
+
+const PUBLIC_ROOT = path.join(process.cwd(), "public");
+const PUBLIC_MARKDOWN_ROOT = path.join(PUBLIC_ROOT, "markdown");
 
 async function resolveParams(
   params: Promise<{ trackId: string; unitId: string }>
 ): Promise<{ track: TrackEntry; unit: UnitEntry; unitIndex: number; }> {
   const { trackId, unitId } = await params;
-  const track = tracks.find((e) => e.id === trackId);
+  const baseTrack = tracks.find((e) => e.id === trackId);
+  const track = baseTrack ? withSapUnits(baseTrack) : undefined;
   const unitIndex = track?.units.findIndex((e: UnitEntry) => e.id === unitId);
   if (!track || unitIndex === undefined || unitIndex === -1) {
     notFound();
@@ -19,21 +27,66 @@ async function resolveParams(
   return { track, unit, unitIndex };
 }
 
+function resolveMarkdownPath(
+  track: TrackEntry,
+  unit: UnitEntry,
+  markdownOverride: string | string[] | undefined,
+): string {
+  const defaultPath = path.join(
+    PUBLIC_MARKDOWN_ROOT,
+    track.id,
+    `${unit.markdownId}.md`,
+  );
+
+  if (typeof markdownOverride !== "string" || !markdownOverride.startsWith("/markdown/")) {
+    return defaultPath;
+  }
+
+  const overridePath = path.resolve(PUBLIC_ROOT, `.${markdownOverride}`);
+  if (
+    !overridePath.startsWith(`${PUBLIC_MARKDOWN_ROOT}${path.sep}`) ||
+    path.extname(overridePath) !== ".md"
+  ) {
+    return defaultPath;
+  }
+
+  return overridePath;
+}
+
 export default async function SlidesPage({
   params,
+  searchParams,
 }: {
   params: Promise<{ trackId: string; unitId: string }>;
+  searchParams: Promise<{ markdown?: string | string[] }>;
 }) {
   const { track, unit, unitIndex } = await resolveParams(params);
+  const { markdown } = await searchParams;
+  const markdownPath = resolveMarkdownPath(track, unit, markdown);
+
+  let markdownContent: string;
+  try {
+    const rawMarkdownContent = await fs.readFile(markdownPath, "utf8");
+    markdownContent = isolateImageSlidesInMarkdown(rawMarkdownContent);
+  } catch {
+    notFound();
+  }
+
   return (
     <Suspense fallback={<div />}>
-      <SlidesPageClient track={track} unit={unit} unitIndex={unitIndex} />
+      <SlidesPageClient
+        track={track}
+        unit={unit}
+        unitIndex={unitIndex}
+        markdownContent={markdownContent}
+      />
     </Suspense>
   );
 }
 
 export async function generateStaticParams() {
   return tracks
+    .map((track) => withSapUnits(track))
     .map((track) =>
       track.units.map((unit: UnitEntry) => ({
         trackId: track.id,

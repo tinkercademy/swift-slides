@@ -9,6 +9,7 @@ import sharp from "sharp";
 import { chromium, type Browser, type Page } from "playwright";
 
 import { tracks } from "../public/curriculum";
+import { resolveDevServerCommand } from "./lib/dev-server";
 import {
   renderSlideReviewAnnotationChrome,
   renderSlideReviewAnnotationRuntime,
@@ -502,15 +503,11 @@ async function startServer(
   await mkdir(path.dirname(logFilePath), { recursive: true });
 
   const logStream = createWriteStream(logFilePath, { flags: "a" });
-  const bunBinary = process.execPath.includes("bun") ? process.execPath : "bun";
-  const child = spawn(
-    bunBinary,
-    ["run", "dev", "--", "--hostname", "127.0.0.1", "--port", String(port)],
-    {
-      cwd: ROOT_DIR,
-      stdio: ["ignore", "pipe", "pipe"],
-    }
-  );
+  const devServer = resolveDevServerCommand(port);
+  const child = spawn(devServer.command, devServer.args, {
+    cwd: ROOT_DIR,
+    stdio: ["ignore", "pipe", "pipe"],
+  });
 
   child.stdout?.pipe(logStream);
   child.stderr?.pipe(logStream);

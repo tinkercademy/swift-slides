@@ -211,9 +211,37 @@ These decks show the intended markdown-first patterns:
 
 For a repeatable migration workflow, including parity-review expectations and the required handoff format, see `docs/skills/slide-migration/SKILL.md`.
 
+## Notion import
+For the full SAP import workflow (token setup, commands, overwrite flow, local preview, and publish), see `notion-import.md`.
+
+**Placeholder disclaimer:** command examples that end with `--unit unit_01` or `--unit unit_02` use placeholder unit IDs. Replace those with the actual unit ID you are importing/updating.
+
 ## Reveal.js and Next.js
 
-Slides are rendered with Reveal.js inside a client component. `src/app/tracks/[trackId]/[unitId]/page.tsx` wraps `RevealjsClientWrapper`, which dynamically imports the non-SSR wrapper so the slideshow can access browser APIs. The markdown deck is loaded via Reveal's `data-markdown` support on the slide section.
+Slides are rendered with Reveal.js inside a client component. `src/app/tracks/[trackId]/[unitId]/page.tsx` wraps `RevealjsClientWrapper`, which dynamically imports the non-SSR wrapper so the slideshow can access browser APIs. The server page loads the markdown deck, supports the `?markdown=` override used by review tooling, and passes the content into Reveal's markdown plugin.
+
+## Slide navigation and controls
+
+### How slide sections work
+1. Horizontal slides are the main sequence of slides.
+2. Vertical slides are sub-slides under a single horizontal slide.
+3. In markdown:
+   - `---` creates a new horizontal slide.
+   - `---vertical---` creates a new vertical slide inside the same horizontal stack.
+4. Runtime overflow handling may auto-split long markdown slides into vertical sub-slides.
+
+### Navigation behavior in this app
+1. **Next step** goes through vertical sub-slides first, then moves to the next horizontal slide.
+2. **Previous step** goes upward through vertical sub-slides first, then moves to the previous horizontal slide.
+3. Reveal.js default arrow controls are still available for direct directional navigation.
+
+### Controls legend (matches numbered screenshot)
+1. Top-right **left circular arrow**: previous meaningful step (custom).
+2. Top-right **right circular arrow**: next meaningful step (custom).
+3. Bottom-right **left arrow**: previous horizontal slide.
+4. Bottom-right **up arrow**: previous vertical slide.
+5. Bottom-right **right arrow**: next horizontal slide.
+6. Bottom-right **down arrow**: next vertical slide.
 
 ## Theming
 
