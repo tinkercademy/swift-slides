@@ -13,6 +13,11 @@ import { SlidesPageClient } from "./SlidesPageClient";
 const PUBLIC_ROOT = path.join(process.cwd(), "public");
 const PUBLIC_MARKDOWN_ROOT = path.join(PUBLIC_ROOT, "markdown");
 
+type ResolvedMarkdownSource = {
+  filePath: string;
+  publicPath: string;
+};
+
 async function resolveParams(
   params: Promise<{ trackId: string; unitId: string }>
 ): Promise<{ track: TrackEntry; unit: UnitEntry; unitIndex: number; }> {
@@ -31,15 +36,15 @@ function resolveMarkdownPath(
   track: TrackEntry,
   unit: UnitEntry,
   markdownOverride: string | string[] | undefined,
-): string {
-  const defaultPath = path.join(
-    PUBLIC_MARKDOWN_ROOT,
-    track.id,
-    `${unit.markdownId}.md`,
-  );
+): ResolvedMarkdownSource {
+  const defaultPublicPath = `/markdown/${track.id}/${unit.markdownId}.md`;
+  const defaultSource = {
+    filePath: path.join(PUBLIC_MARKDOWN_ROOT, track.id, `${unit.markdownId}.md`),
+    publicPath: defaultPublicPath,
+  };
 
   if (typeof markdownOverride !== "string" || !markdownOverride.startsWith("/markdown/")) {
-    return defaultPath;
+    return defaultSource;
   }
 
   const overridePath = path.resolve(PUBLIC_ROOT, `.${markdownOverride}`);
@@ -47,10 +52,13 @@ function resolveMarkdownPath(
     !overridePath.startsWith(`${PUBLIC_MARKDOWN_ROOT}${path.sep}`) ||
     path.extname(overridePath) !== ".md"
   ) {
-    return defaultPath;
+    return defaultSource;
   }
 
-  return overridePath;
+  return {
+    filePath: overridePath,
+    publicPath: markdownOverride,
+  };
 }
 
 export default async function SlidesPage({
@@ -62,12 +70,16 @@ export default async function SlidesPage({
 }) {
   const { track, unit, unitIndex } = await resolveParams(params);
   const { markdown } = await searchParams;
-  const markdownPath = resolveMarkdownPath(track, unit, markdown);
+  const markdownSource = resolveMarkdownPath(track, unit, markdown);
 
-  let markdownContent: string;
+  let inlineMarkdownContent: string | null = null;
   try {
-    const rawMarkdownContent = await fs.readFile(markdownPath, "utf8");
-    markdownContent = isolateImageSlidesInMarkdown(rawMarkdownContent);
+    const rawMarkdownContent = await fs.readFile(markdownSource.filePath, "utf8");
+    const isolatedMarkdownContent = isolateImageSlidesInMarkdown(rawMarkdownContent);
+    inlineMarkdownContent =
+      isolatedMarkdownContent === rawMarkdownContent
+        ? null
+        : isolatedMarkdownContent;
   } catch {
     notFound();
   }
@@ -78,7 +90,8 @@ export default async function SlidesPage({
         track={track}
         unit={unit}
         unitIndex={unitIndex}
-        markdownContent={markdownContent}
+        inlineMarkdownContent={inlineMarkdownContent}
+        markdownPath={markdownSource.publicPath}
       />
     </Suspense>
   );

@@ -218,7 +218,7 @@ For the full SAP import workflow (token setup, commands, overwrite flow, local p
 
 ## Reveal.js and Next.js
 
-Slides are rendered with Reveal.js inside a client component. `src/app/tracks/[trackId]/[unitId]/page.tsx` wraps `RevealjsClientWrapper`, which dynamically imports the non-SSR wrapper so the slideshow can access browser APIs. The server page loads the markdown deck, supports the `?markdown=` override used by review tooling, and passes the content into Reveal's markdown plugin.
+Slides are rendered with Reveal.js inside a client component. `src/app/tracks/[trackId]/[unitId]/page.tsx` wraps `RevealjsClientWrapper`, which dynamically imports the non-SSR wrapper so the slideshow can access browser APIs. Reveal normally loads the deck via `data-markdown`; when the server needs to rewrite markdown first, such as `?markdown=` review overrides or standalone-image isolation, it inlines the transformed content into the markdown plugin.
 
 ## Slide navigation and controls
 

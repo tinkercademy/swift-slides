@@ -19,12 +19,14 @@ export function SlidesPageClient({
   track,
   unit,
   unitIndex,
-  markdownContent,
+  inlineMarkdownContent,
+  markdownPath,
 }: {
   track: TrackEntry;
   unit: UnitEntry;
   unitIndex: number;
-  markdownContent: string;
+  inlineMarkdownContent: string | null;
+  markdownPath: string;
 }) {
   const searchParams = useSearchParams();
   const isPrint = searchParams?.has("print-pdf") ?? false;
@@ -70,11 +72,18 @@ export function SlidesPageClient({
           </section>
           <section
             id="slide-view"
-            data-markdown=""
+            data-markdown={inlineMarkdownContent ? "" : markdownPath}
             data-separator-vertical="^\n---vertical---"
             data-separator-notes="^Note:"
           >
-            <textarea data-template defaultValue={markdownContent} hidden readOnly />
+            {inlineMarkdownContent ? (
+              <textarea
+                data-template
+                defaultValue={inlineMarkdownContent}
+                hidden
+                readOnly
+              />
+            ) : null}
           </section>
           <section>
             <div style={{ display: "flex" }}>
