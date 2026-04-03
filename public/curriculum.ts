@@ -179,6 +179,7 @@ export const tracks: TrackEntry[] = [
     id: "track_sap",
     title: "SAP Materials",
     idDisplay: "SAP Track",
+    hidden: true,
     subtitle:
       "SAP materials imported from Notion for the Swift SAP Track, organized as slide-ready units in one dedicated place.",
     description:
