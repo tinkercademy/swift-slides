@@ -71,7 +71,8 @@ export function SlidesPageClient({
           <section
             id="slide-view"
             data-markdown=""
-            data-separator-vertical="^\n---vertical---"
+            data-separator="^---$"
+            data-separator-vertical="^---vertical---$"
             data-separator-notes="^Note:"
           >
             <textarea data-template defaultValue={markdownContent} hidden readOnly />

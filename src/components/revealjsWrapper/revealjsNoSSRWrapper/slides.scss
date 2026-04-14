@@ -8,6 +8,7 @@
   --slide-safe-padding-right: 88px;
   --slide-safe-padding-bottom: 152px;
   --slide-safe-padding-left: 44px;
+  --slide-code-max-height: min(72vh, 760px);
 
   ::selection {
     color: var(--r-selection-color);
@@ -36,6 +37,12 @@
   .slides section>section {
     line-height: 1.3;
     font-weight: inherit;
+  }
+
+  .slides section>.slide-body {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
   }
 
   // Keep content inside a safe area so it does not overlap slide number, controls, or footer/progress edges.
@@ -230,7 +237,7 @@
     display: block;
     padding: 5px;
     overflow: auto;
-    max-height: 800px;
+    max-height: var(--slide-code-max-height);
     word-wrap: normal;
   }
 
@@ -310,6 +317,10 @@
   section>div>img {
     margin-left: 32px;
     overflow: hidden;
+  }
+
+  .slides section:is(.layout-steps-media, .layout-two-up, .layout-gallery-4, .layout-code-focus, .layout-media-centre)>div>img {
+    margin-left: 0;
   }
 
   /*********************************************
@@ -434,26 +445,45 @@
     padding-bottom: 3vh;
   }
 
-  .slides section.layout-steps-media {
-    display: grid !important;
-    grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
-    gap: 36px 72px;
-    align-items: center;
+  .slides>section:is(.layout-steps-media, .layout-two-up, .layout-gallery-4, .layout-code-focus, .layout-media-centre) {
+    padding-right: 32px;
   }
 
-  .slides section.layout-steps-media>* {
+  .slides section.layout-steps-media {
+    display: block !important;
+  }
+
+  .slides section.layout-steps-media>.slide-body {
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+    min-height: 100%;
+  }
+
+  .slides section.layout-steps-media .layout-steps-media-split {
+    display: grid;
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 0.6fr);
+    gap: 18px 20px;
+    width: 100%;
+    align-items: start;
+  }
+
+  .slides section.layout-steps-media .layout-steps-media-left,
+  .slides section.layout-steps-media .layout-steps-media-right {
     min-width: 0;
   }
 
-  .slides section.layout-steps-media>:is(h1, h2, h3, h4, h5, h6, p:not(:has(img, video, iframe)), ul, ol, pre, blockquote, table, small) {
+  .slides section.layout-steps-media .layout-steps-media-left {
     grid-column: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-self: start;
   }
 
-  .slides section.layout-steps-media>:is(p, div):has(img, video, iframe) {
+  .slides section.layout-steps-media .layout-steps-media-right {
     grid-column: 2;
-    grid-row: 1 / span 12;
     align-self: center;
-    justify-self: center;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -463,11 +493,11 @@
     text-align: center;
   }
 
-  .slides section.layout-steps-media>:is(p, div):has(img, video, iframe) :is(img, video, iframe) {
+  .slides section.layout-steps-media .layout-steps-media-right :is(img, video, iframe) {
     width: auto;
     height: auto;
     max-width: 100%;
-    max-height: 78vh;
+    max-height: calc(1080px - var(--slide-safe-padding-top) - var(--slide-safe-padding-bottom) - 24px);
     margin: 0 auto;
     object-fit: contain;
   }
@@ -639,13 +669,13 @@
   }
 
   @media (max-width: 1100px) {
-    .slides section.layout-steps-media,
+    .slides section.layout-steps-media .layout-steps-media-split,
     .slides section.layout-two-up {
       grid-template-columns: minmax(0, 1fr);
     }
 
     .slides section.layout-two-up>p:has(> img + img),
-    .slides section.layout-steps-media>:is(p, div):has(img, video, iframe),
+    .slides section.layout-steps-media .layout-steps-media-right,
     .slides section.layout-two-up>:is(p, div):has(img, video, iframe) {
       grid-column: 1;
       grid-row: auto;
