@@ -43,6 +43,7 @@
     display: flex;
     flex-direction: column;
     min-width: 0;
+    padding-right: calc(var(--slide-safe-padding-right) * 0.2);
   }
 
   // Keep content inside a safe area so it does not overlap slide number, controls, or footer/progress edges.
