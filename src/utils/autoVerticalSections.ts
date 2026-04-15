@@ -3,6 +3,7 @@ import type Reveal from "reveal.js";
 interface AutoVerticalSectionOptions {
   maxHeightRatio?: number;
   semanticHeadingTags?: string[];
+  excludedClassPrefixes?: string[];
 }
 
 interface MeasurementContext {
@@ -14,9 +15,15 @@ interface MeasurementContext {
 
 const RUNTIME_SLIDE_CLASSES = new Set(["present", "past", "future", "stack"]);
 const DEFAULT_SEMANTIC_HEADING_TAGS = new Set(["H2", "H3", "H4"]);
+const DEFAULT_EXCLUDED_CLASS_PREFIXES = ["layout-"];
 const LIST_SPLIT_MIN_ITEMS = 8;
 const LIST_SPLIT_MIN_OVERFLOW_RATIO = 1.2;
 const SPLIT_TOLERANCE_RATIO = 1.0;
+const MIN_SPLIT_OVERFLOW_RATIO = 1.08;
+
+function clamp(value: number, min: number, max: number): number {
+  return Math.min(max, Math.max(min, value));
+}
 
 function isSectionElement(node: Element): node is HTMLElement {
   return node.tagName === "SECTION";
@@ -32,6 +39,161 @@ function isHeadingElement(node: HTMLElement): boolean {
 
 function isParagraphElement(node: HTMLElement): boolean {
   return node.tagName === "P";
+}
+
+function isHeaderElement(node: HTMLElement): boolean {
+  return /^H[1-6]$/.test(node.tagName);
+}
+
+function hasLayoutClassPrefix(slide: HTMLElement): boolean {
+  return slide.className
+    .split(/\s+/)
+    .map((value) => value.trim())
+    .some((className) => className.startsWith("layout-"));
+}
+
+function isMediaContainerBlock(block: HTMLElement): boolean {
+  if (block.tagName !== "P" && block.tagName !== "DIV") {
+    return false;
+  }
+
+  return !!block.querySelector("img, video, iframe");
+}
+
+export function wrapMarkdownSlideBodies(deck: Reveal.Api): number {
+  const slidesElement = deck.getSlidesElement();
+  if (!slidesElement) {
+    return 0;
+  }
+
+  let wrappedCount = 0;
+
+  Array.from(slidesElement.querySelectorAll("section[data-markdown-parsed]")).forEach((slideNode) => {
+    if (!(slideNode instanceof HTMLElement)) {
+      return;
+    }
+
+    const slide = slideNode;
+
+    if (slide.querySelector(":scope > section")) {
+      return;
+    }
+
+    if (slide.hasAttribute("data-slide-body-wrapped")) {
+      return;
+    }
+
+    const hasLayoutClass = hasLayoutClassPrefix(slide);
+    const isStepsMediaLayout = slide.classList.contains("layout-steps-media");
+    if (hasLayoutClass && !isStepsMediaLayout) {
+      return;
+    }
+
+    const directBlocks = Array.from(slide.children).filter(
+      (child): child is HTMLElement => child instanceof HTMLElement
+    );
+
+    if (directBlocks.length <= 1) {
+      return;
+    }
+
+    const firstNonHeaderIndex = directBlocks.findIndex((block) => !isHeaderElement(block));
+    if (firstNonHeaderIndex < 0) {
+      return;
+    }
+
+    const hasHeaderAfterContent = directBlocks
+      .slice(firstNonHeaderIndex)
+      .some((block) => isHeaderElement(block));
+    if (hasHeaderAfterContent) {
+      return;
+    }
+
+    const slideBody = document.createElement("div");
+    slideBody.className = "slide-body";
+
+    const contentBlocks = directBlocks.slice(firstNonHeaderIndex);
+    contentBlocks.forEach((block) => {
+      slideBody.appendChild(block);
+    });
+
+    const headerAnchor = directBlocks[firstNonHeaderIndex - 1];
+    if (headerAnchor) {
+      headerAnchor.insertAdjacentElement("afterend", slideBody);
+    } else {
+      slide.prepend(slideBody);
+    }
+
+    slide.setAttribute("data-slide-body-wrapped", "true");
+    wrappedCount += 1;
+  });
+
+  return wrappedCount;
+}
+
+export function structureLayoutStepsMediaSlides(deck: Reveal.Api): number {
+  const slidesElement = deck.getSlidesElement();
+  if (!slidesElement) {
+    return 0;
+  }
+
+  let structuredCount = 0;
+
+  Array.from(slidesElement.querySelectorAll("section.layout-steps-media[data-markdown-parsed]")).forEach((slideNode) => {
+    if (!(slideNode instanceof HTMLElement)) {
+      return;
+    }
+
+    const slide = slideNode;
+    if (slide.hasAttribute("data-steps-media-structured")) {
+      return;
+    }
+
+    const slideBody = slide.querySelector(":scope > .slide-body");
+    if (!(slideBody instanceof HTMLElement)) {
+      return;
+    }
+
+    const bodyBlocks = Array.from(slideBody.children).filter(
+      (child): child is HTMLElement => child instanceof HTMLElement
+    );
+    if (bodyBlocks.length <= 1) {
+      return;
+    }
+
+    const mediaBlocks = bodyBlocks.filter((block) => isMediaContainerBlock(block));
+    if (mediaBlocks.length === 0) {
+      return;
+    }
+
+    const rightMediaBlock = mediaBlocks[mediaBlocks.length - 1];
+
+    const split = document.createElement("div");
+    split.className = "layout-steps-media-split";
+
+    const left = document.createElement("div");
+    left.className = "layout-steps-media-left";
+
+    const right = document.createElement("div");
+    right.className = "layout-steps-media-right";
+
+    bodyBlocks.forEach((block) => {
+      if (block === rightMediaBlock) {
+        return;
+      }
+      left.appendChild(block);
+    });
+
+    right.appendChild(rightMediaBlock);
+    split.appendChild(left);
+    split.appendChild(right);
+    slideBody.appendChild(split);
+
+    slide.setAttribute("data-steps-media-structured", "true");
+    structuredCount += 1;
+  });
+
+  return structuredCount;
 }
 
 function cleanupRuntimeSlideState(slide: HTMLElement): void {
@@ -404,6 +566,20 @@ function normalizeSlideBlocks(slide: HTMLElement, _context: MeasurementContext):
       }
     }
 
+    // Code fences are a common source of overflow; cap them to fit the slide better
+    // before deciding whether we need to split the slide into vertical sections.
+    const codeBlocks = block.matches("pre")
+      ? [block]
+      : Array.from(block.querySelectorAll("pre"));
+
+    if (codeBlocks.length > 0) {
+      const maxCodeHeight = clamp(Math.floor(_context.maxContentHeight * 0.75), 260, 700);
+      codeBlocks.forEach((preBlock) => {
+        preBlock.style.maxHeight = `${maxCodeHeight}px`;
+        preBlock.style.overflow = "auto";
+      });
+    }
+
     normalizedBlocks.push(block);
   });
 
@@ -456,12 +632,25 @@ function splitIntoVerticalBlockGroups(
   return finalGroups;
 }
 
-function isEligibleMarkdownSlide(slide: HTMLElement): boolean {
+function isEligibleMarkdownSlide(slide: HTMLElement, excludedClassPrefixes: string[]): boolean {
   if (!slide.hasAttribute("data-markdown-parsed")) {
     return false;
   }
 
   if (slide.querySelector(":scope > section")) {
+    return false;
+  }
+
+  const classNames = slide.className
+    .split(/\s+/)
+    .map((value) => value.trim())
+    .filter((value) => value.length > 0);
+
+  if (
+    classNames.some((className) =>
+      excludedClassPrefixes.some((prefix) => className.startsWith(prefix))
+    )
+  ) {
     return false;
   }
 
@@ -512,6 +701,8 @@ export function autoSectionOverflowSlides(
       tag.toUpperCase()
     )
   );
+  const excludedClassPrefixes =
+    options.excludedClassPrefixes ?? DEFAULT_EXCLUDED_CLASS_PREFIXES;
 
   const { context, teardown } = createMeasurementContext(
     revealElement,
@@ -525,7 +716,7 @@ export function autoSectionOverflowSlides(
   Array.from(slidesElement.children)
     .filter(isSectionElement)
     .forEach((slide) => {
-      if (!isEligibleMarkdownSlide(slide)) {
+      if (!isEligibleMarkdownSlide(slide, excludedClassPrefixes)) {
         return;
       }
 
@@ -535,7 +726,7 @@ export function autoSectionOverflowSlides(
       }
 
       const totalHeight = measureBlocksHeight(slide, normalizedBlocks, context);
-      if (totalHeight <= context.maxContentHeight) {
+      if (totalHeight <= context.maxContentHeight * MIN_SPLIT_OVERFLOW_RATIO) {
         return;
       }
 

@@ -13,7 +13,11 @@ import { ActionsBar } from '../../actionsBar';
 import { getColorFromTrack, TrackEntry, UnitEntry } from '@/app/tracks/track';
 import { useDarkMode } from "@/hooks/useDarkMode";
 import { initializeImageOptimizations } from '@/utils/imageOptimization';
-import { autoSectionOverflowSlides } from '@/utils/autoVerticalSections';
+import {
+    autoSectionOverflowSlides,
+    structureLayoutStepsMediaSlides,
+    wrapMarkdownSlideBodies,
+} from '@/utils/autoVerticalSections';
 
 function handleOpenWithQuery(name: string, value: string) {
     const url = new URL(window.location.href)
@@ -164,6 +168,8 @@ export function RevealjsNoSSRWrapper({ children, isPrint, track, unit }: { child
 
                 // Auto-split long markdown slides into vertical sections so overflow content
                 // can be navigated with up/down before moving to the next horizontal slide.
+                wrapMarkdownSlideBodies(deck);
+                structureLayoutStepsMediaSlides(deck);
                 autoSectionOverflowSlides(deck);
                 scheduleAutoSectionOverflowPass();
 

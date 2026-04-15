@@ -39,6 +39,10 @@ function isStandaloneMarkdownImage(line: string): boolean {
   return /^!\[[^\]]*]\([^)]+\)$/.test(line);
 }
 
+function hasLayoutSlideClass(line: string): boolean {
+  return /<!--\s*\.slide:\s*[^>]*class\s*=\s*["'][^"']*layout-[^"']*["'][^>]*-->/i.test(line);
+}
+
 export function isolateImageSlidesInMarkdown(markdown: string): string {
   const inputLines = markdown.split(/\r?\n/);
   const outputLines: string[] = [];
@@ -46,6 +50,7 @@ export function isolateImageSlidesInMarkdown(markdown: string): string {
   let inCodeFence = false;
   let inSpeakerNotes = false;
   let pendingSlideBreakAfterImage = false;
+  let currentSlideHasLayoutClass = false;
 
   for (const line of inputLines) {
     const trimmed = line.trim();
@@ -59,10 +64,18 @@ export function isolateImageSlidesInMarkdown(markdown: string): string {
       }
 
       inSpeakerNotes = false;
-    } else if (!inCodeFence && isStandaloneMarkdownImage(trimmed)) {
-      ensureHorizontalSlideBreak(outputLines);
+      currentSlideHasLayoutClass = false;
+    } else if (!inCodeFence && hasLayoutSlideClass(trimmed)) {
+      currentSlideHasLayoutClass = true;
       outputLines.push(line);
-      pendingSlideBreakAfterImage = true;
+    } else if (!inCodeFence && isStandaloneMarkdownImage(trimmed)) {
+      if (currentSlideHasLayoutClass) {
+        outputLines.push(line);
+      } else {
+        ensureHorizontalSlideBreak(outputLines);
+        outputLines.push(line);
+        pendingSlideBreakAfterImage = true;
+      }
     } else {
       if (
         pendingSlideBreakAfterImage &&
