@@ -35,6 +35,7 @@ Read `README.md` first for setup, authoring examples, layout usage, and contribu
 
 - Use `tmux` for `bun run dev` or other long-running local sessions.
 - Run `bun run lint` and `bun run build`.
+- For slide-layout reviews, prefer keeping a slide title together with its code or text content. Scrollable code blocks are acceptable, and slight bottom clipping on large images can be acceptable when that preserves the intended single-slide composition.
 - When you change route generation, Reveal runtime behaviour, or slide asset paths, run `bun run check:slide-routes`. It checks every unit route from `public/curriculum.ts` by default and writes artefacts under `output/playwright/slide-route-check/<timestamp>/`.
 - **Parity report: regenerate after every change.** Whenever you change `scripts/check-slide-parity.ts` or finish migrating a deck, run `bun run parity:slides -- --unit <trackId>/<unitId>` immediately and include the report path in your handoff. Do not wait for the user to ask. Use the last migrated or edited unit (e.g. `track_a/unit_02`) if no specific unit was requested.
 - When migrating a deck to the markdown-first layouts, run the parity checker and review `output/playwright/slide-parity/<timestamp>/report.html`.
