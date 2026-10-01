@@ -300,4 +300,4 @@ struct ContentView: View {
 
 # Full Code
 
-[Download Completed Project](https://github.com/tinkercademy/swift-demo-projects/raw/main/Self%20Portrait.zip/)
+[Download Completed Project](/markdown/track_b/assets/self-portrait.zip)
